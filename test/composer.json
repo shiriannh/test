@@ -1,5 +1,5 @@
 {
-    "require": {
+    "require-dev": {
        	"phpmd/phpmd" : "@stable",
 		"phploc/phploc": "*",
 		"pdepend/pdepend" : "@stable"

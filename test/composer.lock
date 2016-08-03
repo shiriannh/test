@@ -4,9 +4,10 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d44554d4ee3a6481938011a03d7f5de8",
-    "content-hash": "5b44f6b3bbe07437f4b1f1cfe3508f4f",
-    "packages": [
+    "hash": "598b009d48b831691df378d9b1c0a033",
+    "content-hash": "3e3982619254c8032581cb289cb0125d",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "pdepend/pdepend",
             "version": "2.2.4",
@@ -663,7 +664,6 @@
             "time": "2015-05-27 22:58:02"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
