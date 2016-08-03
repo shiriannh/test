@@ -4,6 +4,7 @@
 		"phploc/phploc": "*",
 		"pdepend/pdepend" : "@stable", 
 		"squizlabs/php_codesniffer": "2.*",
-		"sebastian/phpcpd": "*"
+		"sebastian/phpcpd": "*",
+		"phpunit/phpunit": "@stable"
     }
 }
