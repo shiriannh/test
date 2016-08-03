@@ -1,0 +1,12 @@
+{
+    "require-dev": {
+        "phpmd/phpmd" : "@stable"
+    }
+}
+
+{
+    "require": {
+
+        "pdepend/pdepend" : "2.2.4"
+    }
+}
