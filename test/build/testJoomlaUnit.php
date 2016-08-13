@@ -76,12 +76,12 @@ JError::setErrorHandling(E_WARNING, 'message');
 // Bootstrap the CMS libraries.
 require_once JPATH_LIBRARIES . '/cms.php';
 //TODO: you will need to adjust this to match your paths
-$srcPath = realpath("../../src");
+$srcPath = realpath("../../test");
 JTable::addIncludePath($srcPath.'/site/tables');
 require_once $srcPath."/site/models/base.php";
 ?><?php
 //TODO: Change this to match your path
-$pathToJoomla = "/Applications/MAMP/htdocs/joomla32";
+$pathToJoomla = "/var/lib/jenkins/workspace/test-joomla/test";
 if (!is_dir(realpath($pathToJoomla))) {
 	throw new Exception("Could not find the folder: $pathToJoomla");
 }
@@ -157,7 +157,7 @@ JError::setErrorHandling(E_WARNING, 'message');
 // Bootstrap the CMS libraries.
 require_once JPATH_LIBRARIES . '/cms.php';
 //TODO: you will need to adjust this to match your paths
-$srcPath = realpath("../../src");
+$srcPath = realpath("../../test");
 JTable::addIncludePath($srcPath.'/site/tables');
 require_once $srcPath."/site/models/base.php";
 ?>
