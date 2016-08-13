@@ -7,9 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace SebastianBergmann\PHPLOC;
-
 /**
  * PHPLOC code analyser.
  *
@@ -21,22 +19,18 @@ class Analyser
      * @var array
      */
     private $namespaces = [];
-
     /**
      * @var array
      */
     private $classes = [];
-
     /**
      * @var array
      */
     private $constants = [];
-
     /**
      * @var array
      */
     private $possibleConstantAccesses = [];
-
     /**
      * @var array
      */
@@ -93,7 +87,6 @@ class Analyser
         'methodLlocAvg'               => 0,
         'methodLlocMax'               => 0
     ];
-
     /**
      * @var array
      */
@@ -112,27 +105,22 @@ class Analyser
         '$HTTP_SERVER_VARS' => true,
         '$HTTP_POST_FILES'  => true
     ];
-
     /**
      * @var array
      */
     private $classCcn = [];
-
     /**
      * @var array
      */
     private $classLloc = [];
-
     /**
      * @var array
      */
     private $methodCcn = [];
-
     /**
      * @var array
      */
     private $methodLloc = [];
-
     /**
      * Processes a set of files.
      *
@@ -148,21 +136,15 @@ class Analyser
                 $this->preProcessFile($file);
             }
         }
-
         $directories = [];
-
         foreach ($files as $file) {
             $directory = dirname($file);
-
             if (!isset($directories[$directory])) {
                 $directories[$directory] = true;
             }
-
             $this->countFile($file, $countTests);
         }
-
         $count = $this->count;
-
         $count['directories']       = count($directories) - 1;
         $count['namespaces']        = count($this->namespaces);
         $count['classes']           = $count['abstractClasses'] +
@@ -179,52 +161,42 @@ class Analyser
                                       $count['llocClasses'] -
                                       $count['llocFunctions'];
         $count['ncloc']             = $count['loc'] - $count['cloc'];
-
         foreach ($this->possibleConstantAccesses as $possibleConstantAccess) {
             if (in_array($possibleConstantAccess, $this->constants)) {
                 $count['globalConstantAccesses']++;
             }
         }
-
         $count['globalAccesses'] = $count['globalConstantAccesses'] +
                                    $count['globalVariableAccesses'] +
                                    $count['superGlobalVariableAccesses'];
-
         if ($count['lloc'] > 0) {
             $count['ccnByLloc'] = $count['ccn'] / $count['lloc'];
         }
-
         if (count($this->classCcn) > 0) {
             $count['classCcnMin'] = min($this->classCcn);
             $count['classCcnAvg'] = array_sum($this->classCcn) / count($this->classCcn);
             $count['classCcnMax'] = max($this->classCcn);
         }
-
         if (count($this->methodCcn) > 0) {
             $count['methodCcnMin'] = min($this->methodCcn);
             $count['methodCcnAvg'] = array_sum($this->methodCcn) / count($this->methodCcn);
             $count['methodCcnMax'] = max($this->methodCcn);
         }
-
         if (count($this->classLloc) > 0) {
             $count['classLlocMin'] = min($this->classLloc);
             $count['classLlocAvg'] = array_sum($this->classLloc) / count($this->classLloc);
             $count['classLlocMax'] = max($this->classLloc);
         }
-
         if (count($this->methodLloc) > 0) {
             $count['methodLlocMin'] = min($this->methodLloc);
             $count['methodLlocAvg'] = array_sum($this->methodLloc) / count($this->methodLloc);
             $count['methodLlocMax'] = max($this->methodLloc);
         }
-
         if ($count['functions'] > 0) {
             $count['llocByNof'] = $count['llocFunctions'] / $count['functions'];
         }
-
         return $count;
     }
-
     /**
      * Pre-processes a single file.
      *
@@ -236,37 +208,30 @@ class Analyser
         $tokens    = token_get_all(file_get_contents($filename));
         $numTokens = count($tokens);
         $namespace = false;
-
         for ($i = 0; $i < $numTokens; $i++) {
             if (is_string($tokens[$i])) {
                 continue;
             }
-
             switch ($tokens[$i][0]) {
                 case T_NAMESPACE:
                     $namespace = $this->getNamespaceName($tokens, $i);
                     break;
-
                 case T_CLASS:
                     if (!$this->isClassDeclaration($tokens, $i)) {
                         continue;
                     }
-
                     $className = $this->getClassName($namespace, $tokens, $i);
-
                     if (isset($tokens[$i+4]) && is_array($tokens[$i+4]) &&
                         $tokens[$i+4][0] == T_EXTENDS) {
                         $parent = $this->getClassName($namespace, $tokens, $i + 4);
                     } else {
                         $parent = null;
                     }
-
                     $this->classes[$className] = $parent;
                     break;
             }
         }
     }
-
     /**
      * Processes a single file.
      *
@@ -279,11 +244,8 @@ class Analyser
         $this->count['loc'] += substr_count($buffer, "\n");
         $tokens              = token_get_all($buffer);
         $numTokens           = count($tokens);
-
         unset($buffer);
-
         $this->count['files']++;
-
         $blocks            = [];
         $currentBlock      = false;
         $namespace         = false;
@@ -292,23 +254,19 @@ class Analyser
         $testClass         = false;
         $currentClassData  = null;
         $currentMethodData = null;
-
         for ($i = 0; $i < $numTokens; $i++) {
             if (is_string($tokens[$i])) {
                 $token = trim($tokens[$i]);
-
                 if ($token == ';') {
                     if ($className !== null && !$testClass) {
                         $this->count['llocClasses']++;
                         $currentClassData['lloc']++;
-
                         if ($functionName !== null) {
                             $currentMethodData['lloc']++;
                         }
                     } elseif ($functionName !== null) {
                         $this->count['llocFunctions']++;
                     }
-
                     $this->count['lloc']++;
                 } elseif ($token == '?' && !$testClass) {
                     if ($className !== null) {
@@ -316,7 +274,6 @@ class Analyser
                         $currentClassData['ccn']++;
                         $currentMethodData['ccn']++;
                     }
-
                     $this->count['ccn']++;
                 } elseif ($token == '{') {
                     if ($currentBlock == T_CLASS) {
@@ -326,17 +283,13 @@ class Analyser
                     } else {
                         $block = false;
                     }
-
                     array_push($blocks, $block);
-
                     $currentBlock = false;
                 } elseif ($token == '}') {
                     $block = array_pop($blocks);
-
                     if ($block !== false && $block !== null) {
                         if ($block == $functionName) {
                             $functionName = null;
-
                             if ($currentMethodData !== null) {
                                 $this->methodCcn[]  = $currentMethodData['ccn'];
                                 $this->methodLloc[] = $currentMethodData['lloc'];
@@ -351,32 +304,25 @@ class Analyser
                         }
                     }
                 }
-
                 continue;
             }
-
             list ($token, $value) = $tokens[$i];
-
             switch ($token) {
                 case T_NAMESPACE:
                     $namespace = $this->getNamespaceName($tokens, $i);
-
                     if (!isset($this->namespaces[$namespace])) {
                         $this->namespaces[$namespace] = true;
                     }
                     break;
-
                 case T_CLASS:
                 case T_INTERFACE:
                 case T_TRAIT:
                     if (!$this->isClassDeclaration($tokens, $i)) {
                         continue;
                     }
-
                     $currentClassData = ['ccn' => 1, 'lloc' => 0];
                     $className        = $this->getClassName($namespace, $tokens, $i);
                     $currentBlock     = T_CLASS;
-
                     if ($token == T_TRAIT) {
                         $this->count['traits']++;
                     } elseif ($token == T_INTERFACE) {
@@ -396,22 +342,12 @@ class Analyser
                         }
                     }
                     break;
-
                 case T_FUNCTION:
-                    $prev = $this->getPreviousNonWhitespaceTokenPos($tokens, $i);
-
-                    if ($tokens[$prev][0] === T_USE) {
-                        continue;
-                    }
-
                     $currentBlock = T_FUNCTION;
-
                     $next = $this->getNextNonWhitespaceTokenPos($tokens, $i);
-
                     if (!is_array($tokens[$next]) && $tokens[$next] == '&') {
                         $next = $this->getNextNonWhitespaceTokenPos($tokens, $next);
                     }
-
                     if (is_array($tokens[$next]) &&
                         $tokens[$next][0] == T_STRING) {
                         $functionName = $tokens[$next][1];
@@ -420,7 +356,6 @@ class Analyser
                         $functionName = 'anonymous function';
                         $this->count['anonymousFunctions']++;
                     }
-
                     if ($currentBlock == T_FUNCTION) {
                         if ($className === null &&
                             $functionName != 'anonymous function') {
@@ -428,7 +363,6 @@ class Analyser
                         } else {
                             $static     = false;
                             $visibility = T_PUBLIC;
-
                             for ($j = $i; $j > 0; $j--) {
                                 if (is_string($tokens[$j])) {
                                     if ($tokens[$j] == '{' ||
@@ -436,61 +370,50 @@ class Analyser
                                         $tokens[$j] == ';') {
                                         break;
                                     }
-
                                     continue;
                                 }
-
                                 if (isset($tokens[$j][0])) {
                                     switch ($tokens[$j][0]) {
                                         case T_PRIVATE:
                                             $visibility = T_PRIVATE;
                                             break;
-
                                         case T_PROTECTED:
                                             $visibility = T_PROTECTED;
                                             break;
-
                                         case T_STATIC:
                                             $static = true;
                                             break;
                                     }
                                 }
                             }
-
                             if ($testClass &&
                                 $this->isTestMethod($functionName, $visibility, $static, $tokens, $i)) {
                                 $this->count['testMethods']++;
                             } elseif (!$testClass) {
                                 $currentMethodData = ['ccn' => 1, 'lloc' => 0];
-
                                 if (!$static) {
                                     $this->count['nonStaticMethods']++;
                                 } else {
                                     $this->count['staticMethods']++;
                                 }
-
                                 if ($visibility == T_PUBLIC) {
                                     $this->count['publicMethods']++;
                                 } else {
                                     $this->count['nonPublicMethods']++;
                                 }
-
                                 $this->count['methods']++;
                             }
                         }
                     }
                     break;
-
                 case T_CURLY_OPEN:
                     $currentBlock = T_CURLY_OPEN;
                     array_push($blocks, $currentBlock);
                     break;
-
                 case T_DOLLAR_OPEN_CURLY_BRACES:
                     $currentBlock = T_DOLLAR_OPEN_CURLY_BRACES;
                     array_push($blocks, $currentBlock);
                     break;
-
                 case T_IF:
                 case T_ELSEIF:
                 case T_FOR:
@@ -508,11 +431,9 @@ class Analyser
                             $currentClassData['ccn']++;
                             $currentMethodData['ccn']++;
                         }
-
                         $this->count['ccn']++;
                     }
                     break;
-
                 case T_COMMENT:
                 case T_DOC_COMMENT:
                     // We want to count all intermediate lines before the token ends
@@ -523,33 +444,26 @@ class Analyser
                 case T_CONST:
                     $this->count['classConstants']++;
                     break;
-
                 case T_STRING:
                     if ($value == 'define') {
                         $this->count['globalConstants']++;
-
                         $j = $i + 1;
-
                         while (isset($tokens[$j]) && $tokens[$j] != ';') {
                             if (is_array($tokens[$j]) &&
                                 $tokens[$j][0] == T_CONSTANT_ENCAPSED_STRING) {
                                 $this->constants[] = str_replace('\'', '', $tokens[$j][1]);
-
                                 break;
                             }
-
                             $j++;
                         }
                     } else {
                         $this->possibleConstantAccesses[] = $value;
                     }
                     break;
-
                 case T_DOUBLE_COLON:
                 case T_OBJECT_OPERATOR:
                     $n  = $this->getNextNonWhitespaceTokenPos($tokens, $i);
                     $nn = $this->getNextNonWhitespaceTokenPos($tokens, $n);
-
                     if ($n && $nn &&
                         isset($tokens[$n][0]) &&
                         ($tokens[$n][0] == T_STRING ||
@@ -569,11 +483,9 @@ class Analyser
                         }
                     }
                     break;
-
                 case T_GLOBAL:
                     $this->count['globalVariableAccesses']++;
                     break;
-
                 case T_VARIABLE:
                     if ($value == '$GLOBALS') {
                         $this->count['globalVariableAccesses']++;
@@ -584,7 +496,6 @@ class Analyser
             }
         }
     }
-
     /**
      * @param  array  $tokens
      * @param  int    $i
@@ -595,7 +506,6 @@ class Analyser
     {
         if (isset($tokens[$i+2][1])) {
             $namespace = $tokens[$i+2][1];
-
             for ($j = $i+3;; $j += 2) {
                 if (isset($tokens[$j]) && $tokens[$j][0] == T_NS_SEPARATOR) {
                     $namespace .= '\\' . $tokens[$j+1][1];
@@ -603,13 +513,10 @@ class Analyser
                     break;
                 }
             }
-
             return $namespace;
         }
-
         return false;
     }
-
     /**
      * @param  string $namespace
      * @param  array  $tokens
@@ -621,28 +528,21 @@ class Analyser
     {
         $i         += 2;
         $namespaced = false;
-
         if (!isset($tokens[$i][1])) {
             return 'invalid class name';
         }
-
         $className  = $tokens[$i][1];
-
         if ($className === '\\') {
             $namespaced = true;
         }
-
         while (is_array($tokens[$i+1]) && $tokens[$i+1][0] !== T_WHITESPACE) {
             $className .= $tokens[++$i][1];
         }
-
         if (!$namespaced && $namespace !== false) {
             $className = $namespace . '\\' . $className;
         }
-
         return strtolower($className);
     }
-
     /**
      * @param  string $className
      * @return bool
@@ -653,22 +553,18 @@ class Analyser
         $parent = $this->classes[$className];
         $result = false;
         $count  = 0;
-
         // Check ancestry for PHPUnit_Framework_TestCase.
         while ($parent !== null) {
             $count++;
-
             if ($count > 100) {
                 // Prevent infinite loops and just bail
                 break;
             }
-
             if ($parent == 'phpunit_framework_testcase' ||
                 $parent == '\\phpunit_framework_testcase') {
                 $result = true;
                 break;
             }
-
             if (isset($this->classes[$parent]) && $parent !== $this->classes[$parent]) {
                 $parent = $this->classes[$parent];
             } else {
@@ -677,7 +573,6 @@ class Analyser
                 break;
             }
         }
-
         // Fallback: Treat the class as a test case class if the name
         // of the parent class ends with "TestCase".
         if (!$result) {
@@ -685,10 +580,8 @@ class Analyser
                 $result = true;
             }
         }
-
         return $result;
     }
-
     /**
      * @param  string $functionName
      * @param  int    $visibility
@@ -703,23 +596,18 @@ class Analyser
         if ($static || $visibility != T_PUBLIC) {
             return false;
         }
-
         if (strpos($functionName, 'test') === 0) {
             return true;
         }
-
         while ($tokens[$currentToken][0] != T_DOC_COMMENT) {
             if ($tokens[$currentToken] == '{' || $tokens[$currentToken] == '}') {
                 return false;
             }
-
             --$currentToken;
         }
-
         return strpos($tokens[$currentToken][1], '@test') !== false ||
                strpos($tokens[$currentToken][1], '@scenario') !== false;
     }
-
     /**
      * @param  array $tokens
      * @param  int   $start
@@ -736,10 +624,8 @@ class Analyser
                 return $start + 1;
             }
         }
-
         return false;
     }
-
     /**
      * @param  array $tokens
      * @param  int   $start
@@ -756,10 +642,8 @@ class Analyser
                 return $start - 1;
             }
         }
-
         return false;
     }
-
     /**
      * @param  array $tokens
      * @param  int   $i
@@ -768,12 +652,10 @@ class Analyser
     private function isClassDeclaration(array $tokens, $i)
     {
         $n = $this->getPreviousNonWhitespaceTokenPos($tokens, $i);
-
         if (isset($tokens[$n]) && is_array($tokens[$n]) &&
             $tokens[$n][0] == T_DOUBLE_COLON) {
             return false;
         }
-
         return true;
     }
 }
