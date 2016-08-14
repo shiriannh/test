@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFDispatcher</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFDispatcher</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/dispatcher/dispatcher.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFDispatcher</h1>
+        <h4>FrameworkOnFramework dispatcher class</h4>
+        <p>FrameworkOnFramework is a set of classes which extend Joomla! 1.5 and later's<br/>MVC framework with features making maintaining complex software much easier,<br/>without tedious repetitive copying of the same code over and over again.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFDispatcher
+                extends <a title="FOFUtilsObject" href="../classes/FOFUtilsObject.xhtml">FOFUtilsObject</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$config</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$input</a> =
+                        ;
+                    </li><li>public string <a href="#members">$defaultView</a> =
+                        'cpanel';
+                    </li><li>protected integer <a href="#members">$fofAuth_timeStep</a> =
+                        6;
+                    </li><li>protected <a href="#members">$fofAuth_Key</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$fofAuth_Formats</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$fofAuth_LogoutOnReturn</a> =
+                        true;
+                    </li><li>protected array <a href="#members">$fofAuth_AuthMethods</a> =
+                        ;
+                    </li><li>private boolean <a href="#members">$_fofAuth_isLoggedIn</a> =
+                        false;
+                    </li><li>private string <a href="#members">$_fofAuth_CryptoKey</a> =
+                        '';
+                    </li></ul><ul class="none"><li>// methods</li><li>public static FOFDispatcher <a title="FOFDispatcher" href="../classes/FOFDispatcher/getAnInstance.xhtml">getAnInstance</a>()
+                    </li><li>public static FOFDispatcher <a title="FOFDispatcher" href="../classes/FOFDispatcher/getTmpInstance.xhtml">getTmpInstance</a>()
+                    </li><li>public void <a title="FOFDispatcher" href="../classes/FOFDispatcher/__construct.xhtml">__construct</a>()
+                    </li><li>public void|Exception <a title="FOFDispatcher" href="../classes/FOFDispatcher/dispatch.xhtml">dispatch</a>()
+                    </li><li>protected string <a title="FOFDispatcher" href="../classes/FOFDispatcher/getTask.xhtml">getTask</a>()
+                    </li><li>public boolean <a title="FOFDispatcher" href="../classes/FOFDispatcher/onBeforeDispatch.xhtml">onBeforeDispatch</a>()
+                    </li><li>public boolean <a title="FOFDispatcher" href="../classes/FOFDispatcher/onBeforeDispatchCLI.xhtml">onBeforeDispatchCLI</a>()
+                    </li><li>public boolean <a title="FOFDispatcher" href="../classes/FOFDispatcher/onAfterDispatch.xhtml">onAfterDispatch</a>()
+                    </li><li>public void <a title="FOFDispatcher" href="../classes/FOFDispatcher/transparentAuthentication.xhtml">transparentAuthentication</a>()
+                    </li><li>private array <a title="FOFDispatcher" href="../classes/FOFDispatcher/_decryptWithTOTP.xhtml">_decryptWithTOTP</a>()
+                    </li><li>private string <a title="FOFDispatcher" href="../classes/FOFDispatcher/_createDecryptionKey.xhtml">_createDecryptionKey</a>()
+                    </li><li>public static array <a title="FOFDispatcher" href="../classes/FOFDispatcher/isCliAdmin.xhtml">isCliAdmin</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="FOFUtilsObject" href="../classes/FOFUtilsObject.xhtml">FOFUtilsObject</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">499</td>
+            <td>Check the format</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_fofAuth_CryptoKey">
+              <strong>$_fofAuth_CryptoKey</strong>
+              <br/>
+              <span class="indent">@var string The calculated encryption key for the _TOTP methods, used if we have to encrypt the reply</span>
+            </li>
+            <li id="_fofAuth_isLoggedIn">
+              <strong>$_fofAuth_isLoggedIn</strong>
+              <br/>
+              <span class="indent">@var bool Did we successfully and transparently logged in a user?</span>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="config">
+              <strong>$config</strong>
+              <br/>
+              <span class="indent">@var array Configuration variables</span>
+            </li>
+            <li id="fofAuth_AuthMethods">
+              <strong>$fofAuth_AuthMethods</strong>
+              <br/>
+              <span class="indent">@var array Which methods to use to fetch authentication credentials and in which order</span>
+            </li>
+            <li id="fofAuth_Formats">
+              <strong>$fofAuth_Formats</strong>
+              <br/>
+              <span class="indent">@var array Which formats to be handled by transparent authentication</span>
+            </li>
+            <li id="fofAuth_Key">
+              <strong>$fofAuth_Key</strong>
+              <br/>
+              <span class="indent">@var string The key for the TOTP, Base32 encoded (watch out; Base32, NOT Base64!)</span>
+            </li>
+            <li id="fofAuth_LogoutOnReturn"><strong>$fofAuth_LogoutOnReturn</strong>
+                —
+                boolean<br/><span class="indent">Should I logout the transparently authenticated user on logout? Recommended to leave it on in order to avoid crashing the sessions table.</span></li>
+            <li id="fofAuth_timeStep">
+              <strong>$fofAuth_timeStep</strong>
+              <br/>
+              <span class="indent">@var int The Time Step for the TOTP used in FOF's transparent user authentication</span>
+            </li>
+            <li id="input">
+              <strong>$input</strong>
+              <br/>
+              <span class="indent">@var FOFInput Input variables</span>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="defaultView">
+              <strong>$defaultView</strong>
+              <br/>
+              <span class="indent">@var string The name of the default view, in case none is specified</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="_createDecryptionKey"><a title="FOFDispatcher" href="../classes/FOFDispatcher/_createDecryptionKey.xhtml">_createDecryptionKey()</a>
+                — Creates a decryption key for use with the TOTP decryption method</li>
+            <li id="_decryptWithTOTP"><a title="FOFDispatcher" href="../classes/FOFDispatcher/_decryptWithTOTP.xhtml">_decryptWithTOTP()</a>
+                — Decrypts a transparent authentication message using a TOTP</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="getTask"><a title="FOFDispatcher" href="../classes/FOFDispatcher/getTask.xhtml">getTask()</a>
+                — Tries to guess the controller task to execute based on the view name and the HTTP request method.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFDispatcher" href="../classes/FOFDispatcher/__construct.xhtml">__construct()</a>
+                — Public constructor</li>
+            <li id="dispatch"><a title="FOFDispatcher" href="../classes/FOFDispatcher/dispatch.xhtml">dispatch()</a>
+                — The main code of the Dispatcher. It spawns the necessary controller and runs it.</li>
+            <li id="getAnInstance"><a title="FOFDispatcher" href="../classes/FOFDispatcher/getAnInstance.xhtml">getAnInstance()</a>
+                — Get a static (Singleton) instance of a particular Dispatcher</li>
+            <li id="getTmpInstance"><a title="FOFDispatcher" href="../classes/FOFDispatcher/getTmpInstance.xhtml">getTmpInstance()</a>
+                — Gets a temporary instance of a Dispatcher</li>
+            <li id="isCliAdmin"><a title="FOFDispatcher" href="../classes/FOFDispatcher/isCliAdmin.xhtml">isCliAdmin()</a>
+                — Main function to detect if we're running in a CLI environment and we're admin</li>
+            <li id="onAfterDispatch"><a title="FOFDispatcher" href="../classes/FOFDispatcher/onAfterDispatch.xhtml">onAfterDispatch()</a>
+                — Executes right after the dispatcher runs the controller.</li>
+            <li id="onBeforeDispatch"><a title="FOFDispatcher" href="../classes/FOFDispatcher/onBeforeDispatch.xhtml">onBeforeDispatch()</a>
+                — Executes right before the dispatcher tries to instantiate and run the controller.</li>
+            <li id="onBeforeDispatchCLI"><a title="FOFDispatcher" href="../classes/FOFDispatcher/onBeforeDispatchCLI.xhtml">onBeforeDispatchCLI()</a>
+                — Sets up some environment variables, so we can work as usually on CLI, too.</li>
+            <li id="transparentAuthentication"><a title="FOFDispatcher" href="../classes/FOFDispatcher/transparentAuthentication.xhtml">transparentAuthentication()</a>
+                — Transparently authenticates a user</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

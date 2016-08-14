@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPUnit_Util_Log_TeamCity</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PHPUnit_Util_Log_TeamCity</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/phpunit/src/Util/Log/TeamCity.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PHPUnit_Util_Log_TeamCity</h1>
+        <h4>A TestListener that generates a logfile of the test execution using the TeamCity format (for use with PhpStorm, for instance).</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPUnit_Util_Log_TeamCity
+                extends <a title="PHPUnit_TextUI_ResultPrinter" href="../classes/PHPUnit_TextUI_ResultPrinter.xhtml">PHPUnit_TextUI_ResultPrinter</a>
+            {<br/><ul class="none"><li>// members</li><li>private <span title="bool">bool</span> <a href="#members">$isSummaryTestCountPrinted</a> =
+                        false;
+                    </li><li>private  <a href="#members">$startedTestName</a>;
+                    </li><li>private  <a href="#members">$flowId</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/writeProgress.xhtml">writeProgress</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/printResult.xhtml">printResult</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addError.xhtml">addError</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addWarning.xhtml">addWarning</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addFailure.xhtml">addFailure</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addIncompleteTest.xhtml">addIncompleteTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addRiskyTest.xhtml">addRiskyTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addSkippedTest.xhtml">addSkippedTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/printIgnoredTest.xhtml">printIgnoredTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/startTestSuite.xhtml">startTestSuite</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/endTestSuite.xhtml">endTestSuite</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/startTest.xhtml">startTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/endTest.xhtml">endTest</a>()
+                    </li><li>private void <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/printEvent.xhtml">printEvent</a>()
+                    </li><li>private static string <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getMessage.xhtml">getMessage</a>()
+                    </li><li>private static string <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getDetails.xhtml">getDetails</a>()
+                    </li><li>private static string <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getPrimitiveValueAsString.xhtml">getPrimitiveValueAsString</a>()
+                    </li><li>private static string <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/escapeValue.xhtml">escapeValue</a>()
+                    </li><li>private static string <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getFileName.xhtml">getFileName</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PHPUnit_TextUI_ResultPrinter" href="../classes/PHPUnit_TextUI_ResultPrinter.xhtml">PHPUnit_TextUI_ResultPrinter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="flowId"><strong>$flowId</strong>
+                —
+                string</li>
+            <li id="isSummaryTestCountPrinted"><strong>$isSummaryTestCountPrinted</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+            <li id="startedTestName"><strong>$startedTestName</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="escapeValue">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/escapeValue.xhtml">escapeValue()</a>
+            </li>
+            <li id="getDetails">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getDetails.xhtml">getDetails()</a>
+            </li>
+            <li id="getFileName">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getFileName.xhtml">getFileName()</a>
+            </li>
+            <li id="getMessage">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getMessage.xhtml">getMessage()</a>
+            </li>
+            <li id="getPrimitiveValueAsString">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/getPrimitiveValueAsString.xhtml">getPrimitiveValueAsString()</a>
+            </li>
+            <li id="printEvent">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/printEvent.xhtml">printEvent()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="writeProgress">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/writeProgress.xhtml">writeProgress()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="addError"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addError.xhtml">addError()</a>
+                — An error occurred.</li>
+            <li id="addFailure"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addFailure.xhtml">addFailure()</a>
+                — A failure occurred.</li>
+            <li id="addIncompleteTest"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addIncompleteTest.xhtml">addIncompleteTest()</a>
+                — Incomplete test.</li>
+            <li id="addRiskyTest"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addRiskyTest.xhtml">addRiskyTest()</a>
+                — Risky test.</li>
+            <li id="addSkippedTest"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addSkippedTest.xhtml">addSkippedTest()</a>
+                — Skipped test.</li>
+            <li id="addWarning"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/addWarning.xhtml">addWarning()</a>
+                — A warning occurred.</li>
+            <li id="endTest"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/endTest.xhtml">endTest()</a>
+                — A test ended.</li>
+            <li id="endTestSuite"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/endTestSuite.xhtml">endTestSuite()</a>
+                — A testsuite ended.</li>
+            <li id="printIgnoredTest">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/printIgnoredTest.xhtml">printIgnoredTest()</a>
+            </li>
+            <li id="printResult">
+              <a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/printResult.xhtml">printResult()</a>
+            </li>
+            <li id="startTest"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/startTest.xhtml">startTest()</a>
+                — A test started.</li>
+            <li id="startTestSuite"><a title="PHPUnit_Util_Log_TeamCity" href="../classes/PHPUnit_Util_Log_TeamCity/startTestSuite.xhtml">startTestSuite()</a>
+                — A testsuite started.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

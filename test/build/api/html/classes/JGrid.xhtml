@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JGrid</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JGrid</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/grid/grid.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JGrid</h1>
+        <h4>JGrid class to dynamically generate HTML tables</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JGrid
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$columns</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$activeRow</a> =
+                        0;
+                    </li><li>protected array <a href="#members">$rows</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$specialRows</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$options</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JGrid" href="../classes/JGrid/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="JGrid" href="../classes/JGrid/__toString.xhtml">__toString</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/setTableOptions.xhtml">setTableOptions</a>()
+                    </li><li>public array <a title="JGrid" href="../classes/JGrid/getTableOptions.xhtml">getTableOptions</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/addColumn.xhtml">addColumn</a>()
+                    </li><li>public array <a title="JGrid" href="../classes/JGrid/getColumns.xhtml">getColumns</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/deleteColumn.xhtml">deleteColumn</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/setColumns.xhtml">setColumns</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/addRow.xhtml">addRow</a>()
+                    </li><li>public array <a title="JGrid" href="../classes/JGrid/getRowOptions.xhtml">getRowOptions</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/setRowOptions.xhtml">setRowOptions</a>()
+                    </li><li>public int <a title="JGrid" href="../classes/JGrid/getActiveRow.xhtml">getActiveRow</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/setActiveRow.xhtml">setActiveRow</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/setRowCell.xhtml">setRowCell</a>()
+                    </li><li>public array <a title="JGrid" href="../classes/JGrid/getRow.xhtml">getRow</a>()
+                    </li><li>public array <a title="JGrid" href="../classes/JGrid/getRows.xhtml">getRows</a>()
+                    </li><li>public JGrid <a title="JGrid" href="../classes/JGrid/deleteRow.xhtml">deleteRow</a>()
+                    </li><li>public string <a title="JGrid" href="../classes/JGrid/toString.xhtml">toString</a>()
+                    </li><li>protected string <a title="JGrid" href="../classes/JGrid/renderArea.xhtml">renderArea</a>()
+                    </li><li>protected string <a title="JGrid" href="../classes/JGrid/renderAttributes.xhtml">renderAttributes</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="activeRow"><strong>$activeRow</strong>
+                —
+                int<br/><span class="indent">Current active row</span></li>
+            <li id="columns"><strong>$columns</strong>
+                —
+                array<br/><span class="indent">Array of columns</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                array<br/><span class="indent">Associative array of attributes for the table-tag</span></li>
+            <li id="rows"><strong>$rows</strong>
+                —
+                array<br/><span class="indent">Rows of the table (including header and footer rows)</span></li>
+            <li id="specialRows"><strong>$specialRows</strong>
+                —
+                array<br/><span class="indent">Header and Footer row-IDs</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="renderArea"><a title="JGrid" href="../classes/JGrid/renderArea.xhtml">renderArea()</a>
+                — Render an area of the table</li>
+            <li id="renderAttributes"><a title="JGrid" href="../classes/JGrid/renderAttributes.xhtml">renderAttributes()</a>
+                — Renders an HTML attribute from an associative array</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JGrid" href="../classes/JGrid/__construct.xhtml">__construct()</a>
+                — Constructor for a JGrid object</li>
+            <li id="__toString"><a title="JGrid" href="../classes/JGrid/__toString.xhtml">__toString()</a>
+                — Magic function to render this object as a table.</li>
+            <li id="addColumn"><a title="JGrid" href="../classes/JGrid/addColumn.xhtml">addColumn()</a>
+                — Add new column name to process</li>
+            <li id="addRow"><a title="JGrid" href="../classes/JGrid/addRow.xhtml">addRow()</a>
+                — Adds a row to the table and sets the currently active row to the new row</li>
+            <li id="deleteColumn"><a title="JGrid" href="../classes/JGrid/deleteColumn.xhtml">deleteColumn()</a>
+                — Delete column by name</li>
+            <li id="deleteRow"><a title="JGrid" href="../classes/JGrid/deleteRow.xhtml">deleteRow()</a>
+                — Delete a row from the object</li>
+            <li id="getActiveRow"><a title="JGrid" href="../classes/JGrid/getActiveRow.xhtml">getActiveRow()</a>
+                — Get the currently active row ID</li>
+            <li id="getColumns"><a title="JGrid" href="../classes/JGrid/getColumns.xhtml">getColumns()</a>
+                — Returns the list of internal columns</li>
+            <li id="getRow"><a title="JGrid" href="../classes/JGrid/getRow.xhtml">getRow()</a>
+                — Get all data for a row</li>
+            <li id="getRowOptions"><a title="JGrid" href="../classes/JGrid/getRowOptions.xhtml">getRowOptions()</a>
+                — Method to get the attributes of the currently active row</li>
+            <li id="getRows"><a title="JGrid" href="../classes/JGrid/getRows.xhtml">getRows()</a>
+                — Get the IDs of all rows in the table</li>
+            <li id="getTableOptions"><a title="JGrid" href="../classes/JGrid/getTableOptions.xhtml">getTableOptions()</a>
+                — Get the Attributes of the current table</li>
+            <li id="setActiveRow"><a title="JGrid" href="../classes/JGrid/setActiveRow.xhtml">setActiveRow()</a>
+                — Set the currently active row</li>
+            <li id="setColumns"><a title="JGrid" href="../classes/JGrid/setColumns.xhtml">setColumns()</a>
+                — Method to set a whole range of columns at once This can be used to re-order the columns, too</li>
+            <li id="setRowCell"><a title="JGrid" href="../classes/JGrid/setRowCell.xhtml">setRowCell()</a>
+                — Set cell content for a specific column for the currently active row</li>
+            <li id="setRowOptions"><a title="JGrid" href="../classes/JGrid/setRowOptions.xhtml">setRowOptions()</a>
+                — Method to set the attributes of the currently active row</li>
+            <li id="setTableOptions"><a title="JGrid" href="../classes/JGrid/setTableOptions.xhtml">setTableOptions()</a>
+                — Method to set the attributes for a table-tag</li>
+            <li id="toString"><a title="JGrid" href="../classes/JGrid/toString.xhtml">toString()</a>
+                — Render the HTML table</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

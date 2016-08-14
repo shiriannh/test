@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\AbstractRule</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PHPMD">PHPMD</a>
+          </li>
+          <li class="separator">AbstractRule</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractRule.php.xhtml#line53">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\</small>AbstractRule</h1>
+        <h4>This is the abstract base class for pmd rules.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractRule
+                implements
+                <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule.xhtml">Rule</a>
+            {<br/><ul class="none"><li>// members</li><li>private string <a href="#members">$name</a> =
+                        '';
+                    </li><li>private string <a href="#members">$message</a> =
+                        '';
+                    </li><li>private string <a href="#members">$since</a> =
+                        null;
+                    </li><li>private string <a href="#members">$externalInfoUrl</a> =
+                        '';
+                    </li><li>private string <a href="#members">$description</a> =
+                        '';
+                    </li><li>private <span title="PHPMD\array(string)">array(string)</span> <a href="#members">$examples</a> =
+                        ;
+                    </li><li>private string <a href="#members">$ruleSetName</a> =
+                        '';
+                    </li><li>private integer <a href="#members">$priority</a> =
+                        self::LOWEST_PRIORITY;
+                    </li><li>private <span title="PHPMD\array(string=&gt;string)">array(string=&gt;string)</span> <a href="#members">$properties</a> =
+                        ;
+                    </li><li>private <span title="\PHPMD\Report">Report</span> <a href="#members">$report</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public string <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getName.xhtml">getName</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setName.xhtml">setName</a>()
+                    </li><li>public string <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getSince.xhtml">getSince</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setSince.xhtml">setSince</a>()
+                    </li><li>public string <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getMessage.xhtml">getMessage</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setMessage.xhtml">setMessage</a>()
+                    </li><li>public string <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getExternalInfoUrl.xhtml">getExternalInfoUrl</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setExternalInfoUrl.xhtml">setExternalInfoUrl</a>()
+                    </li><li>public string <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getDescription.xhtml">getDescription</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setDescription.xhtml">setDescription</a>()
+                    </li><li>public array(string) <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getExamples.xhtml">getExamples</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/addExample.xhtml">addExample</a>()
+                    </li><li>public integer <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getPriority.xhtml">getPriority</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setPriority.xhtml">setPriority</a>()
+                    </li><li>public string <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getRuleSetName.xhtml">getRuleSetName</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setRuleSetName.xhtml">setRuleSetName</a>()
+                    </li><li>public Report <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getReport.xhtml">getReport</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setReport.xhtml">setReport</a>()
+                    </li><li>public void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/addProperty.xhtml">addProperty</a>()
+                    </li><li>public boolean <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getBooleanProperty.xhtml">getBooleanProperty</a>()
+                    </li><li>public integer <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getIntProperty.xhtml">getIntProperty</a>()
+                    </li><li>public string <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getStringProperty.xhtml">getStringProperty</a>()
+                    </li><li>protected void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/addViolation.xhtml">addViolation</a>()
+                    </li><li>public abstract void <a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/apply.xhtml">apply</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule.xhtml">PHPMD\Rule</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="description"><strong>$description</strong>
+                —
+                string<br/><span class="indent">An optional description for this rule.</span></li>
+            <li id="examples"><strong>$examples</strong>
+                —
+                <a title="PHPMD\array(string)" href="../classes/PHPMD_array(string).xhtml">PHPMD\array(string)</a><br/><span class="indent">A list of code examples for this rule.</span></li>
+            <li id="externalInfoUrl"><strong>$externalInfoUrl</strong>
+                —
+                string<br/><span class="indent">An url will external information for this rule.</span></li>
+            <li id="message"><strong>$message</strong>
+                —
+                string<br/><span class="indent">The violation message text for this rule.</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The name for this rule instance.</span></li>
+            <li id="priority"><strong>$priority</strong>
+                —
+                integer<br/><span class="indent">The priority of this rule.</span></li>
+            <li id="properties"><strong>$properties</strong>
+                —
+                <a title="PHPMD\array(string=&gt;string)" href="../classes/PHPMD_array(string=&gt;string).xhtml">PHPMD\array(string=&gt;string)</a><br/><span class="indent">Configuration properties for this rule instance.</span></li>
+            <li id="report"><strong>$report</strong>
+                —
+                <a title="\PHPMD\Report" href="../classes/_PHPMD_Report.xhtml">\PHPMD\Report</a><br/><span class="indent">The report for object for this rule.</span></li>
+            <li id="ruleSetName"><strong>$ruleSetName</strong>
+                —
+                string<br/><span class="indent">The name of the parent rule-set instance.</span></li>
+            <li id="since"><strong>$since</strong>
+                —
+                string<br/><span class="indent">The version since when this rule is available.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="addViolation"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/addViolation.xhtml">addViolation()</a>
+                — This method adds a violation to all reports for this violation type and for the given &lt;b&gt;$node&lt;/b&gt; instance.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="addExample"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/addExample.xhtml">addExample()</a>
+                — Adds a code example for this rule.</li>
+            <li id="addProperty"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/addProperty.xhtml">addProperty()</a>
+                — Adds a configuration property to this rule instance.</li>
+            <li id="apply"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/apply.xhtml">apply()</a>
+                — This method should implement the violation analysis algorithm of concrete rule implementations. All extending classes must implement this method.</li>
+            <li id="getBooleanProperty"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getBooleanProperty.xhtml">getBooleanProperty()</a>
+                — Returns the value of a configured property as a boolean or throws an exception when no property with &lt;b&gt;$name&lt;/b&gt; exists.</li>
+            <li id="getDescription"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getDescription.xhtml">getDescription()</a>
+                — Returns the description text for this rule instance.</li>
+            <li id="getExamples"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getExamples.xhtml">getExamples()</a>
+                — Returns a list of examples for this rule.</li>
+            <li id="getExternalInfoUrl"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getExternalInfoUrl.xhtml">getExternalInfoUrl()</a>
+                — Returns an url will external information for this rule.</li>
+            <li id="getIntProperty"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getIntProperty.xhtml">getIntProperty()</a>
+                — Returns the value of a configured property as an integer or throws an exception when no property with &lt;b&gt;$name&lt;/b&gt; exists.</li>
+            <li id="getMessage"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getMessage.xhtml">getMessage()</a>
+                — Returns the violation message text for this rule.</li>
+            <li id="getName"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getName.xhtml">getName()</a>
+                — Returns the name for this rule instance.</li>
+            <li id="getPriority"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getPriority.xhtml">getPriority()</a>
+                — Returns the priority of this rule.</li>
+            <li id="getReport"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getReport.xhtml">getReport()</a>
+                — Returns the violation report for this rule.</li>
+            <li id="getRuleSetName"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getRuleSetName.xhtml">getRuleSetName()</a>
+                — Returns the name of the parent rule-set instance.</li>
+            <li id="getSince"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getSince.xhtml">getSince()</a>
+                — Returns the version since when this rule is available or &lt;b&gt;null&lt;/b&gt;.</li>
+            <li id="getStringProperty"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/getStringProperty.xhtml">getStringProperty()</a>
+                — Returns the raw string value of a configured property or throws an exception when no property with &lt;b&gt;$name&lt;/b&gt; exists.</li>
+            <li id="setDescription"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setDescription.xhtml">setDescription()</a>
+                — Sets the description text for this rule instance.</li>
+            <li id="setExternalInfoUrl"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setExternalInfoUrl.xhtml">setExternalInfoUrl()</a>
+                — Sets an url will external information for this rule.</li>
+            <li id="setMessage"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setMessage.xhtml">setMessage()</a>
+                — Sets the violation message text for this rule.</li>
+            <li id="setName"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setName.xhtml">setName()</a>
+                — Sets the name for this rule instance.</li>
+            <li id="setPriority"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setPriority.xhtml">setPriority()</a>
+                — Set the priority of this rule.</li>
+            <li id="setReport"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setReport.xhtml">setReport()</a>
+                — Sets the violation report for this rule.</li>
+            <li id="setRuleSetName"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setRuleSetName.xhtml">setRuleSetName()</a>
+                — Sets the name of the parent rule set instance.</li>
+            <li id="setSince"><a title="PHPMD\AbstractRule" href="../classes/PHPMD_AbstractRule/setSince.xhtml">setSince()</a>
+                — Sets the version since when this rule is available.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="ezcBase" href="../../classes/ezcBase.xhtml">ezcBase</a>
+          </li>
+          <li class="separator">addClassRepository</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#throws">Throws</a>
+          </li>
+          <li>
+            <a href="../../source/vendor/zetacomponents/base/src/base.php.xhtml#line566">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>ezcBase::</small>addClassRepository</h1>
+        <h4>Adds an additional class repository.</h4>
+        <p>Used for adding class repositoryies outside the eZ components to be
+loaded by the autoload system.
+
+This function takes two arguments: $basePath is the base path for the
+whole class repository and $autoloadDirPath the path where autoload
+files for this repository are found. The paths in the autoload files are
+relative to the package directory as specified by the $basePath
+argument. I.e. class definition file will be searched at location
+$basePath + path to the class definition file as stored in the autoload
+file.
+
+addClassRepository() should be called somewhere in code before external classes
+are used.
+
+Example:
+Take the following facts:
+&lt;ul&gt;
+&lt;li&gt;there is a class repository stored in the directory "./repos"&lt;/li&gt;
+&lt;li&gt;autoload files for that repository are stored in "./repos/autoloads"&lt;/li&gt;
+&lt;li&gt;there are two components in this repository: "Me" and "You"&lt;/li&gt;
+&lt;li&gt;the "Me" component has the classes "erMyClass1" and "erMyClass2"&lt;/li&gt;
+&lt;li&gt;the "You" component has the classes "erYourClass1" and "erYourClass2"&lt;/li&gt;
+&lt;/ul&gt;
+
+In this case you would need to create the following files in
+"./repos/autoloads". Please note that the part before _autoload.php in
+the filename is the first part of the &lt;b&gt;classname&lt;/b&gt;, not considering
+the all lower-case letter prefix.
+
+"my_autoload.php":
+&lt;code&gt;
+&lt;?php
+    return array (
+      'erMyClass1' =&gt; 'Me/myclass1.php',
+      'erMyClass2' =&gt; 'Me/myclass2.php',
+    );
+?&gt;
+&lt;/code&gt;
+
+"your_autoload.php":
+&lt;code&gt;
+&lt;?php
+    return array (
+      'erYourClass1' =&gt; 'You/yourclass1.php',
+      'erYourClass2' =&gt; 'You/yourclass2.php',
+    );
+?&gt;
+&lt;/code&gt;
+
+The directory structure for the external repository is then:
+&lt;code&gt;
+./repos/autoloads/my_autoload.php
+./repos/autoloads/you_autoload.php
+./repos/Me/myclass1.php
+./repos/Me/myclass2.php
+./repos/You/yourclass1.php
+./repos/You/yourclass2.php
+&lt;/code&gt;
+
+To use this repository with the autoload mechanism you have to use the
+following code:
+&lt;code&gt;
+&lt;?php
+ezcBase::addClassRepository( './repos', './repos/autoloads' );
+$myVar = new erMyClass2();
+?&gt;
+&lt;/code&gt;</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function addClassRepository(string
+        $basePath,
+            [string
+        $autoloadDirPath = null,
+            [string
+        $prefix = null]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$basePath</code>
+                —
+                string</dt>
+          <dd/>
+          <dt><code>$autoloadDirPath</code>
+                —
+                string</dt>
+          <dd/>
+          <dt><code>$prefix</code>
+                —
+                string</dt>
+          <dd/>
+        </dl>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="ezcBaseFileNotFoundException" href="../../classes/ezcBaseFileNotFoundException.xhtml">ezcBaseFileNotFoundException</a>
+            </code>
+          </dt>
+          <dd>if $autoloadDirPath or $basePath do not exist.</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PlgSystemStats</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PlgSystemStats</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/plugins/system/stats/stats.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PlgSystemStats</h1>
+        <h4>Statistics system plugin. This sends anonymous data back to the Joomla! Project about the PHP, SQL, Joomla and OS versions</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PlgSystemStats
+                extends <a title="JPlugin" href="../classes/JPlugin.xhtml">JPlugin</a>
+            {<br/><ul class="none"><li>// constants</li><li>const MODE_ALLOW_ALWAYS = 1;</li><li>const MODE_ALLOW_ONCE = 2;</li><li>const MODE_ALLOW_NEVER = 3;</li></ul><ul class="none"><li>// members</li><li>protected <span title="JApplicationCms">JApplicationCms</span> <a href="#members">$app</a>;
+                    </li><li>protected boolean <a href="#members">$autoloadLanguage</a> =
+                        true;
+                    </li><li>protected <span title="JDatabaseDriver">JDatabaseDriver</span> <a href="#members">$db</a>;
+                    </li><li>protected string <a href="#members">$serverUrl</a> =
+                        'https://developer.joomla.org/stats/submit';
+                    </li><li>protected  <a href="#members">$uniqueId</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PlgSystemStats" href="../classes/PlgSystemStats/onAfterInitialise.xhtml">onAfterInitialise</a>()
+                    </li><li>public void <a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendAlways.xhtml">onAjaxSendAlways</a>()
+                    </li><li>public void <a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendNever.xhtml">onAjaxSendNever</a>()
+                    </li><li>public void <a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendOnce.xhtml">onAjaxSendOnce</a>()
+                    </li><li>public void <a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendStats.xhtml">onAjaxSendStats</a>()
+                    </li><li>public array <a title="PlgSystemStats" href="../classes/PlgSystemStats/onGetStatsData.xhtml">onGetStatsData</a>()
+                    </li><li>public string <a title="PlgSystemStats" href="../classes/PlgSystemStats/debug.xhtml">debug</a>()
+                    </li><li>protected array <a title="PlgSystemStats" href="../classes/PlgSystemStats/getLayoutData.xhtml">getLayoutData</a>()
+                    </li><li>protected array() <a title="PlgSystemStats" href="../classes/PlgSystemStats/getLayoutPaths.xhtml">getLayoutPaths</a>()
+                    </li><li>protected JLayout <a title="PlgSystemStats" href="../classes/PlgSystemStats/getRenderer.xhtml">getRenderer</a>()
+                    </li><li>private array. <a title="PlgSystemStats" href="../classes/PlgSystemStats/getStatsData.xhtml">getStatsData</a>()
+                    </li><li>private integer <a title="PlgSystemStats" href="../classes/PlgSystemStats/getUniqueId.xhtml">getUniqueId</a>()
+                    </li><li>private boolean <a title="PlgSystemStats" href="../classes/PlgSystemStats/isAllowedUser.xhtml">isAllowedUser</a>()
+                    </li><li>private boolean <a title="PlgSystemStats" href="../classes/PlgSystemStats/isDebugEnabled.xhtml">isDebugEnabled</a>()
+                    </li><li>private boolean <a title="PlgSystemStats" href="../classes/PlgSystemStats/isUpdateRequired.xhtml">isUpdateRequired</a>()
+                    </li><li>private boolean <a title="PlgSystemStats" href="../classes/PlgSystemStats/isAjaxRequest.xhtml">isAjaxRequest</a>()
+                    </li><li>public string <a title="PlgSystemStats" href="../classes/PlgSystemStats/render.xhtml">render</a>()
+                    </li><li>private boolean <a title="PlgSystemStats" href="../classes/PlgSystemStats/saveParams.xhtml">saveParams</a>()
+                    </li><li>private boolean <a title="PlgSystemStats" href="../classes/PlgSystemStats/sendStats.xhtml">sendStats</a>()
+                    </li><li>private void <a title="PlgSystemStats" href="../classes/PlgSystemStats/clearCacheGroups.xhtml">clearCacheGroups</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JPlugin" href="../classes/JPlugin.xhtml">JPlugin</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="MODE_ALLOW_ALWAYS">MODE_ALLOW_ALWAYS</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="MODE_ALLOW_ONCE">MODE_ALLOW_ONCE</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="MODE_ALLOW_NEVER">MODE_ALLOW_NEVER</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="app"><strong>$app</strong>
+                —
+                <a title="JApplicationCms" href="../classes/JApplicationCms.xhtml">JApplicationCms</a><br/><span class="indent">Application object</span></li>
+            <li id="autoloadLanguage"><strong>$autoloadLanguage</strong>
+                —
+                boolean<br/><span class="indent">Load plugin language files automatically</span></li>
+            <li id="db"><strong>$db</strong>
+                —
+                <a title="JDatabaseDriver" href="../classes/JDatabaseDriver.xhtml">JDatabaseDriver</a><br/><span class="indent">Database object</span></li>
+            <li id="serverUrl"><strong>$serverUrl</strong>
+                —
+                string<br/><span class="indent">Url to send the statistics.</span></li>
+            <li id="uniqueId"><strong>$uniqueId</strong>
+                —
+                string<br/><span class="indent">Unique identifier for this site</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="clearCacheGroups"><a title="PlgSystemStats" href="../classes/PlgSystemStats/clearCacheGroups.xhtml">clearCacheGroups()</a>
+                — Clears cache groups. We use it to clear the plugins cache after we update the last run timestamp.</li>
+            <li id="getStatsData"><a title="PlgSystemStats" href="../classes/PlgSystemStats/getStatsData.xhtml">getStatsData()</a>
+                — Get the data that will be sent to the stats server.</li>
+            <li id="getUniqueId"><a title="PlgSystemStats" href="../classes/PlgSystemStats/getUniqueId.xhtml">getUniqueId()</a>
+                — Get the unique id. Generates one if none is set.</li>
+            <li id="isAjaxRequest"><a title="PlgSystemStats" href="../classes/PlgSystemStats/isAjaxRequest.xhtml">isAjaxRequest()</a>
+                — Check valid AJAX request</li>
+            <li id="isAllowedUser"><a title="PlgSystemStats" href="../classes/PlgSystemStats/isAllowedUser.xhtml">isAllowedUser()</a>
+                — Check if current user is allowed to send the data</li>
+            <li id="isDebugEnabled"><a title="PlgSystemStats" href="../classes/PlgSystemStats/isDebugEnabled.xhtml">isDebugEnabled()</a>
+                — Check if the debug is enabled</li>
+            <li id="isUpdateRequired"><a title="PlgSystemStats" href="../classes/PlgSystemStats/isUpdateRequired.xhtml">isUpdateRequired()</a>
+                — Check if last_run + interval &gt; now</li>
+            <li id="saveParams"><a title="PlgSystemStats" href="../classes/PlgSystemStats/saveParams.xhtml">saveParams()</a>
+                — Save the plugin parameters</li>
+            <li id="sendStats"><a title="PlgSystemStats" href="../classes/PlgSystemStats/sendStats.xhtml">sendStats()</a>
+                — Send the stats to the stats server</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="getLayoutData"><a title="PlgSystemStats" href="../classes/PlgSystemStats/getLayoutData.xhtml">getLayoutData()</a>
+                — Get the data for the layout</li>
+            <li id="getLayoutPaths"><a title="PlgSystemStats" href="../classes/PlgSystemStats/getLayoutPaths.xhtml">getLayoutPaths()</a>
+                — Get the layout paths</li>
+            <li id="getRenderer"><a title="PlgSystemStats" href="../classes/PlgSystemStats/getRenderer.xhtml">getRenderer()</a>
+                — Get the plugin renderer</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="debug"><a title="PlgSystemStats" href="../classes/PlgSystemStats/debug.xhtml">debug()</a>
+                — Debug a layout of this plugin</li>
+            <li id="onAfterInitialise"><a title="PlgSystemStats" href="../classes/PlgSystemStats/onAfterInitialise.xhtml">onAfterInitialise()</a>
+                — Listener for the `onAfterInitialise` event</li>
+            <li id="onAjaxSendAlways"><a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendAlways.xhtml">onAjaxSendAlways()</a>
+                — User selected to always send data</li>
+            <li id="onAjaxSendNever"><a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendNever.xhtml">onAjaxSendNever()</a>
+                — User selected to never send data.</li>
+            <li id="onAjaxSendOnce"><a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendOnce.xhtml">onAjaxSendOnce()</a>
+                — User selected to send data once.</li>
+            <li id="onAjaxSendStats"><a title="PlgSystemStats" href="../classes/PlgSystemStats/onAjaxSendStats.xhtml">onAjaxSendStats()</a>
+                — Send the stats to the server.</li>
+            <li id="onGetStatsData"><a title="PlgSystemStats" href="../classes/PlgSystemStats/onGetStatsData.xhtml">onGetStatsData()</a>
+                — Get the data through events</li>
+            <li id="render"><a title="PlgSystemStats" href="../classes/PlgSystemStats/render.xhtml">render()</a>
+                — Render a layout of this plugin</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

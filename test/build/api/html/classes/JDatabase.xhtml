@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JDatabase</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JDatabase</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/database/database.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JDatabase</h1>
+        <h4>Database connector class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JDatabase
+            {<br/><ul class="none"><li>// methods</li><li>public mixed <a title="JDatabase" href="../classes/JDatabase/query.xhtml">query</a>()
+                    </li><li>public static array <a title="JDatabase" href="../classes/JDatabase/getConnectors.xhtml">getConnectors</a>()
+                    </li><li>public string <a title="JDatabase" href="../classes/JDatabase/getErrorMsg.xhtml">getErrorMsg</a>()
+                    </li><li>public integer <a title="JDatabase" href="../classes/JDatabase/getErrorNum.xhtml">getErrorNum</a>()
+                    </li><li>public static JDatabaseDriver <a title="JDatabase" href="../classes/JDatabase/getInstance.xhtml">getInstance</a>()
+                    </li><li>public static array <a title="JDatabase" href="../classes/JDatabase/splitSql.xhtml">splitSql</a>()
+                    </li><li>public string <a title="JDatabase" href="../classes/JDatabase/stderr.xhtml">stderr</a>()
+                    </li><li>public static boolean <a title="JDatabase" href="../classes/JDatabase/test.xhtml">test</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="getConnectors"><a title="JDatabase" href="../classes/JDatabase/getConnectors.xhtml">getConnectors()</a>
+                — Get a list of available database connectors.  The list will only be populated with connectors that both the class exists and the static test method returns true.  This gives us the ability to have a multitude of connector classes that are self-aware as to whether or not they are able to be used on a given system.</li>
+            <li id="getErrorMsg"><a title="JDatabase" href="../classes/JDatabase/getErrorMsg.xhtml">getErrorMsg()</a>
+                — Gets the error message from the database connection.</li>
+            <li id="getErrorNum"><a title="JDatabase" href="../classes/JDatabase/getErrorNum.xhtml">getErrorNum()</a>
+                — Gets the error number from the database connection.</li>
+            <li id="getInstance"><a title="JDatabase" href="../classes/JDatabase/getInstance.xhtml">getInstance()</a>
+                — Method to return a JDatabaseDriver instance based on the given options.  There are three global options and then the rest are specific to the database driver.  The 'driver' option defines which JDatabaseDriver class is used for the connection -- the default is 'mysqli'.  The 'database' option determines which database is to be used for the connection.  The 'select' option determines whether the connector should automatically select the chosen database.</li>
+            <li id="query"><a title="JDatabase" href="../classes/JDatabase/query.xhtml">query()</a>
+                — Execute the SQL statement.</li>
+            <li id="splitSql"><a title="JDatabase" href="../classes/JDatabase/splitSql.xhtml">splitSql()</a>
+                — Splits a string of multiple queries into an array of individual queries.</li>
+            <li id="stderr"><a title="JDatabase" href="../classes/JDatabase/stderr.xhtml">stderr()</a>
+                — Return the most recent error message for the database connector.</li>
+            <li id="test"><a title="JDatabase" href="../classes/JDatabase/test.xhtml">test()</a>
+                — Test to see if the connector is available.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

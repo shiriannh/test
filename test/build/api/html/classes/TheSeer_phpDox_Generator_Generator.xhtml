@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - TheSeer\phpDox\Generator\Generator</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#TheSeer_phpDox_Generator">TheSeer\phpDox\Generator</a>
+          </li>
+          <li class="separator">Generator</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/theseer/phpdox/src/generator/Generator.php.xhtml#line52">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>TheSeer\phpDox\Generator\</small>Generator</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Generator
+            {<br/><ul class="none"><li>// members</li><li>private <span title="\TheSeer\phpDox\ProgressLogger">ProgressLogger</span> <a href="#members">$logger</a>;
+                    </li><li>private array <a href="#members">$engines</a> =
+                        ;
+                    </li><li>private array <a href="#members">$enrichers</a> =
+                        ;
+                    </li><li>private <span title="TheSeer\phpDox\Generator\bool">bool</span> <a href="#members">$publicOnly</a>;
+                    </li><li>private  <a href="#members">$xmlDir</a>;
+                    </li><li>private <span title="TheSeer\phpDox\Generator\Project">Project</span> <a href="#members">$project</a>;
+                    </li><li>private <span title="TheSeer\phpDox\Generator\Engine\EventHandlerRegistry">EventHandlerRegistry</span> <a href="#members">$handlerRegistry</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/addEngine.xhtml">addEngine</a>()
+                    </li><li>public void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/addEnricher.xhtml">addEnricher</a>()
+                    </li><li>public void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/run.xhtml">run</a>()
+                    </li><li>protected void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/handleEvent.xhtml">handleEvent</a>()
+                    </li><li>protected void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processGlobalOnly.xhtml">processGlobalOnly</a>()
+                    </li><li>protected void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processWithNamespace.xhtml">processWithNamespace</a>()
+                    </li><li>protected void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processClass.xhtml">processClass</a>()
+                    </li><li>protected void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processTrait.xhtml">processTrait</a>()
+                    </li><li>protected void <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processInterface.xhtml">processInterface</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="engines"><strong>$engines</strong>
+                —
+                array</li>
+            <li id="enrichers"><strong>$enrichers</strong>
+                —
+                array</li>
+            <li id="handlerRegistry"><strong>$handlerRegistry</strong>
+                —
+                <a title="TheSeer\phpDox\Generator\Engine\EventHandlerRegistry" href="../classes/TheSeer_phpDox_Generator_Engine_EventHandlerRegistry.xhtml">TheSeer\phpDox\Generator\Engine\EventHandlerRegistry</a><br/><span class="indent">Map of events with engines</span></li>
+            <li id="logger"><strong>$logger</strong>
+                —
+                <a title="\TheSeer\phpDox\ProgressLogger" href="../classes/_TheSeer_phpDox_ProgressLogger.xhtml">\TheSeer\phpDox\ProgressLogger</a></li>
+            <li id="project"><strong>$project</strong>
+                —
+                <a title="TheSeer\phpDox\Generator\Project" href="../classes/TheSeer_phpDox_Generator_Project.xhtml">TheSeer\phpDox\Generator\Project</a></li>
+            <li id="publicOnly"><strong>$publicOnly</strong>
+                —
+                <a title="TheSeer\phpDox\Generator\bool" href="../classes/TheSeer_phpDox_Generator_bool.xhtml">TheSeer\phpDox\Generator\bool</a></li>
+            <li id="xmlDir"><strong>$xmlDir</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="handleEvent">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/handleEvent.xhtml">handleEvent()</a>
+            </li>
+            <li id="processClass">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processClass.xhtml">processClass()</a>
+            </li>
+            <li id="processGlobalOnly">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processGlobalOnly.xhtml">processGlobalOnly()</a>
+            </li>
+            <li id="processInterface">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processInterface.xhtml">processInterface()</a>
+            </li>
+            <li id="processTrait">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processTrait.xhtml">processTrait()</a>
+            </li>
+            <li id="processWithNamespace">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/processWithNamespace.xhtml">processWithNamespace()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="addEngine">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/addEngine.xhtml">addEngine()</a>
+            </li>
+            <li id="addEnricher">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/addEnricher.xhtml">addEnricher()</a>
+            </li>
+            <li id="run">
+              <a title="TheSeer\phpDox\Generator\Generator" href="../classes/TheSeer_phpDox_Generator_Generator/run.xhtml">run()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

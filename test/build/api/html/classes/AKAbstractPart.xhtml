@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - AKAbstractPart</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">AKAbstractPart</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_joomlaupdate/restore.php.xhtml#line1236">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>AKAbstractPart</h1>
+        <h4>The superclass of all Akeeba Kickstart parts. The "parts" are intelligent stateful classes which perform a single procedure and have preparation, running and finalization phases. The transition between phases is handled automatically by this superclass' tick() final public method, which should be the ONLY public API exposed to the rest of the Akeeba Engine.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AKAbstractPart
+                extends <a title="AKAbstractObject" href="../classes/AKAbstractObject.xhtml">AKAbstractObject</a>
+            {<br/><ul class="none"><li>// members</li><li>protected boolean <a href="#members">$isPrepared</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$isRunning</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$isFinished</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$hasRan</a> =
+                        false;
+                    </li><li>protected string <a href="#members">$active_domain</a> =
+                        "";
+                    </li><li>protected string <a href="#members">$active_step</a> =
+                        "";
+                    </li><li>protected string <a href="#members">$active_substep</a> =
+                        "";
+                    </li><li>protected array <a href="#members">$_parametersArray</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$databaseRoot</a> =
+                        ;
+                    </li><li>private integer <a href="#members">$warnings_pointer</a> =
+                        1;
+                    </li><li>protected array <a href="#members">$observers</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected abstract void <a title="AKAbstractPart" href="../classes/AKAbstractPart/_prepare.xhtml">_prepare</a>()
+                    </li><li>protected abstract void <a title="AKAbstractPart" href="../classes/AKAbstractPart/_finalize.xhtml">_finalize</a>()
+                    </li><li>protected abstract void <a title="AKAbstractPart" href="../classes/AKAbstractPart/_run.xhtml">_run</a>()
+                    </li><li>protected void <a title="AKAbstractPart" href="../classes/AKAbstractPart/setBreakFlag.xhtml">setBreakFlag</a>()
+                    </li><li>protected void <a title="AKAbstractPart" href="../classes/AKAbstractPart/setState.xhtml">setState</a>()
+                    </li><li>public final array <a title="AKAbstractPart" href="../classes/AKAbstractPart/tick.xhtml">tick</a>()
+                    </li><li>public array <a title="AKAbstractPart" href="../classes/AKAbstractPart/getStatusArray.xhtml">getStatusArray</a>()
+                    </li><li>public final void <a title="AKAbstractPart" href="../classes/AKAbstractPart/setup.xhtml">setup</a>()
+                    </li><li>public final string <a title="AKAbstractPart" href="../classes/AKAbstractPart/getState.xhtml">getState</a>()
+                    </li><li>protected final array <a title="AKAbstractPart" href="../classes/AKAbstractPart/_makeReturnTable.xhtml">_makeReturnTable</a>()
+                    </li><li>protected final void <a title="AKAbstractPart" href="../classes/AKAbstractPart/setDomain.xhtml">setDomain</a>()
+                    </li><li>public final void <a title="AKAbstractPart" href="../classes/AKAbstractPart/getDomain.xhtml">getDomain</a>()
+                    </li><li>protected final void <a title="AKAbstractPart" href="../classes/AKAbstractPart/setStep.xhtml">setStep</a>()
+                    </li><li>public final void <a title="AKAbstractPart" href="../classes/AKAbstractPart/getStep.xhtml">getStep</a>()
+                    </li><li>protected final void <a title="AKAbstractPart" href="../classes/AKAbstractPart/setSubstep.xhtml">setSubstep</a>()
+                    </li><li>public final void <a title="AKAbstractPart" href="../classes/AKAbstractPart/getSubstep.xhtml">getSubstep</a>()
+                    </li><li>public void <a title="AKAbstractPart" href="../classes/AKAbstractPart/attach.xhtml">attach</a>()
+                    </li><li>public void <a title="AKAbstractPart" href="../classes/AKAbstractPart/detach.xhtml">detach</a>()
+                    </li><li>protected void <a title="AKAbstractPart" href="../classes/AKAbstractPart/notify.xhtml">notify</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="AKAbstractObject" href="../classes/AKAbstractObject.xhtml">AKAbstractObject</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="warnings_pointer">
+              <strong>$warnings_pointer</strong>
+              <br/>
+              <span class="indent">@var int Last reported warnings's position in array</span>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_parametersArray"><strong>$_parametersArray</strong>
+                —
+                array<br/><span class="indent">Any configuration variables, in the form of an array.</span></li>
+            <li id="active_domain"><strong>$active_domain</strong>
+                —
+                string<br/><span class="indent">The name of the engine part (a.k.a. Domain), used in return table generation.</span></li>
+            <li id="active_step"><strong>$active_step</strong>
+                —
+                string<br/><span class="indent">The step this engine part is in. Used verbatim in return table and should be set by the code in the _run() method.</span></li>
+            <li id="active_substep"><strong>$active_substep</strong>
+                —
+                string<br/><span class="indent">A more detailed description of the step this engine part is in. Used verbatim in return table and should be set by the code in the _run() method.</span></li>
+            <li id="databaseRoot">
+              <strong>$databaseRoot</strong>
+              <br/>
+              <span class="indent">@var string The database root key</span>
+            </li>
+            <li id="hasRan"><strong>$hasRan</strong>
+                —
+                boolean<br/><span class="indent">Indicates whether this part has finished its run cycle</span></li>
+            <li id="isFinished"><strong>$isFinished</strong>
+                —
+                boolean<br/><span class="indent">Indicates whether this part has finished its finalization cycle</span></li>
+            <li id="isPrepared"><strong>$isPrepared</strong>
+                —
+                boolean<br/><span class="indent">Indicates whether this part has finished its initialisation cycle</span></li>
+            <li id="isRunning"><strong>$isRunning</strong>
+                —
+                boolean<br/><span class="indent">Indicates whether this part has more work to do (it's in running state)</span></li>
+            <li id="observers">
+              <strong>$observers</strong>
+              <br/>
+              <span class="indent">@var array An array of observers</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_finalize"><a title="AKAbstractPart" href="../classes/AKAbstractPart/_finalize.xhtml">_finalize()</a>
+                — Runs the finalisation process for this part. Should set _isFinished to true.</li>
+            <li id="_makeReturnTable"><a title="AKAbstractPart" href="../classes/AKAbstractPart/_makeReturnTable.xhtml">_makeReturnTable()</a>
+                — Constructs a Response Array based on the engine part's state.</li>
+            <li id="_prepare"><a title="AKAbstractPart" href="../classes/AKAbstractPart/_prepare.xhtml">_prepare()</a>
+                — Runs the preparation for this part. Should set _isPrepared to true</li>
+            <li id="_run"><a title="AKAbstractPart" href="../classes/AKAbstractPart/_run.xhtml">_run()</a>
+                — Runs the main functionality loop for this part. Upon calling, should set the _isRunning to true. When it finished, should set the _hasRan to true. If an error is encountered, setError should be used.</li>
+            <li id="notify"><a title="AKAbstractPart" href="../classes/AKAbstractPart/notify.xhtml">notify()</a>
+                — Notifies observers each time something interesting happened to the part</li>
+            <li id="setBreakFlag"><a title="AKAbstractPart" href="../classes/AKAbstractPart/setBreakFlag.xhtml">setBreakFlag()</a>
+                — Sets the BREAKFLAG, which instructs this engine part that the current step must break immediately, in fear of timing out.</li>
+            <li id="setDomain">
+              <a title="AKAbstractPart" href="../classes/AKAbstractPart/setDomain.xhtml">setDomain()</a>
+            </li>
+            <li id="setState"><a title="AKAbstractPart" href="../classes/AKAbstractPart/setState.xhtml">setState()</a>
+                — Sets the engine part's internal state, in an easy to use manner</li>
+            <li id="setStep">
+              <a title="AKAbstractPart" href="../classes/AKAbstractPart/setStep.xhtml">setStep()</a>
+            </li>
+            <li id="setSubstep">
+              <a title="AKAbstractPart" href="../classes/AKAbstractPart/setSubstep.xhtml">setSubstep()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="attach"><a title="AKAbstractPart" href="../classes/AKAbstractPart/attach.xhtml">attach()</a>
+                — Attaches an observer object</li>
+            <li id="detach"><a title="AKAbstractPart" href="../classes/AKAbstractPart/detach.xhtml">detach()</a>
+                — Detaches an observer object</li>
+            <li id="getDomain">
+              <a title="AKAbstractPart" href="../classes/AKAbstractPart/getDomain.xhtml">getDomain()</a>
+            </li>
+            <li id="getState"><a title="AKAbstractPart" href="../classes/AKAbstractPart/getState.xhtml">getState()</a>
+                — Returns the state of this engine part.</li>
+            <li id="getStatusArray"><a title="AKAbstractPart" href="../classes/AKAbstractPart/getStatusArray.xhtml">getStatusArray()</a>
+                — Returns a copy of the class's status array</li>
+            <li id="getStep">
+              <a title="AKAbstractPart" href="../classes/AKAbstractPart/getStep.xhtml">getStep()</a>
+            </li>
+            <li id="getSubstep">
+              <a title="AKAbstractPart" href="../classes/AKAbstractPart/getSubstep.xhtml">getSubstep()</a>
+            </li>
+            <li id="setup"><a title="AKAbstractPart" href="../classes/AKAbstractPart/setup.xhtml">setup()</a>
+                — Sends any kind of setup information to the engine part. Using this, we avoid passing parameters to the constructor of the class. These parameters should be passed as an indexed array and should be taken into account during the preparation process only. This function will set the error flag if it's called after the engine part is prepared.</li>
+            <li id="tick"><a title="AKAbstractPart" href="../classes/AKAbstractPart/tick.xhtml">tick()</a>
+                — The public interface to an engine part. This method takes care for calling the correct method in order to perform the initialisation - run - finalisation cycle of operation and return a proper response array.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

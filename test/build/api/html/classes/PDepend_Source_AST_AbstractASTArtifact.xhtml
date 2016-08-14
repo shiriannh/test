@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\AST\AbstractASTArtifact</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_AST">PDepend\Source\AST</a>
+          </li>
+          <li class="separator">AbstractASTArtifact</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/AbstractASTArtifact.php.xhtml#line51">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\AST\</small>AbstractASTArtifact</h1>
+        <h4>Abstract base class for code item.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractASTArtifact
+                implements
+                <a title="PDepend\Source\AST\ASTArtifact" href="../interfaces/PDepend_Source_AST_ASTArtifact.xhtml">ASTArtifact</a>
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$name</a> =
+                        '';
+                    </li><li>protected string <a href="#members">$id</a> =
+                        null;
+                    </li><li>protected integer <a href="#members">$startLine</a> =
+                        0;
+                    </li><li>protected integer <a href="#members">$endLine</a> =
+                        0;
+                    </li><li>protected <span title="\PDepend\Source\AST\ASTCompilationUnit">ASTCompilationUnit</span> <a href="#members">$compilationUnit</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$comment</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getName.xhtml">getName</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setName.xhtml">setName</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getId.xhtml">getId</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setId.xhtml">setId</a>()
+                    </li><li>public ASTCompilationUnit <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getCompilationUnit.xhtml">getCompilationUnit</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setCompilationUnit.xhtml">setCompilationUnit</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getComment.xhtml">getComment</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setComment.xhtml">setComment</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getStartLine.xhtml">getStartLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getEndLine.xhtml">getEndLine</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getDocComment.xhtml">getDocComment</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setDocComment.xhtml">setDocComment</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\AST\ASTArtifact" href="../interfaces/PDepend_Source_AST_ASTArtifact.xhtml">PDepend\Source\AST\ASTArtifact</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="comment"><strong>$comment</strong>
+                —
+                string<br/><span class="indent">The comment for this type.</span></li>
+            <li id="compilationUnit"><strong>$compilationUnit</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTCompilationUnit" href="../classes/_PDepend_Source_AST_ASTCompilationUnit.xhtml">\PDepend\Source\AST\ASTCompilationUnit</a><br/><span class="indent">The source file for this item.</span></li>
+            <li id="endLine"><strong>$endLine</strong>
+                —
+                integer<br/><span class="indent">The line number where the item declaration ends.</span></li>
+            <li id="id"><strong>$id</strong>
+                —
+                string<br/><span class="indent">The unique identifier for this function.</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The name for this item.</span></li>
+            <li id="startLine"><strong>$startLine</strong>
+                —
+                integer<br/><span class="indent">The line number where the item declaration starts.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/__construct.xhtml">__construct()</a>
+                — Constructs a new item for the given &lt;b&gt;$name&lt;/b&gt;.</li>
+            <li id="getComment"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getComment.xhtml">getComment()</a>
+                — Returns a doc comment for this node or &lt;b&gt;null&lt;/b&gt; when no comment was found.</li>
+            <li id="getCompilationUnit"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getCompilationUnit.xhtml">getCompilationUnit()</a>
+                — Returns the source file for this item.</li>
+            <li id="getDocComment"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getDocComment.xhtml">getDocComment()</a>
+                — Returns the doc comment for this item or &lt;b&gt;null&lt;/b&gt;.</li>
+            <li id="getEndLine"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getEndLine.xhtml">getEndLine()</a>
+                — Returns the line number where the class or interface declaration ends.</li>
+            <li id="getId"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getId.xhtml">getId()</a>
+                — Returns a id for this code node.</li>
+            <li id="getName"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getName.xhtml">getName()</a>
+                — Returns the item name.</li>
+            <li id="getStartLine"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/getStartLine.xhtml">getStartLine()</a>
+                — Returns the line number where the class or interface declaration starts.</li>
+            <li id="setComment"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setComment.xhtml">setComment()</a>
+                — Sets the raw doc comment for this node.</li>
+            <li id="setCompilationUnit"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setCompilationUnit.xhtml">setCompilationUnit()</a>
+                — Sets the source file for this item.</li>
+            <li id="setDocComment"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setDocComment.xhtml">setDocComment()</a>
+                — Sets the doc comment for this item.</li>
+            <li id="setId"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setId.xhtml">setId()</a>
+                — Sets the unique identifier for this node instance.</li>
+            <li id="setName"><a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact/setName.xhtml">setName()</a>
+                — Sets the item name.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

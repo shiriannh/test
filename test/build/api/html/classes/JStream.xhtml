@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JStream</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JStream</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/filesystem/stream.php.xhtml#line27">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JStream</h1>
+        <h4>Joomla! Stream Interface</h4>
+        <p>The Joomla! stream interface is designed to handle files as streams<br/>where as the legacy JFile static class treated files in a rather<br/>atomic manner.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JStream
+                extends <a title="JObject" href="../classes/JObject.xhtml">JObject</a>
+            {<br/><ul class="none"><li>// members</li><li>protected integer <a href="#members">$filemode</a> =
+                        0644;
+                    </li><li>protected integer <a href="#members">$dirmode</a> =
+                        0755;
+                    </li><li>protected integer <a href="#members">$chunksize</a> =
+                        8192;
+                    </li><li>protected  <a href="#members">$filename</a>;
+                    </li><li>protected  <a href="#members">$writeprefix</a>;
+                    </li><li>protected  <a href="#members">$readprefix</a>;
+                    </li><li>protected string <a href="#members">$processingmethod</a> =
+                        'f';
+                    </li><li>protected array <a href="#members">$filters</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$fh</a>;
+                    </li><li>protected  <a href="#members">$filesize</a>;
+                    </li><li>protected resource <a href="#members">$context</a> =
+                        null;
+                    </li><li>protected  <a href="#members">$contextOptions</a>;
+                    </li><li>protected  <a href="#members">$openmode</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JStream" href="../classes/JStream/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="JStream" href="../classes/JStream/__destruct.xhtml">__destruct</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/open.xhtml">open</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/close.xhtml">close</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/eof.xhtml">eof</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/filesize.xhtml">filesize</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/gets.xhtml">gets</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/read.xhtml">read</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/seek.xhtml">seek</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/tell.xhtml">tell</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/write.xhtml">write</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/chmod.xhtml">chmod</a>()
+                    </li><li>public array <a title="JStream" href="../classes/JStream/get_meta_data.xhtml">get_meta_data</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/_buildContext.xhtml">_buildContext</a>()
+                    </li><li>public void <a title="JStream" href="../classes/JStream/setContextOptions.xhtml">setContextOptions</a>()
+                    </li><li>public void <a title="JStream" href="../classes/JStream/addContextEntry.xhtml">addContextEntry</a>()
+                    </li><li>public void <a title="JStream" href="../classes/JStream/deleteContextEntry.xhtml">deleteContextEntry</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/applyContextToStream.xhtml">applyContextToStream</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/appendFilter.xhtml">appendFilter</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/prependFilter.xhtml">prependFilter</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/removeFilter.xhtml">removeFilter</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/copy.xhtml">copy</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/move.xhtml">move</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/delete.xhtml">delete</a>()
+                    </li><li>public mixed <a title="JStream" href="../classes/JStream/upload.xhtml">upload</a>()
+                    </li><li>public boolean <a title="JStream" href="../classes/JStream/writeFile.xhtml">writeFile</a>()
+                    </li><li>public string <a title="JStream" href="../classes/JStream/_getFilename.xhtml">_getFilename</a>()
+                    </li><li>public File <a title="JStream" href="../classes/JStream/getFileHandle.xhtml">getFileHandle</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JObject" href="../classes/JObject.xhtml">JObject</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="chunksize"><strong>$chunksize</strong>
+                —
+                integer<br/><span class="indent">Default Chunk Size</span></li>
+            <li id="context"><strong>$context</strong>
+                —
+                resource<br/><span class="indent">Context to use when opening the connection</span></li>
+            <li id="contextOptions"><strong>$contextOptions</strong>
+                —
+                array<br/><span class="indent">Context options; used to rebuild the context</span></li>
+            <li id="dirmode"><strong>$dirmode</strong>
+                —
+                integer<br/><span class="indent">Directory Mode</span></li>
+            <li id="fh"><strong>$fh</strong>
+                —
+                array<br/><span class="indent">File Handle</span></li>
+            <li id="filemode"><strong>$filemode</strong>
+                —
+                integer<br/><span class="indent">File Mode</span></li>
+            <li id="filename"><strong>$filename</strong>
+                —
+                string<br/><span class="indent">Filename</span></li>
+            <li id="filesize"><strong>$filesize</strong>
+                —
+                integer<br/><span class="indent">File size</span></li>
+            <li id="filters"><strong>$filters</strong>
+                —
+                array<br/><span class="indent">Filters applied to the current stream</span></li>
+            <li id="openmode"><strong>$openmode</strong>
+                —
+                string<br/><span class="indent">The mode under which the file was opened</span></li>
+            <li id="processingmethod"><strong>$processingmethod</strong>
+                —
+                string<br/><span class="indent">Read Processing method</span></li>
+            <li id="readprefix"><strong>$readprefix</strong>
+                —
+                string<br/><span class="indent">Prefix of the connection for reading</span></li>
+            <li id="writeprefix"><strong>$writeprefix</strong>
+                —
+                string<br/><span class="indent">Prefix of the connection for writing</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JStream" href="../classes/JStream/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="__destruct"><a title="JStream" href="../classes/JStream/__destruct.xhtml">__destruct()</a>
+                — Destructor</li>
+            <li id="_buildContext"><a title="JStream" href="../classes/JStream/_buildContext.xhtml">_buildContext()</a>
+                — Stream contexts Builds the context from the array</li>
+            <li id="_getFilename"><a title="JStream" href="../classes/JStream/_getFilename.xhtml">_getFilename()</a>
+                — Determine the appropriate 'filename' of a file</li>
+            <li id="addContextEntry"><a title="JStream" href="../classes/JStream/addContextEntry.xhtml">addContextEntry()</a>
+                — Adds a particular options to the context</li>
+            <li id="appendFilter"><a title="JStream" href="../classes/JStream/appendFilter.xhtml">appendFilter()</a>
+                — Stream filters Append a filter to the chain</li>
+            <li id="applyContextToStream"><a title="JStream" href="../classes/JStream/applyContextToStream.xhtml">applyContextToStream()</a>
+                — Applies the current context to the stream</li>
+            <li id="chmod"><a title="JStream" href="../classes/JStream/chmod.xhtml">chmod()</a>
+                — Chmod wrapper</li>
+            <li id="close"><a title="JStream" href="../classes/JStream/close.xhtml">close()</a>
+                — Attempt to close a file handle</li>
+            <li id="copy"><a title="JStream" href="../classes/JStream/copy.xhtml">copy()</a>
+                — Copy a file from src to dest</li>
+            <li id="delete"><a title="JStream" href="../classes/JStream/delete.xhtml">delete()</a>
+                — Delete a file</li>
+            <li id="deleteContextEntry"><a title="JStream" href="../classes/JStream/deleteContextEntry.xhtml">deleteContextEntry()</a>
+                — Deletes a particular setting from a context</li>
+            <li id="eof"><a title="JStream" href="../classes/JStream/eof.xhtml">eof()</a>
+                — Work out if we're at the end of the file for a stream</li>
+            <li id="filesize"><a title="JStream" href="../classes/JStream/filesize.xhtml">filesize()</a>
+                — Retrieve the file size of the path</li>
+            <li id="getFileHandle"><a title="JStream" href="../classes/JStream/getFileHandle.xhtml">getFileHandle()</a>
+                — Return the internal file handle</li>
+            <li id="get_meta_data"><a title="JStream" href="../classes/JStream/get_meta_data.xhtml">get_meta_data()</a>
+                — Get the stream metadata</li>
+            <li id="gets"><a title="JStream" href="../classes/JStream/gets.xhtml">gets()</a>
+                — Get a line from the stream source.</li>
+            <li id="move"><a title="JStream" href="../classes/JStream/move.xhtml">move()</a>
+                — Moves a file</li>
+            <li id="open"><a title="JStream" href="../classes/JStream/open.xhtml">open()</a>
+                — Generic File Operations</li>
+            <li id="prependFilter"><a title="JStream" href="../classes/JStream/prependFilter.xhtml">prependFilter()</a>
+                — Prepend a filter to the chain</li>
+            <li id="read"><a title="JStream" href="../classes/JStream/read.xhtml">read()</a>
+                — Read a file</li>
+            <li id="removeFilter"><a title="JStream" href="../classes/JStream/removeFilter.xhtml">removeFilter()</a>
+                — Remove a filter, either by resource (handed out from the append or prepend function) or via getting the filter list)</li>
+            <li id="seek"><a title="JStream" href="../classes/JStream/seek.xhtml">seek()</a>
+                — Seek the file</li>
+            <li id="setContextOptions"><a title="JStream" href="../classes/JStream/setContextOptions.xhtml">setContextOptions()</a>
+                — Updates the context to the array</li>
+            <li id="tell"><a title="JStream" href="../classes/JStream/tell.xhtml">tell()</a>
+                — Returns the current position of the file read/write pointer.</li>
+            <li id="upload"><a title="JStream" href="../classes/JStream/upload.xhtml">upload()</a>
+                — Upload a file</li>
+            <li id="write"><a title="JStream" href="../classes/JStream/write.xhtml">write()</a>
+                — File write</li>
+            <li id="writeFile"><a title="JStream" href="../classes/JStream/writeFile.xhtml">writeFile()</a>
+                — Writes a chunk of data to a file.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

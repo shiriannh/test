@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JFacebookUser" href="../../classes/JFacebookUser.xhtml">JFacebookUser</a>
+          </li>
+          <li class="separator">createEvent</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/facebook/user.php.xhtml#line441">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JFacebookUser::</small>createEvent</h1>
+        <h4>Method to create an event for a user. Requires authentication create_event permission.</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function createEvent(mixed
+        $user,
+            string
+        $name,
+            string
+        $start_time,
+            [string
+        $end_time = null,
+            [string
+        $description = null,
+            [string
+        $location = null,
+            [string
+        $location_id = null,
+            [string
+        $privacy_type = null]]]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$user</code>
+                —
+                mixed</dt>
+          <dd>Either an integer containing the user ID or a string containing the username.</dd>
+          <dt><code>$name</code>
+                —
+                string</dt>
+          <dd>Event name.</dd>
+          <dt><code>$start_time</code>
+                —
+                string</dt>
+          <dd>Event start time as UNIX timestamp.</dd>
+          <dt><code>$end_time</code>
+                —
+                string</dt>
+          <dd>Event end time as UNIX timestamp.</dd>
+          <dt><code>$description</code>
+                —
+                string</dt>
+          <dd>Event description.</dd>
+          <dt><code>$location</code>
+                —
+                string</dt>
+          <dd>Event location.</dd>
+          <dt><code>$location_id</code>
+                —
+                string</dt>
+          <dd>Facebook Place ID of the place the Event is taking place.</dd>
+          <dt><code>$privacy_type</code>
+                —
+                string</dt>
+          <dd>Event privacy setting, a string containing 'OPEN' (default), 'CLOSED', or 'SECRET'.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>mixed</dt>
+          <dd>The decoded JSON response or false if the client is not authenticated.</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPUnit_Util_Printer</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PHPUnit_Util_Printer</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/phpunit/src/Util/Printer.php.xhtml#line16">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PHPUnit_Util_Printer</h1>
+        <h4>Utility class that can print to STDOUT or write to a file.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPUnit_Util_Printer
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="bool">bool</span> <a href="#members">$autoFlush</a> =
+                        false;
+                    </li><li>protected  <a href="#members">$out</a>;
+                    </li><li>protected  <a href="#members">$outTarget</a>;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$printsHTML</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/flush.xhtml">flush</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/incrementalFlush.xhtml">incrementalFlush</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/write.xhtml">write</a>()
+                    </li><li>public bool <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/getAutoFlush.xhtml">getAutoFlush</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/setAutoFlush.xhtml">setAutoFlush</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="autoFlush"><strong>$autoFlush</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">If true, flush output after every write.</span></li>
+            <li id="out"><strong>$out</strong>
+                —
+                resource</li>
+            <li id="outTarget"><strong>$outTarget</strong>
+                —
+                string</li>
+            <li id="printsHTML"><strong>$printsHTML</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="flush"><a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/flush.xhtml">flush()</a>
+                — Flush buffer, optionally tidy up HTML, and close output if it's not to a php stream</li>
+            <li id="getAutoFlush"><a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/getAutoFlush.xhtml">getAutoFlush()</a>
+                — Check auto-flush mode.</li>
+            <li id="incrementalFlush"><a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/incrementalFlush.xhtml">incrementalFlush()</a>
+                — Performs a safe, incremental flush.</li>
+            <li id="setAutoFlush"><a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/setAutoFlush.xhtml">setAutoFlush()</a>
+                — Set auto-flushing mode.</li>
+            <li id="write">
+              <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer/write.xhtml">write()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

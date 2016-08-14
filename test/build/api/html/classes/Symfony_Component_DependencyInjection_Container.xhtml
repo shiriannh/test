@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\DependencyInjection\Container</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_DependencyInjection">Symfony\Component\DependencyInjection</a>
+          </li>
+          <li class="separator">Container</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/dependency-injection/Container.php.xhtml#line59">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\DependencyInjection\</small>Container</h1>
+        <h4>Container is a dependency injection container.</h4>
+        <p>It gives access to object instances (services).<br/><br/>Services and parameters are simple key/pair stores.<br/><br/>Parameter and service keys are case insensitive.<br/><br/>A service id can contain lowercased letters, digits, underscores, and dots.<br/>Underscores are used to separate words, and dots to group services<br/>under namespaces:<br/><br/>&lt;ul&gt;<br/>&lt;li&gt;request&lt;/li&gt;<br/>&lt;li&gt;mysql_session_storage&lt;/li&gt;<br/>&lt;li&gt;symfony.mysql_session_storage&lt;/li&gt;<br/>&lt;/ul&gt;<br/><br/>A service can also be defined by creating a method named<br/>getXXXService(), where XXX is the camelized version of the id:<br/><br/>&lt;ul&gt;<br/>&lt;li&gt;request -&gt; getRequestService()&lt;/li&gt;<br/>&lt;li&gt;mysql_session_storage -&gt; getMysqlSessionStorageService()&lt;/li&gt;<br/>&lt;li&gt;symfony.mysql_session_storage -&gt; getSymfony_MysqlSessionStorageService()&lt;/li&gt;<br/>&lt;/ul&gt;<br/><br/>The container can have three possible behaviors when a service does not exist:<br/><br/>* EXCEPTION_ON_INVALID_REFERENCE: Throws an exception (the default)<br/>* NULL_ON_INVALID_REFERENCE: Returns null<br/>* IGNORE_ON_INVALID_REFERENCE: Ignores the wrapping command asking for the reference<br/>                                   (for instance, ignore a setter if the service does not exist)</p>
+        <ul>
+          <li>Author: Fabien Potencier &lt;fabien@symfony.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Container
+                implements
+                <a title="Symfony\Component\DependencyInjection\ResettableContainerInterface" href="../interfaces/Symfony_Component_DependencyInjection_ResettableContainerInterface.xhtml">ResettableContainerInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface">ParameterBagInterface</span> <a href="#members">$parameterBag</a>;
+                    </li><li>protected array <a href="#members">$services</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$methodMap</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$aliases</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$loading</a> =
+                        ;
+                    </li><li>private array <a href="#members">$underscoreMap</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/compile.xhtml">compile</a>()
+                    </li><li>public bool <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/isFrozen.xhtml">isFrozen</a>()
+                    </li><li>public ParameterBagInterface <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/getParameterBag.xhtml">getParameterBag</a>()
+                    </li><li>public mixed <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/getParameter.xhtml">getParameter</a>()
+                    </li><li>public bool <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/hasParameter.xhtml">hasParameter</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/setParameter.xhtml">setParameter</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/set.xhtml">set</a>()
+                    </li><li>public bool <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/has.xhtml">has</a>()
+                    </li><li>public  <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/get.xhtml">get</a>()
+                    </li><li>public bool <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/initialized.xhtml">initialized</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/reset.xhtml">reset</a>()
+                    </li><li>public array <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/getServiceIds.xhtml">getServiceIds</a>()
+                    </li><li>public static string <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/camelize.xhtml">camelize</a>()
+                    </li><li>public static string <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/underscore.xhtml">underscore</a>()
+                    </li><li>private void <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/__clone.xhtml">__clone</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Symfony\Component\DependencyInjection\ResettableContainerInterface" href="../interfaces/Symfony_Component_DependencyInjection_ResettableContainerInterface.xhtml">Symfony\Component\DependencyInjection\ResettableContainerInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="underscoreMap">
+              <strong>$underscoreMap</strong>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="aliases">
+              <strong>$aliases</strong>
+            </li>
+            <li id="loading">
+              <strong>$loading</strong>
+            </li>
+            <li id="methodMap">
+              <strong>$methodMap</strong>
+            </li>
+            <li id="parameterBag"><strong>$parameterBag</strong>
+                —
+                <a title="Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface" href="../classes/Symfony_Component_DependencyInjection_ParameterBag_ParameterBagInterface.xhtml">Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface</a></li>
+            <li id="services">
+              <strong>$services</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="__clone">
+              <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/__clone.xhtml">__clone()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="camelize"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/camelize.xhtml">camelize()</a>
+                — Camelizes a string.</li>
+            <li id="compile"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/compile.xhtml">compile()</a>
+                — Compiles the container.</li>
+            <li id="get"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/get.xhtml">get()</a>
+                — Gets a service.</li>
+            <li id="getParameter"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/getParameter.xhtml">getParameter()</a>
+                — Gets a parameter.</li>
+            <li id="getParameterBag"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/getParameterBag.xhtml">getParameterBag()</a>
+                — Gets the service container parameter bag.</li>
+            <li id="getServiceIds"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/getServiceIds.xhtml">getServiceIds()</a>
+                — Gets all service ids.</li>
+            <li id="has"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/has.xhtml">has()</a>
+                — Returns true if the given service is defined.</li>
+            <li id="hasParameter"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/hasParameter.xhtml">hasParameter()</a>
+                — Checks if a parameter exists.</li>
+            <li id="initialized"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/initialized.xhtml">initialized()</a>
+                — Returns true if the given service has actually been initialized.</li>
+            <li id="isFrozen"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/isFrozen.xhtml">isFrozen()</a>
+                — Returns true if the container parameter bag are frozen.</li>
+            <li id="reset"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/reset.xhtml">reset()</a>
+                — {@inheritdoc}</li>
+            <li id="set"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/set.xhtml">set()</a>
+                — Sets a service.</li>
+            <li id="setParameter"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/setParameter.xhtml">setParameter()</a>
+                — Sets a parameter.</li>
+            <li id="underscore"><a title="Symfony\Component\DependencyInjection\Container" href="../classes/Symfony_Component_DependencyInjection_Container/underscore.xhtml">underscore()</a>
+                — A string to underscore.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

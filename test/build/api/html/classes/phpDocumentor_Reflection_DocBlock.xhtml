@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - phpDocumentor\Reflection\DocBlock</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#phpDocumentor_Reflection">phpDocumentor\Reflection</a>
+          </li>
+          <li class="separator">DocBlock</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpdocumentor/reflection-docblock/src/DocBlock.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>phpDocumentor\Reflection\</small>DocBlock</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class DocBlock
+            {<br/><ul class="none"><li>// members</li><li>private string <a href="#members">$summary</a> =
+                        '';
+                    </li><li>private <a href="#members">$description</a> =
+                        null;
+                    </li><li>private array <a href="#members">$tags</a> =
+                        ;
+                    </li><li>private <a href="#members">$context</a> =
+                        null;
+                    </li><li>private <a href="#members">$location</a> =
+                        null;
+                    </li><li>private boolean <a href="#members">$isTemplateStart</a> =
+                        false;
+                    </li><li>private boolean <a href="#members">$isTemplateEnd</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getSummary.xhtml">getSummary</a>()
+                    </li><li>public Description <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getDescription.xhtml">getDescription</a>()
+                    </li><li>public Context <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getContext.xhtml">getContext</a>()
+                    </li><li>public Location <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getLocation.xhtml">getLocation</a>()
+                    </li><li>public boolean <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/isTemplateStart.xhtml">isTemplateStart</a>()
+                    </li><li>public boolean <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/isTemplateEnd.xhtml">isTemplateEnd</a>()
+                    </li><li>public array <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getTags.xhtml">getTags</a>()
+                    </li><li>public array <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getTagsByName.xhtml">getTagsByName</a>()
+                    </li><li>public bool <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/hasTag.xhtml">hasTag</a>()
+                    </li><li>private void <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/addTag.xhtml">addTag</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="context">
+              <strong>$context</strong>
+              <br/>
+              <span class="indent">@var Types\Context Information about the context of this DocBlock.</span>
+            </li>
+            <li id="description">
+              <strong>$description</strong>
+              <br/>
+              <span class="indent">@var DocBlock\Description The actual description for this docblock.</span>
+            </li>
+            <li id="isTemplateEnd">
+              <strong>$isTemplateEnd</strong>
+              <br/>
+              <span class="indent">@var bool Does this DocBlock signify the end of a DocBlock template?</span>
+            </li>
+            <li id="isTemplateStart">
+              <strong>$isTemplateStart</strong>
+              <br/>
+              <span class="indent">@var bool Is this DocBlock (the start of) a template?</span>
+            </li>
+            <li id="location">
+              <strong>$location</strong>
+              <br/>
+              <span class="indent">@var Location Information about the location of this DocBlock.</span>
+            </li>
+            <li id="summary">
+              <strong>$summary</strong>
+              <br/>
+              <span class="indent">@var string The opening line for this docblock.</span>
+            </li>
+            <li id="tags">
+              <strong>$tags</strong>
+              <br/>
+              <span class="indent">@var Tag[] An array containing all the tags in this docblock; except inline.</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="addTag"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/addTag.xhtml">addTag()</a>
+                — Adds a tag to this DocBlock.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="getContext"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getContext.xhtml">getContext()</a>
+                — Returns the current context.</li>
+            <li id="getDescription">
+              <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getDescription.xhtml">getDescription()</a>
+            </li>
+            <li id="getLocation"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getLocation.xhtml">getLocation()</a>
+                — Returns the current location.</li>
+            <li id="getSummary">
+              <a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getSummary.xhtml">getSummary()</a>
+            </li>
+            <li id="getTags"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getTags.xhtml">getTags()</a>
+                — Returns the tags for this DocBlock.</li>
+            <li id="getTagsByName"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/getTagsByName.xhtml">getTagsByName()</a>
+                — Returns an array of tags matching the given name. If no tags are found an empty array is returned.</li>
+            <li id="hasTag"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/hasTag.xhtml">hasTag()</a>
+                — Checks if a tag of a certain type is present in this DocBlock.</li>
+            <li id="isTemplateEnd"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/isTemplateEnd.xhtml">isTemplateEnd()</a>
+                — Returns whether this DocBlock is the end of a Template section.</li>
+            <li id="isTemplateStart"><a title="phpDocumentor\Reflection\DocBlock" href="../classes/phpDocumentor_Reflection_DocBlock/isTemplateStart.xhtml">isTemplateStart()</a>
+                — Returns whether this DocBlock is the start of a Template section.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

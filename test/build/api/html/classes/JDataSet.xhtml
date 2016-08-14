@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JDataSet</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JDataSet</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/data/set.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JDataSet</h1>
+        <h4>JDataSet is a collection class that allows the developer to operate on a set of JData objects as if they were in a typical PHP array.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JDataSet
+                implements
+                <a title="JDataDumpable" href="../interfaces/JDataDumpable.xhtml">JDataDumpable</a>,<a title="ArrayAccess" href="../interfaces/ArrayAccess.xhtml">ArrayAccess</a>,<a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>,<a title="Iterator" href="../interfaces/Iterator.xhtml">Iterator</a>
+            {<br/><ul class="none"><li>// members</li><li>private boolean <a href="#members">$_current</a> =
+                        false;
+                    </li><li>private array <a href="#members">$_objects</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JDataSet" href="../classes/JDataSet/__construct.xhtml">__construct</a>()
+                    </li><li>public array <a title="JDataSet" href="../classes/JDataSet/__call.xhtml">__call</a>()
+                    </li><li>public array <a title="JDataSet" href="../classes/JDataSet/__get.xhtml">__get</a>()
+                    </li><li>public boolean <a title="JDataSet" href="../classes/JDataSet/__isset.xhtml">__isset</a>()
+                    </li><li>public void <a title="JDataSet" href="../classes/JDataSet/__set.xhtml">__set</a>()
+                    </li><li>public void <a title="JDataSet" href="../classes/JDataSet/__unset.xhtml">__unset</a>()
+                    </li><li>public integer <a title="JDataSet" href="../classes/JDataSet/count.xhtml">count</a>()
+                    </li><li>public JDataSet <a title="JDataSet" href="../classes/JDataSet/clear.xhtml">clear</a>()
+                    </li><li>public JData <a title="JDataSet" href="../classes/JDataSet/current.xhtml">current</a>()
+                    </li><li>public array <a title="JDataSet" href="../classes/JDataSet/dump.xhtml">dump</a>()
+                    </li><li>public array <a title="JDataSet" href="../classes/JDataSet/jsonSerialize.xhtml">jsonSerialize</a>()
+                    </li><li>public scalar <a title="JDataSet" href="../classes/JDataSet/key.xhtml">key</a>()
+                    </li><li>public array <a title="JDataSet" href="../classes/JDataSet/keys.xhtml">keys</a>()
+                    </li><li>public void <a title="JDataSet" href="../classes/JDataSet/next.xhtml">next</a>()
+                    </li><li>public boolean <a title="JDataSet" href="../classes/JDataSet/offsetExists.xhtml">offsetExists</a>()
+                    </li><li>public JData <a title="JDataSet" href="../classes/JDataSet/offsetGet.xhtml">offsetGet</a>()
+                    </li><li>public void <a title="JDataSet" href="../classes/JDataSet/offsetSet.xhtml">offsetSet</a>()
+                    </li><li>public void <a title="JDataSet" href="../classes/JDataSet/offsetUnset.xhtml">offsetUnset</a>()
+                    </li><li>public void <a title="JDataSet" href="../classes/JDataSet/rewind.xhtml">rewind</a>()
+                    </li><li>public boolean <a title="JDataSet" href="../classes/JDataSet/valid.xhtml">valid</a>()
+                    </li><li>private void <a title="JDataSet" href="../classes/JDataSet/_initialise.xhtml">_initialise</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JDataDumpable" href="../interfaces/JDataDumpable.xhtml">JDataDumpable</a>
+            </li>
+            <li>
+              <a title="ArrayAccess" href="../interfaces/ArrayAccess.xhtml">ArrayAccess</a>
+            </li>
+            <li>
+              <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            </li>
+            <li>
+              <a title="Iterator" href="../interfaces/Iterator.xhtml">Iterator</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_current"><strong>$_current</strong>
+                —
+                integer<br/><span class="indent">The current position of the iterator.</span></li>
+            <li id="_objects"><strong>$_objects</strong>
+                —
+                array<br/><span class="indent">The iterator objects.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="_initialise"><a title="JDataSet" href="../classes/JDataSet/_initialise.xhtml">_initialise()</a>
+                — Initialises the list with an array of objects.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JDataSet" href="../classes/JDataSet/__construct.xhtml">__construct()</a>
+                — The class constructor.</li>
+            <li id="__call"><a title="JDataSet" href="../classes/JDataSet/__call.xhtml">__call()</a>
+                — The magic call method is used to call object methods using the iterator.</li>
+            <li id="__get"><a title="JDataSet" href="../classes/JDataSet/__get.xhtml">__get()</a>
+                — The magic get method is used to get a list of properties from the objects in the data set.</li>
+            <li id="__isset"><a title="JDataSet" href="../classes/JDataSet/__isset.xhtml">__isset()</a>
+                — The magic isset method is used to check the state of an object property using the iterator.</li>
+            <li id="__set"><a title="JDataSet" href="../classes/JDataSet/__set.xhtml">__set()</a>
+                — The magic set method is used to set an object property using the iterator.</li>
+            <li id="__unset"><a title="JDataSet" href="../classes/JDataSet/__unset.xhtml">__unset()</a>
+                — The magic unset method is used to unset an object property using the iterator.</li>
+            <li id="clear"><a title="JDataSet" href="../classes/JDataSet/clear.xhtml">clear()</a>
+                — Clears the objects in the data set.</li>
+            <li id="count"><a title="JDataSet" href="../classes/JDataSet/count.xhtml">count()</a>
+                — Gets the number of data objects in the set.</li>
+            <li id="current"><a title="JDataSet" href="../classes/JDataSet/current.xhtml">current()</a>
+                — Get the current data object in the set.</li>
+            <li id="dump"><a title="JDataSet" href="../classes/JDataSet/dump.xhtml">dump()</a>
+                — Dumps the data object in the set, recursively if appropriate.</li>
+            <li id="jsonSerialize"><a title="JDataSet" href="../classes/JDataSet/jsonSerialize.xhtml">jsonSerialize()</a>
+                — Gets the data set in a form that can be serialised to JSON format.</li>
+            <li id="key"><a title="JDataSet" href="../classes/JDataSet/key.xhtml">key()</a>
+                — Gets the key of the current object in the iterator.</li>
+            <li id="keys"><a title="JDataSet" href="../classes/JDataSet/keys.xhtml">keys()</a>
+                — Gets the array of keys for all the objects in the iterator (emulates array_keys).</li>
+            <li id="next"><a title="JDataSet" href="../classes/JDataSet/next.xhtml">next()</a>
+                — Advances the iterator to the next object in the iterator.</li>
+            <li id="offsetExists"><a title="JDataSet" href="../classes/JDataSet/offsetExists.xhtml">offsetExists()</a>
+                — Checks whether an offset exists in the iterator.</li>
+            <li id="offsetGet"><a title="JDataSet" href="../classes/JDataSet/offsetGet.xhtml">offsetGet()</a>
+                — Gets an offset in the iterator.</li>
+            <li id="offsetSet"><a title="JDataSet" href="../classes/JDataSet/offsetSet.xhtml">offsetSet()</a>
+                — Sets an offset in the iterator.</li>
+            <li id="offsetUnset"><a title="JDataSet" href="../classes/JDataSet/offsetUnset.xhtml">offsetUnset()</a>
+                — Unsets an offset in the iterator.</li>
+            <li id="rewind"><a title="JDataSet" href="../classes/JDataSet/rewind.xhtml">rewind()</a>
+                — Rewinds the iterator to the first object.</li>
+            <li id="valid"><a title="JDataSet" href="../classes/JDataSet/valid.xhtml">valid()</a>
+                — Validates the iterator.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

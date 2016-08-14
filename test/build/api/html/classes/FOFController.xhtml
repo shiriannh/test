@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFController</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFController</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/controller/controller.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFController</h1>
+        <h4>FrameworkOnFramework controller class. FOF is based on the thin controller paradigm, where the controller is mainly used to set up the model state and spawn the view.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFController
+                extends <a title="FOFUtilsObject" href="../classes/FOFUtilsObject.xhtml">FOFUtilsObject</a>
+            {<br/><ul class="none"><li>// members</li><li>protected integer <a href="#members">$autoRouting</a> =
+                        0;
+                    </li><li>protected string <a href="#members">$bareComponent</a> =
+                        'foobar';
+                    </li><li>protected  <a href="#members">$basePath</a>;
+                    </li><li>protected array <a href="#members">$cacheableTasks</a> =
+                        ;
+                    </li><li>protected string <a href="#members">$component</a> =
+                        'com_foobar';
+                    </li><li>protected array <a href="#members">$config</a> =
+                        ;
+                    </li><li>protected <span title="FOFConfigProvider">FOFConfigProvider</span> <a href="#members">$configProvider</a> =
+                        null;
+                    </li><li>protected integer <a href="#members">$csrfProtection</a> =
+                        2;
+                    </li><li>protected  <a href="#members">$default_view</a>;
+                    </li><li>protected  <a href="#members">$doTask</a>;
+                    </li><li>protected <span title="FOFInput">FOFInput</span> <a href="#members">$input</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$message</a>;
+                    </li><li>protected  <a href="#members">$messageType</a>;
+                    </li><li>protected string <a href="#members">$layout</a> =
+                        null;
+                    </li><li>protected  <a href="#members">$methods</a>;
+                    </li><li>protected  <a href="#members">$model_prefix</a>;
+                    </li><li>protected string <a href="#members">$modelName</a> =
+                        null;
+                    </li><li>protected  <a href="#members">$paths</a>;
+                    </li><li>protected  <a href="#members">$redirect</a>;
+                    </li><li>protected  <a href="#members">$task</a>;
+                    </li><li>protected  <a href="#members">$taskMap</a>;
+                    </li><li>protected  <a href="#members">$name</a>;
+                    </li><li>protected string <a href="#members">$view</a> =
+                        '';
+                    </li><li>protected string <a href="#members">$viewName</a> =
+                        null;
+                    </li><li>private <span title="FOFView">FOFView</span> <a href="#members">$_viewObject</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$viewsCache</a> =
+                        ;
+                    </li><li>private <span title="FOFModel">FOFModel</span> <a href="#members">$_modelObject</a> =
+                        null;
+                    </li><li>protected boolean <a href="#members">$hasForm</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static FOFController <a title="FOFController" href="../classes/FOFController/getAnInstance.xhtml">getAnInstance</a>()
+                    </li><li>public static FOFController <a title="FOFController" href="../classes/FOFController/getTmpInstance.xhtml">getTmpInstance</a>()
+                    </li><li>public void <a title="FOFController" href="../classes/FOFController/__construct.xhtml">__construct</a>()
+                    </li><li>public static void <a title="FOFController" href="../classes/FOFController/addModelPath.xhtml">addModelPath</a>()
+                    </li><li>protected FOFController <a title="FOFController" href="../classes/FOFController/addPath.xhtml">addPath</a>()
+                    </li><li>public FOFController <a title="FOFController" href="../classes/FOFController/addViewPath.xhtml">addViewPath</a>()
+                    </li><li>public boolean <a title="FOFController" href="../classes/FOFController/authorise.xhtml">authorise</a>()
+                    </li><li>protected static string <a title="FOFController" href="../classes/FOFController/createFileName.xhtml">createFileName</a>()
+                    </li><li>public null|bool <a title="FOFController" href="../classes/FOFController/execute.xhtml">execute</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/display.xhtml">display</a>()
+                    </li><li>public boolean <a title="FOFController" href="../classes/FOFController/browse.xhtml">browse</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/read.xhtml">read</a>()
+                    </li><li>public false|void <a title="FOFController" href="../classes/FOFController/add.xhtml">add</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/edit.xhtml">edit</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/apply.xhtml">apply</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/copy.xhtml">copy</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/save.xhtml">save</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/savenew.xhtml">savenew</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/cancel.xhtml">cancel</a>()
+                    </li><li>public boolean <a title="FOFController" href="../classes/FOFController/loadhistory.xhtml">loadhistory</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/accesspublic.xhtml">accesspublic</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/accessregistered.xhtml">accessregistered</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/accessspecial.xhtml">accessspecial</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/publish.xhtml">publish</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/unpublish.xhtml">unpublish</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/archive.xhtml">archive</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/trash.xhtml">trash</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/saveorder.xhtml">saveorder</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/orderdown.xhtml">orderdown</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/orderup.xhtml">orderup</a>()
+                    </li><li>public bool <a title="FOFController" href="../classes/FOFController/remove.xhtml">remove</a>()
+                    </li><li>public boolean <a title="FOFController" href="../classes/FOFController/redirect.xhtml">redirect</a>()
+                    </li><li>public boolean <a title="FOFController" href="../classes/FOFController/hasRedirect.xhtml">hasRedirect</a>()
+                    </li><li>public FOFController <a title="FOFController" href="../classes/FOFController/registerDefaultTask.xhtml">registerDefaultTask</a>()
+                    </li><li>public FOFController <a title="FOFController" href="../classes/FOFController/registerTask.xhtml">registerTask</a>()
+                    </li><li>public FOFController <a title="FOFController" href="../classes/FOFController/unregisterTask.xhtml">unregisterTask</a>()
+                    </li><li>public string <a title="FOFController" href="../classes/FOFController/setMessage.xhtml">setMessage</a>()
+                    </li><li>protected void <a title="FOFController" href="../classes/FOFController/setPath.xhtml">setPath</a>()
+                    </li><li>public FOFController <a title="FOFController" href="../classes/FOFController/setRedirect.xhtml">setRedirect</a>()
+                    </li><li>protected bool <a title="FOFController" href="../classes/FOFController/setstate.xhtml">setstate</a>()
+                    </li><li>protected bool <a title="FOFController" href="../classes/FOFController/setaccess.xhtml">setaccess</a>()
+                    </li><li>private final boolean <a title="FOFController" href="../classes/FOFController/applySave.xhtml">applySave</a>()
+                    </li><li>public final FOFModel <a title="FOFController" href="../classes/FOFController/getThisModel.xhtml">getThisModel</a>()
+                    </li><li>public  <a title="FOFController" href="../classes/FOFController/getModel.xhtml">getModel</a>()
+                    </li><li>public final FOFView <a title="FOFController" href="../classes/FOFController/getThisView.xhtml">getThisView</a>()
+                    </li><li>public string <a title="FOFController" href="../classes/FOFController/getName.xhtml">getName</a>()
+                    </li><li>public string <a title="FOFController" href="../classes/FOFController/getTask.xhtml">getTask</a>()
+                    </li><li>public array <a title="FOFController" href="../classes/FOFController/getTasks.xhtml">getTasks</a>()
+                    </li><li>public FOFView <a title="FOFController" href="../classes/FOFController/getView.xhtml">getView</a>()
+                    </li><li>protected FOFModel <a title="FOFController" href="../classes/FOFController/createModel.xhtml">createModel</a>()
+                    </li><li>protected mixed <a title="FOFController" href="../classes/FOFController/_createModel.xhtml">_createModel</a>()
+                    </li><li>protected FOFView <a title="FOFController" href="../classes/FOFController/createView.xhtml">createView</a>()
+                    </li><li>protected FOFView <a title="FOFController" href="../classes/FOFController/_createView.xhtml">_createView</a>()
+                    </li><li>public void <a title="FOFController" href="../classes/FOFController/setThisViewName.xhtml">setThisViewName</a>()
+                    </li><li>public void <a title="FOFController" href="../classes/FOFController/setThisModelName.xhtml">setThisModelName</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/checkACL.xhtml">checkACL</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeGenericTask.xhtml">onBeforeGenericTask</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeApplySave.xhtml">onBeforeApplySave</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onAfterApplySave.xhtml">onAfterApplySave</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeAccesspublic.xhtml">onBeforeAccesspublic</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeAccessregistered.xhtml">onBeforeAccessregistered</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeAccessspecial.xhtml">onBeforeAccessspecial</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeAdd.xhtml">onBeforeAdd</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeApply.xhtml">onBeforeApply</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeBrowse.xhtml">onBeforeBrowse</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeCancel.xhtml">onBeforeCancel</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeEdit.xhtml">onBeforeEdit</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeOrderdown.xhtml">onBeforeOrderdown</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeOrderup.xhtml">onBeforeOrderup</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforePublish.xhtml">onBeforePublish</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeRemove.xhtml">onBeforeRemove</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeSave.xhtml">onBeforeSave</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeSavenew.xhtml">onBeforeSavenew</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeSaveorder.xhtml">onBeforeSaveorder</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/onBeforeUnpublish.xhtml">onBeforeUnpublish</a>()
+                    </li><li>public string <a title="FOFController" href="../classes/FOFController/getItemidURLSuffix.xhtml">getItemidURLSuffix</a>()
+                    </li><li>protected boolean <a title="FOFController" href="../classes/FOFController/_csrfProtection.xhtml">_csrfProtection</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="FOFUtilsObject" href="../classes/FOFUtilsObject.xhtml">FOFUtilsObject</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_modelObject"><strong>$_modelObject</strong>
+                —
+                <a title="FOFModel" href="../classes/FOFModel.xhtml">FOFModel</a><br/><span class="indent">A copy of the FOFModel object used in this triad</span></li>
+            <li id="_viewObject"><strong>$_viewObject</strong>
+                —
+                <a title="FOFView" href="../classes/FOFView.xhtml">FOFView</a><br/><span class="indent">A copy of the FOFView object used in this triad</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="autoRouting"><strong>$autoRouting</strong>
+                —
+                int</li>
+            <li id="bareComponent"><strong>$bareComponent</strong>
+                —
+                string<br/><span class="indent">The current component's name without the com_ prefix</span></li>
+            <li id="basePath"><strong>$basePath</strong>
+                —
+                string<br/><span class="indent">The base path of the controller</span></li>
+            <li id="cacheableTasks"><strong>$cacheableTasks</strong>
+                —
+                array<br/><span class="indent">The tasks for which caching should be enabled by default</span></li>
+            <li id="component"><strong>$component</strong>
+                —
+                string<br/><span class="indent">The current component's name; you can override it in the configuration</span></li>
+            <li id="config"><strong>$config</strong>
+                —
+                array<br/><span class="indent">A cached copy of the class configuration parameter passed during initialisation</span></li>
+            <li id="configProvider"><strong>$configProvider</strong>
+                —
+                <a title="FOFConfigProvider" href="../classes/FOFConfigProvider.xhtml">FOFConfigProvider</a><br/><span class="indent">An instance of FOFConfigProvider to provision configuration overrides</span></li>
+            <li id="csrfProtection"><strong>$csrfProtection</strong>
+                —
+                integer<br/><span class="indent">Set to true to enable CSRF protection on selected tasks. The possible values are: 0	Disabled; no token checks are performed 1	Enabled; token checks are always performed 2	Only on HTML requests and backend; token checks are always performed in the back-end and in the front-end only when format is 'html' 3	Only on back-end; token checks are performer only in the back-end</span></li>
+            <li id="default_view"><strong>$default_view</strong>
+                —
+                string<br/><span class="indent">The default view for the display method.</span></li>
+            <li id="doTask"><strong>$doTask</strong>
+                —
+                string<br/><span class="indent">The mapped task that was performed.</span></li>
+            <li id="hasForm"><strong>$hasForm</strong>
+                —
+                boolean<br/><span class="indent">Does this tried have a FOFForm which will be used to render it?</span></li>
+            <li id="input"><strong>$input</strong>
+                —
+                <a title="FOFInput" href="../classes/FOFInput.xhtml">FOFInput</a><br/><span class="indent">The input object for this MVC triad; you can override it in the configuration</span></li>
+            <li id="layout"><strong>$layout</strong>
+                —
+                string<br/><span class="indent">The current layout; you can override it in the configuration</span></li>
+            <li id="message"><strong>$message</strong>
+                —
+                string<br/><span class="indent">Redirect message.</span></li>
+            <li id="messageType"><strong>$messageType</strong>
+                —
+                string<br/><span class="indent">Redirect message type.</span></li>
+            <li id="methods"><strong>$methods</strong>
+                —
+                array<br/><span class="indent">Array of class methods</span></li>
+            <li id="modelName"><strong>$modelName</strong>
+                —
+                string<br/><span class="indent">Overrides the name of the view's default model</span></li>
+            <li id="model_prefix"><strong>$model_prefix</strong>
+                —
+                string<br/><span class="indent">The prefix of the models</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                array<br/><span class="indent">The name of the controller</span></li>
+            <li id="paths"><strong>$paths</strong>
+                —
+                array<br/><span class="indent">The set of search directories for resources (views).</span></li>
+            <li id="redirect"><strong>$redirect</strong>
+                —
+                string<br/><span class="indent">URL for redirection.</span></li>
+            <li id="task"><strong>$task</strong>
+                —
+                string<br/><span class="indent">Current or most recently performed task.</span></li>
+            <li id="taskMap"><strong>$taskMap</strong>
+                —
+                array<br/><span class="indent">Array of class methods to call for a given task.</span></li>
+            <li id="view"><strong>$view</strong>
+                —
+                string<br/><span class="indent">The current view name; you can override it in the configuration</span></li>
+            <li id="viewName"><strong>$viewName</strong>
+                —
+                string<br/><span class="indent">Overrides the name of the view's default view</span></li>
+            <li id="viewsCache"><strong>$viewsCache</strong>
+                —
+                array<br/><span class="indent">A cache for the view item objects created in this controller</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="applySave"><a title="FOFController" href="../classes/FOFController/applySave.xhtml">applySave()</a>
+                — Common method to handle apply and save tasks</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="_createModel"><a title="FOFController" href="../classes/FOFController/_createModel.xhtml">_createModel()</a>
+                — Method to load and return a model object.</li>
+            <li id="_createView"><a title="FOFController" href="../classes/FOFController/_createView.xhtml">_createView()</a>
+                — Deprecated function to create a View object instance</li>
+            <li id="_csrfProtection"><a title="FOFController" href="../classes/FOFController/_csrfProtection.xhtml">_csrfProtection()</a>
+                — Applies CSRF protection by means of a standard Joomla! token (nonce) check.</li>
+            <li id="addPath"><a title="FOFController" href="../classes/FOFController/addPath.xhtml">addPath()</a>
+                — Adds to the search path for templates and resources.</li>
+            <li id="checkACL"><a title="FOFController" href="../classes/FOFController/checkACL.xhtml">checkACL()</a>
+                — Checks if the current user has enough privileges for the requested ACL area.</li>
+            <li id="createFileName"><a title="FOFController" href="../classes/FOFController/createFileName.xhtml">createFileName()</a>
+                — Create the filename for a resource.</li>
+            <li id="createModel"><a title="FOFController" href="../classes/FOFController/createModel.xhtml">createModel()</a>
+                — Creates a new model object</li>
+            <li id="createView"><a title="FOFController" href="../classes/FOFController/createView.xhtml">createView()</a>
+                — Creates a View object instance and returns it</li>
+            <li id="onAfterApplySave"><a title="FOFController" href="../classes/FOFController/onAfterApplySave.xhtml">onAfterApplySave()</a>
+                — Execute something after applySave has run.</li>
+            <li id="onBeforeAccesspublic"><a title="FOFController" href="../classes/FOFController/onBeforeAccesspublic.xhtml">onBeforeAccesspublic()</a>
+                — ACL check before changing the access level; override to customise</li>
+            <li id="onBeforeAccessregistered"><a title="FOFController" href="../classes/FOFController/onBeforeAccessregistered.xhtml">onBeforeAccessregistered()</a>
+                — ACL check before changing the access level; override to customise</li>
+            <li id="onBeforeAccessspecial"><a title="FOFController" href="../classes/FOFController/onBeforeAccessspecial.xhtml">onBeforeAccessspecial()</a>
+                — ACL check before changing the access level; override to customise</li>
+            <li id="onBeforeAdd"><a title="FOFController" href="../classes/FOFController/onBeforeAdd.xhtml">onBeforeAdd()</a>
+                — ACL check before adding a new record; override to customise</li>
+            <li id="onBeforeApply"><a title="FOFController" href="../classes/FOFController/onBeforeApply.xhtml">onBeforeApply()</a>
+                — ACL check before saving a new/modified record; override to customise</li>
+            <li id="onBeforeApplySave"><a title="FOFController" href="../classes/FOFController/onBeforeApplySave.xhtml">onBeforeApplySave()</a>
+                — Execute something before applySave is called. Return false to prevent applySave from executing.</li>
+            <li id="onBeforeBrowse"><a title="FOFController" href="../classes/FOFController/onBeforeBrowse.xhtml">onBeforeBrowse()</a>
+                — ACL check before allowing someone to browse</li>
+            <li id="onBeforeCancel"><a title="FOFController" href="../classes/FOFController/onBeforeCancel.xhtml">onBeforeCancel()</a>
+                — ACL check before cancelling an edit</li>
+            <li id="onBeforeEdit"><a title="FOFController" href="../classes/FOFController/onBeforeEdit.xhtml">onBeforeEdit()</a>
+                — ACL check before editing a record; override to customise</li>
+            <li id="onBeforeGenericTask"><a title="FOFController" href="../classes/FOFController/onBeforeGenericTask.xhtml">onBeforeGenericTask()</a>
+                — A catch-all method for all tasks without a corresponding onBefore method. Applies the ACL preferences defined in fof.xml.</li>
+            <li id="onBeforeOrderdown"><a title="FOFController" href="../classes/FOFController/onBeforeOrderdown.xhtml">onBeforeOrderdown()</a>
+                — ACL check before changing the ordering of a record; override to customise</li>
+            <li id="onBeforeOrderup"><a title="FOFController" href="../classes/FOFController/onBeforeOrderup.xhtml">onBeforeOrderup()</a>
+                — ACL check before changing the ordering of a record; override to customise</li>
+            <li id="onBeforePublish"><a title="FOFController" href="../classes/FOFController/onBeforePublish.xhtml">onBeforePublish()</a>
+                — ACL check before changing the publish status of a record; override to customise</li>
+            <li id="onBeforeRemove"><a title="FOFController" href="../classes/FOFController/onBeforeRemove.xhtml">onBeforeRemove()</a>
+                — ACL check before removing a record; override to customise</li>
+            <li id="onBeforeSave"><a title="FOFController" href="../classes/FOFController/onBeforeSave.xhtml">onBeforeSave()</a>
+                — ACL check before saving a new/modified record; override to customise</li>
+            <li id="onBeforeSavenew"><a title="FOFController" href="../classes/FOFController/onBeforeSavenew.xhtml">onBeforeSavenew()</a>
+                — ACL check before saving a new/modified record; override to customise</li>
+            <li id="onBeforeSaveorder"><a title="FOFController" href="../classes/FOFController/onBeforeSaveorder.xhtml">onBeforeSaveorder()</a>
+                — ACL check before changing the ordering of a record; override to customise</li>
+            <li id="onBeforeUnpublish"><a title="FOFController" href="../classes/FOFController/onBeforeUnpublish.xhtml">onBeforeUnpublish()</a>
+                — ACL check before changing the publish status of a record; override to customise</li>
+            <li id="setPath"><a title="FOFController" href="../classes/FOFController/setPath.xhtml">setPath()</a>
+                — Sets an entire array of search paths for resources.</li>
+            <li id="setaccess"><a title="FOFController" href="../classes/FOFController/setaccess.xhtml">setaccess()</a>
+                — Sets the access level of the selected item(s).</li>
+            <li id="setstate"><a title="FOFController" href="../classes/FOFController/setstate.xhtml">setstate()</a>
+                — Sets the published state (the enabled field) of the selected item(s)</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFController" href="../classes/FOFController/__construct.xhtml">__construct()</a>
+                — Public constructor of the Controller class</li>
+            <li id="accesspublic"><a title="FOFController" href="../classes/FOFController/accesspublic.xhtml">accesspublic()</a>
+                — Sets the access to public. Joomla! 1.5 compatibility.</li>
+            <li id="accessregistered"><a title="FOFController" href="../classes/FOFController/accessregistered.xhtml">accessregistered()</a>
+                — Sets the access to registered. Joomla! 1.5 compatibility.</li>
+            <li id="accessspecial"><a title="FOFController" href="../classes/FOFController/accessspecial.xhtml">accessspecial()</a>
+                — Sets the access to special. Joomla! 1.5 compatibility.</li>
+            <li id="add"><a title="FOFController" href="../classes/FOFController/add.xhtml">add()</a>
+                — Single record add. The form layout is used to present a blank page.</li>
+            <li id="addModelPath"><a title="FOFController" href="../classes/FOFController/addModelPath.xhtml">addModelPath()</a>
+                — Adds to the stack of model paths in LIFO order.</li>
+            <li id="addViewPath"><a title="FOFController" href="../classes/FOFController/addViewPath.xhtml">addViewPath()</a>
+                — Add one or more view paths to the controller's stack, in LIFO order.</li>
+            <li id="apply"><a title="FOFController" href="../classes/FOFController/apply.xhtml">apply()</a>
+                — Save the incoming data and then return to the Edit task</li>
+            <li id="archive"><a title="FOFController" href="../classes/FOFController/archive.xhtml">archive()</a>
+                — Archive (set enabled = 2) an item.</li>
+            <li id="authorise"><a title="FOFController" href="../classes/FOFController/authorise.xhtml">authorise()</a>
+                — Authorisation check</li>
+            <li id="browse"><a title="FOFController" href="../classes/FOFController/browse.xhtml">browse()</a>
+                — Implements a default browse task, i.e. read a bunch of records and send them to the browser.</li>
+            <li id="cancel"><a title="FOFController" href="../classes/FOFController/cancel.xhtml">cancel()</a>
+                — Cancel the edit, check in the record and return to the Browse task</li>
+            <li id="copy"><a title="FOFController" href="../classes/FOFController/copy.xhtml">copy()</a>
+                — Duplicates selected items</li>
+            <li id="display"><a title="FOFController" href="../classes/FOFController/display.xhtml">display()</a>
+                — Default task. Assigns a model to the view and asks the view to render itself.</li>
+            <li id="edit"><a title="FOFController" href="../classes/FOFController/edit.xhtml">edit()</a>
+                — Single record edit. The ID set in the request is passed to the model, then the form layout is used to edit the result.</li>
+            <li id="execute"><a title="FOFController" href="../classes/FOFController/execute.xhtml">execute()</a>
+                — Executes a given controller task. The onBefore&lt;task&gt; and onAfter&lt;task&gt; methods are called automatically if they exist.</li>
+            <li id="getAnInstance"><a title="FOFController" href="../classes/FOFController/getAnInstance.xhtml">getAnInstance()</a>
+                — Gets a static (Singleton) instance of a controller class. It loads the relevant controller file from the component's directory or, if it doesn't exist, creates a new controller object out of thin air.</li>
+            <li id="getItemidURLSuffix"><a title="FOFController" href="../classes/FOFController/getItemidURLSuffix.xhtml">getItemidURLSuffix()</a>
+                — Gets a URL suffix with the Itemid parameter. If it's not the front-end of the site, or if there is no Itemid set it returns an empty string.</li>
+            <li id="getModel"><a title="FOFController" href="../classes/FOFController/getModel.xhtml">getModel()</a>
+                — Method to get a model object, loading it if required.</li>
+            <li id="getName"><a title="FOFController" href="../classes/FOFController/getName.xhtml">getName()</a>
+                — Method to get the controller name</li>
+            <li id="getTask"><a title="FOFController" href="../classes/FOFController/getTask.xhtml">getTask()</a>
+                — Get the last task that is being performed or was most recently performed.</li>
+            <li id="getTasks"><a title="FOFController" href="../classes/FOFController/getTasks.xhtml">getTasks()</a>
+                — Gets the available tasks in the controller.</li>
+            <li id="getThisModel"><a title="FOFController" href="../classes/FOFController/getThisModel.xhtml">getThisModel()</a>
+                — Returns the default model associated with the current view</li>
+            <li id="getThisView"><a title="FOFController" href="../classes/FOFController/getThisView.xhtml">getThisView()</a>
+                — Returns current view object</li>
+            <li id="getTmpInstance"><a title="FOFController" href="../classes/FOFController/getTmpInstance.xhtml">getTmpInstance()</a>
+                — Gets a temporary instance of a controller object. A temporary instance is not a Singleton and can be disposed off after use.</li>
+            <li id="getView"><a title="FOFController" href="../classes/FOFController/getView.xhtml">getView()</a>
+                — Method to get a reference to the current view and load it if necessary.</li>
+            <li id="hasRedirect"><a title="FOFController" href="../classes/FOFController/hasRedirect.xhtml">hasRedirect()</a>
+                — Returns true if there is a redirect set in the controller</li>
+            <li id="loadhistory"><a title="FOFController" href="../classes/FOFController/loadhistory.xhtml">loadhistory()</a>
+                — Method to load a row from version history</li>
+            <li id="orderdown"><a title="FOFController" href="../classes/FOFController/orderdown.xhtml">orderdown()</a>
+                — Moves selected items one position down the ordering list</li>
+            <li id="orderup"><a title="FOFController" href="../classes/FOFController/orderup.xhtml">orderup()</a>
+                — Moves selected items one position up the ordering list</li>
+            <li id="publish"><a title="FOFController" href="../classes/FOFController/publish.xhtml">publish()</a>
+                — Publish (set enabled = 1) an item.</li>
+            <li id="read"><a title="FOFController" href="../classes/FOFController/read.xhtml">read()</a>
+                — Single record read. The id set in the request is passed to the model and then the item layout is used to render the result.</li>
+            <li id="redirect"><a title="FOFController" href="../classes/FOFController/redirect.xhtml">redirect()</a>
+                — Redirects the browser or returns false if no redirect is set.</li>
+            <li id="registerDefaultTask"><a title="FOFController" href="../classes/FOFController/registerDefaultTask.xhtml">registerDefaultTask()</a>
+                — Register the default task to perform if a mapping is not found.</li>
+            <li id="registerTask"><a title="FOFController" href="../classes/FOFController/registerTask.xhtml">registerTask()</a>
+                — Register (map) a task to a method in the class.</li>
+            <li id="remove"><a title="FOFController" href="../classes/FOFController/remove.xhtml">remove()</a>
+                — Delete selected item(s)</li>
+            <li id="save"><a title="FOFController" href="../classes/FOFController/save.xhtml">save()</a>
+                — Save the incoming data and then return to the Browse task</li>
+            <li id="savenew"><a title="FOFController" href="../classes/FOFController/savenew.xhtml">savenew()</a>
+                — Save the incoming data and then return to the Add task</li>
+            <li id="saveorder"><a title="FOFController" href="../classes/FOFController/saveorder.xhtml">saveorder()</a>
+                — Saves the order of the items</li>
+            <li id="setMessage"><a title="FOFController" href="../classes/FOFController/setMessage.xhtml">setMessage()</a>
+                — Sets the internal message that is passed with a redirect</li>
+            <li id="setRedirect"><a title="FOFController" href="../classes/FOFController/setRedirect.xhtml">setRedirect()</a>
+                — Registers a redirection with an optional message. The redirection is carried out when you use the redirect method.</li>
+            <li id="setThisModelName"><a title="FOFController" href="../classes/FOFController/setThisModelName.xhtml">setThisModelName()</a>
+                — Set the name of the model to be used by this Controller</li>
+            <li id="setThisViewName"><a title="FOFController" href="../classes/FOFController/setThisViewName.xhtml">setThisViewName()</a>
+                — Set the name of the view to be used by this Controller</li>
+            <li id="trash"><a title="FOFController" href="../classes/FOFController/trash.xhtml">trash()</a>
+                — Trash (set enabled = -2) an item.</li>
+            <li id="unpublish"><a title="FOFController" href="../classes/FOFController/unpublish.xhtml">unpublish()</a>
+                — Unpublish (set enabled = 0) an item.</li>
+            <li id="unregisterTask"><a title="FOFController" href="../classes/FOFController/unregisterTask.xhtml">unregisterTask()</a>
+                — Unregister (unmap) a task in the class.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

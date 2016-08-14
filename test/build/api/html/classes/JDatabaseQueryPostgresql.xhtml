@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JDatabaseQueryPostgresql</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JDatabaseQueryPostgresql</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/database/query/postgresql.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JDatabaseQueryPostgresql</h1>
+        <h4>Query Building Class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JDatabaseQueryPostgresql
+                extends <a title="JDatabaseQuery" href="../classes/JDatabaseQuery.xhtml">JDatabaseQuery</a>
+                implements
+                <a title="JDatabaseQueryLimitable" href="../interfaces/JDatabaseQueryLimitable.xhtml">JDatabaseQueryLimitable</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title=""/> <a href="#members">$forUpdate</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$forShare</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$noWait</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$limit</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$offset</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$returning</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/__toString.xhtml">__toString</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/clear.xhtml">clear</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/castAsChar.xhtml">castAsChar</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/concatenate.xhtml">concatenate</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/currentTimestamp.xhtml">currentTimestamp</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/forUpdate.xhtml">forUpdate</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/forShare.xhtml">forShare</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/year.xhtml">year</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/month.xhtml">month</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/day.xhtml">day</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/hour.xhtml">hour</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/minute.xhtml">minute</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/second.xhtml">second</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/noWait.xhtml">noWait</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/limit.xhtml">limit</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/offset.xhtml">offset</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/returning.xhtml">returning</a>()
+                    </li><li>public JDatabaseQueryPostgresql <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/setLimit.xhtml">setLimit</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/processLimit.xhtml">processLimit</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/dateAdd.xhtml">dateAdd</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/regexp.xhtml">regexp</a>()
+                    </li><li>public string <a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/Rand.xhtml">Rand</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JDatabaseQuery" href="../classes/JDatabaseQuery.xhtml">JDatabaseQuery</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JDatabaseQueryLimitable" href="../interfaces/JDatabaseQueryLimitable.xhtml">JDatabaseQueryLimitable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="forShare"><strong>$forShare</strong>
+                —
+                <a title="" href="../classes/.xhtml"/></li>
+            <li id="forUpdate"><strong>$forUpdate</strong>
+                —
+                <a title="" href="../classes/.xhtml"/></li>
+            <li id="limit"><strong>$limit</strong>
+                —
+                <a title="" href="../classes/.xhtml"/></li>
+            <li id="noWait"><strong>$noWait</strong>
+                —
+                <a title="" href="../classes/.xhtml"/></li>
+            <li id="offset"><strong>$offset</strong>
+                —
+                <a title="" href="../classes/.xhtml"/></li>
+            <li id="returning"><strong>$returning</strong>
+                —
+                <a title="" href="../classes/.xhtml"/></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="Rand"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/Rand.xhtml">Rand()</a>
+                — Return correct rand() function for Postgresql.</li>
+            <li id="__toString"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/__toString.xhtml">__toString()</a>
+                — Magic function to convert the query to a string, only for postgresql specific query</li>
+            <li id="castAsChar"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/castAsChar.xhtml">castAsChar()</a>
+                — Casts a value to a char.</li>
+            <li id="clear"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/clear.xhtml">clear()</a>
+                — Clear data from the query or a specific clause of the query.</li>
+            <li id="concatenate"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/concatenate.xhtml">concatenate()</a>
+                — Concatenates an array of column names or values.</li>
+            <li id="currentTimestamp"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/currentTimestamp.xhtml">currentTimestamp()</a>
+                — Gets the current date and time.</li>
+            <li id="dateAdd"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/dateAdd.xhtml">dateAdd()</a>
+                — Add to the current date and time in Postgresql.</li>
+            <li id="day"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/day.xhtml">day()</a>
+                — Used to get a string to extract day from date column.</li>
+            <li id="forShare"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/forShare.xhtml">forShare()</a>
+                — Sets the FOR SHARE lock on select's output row</li>
+            <li id="forUpdate"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/forUpdate.xhtml">forUpdate()</a>
+                — Sets the FOR UPDATE lock on select's output row</li>
+            <li id="hour"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/hour.xhtml">hour()</a>
+                — Used to get a string to extract hour from date column.</li>
+            <li id="limit"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/limit.xhtml">limit()</a>
+                — Set the LIMIT clause to the query</li>
+            <li id="minute"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/minute.xhtml">minute()</a>
+                — Used to get a string to extract minute from date column.</li>
+            <li id="month"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/month.xhtml">month()</a>
+                — Used to get a string to extract month from date column.</li>
+            <li id="noWait"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/noWait.xhtml">noWait()</a>
+                — Sets the NOWAIT lock on select's output row</li>
+            <li id="offset"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/offset.xhtml">offset()</a>
+                — Set the OFFSET clause to the query</li>
+            <li id="processLimit"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/processLimit.xhtml">processLimit()</a>
+                — Method to modify a query already in string format with the needed additions to make the query limited to a particular number of results, or start at a particular offset.</li>
+            <li id="regexp"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/regexp.xhtml">regexp()</a>
+                — Return correct regexp operator for Postgresql.</li>
+            <li id="returning"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/returning.xhtml">returning()</a>
+                — Add the RETURNING element to INSERT INTO statement.</li>
+            <li id="second"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/second.xhtml">second()</a>
+                — Used to get a string to extract seconds from date column.</li>
+            <li id="setLimit"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/setLimit.xhtml">setLimit()</a>
+                — Sets the offset and limit for the result set, if the database driver supports it.</li>
+            <li id="year"><a title="JDatabaseQueryPostgresql" href="../classes/JDatabaseQueryPostgresql/year.xhtml">year()</a>
+                — Used to get a string to extract year from date column.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

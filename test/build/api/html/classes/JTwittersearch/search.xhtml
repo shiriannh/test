@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JTwittersearch" href="../../classes/JTwittersearch.xhtml">JTwittersearch</a>
+          </li>
+          <li class="separator">search</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/twitter/search.php.xhtml#line41">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JTwittersearch::</small>search</h1>
+        <h4>Method to get tweets that match a specified query.</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function search(string
+        $query,
+            [string
+        $callback = null,
+            [string
+        $geocode = null,
+            [string
+        $lang = null,
+            [string
+        $locale = null,
+            [string
+        $result_type = null,
+            [integer
+        $count = 15,
+            [string
+        $until = null,
+            [integer
+        $since_id = 0,
+            [integer
+        $max_id = 0,
+            [boolean
+        $entities = null]]]]]]]]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$query</code>
+                —
+                string</dt>
+          <dd>Search query. Should be URL encoded. Queries will be limited by complexity.</dd>
+          <dt><code>$callback</code>
+                —
+                string</dt>
+          <dd>If supplied, the response will use the JSONP format with a callback of the given name</dd>
+          <dt><code>$geocode</code>
+                —
+                string</dt>
+          <dd>Returns tweets by users located within a given radius of the given latitude/longitude. The parameter value is<br/>specified by "latitude,longitude,radius", where radius units must be specified as either "mi" (miles) or "km" (kilometers).</dd>
+          <dt><code>$lang</code>
+                —
+                string</dt>
+          <dd>Restricts tweets to the given language, given by an ISO 639-1 code.</dd>
+          <dt><code>$locale</code>
+                —
+                string</dt>
+          <dd>Specify the language of the query you are sending (only ja is currently effective). This is intended for<br/>language-specific clients and the default should work in the majority of cases.</dd>
+          <dt><code>$result_type</code>
+                —
+                string</dt>
+          <dd>Specifies what type of search results you would prefer to receive. The current default is "mixed."</dd>
+          <dt><code>$count</code>
+                —
+                integer</dt>
+          <dd>The number of tweets to return per page, up to a maximum of 100. Defaults to 15.</dd>
+          <dt><code>$until</code>
+                —
+                string</dt>
+          <dd>Returns tweets generated before the given date. Date should be formatted as YYYY-MM-DD.</dd>
+          <dt><code>$since_id</code>
+                —
+                integer</dt>
+          <dd>Returns results with an ID greater than (that is, more recent than) the specified ID.</dd>
+          <dt><code>$max_id</code>
+                —
+                integer</dt>
+          <dd>Returns results with an ID less than (that is, older than) or equal to the specified ID.</dd>
+          <dt><code>$entities</code>
+                —
+                boolean</dt>
+          <dd>When set to either true, t or 1, each tweet will include a node called "entities,". This node offers a<br/>variety of metadata about the tweet in a discrete structure, including: urls, media and hashtags.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>array</dt>
+          <dd>The decoded JSON response</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\Parser</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PHPMD">PHPMD</a>
+          </li>
+          <li class="separator">Parser</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/Parser.php.xhtml#line65">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\</small>Parser</h1>
+        <h4>Simple wrapper around the php depend engine.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Parser
+                extends <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor.xhtml">AbstractASTVisitor</a>
+                implements
+                <a title="PDepend\Report\CodeAwareGenerator" href="../interfaces/PDepend_Report_CodeAwareGenerator.xhtml">CodeAwareGenerator</a>
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$ruleSets</a> =
+                        ;
+                    </li><li>private array <a href="#members">$analyzers</a> =
+                        ;
+                    </li><li>private <span title="\PDepend\Source\AST\ASTArtifactList">ASTArtifactList</span> <a href="#members">$artifacts</a> =
+                        null;
+                    </li><li>private <span title="\PHPMD\Report">Report</span> <a href="#members">$report</a> =
+                        null;
+                    </li><li>private <span title="\PDepend\Engine">Engine</span> <a href="#members">$pdepend</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/parse.xhtml">parse</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/addRuleSet.xhtml">addRuleSet</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/setReport.xhtml">setReport</a>()
+                    </li><li>public boolean <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/log.xhtml">log</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/close.xhtml">close</a>()
+                    </li><li>public array(string) <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/getAcceptedAnalyzers.xhtml">getAcceptedAnalyzers</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitClass.xhtml">visitClass</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitFunction.xhtml">visitFunction</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitInterface.xhtml">visitInterface</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitMethod.xhtml">visitMethod</a>()
+                    </li><li>public void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/setArtifacts.xhtml">setArtifacts</a>()
+                    </li><li>private void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/apply.xhtml">apply</a>()
+                    </li><li>private void <a title="PHPMD\Parser" href="../classes/PHPMD_Parser/collectMetrics.xhtml">collectMetrics</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor.xhtml">PDepend\Source\ASTVisitor\AbstractASTVisitor</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Report\CodeAwareGenerator" href="../interfaces/PDepend_Report_CodeAwareGenerator.xhtml">PDepend\Report\CodeAwareGenerator</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="analyzers"><strong>$analyzers</strong>
+                —
+                array<br/><span class="indent">The metric containing analyzer instances.</span></li>
+            <li id="artifacts"><strong>$artifacts</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTArtifactList" href="../classes/_PDepend_Source_AST_ASTArtifactList.xhtml">\PDepend\Source\AST\ASTArtifactList</a><br/><span class="indent">The raw PDepend code nodes.</span></li>
+            <li id="pdepend"><strong>$pdepend</strong>
+                —
+                <a title="\PDepend\Engine" href="../classes/_PDepend_Engine.xhtml">\PDepend\Engine</a><br/><span class="indent">The wrapped PDepend Engine instance.</span></li>
+            <li id="report"><strong>$report</strong>
+                —
+                <a title="\PHPMD\Report" href="../classes/_PHPMD_Report.xhtml">\PHPMD\Report</a><br/><span class="indent">The violation report used by this PDepend adapter.</span></li>
+            <li id="ruleSets"><strong>$ruleSets</strong>
+                —
+                array<br/><span class="indent">The analysing rule-set instance.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="apply"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/apply.xhtml">apply()</a>
+                — Applies all rule-sets to the given &lt;b&gt;$node&lt;/b&gt; instance.</li>
+            <li id="collectMetrics"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/collectMetrics.xhtml">collectMetrics()</a>
+                — Collects the collected metrics for the given node and adds them to the &lt;b&gt;$node&lt;/b&gt;.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/__construct.xhtml">__construct()</a>
+                — Constructs a new parser adapter instance.</li>
+            <li id="addRuleSet"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/addRuleSet.xhtml">addRuleSet()</a>
+                — Adds a new analysis rule-set to this adapter.</li>
+            <li id="close"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/close.xhtml">close()</a>
+                — Closes the logger process and writes the output file.</li>
+            <li id="getAcceptedAnalyzers"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/getAcceptedAnalyzers.xhtml">getAcceptedAnalyzers()</a>
+                — Returns an &lt;b&gt;array&lt;/b&gt; with accepted analyzer types. These types can be concrete analyzer classes or one of the descriptive analyzer interfaces.</li>
+            <li id="log"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/log.xhtml">log()</a>
+                — Adds an analyzer to log. If this logger accepts the given analyzer it with return &lt;b&gt;true&lt;/b&gt;, otherwise the return value is &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="parse"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/parse.xhtml">parse()</a>
+                — Parses the projects source and reports all detected errors and violations.</li>
+            <li id="setArtifacts"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/setArtifacts.xhtml">setArtifacts()</a>
+                — Sets the context code nodes.</li>
+            <li id="setReport"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/setReport.xhtml">setReport()</a>
+                — Sets the violation report used by the rule-set.</li>
+            <li id="visitClass"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitClass.xhtml">visitClass()</a>
+                — Visits a class node.</li>
+            <li id="visitFunction"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitFunction.xhtml">visitFunction()</a>
+                — Visits a function node.</li>
+            <li id="visitInterface"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitInterface.xhtml">visitInterface()</a>
+                — Visits an interface node.</li>
+            <li id="visitMethod"><a title="PHPMD\Parser" href="../classes/PHPMD_Parser/visitMethod.xhtml">visitMethod()</a>
+                — Visits a method node.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPUnit_Framework_TestCase</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PHPUnit_Framework_TestCase</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/phpunit/src/Framework/TestCase.php.xhtml#line67">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PHPUnit_Framework_TestCase</h1>
+        <h4>A TestCase defines the fixture to run multiple tests.</h4>
+        <p>To define a TestCase<br/><br/>1) Implement a subclass of PHPUnit_Framework_TestCase.<br/>2) Define instance variables that store the state of the fixture.<br/>3) Initialize the fixture state by overriding setUp().<br/>4) Clean-up after a test by overriding tearDown().<br/><br/>Each test runs in its own fixture so there can be no side effects<br/>among test runs.<br/><br/>Here is an example:<br/><br/>&lt;code&gt;<br/>&lt;?php<br/>class MathTest extends PHPUnit_Framework_TestCase<br/>{<br/>public $value1;<br/>public $value2;<br/><br/>protected function setUp()<br/>{<br/>$this-&gt;value1 = 2;<br/>$this-&gt;value2 = 3;<br/>}<br/>}<br/>?&gt;<br/>&lt;/code&gt;<br/><br/>For each test implement a method which interacts with the fixture.<br/>Verify the expected results with assertions specified by calling<br/>assert with a boolean.<br/><br/>&lt;code&gt;<br/>&lt;?php<br/>public function testPass()<br/>{<br/>$this-&gt;assertTrue($this-&gt;value1 + $this-&gt;value2 == 5);<br/>}<br/>?&gt;<br/>&lt;/code&gt;</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPUnit_Framework_TestCase
+                extends <a title="PHPUnit_Framework_Assert" href="../classes/PHPUnit_Framework_Assert.xhtml">PHPUnit_Framework_Assert</a>
+                implements
+                <a title="PHPUnit_Framework_Test" href="../interfaces/PHPUnit_Framework_Test.xhtml">PHPUnit_Framework_Test</a>,<a title="PHPUnit_Framework_SelfDescribing" href="../interfaces/PHPUnit_Framework_SelfDescribing.xhtml">PHPUnit_Framework_SelfDescribing</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="bool">bool</span> <a href="#members">$backupGlobals</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$backupGlobalsBlacklist</a> =
+                        ;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$backupStaticAttributes</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$backupStaticAttributesBlacklist</a> =
+                        ;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$runTestInSeparateProcess</a> =
+                        null;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$preserveGlobalState</a> =
+                        true;
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$inIsolation</a> =
+                        false;
+                    </li><li>private array <a href="#members">$data</a> =
+                        ;
+                    </li><li>private string <a href="#members">$dataName</a> =
+                        '';
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$useErrorHandler</a> =
+                        null;
+                    </li><li>private string <a href="#members">$expectedException</a> =
+                        null;
+                    </li><li>private string <a href="#members">$expectedExceptionMessage</a> =
+                        '';
+                    </li><li>private string <a href="#members">$expectedExceptionMessageRegExp</a> =
+                        '';
+                    </li><li>private <span title="int|string">int|string</span> <a href="#members">$expectedExceptionCode</a>;
+                    </li><li>private string <a href="#members">$name</a> =
+                        null;
+                    </li><li>private array <a href="#members">$dependencies</a> =
+                        ;
+                    </li><li>private array <a href="#members">$dependencyInput</a> =
+                        ;
+                    </li><li>private array <a href="#members">$iniSettings</a> =
+                        ;
+                    </li><li>private array <a href="#members">$locale</a> =
+                        ;
+                    </li><li>private array <a href="#members">$mockObjects</a> =
+                        ;
+                    </li><li>private array <a href="#members">$mockObjectGenerator</a> =
+                        null;
+                    </li><li>private  <a href="#members">$status</a>;
+                    </li><li>private string <a href="#members">$statusMessage</a> =
+                        '';
+                    </li><li>private integer <a href="#members">$numAssertions</a> =
+                        0;
+                    </li><li>private <span title="PHPUnit_Framework_TestResult">PHPUnit_Framework_TestResult</span> <a href="#members">$result</a>;
+                    </li><li>private  <a href="#members">$testResult</a>;
+                    </li><li>private string <a href="#members">$output</a> =
+                        '';
+                    </li><li>private string <a href="#members">$outputExpectedRegex</a> =
+                        null;
+                    </li><li>private string <a href="#members">$outputExpectedString</a> =
+                        null;
+                    </li><li>private boolean <a href="#members">$outputCallback</a> =
+                        false;
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$outputBufferingActive</a> =
+                        false;
+                    </li><li>private  <a href="#members">$outputBufferingLevel</a>;
+                    </li><li>private <span title="SebastianBergmann\GlobalState\Snapshot">Snapshot</span> <a href="#members">$snapshot</a>;
+                    </li><li>private <span title="Prophecy\Prophet">Prophet</span> <a href="#members">$prophet</a>;
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$beStrictAboutChangesToGlobalState</a> =
+                        false;
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$registerMockObjectsFromTestArgumentsRecursively</a> =
+                        false;
+                    </li><li>private array <a href="#members">$warnings</a> =
+                        ;
+                    </li><li>private array <a href="#members">$groups</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/toString.xhtml">toString</a>()
+                    </li><li>public int <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/count.xhtml">count</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getGroups.xhtml">getGroups</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setGroups.xhtml">setGroups</a>()
+                    </li><li>public array <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getAnnotations.xhtml">getAnnotations</a>()
+                    </li><li>public string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getName.xhtml">getName</a>()
+                    </li><li>public int <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getSize.xhtml">getSize</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasSize.xhtml">hasSize</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isSmall.xhtml">isSmall</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isMedium.xhtml">isMedium</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isLarge.xhtml">isLarge</a>()
+                    </li><li>public string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getActualOutput.xhtml">getActualOutput</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasOutput.xhtml">hasOutput</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectOutputRegex.xhtml">expectOutputRegex</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectOutputString.xhtml">expectOutputString</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasPerformedExpectationsOnOutput.xhtml">hasPerformedExpectationsOnOutput</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasExpectationOnOutput.xhtml">hasExpectationOnOutput</a>()
+                    </li><li>public string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getExpectedException.xhtml">getExpectedException</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setExpectedException.xhtml">setExpectedException</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setExpectedExceptionRegExp.xhtml">setExpectedExceptionRegExp</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectException.xhtml">expectException</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectExceptionCode.xhtml">expectExceptionCode</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectExceptionMessage.xhtml">expectExceptionMessage</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectExceptionMessageRegExp.xhtml">expectExceptionMessageRegExp</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setRegisterMockObjectsFromTestArgumentsRecursively.xhtml">setRegisterMockObjectsFromTestArgumentsRecursively</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setExpectedExceptionFromAnnotation.xhtml">setExpectedExceptionFromAnnotation</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUseErrorHandler.xhtml">setUseErrorHandler</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUseErrorHandlerFromAnnotation.xhtml">setUseErrorHandlerFromAnnotation</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/checkRequirements.xhtml">checkRequirements</a>()
+                    </li><li>public int <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getStatus.xhtml">getStatus</a>()
+                    </li><li>public string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getStatusMessage.xhtml">getStatusMessage</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasFailed.xhtml">hasFailed</a>()
+                    </li><li>public PHPUnit_Framework_TestResult <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/run.xhtml">run</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/runBare.xhtml">runBare</a>()
+                    </li><li>protected mixed <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/runTest.xhtml">runTest</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/verifyMockObjects.xhtml">verifyMockObjects</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setName.xhtml">setName</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setDependencies.xhtml">setDependencies</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasDependencies.xhtml">hasDependencies</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setDependencyInput.xhtml">setDependencyInput</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setBeStrictAboutChangesToGlobalState.xhtml">setBeStrictAboutChangesToGlobalState</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setBackupGlobals.xhtml">setBackupGlobals</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setBackupStaticAttributes.xhtml">setBackupStaticAttributes</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setRunTestInSeparateProcess.xhtml">setRunTestInSeparateProcess</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setPreserveGlobalState.xhtml">setPreserveGlobalState</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setInIsolation.xhtml">setInIsolation</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isInIsolation.xhtml">isInIsolation</a>()
+                    </li><li>public mixed <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getResult.xhtml">getResult</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setResult.xhtml">setResult</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setOutputCallback.xhtml">setOutputCallback</a>()
+                    </li><li>public PHPUnit_Framework_TestResult <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getTestResultObject.xhtml">getTestResultObject</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setTestResultObject.xhtml">setTestResultObject</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/registerMockObject.xhtml">registerMockObject</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/iniSet.xhtml">iniSet</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setLocale.xhtml">setLocale</a>()
+                    </li><li>public PHPUnit_Framework_MockObject_MockBuilder <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockBuilder.xhtml">getMockBuilder</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_MockObject <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createMock.xhtml">createMock</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_MockObject <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createPartialMock.xhtml">createPartialMock</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_MockObject <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMock.xhtml">getMock</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_MockObject <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockWithoutInvokingTheOriginalConstructor.xhtml">getMockWithoutInvokingTheOriginalConstructor</a>()
+                    </li><li>protected string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockClass.xhtml">getMockClass</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_MockObject <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockForAbstractClass.xhtml">getMockForAbstractClass</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_MockObject <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockFromWsdl.xhtml">getMockFromWsdl</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_MockObject <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockForTrait.xhtml">getMockForTrait</a>()
+                    </li><li>protected  <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getObjectForTrait.xhtml">getObjectForTrait</a>()
+                    </li><li>protected ObjectProphecy <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/prophesize.xhtml">prophesize</a>()
+                    </li><li>public void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/addToAssertionCount.xhtml">addToAssertionCount</a>()
+                    </li><li>public int <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getNumAssertions.xhtml">getNumAssertions</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_AnyInvokedCount <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/any.xhtml">any</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_InvokedCount <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/never.xhtml">never</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastCount <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/atLeast.xhtml">atLeast</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/atLeastOnce.xhtml">atLeastOnce</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_InvokedCount <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/once.xhtml">once</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_InvokedCount <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/exactly.xhtml">exactly</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_InvokedAtMostCount <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/atMost.xhtml">atMost</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/at.xhtml">at</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Stub_Return <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnValue.xhtml">returnValue</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Stub_ReturnValueMap <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnValueMap.xhtml">returnValueMap</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Stub_ReturnArgument <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnArgument.xhtml">returnArgument</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Stub_ReturnCallback <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnCallback.xhtml">returnCallback</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Stub_ReturnSelf <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnSelf.xhtml">returnSelf</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Stub_Exception <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/throwException.xhtml">throwException</a>()
+                    </li><li>public static PHPUnit_Framework_MockObject_Stub_ConsecutiveCalls <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/onConsecutiveCalls.xhtml">onConsecutiveCalls</a>()
+                    </li><li>public bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/usesDataProvider.xhtml">usesDataProvider</a>()
+                    </li><li>public string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/dataDescription.xhtml">dataDescription</a>()
+                    </li><li>protected string <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getDataSetAsString.xhtml">getDataSetAsString</a>()
+                    </li><li>protected PHPUnit_Framework_TestResult <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createResult.xhtml">createResult</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/handleDependencies.xhtml">handleDependencies</a>()
+                    </li><li>public static void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUpBeforeClass.xhtml">setUpBeforeClass</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUp.xhtml">setUp</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/assertPreConditions.xhtml">assertPreConditions</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/assertPostConditions.xhtml">assertPostConditions</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/tearDown.xhtml">tearDown</a>()
+                    </li><li>public static void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/tearDownAfterClass.xhtml">tearDownAfterClass</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/onNotSuccessfulTest.xhtml">onNotSuccessfulTest</a>()
+                    </li><li>protected void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/prepareTemplate.xhtml">prepareTemplate</a>()
+                    </li><li>protected PHPUnit_Framework_MockObject_Generator <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockObjectGenerator.xhtml">getMockObjectGenerator</a>()
+                    </li><li>private void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/startOutputBuffering.xhtml">startOutputBuffering</a>()
+                    </li><li>private void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/stopOutputBuffering.xhtml">stopOutputBuffering</a>()
+                    </li><li>private void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/snapshotGlobalState.xhtml">snapshotGlobalState</a>()
+                    </li><li>private void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/restoreGlobalState.xhtml">restoreGlobalState</a>()
+                    </li><li>private Snapshot <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createGlobalStateSnapshot.xhtml">createGlobalStateSnapshot</a>()
+                    </li><li>private void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/compareGlobalStateSnapshots.xhtml">compareGlobalStateSnapshots</a>()
+                    </li><li>private void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/compareGlobalStateSnapshotPart.xhtml">compareGlobalStateSnapshotPart</a>()
+                    </li><li>private Prophet <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getProphet.xhtml">getProphet</a>()
+                    </li><li>private bool <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/shouldInvocationMockerBeReset.xhtml">shouldInvocationMockerBeReset</a>()
+                    </li><li>private void <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/registerMockObjectsFromTestArguments.xhtml">registerMockObjectsFromTestArguments</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PHPUnit_Framework_Assert" href="../classes/PHPUnit_Framework_Assert.xhtml">PHPUnit_Framework_Assert</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PHPUnit_Framework_Test" href="../interfaces/PHPUnit_Framework_Test.xhtml">PHPUnit_Framework_Test</a>
+            </li>
+            <li>
+              <a title="PHPUnit_Framework_SelfDescribing" href="../interfaces/PHPUnit_Framework_SelfDescribing.xhtml">PHPUnit_Framework_SelfDescribing</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">2035+</td>
+            <td>Add type declaration when support for PHP 5 is dropped</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="beStrictAboutChangesToGlobalState"><strong>$beStrictAboutChangesToGlobalState</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+            <li id="data"><strong>$data</strong>
+                —
+                array</li>
+            <li id="dataName"><strong>$dataName</strong>
+                —
+                string</li>
+            <li id="dependencies"><strong>$dependencies</strong>
+                —
+                array</li>
+            <li id="dependencyInput"><strong>$dependencyInput</strong>
+                —
+                array</li>
+            <li id="expectedException"><strong>$expectedException</strong>
+                —
+                string<br/><span class="indent">The name of the expected Exception.</span></li>
+            <li id="expectedExceptionCode"><strong>$expectedExceptionCode</strong>
+                —
+                <a title="int|string" href="../classes/int|string.xhtml">int|string</a><br/><span class="indent">The code of the expected Exception.</span></li>
+            <li id="expectedExceptionMessage"><strong>$expectedExceptionMessage</strong>
+                —
+                string<br/><span class="indent">The message of the expected Exception.</span></li>
+            <li id="expectedExceptionMessageRegExp"><strong>$expectedExceptionMessageRegExp</strong>
+                —
+                string<br/><span class="indent">The regex pattern to validate the expected Exception message.</span></li>
+            <li id="groups"><strong>$groups</strong>
+                —
+                array</li>
+            <li id="inIsolation"><strong>$inIsolation</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Whether or not this test is running in a separate PHP process.</span></li>
+            <li id="iniSettings"><strong>$iniSettings</strong>
+                —
+                array</li>
+            <li id="locale"><strong>$locale</strong>
+                —
+                array</li>
+            <li id="mockObjectGenerator"><strong>$mockObjectGenerator</strong>
+                —
+                array</li>
+            <li id="mockObjects"><strong>$mockObjects</strong>
+                —
+                array</li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The name of the test case.</span></li>
+            <li id="numAssertions"><strong>$numAssertions</strong>
+                —
+                int</li>
+            <li id="output"><strong>$output</strong>
+                —
+                string</li>
+            <li id="outputBufferingActive"><strong>$outputBufferingActive</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+            <li id="outputBufferingLevel"><strong>$outputBufferingLevel</strong>
+                —
+                int</li>
+            <li id="outputCallback"><strong>$outputCallback</strong>
+                —
+                mixed</li>
+            <li id="outputExpectedRegex"><strong>$outputExpectedRegex</strong>
+                —
+                string</li>
+            <li id="outputExpectedString"><strong>$outputExpectedString</strong>
+                —
+                string</li>
+            <li id="prophet"><strong>$prophet</strong>
+                —
+                <a title="Prophecy\Prophet" href="../classes/Prophecy_Prophet.xhtml">Prophecy\Prophet</a></li>
+            <li id="registerMockObjectsFromTestArgumentsRecursively"><strong>$registerMockObjectsFromTestArgumentsRecursively</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+            <li id="result"><strong>$result</strong>
+                —
+                <a title="PHPUnit_Framework_TestResult" href="../classes/PHPUnit_Framework_TestResult.xhtml">PHPUnit_Framework_TestResult</a></li>
+            <li id="snapshot"><strong>$snapshot</strong>
+                —
+                <a title="SebastianBergmann\GlobalState\Snapshot" href="../classes/SebastianBergmann_GlobalState_Snapshot.xhtml">SebastianBergmann\GlobalState\Snapshot</a></li>
+            <li id="status"><strong>$status</strong>
+                —
+                int</li>
+            <li id="statusMessage"><strong>$statusMessage</strong>
+                —
+                string</li>
+            <li id="testResult"><strong>$testResult</strong>
+                —
+                mixed</li>
+            <li id="useErrorHandler"><strong>$useErrorHandler</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+            <li id="warnings"><strong>$warnings</strong>
+                —
+                array</li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="backupGlobals"><strong>$backupGlobals</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Enable or disable the backup and restoration of the $GLOBALS array.</span></li>
+            <li id="backupGlobalsBlacklist"><strong>$backupGlobalsBlacklist</strong>
+                —
+                array</li>
+            <li id="backupStaticAttributes"><strong>$backupStaticAttributes</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Enable or disable the backup and restoration of static attributes.</span></li>
+            <li id="backupStaticAttributesBlacklist"><strong>$backupStaticAttributesBlacklist</strong>
+                —
+                array</li>
+            <li id="preserveGlobalState"><strong>$preserveGlobalState</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Whether or not this test should preserve the global state when running in a separate PHP process.</span></li>
+            <li id="runTestInSeparateProcess"><strong>$runTestInSeparateProcess</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Whether or not this test is to be run in a separate PHP process.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="compareGlobalStateSnapshotPart">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/compareGlobalStateSnapshotPart.xhtml">compareGlobalStateSnapshotPart()</a>
+            </li>
+            <li id="compareGlobalStateSnapshots">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/compareGlobalStateSnapshots.xhtml">compareGlobalStateSnapshots()</a>
+            </li>
+            <li id="createGlobalStateSnapshot">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createGlobalStateSnapshot.xhtml">createGlobalStateSnapshot()</a>
+            </li>
+            <li id="getProphet">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getProphet.xhtml">getProphet()</a>
+            </li>
+            <li id="registerMockObjectsFromTestArguments">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/registerMockObjectsFromTestArguments.xhtml">registerMockObjectsFromTestArguments()</a>
+            </li>
+            <li id="restoreGlobalState">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/restoreGlobalState.xhtml">restoreGlobalState()</a>
+            </li>
+            <li id="shouldInvocationMockerBeReset">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/shouldInvocationMockerBeReset.xhtml">shouldInvocationMockerBeReset()</a>
+            </li>
+            <li id="snapshotGlobalState">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/snapshotGlobalState.xhtml">snapshotGlobalState()</a>
+            </li>
+            <li id="startOutputBuffering">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/startOutputBuffering.xhtml">startOutputBuffering()</a>
+            </li>
+            <li id="stopOutputBuffering">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/stopOutputBuffering.xhtml">stopOutputBuffering()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="assertPostConditions"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/assertPostConditions.xhtml">assertPostConditions()</a>
+                — Performs assertions shared by all tests of a test case.</li>
+            <li id="assertPreConditions"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/assertPreConditions.xhtml">assertPreConditions()</a>
+                — Performs assertions shared by all tests of a test case.</li>
+            <li id="checkRequirements">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/checkRequirements.xhtml">checkRequirements()</a>
+            </li>
+            <li id="createMock"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createMock.xhtml">createMock()</a>
+                — Returns a test double for the specified class.</li>
+            <li id="createPartialMock"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createPartialMock.xhtml">createPartialMock()</a>
+                — Returns a partial test double for the specified class.</li>
+            <li id="createResult"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/createResult.xhtml">createResult()</a>
+                — Creates a default TestResult object.</li>
+            <li id="getDataSetAsString"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getDataSetAsString.xhtml">getDataSetAsString()</a>
+                — Gets the data set description of a TestCase.</li>
+            <li id="getMock"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMock.xhtml">getMock()</a>
+                — Returns a mock object for the specified class.</li>
+            <li id="getMockClass"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockClass.xhtml">getMockClass()</a>
+                — Mocks the specified class and returns the name of the mocked class.</li>
+            <li id="getMockForAbstractClass"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockForAbstractClass.xhtml">getMockForAbstractClass()</a>
+                — Returns a mock object for the specified abstract class with all abstract methods of the class mocked. Concrete methods are not mocked by default.</li>
+            <li id="getMockForTrait"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockForTrait.xhtml">getMockForTrait()</a>
+                — Returns a mock object for the specified trait with all abstract methods of the trait mocked. Concrete methods to mock can be specified with the `$mockedMethods` parameter.</li>
+            <li id="getMockFromWsdl"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockFromWsdl.xhtml">getMockFromWsdl()</a>
+                — Returns a mock object based on the given WSDL file.</li>
+            <li id="getMockObjectGenerator"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockObjectGenerator.xhtml">getMockObjectGenerator()</a>
+                — Get the mock object generator, creating it if it doesn't exist.</li>
+            <li id="getMockWithoutInvokingTheOriginalConstructor"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockWithoutInvokingTheOriginalConstructor.xhtml">getMockWithoutInvokingTheOriginalConstructor()</a>
+                — Returns a mock with disabled constructor object for the specified class.</li>
+            <li id="getObjectForTrait"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getObjectForTrait.xhtml">getObjectForTrait()</a>
+                — Returns an object for the specified trait.</li>
+            <li id="handleDependencies">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/handleDependencies.xhtml">handleDependencies()</a>
+            </li>
+            <li id="iniSet"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/iniSet.xhtml">iniSet()</a>
+                — This method is a wrapper for the ini_set() function that automatically resets the modified php.ini setting to its original value after the test is run.</li>
+            <li id="onNotSuccessfulTest"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/onNotSuccessfulTest.xhtml">onNotSuccessfulTest()</a>
+                — This method is called when a test method did not execute successfully.</li>
+            <li id="prepareTemplate"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/prepareTemplate.xhtml">prepareTemplate()</a>
+                — Performs custom preparations on the process isolation template.</li>
+            <li id="prophesize">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/prophesize.xhtml">prophesize()</a>
+            </li>
+            <li id="runTest"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/runTest.xhtml">runTest()</a>
+                — Override to run the test and assert its state.</li>
+            <li id="setExpectedExceptionFromAnnotation">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setExpectedExceptionFromAnnotation.xhtml">setExpectedExceptionFromAnnotation()</a>
+            </li>
+            <li id="setLocale"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setLocale.xhtml">setLocale()</a>
+                — This method is a wrapper for the setlocale() function that automatically resets the locale to its original value after the test is run.</li>
+            <li id="setUp"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUp.xhtml">setUp()</a>
+                — Sets up the fixture, for example, open a network connection.</li>
+            <li id="setUseErrorHandlerFromAnnotation">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUseErrorHandlerFromAnnotation.xhtml">setUseErrorHandlerFromAnnotation()</a>
+            </li>
+            <li id="tearDown"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/tearDown.xhtml">tearDown()</a>
+                — Tears down the fixture, for example, close a network connection.</li>
+            <li id="verifyMockObjects"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/verifyMockObjects.xhtml">verifyMockObjects()</a>
+                — Verifies the mock object expectations.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/__construct.xhtml">__construct()</a>
+                — Constructs a test case with the given name.</li>
+            <li id="addToAssertionCount"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/addToAssertionCount.xhtml">addToAssertionCount()</a>
+                — Adds a value to the assertion counter.</li>
+            <li id="any"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/any.xhtml">any()</a>
+                — Returns a matcher that matches when the method is executed zero or more times.</li>
+            <li id="at"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/at.xhtml">at()</a>
+                — Returns a matcher that matches when the method is executed at the given index.</li>
+            <li id="atLeast"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/atLeast.xhtml">atLeast()</a>
+                — Returns a matcher that matches when the method is executed at least N times.</li>
+            <li id="atLeastOnce"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/atLeastOnce.xhtml">atLeastOnce()</a>
+                — Returns a matcher that matches when the method is executed at least once.</li>
+            <li id="atMost"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/atMost.xhtml">atMost()</a>
+                — Returns a matcher that matches when the method is executed at most N times.</li>
+            <li id="count"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/count.xhtml">count()</a>
+                — Counts the number of test cases executed by run(TestResult result).</li>
+            <li id="dataDescription">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/dataDescription.xhtml">dataDescription()</a>
+            </li>
+            <li id="exactly"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/exactly.xhtml">exactly()</a>
+                — Returns a matcher that matches when the method is executed exactly $count times.</li>
+            <li id="expectException">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectException.xhtml">expectException()</a>
+            </li>
+            <li id="expectExceptionCode">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectExceptionCode.xhtml">expectExceptionCode()</a>
+            </li>
+            <li id="expectExceptionMessage">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectExceptionMessage.xhtml">expectExceptionMessage()</a>
+            </li>
+            <li id="expectExceptionMessageRegExp">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectExceptionMessageRegExp.xhtml">expectExceptionMessageRegExp()</a>
+            </li>
+            <li id="expectOutputRegex">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectOutputRegex.xhtml">expectOutputRegex()</a>
+            </li>
+            <li id="expectOutputString">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/expectOutputString.xhtml">expectOutputString()</a>
+            </li>
+            <li id="getActualOutput">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getActualOutput.xhtml">getActualOutput()</a>
+            </li>
+            <li id="getAnnotations"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getAnnotations.xhtml">getAnnotations()</a>
+                — Returns the annotations for this test.</li>
+            <li id="getExpectedException">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getExpectedException.xhtml">getExpectedException()</a>
+            </li>
+            <li id="getGroups">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getGroups.xhtml">getGroups()</a>
+            </li>
+            <li id="getMockBuilder"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getMockBuilder.xhtml">getMockBuilder()</a>
+                — Returns a builder object to create mock objects using a fluent interface.</li>
+            <li id="getName"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getName.xhtml">getName()</a>
+                — Gets the name of a TestCase.</li>
+            <li id="getNumAssertions"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getNumAssertions.xhtml">getNumAssertions()</a>
+                — Returns the number of assertions performed by this test.</li>
+            <li id="getResult">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getResult.xhtml">getResult()</a>
+            </li>
+            <li id="getSize"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getSize.xhtml">getSize()</a>
+                — Returns the size of the test.</li>
+            <li id="getStatus"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getStatus.xhtml">getStatus()</a>
+                — Returns the status of this test.</li>
+            <li id="getStatusMessage"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getStatusMessage.xhtml">getStatusMessage()</a>
+                — Returns the status message of this test.</li>
+            <li id="getTestResultObject">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/getTestResultObject.xhtml">getTestResultObject()</a>
+            </li>
+            <li id="hasDependencies"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasDependencies.xhtml">hasDependencies()</a>
+                — Returns true if the tests has dependencies</li>
+            <li id="hasExpectationOnOutput">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasExpectationOnOutput.xhtml">hasExpectationOnOutput()</a>
+            </li>
+            <li id="hasFailed"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasFailed.xhtml">hasFailed()</a>
+                — Returns whether or not this test has failed.</li>
+            <li id="hasOutput">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasOutput.xhtml">hasOutput()</a>
+            </li>
+            <li id="hasPerformedExpectationsOnOutput">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasPerformedExpectationsOnOutput.xhtml">hasPerformedExpectationsOnOutput()</a>
+            </li>
+            <li id="hasSize">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/hasSize.xhtml">hasSize()</a>
+            </li>
+            <li id="isInIsolation">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isInIsolation.xhtml">isInIsolation()</a>
+            </li>
+            <li id="isLarge">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isLarge.xhtml">isLarge()</a>
+            </li>
+            <li id="isMedium">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isMedium.xhtml">isMedium()</a>
+            </li>
+            <li id="isSmall">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/isSmall.xhtml">isSmall()</a>
+            </li>
+            <li id="never"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/never.xhtml">never()</a>
+                — Returns a matcher that matches when the method is never executed.</li>
+            <li id="onConsecutiveCalls">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/onConsecutiveCalls.xhtml">onConsecutiveCalls()</a>
+            </li>
+            <li id="once"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/once.xhtml">once()</a>
+                — Returns a matcher that matches when the method is executed exactly once.</li>
+            <li id="registerMockObject">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/registerMockObject.xhtml">registerMockObject()</a>
+            </li>
+            <li id="returnArgument">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnArgument.xhtml">returnArgument()</a>
+            </li>
+            <li id="returnCallback">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnCallback.xhtml">returnCallback()</a>
+            </li>
+            <li id="returnSelf"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnSelf.xhtml">returnSelf()</a>
+                — Returns the current object.</li>
+            <li id="returnValue">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnValue.xhtml">returnValue()</a>
+            </li>
+            <li id="returnValueMap">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/returnValueMap.xhtml">returnValueMap()</a>
+            </li>
+            <li id="run"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/run.xhtml">run()</a>
+                — Runs the test case and collects the results in a TestResult object.</li>
+            <li id="runBare"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/runBare.xhtml">runBare()</a>
+                — Runs the bare test sequence.</li>
+            <li id="setBackupGlobals"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setBackupGlobals.xhtml">setBackupGlobals()</a>
+                — Calling this method in setUp() has no effect!</li>
+            <li id="setBackupStaticAttributes"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setBackupStaticAttributes.xhtml">setBackupStaticAttributes()</a>
+                — Calling this method in setUp() has no effect!</li>
+            <li id="setBeStrictAboutChangesToGlobalState">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setBeStrictAboutChangesToGlobalState.xhtml">setBeStrictAboutChangesToGlobalState()</a>
+            </li>
+            <li id="setDependencies"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setDependencies.xhtml">setDependencies()</a>
+                — Sets the dependencies of a TestCase.</li>
+            <li id="setDependencyInput"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setDependencyInput.xhtml">setDependencyInput()</a>
+                — Sets</li>
+            <li id="setExpectedException">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setExpectedException.xhtml">setExpectedException()</a>
+            </li>
+            <li id="setExpectedExceptionRegExp">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setExpectedExceptionRegExp.xhtml">setExpectedExceptionRegExp()</a>
+            </li>
+            <li id="setGroups">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setGroups.xhtml">setGroups()</a>
+            </li>
+            <li id="setInIsolation">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setInIsolation.xhtml">setInIsolation()</a>
+            </li>
+            <li id="setName"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setName.xhtml">setName()</a>
+                — Sets the name of a TestCase.</li>
+            <li id="setOutputCallback">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setOutputCallback.xhtml">setOutputCallback()</a>
+            </li>
+            <li id="setPreserveGlobalState">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setPreserveGlobalState.xhtml">setPreserveGlobalState()</a>
+            </li>
+            <li id="setRegisterMockObjectsFromTestArgumentsRecursively">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setRegisterMockObjectsFromTestArgumentsRecursively.xhtml">setRegisterMockObjectsFromTestArgumentsRecursively()</a>
+            </li>
+            <li id="setResult">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setResult.xhtml">setResult()</a>
+            </li>
+            <li id="setRunTestInSeparateProcess">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setRunTestInSeparateProcess.xhtml">setRunTestInSeparateProcess()</a>
+            </li>
+            <li id="setTestResultObject">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setTestResultObject.xhtml">setTestResultObject()</a>
+            </li>
+            <li id="setUpBeforeClass"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUpBeforeClass.xhtml">setUpBeforeClass()</a>
+                — This method is called before the first test of this test class is run.</li>
+            <li id="setUseErrorHandler">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/setUseErrorHandler.xhtml">setUseErrorHandler()</a>
+            </li>
+            <li id="tearDownAfterClass"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/tearDownAfterClass.xhtml">tearDownAfterClass()</a>
+                — This method is called after the last test of this test class is run.</li>
+            <li id="throwException">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/throwException.xhtml">throwException()</a>
+            </li>
+            <li id="toString"><a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/toString.xhtml">toString()</a>
+                — Returns a string representation of the test case.</li>
+            <li id="usesDataProvider">
+              <a title="PHPUnit_Framework_TestCase" href="../classes/PHPUnit_Framework_TestCase/usesDataProvider.xhtml">usesDataProvider()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

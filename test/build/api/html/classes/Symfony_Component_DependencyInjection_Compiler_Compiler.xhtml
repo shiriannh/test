@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\DependencyInjection\Compiler\Compiler</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_DependencyInjection_Compiler">Symfony\Component\DependencyInjection\Compiler</a>
+          </li>
+          <li class="separator">Compiler</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/dependency-injection/Compiler/Compiler.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\DependencyInjection\Compiler\</small>Compiler</h1>
+        <h4>This class is used to remove circular dependencies between individual passes.</h4>
+        <p/>
+        <ul>
+          <li>Author: Johannes M. Schmitt &lt;schmittjoh@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Compiler
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$passConfig</a>;
+                    </li><li>private array <a href="#members">$log</a> =
+                        ;
+                    </li><li>private  <a href="#members">$loggingFormatter</a>;
+                    </li><li>private  <a href="#members">$serviceReferenceGraph</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/__construct.xhtml">__construct</a>()
+                    </li><li>public PassConfig <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getPassConfig.xhtml">getPassConfig</a>()
+                    </li><li>public ServiceReferenceGraph <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getServiceReferenceGraph.xhtml">getServiceReferenceGraph</a>()
+                    </li><li>public LoggingFormatter <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getLoggingFormatter.xhtml">getLoggingFormatter</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/addPass.xhtml">addPass</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/addLogMessage.xhtml">addLogMessage</a>()
+                    </li><li>public array <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getLog.xhtml">getLog</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/compile.xhtml">compile</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="log">
+              <strong>$log</strong>
+            </li>
+            <li id="loggingFormatter">
+              <strong>$loggingFormatter</strong>
+            </li>
+            <li id="passConfig">
+              <strong>$passConfig</strong>
+            </li>
+            <li id="serviceReferenceGraph">
+              <strong>$serviceReferenceGraph</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="addLogMessage"><a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/addLogMessage.xhtml">addLogMessage()</a>
+                — Adds a log message.</li>
+            <li id="addPass"><a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/addPass.xhtml">addPass()</a>
+                — Adds a pass to the PassConfig.</li>
+            <li id="compile"><a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/compile.xhtml">compile()</a>
+                — Run the Compiler and process all Passes.</li>
+            <li id="getLog"><a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getLog.xhtml">getLog()</a>
+                — Returns the log.</li>
+            <li id="getLoggingFormatter"><a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getLoggingFormatter.xhtml">getLoggingFormatter()</a>
+                — Returns the logging formatter which can be used by compilation passes.</li>
+            <li id="getPassConfig"><a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getPassConfig.xhtml">getPassConfig()</a>
+                — Returns the PassConfig.</li>
+            <li id="getServiceReferenceGraph"><a title="Symfony\Component\DependencyInjection\Compiler\Compiler" href="../classes/Symfony_Component_DependencyInjection_Compiler_Compiler/getServiceReferenceGraph.xhtml">getServiceReferenceGraph()</a>
+                — Returns the ServiceReferenceGraph.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

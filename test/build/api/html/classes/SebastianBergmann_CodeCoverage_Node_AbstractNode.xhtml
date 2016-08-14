@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - SebastianBergmann\CodeCoverage\Node\AbstractNode</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#SebastianBergmann_CodeCoverage_Node">SebastianBergmann\CodeCoverage\Node</a>
+          </li>
+          <li class="separator">AbstractNode</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/php-code-coverage/src/Node/AbstractNode.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>SebastianBergmann\CodeCoverage\Node\</small>AbstractNode</h1>
+        <h4>Base class for nodes in the code coverage information tree.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractNode
+                implements
+                <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$name</a>;
+                    </li><li>private  <a href="#members">$path</a>;
+                    </li><li>private  <a href="#members">$pathArray</a>;
+                    </li><li>private <span title="SebastianBergmann\CodeCoverage\Node\AbstractNode">AbstractNode</span> <a href="#members">$parent</a>;
+                    </li><li>private  <a href="#members">$id</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getName.xhtml">getName</a>()
+                    </li><li>public string <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getId.xhtml">getId</a>()
+                    </li><li>public string <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getPath.xhtml">getPath</a>()
+                    </li><li>public array <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getPathAsArray.xhtml">getPathAsArray</a>()
+                    </li><li>public AbstractNode <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getParent.xhtml">getParent</a>()
+                    </li><li>public int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedClassesPercent.xhtml">getTestedClassesPercent</a>()
+                    </li><li>public int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedTraitsPercent.xhtml">getTestedTraitsPercent</a>()
+                    </li><li>public int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedClassesAndTraitsPercent.xhtml">getTestedClassesAndTraitsPercent</a>()
+                    </li><li>public int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedMethodsPercent.xhtml">getTestedMethodsPercent</a>()
+                    </li><li>public int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getLineExecutedPercent.xhtml">getLineExecutedPercent</a>()
+                    </li><li>public int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumClassesAndTraits.xhtml">getNumClassesAndTraits</a>()
+                    </li><li>public int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedClassesAndTraits.xhtml">getNumTestedClassesAndTraits</a>()
+                    </li><li>public array <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getClassesAndTraits.xhtml">getClassesAndTraits</a>()
+                    </li><li>public abstract array <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getClasses.xhtml">getClasses</a>()
+                    </li><li>public abstract array <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTraits.xhtml">getTraits</a>()
+                    </li><li>public abstract array <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getFunctions.xhtml">getFunctions</a>()
+                    </li><li>public abstract array <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getLinesOfCode.xhtml">getLinesOfCode</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumExecutableLines.xhtml">getNumExecutableLines</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumExecutedLines.xhtml">getNumExecutedLines</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumClasses.xhtml">getNumClasses</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedClasses.xhtml">getNumTestedClasses</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTraits.xhtml">getNumTraits</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedTraits.xhtml">getNumTestedTraits</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumMethods.xhtml">getNumMethods</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedMethods.xhtml">getNumTestedMethods</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumFunctions.xhtml">getNumFunctions</a>()
+                    </li><li>public abstract int <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedFunctions.xhtml">getNumTestedFunctions</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="id"><strong>$id</strong>
+                —
+                string</li>
+            <li id="name"><strong>$name</strong>
+                —
+                string</li>
+            <li id="parent"><strong>$parent</strong>
+                —
+                <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode.xhtml">SebastianBergmann\CodeCoverage\Node\AbstractNode</a></li>
+            <li id="path"><strong>$path</strong>
+                —
+                string</li>
+            <li id="pathArray"><strong>$pathArray</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="getClasses"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getClasses.xhtml">getClasses()</a>
+                — Returns the classes of this node.</li>
+            <li id="getClassesAndTraits"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getClassesAndTraits.xhtml">getClassesAndTraits()</a>
+                — Returns the classes and traits of this node.</li>
+            <li id="getFunctions"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getFunctions.xhtml">getFunctions()</a>
+                — Returns the functions of this node.</li>
+            <li id="getId">
+              <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getId.xhtml">getId()</a>
+            </li>
+            <li id="getLineExecutedPercent"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getLineExecutedPercent.xhtml">getLineExecutedPercent()</a>
+                — Returns the percentage of executed lines.</li>
+            <li id="getLinesOfCode"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getLinesOfCode.xhtml">getLinesOfCode()</a>
+                — Returns the LOC/CLOC/NCLOC of this node.</li>
+            <li id="getName">
+              <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getName.xhtml">getName()</a>
+            </li>
+            <li id="getNumClasses"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumClasses.xhtml">getNumClasses()</a>
+                — Returns the number of classes.</li>
+            <li id="getNumClassesAndTraits"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumClassesAndTraits.xhtml">getNumClassesAndTraits()</a>
+                — Returns the number of classes and traits.</li>
+            <li id="getNumExecutableLines"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumExecutableLines.xhtml">getNumExecutableLines()</a>
+                — Returns the number of executable lines.</li>
+            <li id="getNumExecutedLines"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumExecutedLines.xhtml">getNumExecutedLines()</a>
+                — Returns the number of executed lines.</li>
+            <li id="getNumFunctions"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumFunctions.xhtml">getNumFunctions()</a>
+                — Returns the number of functions.</li>
+            <li id="getNumMethods"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumMethods.xhtml">getNumMethods()</a>
+                — Returns the number of methods.</li>
+            <li id="getNumTestedClasses"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedClasses.xhtml">getNumTestedClasses()</a>
+                — Returns the number of tested classes.</li>
+            <li id="getNumTestedClassesAndTraits"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedClassesAndTraits.xhtml">getNumTestedClassesAndTraits()</a>
+                — Returns the number of tested classes and traits.</li>
+            <li id="getNumTestedFunctions"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedFunctions.xhtml">getNumTestedFunctions()</a>
+                — Returns the number of tested functions.</li>
+            <li id="getNumTestedMethods"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedMethods.xhtml">getNumTestedMethods()</a>
+                — Returns the number of tested methods.</li>
+            <li id="getNumTestedTraits"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTestedTraits.xhtml">getNumTestedTraits()</a>
+                — Returns the number of tested traits.</li>
+            <li id="getNumTraits"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getNumTraits.xhtml">getNumTraits()</a>
+                — Returns the number of traits.</li>
+            <li id="getParent">
+              <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getParent.xhtml">getParent()</a>
+            </li>
+            <li id="getPath">
+              <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getPath.xhtml">getPath()</a>
+            </li>
+            <li id="getPathAsArray">
+              <a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getPathAsArray.xhtml">getPathAsArray()</a>
+            </li>
+            <li id="getTestedClassesAndTraitsPercent"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedClassesAndTraitsPercent.xhtml">getTestedClassesAndTraitsPercent()</a>
+                — Returns the percentage of traits that has been tested.</li>
+            <li id="getTestedClassesPercent"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedClassesPercent.xhtml">getTestedClassesPercent()</a>
+                — Returns the percentage of classes that has been tested.</li>
+            <li id="getTestedMethodsPercent"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedMethodsPercent.xhtml">getTestedMethodsPercent()</a>
+                — Returns the percentage of methods that has been tested.</li>
+            <li id="getTestedTraitsPercent"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTestedTraitsPercent.xhtml">getTestedTraitsPercent()</a>
+                — Returns the percentage of traits that has been tested.</li>
+            <li id="getTraits"><a title="SebastianBergmann\CodeCoverage\Node\AbstractNode" href="../classes/SebastianBergmann_CodeCoverage_Node_AbstractNode/getTraits.xhtml">getTraits()</a>
+                — Returns the traits of this node.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - AKUnarchiverJPA</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">AKUnarchiverJPA</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_joomlaupdate/restore.php.xhtml#line4246">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>AKUnarchiverJPA</h1>
+        <h4>JPA archive extraction class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AKUnarchiverJPA
+                extends <a title="AKAbstractUnarchiver" href="../classes/AKAbstractUnarchiver.xhtml">AKAbstractUnarchiver</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$archiveHeaderData</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/readArchiveHeader.xhtml">readArchiveHeader</a>()
+                    </li><li>protected bool <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/readFileHeader.xhtml">readFileHeader</a>()
+                    </li><li>protected bool <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processFileData.xhtml">processFileData</a>()
+                    </li><li>private void <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeFileUncompressed.xhtml">processTypeFileUncompressed</a>()
+                    </li><li>private void <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeFileCompressedSimple.xhtml">processTypeFileCompressedSimple</a>()
+                    </li><li>private bool <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeLink.xhtml">processTypeLink</a>()
+                    </li><li>private bool <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeDir.xhtml">processTypeDir</a>()
+                    </li><li>protected void <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/createDirectory.xhtml">createDirectory</a>()
+                    </li><li>protected void <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/heuristicFileHeaderLocator.xhtml">heuristicFileHeaderLocator</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="AKAbstractUnarchiver" href="../classes/AKAbstractUnarchiver.xhtml">AKAbstractUnarchiver</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="archiveHeaderData">
+              <strong>$archiveHeaderData</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="processTypeDir"><a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeDir.xhtml">processTypeDir()</a>
+                — Process the file data of a directory entry</li>
+            <li id="processTypeFileCompressedSimple">
+              <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeFileCompressedSimple.xhtml">processTypeFileCompressedSimple()</a>
+            </li>
+            <li id="processTypeFileUncompressed">
+              <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeFileUncompressed.xhtml">processTypeFileUncompressed()</a>
+            </li>
+            <li id="processTypeLink"><a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processTypeLink.xhtml">processTypeLink()</a>
+                — Process the file data of a link entry</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="createDirectory"><a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/createDirectory.xhtml">createDirectory()</a>
+                — Creates the directory this file points to</li>
+            <li id="heuristicFileHeaderLocator">
+              <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/heuristicFileHeaderLocator.xhtml">heuristicFileHeaderLocator()</a>
+            </li>
+            <li id="processFileData"><a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/processFileData.xhtml">processFileData()</a>
+                — Concrete classes must use this method to process file data. It must set $runState to AK_STATE_DATAREAD when it's finished processing the file data.</li>
+            <li id="readArchiveHeader">
+              <a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/readArchiveHeader.xhtml">readArchiveHeader()</a>
+            </li>
+            <li id="readFileHeader"><a title="AKUnarchiverJPA" href="../classes/AKUnarchiverJPA/readFileHeader.xhtml">readFileHeader()</a>
+                — Concrete classes must use this method to read the file header</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

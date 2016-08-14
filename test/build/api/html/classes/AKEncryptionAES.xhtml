@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - AKEncryptionAES</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">AKEncryptionAES</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_joomlaupdate/restore.php.xhtml#line6844">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>AKEncryptionAES</h1>
+        <h4>AES implementation in PHP (c) Chris Veness 2005-2013.</h4>
+        <p>Right to use and adapt is granted for under a simple creative commons attribution<br/>licence. No warranty of any form is offered.<br/><br/>Modified for Akeeba Backup by Nicholas K. Dionysopoulos</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AKEncryptionAES
+            {<br/><ul class="none"><li>// members</li><li>protected static array <a href="#members">$Sbox</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$Rcon</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$passwords</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected static ciphertext <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/Cipher.xhtml">Cipher</a>()
+                    </li><li>protected static void <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AddRoundKey.xhtml">AddRoundKey</a>()
+                    </li><li>protected static void <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/SubBytes.xhtml">SubBytes</a>()
+                    </li><li>protected static void <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/ShiftRows.xhtml">ShiftRows</a>()
+                    </li><li>protected static void <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/MixColumns.xhtml">MixColumns</a>()
+                    </li><li>protected static key <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/KeyExpansion.xhtml">KeyExpansion</a>()
+                    </li><li>protected static void <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/SubWord.xhtml">SubWord</a>()
+                    </li><li>protected static void <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/RotWord.xhtml">RotWord</a>()
+                    </li><li>protected static void <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/urs.xhtml">urs</a>()
+                    </li><li>public static encrypted <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AESEncryptCtr.xhtml">AESEncryptCtr</a>()
+                    </li><li>public static decrypted <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AESDecryptCtr.xhtml">AESDecryptCtr</a>()
+                    </li><li>public static string <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AESDecryptCBC.xhtml">AESDecryptCBC</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="Rcon">
+              <strong>$Rcon</strong>
+            </li>
+            <li id="Sbox">
+              <strong>$Sbox</strong>
+            </li>
+            <li id="passwords">
+              <strong>$passwords</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="AddRoundKey">
+              <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AddRoundKey.xhtml">AddRoundKey()</a>
+            </li>
+            <li id="Cipher"><a title="AKEncryptionAES" href="../classes/AKEncryptionAES/Cipher.xhtml">Cipher()</a>
+                — AES Cipher function: encrypt 'input' with Rijndael algorithm</li>
+            <li id="KeyExpansion"><a title="AKEncryptionAES" href="../classes/AKEncryptionAES/KeyExpansion.xhtml">KeyExpansion()</a>
+                — Key expansion for Rijndael Cipher(): performs key expansion on cipher key to generate a key schedule</li>
+            <li id="MixColumns">
+              <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/MixColumns.xhtml">MixColumns()</a>
+            </li>
+            <li id="RotWord">
+              <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/RotWord.xhtml">RotWord()</a>
+            </li>
+            <li id="ShiftRows">
+              <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/ShiftRows.xhtml">ShiftRows()</a>
+            </li>
+            <li id="SubBytes">
+              <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/SubBytes.xhtml">SubBytes()</a>
+            </li>
+            <li id="SubWord">
+              <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/SubWord.xhtml">SubWord()</a>
+            </li>
+            <li id="urs">
+              <a title="AKEncryptionAES" href="../classes/AKEncryptionAES/urs.xhtml">urs()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="AESDecryptCBC"><a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AESDecryptCBC.xhtml">AESDecryptCBC()</a>
+                — AES decryption in CBC mode. This is the standard mode (the CTR methods actually use Rijndael-128 in CTR mode, which - technically - isn't AES).</li>
+            <li id="AESDecryptCtr"><a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AESDecryptCtr.xhtml">AESDecryptCtr()</a>
+                — Decrypt a text encrypted by AES in counter mode of operation</li>
+            <li id="AESEncryptCtr"><a title="AKEncryptionAES" href="../classes/AKEncryptionAES/AESEncryptCtr.xhtml">AESEncryptCtr()</a>
+                — Encrypt a text using AES encryption in Counter mode of operation  - see http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

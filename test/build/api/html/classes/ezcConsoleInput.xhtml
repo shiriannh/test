@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcConsoleInput</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcConsoleInput</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/console-tools/src/input.php.xhtml#line127">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcConsoleInput</h1>
+        <h4>The ezcConsoleInput class handles the given options and arguments on the console.</h4>
+        <p>This class allows the complete handling of options and arguments submitted<br/>to a console based application.<br/><br/>The next example demonstrate how to capture the console options:<br/><br/>&lt;code&gt;<br/>$optionHandler = new ezcConsoleInput();<br/><br/>// Register simple parameter -h/--help<br/>$optionHandler-&gt;registerOption( new ezcConsoleOption( 'h', 'help' ) );<br/><br/>// Register complex parameter -f/--file<br/>$file = new ezcConsoleOption(<br/>'f',<br/>'file',<br/>ezcConsoleInput::TYPE_STRING,<br/>null,<br/>false,<br/>'Process a file.',<br/>'Processes a single file.'<br/>);<br/>$optionHandler-&gt;registerOption( $file );<br/><br/>// Manipulate parameter -f/--file after registration<br/>$file-&gt;multiple = true;<br/><br/>// Register another complex parameter that depends on -f and excludes -h<br/>$dir = new ezcConsoleOption(<br/>'d',<br/>'dir',<br/>ezcConsoleInput::TYPE_STRING,<br/>null,<br/>true,<br/>'Process a directory.',<br/>'Processes a complete directory.',<br/>array( new ezcConsoleOptionRule( $optionHandler-&gt;getOption( 'f' ) ) ),<br/>array( new ezcConsoleOptionRule( $optionHandler-&gt;getOption( 'h' ) ) )<br/>);<br/>$optionHandler-&gt;registerOption( $dir );<br/><br/>// Register an alias for this parameter<br/>$optionHandler-&gt;registerAlias( 'e', 'extended-dir', $dir );<br/><br/>// Process registered parameters and handle errors<br/>try<br/>{<br/>$optionHandler-&gt;process( array( 'example_input.php', '-h' ) );<br/>}<br/>catch ( ezcConsoleOptionException $e )<br/>{<br/>echo $e-&gt;getMessage();<br/>exit( 1 );<br/>}<br/><br/>// Process a single parameter<br/>$file = $optionHandler-&gt;getOption( 'f' );<br/>if ( $file-&gt;value === false )<br/>{<br/>echo "Parameter -{$file-&gt;short}/--{$file-&gt;long} was not submitted.\n";<br/>}<br/>elseif ( $file-&gt;value === true )<br/>{<br/>echo "Parameter -{$file-&gt;short}/--{$file-&gt;long} was submitted without value.\n";<br/>}<br/>else<br/>{<br/>echo "Parameter -{$file-&gt;short}/--{$file-&gt;long} was submitted with value '".var_export($file-&gt;value, true)."'.\n";<br/>}<br/><br/>// Process all parameters at once:<br/>foreach ( $optionHandler-&gt;getOptionValues() as $paramShort =&gt; $val )<br/>{<br/>switch ( true )<br/>{<br/>case $val === false:<br/>echo "Parameter $paramShort was not submitted.\n";<br/>break;<br/>case $val === true:<br/>echo "Parameter $paramShort was submitted without a value.\n";<br/>break;<br/>case is_array( $val ):<br/>echo "Parameter $paramShort was submitted multiple times with value: '".implode(', ', $val)."'.\n";<br/>break;<br/>default:<br/>echo "Parameter $paramShort was submitted with value: '$val'.\n";<br/>break;<br/>}<br/>}<br/>&lt;/code&gt;</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcConsoleInput
+            {<br/><ul class="none"><li>// constants</li><li>const TYPE_NONE = 1;</li><li>const TYPE_INT = 2;</li><li>const TYPE_STRING = 3;</li></ul><ul class="none"><li>// members</li><li>private <span title="array(array)">array(array)</span> <a href="#members">$options</a> =
+                        ;
+                    </li><li>private <span title="array(string=&gt;int)">array(string=&gt;int)</span> <a href="#members">$optionShort</a> =
+                        ;
+                    </li><li>private <span title="array(string=&gt;int)">array(string=&gt;int)</span> <a href="#members">$optionLong</a> =
+                        ;
+                    </li><li>private <span title="array(string)">array(string)</span> <a href="#members">$arguments</a> =
+                        ;
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$processed</a> =
+                        false;
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$helpOptionSet</a> =
+                        false;
+                    </li><li>private <span title="ezcConsoleStringTool">ezcConsoleStringTool</span> <a href="#members">$stringTool</a>;
+                    </li><li>private <span title="ezcConsoleInputValidator">ezcConsoleInputValidator</span> <a href="#members">$validator</a>;
+                    </li><li>private <span title="ezcConsoleInputHelpGenerator">ezcConsoleInputHelpGenerator</span> <a href="#members">$helpGenerator</a>;
+                    </li><li>protected <span title="array(string=&gt;mixed)">array(string=&gt;mixed)</span> <a href="#members">$properties</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__construct.xhtml">__construct</a>()
+                    </li><li>public ezcConsoleOption <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/registerOption.xhtml">registerOption</a>()
+                    </li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/registerAlias.xhtml">registerAlias</a>()
+                    </li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/registerOptionString.xhtml">registerOptionString</a>()
+                    </li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/unregisterOption.xhtml">unregisterOption</a>()
+                    </li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/unregisterAlias.xhtml">unregisterAlias</a>()
+                    </li><li>public ezcConsoleOption <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOption.xhtml">getOption</a>()
+                    </li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/process.xhtml">process</a>()
+                    </li><li>private void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/setOptionDefaults.xhtml">setOptionDefaults</a>()
+                    </li><li>private void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/processOptions.xhtml">processOptions</a>()
+                    </li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/reset.xhtml">reset</a>()
+                    </li><li>public bool <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/hasOption.xhtml">hasOption</a>()
+                    </li><li>public array(string=&gt;ezcConsoleOption) <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptions.xhtml">getOptions</a>()
+                    </li><li>public array(string=&gt;mixed) <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptionValues.xhtml">getOptionValues</a>()
+                    </li><li>public array(string) <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getArguments.xhtml">getArguments</a>()
+                    </li><li>public array(array(string)) <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getHelp.xhtml">getHelp</a>()
+                    </li><li>private array <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptionHelpWithoutGrouping.xhtml">getOptionHelpWithoutGrouping</a>()
+                    </li><li>private array() <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptionHelpWithGrouping.xhtml">getOptionHelpWithGrouping</a>()
+                    </li><li>public ezcConsoleTable <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getHelpTable.xhtml">getHelpTable</a>()
+                    </li><li>public string <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getHelpText.xhtml">getHelpText</a>()
+                    </li><li>public string <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getSynopsis.xhtml">getSynopsis</a>()
+                    </li><li>public bool <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/helpOptionSet.xhtml">helpOptionSet</a>()
+                    </li><li>public mixed <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__get.xhtml">__get</a>()
+                    </li><li>public void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__set.xhtml">__set</a>()
+                    </li><li>public bool <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__isset.xhtml">__isset</a>()
+                    </li><li>protected string <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/createOptionSynopsis.xhtml">createOptionSynopsis</a>()
+                    </li><li>private void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/processOption.xhtml">processOption</a>()
+                    </li><li>private void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/processArguments.xhtml">processArguments</a>()
+                    </li><li>protected bool <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/argumentsAllowed.xhtml">argumentsAllowed</a>()
+                    </li><li>private void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/checkRules.xhtml">checkRules</a>()
+                    </li><li>private bool <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/isCorrectType.xhtml">isCorrectType</a>()
+                    </li><li>private void <a title="ezcConsoleInput" href="../classes/ezcConsoleInput/preprocessLongOption.xhtml">preprocessLongOption</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">234</td>
+            <td>Verify interface and make plugable</td>
+          </tr>
+          <tr>
+            <td class="nummeric">446+</td>
+            <td>Check if $short and $long refer to the same option!</td>
+          </tr>
+        </table>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="TYPE_NONE">TYPE_NONE</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="TYPE_INT">TYPE_INT</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="TYPE_STRING">TYPE_STRING</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="arguments"><strong>$arguments</strong>
+                —
+                <a title="array(string)" href="../classes/array(string).xhtml">array(string)</a><br/><span class="indent">Arguments, if submitted, are stored here.</span></li>
+            <li id="helpGenerator"><strong>$helpGenerator</strong>
+                —
+                <a title="ezcConsoleInputHelpGenerator" href="../classes/ezcConsoleInputHelpGenerator.xhtml">ezcConsoleInputHelpGenerator</a><br/><span class="indent">Help generator.</span></li>
+            <li id="helpOptionSet"><strong>$helpOptionSet</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Indicates if an option was submitted, that has the isHelpOption flag set.</span></li>
+            <li id="optionLong"><strong>$optionLong</strong>
+                —
+                <a title="array(string=&gt;int)" href="../classes/array(string=&gt;int).xhtml">array(string=&gt;int)</a><br/><span class="indent">Long option names.</span></li>
+            <li id="optionShort"><strong>$optionShort</strong>
+                —
+                <a title="array(string=&gt;int)" href="../classes/array(string=&gt;int).xhtml">array(string=&gt;int)</a><br/><span class="indent">Short option names.</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                <a title="array(array)" href="../classes/array(array).xhtml">array(array)</a><br/><span class="indent">Array of option definitions, indexed by number.</span></li>
+            <li id="processed"><strong>$processed</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Wether the process() method has already been called.</span></li>
+            <li id="stringTool"><strong>$stringTool</strong>
+                —
+                <a title="ezcConsoleStringTool" href="../classes/ezcConsoleStringTool.xhtml">ezcConsoleStringTool</a><br/><span class="indent">Tool object for multi-byte encoding safe string operations.</span></li>
+            <li id="validator"><strong>$validator</strong>
+                —
+                <a title="ezcConsoleInputValidator" href="../classes/ezcConsoleInputValidator.xhtml">ezcConsoleInputValidator</a><br/><span class="indent">Input validator.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="properties"><strong>$properties</strong>
+                —
+                <a title="array(string=&gt;mixed)" href="../classes/array(string=&gt;mixed).xhtml">array(string=&gt;mixed)</a><br/><span class="indent">Collection of properties.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="checkRules"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/checkRules.xhtml">checkRules()</a>
+                — Check the rules that may be associated with an option.</li>
+            <li id="getOptionHelpWithGrouping"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptionHelpWithGrouping.xhtml">getOptionHelpWithGrouping()</a>
+                — Generates options helo array with ordering and grouping.</li>
+            <li id="getOptionHelpWithoutGrouping"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptionHelpWithoutGrouping.xhtml">getOptionHelpWithoutGrouping()</a>
+                — Creates the option help array in the original, ungrouped way.</li>
+            <li id="isCorrectType"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/isCorrectType.xhtml">isCorrectType()</a>
+                — Checks if a value is of a given type. Converts the value to the correct PHP type on success.</li>
+            <li id="preprocessLongOption"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/preprocessLongOption.xhtml">preprocessLongOption()</a>
+                — Split parameter and value for long option names.</li>
+            <li id="processArguments"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/processArguments.xhtml">processArguments()</a>
+                — Process arguments given to the program.</li>
+            <li id="processOption"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/processOption.xhtml">processOption()</a>
+                — Process an option.</li>
+            <li id="processOptions"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/processOptions.xhtml">processOptions()</a>
+                — Reads the submitted options from $args array.</li>
+            <li id="setOptionDefaults"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/setOptionDefaults.xhtml">setOptionDefaults()</a>
+                — Sets defaults for options that have not been submitted.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="argumentsAllowed"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/argumentsAllowed.xhtml">argumentsAllowed()</a>
+                — Returns if arguments are allowed with the current option submition.</li>
+            <li id="createOptionSynopsis"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/createOptionSynopsis.xhtml">createOptionSynopsis()</a>
+                — Returns the synopsis string for a single option and its dependencies.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__construct.xhtml">__construct()</a>
+                — Creates an input handler.</li>
+            <li id="__get"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__get.xhtml">__get()</a>
+                — Property read access.</li>
+            <li id="__isset"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__isset.xhtml">__isset()</a>
+                — Property isset access.</li>
+            <li id="__set"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/__set.xhtml">__set()</a>
+                — Property set access.</li>
+            <li id="getArguments"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getArguments.xhtml">getArguments()</a>
+                — Returns arguments provided to the program.</li>
+            <li id="getHelp"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getHelp.xhtml">getHelp()</a>
+                — Get help information for your options.</li>
+            <li id="getHelpTable"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getHelpTable.xhtml">getHelpTable()</a>
+                — Get help information for your options as a table.</li>
+            <li id="getHelpText"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getHelpText.xhtml">getHelpText()</a>
+                — Returns a standard help output for your program.</li>
+            <li id="getOption"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOption.xhtml">getOption()</a>
+                — Returns the definition object for the option with the name $name.</li>
+            <li id="getOptionValues"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptionValues.xhtml">getOptionValues()</a>
+                — Returns the values of all submitted options.</li>
+            <li id="getOptions"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getOptions.xhtml">getOptions()</a>
+                — Returns an array of all registered options.</li>
+            <li id="getSynopsis"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/getSynopsis.xhtml">getSynopsis()</a>
+                — Returns the synopsis string for the program.</li>
+            <li id="hasOption"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/hasOption.xhtml">hasOption()</a>
+                — Returns true if an option with the given name exists, otherwise false.</li>
+            <li id="helpOptionSet"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/helpOptionSet.xhtml">helpOptionSet()</a>
+                — Returns if a help option was set.</li>
+            <li id="process"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/process.xhtml">process()</a>
+                — Process the input parameters.</li>
+            <li id="registerAlias"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/registerAlias.xhtml">registerAlias()</a>
+                — Registers an alias for an option.</li>
+            <li id="registerOption"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/registerOption.xhtml">registerOption()</a>
+                — Registers the new option $option.</li>
+            <li id="registerOptionString"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/registerOptionString.xhtml">registerOptionString()</a>
+                — Registers options according to a string specification.</li>
+            <li id="reset"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/reset.xhtml">reset()</a>
+                — Resets all option and argument values.</li>
+            <li id="unregisterAlias"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/unregisterAlias.xhtml">unregisterAlias()</a>
+                — Removes an alias to an option.</li>
+            <li id="unregisterOption"><a title="ezcConsoleInput" href="../classes/ezcConsoleInput/unregisterOption.xhtml">unregisterOption()</a>
+                — Removes an option.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

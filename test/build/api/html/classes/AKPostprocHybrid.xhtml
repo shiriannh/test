@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - AKPostprocHybrid</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">AKPostprocHybrid</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_joomlaupdate/restore.php.xhtml#line3484">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>AKPostprocHybrid</h1>
+        <h4>Hybrid direct / FTP mode file writer</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AKPostprocHybrid
+                extends <a title="AKAbstractPostproc" href="../classes/AKAbstractPostproc.xhtml">AKAbstractPostproc</a>
+            {<br/><ul class="none"><li>// members</li><li>public boolean <a href="#members">$useFTP</a> =
+                        false;
+                    </li><li>public boolean <a href="#members">$useSSL</a> =
+                        false;
+                    </li><li>public boolean <a href="#members">$passive</a> =
+                        true;
+                    </li><li>public string <a href="#members">$host</a> =
+                        '';
+                    </li><li>public integer <a href="#members">$port</a> =
+                        21;
+                    </li><li>public string <a href="#members">$user</a> =
+                        '';
+                    </li><li>public string <a href="#members">$pass</a> =
+                        '';
+                    </li><li>public string <a href="#members">$dir</a> =
+                        '';
+                    </li><li>private <a href="#members">$handle</a> =
+                        null;
+                    </li><li>private string <a href="#members">$tempDir</a> =
+                        '';
+                    </li><li>private <a href="#members">$_handle</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/__wakeup.xhtml">__wakeup</a>()
+                    </li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/__destruct.xhtml">__destruct</a>()
+                    </li><li>public bool <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/connect.xhtml">connect</a>()
+                    </li><li>public bool <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/process.xhtml">process</a>()
+                    </li><li>public string <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/processFilename.xhtml">processFilename</a>()
+                    </li><li>private bool <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/isDirWritable.xhtml">isDirWritable</a>()
+                    </li><li>public bool <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/createDirRecursive.xhtml">createDirRecursive</a>()
+                    </li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/close.xhtml">close</a>()
+                    </li><li>private void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/fixPermissions.xhtml">fixPermissions</a>()
+                    </li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/chmod.xhtml">chmod</a>()
+                    </li><li>private void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/is_dir.xhtml">is_dir</a>()
+                    </li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/unlink.xhtml">unlink</a>()
+                    </li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/rmdir.xhtml">rmdir</a>()
+                    </li><li>public void <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/rename.xhtml">rename</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="AKAbstractPostproc" href="../classes/AKAbstractPostproc.xhtml">AKAbstractPostproc</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_handle">
+              <strong>$_handle</strong>
+              <br/>
+              <span class="indent">@var null The FTP connection handle</span>
+            </li>
+            <li id="handle">
+              <strong>$handle</strong>
+              <br/>
+              <span class="indent">@var resource The FTP handle</span>
+            </li>
+            <li id="tempDir">
+              <strong>$tempDir</strong>
+              <br/>
+              <span class="indent">@var string The temporary directory where the data will be stored</span>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="dir">
+              <strong>$dir</strong>
+              <br/>
+              <span class="indent">@var string FTP initial directory</span>
+            </li>
+            <li id="host">
+              <strong>$host</strong>
+              <br/>
+              <span class="indent">@var string FTP host name</span>
+            </li>
+            <li id="pass">
+              <strong>$pass</strong>
+              <br/>
+              <span class="indent">@var string FTP password</span>
+            </li>
+            <li id="passive">
+              <strong>$passive</strong>
+              <br/>
+              <span class="indent">@var bool use Passive mode?</span>
+            </li>
+            <li id="port">
+              <strong>$port</strong>
+              <br/>
+              <span class="indent">@var int FTP port</span>
+            </li>
+            <li id="useFTP">
+              <strong>$useFTP</strong>
+              <br/>
+              <span class="indent">@var bool Should I use the FTP layer?</span>
+            </li>
+            <li id="useSSL">
+              <strong>$useSSL</strong>
+              <br/>
+              <span class="indent">@var bool Should I use FTP over implicit SSL?</span>
+            </li>
+            <li id="user">
+              <strong>$user</strong>
+              <br/>
+              <span class="indent">@var string FTP user name</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="fixPermissions"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/fixPermissions.xhtml">fixPermissions()</a>
+                — Tries to fix directory/file permissions in the PHP level, so that the FTP operation doesn't fail.</li>
+            <li id="isDirWritable"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/isDirWritable.xhtml">isDirWritable()</a>
+                — Is the directory writeable?</li>
+            <li id="is_dir">
+              <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/is_dir.xhtml">is_dir()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/__construct.xhtml">__construct()</a>
+                — Public constructor. Tries to connect to the FTP server.</li>
+            <li id="__destruct">
+              <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/__destruct.xhtml">__destruct()</a>
+            </li>
+            <li id="__wakeup"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/__wakeup.xhtml">__wakeup()</a>
+                — Called after unserialisation, tries to reconnect to FTP</li>
+            <li id="chmod">
+              <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/chmod.xhtml">chmod()</a>
+            </li>
+            <li id="close"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/close.xhtml">close()</a>
+                — Closes the FTP connection</li>
+            <li id="connect"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/connect.xhtml">connect()</a>
+                — Tries to connect to the FTP server</li>
+            <li id="createDirRecursive"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/createDirRecursive.xhtml">createDirRecursive()</a>
+                — Create a directory, recursively</li>
+            <li id="process"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/process.xhtml">process()</a>
+                — Post-process an extracted file, using FTP or direct file writes to move it</li>
+            <li id="processFilename"><a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/processFilename.xhtml">processFilename()</a>
+                — Create a temporary filename</li>
+            <li id="rename">
+              <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/rename.xhtml">rename()</a>
+            </li>
+            <li id="rmdir">
+              <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/rmdir.xhtml">rmdir()</a>
+            </li>
+            <li id="unlink">
+              <a title="AKPostprocHybrid" href="../classes/AKPostprocHybrid/unlink.xhtml">unlink()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

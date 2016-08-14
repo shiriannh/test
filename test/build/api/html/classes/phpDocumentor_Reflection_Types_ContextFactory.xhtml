@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - phpDocumentor\Reflection\Types\ContextFactory</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#phpDocumentor_Reflection_Types">phpDocumentor\Reflection\Types</a>
+          </li>
+          <li class="separator">ContextFactory</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpdocumentor/type-resolver/src/Types/ContextFactory.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>phpDocumentor\Reflection\Types\</small>ContextFactory</h1>
+        <h4>Convenience class to create a Context for DocBlocks when not using the Reflection Component of phpDocumentor.</h4>
+        <p>For a DocBlock to be able to resolve types that use partial namespace names or rely on namespace imports we need to<br/>provide a bit of context so that the DocBlock can read that and based on it decide how to resolve the types to<br/>Fully Qualified names.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ContextFactory
+            {<br/><ul class="none"><li>// constants</li><li>const T_LITERAL_END_OF_USE = ';';</li><li>const T_LITERAL_USE_SEPARATOR = ',';</li></ul><ul class="none"><li>// methods</li><li>public Context <a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/createFromReflector.xhtml">createFromReflector</a>()
+                    </li><li>public Context <a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/createForNamespace.xhtml">createForNamespace</a>()
+                    </li><li>private string <a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/parseNamespace.xhtml">parseNamespace</a>()
+                    </li><li>private array <a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/parseUseStatement.xhtml">parseUseStatement</a>()
+                    </li><li>private void <a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/skipToNextStringOrNamespaceSeparator.xhtml">skipToNextStringOrNamespaceSeparator</a>()
+                    </li><li>private string <a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/extractUseStatement.xhtml">extractUseStatement</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="T_LITERAL_END_OF_USE">T_LITERAL_END_OF_USE</td>
+              <td>';'</td>
+            </tr>
+            <tr>
+              <td id="T_LITERAL_USE_SEPARATOR">T_LITERAL_USE_SEPARATOR</td>
+              <td>','</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="extractUseStatement"><a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/extractUseStatement.xhtml">extractUseStatement()</a>
+                — Deduce the namespace name and alias of an import when we are at the T_USE token or have not reached the end of a USE statement yet.</li>
+            <li id="parseNamespace"><a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/parseNamespace.xhtml">parseNamespace()</a>
+                — Deduce the name from tokens when we are at the T_NAMESPACE token.</li>
+            <li id="parseUseStatement"><a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/parseUseStatement.xhtml">parseUseStatement()</a>
+                — Deduce the names of all imports when we are at the T_USE token.</li>
+            <li id="skipToNextStringOrNamespaceSeparator"><a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/skipToNextStringOrNamespaceSeparator.xhtml">skipToNextStringOrNamespaceSeparator()</a>
+                — Fast-forwards the iterator as longs as we don't encounter a T_STRING or T_NS_SEPARATOR token.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="createForNamespace"><a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/createForNamespace.xhtml">createForNamespace()</a>
+                — Build a Context for a namespace in the provided file contents.</li>
+            <li id="createFromReflector"><a title="phpDocumentor\Reflection\Types\ContextFactory" href="../classes/phpDocumentor_Reflection_Types_ContextFactory/createFromReflector.xhtml">createFromReflector()</a>
+                — Build a Context given a Class Reflection.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

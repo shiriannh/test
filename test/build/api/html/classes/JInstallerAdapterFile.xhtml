@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JInstallerAdapterFile</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JInstallerAdapterFile</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/installer/adapter/file.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JInstallerAdapterFile</h1>
+        <h4>File installer</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JInstallerAdapterFile
+                extends <a title="JInstallerAdapter" href="../classes/JInstallerAdapter.xhtml">JInstallerAdapter</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title=""/> <a href="#members">$scriptElement</a> =
+                        null;
+                    </li><li>protected boolean <a href="#members">$supportsDiscoverInstall</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/copyBaseFiles.xhtml">copyBaseFiles</a>()
+                    </li><li>protected void <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/finaliseInstall.xhtml">finaliseInstall</a>()
+                    </li><li>public string <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/getElement.xhtml">getElement</a>()
+                    </li><li>public void <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/loadLanguage.xhtml">loadLanguage</a>()
+                    </li><li>protected void <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/parseOptionalTags.xhtml">parseOptionalTags</a>()
+                    </li><li>protected void <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/setupInstallPaths.xhtml">setupInstallPaths</a>()
+                    </li><li>protected void <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/storeExtension.xhtml">storeExtension</a>()
+                    </li><li>public boolean <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/uninstall.xhtml">uninstall</a>()
+                    </li><li>protected boolean <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/extensionExistsInSystem.xhtml">extensionExistsInSystem</a>()
+                    </li><li>protected boolean <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/populateFilesAndFolderList.xhtml">populateFilesAndFolderList</a>()
+                    </li><li>public boolean <a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/refreshManifestCache.xhtml">refreshManifestCache</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JInstallerAdapter" href="../classes/JInstallerAdapter.xhtml">JInstallerAdapter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="scriptElement"><strong>$scriptElement</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">`&lt;scriptfile&gt;` element of the extension manifest</span></li>
+            <li id="supportsDiscoverInstall"><strong>$supportsDiscoverInstall</strong>
+                —
+                boolean<br/><span class="indent">Flag if the adapter supports discover installs</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="copyBaseFiles"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/copyBaseFiles.xhtml">copyBaseFiles()</a>
+                — Method to copy the extension's base files from the `&lt;files&gt;` tag(s) and the manifest file</li>
+            <li id="extensionExistsInSystem"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/extensionExistsInSystem.xhtml">extensionExistsInSystem()</a>
+                — Function used to check if extension is already installed</li>
+            <li id="finaliseInstall"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/finaliseInstall.xhtml">finaliseInstall()</a>
+                — Method to finalise the installation processing</li>
+            <li id="parseOptionalTags"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/parseOptionalTags.xhtml">parseOptionalTags()</a>
+                — Method to parse optional tags in the manifest</li>
+            <li id="populateFilesAndFolderList"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/populateFilesAndFolderList.xhtml">populateFilesAndFolderList()</a>
+                — Function used to populate files and folder list</li>
+            <li id="setupInstallPaths"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/setupInstallPaths.xhtml">setupInstallPaths()</a>
+                — Method to do any prechecks and setup the install paths for the extension</li>
+            <li id="storeExtension"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/storeExtension.xhtml">storeExtension()</a>
+                — Method to store the extension to the database</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getElement"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/getElement.xhtml">getElement()</a>
+                — Get the filtered extension element from the manifest</li>
+            <li id="loadLanguage"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/loadLanguage.xhtml">loadLanguage()</a>
+                — Custom loadLanguage method</li>
+            <li id="refreshManifestCache"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/refreshManifestCache.xhtml">refreshManifestCache()</a>
+                — Refreshes the extension table cache</li>
+            <li id="uninstall"><a title="JInstallerAdapterFile" href="../classes/JInstallerAdapterFile/uninstall.xhtml">uninstall()</a>
+                — Custom uninstall method</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

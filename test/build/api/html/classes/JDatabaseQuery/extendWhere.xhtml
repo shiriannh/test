@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JDatabaseQuery" href="../../classes/JDatabaseQuery.xhtml">JDatabaseQuery</a>
+          </li>
+          <li class="separator">extendWhere</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/database/query.php.xhtml#line1404">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JDatabaseQuery::</small>extendWhere</h1>
+        <h4>Extend the WHERE clause with a single condition or an array of conditions, with a potentially different logical operator from the one in the current WHERE clause.</h4>
+        <p>Usage:
+$query-&gt;where(array('a = 1', 'b = 2'))-&gt;extendWhere('XOR', array('c = 3', 'd = 4'));
+will produce: WHERE ((a = 1 AND b = 2) XOR (c = 3 AND d = 4)</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function extendWhere(string
+        $outerGlue,
+            mixed
+        $conditions,
+            [string
+        $innerGlue = 'AND'] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$outerGlue</code>
+                —
+                string</dt>
+          <dd>The glue by which to join the conditions to the current WHERE conditions.</dd>
+          <dt><code>$conditions</code>
+                —
+                mixed</dt>
+          <dd>A string or array of WHERE conditions.</dd>
+          <dt><code>$innerGlue</code>
+                —
+                string</dt>
+          <dd>The glue by which to join the conditions. Defaults to AND.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>JDatabaseQuery</dt>
+          <dd>Returns this object to allow chaining.<br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

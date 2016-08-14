@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JDatabaseQuerySqlsrv</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JDatabaseQuerySqlsrv</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/database/query/sqlsrv.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JDatabaseQuerySqlsrv</h1>
+        <h4>Query Building Class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JDatabaseQuerySqlsrv
+                extends <a title="JDatabaseQuery" href="../classes/JDatabaseQuery.xhtml">JDatabaseQuery</a>
+                implements
+                <a title="JDatabaseQueryLimitable" href="../interfaces/JDatabaseQueryLimitable.xhtml">JDatabaseQueryLimitable</a>
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$name_quotes</a> =
+                        '`';
+                    </li><li>protected string <a href="#members">$null_date</a> =
+                        '1900-01-01 00:00:00';
+                    </li><li>protected integer <a href="#members">$limit</a> =
+                        0;
+                    </li><li>protected integer <a href="#members">$offset</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/__toString.xhtml">__toString</a>()
+                    </li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/castAsChar.xhtml">castAsChar</a>()
+                    </li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/charLength.xhtml">charLength</a>()
+                    </li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/concatenate.xhtml">concatenate</a>()
+                    </li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/currentTimestamp.xhtml">currentTimestamp</a>()
+                    </li><li>public integer <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/length.xhtml">length</a>()
+                    </li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/dateAdd.xhtml">dateAdd</a>()
+                    </li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/processLimit.xhtml">processLimit</a>()
+                    </li><li>public JDatabaseQuery <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/setLimit.xhtml">setLimit</a>()
+                    </li><li>public JDatabaseQuery <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/group.xhtml">group</a>()
+                    </li><li>public string <a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/Rand.xhtml">Rand</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JDatabaseQuery" href="../classes/JDatabaseQuery.xhtml">JDatabaseQuery</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JDatabaseQueryLimitable" href="../interfaces/JDatabaseQueryLimitable.xhtml">JDatabaseQueryLimitable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="limit"><strong>$limit</strong>
+                —
+                integer</li>
+            <li id="name_quotes"><strong>$name_quotes</strong>
+                —
+                string<br/><span class="indent">The character(s) used to quote SQL statement names such as table names or field names, etc.  The child classes should define this as necessary.  If a single character string the same character is used for both sides of the quoted name, else the first character will be used for the opening quote and the second for the closing quote.</span></li>
+            <li id="null_date"><strong>$null_date</strong>
+                —
+                string<br/><span class="indent">The null or zero representation of a timestamp for the database driver.  This should be defined in child classes to hold the appropriate value for the engine.</span></li>
+            <li id="offset"><strong>$offset</strong>
+                —
+                integer</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="Rand"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/Rand.xhtml">Rand()</a>
+                — Return correct rand() function for MSSQL.</li>
+            <li id="__toString"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/__toString.xhtml">__toString()</a>
+                — Magic function to convert the query to a string.</li>
+            <li id="castAsChar"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/castAsChar.xhtml">castAsChar()</a>
+                — Casts a value to a char.</li>
+            <li id="charLength"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/charLength.xhtml">charLength()</a>
+                — Gets the function to determine the length of a character string.</li>
+            <li id="concatenate"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/concatenate.xhtml">concatenate()</a>
+                — Concatenates an array of column names or values.</li>
+            <li id="currentTimestamp"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/currentTimestamp.xhtml">currentTimestamp()</a>
+                — Gets the current date and time.</li>
+            <li id="dateAdd"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/dateAdd.xhtml">dateAdd()</a>
+                — Add to the current date and time.</li>
+            <li id="group"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/group.xhtml">group()</a>
+                — Add a grouping column to the GROUP clause of the query.</li>
+            <li id="length"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/length.xhtml">length()</a>
+                — Get the length of a string in bytes.</li>
+            <li id="processLimit"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/processLimit.xhtml">processLimit()</a>
+                — Method to modify a query already in string format with the needed additions to make the query limited to a particular number of results, or start at a particular offset.</li>
+            <li id="setLimit"><a title="JDatabaseQuerySqlsrv" href="../classes/JDatabaseQuerySqlsrv/setLimit.xhtml">setLimit()</a>
+                — Sets the offset and limit for the result set, if the database driver supports it.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

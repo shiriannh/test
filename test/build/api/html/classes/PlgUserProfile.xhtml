@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PlgUserProfile</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PlgUserProfile</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/plugins/user/profile/profile.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PlgUserProfile</h1>
+        <h4>An example custom profile plugin.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PlgUserProfile
+                extends <a title="JPlugin" href="../classes/JPlugin.xhtml">JPlugin</a>
+            {<br/><ul class="none"><li>// members</li><li>private string <a href="#members">$date</a> =
+                        '';
+                    </li><li>protected boolean <a href="#members">$autoloadLanguage</a> =
+                        true;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PlgUserProfile" href="../classes/PlgUserProfile/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="PlgUserProfile" href="../classes/PlgUserProfile/onContentPrepareData.xhtml">onContentPrepareData</a>()
+                    </li><li>public static mixed|string <a title="PlgUserProfile" href="../classes/PlgUserProfile/url.xhtml">url</a>()
+                    </li><li>public static mixed <a title="PlgUserProfile" href="../classes/PlgUserProfile/calendar.xhtml">calendar</a>()
+                    </li><li>public static mixed <a title="PlgUserProfile" href="../classes/PlgUserProfile/dob.xhtml">dob</a>()
+                    </li><li>public static string <a title="PlgUserProfile" href="../classes/PlgUserProfile/tos.xhtml">tos</a>()
+                    </li><li>public boolean <a title="PlgUserProfile" href="../classes/PlgUserProfile/onContentPrepareForm.xhtml">onContentPrepareForm</a>()
+                    </li><li>public boolean <a title="PlgUserProfile" href="../classes/PlgUserProfile/onUserBeforeSave.xhtml">onUserBeforeSave</a>()
+                    </li><li>public bool <a title="PlgUserProfile" href="../classes/PlgUserProfile/onUserAfterSave.xhtml">onUserAfterSave</a>()
+                    </li><li>public boolean <a title="PlgUserProfile" href="../classes/PlgUserProfile/onUserAfterDelete.xhtml">onUserAfterDelete</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JPlugin" href="../classes/JPlugin.xhtml">JPlugin</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="date"><strong>$date</strong>
+                —
+                string<br/><span class="indent">Date of birth.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="autoloadLanguage"><strong>$autoloadLanguage</strong>
+                —
+                boolean<br/><span class="indent">Load the language file on instantiation.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PlgUserProfile" href="../classes/PlgUserProfile/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="calendar"><a title="PlgUserProfile" href="../classes/PlgUserProfile/calendar.xhtml">calendar()</a>
+                — Returns html markup showing a date picker</li>
+            <li id="dob"><a title="PlgUserProfile" href="../classes/PlgUserProfile/dob.xhtml">dob()</a>
+                — Returns the date of birth formatted and calculated using server timezone.</li>
+            <li id="onContentPrepareData"><a title="PlgUserProfile" href="../classes/PlgUserProfile/onContentPrepareData.xhtml">onContentPrepareData()</a>
+                — Runs on content preparation</li>
+            <li id="onContentPrepareForm"><a title="PlgUserProfile" href="../classes/PlgUserProfile/onContentPrepareForm.xhtml">onContentPrepareForm()</a>
+                — Adds additional fields to the user editing form</li>
+            <li id="onUserAfterDelete"><a title="PlgUserProfile" href="../classes/PlgUserProfile/onUserAfterDelete.xhtml">onUserAfterDelete()</a>
+                — Remove all user profile information for the given user ID</li>
+            <li id="onUserAfterSave"><a title="PlgUserProfile" href="../classes/PlgUserProfile/onUserAfterSave.xhtml">onUserAfterSave()</a>
+                — Saves user profile data</li>
+            <li id="onUserBeforeSave"><a title="PlgUserProfile" href="../classes/PlgUserProfile/onUserBeforeSave.xhtml">onUserBeforeSave()</a>
+                — Method is called before user data is stored in the database</li>
+            <li id="tos"><a title="PlgUserProfile" href="../classes/PlgUserProfile/tos.xhtml">tos()</a>
+                — Return the translated strings yes or no depending on the value</li>
+            <li id="url"><a title="PlgUserProfile" href="../classes/PlgUserProfile/url.xhtml">url()</a>
+                — Returns an anchor tag generated from a given value</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPUnit_Util_Test</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PHPUnit_Util_Test</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/phpunit/src/Util/Test.php.xhtml#line16">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PHPUnit_Util_Test</h1>
+        <h4>Test helpers.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPUnit_Util_Test
+            {<br/><ul class="none"><li>// constants</li><li>const REGEX_DATA_PROVIDER = '/@dataProvider\s+([a-zA-Z0-9._:-\\\\x7f-\xff]+)/';</li><li>const REGEX_TEST_WITH = '/@testWith\s+/';</li><li>const REGEX_EXPECTED_EXCEPTION = '(@expectedException\s+([:.\w\\\\x7f-\xff]+)(?:[\t ]+(\S*))?(?:[\t ]+(\S*))?\s*$)m';</li><li>const REGEX_REQUIRES_VERSION = '/@requires\s+(?P&lt;name&gt;PHP(?:Unit)?)\s+(?P&lt;operator&gt;[&lt;&gt;=!]{0,2})\s*(?P&lt;version&gt;[\d\.-]+(dev|(RC|alpha|beta)[\d\.])?)[ \t]*\r?$/m';</li><li>const REGEX_REQUIRES_OS = '/@requires\s+OS\s+(?P&lt;value&gt;.+?)[ \t]*\r?$/m';</li><li>const REGEX_REQUIRES = '/@requires\s+(?P&lt;name&gt;function|extension)\s+(?P&lt;value&gt;([^ ]+?))\s*(?P&lt;operator&gt;[&lt;&gt;=!]{0,2})\s*(?P&lt;version&gt;[\d\.-]+[\d\.]?)?[ \t]*\r?$/m';</li><li>const UNKNOWN = 1;</li><li>const SMALL = 0;</li><li>const MEDIUM = 1;</li><li>const LARGE = 2;</li></ul><ul class="none"><li>// members</li><li>private static array <a href="#members">$annotationCache</a> =
+                        ;
+                    </li><li>private static array <a href="#members">$hookMethods</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static mixed <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/describe.xhtml">describe</a>()
+                    </li><li>public static array|bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getLinesToBeCovered.xhtml">getLinesToBeCovered</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getLinesToBeUsed.xhtml">getLinesToBeUsed</a>()
+                    </li><li>private static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getLinesToBeCoveredOrUsed.xhtml">getLinesToBeCoveredOrUsed</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getRequirements.xhtml">getRequirements</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getMissingRequirements.xhtml">getMissingRequirements</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getExpectedException.xhtml">getExpectedException</a>()
+                    </li><li>private static string <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/parseAnnotationContent.xhtml">parseAnnotationContent</a>()
+                    </li><li>public static array|Iterator <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getProvidedData.xhtml">getProvidedData</a>()
+                    </li><li>private static array|Iterator <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getDataFromDataProviderAnnotation.xhtml">getDataFromDataProviderAnnotation</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getDataFromTestWithAnnotation.xhtml">getDataFromTestWithAnnotation</a>()
+                    </li><li>private static void <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/cleanUpMultiLineAnnotation.xhtml">cleanUpMultiLineAnnotation</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/parseTestMethodAnnotations.xhtml">parseTestMethodAnnotations</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getInlineAnnotations.xhtml">getInlineAnnotations</a>()
+                    </li><li>private static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/parseAnnotations.xhtml">parseAnnotations</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getBackupSettings.xhtml">getBackupSettings</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getDependencies.xhtml">getDependencies</a>()
+                    </li><li>public static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getErrorHandlerSettings.xhtml">getErrorHandlerSettings</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getGroups.xhtml">getGroups</a>()
+                    </li><li>public static int <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getSize.xhtml">getSize</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getTickets.xhtml">getTickets</a>()
+                    </li><li>public static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getProcessIsolationSettings.xhtml">getProcessIsolationSettings</a>()
+                    </li><li>public static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getPreserveGlobalStateSettings.xhtml">getPreserveGlobalStateSettings</a>()
+                    </li><li>public static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getHookMethods.xhtml">getHookMethods</a>()
+                    </li><li>private static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/emptyHookMethodsArray.xhtml">emptyHookMethodsArray</a>()
+                    </li><li>private static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getBooleanAnnotationSetting.xhtml">getBooleanAnnotationSetting</a>()
+                    </li><li>private static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/resolveElementToReflectionObjects.xhtml">resolveElementToReflectionObjects</a>()
+                    </li><li>private static array <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/resolveReflectionObjectsToLines.xhtml">resolveReflectionObjectsToLines</a>()
+                    </li><li>private static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isBeforeClassMethod.xhtml">isBeforeClassMethod</a>()
+                    </li><li>private static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isBeforeMethod.xhtml">isBeforeMethod</a>()
+                    </li><li>private static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isAfterClassMethod.xhtml">isAfterClassMethod</a>()
+                    </li><li>private static bool <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isAfterMethod.xhtml">isAfterMethod</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="REGEX_DATA_PROVIDER">REGEX_DATA_PROVIDER</td>
+              <td>'/@dataProvider\s+([a-zA-Z0-9._:-\\\\x7f-\xff]+)/'</td>
+            </tr>
+            <tr>
+              <td id="REGEX_TEST_WITH">REGEX_TEST_WITH</td>
+              <td>'/@testWith\s+/'</td>
+            </tr>
+            <tr>
+              <td id="REGEX_EXPECTED_EXCEPTION">REGEX_EXPECTED_EXCEPTION</td>
+              <td>'(@expectedException\s+([:.\w\\\\x7f-\xff]+)(?:[\t ]+(\S*))?(?:[\t ]+(\S*))?\s*$)m'</td>
+            </tr>
+            <tr>
+              <td id="REGEX_REQUIRES_VERSION">REGEX_REQUIRES_VERSION</td>
+              <td>'/@requires\s+(?P&lt;name&gt;PHP(?:Unit)?)\s+(?P&lt;operator&gt;[&lt;&gt;=!]{0,2})\s*(?P&lt;version&gt;[\d\.-]+(dev|(RC|alpha|beta)[\d\.])?)[ \t]*\r?$/m'</td>
+            </tr>
+            <tr>
+              <td id="REGEX_REQUIRES_OS">REGEX_REQUIRES_OS</td>
+              <td>'/@requires\s+OS\s+(?P&lt;value&gt;.+?)[ \t]*\r?$/m'</td>
+            </tr>
+            <tr>
+              <td id="REGEX_REQUIRES">REGEX_REQUIRES</td>
+              <td>'/@requires\s+(?P&lt;name&gt;function|extension)\s+(?P&lt;value&gt;([^ ]+?))\s*(?P&lt;operator&gt;[&lt;&gt;=!]{0,2})\s*(?P&lt;version&gt;[\d\.-]+[\d\.]?)?[ \t]*\r?$/m'</td>
+            </tr>
+            <tr>
+              <td id="UNKNOWN">UNKNOWN</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="SMALL">SMALL</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td id="MEDIUM">MEDIUM</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="LARGE">LARGE</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="annotationCache">
+              <strong>$annotationCache</strong>
+            </li>
+            <li id="hookMethods">
+              <strong>$hookMethods</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="cleanUpMultiLineAnnotation">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/cleanUpMultiLineAnnotation.xhtml">cleanUpMultiLineAnnotation()</a>
+            </li>
+            <li id="emptyHookMethodsArray">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/emptyHookMethodsArray.xhtml">emptyHookMethodsArray()</a>
+            </li>
+            <li id="getBooleanAnnotationSetting">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getBooleanAnnotationSetting.xhtml">getBooleanAnnotationSetting()</a>
+            </li>
+            <li id="getDataFromDataProviderAnnotation"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getDataFromDataProviderAnnotation.xhtml">getDataFromDataProviderAnnotation()</a>
+                — Returns the provided data for a method.</li>
+            <li id="getLinesToBeCoveredOrUsed">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getLinesToBeCoveredOrUsed.xhtml">getLinesToBeCoveredOrUsed()</a>
+            </li>
+            <li id="isAfterClassMethod">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isAfterClassMethod.xhtml">isAfterClassMethod()</a>
+            </li>
+            <li id="isAfterMethod">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isAfterMethod.xhtml">isAfterMethod()</a>
+            </li>
+            <li id="isBeforeClassMethod">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isBeforeClassMethod.xhtml">isBeforeClassMethod()</a>
+            </li>
+            <li id="isBeforeMethod">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/isBeforeMethod.xhtml">isBeforeMethod()</a>
+            </li>
+            <li id="parseAnnotationContent"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/parseAnnotationContent.xhtml">parseAnnotationContent()</a>
+                — Parse annotation content to use constant/class constant values</li>
+            <li id="parseAnnotations">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/parseAnnotations.xhtml">parseAnnotations()</a>
+            </li>
+            <li id="resolveElementToReflectionObjects">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/resolveElementToReflectionObjects.xhtml">resolveElementToReflectionObjects()</a>
+            </li>
+            <li id="resolveReflectionObjectsToLines">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/resolveReflectionObjectsToLines.xhtml">resolveReflectionObjectsToLines()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="describe">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/describe.xhtml">describe()</a>
+            </li>
+            <li id="getBackupSettings"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getBackupSettings.xhtml">getBackupSettings()</a>
+                — Returns the backup settings for a test.</li>
+            <li id="getDataFromTestWithAnnotation">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getDataFromTestWithAnnotation.xhtml">getDataFromTestWithAnnotation()</a>
+            </li>
+            <li id="getDependencies"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getDependencies.xhtml">getDependencies()</a>
+                — Returns the dependencies for a test class or method.</li>
+            <li id="getErrorHandlerSettings"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getErrorHandlerSettings.xhtml">getErrorHandlerSettings()</a>
+                — Returns the error handler settings for a test.</li>
+            <li id="getExpectedException"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getExpectedException.xhtml">getExpectedException()</a>
+                — Returns the expected exception for a test.</li>
+            <li id="getGroups"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getGroups.xhtml">getGroups()</a>
+                — Returns the groups for a test class or method.</li>
+            <li id="getHookMethods">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getHookMethods.xhtml">getHookMethods()</a>
+            </li>
+            <li id="getInlineAnnotations">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getInlineAnnotations.xhtml">getInlineAnnotations()</a>
+            </li>
+            <li id="getLinesToBeCovered">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getLinesToBeCovered.xhtml">getLinesToBeCovered()</a>
+            </li>
+            <li id="getLinesToBeUsed"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getLinesToBeUsed.xhtml">getLinesToBeUsed()</a>
+                — Returns lines of code specified with the @uses annotation.</li>
+            <li id="getMissingRequirements"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getMissingRequirements.xhtml">getMissingRequirements()</a>
+                — Returns the missing requirements for a test.</li>
+            <li id="getPreserveGlobalStateSettings"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getPreserveGlobalStateSettings.xhtml">getPreserveGlobalStateSettings()</a>
+                — Returns the preserve global state settings for a test.</li>
+            <li id="getProcessIsolationSettings"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getProcessIsolationSettings.xhtml">getProcessIsolationSettings()</a>
+                — Returns the process isolation settings for a test.</li>
+            <li id="getProvidedData"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getProvidedData.xhtml">getProvidedData()</a>
+                — Returns the provided data for a method.</li>
+            <li id="getRequirements"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getRequirements.xhtml">getRequirements()</a>
+                — Returns the requirements for a test.</li>
+            <li id="getSize"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getSize.xhtml">getSize()</a>
+                — Returns the size of the test.</li>
+            <li id="getTickets"><a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/getTickets.xhtml">getTickets()</a>
+                — Returns the tickets for a test class or method.</li>
+            <li id="parseTestMethodAnnotations">
+              <a title="PHPUnit_Util_Test" href="../classes/PHPUnit_Util_Test/parseTestMethodAnnotations.xhtml">parseTestMethodAnnotations()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

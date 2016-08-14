@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcBaseFeatures</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcBaseFeatures</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/base/src/features.php.xhtml#line48">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcBaseFeatures</h1>
+        <h4>Provides methods needed to check for features.</h4>
+        <p>Example:<br/>&lt;code&gt;<br/>&lt;?php<br/>echo "supports uid: " . ezcBaseFeatures::supportsUserId() . "\n";<br/>echo "supports symlink: " . ezcBaseFeatures::supportsSymLink() . "\n";<br/>echo "supports hardlink: " . ezcBaseFeatures::supportsLink() . "\n";<br/>echo "has imagemagick identify: " . ezcBaseFeatures::hasImageIdentify() . "\n";<br/>echo " identify path: " . ezcBaseFeatures::getImageIdentifyExecutable() . "\n";<br/>echo "has imagemagick convert: " . ezcBaseFeatures::hasImageConvert() . "\n";<br/>echo " convert path: " . ezcBaseFeatures::getImageConvertExecutable() . "\n";<br/>echo "has gzip extension: " . ezcBaseFeatures::hasExtensionSupport( 'zlib' ) . "\n";<br/>echo "has pdo_mysql 1.0.2: " . ezcBaseFeatures::hasExtensionSupport( 'pdo_mysql', '1.0.2' ) . "\n"<br/>?&gt;<br/>&lt;/code&gt;</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcBaseFeatures
+            {<br/><ul class="none"><li>// members</li><li>private static string <a href="#members">$imageConvert</a> =
+                        null;
+                    </li><li>private static string <a href="#members">$imageIdentify</a> =
+                        null;
+                    </li><li>private static string <a href="#members">$os</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/supportsLink.xhtml">supportsLink</a>()
+                    </li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/supportsSymLink.xhtml">supportsSymLink</a>()
+                    </li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/supportsUserId.xhtml">supportsUserId</a>()
+                    </li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasImageConvert.xhtml">hasImageConvert</a>()
+                    </li><li>public static string <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/getImageConvertExecutable.xhtml">getImageConvertExecutable</a>()
+                    </li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasImageIdentify.xhtml">hasImageIdentify</a>()
+                    </li><li>public static string <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/getImageIdentifyExecutable.xhtml">getImageIdentifyExecutable</a>()
+                    </li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasExtensionSupport.xhtml">hasExtensionSupport</a>()
+                    </li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasFunction.xhtml">hasFunction</a>()
+                    </li><li>public static bool <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/classExists.xhtml">classExists</a>()
+                    </li><li>public static string <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/os.xhtml">os</a>()
+                    </li><li>public static string <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/findExecutableInPath.xhtml">findExecutableInPath</a>()
+                    </li><li>public static void <a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/reset.xhtml">reset</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">286+</td>
+            <td>consider using getenv( 'PATH' ) instead of $_ENV['PATH']</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="imageConvert"><strong>$imageConvert</strong>
+                —
+                string<br/><span class="indent">Used to store the path of the ImageMagick convert utility.</span></li>
+            <li id="imageIdentify"><strong>$imageIdentify</strong>
+                —
+                string<br/><span class="indent">Used to store the path of the ImageMagick identify utility.</span></li>
+            <li id="os"><strong>$os</strong>
+                —
+                string<br/><span class="indent">Used to store the operating system.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="classExists"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/classExists.xhtml">classExists()</a>
+                — Returns if a given class exists.</li>
+            <li id="findExecutableInPath"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/findExecutableInPath.xhtml">findExecutableInPath()</a>
+                — Returns the path of the specified executable, if it can be found in the system's path.</li>
+            <li id="getImageConvertExecutable"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/getImageConvertExecutable.xhtml">getImageConvertExecutable()</a>
+                — Returns the path to the ImageMagick convert utility.</li>
+            <li id="getImageIdentifyExecutable"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/getImageIdentifyExecutable.xhtml">getImageIdentifyExecutable()</a>
+                — Returns the path to the ImageMagick identify utility.</li>
+            <li id="hasExtensionSupport"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasExtensionSupport.xhtml">hasExtensionSupport()</a>
+                — Determines if the specified extension is loaded.</li>
+            <li id="hasFunction"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasFunction.xhtml">hasFunction()</a>
+                — Determines if the specified function is available.</li>
+            <li id="hasImageConvert"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasImageConvert.xhtml">hasImageConvert()</a>
+                — Determines if the ImageMagick convert utility is installed.</li>
+            <li id="hasImageIdentify"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/hasImageIdentify.xhtml">hasImageIdentify()</a>
+                — Determines if the ImageMagick identify utility is installed.</li>
+            <li id="os"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/os.xhtml">os()</a>
+                — Returns the operating system on which PHP is running.</li>
+            <li id="reset"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/reset.xhtml">reset()</a>
+                — Reset the cached information.</li>
+            <li id="supportsLink"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/supportsLink.xhtml">supportsLink()</a>
+                — Determines if hardlinks are supported.</li>
+            <li id="supportsSymLink"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/supportsSymLink.xhtml">supportsSymLink()</a>
+                — Determines if symlinks are supported.</li>
+            <li id="supportsUserId"><a title="ezcBaseFeatures" href="../classes/ezcBaseFeatures/supportsUserId.xhtml">supportsUserId()</a>
+                — Determines if posix uids are supported.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

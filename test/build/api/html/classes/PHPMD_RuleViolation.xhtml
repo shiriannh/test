@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\RuleViolation</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PHPMD">PHPMD</a>
+          </li>
+          <li class="separator">RuleViolation</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/RuleViolation.php.xhtml#line56">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\</small>RuleViolation</h1>
+        <h4>This class is used as container for a single rule violation related to a source node.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class RuleViolation
+            {<br/><ul class="none"><li>// members</li><li>private <span title="\PHPMD\Rule">Rule</span> <a href="#members">$rule</a>;
+                    </li><li>private <span title="\PHPMD\AbstractNode">AbstractNode</span> <a href="#members">$node</a>;
+                    </li><li>private  <a href="#members">$description</a>;
+                    </li><li>private  <a href="#members">$metric</a>;
+                    </li><li>private string <a href="#members">$className</a> =
+                        null;
+                    </li><li>private string <a href="#members">$methodName</a> =
+                        null;
+                    </li><li>private string <a href="#members">$functionName</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/__construct.xhtml">__construct</a>()
+                    </li><li>public Rule <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getRule.xhtml">getRule</a>()
+                    </li><li>public string <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getDescription.xhtml">getDescription</a>()
+                    </li><li>public mixed|null <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getMetric.xhtml">getMetric</a>()
+                    </li><li>public string <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getFileName.xhtml">getFileName</a>()
+                    </li><li>public integer <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getBeginLine.xhtml">getBeginLine</a>()
+                    </li><li>public integer <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getEndLine.xhtml">getEndLine</a>()
+                    </li><li>public string <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getNamespaceName.xhtml">getNamespaceName</a>()
+                    </li><li>public string <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getClassName.xhtml">getClassName</a>()
+                    </li><li>public string <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getMethodName.xhtml">getMethodName</a>()
+                    </li><li>public string <a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getFunctionName.xhtml">getFunctionName</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="className"><strong>$className</strong>
+                —
+                string<br/><span class="indent">Name of the owning/context class or interface of this violation.</span></li>
+            <li id="description"><strong>$description</strong>
+                —
+                string<br/><span class="indent">The description/message text that describes the violation.</span></li>
+            <li id="functionName"><strong>$functionName</strong>
+                —
+                string<br/><span class="indent">The name of a function or &lt;b&gt;null&lt;/b&gt; when this violation has no function context.</span></li>
+            <li id="methodName"><strong>$methodName</strong>
+                —
+                string<br/><span class="indent">The name of a method or &lt;b&gt;null&lt;/b&gt; when this violation has no method context.</span></li>
+            <li id="metric"><strong>$metric</strong>
+                —
+                mixed<br/><span class="indent">The raw metric value which caused this rule violation.</span></li>
+            <li id="node"><strong>$node</strong>
+                —
+                <a title="\PHPMD\AbstractNode" href="../classes/_PHPMD_AbstractNode.xhtml">\PHPMD\AbstractNode</a><br/><span class="indent">The context code node for this rule violation.</span></li>
+            <li id="rule"><strong>$rule</strong>
+                —
+                <a title="\PHPMD\Rule" href="../classes/_PHPMD_Rule.xhtml">\PHPMD\Rule</a><br/><span class="indent">The rule that causes this violation.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/__construct.xhtml">__construct()</a>
+                — Constructs a new rule violation instance.</li>
+            <li id="getBeginLine"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getBeginLine.xhtml">getBeginLine()</a>
+                — Returns the first line of the node that causes this rule violation.</li>
+            <li id="getClassName"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getClassName.xhtml">getClassName()</a>
+                — Returns the name of the parent class or interface or &lt;b&gt;null&lt;/b&gt; when there is no parent class.</li>
+            <li id="getDescription"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getDescription.xhtml">getDescription()</a>
+                — Returns the description/message text that describes the violation.</li>
+            <li id="getEndLine"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getEndLine.xhtml">getEndLine()</a>
+                — Returns the last line of the node that causes this rule violation.</li>
+            <li id="getFileName"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getFileName.xhtml">getFileName()</a>
+                — Returns the file name where this rule violation was detected.</li>
+            <li id="getFunctionName"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getFunctionName.xhtml">getFunctionName()</a>
+                — Returns the name of a function or &lt;b&gt;null&lt;/b&gt; when this violation has no function context.</li>
+            <li id="getMethodName"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getMethodName.xhtml">getMethodName()</a>
+                — Returns the name of a method or &lt;b&gt;null&lt;/b&gt; when this violation has no method context.</li>
+            <li id="getMetric"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getMetric.xhtml">getMetric()</a>
+                — Returns the raw metric value which caused this rule violation.</li>
+            <li id="getNamespaceName"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getNamespaceName.xhtml">getNamespaceName()</a>
+                — Returns the name of the package that contains this violation.</li>
+            <li id="getRule"><a title="PHPMD\RuleViolation" href="../classes/PHPMD_RuleViolation/getRule.xhtml">getRule()</a>
+                — Returns the rule that causes this violation.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

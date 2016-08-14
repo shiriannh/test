@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\Config\Definition\BaseNode</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_Config_Definition">Symfony\Component\Config\Definition</a>
+          </li>
+          <li class="separator">BaseNode</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/config/Definition/BaseNode.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\Config\Definition\</small>BaseNode</h1>
+        <h4>The base node class.</h4>
+        <p/>
+        <ul>
+          <li>Author: Johannes M. Schmitt &lt;schmittjoh@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class BaseNode
+                implements
+                <a title="Symfony\Component\Config\Definition\NodeInterface" href="../interfaces/Symfony_Component_Config_Definition_NodeInterface.xhtml">NodeInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$name</a>;
+                    </li><li>protected  <a href="#members">$parent</a>;
+                    </li><li>protected array <a href="#members">$normalizationClosures</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$finalValidationClosures</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$allowOverwrite</a> =
+                        true;
+                    </li><li>protected boolean <a href="#members">$required</a> =
+                        false;
+                    </li><li>protected array <a href="#members">$equivalentValues</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$attributes</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setAttribute.xhtml">setAttribute</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getAttribute.xhtml">getAttribute</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/hasAttribute.xhtml">hasAttribute</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getAttributes.xhtml">getAttributes</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setAttributes.xhtml">setAttributes</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/removeAttribute.xhtml">removeAttribute</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setInfo.xhtml">setInfo</a>()
+                    </li><li>public string <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getInfo.xhtml">getInfo</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setExample.xhtml">setExample</a>()
+                    </li><li>public string|array <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getExample.xhtml">getExample</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/addEquivalentValue.xhtml">addEquivalentValue</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setRequired.xhtml">setRequired</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setAllowOverwrite.xhtml">setAllowOverwrite</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setNormalizationClosures.xhtml">setNormalizationClosures</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setFinalValidationClosures.xhtml">setFinalValidationClosures</a>()
+                    </li><li>public bool <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/isRequired.xhtml">isRequired</a>()
+                    </li><li>public string <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getName.xhtml">getName</a>()
+                    </li><li>public string <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getPath.xhtml">getPath</a>()
+                    </li><li>public final mixed <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/merge.xhtml">merge</a>()
+                    </li><li>public final mixed <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/normalize.xhtml">normalize</a>()
+                    </li><li>protected $value <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/preNormalize.xhtml">preNormalize</a>()
+                    </li><li>public NodeInterface|null <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getParent.xhtml">getParent</a>()
+                    </li><li>public final mixed <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/finalize.xhtml">finalize</a>()
+                    </li><li>protected abstract void <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/validateType.xhtml">validateType</a>()
+                    </li><li>protected abstract mixed <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/normalizeValue.xhtml">normalizeValue</a>()
+                    </li><li>protected abstract mixed <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/mergeValues.xhtml">mergeValues</a>()
+                    </li><li>protected abstract mixed <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/finalizeValue.xhtml">finalizeValue</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Symfony\Component\Config\Definition\NodeInterface" href="../interfaces/Symfony_Component_Config_Definition_NodeInterface.xhtml">Symfony\Component\Config\Definition\NodeInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="allowOverwrite">
+              <strong>$allowOverwrite</strong>
+            </li>
+            <li id="attributes">
+              <strong>$attributes</strong>
+            </li>
+            <li id="equivalentValues">
+              <strong>$equivalentValues</strong>
+            </li>
+            <li id="finalValidationClosures">
+              <strong>$finalValidationClosures</strong>
+            </li>
+            <li id="name">
+              <strong>$name</strong>
+            </li>
+            <li id="normalizationClosures">
+              <strong>$normalizationClosures</strong>
+            </li>
+            <li id="parent">
+              <strong>$parent</strong>
+            </li>
+            <li id="required">
+              <strong>$required</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="finalizeValue"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/finalizeValue.xhtml">finalizeValue()</a>
+                — Finalizes a value.</li>
+            <li id="mergeValues"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/mergeValues.xhtml">mergeValues()</a>
+                — Merges two values together.</li>
+            <li id="normalizeValue"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/normalizeValue.xhtml">normalizeValue()</a>
+                — Normalizes the value.</li>
+            <li id="preNormalize"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/preNormalize.xhtml">preNormalize()</a>
+                — Normalizes the value before any other normalization is applied.</li>
+            <li id="validateType"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/validateType.xhtml">validateType()</a>
+                — Validates the type of a Node.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="addEquivalentValue"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/addEquivalentValue.xhtml">addEquivalentValue()</a>
+                — Adds an equivalent value.</li>
+            <li id="finalize"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/finalize.xhtml">finalize()</a>
+                — Finalizes a value, applying all finalization closures.</li>
+            <li id="getAttribute">
+              <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getAttribute.xhtml">getAttribute()</a>
+            </li>
+            <li id="getAttributes">
+              <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getAttributes.xhtml">getAttributes()</a>
+            </li>
+            <li id="getExample"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getExample.xhtml">getExample()</a>
+                — Retrieves the example configuration for this node.</li>
+            <li id="getInfo"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getInfo.xhtml">getInfo()</a>
+                — Returns info message.</li>
+            <li id="getName"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getName.xhtml">getName()</a>
+                — Returns the name of this node.</li>
+            <li id="getParent"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getParent.xhtml">getParent()</a>
+                — Returns parent node for this node.</li>
+            <li id="getPath"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/getPath.xhtml">getPath()</a>
+                — Retrieves the path of this node.</li>
+            <li id="hasAttribute">
+              <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/hasAttribute.xhtml">hasAttribute()</a>
+            </li>
+            <li id="isRequired"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/isRequired.xhtml">isRequired()</a>
+                — Checks if this node is required.</li>
+            <li id="merge"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/merge.xhtml">merge()</a>
+                — Merges two values together.</li>
+            <li id="normalize"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/normalize.xhtml">normalize()</a>
+                — Normalizes a value, applying all normalization closures.</li>
+            <li id="removeAttribute">
+              <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/removeAttribute.xhtml">removeAttribute()</a>
+            </li>
+            <li id="setAllowOverwrite"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setAllowOverwrite.xhtml">setAllowOverwrite()</a>
+                — Sets if this node can be overridden.</li>
+            <li id="setAttribute">
+              <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setAttribute.xhtml">setAttribute()</a>
+            </li>
+            <li id="setAttributes">
+              <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setAttributes.xhtml">setAttributes()</a>
+            </li>
+            <li id="setExample"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setExample.xhtml">setExample()</a>
+                — Sets the example configuration for this node.</li>
+            <li id="setFinalValidationClosures"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setFinalValidationClosures.xhtml">setFinalValidationClosures()</a>
+                — Sets the closures used for final validation.</li>
+            <li id="setInfo"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setInfo.xhtml">setInfo()</a>
+                — Sets an info message.</li>
+            <li id="setNormalizationClosures"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setNormalizationClosures.xhtml">setNormalizationClosures()</a>
+                — Sets the closures used for normalization.</li>
+            <li id="setRequired"><a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode/setRequired.xhtml">setRequired()</a>
+                — Set this node as required.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

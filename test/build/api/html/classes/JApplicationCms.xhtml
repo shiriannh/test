@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JApplicationCms</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JApplicationCms</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/application/cms.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JApplicationCms</h1>
+        <h4>Joomla! CMS Application class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JApplicationCms
+                extends <a title="JApplicationWeb" href="../classes/JApplicationWeb.xhtml">JApplicationWeb</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$docOptions</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$instances</a> =
+                        ;
+                    </li><li>public string <a href="#members">$scope</a> =
+                        null;
+                    </li><li>protected integer <a href="#members">$_clientId</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$_messageQueue</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$_name</a> =
+                        null;
+                    </li><li>protected <span title="JProfiler">JProfiler</span> <a href="#members">$profiler</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$template</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JApplicationCms" href="../classes/JApplicationCms/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="JApplicationCms" href="../classes/JApplicationCms/afterSessionStart.xhtml">afterSessionStart</a>()
+                    </li><li>public void <a title="JApplicationCms" href="../classes/JApplicationCms/checkSession.xhtml">checkSession</a>()
+                    </li><li>public void <a title="JApplicationCms" href="../classes/JApplicationCms/enqueueMessage.xhtml">enqueueMessage</a>()
+                    </li><li>public void <a title="JApplicationCms" href="../classes/JApplicationCms/execute.xhtml">execute</a>()
+                    </li><li>protected void <a title="JApplicationCms" href="../classes/JApplicationCms/checkUserRequireReset.xhtml">checkUserRequireReset</a>()
+                    </li><li>public mixed <a title="JApplicationCms" href="../classes/JApplicationCms/getCfg.xhtml">getCfg</a>()
+                    </li><li>public integer <a title="JApplicationCms" href="../classes/JApplicationCms/getClientId.xhtml">getClientId</a>()
+                    </li><li>public static JApplicationCms <a title="JApplicationCms" href="../classes/JApplicationCms/getInstance.xhtml">getInstance</a>()
+                    </li><li>public JMenu|null <a title="JApplicationCms" href="../classes/JApplicationCms/getMenu.xhtml">getMenu</a>()
+                    </li><li>public array <a title="JApplicationCms" href="../classes/JApplicationCms/getMessageQueue.xhtml">getMessageQueue</a>()
+                    </li><li>public string <a title="JApplicationCms" href="../classes/JApplicationCms/getName.xhtml">getName</a>()
+                    </li><li>public JPathway|null <a title="JApplicationCms" href="../classes/JApplicationCms/getPathway.xhtml">getPathway</a>()
+                    </li><li>public static JRouter|null <a title="JApplicationCms" href="../classes/JApplicationCms/getRouter.xhtml">getRouter</a>()
+                    </li><li>public mixed <a title="JApplicationCms" href="../classes/JApplicationCms/getTemplate.xhtml">getTemplate</a>()
+                    </li><li>public mixed <a title="JApplicationCms" href="../classes/JApplicationCms/getUserState.xhtml">getUserState</a>()
+                    </li><li>public mixed <a title="JApplicationCms" href="../classes/JApplicationCms/getUserStateFromRequest.xhtml">getUserStateFromRequest</a>()
+                    </li><li>protected void <a title="JApplicationCms" href="../classes/JApplicationCms/initialiseApp.xhtml">initialiseApp</a>()
+                    </li><li>public boolean <a title="JApplicationCms" href="../classes/JApplicationCms/isAdmin.xhtml">isAdmin</a>()
+                    </li><li>public boolean <a title="JApplicationCms" href="../classes/JApplicationCms/isSite.xhtml">isSite</a>()
+                    </li><li>public JApplicationCms <a title="JApplicationCms" href="../classes/JApplicationCms/loadSession.xhtml">loadSession</a>()
+                    </li><li>public boolean <a title="JApplicationCms" href="../classes/JApplicationCms/login.xhtml">login</a>()
+                    </li><li>public boolean <a title="JApplicationCms" href="../classes/JApplicationCms/logout.xhtml">logout</a>()
+                    </li><li>public void <a title="JApplicationCms" href="../classes/JApplicationCms/redirect.xhtml">redirect</a>()
+                    </li><li>protected void <a title="JApplicationCms" href="../classes/JApplicationCms/render.xhtml">render</a>()
+                    </li><li>protected void <a title="JApplicationCms" href="../classes/JApplicationCms/route.xhtml">route</a>()
+                    </li><li>public mixed <a title="JApplicationCms" href="../classes/JApplicationCms/setUserState.xhtml">setUserState</a>()
+                    </li><li>public string <a title="JApplicationCms" href="../classes/JApplicationCms/toString.xhtml">toString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JApplicationWeb" href="../classes/JApplicationWeb.xhtml">JApplicationWeb</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">750</td>
+            <td>At some point we need to get away from having session data always in the db.</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_clientId"><strong>$_clientId</strong>
+                —
+                integer<br/><span class="indent">The client identifier.</span></li>
+            <li id="_messageQueue"><strong>$_messageQueue</strong>
+                —
+                array<br/><span class="indent">The application message queue.</span></li>
+            <li id="_name"><strong>$_name</strong>
+                —
+                array<br/><span class="indent">The name of the application.</span></li>
+            <li id="docOptions"><strong>$docOptions</strong>
+                —
+                array<br/><span class="indent">Array of options for the JDocument object</span></li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array<br/><span class="indent">Application instances container.</span></li>
+            <li id="profiler"><strong>$profiler</strong>
+                —
+                <a title="JProfiler" href="../classes/JProfiler.xhtml">JProfiler</a><br/><span class="indent">The profiler instance</span></li>
+            <li id="template"><strong>$template</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Currently active template</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="scope"><strong>$scope</strong>
+                —
+                string<br/><span class="indent">The scope of the application.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="checkUserRequireReset"><a title="JApplicationCms" href="../classes/JApplicationCms/checkUserRequireReset.xhtml">checkUserRequireReset()</a>
+                — Check if the user is required to reset their password.</li>
+            <li id="initialiseApp"><a title="JApplicationCms" href="../classes/JApplicationCms/initialiseApp.xhtml">initialiseApp()</a>
+                — Initialise the application.</li>
+            <li id="render"><a title="JApplicationCms" href="../classes/JApplicationCms/render.xhtml">render()</a>
+                — Rendering is the process of pushing the document buffers into the template placeholders, retrieving data from the document and pushing it into the application response buffer.</li>
+            <li id="route"><a title="JApplicationCms" href="../classes/JApplicationCms/route.xhtml">route()</a>
+                — Route the application.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JApplicationCms" href="../classes/JApplicationCms/__construct.xhtml">__construct()</a>
+                — Class constructor.</li>
+            <li id="afterSessionStart"><a title="JApplicationCms" href="../classes/JApplicationCms/afterSessionStart.xhtml">afterSessionStart()</a>
+                — After the session has been started we need to populate it with some default values.</li>
+            <li id="checkSession"><a title="JApplicationCms" href="../classes/JApplicationCms/checkSession.xhtml">checkSession()</a>
+                — Checks the user session.</li>
+            <li id="enqueueMessage"><a title="JApplicationCms" href="../classes/JApplicationCms/enqueueMessage.xhtml">enqueueMessage()</a>
+                — Enqueue a system message.</li>
+            <li id="execute"><a title="JApplicationCms" href="../classes/JApplicationCms/execute.xhtml">execute()</a>
+                — Execute the application.</li>
+            <li id="getCfg"><a title="JApplicationCms" href="../classes/JApplicationCms/getCfg.xhtml">getCfg()</a>
+                — Gets a configuration value.</li>
+            <li id="getClientId"><a title="JApplicationCms" href="../classes/JApplicationCms/getClientId.xhtml">getClientId()</a>
+                — Gets the client id of the current running application.</li>
+            <li id="getInstance"><a title="JApplicationCms" href="../classes/JApplicationCms/getInstance.xhtml">getInstance()</a>
+                — Returns a reference to the global JApplicationCms object, only creating it if it doesn't already exist.</li>
+            <li id="getMenu"><a title="JApplicationCms" href="../classes/JApplicationCms/getMenu.xhtml">getMenu()</a>
+                — Returns the application JMenu object.</li>
+            <li id="getMessageQueue"><a title="JApplicationCms" href="../classes/JApplicationCms/getMessageQueue.xhtml">getMessageQueue()</a>
+                — Get the system message queue.</li>
+            <li id="getName"><a title="JApplicationCms" href="../classes/JApplicationCms/getName.xhtml">getName()</a>
+                — Gets the name of the current running application.</li>
+            <li id="getPathway"><a title="JApplicationCms" href="../classes/JApplicationCms/getPathway.xhtml">getPathway()</a>
+                — Returns the application JPathway object.</li>
+            <li id="getRouter"><a title="JApplicationCms" href="../classes/JApplicationCms/getRouter.xhtml">getRouter()</a>
+                — Returns the application JRouter object.</li>
+            <li id="getTemplate"><a title="JApplicationCms" href="../classes/JApplicationCms/getTemplate.xhtml">getTemplate()</a>
+                — Gets the name of the current template.</li>
+            <li id="getUserState"><a title="JApplicationCms" href="../classes/JApplicationCms/getUserState.xhtml">getUserState()</a>
+                — Gets a user state.</li>
+            <li id="getUserStateFromRequest"><a title="JApplicationCms" href="../classes/JApplicationCms/getUserStateFromRequest.xhtml">getUserStateFromRequest()</a>
+                — Gets the value of a user state variable.</li>
+            <li id="isAdmin"><a title="JApplicationCms" href="../classes/JApplicationCms/isAdmin.xhtml">isAdmin()</a>
+                — Is admin interface?</li>
+            <li id="isSite"><a title="JApplicationCms" href="../classes/JApplicationCms/isSite.xhtml">isSite()</a>
+                — Is site interface?</li>
+            <li id="loadSession"><a title="JApplicationCms" href="../classes/JApplicationCms/loadSession.xhtml">loadSession()</a>
+                — Allows the application to load a custom or default session.</li>
+            <li id="login"><a title="JApplicationCms" href="../classes/JApplicationCms/login.xhtml">login()</a>
+                — Login authentication function.</li>
+            <li id="logout"><a title="JApplicationCms" href="../classes/JApplicationCms/logout.xhtml">logout()</a>
+                — Logout authentication function.</li>
+            <li id="redirect"><a title="JApplicationCms" href="../classes/JApplicationCms/redirect.xhtml">redirect()</a>
+                — Redirect to another URL.</li>
+            <li id="setUserState"><a title="JApplicationCms" href="../classes/JApplicationCms/setUserState.xhtml">setUserState()</a>
+                — Sets the value of a user state variable.</li>
+            <li id="toString"><a title="JApplicationCms" href="../classes/JApplicationCms/toString.xhtml">toString()</a>
+                — Sends all headers prior to returning the string</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

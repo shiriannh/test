@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFHalDocument</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFHalDocument</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/hal/document.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFHalDocument</h1>
+        <h4>Implementation of the Hypertext Application Language document in PHP. It can be used to provide hypermedia in a web service context.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFHalDocument
+            {<br/><ul class="none"><li>// members</li><li>private <span title="FOFHalLinks">FOFHalLinks</span> <a href="#members">$_links</a> =
+                        null;
+                    </li><li>private array <a href="#members">$_data</a> =
+                        null;
+                    </li><li>private array <a href="#members">$_embedded</a> =
+                        ;
+                    </li><li>private string <a href="#members">$_dataKey</a> =
+                        '_list';
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FOFHalDocument" href="../classes/FOFHalDocument/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="FOFHalDocument" href="../classes/FOFHalDocument/addLink.xhtml">addLink</a>()
+                    </li><li>public boolean <a title="FOFHalDocument" href="../classes/FOFHalDocument/addLinks.xhtml">addLinks</a>()
+                    </li><li>public void <a title="FOFHalDocument" href="../classes/FOFHalDocument/addData.xhtml">addData</a>()
+                    </li><li>public boolean <a title="FOFHalDocument" href="../classes/FOFHalDocument/addEmbedded.xhtml">addEmbedded</a>()
+                    </li><li>public array <a title="FOFHalDocument" href="../classes/FOFHalDocument/getLinks.xhtml">getLinks</a>()
+                    </li><li>public array|FOFHalDocument <a title="FOFHalDocument" href="../classes/FOFHalDocument/getEmbedded.xhtml">getEmbedded</a>()
+                    </li><li>public array|stdClass <a title="FOFHalDocument" href="../classes/FOFHalDocument/getData.xhtml">getData</a>()
+                    </li><li>public string <a title="FOFHalDocument" href="../classes/FOFHalDocument/render.xhtml">render</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_data"><strong>$_data</strong>
+                —
+                array<br/><span class="indent">The data (resource state or collection of resource state objects) of the document.</span></li>
+            <li id="_dataKey"><strong>$_dataKey</strong>
+                —
+                string<br/><span class="indent">When $_data is an array we'll output the list of data under this key (JSON) or tag (XML)</span></li>
+            <li id="_embedded"><strong>$_embedded</strong>
+                —
+                array<br/><span class="indent">Embedded documents. This is an array of FOFHalDocument instances.</span></li>
+            <li id="_links"><strong>$_links</strong>
+                —
+                <a title="FOFHalLinks" href="../classes/FOFHalLinks.xhtml">FOFHalLinks</a><br/><span class="indent">The collection of links of this document</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFHalDocument" href="../classes/FOFHalDocument/__construct.xhtml">__construct()</a>
+                — Public constructor</li>
+            <li id="addData"><a title="FOFHalDocument" href="../classes/FOFHalDocument/addData.xhtml">addData()</a>
+                — Add data to the document</li>
+            <li id="addEmbedded"><a title="FOFHalDocument" href="../classes/FOFHalDocument/addEmbedded.xhtml">addEmbedded()</a>
+                — Add an embedded document</li>
+            <li id="addLink"><a title="FOFHalDocument" href="../classes/FOFHalDocument/addLink.xhtml">addLink()</a>
+                — Add a link to the document</li>
+            <li id="addLinks"><a title="FOFHalDocument" href="../classes/FOFHalDocument/addLinks.xhtml">addLinks()</a>
+                — Add links to the document</li>
+            <li id="getData"><a title="FOFHalDocument" href="../classes/FOFHalDocument/getData.xhtml">getData()</a>
+                — Return the data attached to this document</li>
+            <li id="getEmbedded"><a title="FOFHalDocument" href="../classes/FOFHalDocument/getEmbedded.xhtml">getEmbedded()</a>
+                — Returns the collection of embedded documents</li>
+            <li id="getLinks"><a title="FOFHalDocument" href="../classes/FOFHalDocument/getLinks.xhtml">getLinks()</a>
+                — Returns the collection of links of this document</li>
+            <li id="render"><a title="FOFHalDocument" href="../classes/FOFHalDocument/render.xhtml">render()</a>
+                — Instantiate and call a suitable renderer class to render this document into the specified format.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

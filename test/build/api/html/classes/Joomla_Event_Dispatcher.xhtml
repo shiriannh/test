@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Joomla\Event\Dispatcher</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Joomla_Event">Joomla\Event</a>
+          </li>
+          <li class="separator">Dispatcher</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/vendor/joomla/event/src/Dispatcher.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Joomla\Event\</small>Dispatcher</h1>
+        <h4>Implementation of a DispatcherInterface supporting prioritized listeners.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Dispatcher
+                implements
+                <a title="Joomla\Event\DispatcherInterface" href="../interfaces/Joomla_Event_DispatcherInterface.xhtml">DispatcherInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$events</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$listenerFilter</a>;
+                    </li><li>protected array <a href="#members">$listeners</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public Dispatcher <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/setEvent.xhtml">setEvent</a>()
+                    </li><li>public Dispatcher <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/setListenerFilter.xhtml">setListenerFilter</a>()
+                    </li><li>public Dispatcher <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/addEvent.xhtml">addEvent</a>()
+                    </li><li>public boolean <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/hasEvent.xhtml">hasEvent</a>()
+                    </li><li>public EventInterface|mixed <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getEvent.xhtml">getEvent</a>()
+                    </li><li>public Dispatcher <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/removeEvent.xhtml">removeEvent</a>()
+                    </li><li>public array <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getEvents.xhtml">getEvents</a>()
+                    </li><li>public array <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/clearEvents.xhtml">clearEvents</a>()
+                    </li><li>public integer <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/countEvents.xhtml">countEvents</a>()
+                    </li><li>public Dispatcher <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/addListener.xhtml">addListener</a>()
+                    </li><li>public mixed <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getListenerPriority.xhtml">getListenerPriority</a>()
+                    </li><li>public array <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getListeners.xhtml">getListeners</a>()
+                    </li><li>public boolean <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/hasListener.xhtml">hasListener</a>()
+                    </li><li>public Dispatcher <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/removeListener.xhtml">removeListener</a>()
+                    </li><li>public Dispatcher <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/clearListeners.xhtml">clearListeners</a>()
+                    </li><li>public integer <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/countListeners.xhtml">countListeners</a>()
+                    </li><li>public EventInterface <a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/triggerEvent.xhtml">triggerEvent</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Joomla\Event\DispatcherInterface" href="../interfaces/Joomla_Event_DispatcherInterface.xhtml">Joomla\Event\DispatcherInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="events"><strong>$events</strong>
+                —
+                array<br/><span class="indent">An array of registered events indexed by the event names.</span></li>
+            <li id="listenerFilter"><strong>$listenerFilter</strong>
+                —
+                string<br/><span class="indent">A regular expression that will filter listener method names.</span></li>
+            <li id="listeners"><strong>$listeners</strong>
+                —
+                array<br/><span class="indent">An array of ListenersPriorityQueue indexed by the event names.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addEvent"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/addEvent.xhtml">addEvent()</a>
+                — Add an event to this dispatcher, only if it is not existing.</li>
+            <li id="addListener"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/addListener.xhtml">addListener()</a>
+                — Add a listener to this dispatcher, only if not already registered to these events.</li>
+            <li id="clearEvents"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/clearEvents.xhtml">clearEvents()</a>
+                — Clear all events.</li>
+            <li id="clearListeners"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/clearListeners.xhtml">clearListeners()</a>
+                — Clear the listeners in this dispatcher.</li>
+            <li id="countEvents"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/countEvents.xhtml">countEvents()</a>
+                — Count the number of registered event.</li>
+            <li id="countListeners"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/countListeners.xhtml">countListeners()</a>
+                — Count the number of registered listeners for the given event.</li>
+            <li id="getEvent"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getEvent.xhtml">getEvent()</a>
+                — Get the event object identified by the given name.</li>
+            <li id="getEvents"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getEvents.xhtml">getEvents()</a>
+                — Get the registered events.</li>
+            <li id="getListenerPriority"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getListenerPriority.xhtml">getListenerPriority()</a>
+                — Get the priority of the given listener for the given event.</li>
+            <li id="getListeners"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/getListeners.xhtml">getListeners()</a>
+                — Get the listeners registered to the given event.</li>
+            <li id="hasEvent"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/hasEvent.xhtml">hasEvent()</a>
+                — Tell if the given event has been added to this dispatcher.</li>
+            <li id="hasListener"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/hasListener.xhtml">hasListener()</a>
+                — Tell if the given listener has been added.</li>
+            <li id="removeEvent"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/removeEvent.xhtml">removeEvent()</a>
+                — Remove an event from this dispatcher.</li>
+            <li id="removeListener"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/removeListener.xhtml">removeListener()</a>
+                — Remove the given listener from this dispatcher.</li>
+            <li id="setEvent"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/setEvent.xhtml">setEvent()</a>
+                — Set an event to the dispatcher.</li>
+            <li id="setListenerFilter"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/setListenerFilter.xhtml">setListenerFilter()</a>
+                — Sets a regular expression to filter the class methods when adding a listener.</li>
+            <li id="triggerEvent"><a title="Joomla\Event\Dispatcher" href="../classes/Joomla_Event_Dispatcher/triggerEvent.xhtml">triggerEvent()</a>
+                — Trigger an event.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

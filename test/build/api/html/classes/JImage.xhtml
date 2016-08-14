@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JImage</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JImage</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/image/image.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JImage</h1>
+        <h4>Class to manipulate an image.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JImage
+            {<br/><ul class="none"><li>// constants</li><li>const SCALE_FILL = 1;</li><li>const SCALE_INSIDE = 2;</li><li>const SCALE_OUTSIDE = 3;</li><li>const CROP = 4;</li><li>const CROP_RESIZE = 5;</li><li>const SCALE_FIT = 6;</li><li>const ORIENTATION_LANDSCAPE = 'landscape';</li><li>const ORIENTATION_PORTRAIT = 'portrait';</li><li>const ORIENTATION_SQUARE = 'square';</li></ul><ul class="none"><li>// members</li><li>protected  <a href="#members">$handle</a>;
+                    </li><li>protected string <a href="#members">$path</a> =
+                        null;
+                    </li><li>protected static array <a href="#members">$formats</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JImage" href="../classes/JImage/__construct.xhtml">__construct</a>()
+                    </li><li>public static stdClass <a title="JImage" href="../classes/JImage/getImageFileProperties.xhtml">getImageFileProperties</a>()
+                    </li><li>public mixed <a title="JImage" href="../classes/JImage/getOrientation.xhtml">getOrientation</a>()
+                    </li><li>private static string <a title="JImage" href="../classes/JImage/getOrientationString.xhtml">getOrientationString</a>()
+                    </li><li>public array <a title="JImage" href="../classes/JImage/generateThumbs.xhtml">generateThumbs</a>()
+                    </li><li>public array <a title="JImage" href="../classes/JImage/createThumbs.xhtml">createThumbs</a>()
+                    </li><li>public JImage <a title="JImage" href="../classes/JImage/crop.xhtml">crop</a>()
+                    </li><li>public JImage <a title="JImage" href="../classes/JImage/filter.xhtml">filter</a>()
+                    </li><li>public integer <a title="JImage" href="../classes/JImage/getHeight.xhtml">getHeight</a>()
+                    </li><li>public integer <a title="JImage" href="../classes/JImage/getWidth.xhtml">getWidth</a>()
+                    </li><li>public string <a title="JImage" href="../classes/JImage/getPath.xhtml">getPath</a>()
+                    </li><li>public boolean <a title="JImage" href="../classes/JImage/isLoaded.xhtml">isLoaded</a>()
+                    </li><li>public bool <a title="JImage" href="../classes/JImage/isTransparent.xhtml">isTransparent</a>()
+                    </li><li>public void <a title="JImage" href="../classes/JImage/loadFile.xhtml">loadFile</a>()
+                    </li><li>public JImage <a title="JImage" href="../classes/JImage/resize.xhtml">resize</a>()
+                    </li><li>public  <a title="JImage" href="../classes/JImage/cropResize.xhtml">cropResize</a>()
+                    </li><li>public JImage <a title="JImage" href="../classes/JImage/rotate.xhtml">rotate</a>()
+                    </li><li>public JImage <a title="JImage" href="../classes/JImage/flip.xhtml">flip</a>()
+                    </li><li>public boolean <a title="JImage" href="../classes/JImage/toFile.xhtml">toFile</a>()
+                    </li><li>protected JImageFilter <a title="JImage" href="../classes/JImage/getFilterInstance.xhtml">getFilterInstance</a>()
+                    </li><li>protected stdClass <a title="JImage" href="../classes/JImage/prepareDimensions.xhtml">prepareDimensions</a>()
+                    </li><li>protected integer <a title="JImage" href="../classes/JImage/sanitizeHeight.xhtml">sanitizeHeight</a>()
+                    </li><li>protected integer <a title="JImage" href="../classes/JImage/sanitizeOffset.xhtml">sanitizeOffset</a>()
+                    </li><li>protected integer <a title="JImage" href="../classes/JImage/sanitizeWidth.xhtml">sanitizeWidth</a>()
+                    </li><li>public boolean <a title="JImage" href="../classes/JImage/destroy.xhtml">destroy</a>()
+                    </li><li>public void <a title="JImage" href="../classes/JImage/__destruct.xhtml">__destruct</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="SCALE_FILL">SCALE_FILL</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="SCALE_INSIDE">SCALE_INSIDE</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="SCALE_OUTSIDE">SCALE_OUTSIDE</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td id="CROP">CROP</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td id="CROP_RESIZE">CROP_RESIZE</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td id="SCALE_FIT">SCALE_FIT</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td id="ORIENTATION_LANDSCAPE">ORIENTATION_LANDSCAPE</td>
+              <td>'landscape'</td>
+            </tr>
+            <tr>
+              <td id="ORIENTATION_PORTRAIT">ORIENTATION_PORTRAIT</td>
+              <td>'portrait'</td>
+            </tr>
+            <tr>
+              <td id="ORIENTATION_SQUARE">ORIENTATION_SQUARE</td>
+              <td>'square'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="formats"><strong>$formats</strong>
+                —
+                array</li>
+            <li id="handle"><strong>$handle</strong>
+                —
+                resource</li>
+            <li id="path"><strong>$path</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getOrientationString"><a title="JImage" href="../classes/JImage/getOrientationString.xhtml">getOrientationString()</a>
+                — Compare width and height integers to determine image orientation.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="getFilterInstance"><a title="JImage" href="../classes/JImage/getFilterInstance.xhtml">getFilterInstance()</a>
+                — Method to get an image filter instance of a specified type.</li>
+            <li id="prepareDimensions"><a title="JImage" href="../classes/JImage/prepareDimensions.xhtml">prepareDimensions()</a>
+                — Method to get the new dimensions for a resized image.</li>
+            <li id="sanitizeHeight"><a title="JImage" href="../classes/JImage/sanitizeHeight.xhtml">sanitizeHeight()</a>
+                — Method to sanitize a height value.</li>
+            <li id="sanitizeOffset"><a title="JImage" href="../classes/JImage/sanitizeOffset.xhtml">sanitizeOffset()</a>
+                — Method to sanitize an offset value like left or top.</li>
+            <li id="sanitizeWidth"><a title="JImage" href="../classes/JImage/sanitizeWidth.xhtml">sanitizeWidth()</a>
+                — Method to sanitize a width value.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JImage" href="../classes/JImage/__construct.xhtml">__construct()</a>
+                — Class constructor.</li>
+            <li id="__destruct"><a title="JImage" href="../classes/JImage/__destruct.xhtml">__destruct()</a>
+                — Method to call the destroy() method one last time to free any memory when the object is unset</li>
+            <li id="createThumbs"><a title="JImage" href="../classes/JImage/createThumbs.xhtml">createThumbs()</a>
+                — Method to create thumbnails from the current image and save them to disk. It allows creation by resizing or croppping the original image.</li>
+            <li id="crop"><a title="JImage" href="../classes/JImage/crop.xhtml">crop()</a>
+                — Method to crop the current image.</li>
+            <li id="cropResize"><a title="JImage" href="../classes/JImage/cropResize.xhtml">cropResize()</a>
+                — Method to crop an image after resizing it to maintain proportions without having to do all the set up work.</li>
+            <li id="destroy"><a title="JImage" href="../classes/JImage/destroy.xhtml">destroy()</a>
+                — Method to destroy an image handle and free the memory associated with the handle</li>
+            <li id="filter"><a title="JImage" href="../classes/JImage/filter.xhtml">filter()</a>
+                — Method to apply a filter to the image by type.  Two examples are: grayscale and sketchy.</li>
+            <li id="flip"><a title="JImage" href="../classes/JImage/flip.xhtml">flip()</a>
+                — Method to flip the current image.</li>
+            <li id="generateThumbs"><a title="JImage" href="../classes/JImage/generateThumbs.xhtml">generateThumbs()</a>
+                — Method to generate thumbnails from the current image. It allows creation by resizing or cropping the original image.</li>
+            <li id="getHeight"><a title="JImage" href="../classes/JImage/getHeight.xhtml">getHeight()</a>
+                — Method to get the height of the image in pixels.</li>
+            <li id="getImageFileProperties"><a title="JImage" href="../classes/JImage/getImageFileProperties.xhtml">getImageFileProperties()</a>
+                — Method to return a properties object for an image given a filesystem path.</li>
+            <li id="getOrientation"><a title="JImage" href="../classes/JImage/getOrientation.xhtml">getOrientation()</a>
+                — Method to detect whether an image's orientation is landscape, portrait or square.</li>
+            <li id="getPath"><a title="JImage" href="../classes/JImage/getPath.xhtml">getPath()</a>
+                — Method to return the path</li>
+            <li id="getWidth"><a title="JImage" href="../classes/JImage/getWidth.xhtml">getWidth()</a>
+                — Method to get the width of the image in pixels.</li>
+            <li id="isLoaded"><a title="JImage" href="../classes/JImage/isLoaded.xhtml">isLoaded()</a>
+                — Method to determine whether or not an image has been loaded into the object.</li>
+            <li id="isTransparent"><a title="JImage" href="../classes/JImage/isTransparent.xhtml">isTransparent()</a>
+                — Method to determine whether or not the image has transparency.</li>
+            <li id="loadFile"><a title="JImage" href="../classes/JImage/loadFile.xhtml">loadFile()</a>
+                — Method to load a file into the JImage object as the resource.</li>
+            <li id="resize"><a title="JImage" href="../classes/JImage/resize.xhtml">resize()</a>
+                — Method to resize the current image.</li>
+            <li id="rotate"><a title="JImage" href="../classes/JImage/rotate.xhtml">rotate()</a>
+                — Method to rotate the current image.</li>
+            <li id="toFile"><a title="JImage" href="../classes/JImage/toFile.xhtml">toFile()</a>
+                — Method to write the current image out to a file.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

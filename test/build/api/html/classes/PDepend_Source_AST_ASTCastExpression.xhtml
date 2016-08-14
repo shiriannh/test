@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\AST\ASTCastExpression</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_AST">PDepend\Source\AST</a>
+          </li>
+          <li class="separator">ASTCastExpression</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/ASTCastExpression.php.xhtml#line83">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\AST\</small>ASTCastExpression</h1>
+        <h4>This class represents a cast-expression node.</h4>
+        <p>&lt;code&gt;<br/>// ----------<br/>$foo = (int) $bar;<br/>// ----------<br/><br/>// -----------<br/>$foo = (bool) $bar;<br/>// -----------<br/><br/>// ------------<br/>$foo = (array) $bar;<br/>// ------------<br/><br/>// ------------<br/>$foo = (unset) $bar;<br/>// ------------<br/><br/>// -------------<br/>$foo = (double) $bar;<br/>// -------------<br/><br/>// -------------<br/>$foo = (string) $bar;<br/>// -------------<br/><br/>// -------------<br/>$foo = (object) $bar;<br/>// -------------<br/>&lt;/code&gt;</p>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ASTCastExpression
+                extends <a title="PDepend\Source\AST\ASTUnaryExpression" href="../classes/PDepend_Source_AST_ASTUnaryExpression.xhtml">ASTUnaryExpression</a>
+            {<br/><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isArray.xhtml">isArray</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isObject.xhtml">isObject</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isBoolean.xhtml">isBoolean</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isInteger.xhtml">isInteger</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isFloat.xhtml">isFloat</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isString.xhtml">isString</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isUnset.xhtml">isUnset</a>()
+                    </li><li>public mixed <a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/accept.xhtml">accept</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\AST\ASTUnaryExpression" href="../classes/PDepend_Source_AST_ASTUnaryExpression.xhtml">PDepend\Source\AST\ASTUnaryExpression</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/__construct.xhtml">__construct()</a>
+                — Constructs a new cast-expression node.</li>
+            <li id="accept"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/accept.xhtml">accept()</a>
+                — Accept method of the visitor design pattern. This method will be called by a visitor during tree traversal.</li>
+            <li id="isArray"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isArray.xhtml">isArray()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node represents an array cast-expression.</li>
+            <li id="isBoolean"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isBoolean.xhtml">isBoolean()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node represents a boolean cast-expression.</li>
+            <li id="isFloat"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isFloat.xhtml">isFloat()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node represents a float cast-expression.</li>
+            <li id="isInteger"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isInteger.xhtml">isInteger()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node represents an integer cast-expression.</li>
+            <li id="isObject"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isObject.xhtml">isObject()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node represents an object cast-expression.</li>
+            <li id="isString"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isString.xhtml">isString()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node represents a string cast-expression.</li>
+            <li id="isUnset"><a title="PDepend\Source\AST\ASTCastExpression" href="../classes/PDepend_Source_AST_ASTCastExpression/isUnset.xhtml">isUnset()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node represents an unset cast-expression.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

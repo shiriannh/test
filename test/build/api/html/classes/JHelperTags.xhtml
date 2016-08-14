@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JHelperTags</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JHelperTags</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/helper/tags.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JHelperTags</h1>
+        <h4>Tags helper class, provides methods to perform various tasks relevant tagging of content.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JHelperTags
+                extends <a title="JHelper" href="../classes/JHelper.xhtml">JHelper</a>
+            {<br/><ul class="none"><li>// members</li><li>protected boolean <a href="#members">$tagsChanged</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$replaceTags</a> =
+                        false;
+                    </li><li>public string <a href="#members">$typeAlias</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public boolean <a title="JHelperTags" href="../classes/JHelperTags/addTagMapping.xhtml">addTagMapping</a>()
+                    </li><li>public static array <a title="JHelperTags" href="../classes/JHelperTags/convertPathsToNames.xhtml">convertPathsToNames</a>()
+                    </li><li>public mixed <a title="JHelperTags" href="../classes/JHelperTags/createTagsFromField.xhtml">createTagsFromField</a>()
+                    </li><li>public mixed <a title="JHelperTags" href="../classes/JHelperTags/createTagsFromMetadata.xhtml">createTagsFromMetadata</a>()
+                    </li><li>public boolean <a title="JHelperTags" href="../classes/JHelperTags/deleteTagData.xhtml">deleteTagData</a>()
+                    </li><li>public array <a title="JHelperTags" href="../classes/JHelperTags/getItemTags.xhtml">getItemTags</a>()
+                    </li><li>public string <a title="JHelperTags" href="../classes/JHelperTags/getTagIds.xhtml">getTagIds</a>()
+                    </li><li>public JDatabaseQuery <a title="JHelperTags" href="../classes/JHelperTags/getTagItemsQuery.xhtml">getTagItemsQuery</a>()
+                    </li><li>public array <a title="JHelperTags" href="../classes/JHelperTags/getTagNames.xhtml">getTagNames</a>()
+                    </li><li>public mixed <a title="JHelperTags" href="../classes/JHelperTags/getTagTreeArray.xhtml">getTagTreeArray</a>()
+                    </li><li>public string <a title="JHelperTags" href="../classes/JHelperTags/getTypeId.xhtml">getTypeId</a>()
+                    </li><li>public static array <a title="JHelperTags" href="../classes/JHelperTags/getTypes.xhtml">getTypes</a>()
+                    </li><li>public boolean <a title="JHelperTags" href="../classes/JHelperTags/postStoreProcess.xhtml">postStoreProcess</a>()
+                    </li><li>public null <a title="JHelperTags" href="../classes/JHelperTags/preStoreProcess.xhtml">preStoreProcess</a>()
+                    </li><li>public static array <a title="JHelperTags" href="../classes/JHelperTags/searchTags.xhtml">searchTags</a>()
+                    </li><li>public void <a title="JHelperTags" href="../classes/JHelperTags/tagDeleteInstances.xhtml">tagDeleteInstances</a>()
+                    </li><li>public boolean <a title="JHelperTags" href="../classes/JHelperTags/tagItem.xhtml">tagItem</a>()
+                    </li><li>public boolean <a title="JHelperTags" href="../classes/JHelperTags/unTagItem.xhtml">unTagItem</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JHelper" href="../classes/JHelper.xhtml">JHelper</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="replaceTags"><strong>$replaceTags</strong>
+                —
+                boolean<br/><span class="indent">Whether up replace all tags or just add tags</span></li>
+            <li id="tagsChanged"><strong>$tagsChanged</strong>
+                —
+                boolean<br/><span class="indent">Helper object for storing and deleting tag information.</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="typeAlias"><strong>$typeAlias</strong>
+                —
+                string<br/><span class="indent">Alias for querying mapping and content type table.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addTagMapping"><a title="JHelperTags" href="../classes/JHelperTags/addTagMapping.xhtml">addTagMapping()</a>
+                — Method to add tag rows to mapping table.</li>
+            <li id="convertPathsToNames"><a title="JHelperTags" href="../classes/JHelperTags/convertPathsToNames.xhtml">convertPathsToNames()</a>
+                — Function that converts tags paths into paths of names</li>
+            <li id="createTagsFromField"><a title="JHelperTags" href="../classes/JHelperTags/createTagsFromField.xhtml">createTagsFromField()</a>
+                — Create any new tags by looking for #new# in the strings</li>
+            <li id="createTagsFromMetadata"><a title="JHelperTags" href="../classes/JHelperTags/createTagsFromMetadata.xhtml">createTagsFromMetadata()</a>
+                — Create any new tags by looking for #new# in the metadata</li>
+            <li id="deleteTagData"><a title="JHelperTags" href="../classes/JHelperTags/deleteTagData.xhtml">deleteTagData()</a>
+                — Method to delete the tag mappings and #__ucm_content record for for an item</li>
+            <li id="getItemTags"><a title="JHelperTags" href="../classes/JHelperTags/getItemTags.xhtml">getItemTags()</a>
+                — Method to get a list of tags for an item, optionally with the tag data.</li>
+            <li id="getTagIds"><a title="JHelperTags" href="../classes/JHelperTags/getTagIds.xhtml">getTagIds()</a>
+                — Method to get a list of tags for a given item.</li>
+            <li id="getTagItemsQuery"><a title="JHelperTags" href="../classes/JHelperTags/getTagItemsQuery.xhtml">getTagItemsQuery()</a>
+                — Method to get a query to retrieve a detailed list of items for a tag.</li>
+            <li id="getTagNames"><a title="JHelperTags" href="../classes/JHelperTags/getTagNames.xhtml">getTagNames()</a>
+                — Function that converts tag ids to their tag names</li>
+            <li id="getTagTreeArray"><a title="JHelperTags" href="../classes/JHelperTags/getTagTreeArray.xhtml">getTagTreeArray()</a>
+                — Method to get an array of tag ids for the current tag and its children</li>
+            <li id="getTypeId"><a title="JHelperTags" href="../classes/JHelperTags/getTypeId.xhtml">getTypeId()</a>
+                — Method to get the type id for a type alias.</li>
+            <li id="getTypes"><a title="JHelperTags" href="../classes/JHelperTags/getTypes.xhtml">getTypes()</a>
+                — Method to get a list of types with associated data.</li>
+            <li id="postStoreProcess"><a title="JHelperTags" href="../classes/JHelperTags/postStoreProcess.xhtml">postStoreProcess()</a>
+                — Function that handles saving tags used in a table class after a store()</li>
+            <li id="preStoreProcess"><a title="JHelperTags" href="../classes/JHelperTags/preStoreProcess.xhtml">preStoreProcess()</a>
+                — Function that preProcesses data from a table prior to a store() to ensure proper tag handling</li>
+            <li id="searchTags"><a title="JHelperTags" href="../classes/JHelperTags/searchTags.xhtml">searchTags()</a>
+                — Function to search tags</li>
+            <li id="tagDeleteInstances"><a title="JHelperTags" href="../classes/JHelperTags/tagDeleteInstances.xhtml">tagDeleteInstances()</a>
+                — Method to delete all instances of a tag from the mapping table. Generally used when a tag is deleted.</li>
+            <li id="tagItem"><a title="JHelperTags" href="../classes/JHelperTags/tagItem.xhtml">tagItem()</a>
+                — Method to add or update tags associated with an item.</li>
+            <li id="unTagItem"><a title="JHelperTags" href="../classes/JHelperTags/unTagItem.xhtml">unTagItem()</a>
+                — Method to untag an item</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

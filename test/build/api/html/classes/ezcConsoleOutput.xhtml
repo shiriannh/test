@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcConsoleOutput</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcConsoleOutput</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/console-tools/src/output.php.xhtml#line94">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcConsoleOutput</h1>
+        <h4>Class for handling console output.</h4>
+        <p>The ezcConsoleOutput class provides an interface to output text to the console. It deals with formating<br/>text in different ways and offers some comfortable options to deal<br/>with console text output.<br/>&lt;code&gt;<br/>// Create the output handler<br/>$out = new ezcConsoleOutput();<br/>// Set the verbosity to level 10<br/>$out-&gt;options-&gt;verbosityLevel = 10;<br/>// Enable auto wrapping of lines after 40 characters<br/>$out-&gt;options-&gt;autobreak = 40;<br/>// Set the color of the default output format to green<br/>$out-&gt;formats-&gt;default-&gt;color = 'green';<br/>// Set the color of the output format named 'success' to white<br/>$out-&gt;formats-&gt;success-&gt;color = 'white';<br/>// Set the style of the output format named 'success' to bold<br/>$out-&gt;formats-&gt;success-&gt;style = array( 'bold' );<br/>// Set the color of the output format named 'failure' to red<br/>$out-&gt;formats-&gt;failure-&gt;color = 'red';<br/>// Set the style of the output format named 'failure' to bold<br/>$out-&gt;formats-&gt;failure-&gt;style = array( 'bold' );<br/>// Set the background color of the output format named 'failure' to blue<br/>$out-&gt;formats-&gt;failure-&gt;bgcolor = 'blue';<br/>// Output text with default format<br/>$out-&gt;outputText( 'This is default text ' );<br/>// Output text with format 'success'<br/>$out-&gt;outputText( 'including success message', 'success' );<br/>// Some more output with default output.<br/>$out-&gt;outputText( "and a manual linebreak.\n" );<br/>// Manipulate the later output<br/>$out-&gt;formats-&gt;success-&gt;color = 'green';<br/>$out-&gt;formats-&gt;default-&gt;color = 'blue';<br/>// This is visible, since we set verbosityLevel to 10, and printed in default format (now blue)<br/>$out-&gt;outputText( "Some verbose output.\n", null, 10 );<br/>// This is not visible, since we set verbosityLevel to 10<br/>$out-&gt;outputText( "Some more verbose output.\n", null, 20 );<br/>// This is visible, since we set verbosityLevel to 10, and printed in format 'failure'<br/>$out-&gt;outputText( "And some not so verbose, failure output.\n", 'failure', 5 );<br/>&lt;/code&gt;<br/>For a list of valid colors, style attributes and background colors, please<br/>refer to .<br/>ATTENTION: Windows operating systems do not support styling of text on the<br/>console. Therefore no styling sequences are generated on any version of<br/>this operating system.<br/></p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcConsoleOutput
+            {<br/><ul class="none"><li>// constants</li><li>const TARGET_OUTPUT = "php://output";</li><li>const TARGET_STDOUT = "php://stdout";</li><li>const TARGET_STDERR = "php://stderr";</li></ul><ul class="none"><li>// members</li><li>protected <span title="array(string=&gt;mixed)">array(string=&gt;mixed)</span> <a href="#members">$properties</a>;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$positionStored</a> =
+                        false;
+                    </li><li>protected static <span title="array(string=&gt;int)">array(string=&gt;int)</span> <a href="#members">$color</a> =
+                        ;
+                    </li><li>protected static <span title="array(string=&gt;int)">array(string=&gt;int)</span> <a href="#members">$bgcolor</a> =
+                        ;
+                    </li><li>protected static <span title="array(string=&gt;int)">array(string=&gt;int)</span> <a href="#members">$style</a> =
+                        ;
+                    </li><li>private string <a href="#members">$escapeSequence</a> =
+                        "\033[%sm";
+                    </li><li>private array <a href="#members">$targets</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/setOptions.xhtml">setOptions</a>()
+                    </li><li>public ezcConsoleOutputOptions <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/getOptions.xhtml">getOptions</a>()
+                    </li><li>public mixed <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__get.xhtml">__get</a>()
+                    </li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__set.xhtml">__set</a>()
+                    </li><li>public bool <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__isset.xhtml">__isset</a>()
+                    </li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/outputText.xhtml">outputText</a>()
+                    </li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/outputLine.xhtml">outputLine</a>()
+                    </li><li>public string <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/formatText.xhtml">formatText</a>()
+                    </li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/storePos.xhtml">storePos</a>()
+                    </li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/restorePos.xhtml">restorePos</a>()
+                    </li><li>public void <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/toPos.xhtml">toPos</a>()
+                    </li><li>public static bool <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/isValidFormatCode.xhtml">isValidFormatCode</a>()
+                    </li><li>protected string <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/buildSequence.xhtml">buildSequence</a>()
+                    </li><li>protected int <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/getFormatCode.xhtml">getFormatCode</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="TARGET_OUTPUT">TARGET_OUTPUT</td>
+              <td>"php://output"</td>
+            </tr>
+            <tr>
+              <td id="TARGET_STDOUT">TARGET_STDOUT</td>
+              <td>"php://stdout"</td>
+            </tr>
+            <tr>
+              <td id="TARGET_STDERR">TARGET_STDERR</td>
+              <td>"php://stderr"</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="escapeSequence"><strong>$escapeSequence</strong>
+                —
+                string<br/><span class="indent">Basic escape sequence string. Use sprintf() to insert escape codes.</span></li>
+            <li id="targets"><strong>$targets</strong>
+                —
+                array<br/><span class="indent">Collection of targets to print to.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="bgcolor"><strong>$bgcolor</strong>
+                —
+                <a title="array(string=&gt;int)" href="../classes/array(string=&gt;int).xhtml">array(string=&gt;int)</a><br/><span class="indent">Stores the mapping of bgcolor names to their escape sequence values.</span></li>
+            <li id="color"><strong>$color</strong>
+                —
+                <a title="array(string=&gt;int)" href="../classes/array(string=&gt;int).xhtml">array(string=&gt;int)</a><br/><span class="indent">Stores the mapping of color names to their escape sequence values.</span></li>
+            <li id="positionStored"><strong>$positionStored</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Whether a position has been stored before, using the storePos() method.</span></li>
+            <li id="properties"><strong>$properties</strong>
+                —
+                <a title="array(string=&gt;mixed)" href="../classes/array(string=&gt;mixed).xhtml">array(string=&gt;mixed)</a><br/><span class="indent">Container to hold the properties</span></li>
+            <li id="style"><strong>$style</strong>
+                —
+                <a title="array(string=&gt;int)" href="../classes/array(string=&gt;int).xhtml">array(string=&gt;int)</a><br/><span class="indent">Stores the mapping of styles names to their escape sequence values.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="buildSequence"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/buildSequence.xhtml">buildSequence()</a>
+                — Returns the escape sequence for a specific format.</li>
+            <li id="getFormatCode"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/getFormatCode.xhtml">getFormatCode()</a>
+                — Returns the code for a given formating option of a given type.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__construct.xhtml">__construct()</a>
+                — Create a new console output handler.</li>
+            <li id="__get"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__get.xhtml">__get()</a>
+                — Property read access.</li>
+            <li id="__isset"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__isset.xhtml">__isset()</a>
+                — Property isset access.</li>
+            <li id="__set"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/__set.xhtml">__set()</a>
+                — Property write access.</li>
+            <li id="formatText"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/formatText.xhtml">formatText()</a>
+                — Returns a formated version of the text.</li>
+            <li id="getOptions"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/getOptions.xhtml">getOptions()</a>
+                — Returns the current options.</li>
+            <li id="isValidFormatCode"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/isValidFormatCode.xhtml">isValidFormatCode()</a>
+                — Returns if a format code is valid for the specific formating option.</li>
+            <li id="outputLine"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/outputLine.xhtml">outputLine()</a>
+                — Print text to the console and automatically append a line break.</li>
+            <li id="outputText"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/outputText.xhtml">outputText()</a>
+                — Print text to the console.</li>
+            <li id="restorePos"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/restorePos.xhtml">restorePos()</a>
+                — Restores a cursor position.</li>
+            <li id="setOptions"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/setOptions.xhtml">setOptions()</a>
+                — Set new options.</li>
+            <li id="storePos"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/storePos.xhtml">storePos()</a>
+                — Stores the current cursor position.</li>
+            <li id="toPos"><a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput/toPos.xhtml">toPos()</a>
+                — Move the cursor to a specific column of the current line.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

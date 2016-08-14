@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\AST\AbstractASTCallable</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_AST">PDepend\Source\AST</a>
+          </li>
+          <li class="separator">AbstractASTCallable</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/AbstractASTCallable.php.xhtml#line55">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\AST\</small>AbstractASTCallable</h1>
+        <h4>Abstract base class for callable objects.</h4>
+        <p>Callable objects is a generic parent for methods and functions.</p>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractASTCallable
+                extends <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact.xhtml">AbstractASTArtifact</a>
+                implements
+                <a title="PDepend\Source\AST\ASTCallable" href="../interfaces/PDepend_Source_AST_ASTCallable.xhtml">ASTCallable</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="\PDepend\Util\Cache\CacheDriver">CacheDriver</span> <a href="#members">$cache</a> =
+                        null;
+                    </li><li>protected <span title="\PDepend\Source\AST\ASTClassOrInterfaceReference">ASTClassOrInterfaceReference</span> <a href="#members">$returnClassReference</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$exceptionClassReferences</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$returnsReference</a> =
+                        false;
+                    </li><li>protected array <a href="#members">$nodes</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$startLine</a> =
+                        0;
+                    </li><li>protected integer <a href="#members">$endLine</a> =
+                        0;
+                    </li><li>private array <a href="#members">$parameters</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public AbstractASTCallable <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setCache.xhtml">setCache</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/addChild.xhtml">addChild</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getChildren.xhtml">getChildren</a>()
+                    </li><li>public ASTNode <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getFirstChildOfType.xhtml">getFirstChildOfType</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/findChildrenOfType.xhtml">findChildrenOfType</a>()
+                    </li><li>public array(mixed) <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getTokens.xhtml">getTokens</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setTokens.xhtml">setTokens</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getStartLine.xhtml">getStartLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getEndLine.xhtml">getEndLine</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getDependencies.xhtml">getDependencies</a>()
+                    </li><li>public AbstractASTClassOrInterface <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getReturnClass.xhtml">getReturnClass</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/hasReturnClass.xhtml">hasReturnClass</a>()
+                    </li><li>public ASTType <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getReturnType.xhtml">getReturnType</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setReturnClassReference.xhtml">setReturnClassReference</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/addExceptionClassReference.xhtml">addExceptionClassReference</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getExceptionClasses.xhtml">getExceptionClasses</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getParameters.xhtml">getParameters</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/returnsReference.xhtml">returnsReference</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setReturnsReference.xhtml">setReturnsReference</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getStaticVariables.xhtml">getStaticVariables</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/isCached.xhtml">isCached</a>()
+                    </li><li>private void <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/initParameters.xhtml">initParameters</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/__sleep.xhtml">__sleep</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/free.xhtml">free</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact.xhtml">PDepend\Source\AST\AbstractASTArtifact</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\AST\ASTCallable" href="../interfaces/PDepend_Source_AST_ASTCallable.xhtml">PDepend\Source\AST\ASTCallable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="parameters"><strong>$parameters</strong>
+                —
+                array<br/><span class="indent">List of method/function parameters.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="cache"><strong>$cache</strong>
+                —
+                <a title="\PDepend\Util\Cache\CacheDriver" href="../classes/_PDepend_Util_Cache_CacheDriver.xhtml">\PDepend\Util\Cache\CacheDriver</a><br/><span class="indent">The internal used cache instance.</span></li>
+            <li id="endLine"><strong>$endLine</strong>
+                —
+                integer<br/><span class="indent">The end line number of the method or function declaration.</span></li>
+            <li id="exceptionClassReferences"><strong>$exceptionClassReferences</strong>
+                —
+                array<br/><span class="indent">List of all exceptions classes referenced by this callable.</span></li>
+            <li id="nodes"><strong>$nodes</strong>
+                —
+                array<br/><span class="indent">List of all parsed child nodes.</span></li>
+            <li id="returnClassReference"><strong>$returnClassReference</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTClassOrInterfaceReference" href="../classes/_PDepend_Source_AST_ASTClassOrInterfaceReference.xhtml">\PDepend\Source\AST\ASTClassOrInterfaceReference</a><br/><span class="indent">A reference instance for the return value of this callable. By default and for any scalar type this property is &lt;b&gt;null&lt;/b&gt;.</span></li>
+            <li id="returnsReference"><strong>$returnsReference</strong>
+                —
+                boolean<br/><span class="indent">Does this callable return a value by reference?</span></li>
+            <li id="startLine"><strong>$startLine</strong>
+                —
+                integer<br/><span class="indent">The start line number of the method or function declaration.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="initParameters"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/initParameters.xhtml">initParameters()</a>
+                — This method will initialize the &lt;b&gt;$_parameters&lt;/b&gt; property.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__sleep"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/__sleep.xhtml">__sleep()</a>
+                — The magic sleep method will be called by the PHP engine when this class gets serialized. It returns an array with those properties that should be cached for all callable instances.</li>
+            <li id="addChild"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/addChild.xhtml">addChild()</a>
+                — Adds a parsed child node to this node.</li>
+            <li id="addExceptionClassReference"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/addExceptionClassReference.xhtml">addExceptionClassReference()</a>
+                — Adds a reference holder for a thrown exception class or interface to this callable.</li>
+            <li id="findChildrenOfType"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/findChildrenOfType.xhtml">findChildrenOfType()</a>
+                — Will find all children for the given type.</li>
+            <li id="free"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/free.xhtml">free()</a>
+                — This method can be called by the PDepend runtime environment or a utilizing component to free up memory. This methods are required for PHP version &lt; 5.3 where cyclic references can not be resolved automatically by PHP's garbage collector.</li>
+            <li id="getChildren"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getChildren.xhtml">getChildren()</a>
+                — Returns all child nodes of this method.</li>
+            <li id="getDependencies"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getDependencies.xhtml">getDependencies()</a>
+                — Returns all {@link \PDepend\Source\AST\AbstractASTClassOrInterface} objects this function depends on.</li>
+            <li id="getEndLine"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getEndLine.xhtml">getEndLine()</a>
+                — Returns the line number where the callable declaration ends.</li>
+            <li id="getExceptionClasses"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getExceptionClasses.xhtml">getExceptionClasses()</a>
+                — Returns an iterator with thrown exception {@link \PDepend\Source\AST\AbstractASTClassOrInterface} instances.</li>
+            <li id="getFirstChildOfType"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getFirstChildOfType.xhtml">getFirstChildOfType()</a>
+                — This method will search recursive for the first child node that is an instance of the given &lt;b&gt;$targetType&lt;/b&gt;. The returned value will be &lt;b&gt;null&lt;/b&gt; if no child exists for that.</li>
+            <li id="getParameters"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getParameters.xhtml">getParameters()</a>
+                — Returns an array with all method/function parameters.</li>
+            <li id="getReturnClass"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getReturnClass.xhtml">getReturnClass()</a>
+                — This method will return a class or interface instance that represents the return value of this callable. The returned value will be &lt;b&gt;null&lt;/b&gt; if there is no return value or the return value is scalat.</li>
+            <li id="getReturnType">
+              <a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getReturnType.xhtml">getReturnType()</a>
+            </li>
+            <li id="getStartLine"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getStartLine.xhtml">getStartLine()</a>
+                — Returns the line number where the callable declaration starts.</li>
+            <li id="getStaticVariables"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getStaticVariables.xhtml">getStaticVariables()</a>
+                — Returns an array with all declared static variables.</li>
+            <li id="getTokens"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/getTokens.xhtml">getTokens()</a>
+                — Returns the tokens found in the function body.</li>
+            <li id="hasReturnClass"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/hasReturnClass.xhtml">hasReturnClass()</a>
+                — Tests if this callable has a return class and return &lt;b&gt;true&lt;/b&gt; if it is configured.</li>
+            <li id="isCached"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/isCached.xhtml">isCached()</a>
+                — This method will return &lt;b&gt;true&lt;/b&gt; when this callable instance was restored from the cache and not currently parsed. Otherwise this method will return &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="returnsReference"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/returnsReference.xhtml">returnsReference()</a>
+                — This method will return &lt;b&gt;true&lt;/b&gt; when this method returns a value by reference, otherwise the return value will be &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="setCache"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setCache.xhtml">setCache()</a>
+                — Setter method for the currently used token cache, where this callable instance can store the associated tokens.</li>
+            <li id="setReturnClassReference"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setReturnClassReference.xhtml">setReturnClassReference()</a>
+                — This method can be used to set a reference instance for the declared function return type.</li>
+            <li id="setReturnsReference"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setReturnsReference.xhtml">setReturnsReference()</a>
+                — A call to this method will flag the callable instance with the returns reference flag, which means that the context function or method returns a value by reference.</li>
+            <li id="setTokens"><a title="PDepend\Source\AST\AbstractASTCallable" href="../classes/PDepend_Source_AST_AbstractASTCallable/setTokens.xhtml">setTokens()</a>
+                — Sets the tokens found in the function body.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

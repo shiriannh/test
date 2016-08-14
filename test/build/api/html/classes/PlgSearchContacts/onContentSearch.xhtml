@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="PlgSearchContacts" href="../../classes/PlgSearchContacts.xhtml">PlgSearchContacts</a>
+          </li>
+          <li class="separator">onContentSearch</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/plugins/search/contacts/contacts.php.xhtml#line58">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>PlgSearchContacts::</small>onContentSearch</h1>
+        <h4>Search content (contacts).</h4>
+        <p>The SQL must return the following fields that are used in a common display
+routine: href, title, section, created, text, browsernav.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function onContentSearch(string
+        $text,
+            [string
+        $phrase = '',
+            [string
+        $ordering = '',
+            [string
+        $areas = null]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$text</code>
+                —
+                string</dt>
+          <dd>Target search string.</dd>
+          <dt><code>$phrase</code>
+                —
+                string</dt>
+          <dd>Matching option (possible values: exact|any|all).  Default is "any".</dd>
+          <dt><code>$ordering</code>
+                —
+                string</dt>
+          <dd>Ordering option (possible values: newest|oldest|popular|alpha|category).  Default is "newest".</dd>
+          <dt><code>$areas</code>
+                —
+                string</dt>
+          <dd>An array if the search is to be restricted to areas or null to search all areas.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>array</dt>
+          <dd>Search results.</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

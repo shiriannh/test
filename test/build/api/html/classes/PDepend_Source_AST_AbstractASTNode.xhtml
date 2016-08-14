@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\AST\AbstractASTNode</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_AST">PDepend\Source\AST</a>
+          </li>
+          <li class="separator">AbstractASTNode</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/AbstractASTNode.php.xhtml#line53">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\AST\</small>AbstractASTNode</h1>
+        <h4>This is an abstract base implementation of the ast node interface.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractASTNode
+                implements
+                <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode.xhtml">ASTNode</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$nodes</a> =
+                        ;
+                    </li><li>protected <span title="\PDepend\Source\AST\ASTNode">ASTNode</span> <a href="#members">$parent</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$comment</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$metadata</a> =
+                        '::::';
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setImage.xhtml">setImage</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getImage.xhtml">getImage</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getStartLine.xhtml">getStartLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getStartColumn.xhtml">getStartColumn</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getEndLine.xhtml">getEndLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getEndColumn.xhtml">getEndColumn</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/configureLinesAndColumns.xhtml">configureLinesAndColumns</a>()
+                    </li><li>protected integer <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadataInteger.xhtml">getMetadataInteger</a>()
+                    </li><li>protected void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setMetadataInteger.xhtml">setMetadataInteger</a>()
+                    </li><li>protected boolean <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadataBoolean.xhtml">getMetadataBoolean</a>()
+                    </li><li>protected void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setMetadataBoolean.xhtml">setMetadataBoolean</a>()
+                    </li><li>protected mixed <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadata.xhtml">getMetadata</a>()
+                    </li><li>protected void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setMetadata.xhtml">setMetadata</a>()
+                    </li><li>protected integer <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadataSize.xhtml">getMetadataSize</a>()
+                    </li><li>public ASTNode <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getChild.xhtml">getChild</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getChildren.xhtml">getChildren</a>()
+                    </li><li>public ASTNode <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getFirstChildOfType.xhtml">getFirstChildOfType</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/findChildrenOfType.xhtml">findChildrenOfType</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/prependChild.xhtml">prependChild</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/addChild.xhtml">addChild</a>()
+                    </li><li>public ASTNode <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getParent.xhtml">getParent</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getParentsOfType.xhtml">getParentsOfType</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setParent.xhtml">setParent</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getComment.xhtml">getComment</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setComment.xhtml">setComment</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/__sleep.xhtml">__sleep</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/__wakeup.xhtml">__wakeup</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode.xhtml">PDepend\Source\AST\ASTNode</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="comment"><strong>$comment</strong>
+                —
+                string<br/><span class="indent">An optional doc comment for this node.</span></li>
+            <li id="metadata"><strong>$metadata</strong>
+                —
+                string<br/><span class="indent">Metadata for this node instance, serialized in a string. This string contains the start, end line, and the start, end column and the node image in a colon seperated string.</span></li>
+            <li id="nodes"><strong>$nodes</strong>
+                —
+                array<br/><span class="indent">Parsed child nodes of this node.</span></li>
+            <li id="parent"><strong>$parent</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTNode" href="../classes/_PDepend_Source_AST_ASTNode.xhtml">\PDepend\Source\AST\ASTNode</a><br/><span class="indent">The parent node of this node or &lt;b&gt;null&lt;/b&gt; when this node is the root of a node tree.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="getMetadata"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadata.xhtml">getMetadata()</a>
+                — Returns the value that was stored under the given index.</li>
+            <li id="getMetadataBoolean"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadataBoolean.xhtml">getMetadataBoolean()</a>
+                — Returns a boolean value that was stored under the given index.</li>
+            <li id="getMetadataInteger"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadataInteger.xhtml">getMetadataInteger()</a>
+                — Returns an integer value that was stored under the given index.</li>
+            <li id="getMetadataSize"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getMetadataSize.xhtml">getMetadataSize()</a>
+                — Returns the total number of the used property bag.</li>
+            <li id="setMetadata"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setMetadata.xhtml">setMetadata()</a>
+                — Stores the given value under the given index in an internal storage container.</li>
+            <li id="setMetadataBoolean"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setMetadataBoolean.xhtml">setMetadataBoolean()</a>
+                — Stores a boolean value under the given index in the internally used data string.</li>
+            <li id="setMetadataInteger"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setMetadataInteger.xhtml">setMetadataInteger()</a>
+                — Stores an integer value under the given index in the internally used data string.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/__construct.xhtml">__construct()</a>
+                — Constructs a new ast node instance.</li>
+            <li id="__sleep"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/__sleep.xhtml">__sleep()</a>
+                — The magic sleep method will be called by PHP's runtime environment right before an instance of this class gets serialized. It should return an array with those property names that should be serialized for this class.</li>
+            <li id="__wakeup"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/__wakeup.xhtml">__wakeup()</a>
+                — The magic wakeup method will be called by PHP's runtime environment when a previously serialized object gets unserialized. This implementation of the wakeup method restores the dependencies between an ast node and the node's children.</li>
+            <li id="addChild"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/addChild.xhtml">addChild()</a>
+                — This method adds a new child node to this node instance.</li>
+            <li id="configureLinesAndColumns"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/configureLinesAndColumns.xhtml">configureLinesAndColumns()</a>
+                — For better performance we have moved the single setter methods for the node columns and lines into this configure method.</li>
+            <li id="findChildrenOfType"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/findChildrenOfType.xhtml">findChildrenOfType()</a>
+                — This method will search recursive for all child nodes that are an instance of the given &lt;b&gt;$targetType&lt;/b&gt;. The returned value will be an empty &lt;b&gt;array&lt;/b&gt; if no child exists for that.</li>
+            <li id="getChild"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getChild.xhtml">getChild()</a>
+                — Returns the node instance for the given index or throws an exception.</li>
+            <li id="getChildren"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getChildren.xhtml">getChildren()</a>
+                — This method returns all direct children of the actual node.</li>
+            <li id="getComment"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getComment.xhtml">getComment()</a>
+                — Returns a doc comment for this node or &lt;b&gt;null&lt;/b&gt; when no comment was found.</li>
+            <li id="getEndColumn"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getEndColumn.xhtml">getEndColumn()</a>
+                — Returns the end column for this ast node.</li>
+            <li id="getEndLine"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getEndLine.xhtml">getEndLine()</a>
+                — Returns the end line for this ast node.</li>
+            <li id="getFirstChildOfType"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getFirstChildOfType.xhtml">getFirstChildOfType()</a>
+                — This method will search recursive for the first child node that is an instance of the given &lt;b&gt;$targetType&lt;/b&gt;. The returned value will be &lt;b&gt;null&lt;/b&gt; if no child exists for that.</li>
+            <li id="getImage"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getImage.xhtml">getImage()</a>
+                — Returns the source image of this ast node.</li>
+            <li id="getParent"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getParent.xhtml">getParent()</a>
+                — Returns the parent node of this node or &lt;b&gt;null&lt;/b&gt; when this node is the root of a node tree.</li>
+            <li id="getParentsOfType"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getParentsOfType.xhtml">getParentsOfType()</a>
+                — Traverses up the node tree and finds all parent nodes that are instances of &lt;b&gt;$parentType&lt;/b&gt;.</li>
+            <li id="getStartColumn"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getStartColumn.xhtml">getStartColumn()</a>
+                — Returns the start column for this ast node.</li>
+            <li id="getStartLine"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/getStartLine.xhtml">getStartLine()</a>
+                — Returns the start line for this ast node.</li>
+            <li id="prependChild"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/prependChild.xhtml">prependChild()</a>
+                — This method adds a new child node at the first position of the children.</li>
+            <li id="setComment"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setComment.xhtml">setComment()</a>
+                — Sets the raw doc comment for this node.</li>
+            <li id="setImage"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setImage.xhtml">setImage()</a>
+                — Sets the image for this ast node.</li>
+            <li id="setParent"><a title="PDepend\Source\AST\AbstractASTNode" href="../classes/PDepend_Source_AST_AbstractASTNode/setParent.xhtml">setParent()</a>
+                — Sets the parent node of this node.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JUcmType</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JUcmType</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/ucm/type.php.xhtml#line51">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JUcmType</h1>
+        <h4>UCM Class for handling content types</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JUcmType
+                implements
+                <a title="JUcm" href="../interfaces/JUcm.xhtml">JUcm</a>
+            {<br/><ul class="none"><li>// members</li><li>public <span title="JUcmType">JUcmType</span> <a href="#members">$type</a>;
+                    </li><li>protected <span title="JDatabaseDriver">JDatabaseDriver</span> <a href="#members">$db</a>;
+                    </li><li>protected  <a href="#members">$alias</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JUcmType" href="../classes/JUcmType/__construct.xhtml">__construct</a>()
+                    </li><li>public  <a title="JUcmType" href="../classes/JUcmType/getType.xhtml">getType</a>()
+                    </li><li>public  <a title="JUcmType" href="../classes/JUcmType/getTypeByAlias.xhtml">getTypeByAlias</a>()
+                    </li><li>public mixed <a title="JUcmType" href="../classes/JUcmType/getTypeByTable.xhtml">getTypeByTable</a>()
+                    </li><li>public mixed <a title="JUcmType" href="../classes/JUcmType/getTypeId.xhtml">getTypeId</a>()
+                    </li><li>public mixed <a title="JUcmType" href="../classes/JUcmType/fieldmapExpand.xhtml">fieldmapExpand</a>()
+                    </li><li>public string <a title="JUcmType" href="../classes/JUcmType/__get.xhtml">__get</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JUcm" href="../interfaces/JUcm.xhtml">JUcm</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="alias"><strong>$alias</strong>
+                —
+                string<br/><span class="indent">The alias for the content type</span></li>
+            <li id="db"><strong>$db</strong>
+                —
+                <a title="JDatabaseDriver" href="../classes/JDatabaseDriver.xhtml">JDatabaseDriver</a><br/><span class="indent">The Database object</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="type"><strong>$type</strong>
+                —
+                <a title="JUcmType" href="../classes/JUcmType.xhtml">JUcmType</a><br/><span class="indent">The UCM Type</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JUcmType" href="../classes/JUcmType/__construct.xhtml">__construct()</a>
+                — Class constructor</li>
+            <li id="__get"><a title="JUcmType" href="../classes/JUcmType/__get.xhtml">__get()</a>
+                — Magic method to get the name of the field mapped to a ucm field (core_something).</li>
+            <li id="fieldmapExpand"><a title="JUcmType" href="../classes/JUcmType/fieldmapExpand.xhtml">fieldmapExpand()</a>
+                — Method to expand the field mapping</li>
+            <li id="getType"><a title="JUcmType" href="../classes/JUcmType/getType.xhtml">getType()</a>
+                — Get the Content Type</li>
+            <li id="getTypeByAlias"><a title="JUcmType" href="../classes/JUcmType/getTypeByAlias.xhtml">getTypeByAlias()</a>
+                — Get the Content Type from the alias</li>
+            <li id="getTypeByTable"><a title="JUcmType" href="../classes/JUcmType/getTypeByTable.xhtml">getTypeByTable()</a>
+                — Get the Content Type from the table class name</li>
+            <li id="getTypeId"><a title="JUcmType" href="../classes/JUcmType/getTypeId.xhtml">getTypeId()</a>
+                — Retrieves the UCM type ID</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

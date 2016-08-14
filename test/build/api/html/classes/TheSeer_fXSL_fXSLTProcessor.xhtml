@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - TheSeer\fXSL\fXSLTProcessor</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#TheSeer_fXSL">TheSeer\fXSL</a>
+          </li>
+          <li class="separator">fXSLTProcessor</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/theseer/fxsl/src/fxsltprocessor.php.xhtml#line58">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>TheSeer\fXSL\</small>fXSLTProcessor</h1>
+        <h4>fXSLTProcessor</h4>
+        <p>This class extends the original XSLTProcessor with custom funcationality<br/>to allow nicer php level callbacks and use exceptions in favor of<br/>semi-complete documents and standard php errors<br/><br/>Note: This code switches to libxml internal errors mode</p>
+        <ul>
+          <li>Author: Arne Blankerts &lt;arne@blankerts.de&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class fXSLTProcessor
+                extends <a title="XSLTProcessor" href="../classes/XSLTProcessor.xhtml">XSLTProcessor</a>
+            {<br/><ul class="none"><li>// members</li><li>private static array <a href="#members">$registry</a> =
+                        ;
+                    </li><li>private boolean <a href="#members">$initDone</a> =
+                        FALSE;
+                    </li><li>private boolean <a href="#members">$registered</a> =
+                        FALSE;
+                    </li><li>private <span title="\DOMDocument">DOMDocument</span> <a href="#members">$stylesheet</a>;
+                    </li><li>private  <a href="#members">$hash</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/__destruct.xhtml">__destruct</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/loadStylesheetFromFile.xhtml">loadStylesheetFromFile</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/loadStylesheetFromXML.xhtml">loadStylesheetFromXML</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/importStylesheet.xhtml">importStylesheet</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/registerPHPFunctions.xhtml">registerPHPFunctions</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/transformToDoc.xhtml">transformToDoc</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/transformToUri.xhtml">transformToUri</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/transformToXml.xhtml">transformToXml</a>()
+                    </li><li>public void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/registerCallback.xhtml">registerCallback</a>()
+                    </li><li>public static DomNode <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/callbackHook.xhtml">callbackHook</a>()
+                    </li><li>private void <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/initStylesheet.xhtml">initStylesheet</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="XSLTProcessor" href="../classes/XSLTProcessor.xhtml">XSLTProcessor</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="hash"><strong>$hash</strong>
+                —
+                string<br/><span class="indent">The spl_object_hash of the current instance</span></li>
+            <li id="initDone"><strong>$initDone</strong>
+                —
+                boolean<br/><span class="indent">Flag to signal if initStyleSheet has been called</span></li>
+            <li id="registered"><strong>$registered</strong>
+                —
+                boolean<br/><span class="indent">Flag to signal if registerPHPFunctions has been called</span></li>
+            <li id="registry"><strong>$registry</strong>
+                —
+                array<br/><span class="indent">Static registry for registered callback objects</span></li>
+            <li id="stylesheet"><strong>$stylesheet</strong>
+                —
+                <a title="\DOMDocument" href="../classes/_DOMDocument.xhtml">\DOMDocument</a><br/><span class="indent">The given XSL Stylesheet to process</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="initStylesheet"><a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/initStylesheet.xhtml">initStylesheet()</a>
+                — Internal helper to do the template initialisation and injection of registered objects</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/__construct.xhtml">__construct()</a>
+                — Constructor, allowing to directly inject a Stylesheet for later processing</li>
+            <li id="__destruct"><a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/__destruct.xhtml">__destruct()</a>
+                — Destructor to cleanup registry</li>
+            <li id="callbackHook"><a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/callbackHook.xhtml">callbackHook()</a>
+                — Static method to be called from within xsl</li>
+            <li id="importStylesheet">
+              <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/importStylesheet.xhtml">importStylesheet()</a>
+            </li>
+            <li id="loadStylesheetFromFile"><a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/loadStylesheetFromFile.xhtml">loadStylesheetFromFile()</a>
+                — Load a Stylesheet from a file and import it</li>
+            <li id="loadStylesheetFromXML"><a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/loadStylesheetFromXML.xhtml">loadStylesheetFromXML()</a>
+                — Load a Stylesheet from xml string and import it</li>
+            <li id="registerCallback"><a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/registerCallback.xhtml">registerCallback()</a>
+                — Register an fXSLCallback object instance</li>
+            <li id="registerPHPFunctions">
+              <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/registerPHPFunctions.xhtml">registerPHPFunctions()</a>
+            </li>
+            <li id="transformToDoc">
+              <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/transformToDoc.xhtml">transformToDoc()</a>
+            </li>
+            <li id="transformToUri">
+              <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/transformToUri.xhtml">transformToUri()</a>
+            </li>
+            <li id="transformToXml">
+              <a title="TheSeer\fXSL\fXSLTProcessor" href="../classes/TheSeer_fXSL_fXSLTProcessor/transformToXml.xhtml">transformToXml()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

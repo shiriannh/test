@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JDatabaseDriverSqlite</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JDatabaseDriverSqlite</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/database/driver/sqlite.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JDatabaseDriverSqlite</h1>
+        <h4>SQLite database driver</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JDatabaseDriverSqlite
+                extends <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo.xhtml">JDatabaseDriverPdo</a>
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$name</a> =
+                        'sqlite';
+                    </li><li>public string <a href="#members">$serverType</a> =
+                        'sqlite';
+                    </li><li>protected string <a href="#members">$nameQuote</a> =
+                        '`';
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/__destruct.xhtml">__destruct</a>()
+                    </li><li>public void <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/disconnect.xhtml">disconnect</a>()
+                    </li><li>public JDatabaseDriverSqlite <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/dropTable.xhtml">dropTable</a>()
+                    </li><li>public string <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/escape.xhtml">escape</a>()
+                    </li><li>public mixed <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getCollation.xhtml">getCollation</a>()
+                    </li><li>public string <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getConnectionCollation.xhtml">getConnectionCollation</a>()
+                    </li><li>public array <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableCreate.xhtml">getTableCreate</a>()
+                    </li><li>public array <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableColumns.xhtml">getTableColumns</a>()
+                    </li><li>public array <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableKeys.xhtml">getTableKeys</a>()
+                    </li><li>public array <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableList.xhtml">getTableList</a>()
+                    </li><li>public string <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getVersion.xhtml">getVersion</a>()
+                    </li><li>public boolean <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/select.xhtml">select</a>()
+                    </li><li>public boolean <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/setUtf.xhtml">setUtf</a>()
+                    </li><li>public JDatabaseDriverSqlite <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/lockTable.xhtml">lockTable</a>()
+                    </li><li>public JDatabaseDriverSqlite <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/renameTable.xhtml">renameTable</a>()
+                    </li><li>public JDatabaseDriverSqlite <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/unlockTables.xhtml">unlockTables</a>()
+                    </li><li>public static boolean <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/isSupported.xhtml">isSupported</a>()
+                    </li><li>public void <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/transactionCommit.xhtml">transactionCommit</a>()
+                    </li><li>public void <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/transactionRollback.xhtml">transactionRollback</a>()
+                    </li><li>public void <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/transactionStart.xhtml">transactionStart</a>()
+                    </li><li>public array <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getAlterTableCharacterSet.xhtml">getAlterTableCharacterSet</a>()
+                    </li><li>protected string <a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getCreateDatabaseQuery.xhtml">getCreateDatabaseQuery</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo.xhtml">JDatabaseDriverPdo</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="nameQuote"><strong>$nameQuote</strong>
+                —
+                string<br/><span class="indent">The character(s) used to quote SQL statement names such as table names or field names, etc. The child classes should define this as necessary.  If a single character string the same character is used for both sides of the quoted name, else the first character will be used for the opening quote and the second for the closing quote.</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The name of the database driver.</span></li>
+            <li id="serverType"><strong>$serverType</strong>
+                —
+                string<br/><span class="indent">The type of the database server family supported by this driver.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="getCreateDatabaseQuery"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getCreateDatabaseQuery.xhtml">getCreateDatabaseQuery()</a>
+                — Return the query string to create new Database.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__destruct"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/__destruct.xhtml">__destruct()</a>
+                — Destructor.</li>
+            <li id="disconnect"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/disconnect.xhtml">disconnect()</a>
+                — Disconnects the database.</li>
+            <li id="dropTable"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/dropTable.xhtml">dropTable()</a>
+                — Drops a table from the database.</li>
+            <li id="escape"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/escape.xhtml">escape()</a>
+                — Method to escape a string for usage in an SQLite statement.</li>
+            <li id="getAlterTableCharacterSet"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getAlterTableCharacterSet.xhtml">getAlterTableCharacterSet()</a>
+                — Get the query strings to alter the character set and collation of a table.</li>
+            <li id="getCollation"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getCollation.xhtml">getCollation()</a>
+                — Method to get the database collation in use by sampling a text field of a table in the database.</li>
+            <li id="getConnectionCollation"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getConnectionCollation.xhtml">getConnectionCollation()</a>
+                — Method to get the database connection collation, as reported by the driver. If the connector doesn't support reporting this value please return an empty string.</li>
+            <li id="getTableColumns"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableColumns.xhtml">getTableColumns()</a>
+                — Retrieves field information about a given table.</li>
+            <li id="getTableCreate"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableCreate.xhtml">getTableCreate()</a>
+                — Shows the table CREATE statement that creates the given tables.</li>
+            <li id="getTableKeys"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableKeys.xhtml">getTableKeys()</a>
+                — Get the details list of keys for a table.</li>
+            <li id="getTableList"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getTableList.xhtml">getTableList()</a>
+                — Method to get an array of all tables in the database (schema).</li>
+            <li id="getVersion"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/getVersion.xhtml">getVersion()</a>
+                — Get the version of the database connector.</li>
+            <li id="isSupported"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/isSupported.xhtml">isSupported()</a>
+                — Test to see if the PDO ODBC connector is available.</li>
+            <li id="lockTable"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/lockTable.xhtml">lockTable()</a>
+                — Locks a table in the database.</li>
+            <li id="renameTable"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/renameTable.xhtml">renameTable()</a>
+                — Renames a table in the database.</li>
+            <li id="select"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/select.xhtml">select()</a>
+                — Select a database for use.</li>
+            <li id="setUtf"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/setUtf.xhtml">setUtf()</a>
+                — Set the connection to use UTF-8 character encoding.</li>
+            <li id="transactionCommit"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/transactionCommit.xhtml">transactionCommit()</a>
+                — Method to commit a transaction.</li>
+            <li id="transactionRollback"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/transactionRollback.xhtml">transactionRollback()</a>
+                — Method to roll back a transaction.</li>
+            <li id="transactionStart"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/transactionStart.xhtml">transactionStart()</a>
+                — Method to initialize a transaction.</li>
+            <li id="unlockTables"><a title="JDatabaseDriverSqlite" href="../classes/JDatabaseDriverSqlite/unlockTables.xhtml">unlockTables()</a>
+                — Unlocks tables in the database.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

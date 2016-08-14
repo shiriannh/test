@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - File_Iterator</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">File_Iterator</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/php-file-iterator/src/Iterator.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>File_Iterator</h1>
+        <h4>FilterIterator implementation that filters files based on prefix(es) and/or suffix(es). Hidden files and files from hidden directories are also filtered.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class File_Iterator
+                extends <a title="FilterIterator" href="../classes/FilterIterator.xhtml">FilterIterator</a>
+            {<br/><ul class="none"><li>// constants</li><li>const PREFIX = 0;</li><li>const SUFFIX = 1;</li></ul><ul class="none"><li>// members</li><li>protected array <a href="#members">$suffixes</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$prefixes</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$exclude</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$basepath</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="File_Iterator" href="../classes/File_Iterator/__construct.xhtml">__construct</a>()
+                    </li><li>public bool <a title="File_Iterator" href="../classes/File_Iterator/accept.xhtml">accept</a>()
+                    </li><li>protected bool <a title="File_Iterator" href="../classes/File_Iterator/acceptPath.xhtml">acceptPath</a>()
+                    </li><li>protected bool <a title="File_Iterator" href="../classes/File_Iterator/acceptPrefix.xhtml">acceptPrefix</a>()
+                    </li><li>protected bool <a title="File_Iterator" href="../classes/File_Iterator/acceptSuffix.xhtml">acceptSuffix</a>()
+                    </li><li>protected bool <a title="File_Iterator" href="../classes/File_Iterator/acceptSubString.xhtml">acceptSubString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="FilterIterator" href="../classes/FilterIterator.xhtml">FilterIterator</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="PREFIX">PREFIX</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td id="SUFFIX">SUFFIX</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="basepath"><strong>$basepath</strong>
+                —
+                string</li>
+            <li id="exclude"><strong>$exclude</strong>
+                —
+                array</li>
+            <li id="prefixes"><strong>$prefixes</strong>
+                —
+                array</li>
+            <li id="suffixes"><strong>$suffixes</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="acceptPath">
+              <a title="File_Iterator" href="../classes/File_Iterator/acceptPath.xhtml">acceptPath()</a>
+            </li>
+            <li id="acceptPrefix">
+              <a title="File_Iterator" href="../classes/File_Iterator/acceptPrefix.xhtml">acceptPrefix()</a>
+            </li>
+            <li id="acceptSubString">
+              <a title="File_Iterator" href="../classes/File_Iterator/acceptSubString.xhtml">acceptSubString()</a>
+            </li>
+            <li id="acceptSuffix">
+              <a title="File_Iterator" href="../classes/File_Iterator/acceptSuffix.xhtml">acceptSuffix()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="File_Iterator" href="../classes/File_Iterator/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="accept">
+              <a title="File_Iterator" href="../classes/File_Iterator/accept.xhtml">accept()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

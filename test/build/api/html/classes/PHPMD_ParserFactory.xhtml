@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\ParserFactory</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PHPMD">PHPMD</a>
+          </li>
+          <li class="separator">ParserFactory</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/ParserFactory.php.xhtml#line56">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\</small>ParserFactory</h1>
+        <h4>Simple factory that is used to return a ready to use PDepend instance.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ParserFactory
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$phpmd2pdepend</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public Parser <a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/create.xhtml">create</a>()
+                    </li><li>private Engine <a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/createInstance.xhtml">createInstance</a>()
+                    </li><li>private Engine <a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/init.xhtml">init</a>()
+                    </li><li>private void <a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initInput.xhtml">initInput</a>()
+                    </li><li>private void <a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initIgnores.xhtml">initIgnores</a>()
+                    </li><li>private void <a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initExtensions.xhtml">initExtensions</a>()
+                    </li><li>private void <a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initOptions.xhtml">initOptions</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="phpmd2pdepend"><strong>$phpmd2pdepend</strong>
+                —
+                array<br/><span class="indent">Mapping between phpmd option names and those used by pdepend.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="createInstance"><a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/createInstance.xhtml">createInstance()</a>
+                — Creates a clean php depend instance with some base settings.</li>
+            <li id="init"><a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/init.xhtml">init()</a>
+                — Configures the given PDepend\Engine instance based on some user settings.</li>
+            <li id="initExtensions"><a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initExtensions.xhtml">initExtensions()</a>
+                — Initializes the accepted php source file extensions.</li>
+            <li id="initIgnores"><a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initIgnores.xhtml">initIgnores()</a>
+                — Initializes the ignored files and path's.</li>
+            <li id="initInput"><a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initInput.xhtml">initInput()</a>
+                — Configures the input source.</li>
+            <li id="initOptions"><a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/initOptions.xhtml">initOptions()</a>
+                — Initializes additional options for pdepend.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="create"><a title="PHPMD\ParserFactory" href="../classes/PHPMD_ParserFactory/create.xhtml">create()</a>
+                — Creates the used {@link \PHPMD\Parser} analyzer instance.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

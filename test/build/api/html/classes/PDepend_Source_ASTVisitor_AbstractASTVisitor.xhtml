@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\ASTVisitor\AbstractASTVisitor</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_ASTVisitor">PDepend\Source\ASTVisitor</a>
+          </li>
+          <li class="separator">AbstractASTVisitor</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/ASTVisitor/AbstractASTVisitor.php.xhtml#line62">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\ASTVisitor\</small>AbstractASTVisitor</h1>
+        <h4>This abstract visitor implementation provides a default traversal algorithm that can be used for custom visitors.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractASTVisitor
+                implements
+                <a title="PDepend\Source\ASTVisitor\ASTVisitor" href="../interfaces/PDepend_Source_ASTVisitor_ASTVisitor.xhtml">ASTVisitor</a>
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$listeners</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public Iterator <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/getVisitListeners.xhtml">getVisitListeners</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/addVisitListener.xhtml">addVisitListener</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitClass.xhtml">visitClass</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitTrait.xhtml">visitTrait</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitCompilationUnit.xhtml">visitCompilationUnit</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitFunction.xhtml">visitFunction</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitInterface.xhtml">visitInterface</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitMethod.xhtml">visitMethod</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitNamespace.xhtml">visitNamespace</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitParameter.xhtml">visitParameter</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitProperty.xhtml">visitProperty</a>()
+                    </li><li>public mixed <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/__call.xhtml">__call</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartClass.xhtml">fireStartClass</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndClass.xhtml">fireEndClass</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartTrait.xhtml">fireStartTrait</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndTrait.xhtml">fireEndTrait</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartFile.xhtml">fireStartFile</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndFile.xhtml">fireEndFile</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartFunction.xhtml">fireStartFunction</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndFunction.xhtml">fireEndFunction</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartInterface.xhtml">fireStartInterface</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndInterface.xhtml">fireEndInterface</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartMethod.xhtml">fireStartMethod</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndMethod.xhtml">fireEndMethod</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartNamespace.xhtml">fireStartNamespace</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndNamespace.xhtml">fireEndNamespace</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartParameter.xhtml">fireStartParameter</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndParameter.xhtml">fireEndParameter</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartProperty.xhtml">fireStartProperty</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndProperty.xhtml">fireEndProperty</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\ASTVisitor\ASTVisitor" href="../interfaces/PDepend_Source_ASTVisitor_ASTVisitor.xhtml">PDepend\Source\ASTVisitor\ASTVisitor</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="listeners"><strong>$listeners</strong>
+                —
+                array<br/><span class="indent">List of all registered listeners.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="fireEndClass"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndClass.xhtml">fireEndClass()</a>
+                — Sends an end class event.</li>
+            <li id="fireEndFile"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndFile.xhtml">fireEndFile()</a>
+                — Sends an end file event.</li>
+            <li id="fireEndFunction"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndFunction.xhtml">fireEndFunction()</a>
+                — Sends an end function event.</li>
+            <li id="fireEndInterface"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndInterface.xhtml">fireEndInterface()</a>
+                — Sends an end interface event.</li>
+            <li id="fireEndMethod"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndMethod.xhtml">fireEndMethod()</a>
+                — Sends an end method event.</li>
+            <li id="fireEndNamespace"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndNamespace.xhtml">fireEndNamespace()</a>
+                — Sends an end namespace event.</li>
+            <li id="fireEndParameter"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndParameter.xhtml">fireEndParameter()</a>
+                — Sends a end parameter event.</li>
+            <li id="fireEndProperty"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndProperty.xhtml">fireEndProperty()</a>
+                — Sends an end property event.</li>
+            <li id="fireEndTrait"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireEndTrait.xhtml">fireEndTrait()</a>
+                — Sends an end trait event.</li>
+            <li id="fireStartClass"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartClass.xhtml">fireStartClass()</a>
+                — Sends a start class event.</li>
+            <li id="fireStartFile"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartFile.xhtml">fireStartFile()</a>
+                — Sends a start file event.</li>
+            <li id="fireStartFunction"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartFunction.xhtml">fireStartFunction()</a>
+                — Sends a start function event.</li>
+            <li id="fireStartInterface"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartInterface.xhtml">fireStartInterface()</a>
+                — Sends a start interface event.</li>
+            <li id="fireStartMethod"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartMethod.xhtml">fireStartMethod()</a>
+                — Sends a start method event.</li>
+            <li id="fireStartNamespace"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartNamespace.xhtml">fireStartNamespace()</a>
+                — Sends a start namespace event.</li>
+            <li id="fireStartParameter"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartParameter.xhtml">fireStartParameter()</a>
+                — Sends a start parameter event.</li>
+            <li id="fireStartProperty"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartProperty.xhtml">fireStartProperty()</a>
+                — Sends a start property event.</li>
+            <li id="fireStartTrait"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/fireStartTrait.xhtml">fireStartTrait()</a>
+                — Sends a start trait event.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__call"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/__call.xhtml">__call()</a>
+                — Magic call method used to provide simplified visitor implementations.</li>
+            <li id="addVisitListener"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/addVisitListener.xhtml">addVisitListener()</a>
+                — Adds a new listener to this node visitor.</li>
+            <li id="getVisitListeners"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/getVisitListeners.xhtml">getVisitListeners()</a>
+                — Returns an iterator with all registered visit listeners.</li>
+            <li id="visitClass"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitClass.xhtml">visitClass()</a>
+                — Visits a class node.</li>
+            <li id="visitCompilationUnit"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitCompilationUnit.xhtml">visitCompilationUnit()</a>
+                — Visits a file node.</li>
+            <li id="visitFunction"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitFunction.xhtml">visitFunction()</a>
+                — Visits a function node.</li>
+            <li id="visitInterface"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitInterface.xhtml">visitInterface()</a>
+                — Visits a code interface object.</li>
+            <li id="visitMethod"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitMethod.xhtml">visitMethod()</a>
+                — Visits a method node.</li>
+            <li id="visitNamespace"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitNamespace.xhtml">visitNamespace()</a>
+                — Visits a namespace node.</li>
+            <li id="visitParameter"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitParameter.xhtml">visitParameter()</a>
+                — Visits a parameter node.</li>
+            <li id="visitProperty"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitProperty.xhtml">visitProperty()</a>
+                — Visits a property node.</li>
+            <li id="visitTrait"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor/visitTrait.xhtml">visitTrait()</a>
+                — Visits a trait node.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

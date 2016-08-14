@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JTwitterStatuses" href="../../classes/JTwitterStatuses.xhtml">JTwitterStatuses</a>
+          </li>
+          <li class="separator">getOembed</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="#throws">Throws</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/twitter/statuses.php.xhtml#line587">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JTwitterStatuses::</small>getOembed</h1>
+        <h4>Method to get information allowing the creation of an embedded representation of a Tweet on third party sites.</h4>
+        <p>Note: either the id or url parameters must be specified in a request. It is not necessary to include both.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function getOembed([integer
+        $id = null,
+            [string
+        $url = null,
+            [integer
+        $maxwidth = null,
+            [boolean
+        $hide_media = null,
+            [boolean
+        $hide_thread = null,
+            [boolean
+        $omit_script = null,
+            [string
+        $align = null,
+            [string
+        $related = null,
+            [string
+        $lang = null]]]]]]]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$id</code>
+                —
+                integer</dt>
+          <dd>The Tweet/status ID to return embed code for.</dd>
+          <dt><code>$url</code>
+                —
+                string</dt>
+          <dd>The URL of the Tweet/status to be embedded.</dd>
+          <dt><code>$maxwidth</code>
+                —
+                integer</dt>
+          <dd>The maximum width in pixels that the embed should be rendered at. This value is constrained to be<br/>between 250 and 550 pixels.</dd>
+          <dt><code>$hide_media</code>
+                —
+                boolean</dt>
+          <dd>Specifies whether the embedded Tweet should automatically expand images which were uploaded via<br/>POST statuses/update_with_media.</dd>
+          <dt><code>$hide_thread</code>
+                —
+                boolean</dt>
+          <dd>Specifies whether the embedded Tweet should automatically show the original message in the case that<br/>the embedded Tweet is a reply.</dd>
+          <dt><code>$omit_script</code>
+                —
+                boolean</dt>
+          <dd>Specifies whether the embedded Tweet HTML should include a `&lt;script&gt;` element pointing to widgets.js.<br/>In cases where a page already includes widgets.js, setting this value to true will prevent a redundant<br/>                                script element from being included.</dd>
+          <dt><code>$align</code>
+                —
+                string</dt>
+          <dd>Specifies whether the embedded Tweet should be left aligned, right aligned, or centered in the page.<br/>Valid values are left, right, center, and none.</dd>
+          <dt><code>$related</code>
+                —
+                string</dt>
+          <dd>A value for the TWT related parameter, as described in Web Intents. This value will be forwarded to all<br/>Web Intents calls.</dd>
+          <dt><code>$lang</code>
+                —
+                string</dt>
+          <dd>Language code for the rendered embed. This will affect the text and localization of the rendered HTML.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>array</dt>
+          <dd>The decoded JSON response</dd>
+        </dl>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="RuntimeException" href="../../classes/RuntimeException.xhtml">RuntimeException</a>
+            </code>
+          </dt>
+          <dd/>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

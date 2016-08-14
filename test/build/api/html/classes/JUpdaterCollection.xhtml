@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JUpdaterCollection</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JUpdaterCollection</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/updater/adapters/collection.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JUpdaterCollection</h1>
+        <h4>Collection Update Adapter Class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JUpdaterCollection
+                extends <a title="JUpdateAdapter" href="../classes/JUpdateAdapter.xhtml">JUpdateAdapter</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title=""/> <a href="#members">$base</a>;
+                    </li><li>protected array <a href="#members">$parent</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$pop_parent</a> =
+                        0;
+                    </li><li>protected  <a href="#members">$update_sites</a>;
+                    </li><li>protected  <a href="#members">$updates</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected  <a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_getStackLocation.xhtml">_getStackLocation</a>()
+                    </li><li>protected string <a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_getParent.xhtml">_getParent</a>()
+                    </li><li>public void <a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_startElement.xhtml">_startElement</a>()
+                    </li><li>protected void <a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_endElement.xhtml">_endElement</a>()
+                    </li><li>public array <a title="JUpdaterCollection" href="../classes/JUpdaterCollection/findUpdate.xhtml">findUpdate</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JUpdateAdapter" href="../classes/JUpdateAdapter.xhtml">JUpdateAdapter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">252</td>
+            <td>Decrement the bad counter if non-zero</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="base"><strong>$base</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Root of the tree</span></li>
+            <li id="parent"><strong>$parent</strong>
+                —
+                array<br/><span class="indent">Tree of objects</span></li>
+            <li id="pop_parent"><strong>$pop_parent</strong>
+                —
+                boolean<br/><span class="indent">Used to control if an item has a child or not</span></li>
+            <li id="update_sites"><strong>$update_sites</strong>
+                —
+                array</li>
+            <li id="updates"><strong>$updates</strong>
+                —
+                array<br/><span class="indent">A list of discovered updates</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_endElement"><a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_endElement.xhtml">_endElement()</a>
+                — Closing an XML element Note: This is a protected function though has to be exposed externally as a callback</li>
+            <li id="_getParent"><a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_getParent.xhtml">_getParent()</a>
+                — Get the parent tag</li>
+            <li id="_getStackLocation"><a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_getStackLocation.xhtml">_getStackLocation()</a>
+                — Gets the reference to the current direct parent</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="_startElement"><a title="JUpdaterCollection" href="../classes/JUpdaterCollection/_startElement.xhtml">_startElement()</a>
+                — Opening an XML element</li>
+            <li id="findUpdate"><a title="JUpdaterCollection" href="../classes/JUpdaterCollection/findUpdate.xhtml">findUpdate()</a>
+                — Finds an update</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - TemplatesViewTemplate</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">TemplatesViewTemplate</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_templates/views/template/view.html.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>TemplatesViewTemplate</h1>
+        <h4>View to edit a template style.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class TemplatesViewTemplate
+                extends <a title="JViewLegacy" href="../classes/JViewLegacy.xhtml">JViewLegacy</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$state</a>;
+                    </li><li>protected  <a href="#members">$template</a>;
+                    </li><li>protected  <a href="#members">$form</a>;
+                    </li><li>protected  <a href="#members">$source</a>;
+                    </li><li>protected  <a href="#members">$id</a>;
+                    </li><li>protected  <a href="#members">$file</a>;
+                    </li><li>protected  <a href="#members">$overridesList</a>;
+                    </li><li>protected  <a href="#members">$fileName</a>;
+                    </li><li>protected  <a href="#members">$type</a>;
+                    </li><li>protected  <a href="#members">$image</a>;
+                    </li><li>protected  <a href="#members">$preview</a>;
+                    </li><li>protected  <a href="#members">$font</a>;
+                    </li><li>protected  <a href="#members">$files</a>;
+                    </li><li>protected  <a href="#members">$archive</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public mixed <a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/display.xhtml">display</a>()
+                    </li><li>protected void <a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/addToolbar.xhtml">addToolbar</a>()
+                    </li><li>protected string <a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/directoryTree.xhtml">directoryTree</a>()
+                    </li><li>protected string <a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/folderTree.xhtml">folderTree</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JViewLegacy" href="../classes/JViewLegacy.xhtml">JViewLegacy</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="archive">
+              <strong>$archive</strong>
+              <br/>
+              <span class="indent">An array containing a list of compressed files</span>
+            </li>
+            <li id="file">
+              <strong>$file</strong>
+              <br/>
+              <span class="indent">Encrypted file path</span>
+            </li>
+            <li id="fileName">
+              <strong>$fileName</strong>
+              <br/>
+              <span class="indent">Name of the present file</span>
+            </li>
+            <li id="files">
+              <strong>$files</strong>
+              <br/>
+              <span class="indent">A nested array containing lst of files and folders</span>
+            </li>
+            <li id="font">
+              <strong>$font</strong>
+              <br/>
+              <span class="indent">For loading font information</span>
+            </li>
+            <li id="form">
+              <strong>$form</strong>
+              <br/>
+              <span class="indent">For loading the source form</span>
+            </li>
+            <li id="id">
+              <strong>$id</strong>
+              <br/>
+              <span class="indent">Extension id</span>
+            </li>
+            <li id="image">
+              <strong>$image</strong>
+              <br/>
+              <span class="indent">For loading image information</span>
+            </li>
+            <li id="overridesList">
+              <strong>$overridesList</strong>
+              <br/>
+              <span class="indent">List of available overrides</span>
+            </li>
+            <li id="preview">
+              <strong>$preview</strong>
+              <br/>
+              <span class="indent">Template id for showing preview button</span>
+            </li>
+            <li id="source">
+              <strong>$source</strong>
+              <br/>
+              <span class="indent">For loading source file contents</span>
+            </li>
+            <li id="state">
+              <strong>$state</strong>
+              <br/>
+              <span class="indent">For loading extension state</span>
+            </li>
+            <li id="template">
+              <strong>$template</strong>
+              <br/>
+              <span class="indent">For loading template details</span>
+            </li>
+            <li id="type">
+              <strong>$type</strong>
+              <br/>
+              <span class="indent">Type of the file - image, source, font</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="addToolbar"><a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/addToolbar.xhtml">addToolbar()</a>
+                — Add the page title and toolbar.</li>
+            <li id="directoryTree"><a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/directoryTree.xhtml">directoryTree()</a>
+                — Method for creating the collapsible tree.</li>
+            <li id="folderTree"><a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/folderTree.xhtml">folderTree()</a>
+                — Method for listing the folder tree in modals.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="display"><a title="TemplatesViewTemplate" href="../classes/TemplatesViewTemplate/display.xhtml">display()</a>
+                — Execute and display a template script.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

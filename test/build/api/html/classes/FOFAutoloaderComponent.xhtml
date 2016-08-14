@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFAutoloaderComponent</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFAutoloaderComponent</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/autoloader/component.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFAutoloaderComponent</h1>
+        <h4>An autoloader for FOF-powered components. It allows the autoloading of various classes related to the operation of a component, from Controllers and Models to Helpers and Fields. If a class doesn't exist, it will be created on the fly.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFAutoloaderComponent
+            {<br/><ul class="none"><li>// members</li><li>public static <span title="FOFAutoloaderComponent">FOFAutoloaderComponent</span> <a href="#members">$autoloader</a> =
+                        null;
+                    </li><li>public static string <a href="#members">$fofPath</a> =
+                        null;
+                    </li><li>protected static array <a href="#members">$fofComponents</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static FOFAutoloaderComponent <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/init.xhtml">init</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/isFOFComponent.xhtml">isFOFComponent</a>()
+                    </li><li>private void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/class_alias.xhtml">class_alias</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_controller.xhtml">autoload_fof_controller</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_model.xhtml">autoload_fof_model</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_view.xhtml">autoload_fof_view</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_table.xhtml">autoload_fof_table</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_helper.xhtml">autoload_fof_helper</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_toolbar.xhtml">autoload_fof_toolbar</a>()
+                    </li><li>public void <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_field.xhtml">autoload_fof_field</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="fofComponents"><strong>$fofComponents</strong>
+                —
+                array<br/><span class="indent">An array holding component names and their FOF-ness status</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="autoloader"><strong>$autoloader</strong>
+                —
+                <a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent.xhtml">FOFAutoloaderComponent</a><br/><span class="indent">An instance of this autoloader</span></li>
+            <li id="fofPath"><strong>$fofPath</strong>
+                —
+                string<br/><span class="indent">The path to the FOF root directory</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="class_alias"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/class_alias.xhtml">class_alias()</a>
+                — Creates class aliases. On systems where eval() is enabled it creates a real class. On other systems it merely creates an alias. The eval() method is preferred as class_aliases result in the name of the class being instanciated not being available, making it impossible to create a class instance without passing a $config array :(</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/__construct.xhtml">__construct()</a>
+                — Public constructor. Registers the autoloader with PHP.</li>
+            <li id="autoload_fof_controller"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_controller.xhtml">autoload_fof_controller()</a>
+                — Autoload Controllers</li>
+            <li id="autoload_fof_field"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_field.xhtml">autoload_fof_field()</a>
+                — Autoload Fields</li>
+            <li id="autoload_fof_helper"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_helper.xhtml">autoload_fof_helper()</a>
+                — Autoload Helpers</li>
+            <li id="autoload_fof_model"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_model.xhtml">autoload_fof_model()</a>
+                — Autoload Models</li>
+            <li id="autoload_fof_table"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_table.xhtml">autoload_fof_table()</a>
+                — Autoload Tables</li>
+            <li id="autoload_fof_toolbar"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_toolbar.xhtml">autoload_fof_toolbar()</a>
+                — Autoload Toolbars</li>
+            <li id="autoload_fof_view"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/autoload_fof_view.xhtml">autoload_fof_view()</a>
+                — Autoload Views</li>
+            <li id="init"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/init.xhtml">init()</a>
+                — Initialise this autoloader</li>
+            <li id="isFOFComponent"><a title="FOFAutoloaderComponent" href="../classes/FOFAutoloaderComponent/isFOFComponent.xhtml">isFOFComponent()</a>
+                — Returns true if this is a FOF-powered component, i.e. if it has a fof.xml file in its main directory.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

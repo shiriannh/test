@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JInstaller</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JInstaller</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/installer/installer.php.xhtml#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JInstaller</h1>
+        <h4>Joomla base installer class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JInstaller
+                extends <a title="JAdapter" href="../classes/JAdapter.xhtml">JAdapter</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$paths</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$upgrade</a> =
+                        null;
+                    </li><li>public <span title=""/> <a href="#members">$manifestClass</a> =
+                        null;
+                    </li><li>protected boolean <a href="#members">$overwrite</a> =
+                        false;
+                    </li><li>protected array <a href="#members">$stepStack</a> =
+                        ;
+                    </li><li>public <span title="JTableExtension">JTableExtension</span> <a href="#members">$extension</a> =
+                        null;
+                    </li><li>public string <a href="#members">$message</a> =
+                        null;
+                    </li><li>public <span title=""/> <a href="#members">$manifest</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$extension_message</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$redirect_url</a> =
+                        null;
+                    </li><li>protected static <span title="JInstaller">JInstaller</span> <a href="#members">$instance</a>;
+                    </li><li>protected static  <a href="#members">$instances</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JInstaller" href="../classes/JInstaller/__construct.xhtml">__construct</a>()
+                    </li><li>public static JInstaller <a title="JInstaller" href="../classes/JInstaller/getInstance.xhtml">getInstance</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/isOverwrite.xhtml">isOverwrite</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/setOverwrite.xhtml">setOverwrite</a>()
+                    </li><li>public string <a title="JInstaller" href="../classes/JInstaller/getRedirectUrl.xhtml">getRedirectUrl</a>()
+                    </li><li>public void <a title="JInstaller" href="../classes/JInstaller/setRedirectUrl.xhtml">setRedirectUrl</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/isUpgrade.xhtml">isUpgrade</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/setUpgrade.xhtml">setUpgrade</a>()
+                    </li><li>public SimpleXMLElement <a title="JInstaller" href="../classes/JInstaller/getManifest.xhtml">getManifest</a>()
+                    </li><li>public string <a title="JInstaller" href="../classes/JInstaller/getPath.xhtml">getPath</a>()
+                    </li><li>public void <a title="JInstaller" href="../classes/JInstaller/setPath.xhtml">setPath</a>()
+                    </li><li>public void <a title="JInstaller" href="../classes/JInstaller/pushStep.xhtml">pushStep</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/abort.xhtml">abort</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/install.xhtml">install</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/discover_install.xhtml">discover_install</a>()
+                    </li><li>public array <a title="JInstaller" href="../classes/JInstaller/discover.xhtml">discover</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/update.xhtml">update</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/uninstall.xhtml">uninstall</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/refreshManifestCache.xhtml">refreshManifestCache</a>()
+                    </li><li>public boolean|JInstallerAdapter <a title="JInstaller" href="../classes/JInstaller/setupInstall.xhtml">setupInstall</a>()
+                    </li><li>public mixed <a title="JInstaller" href="../classes/JInstaller/parseQueries.xhtml">parseQueries</a>()
+                    </li><li>public mixed <a title="JInstaller" href="../classes/JInstaller/parseSQLFiles.xhtml">parseSQLFiles</a>()
+                    </li><li>public void <a title="JInstaller" href="../classes/JInstaller/setSchemaVersion.xhtml">setSchemaVersion</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/parseSchemaUpdates.xhtml">parseSchemaUpdates</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/parseFiles.xhtml">parseFiles</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/parseLanguages.xhtml">parseLanguages</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/parseMedia.xhtml">parseMedia</a>()
+                    </li><li>public string <a title="JInstaller" href="../classes/JInstaller/getParams.xhtml">getParams</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/copyFiles.xhtml">copyFiles</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/removeFiles.xhtml">removeFiles</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/copyManifest.xhtml">copyManifest</a>()
+                    </li><li>public boolean <a title="JInstaller" href="../classes/JInstaller/findManifest.xhtml">findManifest</a>()
+                    </li><li>public SimpleXMLElement|null <a title="JInstaller" href="../classes/JInstaller/isManifest.xhtml">isManifest</a>()
+                    </li><li>public string <a title="JInstaller" href="../classes/JInstaller/generateManifestCache.xhtml">generateManifestCache</a>()
+                    </li><li>public  <a title="JInstaller" href="../classes/JInstaller/cleanDiscoveredExtension.xhtml">cleanDiscoveredExtension</a>()
+                    </li><li>public array <a title="JInstaller" href="../classes/JInstaller/findDeletedFiles.xhtml">findDeletedFiles</a>()
+                    </li><li>public array <a title="JInstaller" href="../classes/JInstaller/loadMD5Sum.xhtml">loadMD5Sum</a>()
+                    </li><li>public static array <a title="JInstaller" href="../classes/JInstaller/parseXMLInstallFile.xhtml">parseXMLInstallFile</a>()
+                    </li><li>public JInstallerAdapter <a title="JInstaller" href="../classes/JInstaller/getAdapter.xhtml">getAdapter</a>()
+                    </li><li>public array <a title="JInstaller" href="../classes/JInstaller/getAdapters.xhtml">getAdapters</a>()
+                    </li><li>public JInstallerAdapter <a title="JInstaller" href="../classes/JInstaller/loadAdapter.xhtml">loadAdapter</a>()
+                    </li><li>public void <a title="JInstaller" href="../classes/JInstaller/loadAllAdapters.xhtml">loadAllAdapters</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JAdapter" href="../classes/JAdapter.xhtml">JAdapter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">1318</td>
+            <td>work out why the below line triggers 'node no longer exists' errors with files</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="extension_message"><strong>$extension_message</strong>
+                —
+                string<br/><span class="indent">The extension message that appears</span></li>
+            <li id="instance"><strong>$instance</strong>
+                —
+                <a title="JInstaller" href="../classes/JInstaller.xhtml">JInstaller</a><br/><span class="indent">JInstaller instance container.</span></li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array<br/><span class="indent">JInstaller instances container.</span></li>
+            <li id="overwrite"><strong>$overwrite</strong>
+                —
+                boolean<br/><span class="indent">True if existing files can be overwritten</span></li>
+            <li id="paths"><strong>$paths</strong>
+                —
+                array<br/><span class="indent">Array of paths needed by the installer</span></li>
+            <li id="redirect_url"><strong>$redirect_url</strong>
+                —
+                string<br/><span class="indent">The redirect URL if this extension (can be null if no redirect)</span></li>
+            <li id="stepStack"><strong>$stepStack</strong>
+                —
+                array<br/><span class="indent">Stack of installation steps - Used for installation rollback</span></li>
+            <li id="upgrade"><strong>$upgrade</strong>
+                —
+                boolean<br/><span class="indent">True if package is an upgrade</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="extension"><strong>$extension</strong>
+                —
+                <a title="JTableExtension" href="../classes/JTableExtension.xhtml">JTableExtension</a><br/><span class="indent">Extension Table Entry</span></li>
+            <li id="manifest"><strong>$manifest</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">The installation manifest XML object</span></li>
+            <li id="manifestClass"><strong>$manifestClass</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">The manifest trigger class</span></li>
+            <li id="message"><strong>$message</strong>
+                —
+                string<br/><span class="indent">The output from the install/uninstall scripts</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JInstaller" href="../classes/JInstaller/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="abort"><a title="JInstaller" href="../classes/JInstaller/abort.xhtml">abort()</a>
+                — Installation abort method</li>
+            <li id="cleanDiscoveredExtension"><a title="JInstaller" href="../classes/JInstaller/cleanDiscoveredExtension.xhtml">cleanDiscoveredExtension()</a>
+                — Cleans up discovered extensions if they're being installed some other way</li>
+            <li id="copyFiles"><a title="JInstaller" href="../classes/JInstaller/copyFiles.xhtml">copyFiles()</a>
+                — Copyfiles</li>
+            <li id="copyManifest"><a title="JInstaller" href="../classes/JInstaller/copyManifest.xhtml">copyManifest()</a>
+                — Copies the installation manifest file to the extension folder in the given client</li>
+            <li id="discover"><a title="JInstaller" href="../classes/JInstaller/discover.xhtml">discover()</a>
+                — Extension discover method</li>
+            <li id="discover_install"><a title="JInstaller" href="../classes/JInstaller/discover_install.xhtml">discover_install()</a>
+                — Discovered package installation method</li>
+            <li id="findDeletedFiles"><a title="JInstaller" href="../classes/JInstaller/findDeletedFiles.xhtml">findDeletedFiles()</a>
+                — Compares two "files" entries to find deleted files/folders</li>
+            <li id="findManifest"><a title="JInstaller" href="../classes/JInstaller/findManifest.xhtml">findManifest()</a>
+                — Tries to find the package manifest file</li>
+            <li id="generateManifestCache"><a title="JInstaller" href="../classes/JInstaller/generateManifestCache.xhtml">generateManifestCache()</a>
+                — Generates a manifest cache</li>
+            <li id="getAdapter"><a title="JInstaller" href="../classes/JInstaller/getAdapter.xhtml">getAdapter()</a>
+                — Fetches an adapter and adds it to the internal storage if an instance is not set while also ensuring its a valid adapter name</li>
+            <li id="getAdapters"><a title="JInstaller" href="../classes/JInstaller/getAdapters.xhtml">getAdapters()</a>
+                — Gets a list of available install adapters.</li>
+            <li id="getInstance"><a title="JInstaller" href="../classes/JInstaller/getInstance.xhtml">getInstance()</a>
+                — Returns the global Installer object, only creating it if it doesn't already exist.</li>
+            <li id="getManifest"><a title="JInstaller" href="../classes/JInstaller/getManifest.xhtml">getManifest()</a>
+                — Get the installation manifest object</li>
+            <li id="getParams"><a title="JInstaller" href="../classes/JInstaller/getParams.xhtml">getParams()</a>
+                — Method to parse the parameters of an extension, build the INI string for its default parameters, and return the INI string.</li>
+            <li id="getPath"><a title="JInstaller" href="../classes/JInstaller/getPath.xhtml">getPath()</a>
+                — Get an installer path by name</li>
+            <li id="getRedirectUrl"><a title="JInstaller" href="../classes/JInstaller/getRedirectUrl.xhtml">getRedirectUrl()</a>
+                — Get the redirect location</li>
+            <li id="install"><a title="JInstaller" href="../classes/JInstaller/install.xhtml">install()</a>
+                — Package installation method</li>
+            <li id="isManifest"><a title="JInstaller" href="../classes/JInstaller/isManifest.xhtml">isManifest()</a>
+                — Is the XML file a valid Joomla installation manifest file.</li>
+            <li id="isOverwrite"><a title="JInstaller" href="../classes/JInstaller/isOverwrite.xhtml">isOverwrite()</a>
+                — Get the allow overwrite switch</li>
+            <li id="isUpgrade"><a title="JInstaller" href="../classes/JInstaller/isUpgrade.xhtml">isUpgrade()</a>
+                — Get the upgrade switch</li>
+            <li id="loadAdapter"><a title="JInstaller" href="../classes/JInstaller/loadAdapter.xhtml">loadAdapter()</a>
+                — Method to load an adapter instance</li>
+            <li id="loadAllAdapters"><a title="JInstaller" href="../classes/JInstaller/loadAllAdapters.xhtml">loadAllAdapters()</a>
+                — Loads all adapters.</li>
+            <li id="loadMD5Sum"><a title="JInstaller" href="../classes/JInstaller/loadMD5Sum.xhtml">loadMD5Sum()</a>
+                — Loads an MD5SUMS file into an associative array</li>
+            <li id="parseFiles"><a title="JInstaller" href="../classes/JInstaller/parseFiles.xhtml">parseFiles()</a>
+                — Method to parse through a files element of the installation manifest and take appropriate action.</li>
+            <li id="parseLanguages"><a title="JInstaller" href="../classes/JInstaller/parseLanguages.xhtml">parseLanguages()</a>
+                — Method to parse through a languages element of the installation manifest and take appropriate action.</li>
+            <li id="parseMedia"><a title="JInstaller" href="../classes/JInstaller/parseMedia.xhtml">parseMedia()</a>
+                — Method to parse through a media element of the installation manifest and take appropriate action.</li>
+            <li id="parseQueries"><a title="JInstaller" href="../classes/JInstaller/parseQueries.xhtml">parseQueries()</a>
+                — Backward compatible method to parse through a queries element of the installation manifest file and take appropriate action.</li>
+            <li id="parseSQLFiles"><a title="JInstaller" href="../classes/JInstaller/parseSQLFiles.xhtml">parseSQLFiles()</a>
+                — Method to extract the name of a discreet installation sql file from the installation manifest file.</li>
+            <li id="parseSchemaUpdates"><a title="JInstaller" href="../classes/JInstaller/parseSchemaUpdates.xhtml">parseSchemaUpdates()</a>
+                — Method to process the updates for an item</li>
+            <li id="parseXMLInstallFile"><a title="JInstaller" href="../classes/JInstaller/parseXMLInstallFile.xhtml">parseXMLInstallFile()</a>
+                — Parse a XML install manifest file.</li>
+            <li id="pushStep"><a title="JInstaller" href="../classes/JInstaller/pushStep.xhtml">pushStep()</a>
+                — Pushes a step onto the installer stack for rolling back steps</li>
+            <li id="refreshManifestCache"><a title="JInstaller" href="../classes/JInstaller/refreshManifestCache.xhtml">refreshManifestCache()</a>
+                — Refreshes the manifest cache stored in #__extensions</li>
+            <li id="removeFiles"><a title="JInstaller" href="../classes/JInstaller/removeFiles.xhtml">removeFiles()</a>
+                — Method to parse through a files element of the installation manifest and remove the files that were installed</li>
+            <li id="setOverwrite"><a title="JInstaller" href="../classes/JInstaller/setOverwrite.xhtml">setOverwrite()</a>
+                — Set the allow overwrite switch</li>
+            <li id="setPath"><a title="JInstaller" href="../classes/JInstaller/setPath.xhtml">setPath()</a>
+                — Sets an installer path by name</li>
+            <li id="setRedirectUrl"><a title="JInstaller" href="../classes/JInstaller/setRedirectUrl.xhtml">setRedirectUrl()</a>
+                — Set the redirect location</li>
+            <li id="setSchemaVersion"><a title="JInstaller" href="../classes/JInstaller/setSchemaVersion.xhtml">setSchemaVersion()</a>
+                — Set the schema version for an extension by looking at its latest update</li>
+            <li id="setUpgrade"><a title="JInstaller" href="../classes/JInstaller/setUpgrade.xhtml">setUpgrade()</a>
+                — Set the upgrade switch</li>
+            <li id="setupInstall"><a title="JInstaller" href="../classes/JInstaller/setupInstall.xhtml">setupInstall()</a>
+                — Prepare for installation: this method sets the installation directory, finds and checks the installation file and verifies the installation type.</li>
+            <li id="uninstall"><a title="JInstaller" href="../classes/JInstaller/uninstall.xhtml">uninstall()</a>
+                — Package uninstallation method</li>
+            <li id="update"><a title="JInstaller" href="../classes/JInstaller/update.xhtml">update()</a>
+                — Package update method</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

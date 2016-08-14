@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Joomla\Session\Session</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Joomla_Session">Joomla\Session</a>
+          </li>
+          <li class="separator">Session</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/vendor/joomla/session/Joomla/Session/Session.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Joomla\Session\</small>Session</h1>
+        <h4>Class for managing HTTP sessions</h4>
+        <p>Provides access to session-state values as well as session-level<br/>settings and lifetime management methods.<br/>Based on the standard PHP session handling mechanism it provides<br/>more advanced features such as expire timeouts.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Session
+                implements
+                <a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$state</a> =
+                        'inactive';
+                    </li><li>protected integer <a href="#members">$expire</a> =
+                        15;
+                    </li><li>protected <span title="Joomla\Session\Storage">Storage</span> <a href="#members">$store</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$security</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$force_ssl</a> =
+                        false;
+                    </li><li>protected  <a href="#members">$cookie_domain</a>;
+                    </li><li>protected  <a href="#members">$cookie_path</a>;
+                    </li><li>protected static <span title="Joomla\Session\Session">Session</span> <a href="#members">$instance</a>;
+                    </li><li>protected  <a href="#members">$storeName</a>;
+                    </li><li>private <span title="Joomla\Input\Input">Input</span> <a href="#members">$input</a> =
+                        null;
+                    </li><li>private <span title="Joomla\Event\DispatcherInterface">DispatcherInterface</span> <a href="#members">$dispatcher</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/__construct.xhtml">__construct</a>()
+                    </li><li>public mixed <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/__get.xhtml">__get</a>()
+                    </li><li>public static Session <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getInstance.xhtml">getInstance</a>()
+                    </li><li>public string <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getState.xhtml">getState</a>()
+                    </li><li>public integer <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getExpire.xhtml">getExpire</a>()
+                    </li><li>public string <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getToken.xhtml">getToken</a>()
+                    </li><li>public boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/hasToken.xhtml">hasToken</a>()
+                    </li><li>public ArrayIterator <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getIterator.xhtml">getIterator</a>()
+                    </li><li>public string <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getName.xhtml">getName</a>()
+                    </li><li>public string <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getId.xhtml">getId</a>()
+                    </li><li>public static array <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getStores.xhtml">getStores</a>()
+                    </li><li>public boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/isActive.xhtml">isActive</a>()
+                    </li><li>public boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/isNew.xhtml">isNew</a>()
+                    </li><li>public void <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/initialise.xhtml">initialise</a>()
+                    </li><li>public mixed <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/get.xhtml">get</a>()
+                    </li><li>public mixed <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/set.xhtml">set</a>()
+                    </li><li>public boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/has.xhtml">has</a>()
+                    </li><li>public mixed <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/clear.xhtml">clear</a>()
+                    </li><li>public void <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/start.xhtml">start</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_start.xhtml">_start</a>()
+                    </li><li>public boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/destroy.xhtml">destroy</a>()
+                    </li><li>public boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/restart.xhtml">restart</a>()
+                    </li><li>public boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/fork.xhtml">fork</a>()
+                    </li><li>public void <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/close.xhtml">close</a>()
+                    </li><li>protected $this <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setExpire.xhtml">setExpire</a>()
+                    </li><li>protected $this <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setState.xhtml">setState</a>()
+                    </li><li>protected void <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setCookieParams.xhtml">_setCookieParams</a>()
+                    </li><li>protected string <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_createToken.xhtml">_createToken</a>()
+                    </li><li>protected string <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/createToken.xhtml">createToken</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setCounter.xhtml">_setCounter</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setCounter.xhtml">setCounter</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setTimers.xhtml">_setTimers</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setTimers.xhtml">setTimers</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setOptions.xhtml">_setOptions</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setOptions.xhtml">setOptions</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_validate.xhtml">_validate</a>()
+                    </li><li>protected boolean <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/validate.xhtml">validate</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="dispatcher"><strong>$dispatcher</strong>
+                —
+                <a title="Joomla\Event\DispatcherInterface" href="../classes/Joomla_Event_DispatcherInterface.xhtml">Joomla\Event\DispatcherInterface</a><br/><span class="indent">Holds the Dispatcher object</span></li>
+            <li id="input"><strong>$input</strong>
+                —
+                <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input.xhtml">Joomla\Input\Input</a><br/><span class="indent">Holds the Input object</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="cookie_domain"><strong>$cookie_domain</strong>
+                —
+                mixed<br/><span class="indent">The domain to use when setting cookies.</span></li>
+            <li id="cookie_path"><strong>$cookie_path</strong>
+                —
+                mixed<br/><span class="indent">The path to use when setting cookies.</span></li>
+            <li id="expire"><strong>$expire</strong>
+                —
+                string<br/><span class="indent">Maximum age of unused session in minutes</span></li>
+            <li id="force_ssl"><strong>$force_ssl</strong>
+                —
+                boolean<br/><span class="indent">Force cookies to be SSL only Default  false</span></li>
+            <li id="instance"><strong>$instance</strong>
+                —
+                <a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session.xhtml">Joomla\Session\Session</a><br/><span class="indent">Session instances container.</span></li>
+            <li id="security"><strong>$security</strong>
+                —
+                array<br/><span class="indent">Security policy.</span></li>
+            <li id="state"><strong>$state</strong>
+                —
+                string<br/><span class="indent">Internal state.</span></li>
+            <li id="store"><strong>$store</strong>
+                —
+                <a title="Joomla\Session\Storage" href="../classes/Joomla_Session_Storage.xhtml">Joomla\Session\Storage</a><br/><span class="indent">The session store object.</span></li>
+            <li id="storeName"><strong>$storeName</strong>
+                —
+                string<br/><span class="indent">The type of storage for the session.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_createToken"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_createToken.xhtml">_createToken()</a>
+                — Create a token-string</li>
+            <li id="_setCookieParams"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setCookieParams.xhtml">_setCookieParams()</a>
+                — Set session cookie parameters</li>
+            <li id="_setCounter"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setCounter.xhtml">_setCounter()</a>
+                — Set counter of session usage</li>
+            <li id="_setOptions"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setOptions.xhtml">_setOptions()</a>
+                — Set additional session options</li>
+            <li id="_setTimers"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_setTimers.xhtml">_setTimers()</a>
+                — Set the session timers</li>
+            <li id="_start"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_start.xhtml">_start()</a>
+                — Start a session.</li>
+            <li id="_validate"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/_validate.xhtml">_validate()</a>
+                — Do some checks for security reason</li>
+            <li id="createToken"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/createToken.xhtml">createToken()</a>
+                — Create a token-string</li>
+            <li id="setCounter"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setCounter.xhtml">setCounter()</a>
+                — Set counter of session usage</li>
+            <li id="setExpire"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setExpire.xhtml">setExpire()</a>
+                — Set the session expiration</li>
+            <li id="setOptions"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setOptions.xhtml">setOptions()</a>
+                — Set additional session options</li>
+            <li id="setState"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setState.xhtml">setState()</a>
+                — Set the session state</li>
+            <li id="setTimers"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/setTimers.xhtml">setTimers()</a>
+                — Set the session timers</li>
+            <li id="validate"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/validate.xhtml">validate()</a>
+                — Do some checks for security reason</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="__get"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/__get.xhtml">__get()</a>
+                — Magic method to get read-only access to properties.</li>
+            <li id="clear"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/clear.xhtml">clear()</a>
+                — Unset data from the session store</li>
+            <li id="close"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/close.xhtml">close()</a>
+                — Writes session data and ends session</li>
+            <li id="destroy"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/destroy.xhtml">destroy()</a>
+                — Frees all session variables and destroys all data registered to a session</li>
+            <li id="fork"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/fork.xhtml">fork()</a>
+                — Create a new session and copy variables from the old one</li>
+            <li id="get"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/get.xhtml">get()</a>
+                — Get data from the session store</li>
+            <li id="getExpire"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getExpire.xhtml">getExpire()</a>
+                — Get expiration time in minutes</li>
+            <li id="getId"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getId.xhtml">getId()</a>
+                — Get session id</li>
+            <li id="getInstance"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getInstance.xhtml">getInstance()</a>
+                — Returns the global Session object, only creating it if it doesn't already exist.</li>
+            <li id="getIterator"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getIterator.xhtml">getIterator()</a>
+                — Retrieve an external iterator.</li>
+            <li id="getName"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getName.xhtml">getName()</a>
+                — Get session name</li>
+            <li id="getState"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getState.xhtml">getState()</a>
+                — Get current state of session</li>
+            <li id="getStores"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getStores.xhtml">getStores()</a>
+                — Get the session handlers</li>
+            <li id="getToken"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/getToken.xhtml">getToken()</a>
+                — Get a session token, if a token isn't set yet one will be generated.</li>
+            <li id="has"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/has.xhtml">has()</a>
+                — Check whether data exists in the session store</li>
+            <li id="hasToken"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/hasToken.xhtml">hasToken()</a>
+                — Method to determine if a token exists in the session. If not the session will be set to expired</li>
+            <li id="initialise"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/initialise.xhtml">initialise()</a>
+                — Check whether this session is currently created</li>
+            <li id="isActive"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/isActive.xhtml">isActive()</a>
+                — Shorthand to check if the session is active</li>
+            <li id="isNew"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/isNew.xhtml">isNew()</a>
+                — Check whether this session is currently created</li>
+            <li id="restart"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/restart.xhtml">restart()</a>
+                — Restart an expired or locked session.</li>
+            <li id="set"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/set.xhtml">set()</a>
+                — Set data into the session store.</li>
+            <li id="start"><a title="Joomla\Session\Session" href="../classes/Joomla_Session_Session/start.xhtml">start()</a>
+                — Start a session.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

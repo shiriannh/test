@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFPlatformInterface</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml">Interfaces</a>
+          </li>
+          <li class="separator">FOFPlatformInterface</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/platform/interface.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFPlatformInterface</h1>
+        <h4>Part of the FOF Platform Abstraction Layer. It implements everything that depends on the platform FOF is running under, e.g. the Joomla! CMS front-end, the Joomla! CMS back-end, a CLI Joomla! Platform app, a bespoke Joomla! Platform / Framework web application and so on.</h4>
+        <p>This is the abstract class implementing some basic housekeeping functionality<br/>and provides the static interface to get the appropriate Platform object for<br/>use in the rest of the framework.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">interface FOFPlatformInterface
+            {<br/><ul class="none"><li>// methods</li><li>public bool <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/checkExecution.xhtml">checkExecution</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setErrorHandling.xhtml">setErrorHandling</a>()
+                    </li><li>public mixed <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/raiseError.xhtml">raiseError</a>()
+                    </li><li>public integer <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getOrdering.xhtml">getOrdering</a>()
+                    </li><li>public  <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getIntegrationObject.xhtml">getIntegrationObject</a>()
+                    </li><li>public  <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setIntegrationObject.xhtml">setIntegrationObject</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isEnabled.xhtml">isEnabled</a>()
+                    </li><li>public string <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformName.xhtml">getPlatformName</a>()
+                    </li><li>public string <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformVersion.xhtml">getPlatformVersion</a>()
+                    </li><li>public string <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformHumanName.xhtml">getPlatformHumanName</a>()
+                    </li><li>public array <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformBaseDirs.xhtml">getPlatformBaseDirs</a>()
+                    </li><li>public array <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getComponentBaseDirs.xhtml">getComponentBaseDirs</a>()
+                    </li><li>public array <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getViewTemplatePaths.xhtml">getViewTemplatePaths</a>()
+                    </li><li>public array <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getTemplateSuffixes.xhtml">getTemplateSuffixes</a>()
+                    </li><li>public string <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getTemplateOverridePath.xhtml">getTemplateOverridePath</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/loadTranslations.xhtml">loadTranslations</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/authorizeAdmin.xhtml">authorizeAdmin</a>()
+                    </li><li>public mixed <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getUserStateFromRequest.xhtml">getUserStateFromRequest</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/importPlugin.xhtml">importPlugin</a>()
+                    </li><li>public array <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/runPlugins.xhtml">runPlugins</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/authorise.xhtml">authorise</a>()
+                    </li><li>public JUser <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getUser.xhtml">getUser</a>()
+                    </li><li>public JDocument <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getDocument.xhtml">getDocument</a>()
+                    </li><li>public JDate <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getDate.xhtml">getDate</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getLanguage.xhtml">getLanguage</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getDbo.xhtml">getDbo</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isBackend.xhtml">isBackend</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isFrontend.xhtml">isFrontend</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isCli.xhtml">isCli</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/supportsAjaxOrdering.xhtml">supportsAjaxOrdering</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/checkVersion.xhtml">checkVersion</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setCache.xhtml">setCache</a>()
+                    </li><li>public string <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getCache.xhtml">getCache</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/clearCache.xhtml">clearCache</a>()
+                    </li><li>public mixed <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getConfig.xhtml">getConfig</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isGlobalFOFCacheEnabled.xhtml">isGlobalFOFCacheEnabled</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/loginUser.xhtml">loginUser</a>()
+                    </li><li>public boolean <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logoutUser.xhtml">logoutUser</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logAddLogger.xhtml">logAddLogger</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logDeprecated.xhtml">logDeprecated</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logDebug.xhtml">logDebug</a>()
+                    </li><li>public string <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/URIroot.xhtml">URIroot</a>()
+                    </li><li>public string <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/URIbase.xhtml">URIbase</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setHeader.xhtml">setHeader</a>()
+                    </li><li>public void <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/sendHeaders.xhtml">sendHeaders</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="URIbase"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/URIbase.xhtml">URIbase()</a>
+                — Returns the base URI for the request.</li>
+            <li id="URIroot"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/URIroot.xhtml">URIroot()</a>
+                — Returns the root URI for the request.</li>
+            <li id="authorise"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/authorise.xhtml">authorise()</a>
+                — Perform an ACL check. Please note that FOF uses by default the Joomla! CMS convention for ACL privileges, e.g core.edit for the edit privilege.</li>
+            <li id="authorizeAdmin"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/authorizeAdmin.xhtml">authorizeAdmin()</a>
+                — By default FOF will only use the Controller's onBefore* methods to perform user authorisation. In some cases, like the Joomla! back-end, you alos need to perform component-wide user authorisation in the Dispatcher. This method MUST implement this authorisation check. If you do not need this in your platform, please always return true.</li>
+            <li id="checkExecution"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/checkExecution.xhtml">checkExecution()</a>
+                — Checks if the current script is run inside a valid CMS execution</li>
+            <li id="checkVersion"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/checkVersion.xhtml">checkVersion()</a>
+                — Performs a check between two versions. Use this function instead of PHP version_compare so we can mock it while testing</li>
+            <li id="clearCache"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/clearCache.xhtml">clearCache()</a>
+                — Clears the cache of system-wide FOF data. You are supposed to call this in your components' installation script post-installation and post-upgrade methods or whenever you are modifying the structure of database tables accessed by FOF. Please note that FOF's cache never expires and is not purged by Joomla!. You MUST use this method to manually purge the cache.</li>
+            <li id="getCache"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getCache.xhtml">getCache()</a>
+                — Retrieves data from the cache. This is supposed to be used for system-side FOF data, not application data.</li>
+            <li id="getComponentBaseDirs"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getComponentBaseDirs.xhtml">getComponentBaseDirs()</a>
+                — Returns the base (root) directories for a given component. The "component" is used in the sense of what we call "component" in Joomla!, "plugin" in WordPress and "module" in Drupal, i.e. an application which is running inside our main application (CMS).</li>
+            <li id="getConfig"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getConfig.xhtml">getConfig()</a>
+                — Returns an object that holds the configuration of the current site.</li>
+            <li id="getDate"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getDate.xhtml">getDate()</a>
+                — Returns an object to handle dates</li>
+            <li id="getDbo">
+              <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getDbo.xhtml">getDbo()</a>
+            </li>
+            <li id="getDocument"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getDocument.xhtml">getDocument()</a>
+                — Returns the JDocument object which handles this component's response. You may also return null and FOF will a. try to figure out the output type by examining the "format" input parameter (or fall back to "html") and b.</li>
+            <li id="getIntegrationObject"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getIntegrationObject.xhtml">getIntegrationObject()</a>
+                — Returns a platform integration object</li>
+            <li id="getLanguage">
+              <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getLanguage.xhtml">getLanguage()</a>
+            </li>
+            <li id="getOrdering"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getOrdering.xhtml">getOrdering()</a>
+                — Returns the ordering of the platform class. Files with a lower ordering number will be loaded first.</li>
+            <li id="getPlatformBaseDirs"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformBaseDirs.xhtml">getPlatformBaseDirs()</a>
+                — Returns absolute path to directories used by the CMS.</li>
+            <li id="getPlatformHumanName"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformHumanName.xhtml">getPlatformHumanName()</a>
+                — Returns the human readable platform name, e.g. "Joomla!", "Joomla! Framework", "Something Something Something Framework" etc.</li>
+            <li id="getPlatformName"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformName.xhtml">getPlatformName()</a>
+                — Returns the (internal) name of the platform implementation, e.g.</li>
+            <li id="getPlatformVersion"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getPlatformVersion.xhtml">getPlatformVersion()</a>
+                — Returns the version number string of the platform, e.g. "4.5.6". If implementation integrates with a CMS or a versioned foundation (e.g.</li>
+            <li id="getTemplateOverridePath"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getTemplateOverridePath.xhtml">getTemplateOverridePath()</a>
+                — Return the absolute path to the application's template overrides directory for a specific component. We will use it to look for template files instead of the regular component directorues. If the application does not have such a thing as template overrides return an empty string.</li>
+            <li id="getTemplateSuffixes"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getTemplateSuffixes.xhtml">getTemplateSuffixes()</a>
+                — Get application-specific suffixes to use with template paths. This allows you to look for view template overrides based on the application version.</li>
+            <li id="getUser"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getUser.xhtml">getUser()</a>
+                — Returns a user object.</li>
+            <li id="getUserStateFromRequest"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getUserStateFromRequest.xhtml">getUserStateFromRequest()</a>
+                — This method will try retrieving a variable from the request (input) data.</li>
+            <li id="getViewTemplatePaths"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/getViewTemplatePaths.xhtml">getViewTemplatePaths()</a>
+                — Return a list of the view template paths for this component. The paths are in the format site:/component_name/view_name/layout_name or admin:/component_name/view_name/layout_name</li>
+            <li id="importPlugin"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/importPlugin.xhtml">importPlugin()</a>
+                — Load plugins of a specific type. Obviously this seems to only be required in the Joomla! CMS.</li>
+            <li id="isBackend"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isBackend.xhtml">isBackend()</a>
+                — Is this the administrative section of the component?</li>
+            <li id="isCli"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isCli.xhtml">isCli()</a>
+                — Is this a component running in a CLI application?</li>
+            <li id="isEnabled"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isEnabled.xhtml">isEnabled()</a>
+                — Is this platform enabled? This is used for automatic platform detection.</li>
+            <li id="isFrontend"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isFrontend.xhtml">isFrontend()</a>
+                — Is this the public section of the component?</li>
+            <li id="isGlobalFOFCacheEnabled"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/isGlobalFOFCacheEnabled.xhtml">isGlobalFOFCacheEnabled()</a>
+                — Is the global FOF cache enabled?</li>
+            <li id="loadTranslations"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/loadTranslations.xhtml">loadTranslations()</a>
+                — Load the translation files for a given component. The "component" is used in the sense of what we call "component" in Joomla!, "plugin" in WordPress and "module" in Drupal, i.e. an application which is running inside our main application (CMS).</li>
+            <li id="logAddLogger">
+              <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logAddLogger.xhtml">logAddLogger()</a>
+            </li>
+            <li id="logDebug">
+              <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logDebug.xhtml">logDebug()</a>
+            </li>
+            <li id="logDeprecated"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logDeprecated.xhtml">logDeprecated()</a>
+                — Logs a deprecated practice. In Joomla! this results in the $message being output in the deprecated log file, found in your site's log directory.</li>
+            <li id="loginUser"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/loginUser.xhtml">loginUser()</a>
+                — logs in a user</li>
+            <li id="logoutUser"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/logoutUser.xhtml">logoutUser()</a>
+                — logs out a user</li>
+            <li id="raiseError"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/raiseError.xhtml">raiseError()</a>
+                — Raises an error, using the logic requested by the CMS (PHP Exception or dedicated class)</li>
+            <li id="runPlugins"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/runPlugins.xhtml">runPlugins()</a>
+                — Execute plugins (system-level triggers) and fetch back an array with their return values.</li>
+            <li id="sendHeaders"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/sendHeaders.xhtml">sendHeaders()</a>
+                — In platforms that perform header caching, send all headers.</li>
+            <li id="setCache"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setCache.xhtml">setCache()</a>
+                — Saves something to the cache. This is supposed to be used for system-wide FOF data, not application data.</li>
+            <li id="setErrorHandling"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setErrorHandling.xhtml">setErrorHandling()</a>
+                — Set the error Handling, if possible</li>
+            <li id="setHeader"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setHeader.xhtml">setHeader()</a>
+                — Method to set a response header.  If the replace flag is set then all headers with the given name will be replaced by the new one (only if the current platform supports header caching)</li>
+            <li id="setIntegrationObject"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/setIntegrationObject.xhtml">setIntegrationObject()</a>
+                — Forces a platform integration object instance</li>
+            <li id="supportsAjaxOrdering"><a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface/supportsAjaxOrdering.xhtml">supportsAjaxOrdering()</a>
+                — Is AJAX re-ordering supported? This is 100% Joomla!-CMS specific. All other platforms should return false and never ask why.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JUpdateAdapter</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JUpdateAdapter</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/updater/updateadapter.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JUpdateAdapter</h1>
+        <h4>UpdateAdapter class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JUpdateAdapter
+                extends <a title="JAdapterInstance" href="../classes/JAdapterInstance.xhtml">JAdapterInstance</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$xmlParser</a>;
+                    </li><li>protected array <a href="#members">$stack</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$updateSiteId</a> =
+                        0;
+                    </li><li>protected array <a href="#members">$updatecols</a> =
+                        ;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$appendExtension</a> =
+                        false;
+                    </li><li>protected string <a href="#members">$updateSiteName</a> =
+                        '';
+                    </li><li>protected string <a href="#members">$_url</a> =
+                        '';
+                    </li><li>protected int <a href="#members">$minimum_stability</a> =
+                        JUpdater::STABILITY_STABLE;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected  <a title="JUpdateAdapter" href="../classes/JUpdateAdapter/_getStackLocation.xhtml">_getStackLocation</a>()
+                    </li><li>protected  <a title="JUpdateAdapter" href="../classes/JUpdateAdapter/_getLastTag.xhtml">_getLastTag</a>()
+                    </li><li>public abstract array <a title="JUpdateAdapter" href="../classes/JUpdateAdapter/findUpdate.xhtml">findUpdate</a>()
+                    </li><li>protected void <a title="JUpdateAdapter" href="../classes/JUpdateAdapter/toggleUpdateSite.xhtml">toggleUpdateSite</a>()
+                    </li><li>protected string <a title="JUpdateAdapter" href="../classes/JUpdateAdapter/getUpdateSiteName.xhtml">getUpdateSiteName</a>()
+                    </li><li>protected bool|JHttpResponse <a title="JUpdateAdapter" href="../classes/JUpdateAdapter/getUpdateSiteResponse.xhtml">getUpdateSiteResponse</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JAdapterInstance" href="../classes/JAdapterInstance.xhtml">JAdapterInstance</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_url"><strong>$_url</strong>
+                —
+                string<br/><span class="indent">The update site URL from which we will get the update information</span></li>
+            <li id="appendExtension"><strong>$appendExtension</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Should we try appending a .xml extension to the update site's URL?</span></li>
+            <li id="minimum_stability"><strong>$minimum_stability</strong>
+                —
+                int<br/><span class="indent">The minimum stability required for updates to be taken into account. The possible values are: 0	dev			Development snapshots, nightly builds, pre-release versions and so on 1	alpha		Alpha versions (work in progress, things are likely to be broken) 2	beta		Beta versions (major functionality in place, show-stopper bugs are likely to be present) 3	rc			Release Candidate versions (almost stable, minor bugs might be present) 4	stable		Stable versions (production quality code)</span></li>
+            <li id="stack"><strong>$stack</strong>
+                —
+                array<br/><span class="indent">Element call stack</span></li>
+            <li id="updateSiteId"><strong>$updateSiteId</strong>
+                —
+                string<br/><span class="indent">ID of update site</span></li>
+            <li id="updateSiteName"><strong>$updateSiteName</strong>
+                —
+                string<br/><span class="indent">The name of the update site (used in logging)</span></li>
+            <li id="updatecols"><strong>$updatecols</strong>
+                —
+                array<br/><span class="indent">Columns in the extensions table to be updated</span></li>
+            <li id="xmlParser"><strong>$xmlParser</strong>
+                —
+                resource<br/><span class="indent">Resource handle for the XML Parser</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_getLastTag"><a title="JUpdateAdapter" href="../classes/JUpdateAdapter/_getLastTag.xhtml">_getLastTag()</a>
+                — Gets the reference to the last tag</li>
+            <li id="_getStackLocation"><a title="JUpdateAdapter" href="../classes/JUpdateAdapter/_getStackLocation.xhtml">_getStackLocation()</a>
+                — Gets the reference to the current direct parent</li>
+            <li id="getUpdateSiteName"><a title="JUpdateAdapter" href="../classes/JUpdateAdapter/getUpdateSiteName.xhtml">getUpdateSiteName()</a>
+                — Get the name of an update site. This is used in logging.</li>
+            <li id="getUpdateSiteResponse"><a title="JUpdateAdapter" href="../classes/JUpdateAdapter/getUpdateSiteResponse.xhtml">getUpdateSiteResponse()</a>
+                — Try to get the raw HTTP response from the update site, hopefully containing the update XML.</li>
+            <li id="toggleUpdateSite"><a title="JUpdateAdapter" href="../classes/JUpdateAdapter/toggleUpdateSite.xhtml">toggleUpdateSite()</a>
+                — Toggles the enabled status of an update site. Update sites are disabled before getting the update information from their URL and enabled afterwards. If the URL fetch fails with a PHP fatal error (e.g. timeout) the faulty update site will remain disabled the next time we attempt to load the update information.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="findUpdate"><a title="JUpdateAdapter" href="../classes/JUpdateAdapter/findUpdate.xhtml">findUpdate()</a>
+                — Finds an update</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

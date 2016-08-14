@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JGithubPackageRepositoriesContents" href="../../classes/JGithubPackageRepositoriesContents.xhtml">JGithubPackageRepositoriesContents</a>
+          </li>
+          <li class="separator">getReadme</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/github/package/repositories/contents.php.xhtml#line65">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JGithubPackageRepositoriesContents::</small>getReadme</h1>
+        <h4>Get the README</h4>
+        <p>This method returns the preferred README for a repository.
+
+GET /repos/:owner/:repo/readme
+
+Parameters
+
+ref
+Optional string - The String name of the Commit/Branch/Tag. Defaults to master.
+
+Response
+
+Status: 200 OK
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4999
+
+{
+"type": "file",
+"encoding": "base64",
+"_links": {
+"git": "https://api.github.com/repos/octokit/octokit.rb/git/blobs/3d21ec53a331a6f037a91c368710b99387d012c1",
+"self": "https://api.github.com/repos/octokit/octokit.rb/contents/README.md",
+"html": "https://github.com/octokit/octokit.rb/blob/master/README.md"
+},
+"size": 5362,
+"name": "README.md",
+"path": "README.md",
+"content": "encoded content ...",
+"sha": "3d21ec53a331a6f037a91c368710b99387d012c1"
+}</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function getReadme(string
+        $owner,
+            string
+        $repo,
+            [string
+        $ref = ''] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$owner</code>
+                —
+                string</dt>
+          <dd>The name of the owner of the GitHub repository.</dd>
+          <dt><code>$repo</code>
+                —
+                string</dt>
+          <dd>The name of the GitHub repository.</dd>
+          <dt><code>$ref</code>
+                —
+                string</dt>
+          <dd>The String name of the Commit/Branch/Tag. Defaults to master.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt/>
+          <dd/>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

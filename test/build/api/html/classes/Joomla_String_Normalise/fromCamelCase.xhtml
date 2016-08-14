@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#Joomla_String">Joomla\String</a>
+          </li>
+          <li class="separator">
+            <a title="Joomla\String\Normalise" href="../../classes/Joomla_String_Normalise.xhtml">Normalise</a>
+          </li>
+          <li class="separator">fromCamelCase</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/vendor/joomla/string/src/Normalise.php.xhtml#line40">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>Joomla\String\Normalise::</small>fromCamelCase</h1>
+        <h4>Method to convert a string from camel case.</h4>
+        <p>This method offers two modes. Grouped allows for splitting on groups of uppercase characters as follows:
+
+"FooBarABCDef"            becomes  array("Foo", "Bar", "ABC", "Def")
+"JFooBar"                 becomes  array("J", "Foo", "Bar")
+"J001FooBar002"           becomes  array("J001", "Foo", "Bar002")
+"abcDef"                  becomes  array("abc", "Def")
+"abc_defGhi_Jkl"          becomes  array("abc_def", "Ghi_Jkl")
+"ThisIsA_NASAAstronaut"   becomes  array("This", "Is", "A_NASA", "Astronaut"))
+"JohnFitzgerald_Kennedy"  becomes  array("John", "Fitzgerald_Kennedy"))
+
+Non-grouped will split strings at each uppercase character.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function fromCamelCase(string
+        $input,
+            [boolean
+        $grouped = false] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$input</code>
+                —
+                string</dt>
+          <dd>The string input (ASCII only).</dd>
+          <dt><code>$grouped</code>
+                —
+                boolean</dt>
+          <dd>Optionally allows splitting on groups of uppercase characters.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>string</dt>
+          <dd>The space separated string.</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

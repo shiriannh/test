@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\Rule\UnusedFormalParameter</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PHPMD_Rule">PHPMD\Rule</a>
+          </li>
+          <li class="separator">UnusedFormalParameter</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/Rule/UnusedFormalParameter.php.xhtml#line55">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\Rule\</small>UnusedFormalParameter</h1>
+        <h4>This rule collects all formal parameters of a given function or method that are not used in a statement of the artifact's body.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class UnusedFormalParameter
+                extends <a title="PHPMD\Rule\AbstractLocalVariable" href="../classes/PHPMD_Rule_AbstractLocalVariable.xhtml">AbstractLocalVariable</a>
+                implements
+                <a title="PHPMD\Rule\FunctionAware" href="../interfaces/PHPMD_Rule_FunctionAware.xhtml">FunctionAware</a>,<a title="PHPMD\Rule\MethodAware" href="../interfaces/PHPMD_Rule_MethodAware.xhtml">MethodAware</a>
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$nodes</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/apply.xhtml">apply</a>()
+                    </li><li>private boolean <a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isAbstractMethod.xhtml">isAbstractMethod</a>()
+                    </li><li>private boolean <a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isInheritedSignature.xhtml">isInheritedSignature</a>()
+                    </li><li>private boolean <a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isMagicMethod.xhtml">isMagicMethod</a>()
+                    </li><li>private boolean <a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isNotDeclaration.xhtml">isNotDeclaration</a>()
+                    </li><li>private void <a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/collectParameters.xhtml">collectParameters</a>()
+                    </li><li>private void <a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/removeUsedParameters.xhtml">removeUsedParameters</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PHPMD\Rule\AbstractLocalVariable" href="../classes/PHPMD_Rule_AbstractLocalVariable.xhtml">PHPMD\Rule\AbstractLocalVariable</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PHPMD\Rule\FunctionAware" href="../interfaces/PHPMD_Rule_FunctionAware.xhtml">PHPMD\Rule\FunctionAware</a>
+            </li>
+            <li>
+              <a title="PHPMD\Rule\MethodAware" href="../interfaces/PHPMD_Rule_MethodAware.xhtml">PHPMD\Rule\MethodAware</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="nodes"><strong>$nodes</strong>
+                —
+                array<br/><span class="indent">Collected ast nodes.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="collectParameters"><a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/collectParameters.xhtml">collectParameters()</a>
+                — This method extracts all parameters for the given function or method node and it stores the parameter images in the &lt;b&gt;$_images&lt;/b&gt; property.</li>
+            <li id="isAbstractMethod"><a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isAbstractMethod.xhtml">isAbstractMethod()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when the given node is an abstract method.</li>
+            <li id="isInheritedSignature"><a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isInheritedSignature.xhtml">isInheritedSignature()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when the given node is method with signature declared as inherited using {@inheritdoc} annotation.</li>
+            <li id="isMagicMethod"><a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isMagicMethod.xhtml">isMagicMethod()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when the given node is a magic method signature</li>
+            <li id="isNotDeclaration"><a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/isNotDeclaration.xhtml">isNotDeclaration()</a>
+                — Tests if the given &lt;b&gt;$node&lt;/b&gt; is a method and if this method is also the initial declaration.</li>
+            <li id="removeUsedParameters"><a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/removeUsedParameters.xhtml">removeUsedParameters()</a>
+                — This method collects all local variables in the body of the currently analyzed method or function and removes those parameters that are referenced by one of the collected variables.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="apply"><a title="PHPMD\Rule\UnusedFormalParameter" href="../classes/PHPMD_Rule_UnusedFormalParameter/apply.xhtml">apply()</a>
+                — This method checks that all parameters of a given function or method are used at least one time within the artifacts body.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

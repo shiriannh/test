@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFInflector</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFInflector</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/inflector/inflector.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFInflector</h1>
+        <h4>FOFInflector to pluralize and singularize English nouns.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFInflector
+            {<br/><ul class="none"><li>// members</li><li>protected static array <a href="#members">$_rules</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$_cache</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>private void <a title="FOFInflector" href="../classes/FOFInflector/__construct.xhtml">__construct</a>()
+                    </li><li>public static void <a title="FOFInflector" href="../classes/FOFInflector/deleteCache.xhtml">deleteCache</a>()
+                    </li><li>public static void <a title="FOFInflector" href="../classes/FOFInflector/addWord.xhtml">addWord</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/pluralize.xhtml">pluralize</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/singularize.xhtml">singularize</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/camelize.xhtml">camelize</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/underscore.xhtml">underscore</a>()
+                    </li><li>public static array <a title="FOFInflector" href="../classes/FOFInflector/explode.xhtml">explode</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/implode.xhtml">implode</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/humanize.xhtml">humanize</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/tableize.xhtml">tableize</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/classify.xhtml">classify</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/variablize.xhtml">variablize</a>()
+                    </li><li>public static boolean <a title="FOFInflector" href="../classes/FOFInflector/isSingular.xhtml">isSingular</a>()
+                    </li><li>public static boolean <a title="FOFInflector" href="../classes/FOFInflector/isPlural.xhtml">isPlural</a>()
+                    </li><li>public static string <a title="FOFInflector" href="../classes/FOFInflector/getPart.xhtml">getPart</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_cache"><strong>$_cache</strong>
+                —
+                array<br/><span class="indent">Cache of pluralized and singularized nouns.</span></li>
+            <li id="_rules"><strong>$_rules</strong>
+                —
+                array<br/><span class="indent">Rules for pluralizing and singularizing of nouns.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addWord"><a title="FOFInflector" href="../classes/FOFInflector/addWord.xhtml">addWord()</a>
+                — Add a word to the cache, useful to make exceptions or to add words in other languages.</li>
+            <li id="camelize"><a title="FOFInflector" href="../classes/FOFInflector/camelize.xhtml">camelize()</a>
+                — Returns given word as CamelCased.</li>
+            <li id="classify"><a title="FOFInflector" href="../classes/FOFInflector/classify.xhtml">classify()</a>
+                — Converts a table name to its class name according to Koowa naming conventions.</li>
+            <li id="deleteCache">
+              <a title="FOFInflector" href="../classes/FOFInflector/deleteCache.xhtml">deleteCache()</a>
+            </li>
+            <li id="explode"><a title="FOFInflector" href="../classes/FOFInflector/explode.xhtml">explode()</a>
+                — Convert any "CamelCased" word into an array of strings</li>
+            <li id="getPart"><a title="FOFInflector" href="../classes/FOFInflector/getPart.xhtml">getPart()</a>
+                — Gets a part of a CamelCased word by index.</li>
+            <li id="humanize"><a title="FOFInflector" href="../classes/FOFInflector/humanize.xhtml">humanize()</a>
+                — Returns a human-readable string from $word.</li>
+            <li id="implode"><a title="FOFInflector" href="../classes/FOFInflector/implode.xhtml">implode()</a>
+                — Convert  an array of strings into a "CamelCased" word.</li>
+            <li id="isPlural"><a title="FOFInflector" href="../classes/FOFInflector/isPlural.xhtml">isPlural()</a>
+                — Check to see if an Enlish word is plural.</li>
+            <li id="isSingular"><a title="FOFInflector" href="../classes/FOFInflector/isSingular.xhtml">isSingular()</a>
+                — Check to see if an English word is singular</li>
+            <li id="pluralize"><a title="FOFInflector" href="../classes/FOFInflector/pluralize.xhtml">pluralize()</a>
+                — Singular English word to plural.</li>
+            <li id="singularize"><a title="FOFInflector" href="../classes/FOFInflector/singularize.xhtml">singularize()</a>
+                — Plural English word to singular.</li>
+            <li id="tableize"><a title="FOFInflector" href="../classes/FOFInflector/tableize.xhtml">tableize()</a>
+                — Converts a class name to its table name according to Koowa naming conventions.</li>
+            <li id="underscore"><a title="FOFInflector" href="../classes/FOFInflector/underscore.xhtml">underscore()</a>
+                — Converts a word "into_it_s_underscored_version"</li>
+            <li id="variablize"><a title="FOFInflector" href="../classes/FOFInflector/variablize.xhtml">variablize()</a>
+                — Returns camelBacked version of a string. Same as camelize but first char is lowercased.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

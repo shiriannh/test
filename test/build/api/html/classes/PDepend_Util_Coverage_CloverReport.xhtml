@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Util\Coverage\CloverReport</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Util_Coverage">PDepend\Util\Coverage</a>
+          </li>
+          <li class="separator">CloverReport</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Util/Coverage/CloverReport.php.xhtml#line53">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Util\Coverage\</small>CloverReport</h1>
+        <h4>Coverage report implementation for clover formatted xml files.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class CloverReport
+                implements
+                <a title="PDepend\Util\Coverage\Report" href="../interfaces/PDepend_Util_Coverage_Report.xhtml">Report</a>
+            {<br/><ul class="none"><li>// members</li><li>private <span title="PDepend\Util\Coverage\array(string=&gt;array)">array(string=&gt;array)</span> <a href="#members">$fileLineCoverage</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/__construct.xhtml">__construct</a>()
+                    </li><li>private void <a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/readProjectCoverage.xhtml">readProjectCoverage</a>()
+                    </li><li>private void <a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/readFileCoverage.xhtml">readFileCoverage</a>()
+                    </li><li>public float <a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/getCoverage.xhtml">getCoverage</a>()
+                    </li><li>private array(boolean) <a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/getLines.xhtml">getLines</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Util\Coverage\Report" href="../interfaces/PDepend_Util_Coverage_Report.xhtml">PDepend\Util\Coverage\Report</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="fileLineCoverage"><strong>$fileLineCoverage</strong>
+                —
+                <a title="PDepend\Util\Coverage\array(string=&gt;array)" href="../classes/PDepend_Util_Coverage_array(string=&gt;array).xhtml">PDepend\Util\Coverage\array(string=&gt;array)</a><br/><span class="indent">Holds the line coverage for all files found in the coverage report.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getLines"><a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/getLines.xhtml">getLines()</a>
+                — Returns the lines of the covered file.</li>
+            <li id="readFileCoverage"><a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/readFileCoverage.xhtml">readFileCoverage()</a>
+                — Reads the coverage information for all file elements under the given parent.</li>
+            <li id="readProjectCoverage"><a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/readProjectCoverage.xhtml">readProjectCoverage()</a>
+                — Reads the coverage information for a project.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/__construct.xhtml">__construct()</a>
+                — Constructs a new clover report instance.</li>
+            <li id="getCoverage"><a title="PDepend\Util\Coverage\CloverReport" href="../classes/PDepend_Util_Coverage_CloverReport/getCoverage.xhtml">getCoverage()</a>
+                — Returns the percentage code coverage for the given item instance.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Util\Cache\Driver\MemoryCacheDriver</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Util_Cache_Driver">PDepend\Util\Cache\Driver</a>
+          </li>
+          <li class="separator">MemoryCacheDriver</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Util/Cache/Driver/MemoryCacheDriver.php.xhtml#line59">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Util\Cache\Driver\</small>MemoryCacheDriver</h1>
+        <h4>A memory based cache implementation.</h4>
+        <p>This class implements the interface based<br/>on an in memory data structure. This means that all cached entries will get<br/>lost when the php process exits.<br/></p>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class MemoryCacheDriver
+                implements
+                <a title="PDepend\Util\Cache\CacheDriver" href="../interfaces/PDepend_Util_Cache_CacheDriver.xhtml">CacheDriver</a>
+            {<br/><ul class="none"><li>// constants</li><li>const ENTRY_TYPE = 'cache';</li></ul><ul class="none"><li>// members</li><li>protected <span title="PDepend\Util\Cache\Driver\array(string=&gt;array)">array(string=&gt;array)</span> <a href="#members">$cache</a> =
+                        ;
+                    </li><li>protected string <a href="#members">$type</a> =
+                        self::ENTRY_TYPE;
+                    </li><li>protected string <a href="#members">$staticId</a> =
+                        null;
+                    </li><li>protected static array <a href="#members">$staticCache</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/__construct.xhtml">__construct</a>()
+                    </li><li>public CacheDriver <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/type.xhtml">type</a>()
+                    </li><li>public void <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/store.xhtml">store</a>()
+                    </li><li>public mixed <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/restore.xhtml">restore</a>()
+                    </li><li>public void <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/remove.xhtml">remove</a>()
+                    </li><li>protected string <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/getCacheKey.xhtml">getCacheKey</a>()
+                    </li><li>public array <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/__sleep.xhtml">__sleep</a>()
+                    </li><li>public void <a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/__wakeup.xhtml">__wakeup</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Util\Cache\CacheDriver" href="../interfaces/PDepend_Util_Cache_CacheDriver.xhtml">PDepend\Util\Cache\CacheDriver</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="ENTRY_TYPE">ENTRY_TYPE</td>
+              <td>'cache'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="cache"><strong>$cache</strong>
+                —
+                <a title="PDepend\Util\Cache\Driver\array(string=&gt;array)" href="../classes/PDepend_Util_Cache_Driver_array(string=&gt;array).xhtml">PDepend\Util\Cache\Driver\array(string=&gt;array)</a><br/><span class="indent">The in memory cache.</span></li>
+            <li id="staticCache"><strong>$staticCache</strong>
+                —
+                array<br/><span class="indent">Global stack, mainly used during testing.</span></li>
+            <li id="staticId"><strong>$staticId</strong>
+                —
+                string<br/><span class="indent">Unique identifier within the same cache instance.</span></li>
+            <li id="type"><strong>$type</strong>
+                —
+                string<br/><span class="indent">Current cache entry type.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="getCacheKey"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/getCacheKey.xhtml">getCacheKey()</a>
+                — Creates a prepared cache entry identifier, based on the given &lt;em&gt;$key&lt;/em&gt; and the &lt;em&gt;$type&lt;/em&gt; property. Note that this method resets the cache type, so that it is only valid for a single call.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/__construct.xhtml">__construct()</a>
+                — Instantiates a new in memory cache instance.</li>
+            <li id="__sleep"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/__sleep.xhtml">__sleep()</a>
+                — PHP's magic serialize sleep method.</li>
+            <li id="__wakeup"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/__wakeup.xhtml">__wakeup()</a>
+                — PHP's magic serialize wakeup method.</li>
+            <li id="remove"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/remove.xhtml">remove()</a>
+                — This method will remove an existing cache entry for the given identifier.</li>
+            <li id="restore"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/restore.xhtml">restore()</a>
+                — This method tries to restore an existing cache entry for the given &lt;em&gt;$key&lt;/em&gt;. If a matching entry exists, this method verifies that the given &lt;em&gt;$hash&lt;/em&gt; and the the value stored with cache entry are equal.</li>
+            <li id="store"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/store.xhtml">store()</a>
+                — This method will store the given &lt;em&gt;$data&lt;/em&gt; under &lt;em&gt;$key&lt;/em&gt;. This method can be called with a third parameter that will be used as a verification token, when the a cache entry gets restored. If the stored hash and the supplied hash are not identical, that cache entry will be removed and not returned.</li>
+            <li id="type"><a title="PDepend\Util\Cache\Driver\MemoryCacheDriver" href="../classes/PDepend_Util_Cache_Driver_MemoryCacheDriver/type.xhtml">type()</a>
+                — Sets the type for the next &lt;em&gt;store()&lt;/em&gt; or &lt;em&gt;restore()&lt;/em&gt; method call. A type is something like a namespace or group for cache entries.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

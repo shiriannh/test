@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFDownloadInterface</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml">Interfaces</a>
+          </li>
+          <li class="separator">FOFDownloadInterface</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/download/interface.php.xhtml#line11">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFDownloadInterface</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">interface FOFDownloadInterface
+            {<br/><ul class="none"><li>// methods</li><li>public boolean <a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/supportsChunkDownload.xhtml">supportsChunkDownload</a>()
+                    </li><li>public boolean <a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/supportsFileSize.xhtml">supportsFileSize</a>()
+                    </li><li>public boolean <a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/isSupported.xhtml">isSupported</a>()
+                    </li><li>public boolean <a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/getPriority.xhtml">getPriority</a>()
+                    </li><li>public string <a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/getName.xhtml">getName</a>()
+                    </li><li>public string <a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/downloadAndReturn.xhtml">downloadAndReturn</a>()
+                    </li><li>public integer <a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/getFileSize.xhtml">getFileSize</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="downloadAndReturn"><a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/downloadAndReturn.xhtml">downloadAndReturn()</a>
+                — Download a part (or the whole) of a remote URL and return the downloaded data. You are supposed to check the size of the returned data. If it's smaller than what you expected you've reached end of file. If it's empty you have tried reading past EOF. If it's larger than what you expected the server doesn't support chunk downloads.</li>
+            <li id="getFileSize"><a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/getFileSize.xhtml">getFileSize()</a>
+                — Get the size of a remote file in bytes</li>
+            <li id="getName"><a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/getName.xhtml">getName()</a>
+                — Returns the name of this download adapter in use</li>
+            <li id="getPriority"><a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/getPriority.xhtml">getPriority()</a>
+                — Get the priority of this adapter. If multiple download adapters are supported on a site, the one with the highest priority will be used.</li>
+            <li id="isSupported"><a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/isSupported.xhtml">isSupported()</a>
+                — Is this download class supported in the current server environment?</li>
+            <li id="supportsChunkDownload"><a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/supportsChunkDownload.xhtml">supportsChunkDownload()</a>
+                — Does this download adapter support downloading files in chunks?</li>
+            <li id="supportsFileSize"><a title="FOFDownloadInterface" href="../interfaces/FOFDownloadInterface/supportsFileSize.xhtml">supportsFileSize()</a>
+                — Does this download adapter support reading the size of a remote file?</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PhpParser\PrettyPrinter\Standard</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PhpParser_PrettyPrinter">PhpParser\PrettyPrinter</a>
+          </li>
+          <li class="separator">Standard</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php.xhtml#line16">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PhpParser\PrettyPrinter\</small>Standard</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Standard
+                extends <a title="PhpParser\PrettyPrinterAbstract" href="../classes/PhpParser_PrettyPrinterAbstract.xhtml">PrettyPrinterAbstract</a>
+            {<br/><ul class="none"><li>// methods</li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pParam.xhtml">pParam</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pArg.xhtml">pArg</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pConst.xhtml">pConst</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pName.xhtml">pName</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pName_FullyQualified.xhtml">pName_FullyQualified</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pName_Relative.xhtml">pName_Relative</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Class.xhtml">pScalar_MagicConst_Class</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Dir.xhtml">pScalar_MagicConst_Dir</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_File.xhtml">pScalar_MagicConst_File</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Function.xhtml">pScalar_MagicConst_Function</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Line.xhtml">pScalar_MagicConst_Line</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Method.xhtml">pScalar_MagicConst_Method</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Namespace.xhtml">pScalar_MagicConst_Namespace</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Trait.xhtml">pScalar_MagicConst_Trait</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_String.xhtml">pScalar_String</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_Encapsed.xhtml">pScalar_Encapsed</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_LNumber.xhtml">pScalar_LNumber</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_DNumber.xhtml">pScalar_DNumber</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Assign.xhtml">pExpr_Assign</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignRef.xhtml">pExpr_AssignRef</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Plus.xhtml">pExpr_AssignOp_Plus</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Minus.xhtml">pExpr_AssignOp_Minus</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Mul.xhtml">pExpr_AssignOp_Mul</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Div.xhtml">pExpr_AssignOp_Div</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Concat.xhtml">pExpr_AssignOp_Concat</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Mod.xhtml">pExpr_AssignOp_Mod</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_BitwiseAnd.xhtml">pExpr_AssignOp_BitwiseAnd</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_BitwiseOr.xhtml">pExpr_AssignOp_BitwiseOr</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_BitwiseXor.xhtml">pExpr_AssignOp_BitwiseXor</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_ShiftLeft.xhtml">pExpr_AssignOp_ShiftLeft</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_ShiftRight.xhtml">pExpr_AssignOp_ShiftRight</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Pow.xhtml">pExpr_AssignOp_Pow</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Plus.xhtml">pExpr_BinaryOp_Plus</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Minus.xhtml">pExpr_BinaryOp_Minus</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Mul.xhtml">pExpr_BinaryOp_Mul</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Div.xhtml">pExpr_BinaryOp_Div</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Concat.xhtml">pExpr_BinaryOp_Concat</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Mod.xhtml">pExpr_BinaryOp_Mod</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BooleanAnd.xhtml">pExpr_BinaryOp_BooleanAnd</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BooleanOr.xhtml">pExpr_BinaryOp_BooleanOr</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BitwiseAnd.xhtml">pExpr_BinaryOp_BitwiseAnd</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BitwiseOr.xhtml">pExpr_BinaryOp_BitwiseOr</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BitwiseXor.xhtml">pExpr_BinaryOp_BitwiseXor</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_ShiftLeft.xhtml">pExpr_BinaryOp_ShiftLeft</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_ShiftRight.xhtml">pExpr_BinaryOp_ShiftRight</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Pow.xhtml">pExpr_BinaryOp_Pow</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_LogicalAnd.xhtml">pExpr_BinaryOp_LogicalAnd</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_LogicalOr.xhtml">pExpr_BinaryOp_LogicalOr</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_LogicalXor.xhtml">pExpr_BinaryOp_LogicalXor</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Equal.xhtml">pExpr_BinaryOp_Equal</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_NotEqual.xhtml">pExpr_BinaryOp_NotEqual</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Identical.xhtml">pExpr_BinaryOp_Identical</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_NotIdentical.xhtml">pExpr_BinaryOp_NotIdentical</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Spaceship.xhtml">pExpr_BinaryOp_Spaceship</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Greater.xhtml">pExpr_BinaryOp_Greater</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_GreaterOrEqual.xhtml">pExpr_BinaryOp_GreaterOrEqual</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Smaller.xhtml">pExpr_BinaryOp_Smaller</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_SmallerOrEqual.xhtml">pExpr_BinaryOp_SmallerOrEqual</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Coalesce.xhtml">pExpr_BinaryOp_Coalesce</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Instanceof.xhtml">pExpr_Instanceof</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BooleanNot.xhtml">pExpr_BooleanNot</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BitwiseNot.xhtml">pExpr_BitwiseNot</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_UnaryMinus.xhtml">pExpr_UnaryMinus</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_UnaryPlus.xhtml">pExpr_UnaryPlus</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PreInc.xhtml">pExpr_PreInc</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PreDec.xhtml">pExpr_PreDec</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PostInc.xhtml">pExpr_PostInc</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PostDec.xhtml">pExpr_PostDec</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ErrorSuppress.xhtml">pExpr_ErrorSuppress</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_YieldFrom.xhtml">pExpr_YieldFrom</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Print.xhtml">pExpr_Print</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Int.xhtml">pExpr_Cast_Int</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Double.xhtml">pExpr_Cast_Double</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_String.xhtml">pExpr_Cast_String</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Array.xhtml">pExpr_Cast_Array</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Object.xhtml">pExpr_Cast_Object</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Bool.xhtml">pExpr_Cast_Bool</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Unset.xhtml">pExpr_Cast_Unset</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_FuncCall.xhtml">pExpr_FuncCall</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_MethodCall.xhtml">pExpr_MethodCall</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_StaticCall.xhtml">pExpr_StaticCall</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Empty.xhtml">pExpr_Empty</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Isset.xhtml">pExpr_Isset</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Eval.xhtml">pExpr_Eval</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Include.xhtml">pExpr_Include</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_List.xhtml">pExpr_List</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Variable.xhtml">pExpr_Variable</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Array.xhtml">pExpr_Array</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ArrayItem.xhtml">pExpr_ArrayItem</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ArrayDimFetch.xhtml">pExpr_ArrayDimFetch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ConstFetch.xhtml">pExpr_ConstFetch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ClassConstFetch.xhtml">pExpr_ClassConstFetch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PropertyFetch.xhtml">pExpr_PropertyFetch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_StaticPropertyFetch.xhtml">pExpr_StaticPropertyFetch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ShellExec.xhtml">pExpr_ShellExec</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Closure.xhtml">pExpr_Closure</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ClosureUse.xhtml">pExpr_ClosureUse</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_New.xhtml">pExpr_New</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Clone.xhtml">pExpr_Clone</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Ternary.xhtml">pExpr_Ternary</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Exit.xhtml">pExpr_Exit</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Yield.xhtml">pExpr_Yield</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Namespace.xhtml">pStmt_Namespace</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Use.xhtml">pStmt_Use</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_GroupUse.xhtml">pStmt_GroupUse</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_UseUse.xhtml">pStmt_UseUse</a>()
+                    </li><li>private void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pUseType.xhtml">pUseType</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Interface.xhtml">pStmt_Interface</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Class.xhtml">pStmt_Class</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Trait.xhtml">pStmt_Trait</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TraitUse.xhtml">pStmt_TraitUse</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TraitUseAdaptation_Precedence.xhtml">pStmt_TraitUseAdaptation_Precedence</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TraitUseAdaptation_Alias.xhtml">pStmt_TraitUseAdaptation_Alias</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Property.xhtml">pStmt_Property</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_PropertyProperty.xhtml">pStmt_PropertyProperty</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_ClassMethod.xhtml">pStmt_ClassMethod</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_ClassConst.xhtml">pStmt_ClassConst</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Function.xhtml">pStmt_Function</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Const.xhtml">pStmt_Const</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Declare.xhtml">pStmt_Declare</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_DeclareDeclare.xhtml">pStmt_DeclareDeclare</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_If.xhtml">pStmt_If</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_ElseIf.xhtml">pStmt_ElseIf</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Else.xhtml">pStmt_Else</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_For.xhtml">pStmt_For</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Foreach.xhtml">pStmt_Foreach</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_While.xhtml">pStmt_While</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Do.xhtml">pStmt_Do</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Switch.xhtml">pStmt_Switch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Case.xhtml">pStmt_Case</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TryCatch.xhtml">pStmt_TryCatch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Catch.xhtml">pStmt_Catch</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Break.xhtml">pStmt_Break</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Continue.xhtml">pStmt_Continue</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Return.xhtml">pStmt_Return</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Throw.xhtml">pStmt_Throw</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Label.xhtml">pStmt_Label</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Goto.xhtml">pStmt_Goto</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Echo.xhtml">pStmt_Echo</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Static.xhtml">pStmt_Static</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Global.xhtml">pStmt_Global</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_StaticVar.xhtml">pStmt_StaticVar</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Unset.xhtml">pStmt_Unset</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_InlineHTML.xhtml">pStmt_InlineHTML</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_HaltCompiler.xhtml">pStmt_HaltCompiler</a>()
+                    </li><li>public void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Nop.xhtml">pStmt_Nop</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pType.xhtml">pType</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pClassCommon.xhtml">pClassCommon</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pObjectProperty.xhtml">pObjectProperty</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pModifiers.xhtml">pModifiers</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pEncapsList.xhtml">pEncapsList</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/escapeString.xhtml">escapeString</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/containsEndLabel.xhtml">containsEndLabel</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/encapsedContainsEndLabel.xhtml">encapsedContainsEndLabel</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pDereferenceLhs.xhtml">pDereferenceLhs</a>()
+                    </li><li>protected void <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pCallLhs.xhtml">pCallLhs</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PhpParser\PrettyPrinterAbstract" href="../classes/PhpParser_PrettyPrinterAbstract.xhtml">PhpParser\PrettyPrinterAbstract</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="pUseType">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pUseType.xhtml">pUseType()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="containsEndLabel">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/containsEndLabel.xhtml">containsEndLabel()</a>
+            </li>
+            <li id="encapsedContainsEndLabel">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/encapsedContainsEndLabel.xhtml">encapsedContainsEndLabel()</a>
+            </li>
+            <li id="escapeString">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/escapeString.xhtml">escapeString()</a>
+            </li>
+            <li id="pCallLhs">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pCallLhs.xhtml">pCallLhs()</a>
+            </li>
+            <li id="pClassCommon">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pClassCommon.xhtml">pClassCommon()</a>
+            </li>
+            <li id="pDereferenceLhs">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pDereferenceLhs.xhtml">pDereferenceLhs()</a>
+            </li>
+            <li id="pEncapsList">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pEncapsList.xhtml">pEncapsList()</a>
+            </li>
+            <li id="pModifiers">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pModifiers.xhtml">pModifiers()</a>
+            </li>
+            <li id="pObjectProperty">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pObjectProperty.xhtml">pObjectProperty()</a>
+            </li>
+            <li id="pType">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pType.xhtml">pType()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="pArg">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pArg.xhtml">pArg()</a>
+            </li>
+            <li id="pConst">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pConst.xhtml">pConst()</a>
+            </li>
+            <li id="pExpr_Array">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Array.xhtml">pExpr_Array()</a>
+            </li>
+            <li id="pExpr_ArrayDimFetch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ArrayDimFetch.xhtml">pExpr_ArrayDimFetch()</a>
+            </li>
+            <li id="pExpr_ArrayItem">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ArrayItem.xhtml">pExpr_ArrayItem()</a>
+            </li>
+            <li id="pExpr_Assign">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Assign.xhtml">pExpr_Assign()</a>
+            </li>
+            <li id="pExpr_AssignOp_BitwiseAnd">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_BitwiseAnd.xhtml">pExpr_AssignOp_BitwiseAnd()</a>
+            </li>
+            <li id="pExpr_AssignOp_BitwiseOr">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_BitwiseOr.xhtml">pExpr_AssignOp_BitwiseOr()</a>
+            </li>
+            <li id="pExpr_AssignOp_BitwiseXor">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_BitwiseXor.xhtml">pExpr_AssignOp_BitwiseXor()</a>
+            </li>
+            <li id="pExpr_AssignOp_Concat">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Concat.xhtml">pExpr_AssignOp_Concat()</a>
+            </li>
+            <li id="pExpr_AssignOp_Div">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Div.xhtml">pExpr_AssignOp_Div()</a>
+            </li>
+            <li id="pExpr_AssignOp_Minus">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Minus.xhtml">pExpr_AssignOp_Minus()</a>
+            </li>
+            <li id="pExpr_AssignOp_Mod">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Mod.xhtml">pExpr_AssignOp_Mod()</a>
+            </li>
+            <li id="pExpr_AssignOp_Mul">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Mul.xhtml">pExpr_AssignOp_Mul()</a>
+            </li>
+            <li id="pExpr_AssignOp_Plus">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Plus.xhtml">pExpr_AssignOp_Plus()</a>
+            </li>
+            <li id="pExpr_AssignOp_Pow">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_Pow.xhtml">pExpr_AssignOp_Pow()</a>
+            </li>
+            <li id="pExpr_AssignOp_ShiftLeft">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_ShiftLeft.xhtml">pExpr_AssignOp_ShiftLeft()</a>
+            </li>
+            <li id="pExpr_AssignOp_ShiftRight">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignOp_ShiftRight.xhtml">pExpr_AssignOp_ShiftRight()</a>
+            </li>
+            <li id="pExpr_AssignRef">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_AssignRef.xhtml">pExpr_AssignRef()</a>
+            </li>
+            <li id="pExpr_BinaryOp_BitwiseAnd">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BitwiseAnd.xhtml">pExpr_BinaryOp_BitwiseAnd()</a>
+            </li>
+            <li id="pExpr_BinaryOp_BitwiseOr">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BitwiseOr.xhtml">pExpr_BinaryOp_BitwiseOr()</a>
+            </li>
+            <li id="pExpr_BinaryOp_BitwiseXor">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BitwiseXor.xhtml">pExpr_BinaryOp_BitwiseXor()</a>
+            </li>
+            <li id="pExpr_BinaryOp_BooleanAnd">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BooleanAnd.xhtml">pExpr_BinaryOp_BooleanAnd()</a>
+            </li>
+            <li id="pExpr_BinaryOp_BooleanOr">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_BooleanOr.xhtml">pExpr_BinaryOp_BooleanOr()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Coalesce">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Coalesce.xhtml">pExpr_BinaryOp_Coalesce()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Concat">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Concat.xhtml">pExpr_BinaryOp_Concat()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Div">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Div.xhtml">pExpr_BinaryOp_Div()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Equal">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Equal.xhtml">pExpr_BinaryOp_Equal()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Greater">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Greater.xhtml">pExpr_BinaryOp_Greater()</a>
+            </li>
+            <li id="pExpr_BinaryOp_GreaterOrEqual">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_GreaterOrEqual.xhtml">pExpr_BinaryOp_GreaterOrEqual()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Identical">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Identical.xhtml">pExpr_BinaryOp_Identical()</a>
+            </li>
+            <li id="pExpr_BinaryOp_LogicalAnd">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_LogicalAnd.xhtml">pExpr_BinaryOp_LogicalAnd()</a>
+            </li>
+            <li id="pExpr_BinaryOp_LogicalOr">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_LogicalOr.xhtml">pExpr_BinaryOp_LogicalOr()</a>
+            </li>
+            <li id="pExpr_BinaryOp_LogicalXor">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_LogicalXor.xhtml">pExpr_BinaryOp_LogicalXor()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Minus">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Minus.xhtml">pExpr_BinaryOp_Minus()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Mod">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Mod.xhtml">pExpr_BinaryOp_Mod()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Mul">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Mul.xhtml">pExpr_BinaryOp_Mul()</a>
+            </li>
+            <li id="pExpr_BinaryOp_NotEqual">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_NotEqual.xhtml">pExpr_BinaryOp_NotEqual()</a>
+            </li>
+            <li id="pExpr_BinaryOp_NotIdentical">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_NotIdentical.xhtml">pExpr_BinaryOp_NotIdentical()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Plus">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Plus.xhtml">pExpr_BinaryOp_Plus()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Pow">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Pow.xhtml">pExpr_BinaryOp_Pow()</a>
+            </li>
+            <li id="pExpr_BinaryOp_ShiftLeft">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_ShiftLeft.xhtml">pExpr_BinaryOp_ShiftLeft()</a>
+            </li>
+            <li id="pExpr_BinaryOp_ShiftRight">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_ShiftRight.xhtml">pExpr_BinaryOp_ShiftRight()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Smaller">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Smaller.xhtml">pExpr_BinaryOp_Smaller()</a>
+            </li>
+            <li id="pExpr_BinaryOp_SmallerOrEqual">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_SmallerOrEqual.xhtml">pExpr_BinaryOp_SmallerOrEqual()</a>
+            </li>
+            <li id="pExpr_BinaryOp_Spaceship">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BinaryOp_Spaceship.xhtml">pExpr_BinaryOp_Spaceship()</a>
+            </li>
+            <li id="pExpr_BitwiseNot">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BitwiseNot.xhtml">pExpr_BitwiseNot()</a>
+            </li>
+            <li id="pExpr_BooleanNot">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_BooleanNot.xhtml">pExpr_BooleanNot()</a>
+            </li>
+            <li id="pExpr_Cast_Array">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Array.xhtml">pExpr_Cast_Array()</a>
+            </li>
+            <li id="pExpr_Cast_Bool">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Bool.xhtml">pExpr_Cast_Bool()</a>
+            </li>
+            <li id="pExpr_Cast_Double">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Double.xhtml">pExpr_Cast_Double()</a>
+            </li>
+            <li id="pExpr_Cast_Int">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Int.xhtml">pExpr_Cast_Int()</a>
+            </li>
+            <li id="pExpr_Cast_Object">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Object.xhtml">pExpr_Cast_Object()</a>
+            </li>
+            <li id="pExpr_Cast_String">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_String.xhtml">pExpr_Cast_String()</a>
+            </li>
+            <li id="pExpr_Cast_Unset">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Cast_Unset.xhtml">pExpr_Cast_Unset()</a>
+            </li>
+            <li id="pExpr_ClassConstFetch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ClassConstFetch.xhtml">pExpr_ClassConstFetch()</a>
+            </li>
+            <li id="pExpr_Clone">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Clone.xhtml">pExpr_Clone()</a>
+            </li>
+            <li id="pExpr_Closure">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Closure.xhtml">pExpr_Closure()</a>
+            </li>
+            <li id="pExpr_ClosureUse">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ClosureUse.xhtml">pExpr_ClosureUse()</a>
+            </li>
+            <li id="pExpr_ConstFetch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ConstFetch.xhtml">pExpr_ConstFetch()</a>
+            </li>
+            <li id="pExpr_Empty">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Empty.xhtml">pExpr_Empty()</a>
+            </li>
+            <li id="pExpr_ErrorSuppress">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ErrorSuppress.xhtml">pExpr_ErrorSuppress()</a>
+            </li>
+            <li id="pExpr_Eval">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Eval.xhtml">pExpr_Eval()</a>
+            </li>
+            <li id="pExpr_Exit">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Exit.xhtml">pExpr_Exit()</a>
+            </li>
+            <li id="pExpr_FuncCall">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_FuncCall.xhtml">pExpr_FuncCall()</a>
+            </li>
+            <li id="pExpr_Include">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Include.xhtml">pExpr_Include()</a>
+            </li>
+            <li id="pExpr_Instanceof">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Instanceof.xhtml">pExpr_Instanceof()</a>
+            </li>
+            <li id="pExpr_Isset">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Isset.xhtml">pExpr_Isset()</a>
+            </li>
+            <li id="pExpr_List">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_List.xhtml">pExpr_List()</a>
+            </li>
+            <li id="pExpr_MethodCall">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_MethodCall.xhtml">pExpr_MethodCall()</a>
+            </li>
+            <li id="pExpr_New">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_New.xhtml">pExpr_New()</a>
+            </li>
+            <li id="pExpr_PostDec">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PostDec.xhtml">pExpr_PostDec()</a>
+            </li>
+            <li id="pExpr_PostInc">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PostInc.xhtml">pExpr_PostInc()</a>
+            </li>
+            <li id="pExpr_PreDec">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PreDec.xhtml">pExpr_PreDec()</a>
+            </li>
+            <li id="pExpr_PreInc">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PreInc.xhtml">pExpr_PreInc()</a>
+            </li>
+            <li id="pExpr_Print">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Print.xhtml">pExpr_Print()</a>
+            </li>
+            <li id="pExpr_PropertyFetch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_PropertyFetch.xhtml">pExpr_PropertyFetch()</a>
+            </li>
+            <li id="pExpr_ShellExec">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_ShellExec.xhtml">pExpr_ShellExec()</a>
+            </li>
+            <li id="pExpr_StaticCall">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_StaticCall.xhtml">pExpr_StaticCall()</a>
+            </li>
+            <li id="pExpr_StaticPropertyFetch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_StaticPropertyFetch.xhtml">pExpr_StaticPropertyFetch()</a>
+            </li>
+            <li id="pExpr_Ternary">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Ternary.xhtml">pExpr_Ternary()</a>
+            </li>
+            <li id="pExpr_UnaryMinus">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_UnaryMinus.xhtml">pExpr_UnaryMinus()</a>
+            </li>
+            <li id="pExpr_UnaryPlus">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_UnaryPlus.xhtml">pExpr_UnaryPlus()</a>
+            </li>
+            <li id="pExpr_Variable">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Variable.xhtml">pExpr_Variable()</a>
+            </li>
+            <li id="pExpr_Yield">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_Yield.xhtml">pExpr_Yield()</a>
+            </li>
+            <li id="pExpr_YieldFrom">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pExpr_YieldFrom.xhtml">pExpr_YieldFrom()</a>
+            </li>
+            <li id="pName">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pName.xhtml">pName()</a>
+            </li>
+            <li id="pName_FullyQualified">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pName_FullyQualified.xhtml">pName_FullyQualified()</a>
+            </li>
+            <li id="pName_Relative">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pName_Relative.xhtml">pName_Relative()</a>
+            </li>
+            <li id="pParam">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pParam.xhtml">pParam()</a>
+            </li>
+            <li id="pScalar_DNumber">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_DNumber.xhtml">pScalar_DNumber()</a>
+            </li>
+            <li id="pScalar_Encapsed">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_Encapsed.xhtml">pScalar_Encapsed()</a>
+            </li>
+            <li id="pScalar_LNumber">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_LNumber.xhtml">pScalar_LNumber()</a>
+            </li>
+            <li id="pScalar_MagicConst_Class">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Class.xhtml">pScalar_MagicConst_Class()</a>
+            </li>
+            <li id="pScalar_MagicConst_Dir">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Dir.xhtml">pScalar_MagicConst_Dir()</a>
+            </li>
+            <li id="pScalar_MagicConst_File">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_File.xhtml">pScalar_MagicConst_File()</a>
+            </li>
+            <li id="pScalar_MagicConst_Function">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Function.xhtml">pScalar_MagicConst_Function()</a>
+            </li>
+            <li id="pScalar_MagicConst_Line">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Line.xhtml">pScalar_MagicConst_Line()</a>
+            </li>
+            <li id="pScalar_MagicConst_Method">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Method.xhtml">pScalar_MagicConst_Method()</a>
+            </li>
+            <li id="pScalar_MagicConst_Namespace">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Namespace.xhtml">pScalar_MagicConst_Namespace()</a>
+            </li>
+            <li id="pScalar_MagicConst_Trait">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_MagicConst_Trait.xhtml">pScalar_MagicConst_Trait()</a>
+            </li>
+            <li id="pScalar_String">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pScalar_String.xhtml">pScalar_String()</a>
+            </li>
+            <li id="pStmt_Break">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Break.xhtml">pStmt_Break()</a>
+            </li>
+            <li id="pStmt_Case">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Case.xhtml">pStmt_Case()</a>
+            </li>
+            <li id="pStmt_Catch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Catch.xhtml">pStmt_Catch()</a>
+            </li>
+            <li id="pStmt_Class">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Class.xhtml">pStmt_Class()</a>
+            </li>
+            <li id="pStmt_ClassConst">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_ClassConst.xhtml">pStmt_ClassConst()</a>
+            </li>
+            <li id="pStmt_ClassMethod">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_ClassMethod.xhtml">pStmt_ClassMethod()</a>
+            </li>
+            <li id="pStmt_Const">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Const.xhtml">pStmt_Const()</a>
+            </li>
+            <li id="pStmt_Continue">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Continue.xhtml">pStmt_Continue()</a>
+            </li>
+            <li id="pStmt_Declare">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Declare.xhtml">pStmt_Declare()</a>
+            </li>
+            <li id="pStmt_DeclareDeclare">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_DeclareDeclare.xhtml">pStmt_DeclareDeclare()</a>
+            </li>
+            <li id="pStmt_Do">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Do.xhtml">pStmt_Do()</a>
+            </li>
+            <li id="pStmt_Echo">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Echo.xhtml">pStmt_Echo()</a>
+            </li>
+            <li id="pStmt_Else">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Else.xhtml">pStmt_Else()</a>
+            </li>
+            <li id="pStmt_ElseIf">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_ElseIf.xhtml">pStmt_ElseIf()</a>
+            </li>
+            <li id="pStmt_For">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_For.xhtml">pStmt_For()</a>
+            </li>
+            <li id="pStmt_Foreach">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Foreach.xhtml">pStmt_Foreach()</a>
+            </li>
+            <li id="pStmt_Function">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Function.xhtml">pStmt_Function()</a>
+            </li>
+            <li id="pStmt_Global">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Global.xhtml">pStmt_Global()</a>
+            </li>
+            <li id="pStmt_Goto">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Goto.xhtml">pStmt_Goto()</a>
+            </li>
+            <li id="pStmt_GroupUse">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_GroupUse.xhtml">pStmt_GroupUse()</a>
+            </li>
+            <li id="pStmt_HaltCompiler">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_HaltCompiler.xhtml">pStmt_HaltCompiler()</a>
+            </li>
+            <li id="pStmt_If">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_If.xhtml">pStmt_If()</a>
+            </li>
+            <li id="pStmt_InlineHTML">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_InlineHTML.xhtml">pStmt_InlineHTML()</a>
+            </li>
+            <li id="pStmt_Interface">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Interface.xhtml">pStmt_Interface()</a>
+            </li>
+            <li id="pStmt_Label">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Label.xhtml">pStmt_Label()</a>
+            </li>
+            <li id="pStmt_Namespace">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Namespace.xhtml">pStmt_Namespace()</a>
+            </li>
+            <li id="pStmt_Nop">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Nop.xhtml">pStmt_Nop()</a>
+            </li>
+            <li id="pStmt_Property">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Property.xhtml">pStmt_Property()</a>
+            </li>
+            <li id="pStmt_PropertyProperty">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_PropertyProperty.xhtml">pStmt_PropertyProperty()</a>
+            </li>
+            <li id="pStmt_Return">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Return.xhtml">pStmt_Return()</a>
+            </li>
+            <li id="pStmt_Static">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Static.xhtml">pStmt_Static()</a>
+            </li>
+            <li id="pStmt_StaticVar">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_StaticVar.xhtml">pStmt_StaticVar()</a>
+            </li>
+            <li id="pStmt_Switch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Switch.xhtml">pStmt_Switch()</a>
+            </li>
+            <li id="pStmt_Throw">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Throw.xhtml">pStmt_Throw()</a>
+            </li>
+            <li id="pStmt_Trait">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Trait.xhtml">pStmt_Trait()</a>
+            </li>
+            <li id="pStmt_TraitUse">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TraitUse.xhtml">pStmt_TraitUse()</a>
+            </li>
+            <li id="pStmt_TraitUseAdaptation_Alias">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TraitUseAdaptation_Alias.xhtml">pStmt_TraitUseAdaptation_Alias()</a>
+            </li>
+            <li id="pStmt_TraitUseAdaptation_Precedence">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TraitUseAdaptation_Precedence.xhtml">pStmt_TraitUseAdaptation_Precedence()</a>
+            </li>
+            <li id="pStmt_TryCatch">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_TryCatch.xhtml">pStmt_TryCatch()</a>
+            </li>
+            <li id="pStmt_Unset">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Unset.xhtml">pStmt_Unset()</a>
+            </li>
+            <li id="pStmt_Use">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_Use.xhtml">pStmt_Use()</a>
+            </li>
+            <li id="pStmt_UseUse">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_UseUse.xhtml">pStmt_UseUse()</a>
+            </li>
+            <li id="pStmt_While">
+              <a title="PhpParser\PrettyPrinter\Standard" href="../classes/PhpParser_PrettyPrinter_Standard/pStmt_While.xhtml">pStmt_While()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

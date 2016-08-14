@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JDatabaseDriverPdo</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JDatabaseDriverPdo</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/database/driver/pdo.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JDatabaseDriverPdo</h1>
+        <h4>Joomla Platform PDO Database Driver Class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JDatabaseDriverPdo
+                extends <a title="JDatabaseDriver" href="../classes/JDatabaseDriver.xhtml">JDatabaseDriver</a>
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$name</a> =
+                        'pdo';
+                    </li><li>protected <span title="PDO">PDO</span> <a href="#members">$connection</a>;
+                    </li><li>protected string <a href="#members">$nameQuote</a> =
+                        "'";
+                    </li><li>protected string <a href="#members">$nullDate</a> =
+                        '0000-00-00 00:00:00';
+                    </li><li>protected  <a href="#members">$prepared</a>;
+                    </li><li>protected boolean <a href="#members">$executed</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__destruct.xhtml">__destruct</a>()
+                    </li><li>public void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/connect.xhtml">connect</a>()
+                    </li><li>public void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/disconnect.xhtml">disconnect</a>()
+                    </li><li>public string <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/escape.xhtml">escape</a>()
+                    </li><li>public mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/execute.xhtml">execute</a>()
+                    </li><li>public mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getOption.xhtml">getOption</a>()
+                    </li><li>public string <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getConnectedQuery.xhtml">getConnectedQuery</a>()
+                    </li><li>public boolean <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/setOption.xhtml">setOption</a>()
+                    </li><li>public static boolean <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/isSupported.xhtml">isSupported</a>()
+                    </li><li>public boolean <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/connected.xhtml">connected</a>()
+                    </li><li>public integer <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getAffectedRows.xhtml">getAffectedRows</a>()
+                    </li><li>public integer <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getNumRows.xhtml">getNumRows</a>()
+                    </li><li>public string <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/insertid.xhtml">insertid</a>()
+                    </li><li>public boolean <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/select.xhtml">select</a>()
+                    </li><li>public JDatabaseDriver <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/setQuery.xhtml">setQuery</a>()
+                    </li><li>public boolean <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/setUtf.xhtml">setUtf</a>()
+                    </li><li>public void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/transactionCommit.xhtml">transactionCommit</a>()
+                    </li><li>public void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/transactionRollback.xhtml">transactionRollback</a>()
+                    </li><li>public void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/transactionStart.xhtml">transactionStart</a>()
+                    </li><li>protected mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/fetchArray.xhtml">fetchArray</a>()
+                    </li><li>protected mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/fetchAssoc.xhtml">fetchAssoc</a>()
+                    </li><li>protected mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/fetchObject.xhtml">fetchObject</a>()
+                    </li><li>protected void <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/freeResult.xhtml">freeResult</a>()
+                    </li><li>public mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/loadNextObject.xhtml">loadNextObject</a>()
+                    </li><li>public mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/loadNextAssoc.xhtml">loadNextAssoc</a>()
+                    </li><li>public mixed <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/loadNextRow.xhtml">loadNextRow</a>()
+                    </li><li>public array <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__sleep.xhtml">__sleep</a>()
+                    </li><li>public array <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__wakeup.xhtml">__wakeup</a>()
+                    </li><li>protected integer <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getErrorNumber.xhtml">getErrorNumber</a>()
+                    </li><li>protected string <a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getErrorMessage.xhtml">getErrorMessage</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JDatabaseDriver" href="../classes/JDatabaseDriver.xhtml">JDatabaseDriver</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="connection"><strong>$connection</strong>
+                —
+                <a title="PDO" href="../classes/PDO.xhtml">PDO</a></li>
+            <li id="executed"><strong>$executed</strong>
+                —
+                array<br/><span class="indent">Contains the current query execution status</span></li>
+            <li id="nameQuote"><strong>$nameQuote</strong>
+                —
+                string<br/><span class="indent">The character(s) used to quote SQL statement names such as table names or field names, etc.  The child classes should define this as necessary.  If a single character string the same character is used for both sides of the quoted name, else the first character will be used for the opening quote and the second for the closing quote.</span></li>
+            <li id="nullDate"><strong>$nullDate</strong>
+                —
+                string<br/><span class="indent">The null or zero representation of a timestamp for the database driver.  This should be defined in child classes to hold the appropriate value for the engine.</span></li>
+            <li id="prepared"><strong>$prepared</strong>
+                —
+                resource</li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The name of the database driver.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="fetchArray"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/fetchArray.xhtml">fetchArray()</a>
+                — Method to fetch a row from the result set cursor as an array.</li>
+            <li id="fetchAssoc"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/fetchAssoc.xhtml">fetchAssoc()</a>
+                — Method to fetch a row from the result set cursor as an associative array.</li>
+            <li id="fetchObject"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/fetchObject.xhtml">fetchObject()</a>
+                — Method to fetch a row from the result set cursor as an object.</li>
+            <li id="freeResult"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/freeResult.xhtml">freeResult()</a>
+                — Method to free up the memory used for the result set.</li>
+            <li id="getErrorMessage"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getErrorMessage.xhtml">getErrorMessage()</a>
+                — Return the actual SQL Error message</li>
+            <li id="getErrorNumber"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getErrorNumber.xhtml">getErrorNumber()</a>
+                — Return the actual SQL Error number</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="__destruct"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__destruct.xhtml">__destruct()</a>
+                — Destructor.</li>
+            <li id="__sleep"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__sleep.xhtml">__sleep()</a>
+                — PDO does not support serialize</li>
+            <li id="__wakeup"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/__wakeup.xhtml">__wakeup()</a>
+                — Wake up after serialization</li>
+            <li id="connect"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/connect.xhtml">connect()</a>
+                — Connects to the database if needed.</li>
+            <li id="connected"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/connected.xhtml">connected()</a>
+                — Determines if the connection to the server is active.</li>
+            <li id="disconnect"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/disconnect.xhtml">disconnect()</a>
+                — Disconnects the database.</li>
+            <li id="escape"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/escape.xhtml">escape()</a>
+                — Method to escape a string for usage in an SQL statement.</li>
+            <li id="execute"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/execute.xhtml">execute()</a>
+                — Execute the SQL statement.</li>
+            <li id="getAffectedRows"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getAffectedRows.xhtml">getAffectedRows()</a>
+                — Get the number of affected rows for the previous executed SQL statement.</li>
+            <li id="getConnectedQuery"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getConnectedQuery.xhtml">getConnectedQuery()</a>
+                — Get a query to run and verify the database is operational.</li>
+            <li id="getNumRows"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getNumRows.xhtml">getNumRows()</a>
+                — Get the number of returned rows for the previous executed SQL statement.</li>
+            <li id="getOption"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/getOption.xhtml">getOption()</a>
+                — Retrieve a PDO database connection attribute</li>
+            <li id="insertid"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/insertid.xhtml">insertid()</a>
+                — Method to get the auto-incremented value from the last INSERT statement.</li>
+            <li id="isSupported"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/isSupported.xhtml">isSupported()</a>
+                — Test to see if the PDO extension is available.</li>
+            <li id="loadNextAssoc"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/loadNextAssoc.xhtml">loadNextAssoc()</a>
+                — Method to get the next row in the result set from the database query as an array.</li>
+            <li id="loadNextObject"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/loadNextObject.xhtml">loadNextObject()</a>
+                — Method to get the next row in the result set from the database query as an object.</li>
+            <li id="loadNextRow"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/loadNextRow.xhtml">loadNextRow()</a>
+                — Method to get the next row in the result set from the database query as an array.</li>
+            <li id="select"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/select.xhtml">select()</a>
+                — Select a database for use.</li>
+            <li id="setOption"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/setOption.xhtml">setOption()</a>
+                — Sets an attribute on the PDO database handle.</li>
+            <li id="setQuery"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/setQuery.xhtml">setQuery()</a>
+                — Sets the SQL statement string for later execution.</li>
+            <li id="setUtf"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/setUtf.xhtml">setUtf()</a>
+                — Set the connection to use UTF-8 character encoding.</li>
+            <li id="transactionCommit"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/transactionCommit.xhtml">transactionCommit()</a>
+                — Method to commit a transaction.</li>
+            <li id="transactionRollback"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/transactionRollback.xhtml">transactionRollback()</a>
+                — Method to roll back a transaction.</li>
+            <li id="transactionStart"><a title="JDatabaseDriverPdo" href="../classes/JDatabaseDriverPdo/transactionStart.xhtml">transactionStart()</a>
+                — Method to initialize a transaction.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

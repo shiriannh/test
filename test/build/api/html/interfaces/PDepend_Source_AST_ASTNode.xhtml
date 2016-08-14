@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\AST\ASTNode</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml">Interfaces</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml#PDepend_Source_AST">PDepend\Source\AST</a>
+          </li>
+          <li class="separator">ASTNode</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/ASTNode.php.xhtml#line53">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\AST\</small>ASTNode</h1>
+        <h4>This is an abstract base implementation of the ast node interface.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">interface ASTNode
+            {<br/><ul class="none"><li>// methods</li><li>public string <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getImage.xhtml">getImage</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getStartLine.xhtml">getStartLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getStartColumn.xhtml">getStartColumn</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getEndLine.xhtml">getEndLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getEndColumn.xhtml">getEndColumn</a>()
+                    </li><li>public ASTNode <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getChild.xhtml">getChild</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getChildren.xhtml">getChildren</a>()
+                    </li><li>public ASTNode <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getFirstChildOfType.xhtml">getFirstChildOfType</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/findChildrenOfType.xhtml">findChildrenOfType</a>()
+                    </li><li>public ASTNode <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getParent.xhtml">getParent</a>()
+                    </li><li>public array <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getParentsOfType.xhtml">getParentsOfType</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getComment.xhtml">getComment</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/setComment.xhtml">setComment</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="findChildrenOfType"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/findChildrenOfType.xhtml">findChildrenOfType()</a>
+                — This method will search recursive for all child nodes that are an instance of the given &lt;b&gt;$targetType&lt;/b&gt;. The returned value will be an empty &lt;b&gt;array&lt;/b&gt; if no child exists for that.</li>
+            <li id="getChild"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getChild.xhtml">getChild()</a>
+                — Returns the node instance for the given index or throws an exception.</li>
+            <li id="getChildren"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getChildren.xhtml">getChildren()</a>
+                — This method returns all direct children of the actual node.</li>
+            <li id="getComment"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getComment.xhtml">getComment()</a>
+                — Returns a doc comment for this node or &lt;b&gt;null&lt;/b&gt; when no comment was found.</li>
+            <li id="getEndColumn"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getEndColumn.xhtml">getEndColumn()</a>
+                — Returns the end column for this ast node.</li>
+            <li id="getEndLine"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getEndLine.xhtml">getEndLine()</a>
+                — Returns the end line for this ast node.</li>
+            <li id="getFirstChildOfType"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getFirstChildOfType.xhtml">getFirstChildOfType()</a>
+                — This method will search recursive for the first child node that is an instance of the given &lt;b&gt;$targetType&lt;/b&gt;. The returned value will be &lt;b&gt;null&lt;/b&gt; if no child exists for that.</li>
+            <li id="getImage"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getImage.xhtml">getImage()</a>
+                — Returns the source image of this ast node.</li>
+            <li id="getParent"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getParent.xhtml">getParent()</a>
+                — Returns the parent node of this node or &lt;b&gt;null&lt;/b&gt; when this node is the root of a node tree.</li>
+            <li id="getParentsOfType"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getParentsOfType.xhtml">getParentsOfType()</a>
+                — Traverses up the node tree and finds all parent nodes that are instances of &lt;b&gt;$parentType&lt;/b&gt;.</li>
+            <li id="getStartColumn"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getStartColumn.xhtml">getStartColumn()</a>
+                — Returns the start column for this ast node.</li>
+            <li id="getStartLine"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/getStartLine.xhtml">getStartLine()</a>
+                — Returns the start line for this ast node.</li>
+            <li id="setComment"><a title="PDepend\Source\AST\ASTNode" href="../interfaces/PDepend_Source_AST_ASTNode/setComment.xhtml">setComment()</a>
+                — Sets the raw doc comment for this node.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

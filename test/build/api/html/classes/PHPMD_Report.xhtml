@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\Report</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PHPMD">PHPMD</a>
+          </li>
+          <li class="separator">Report</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/Report.php.xhtml#line52">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\</small>Report</h1>
+        <h4>The report class collects all found violations and further information about a PHPMD run.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Report
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$ruleViolations</a> =
+                        ;
+                    </li><li>private float <a href="#members">$startTime</a> =
+                        0.0;
+                    </li><li>private float <a href="#members">$endTime</a> =
+                        0.0;
+                    </li><li>private array <a href="#members">$errors</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPMD\Report" href="../classes/PHPMD_Report/addRuleViolation.xhtml">addRuleViolation</a>()
+                    </li><li>public boolean <a title="PHPMD\Report" href="../classes/PHPMD_Report/isEmpty.xhtml">isEmpty</a>()
+                    </li><li>public Iterator <a title="PHPMD\Report" href="../classes/PHPMD_Report/getRuleViolations.xhtml">getRuleViolations</a>()
+                    </li><li>public void <a title="PHPMD\Report" href="../classes/PHPMD_Report/addError.xhtml">addError</a>()
+                    </li><li>public boolean <a title="PHPMD\Report" href="../classes/PHPMD_Report/hasErrors.xhtml">hasErrors</a>()
+                    </li><li>public Iterator <a title="PHPMD\Report" href="../classes/PHPMD_Report/getErrors.xhtml">getErrors</a>()
+                    </li><li>public void <a title="PHPMD\Report" href="../classes/PHPMD_Report/start.xhtml">start</a>()
+                    </li><li>public void <a title="PHPMD\Report" href="../classes/PHPMD_Report/end.xhtml">end</a>()
+                    </li><li>public float <a title="PHPMD\Report" href="../classes/PHPMD_Report/getElapsedTimeInMillis.xhtml">getElapsedTimeInMillis</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="endTime"><strong>$endTime</strong>
+                —
+                float<br/><span class="indent">The end time for this report.</span></li>
+            <li id="errors"><strong>$errors</strong>
+                —
+                array<br/><span class="indent">Errors that occurred while parsing the source.</span></li>
+            <li id="ruleViolations"><strong>$ruleViolations</strong>
+                —
+                array<br/><span class="indent">List of rule violations detected in the analyzed source code.</span></li>
+            <li id="startTime"><strong>$startTime</strong>
+                —
+                float<br/><span class="indent">The start time for this report.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addError"><a title="PHPMD\Report" href="../classes/PHPMD_Report/addError.xhtml">addError()</a>
+                — Adds a processing error that occurred while parsing the source.</li>
+            <li id="addRuleViolation"><a title="PHPMD\Report" href="../classes/PHPMD_Report/addRuleViolation.xhtml">addRuleViolation()</a>
+                — Adds a rule violation to this report.</li>
+            <li id="end"><a title="PHPMD\Report" href="../classes/PHPMD_Report/end.xhtml">end()</a>
+                — Stops the time tracking of this report instance.</li>
+            <li id="getElapsedTimeInMillis"><a title="PHPMD\Report" href="../classes/PHPMD_Report/getElapsedTimeInMillis.xhtml">getElapsedTimeInMillis()</a>
+                — Returns the total time elapsed for the source analysis.</li>
+            <li id="getErrors"><a title="PHPMD\Report" href="../classes/PHPMD_Report/getErrors.xhtml">getErrors()</a>
+                — Returns an iterator with all {@link \PHPMD\ProcessingError} that were added to this report.</li>
+            <li id="getRuleViolations"><a title="PHPMD\Report" href="../classes/PHPMD_Report/getRuleViolations.xhtml">getRuleViolations()</a>
+                — Returns an iterator with all occurred rule violations.</li>
+            <li id="hasErrors"><a title="PHPMD\Report" href="../classes/PHPMD_Report/hasErrors.xhtml">hasErrors()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when the report contains at least one processing error. Otherwise this method will return &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="isEmpty"><a title="PHPMD\Report" href="../classes/PHPMD_Report/isEmpty.xhtml">isEmpty()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this report does not contain any errors.</li>
+            <li id="start"><a title="PHPMD\Report" href="../classes/PHPMD_Report/start.xhtml">start()</a>
+                — Starts the time tracking of this report instance.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

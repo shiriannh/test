@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - uctc</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">uctc</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/idna_convert/uctc.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>uctc</h1>
+        <h4>UCTC - The Unicode Transcoder</h4>
+        <p>Converts between various flavours of Unicode representations like UCS-4 or UTF-8<br/>Supported schemes:<br/>- UCS-4 Little Endian / Big Endian / Array (partially)<br/>- UTF-16 Little Endian / Big Endian (not yet)<br/>- UTF-8<br/>- UTF-7<br/>- UTF-7 IMAP (modified UTF-7)</p>
+        <ul>
+          <li>Author: Matthias Sommerfeld  &lt;mso@phlyLabs.de&gt;</li>
+          <li>Copyright: 2003-2009 phlyLabs Berlin, http://phlylabs.de</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class uctc
+            {<br/><ul class="none"><li>// members</li><li>private static array <a href="#members">$mechs</a> =
+                        ;
+                    </li><li>private static boolean <a href="#members">$allow_overlong</a> =
+                        false;
+                    </li><li>private static  <a href="#members">$safe_mode</a>;
+                    </li><li>private static  <a href="#members">$safe_char</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static mixed <a title="uctc" href="../classes/uctc/convert.xhtml">convert</a>()
+                    </li><li>private static array <a title="uctc" href="../classes/uctc/utf8_ucs4array.xhtml">utf8_ucs4array</a>()
+                    </li><li>private static void <a title="uctc" href="../classes/uctc/ucs4array_utf8.xhtml">ucs4array_utf8</a>()
+                    </li><li>private static void <a title="uctc" href="../classes/uctc/utf7imap_ucs4array.xhtml">utf7imap_ucs4array</a>()
+                    </li><li>private static void <a title="uctc" href="../classes/uctc/utf7_ucs4array.xhtml">utf7_ucs4array</a>()
+                    </li><li>private static void <a title="uctc" href="../classes/uctc/ucs4array_utf7imap.xhtml">ucs4array_utf7imap</a>()
+                    </li><li>private static void <a title="uctc" href="../classes/uctc/ucs4array_utf7.xhtml">ucs4array_utf7</a>()
+                    </li><li>private static void <a title="uctc" href="../classes/uctc/ucs4array_ucs4.xhtml">ucs4array_ucs4</a>()
+                    </li><li>private static void <a title="uctc" href="../classes/uctc/ucs4_ucs4array.xhtml">ucs4_ucs4array</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="allow_overlong">
+              <strong>$allow_overlong</strong>
+            </li>
+            <li id="mechs">
+              <strong>$mechs</strong>
+            </li>
+            <li id="safe_char">
+              <strong>$safe_char</strong>
+            </li>
+            <li id="safe_mode">
+              <strong>$safe_mode</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="ucs4_ucs4array"><a title="uctc" href="../classes/uctc/ucs4_ucs4array.xhtml">ucs4_ucs4array()</a>
+                — Convert UCS-4 string (LE in the moment) into UCS-4 garray</li>
+            <li id="ucs4array_ucs4"><a title="uctc" href="../classes/uctc/ucs4array_ucs4.xhtml">ucs4array_ucs4()</a>
+                — Convert UCS-4 array into UCS-4 string (Little Endian at the moment)</li>
+            <li id="ucs4array_utf7">
+              <a title="uctc" href="../classes/uctc/ucs4array_utf7.xhtml">ucs4array_utf7()</a>
+            </li>
+            <li id="ucs4array_utf7imap">
+              <a title="uctc" href="../classes/uctc/ucs4array_utf7imap.xhtml">ucs4array_utf7imap()</a>
+            </li>
+            <li id="ucs4array_utf8"><a title="uctc" href="../classes/uctc/ucs4array_utf8.xhtml">ucs4array_utf8()</a>
+                — Convert UCS-4 string into UTF-8 string See utf8_ucs4array() for details</li>
+            <li id="utf7_ucs4array">
+              <a title="uctc" href="../classes/uctc/utf7_ucs4array.xhtml">utf7_ucs4array()</a>
+            </li>
+            <li id="utf7imap_ucs4array">
+              <a title="uctc" href="../classes/uctc/utf7imap_ucs4array.xhtml">utf7imap_ucs4array()</a>
+            </li>
+            <li id="utf8_ucs4array"><a title="uctc" href="../classes/uctc/utf8_ucs4array.xhtml">utf8_ucs4array()</a>
+                — This converts an UTF-8 encoded string to its UCS-4 representation</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="convert"><a title="uctc" href="../classes/uctc/convert.xhtml">convert()</a>
+                — The actual conversion routine</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

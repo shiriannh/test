@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="FOFTableRelations" href="../../classes/FOFTableRelations.xhtml">FOFTableRelations</a>
+          </li>
+          <li class="separator">normaliseParameters</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/fof/table/relations.php.xhtml#line901">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>FOFTableRelations::</small>normaliseParameters</h1>
+        <h4>Normalise the parameters of a relation, guessing missing values</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>protected function normaliseParameters([boolean
+        $pivot = false,
+            string&amp;
+        $itemName,
+            string&amp;
+        $tableClass,
+            string&amp;
+        $localKey,
+            string&amp;
+        $remoteKey,
+            string&amp;
+        $ourPivotKey,
+            string&amp;
+        $theirPivotKey,
+            string&amp;
+        $pivotTable] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$pivot</code>
+                —
+                boolean</dt>
+          <dd>Is this a many to many relation involving a pivot table?</dd>
+          <dt><code>$itemName</code>
+                —
+                string</dt>
+          <dd>is how it will be known locally to the getRelatedItems method (plural)</dd>
+          <dt><code>$tableClass</code>
+                —
+                string</dt>
+          <dd>if skipped it is defined automatically as ComponentnameTableItemname</dd>
+          <dt><code>$localKey</code>
+                —
+                string</dt>
+          <dd>is the column containing our side of the FK relation, default: componentname_itemname_id</dd>
+          <dt><code>$remoteKey</code>
+                —
+                string</dt>
+          <dd>is the remote table's FK column, default: componentname_itemname_id</dd>
+          <dt><code>$ourPivotKey</code>
+                —
+                string</dt>
+          <dd>is the column containing our side of the FK relation in the pivot table, default: $localKey</dd>
+          <dt><code>$theirPivotKey</code>
+                —
+                string</dt>
+          <dd>is the column containing the other table's side of the FK relation in the pivot table, default $remoteKey</dd>
+          <dt><code>$pivotTable</code>
+                —
+                string</dt>
+          <dd>is the name of the glue (pivot) table, default: #__componentname_thisclassname_itemname with plural items (e.g. #__foobar_users_roles)</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>void</dt>
+          <dd><br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

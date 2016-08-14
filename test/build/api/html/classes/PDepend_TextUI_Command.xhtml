@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\TextUI\Command</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_TextUI">PDepend\TextUI</a>
+          </li>
+          <li class="separator">Command</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/TextUI/Command.php.xhtml#line56">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\TextUI\</small>Command</h1>
+        <h4>Handles the command line stuff and starts the text ui runner.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Command
+            {<br/><ul class="none"><li>// constants</li><li>const CLI_ERROR = 1742;</li><li>const INPUT_ERROR = 1743;</li></ul><ul class="none"><li>// members</li><li>private <span title="PDepend\TextUI\array(string=&gt;mixed)">array(string=&gt;mixed)</span> <a href="#members">$options</a> =
+                        ;
+                    </li><li>private  <a href="#members">$source</a>;
+                    </li><li>private <span title="\PDepend\TextUI\Runner">Runner</span> <a href="#members">$runner</a> =
+                        null;
+                    </li><li>private <span title="\PDepend\Application">Application</span> <a href="#members">$application</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public integer <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/run.xhtml">run</a>()
+                    </li><li>protected boolean <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/parseArguments.xhtml">parseArguments</a>()
+                    </li><li>protected bool <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/assignArguments.xhtml">assignArguments</a>()
+                    </li><li>protected void <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printVersion.xhtml">printVersion</a>()
+                    </li><li>protected void <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printWorkarounds.xhtml">printWorkarounds</a>()
+                    </li><li>protected void <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printUsage.xhtml">printUsage</a>()
+                    </li><li>protected void <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printHelp.xhtml">printHelp</a>()
+                    </li><li>protected integer <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printLogOptions.xhtml">printLogOptions</a>()
+                    </li><li>protected integer <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printAnalyzerOptions.xhtml">printAnalyzerOptions</a>()
+                    </li><li>private void <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printOption.xhtml">printOption</a>()
+                    </li><li>private void <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printDbusOption.xhtml">printDbusOption</a>()
+                    </li><li>public static integer <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/main.xhtml">main</a>()
+                    </li><li>private void <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printStatistics.xhtml">printStatistics</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="CLI_ERROR">CLI_ERROR</td>
+              <td>1742</td>
+            </tr>
+            <tr>
+              <td id="INPUT_ERROR">INPUT_ERROR</td>
+              <td>1743</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="application"><strong>$application</strong>
+                —
+                <a title="\PDepend\Application" href="../classes/_PDepend_Application.xhtml">\PDepend\Application</a></li>
+            <li id="options"><strong>$options</strong>
+                —
+                <a title="PDepend\TextUI\array(string=&gt;mixed)" href="../classes/PDepend_TextUI_array(string=&gt;mixed).xhtml">PDepend\TextUI\array(string=&gt;mixed)</a><br/><span class="indent">The recieved cli options</span></li>
+            <li id="runner"><strong>$runner</strong>
+                —
+                <a title="\PDepend\TextUI\Runner" href="../classes/_PDepend_TextUI_Runner.xhtml">\PDepend\TextUI\Runner</a><br/><span class="indent">The used text ui runner.</span></li>
+            <li id="source"><strong>$source</strong>
+                —
+                string<br/><span class="indent">The directories/files to be analyzed</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="printDbusOption"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printDbusOption.xhtml">printDbusOption()</a>
+                — Optionally outputs the dbus option when the required extension is loaded.</li>
+            <li id="printOption"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printOption.xhtml">printOption()</a>
+                — Prints a single option.</li>
+            <li id="printStatistics">
+              <a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printStatistics.xhtml">printStatistics()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="assignArguments"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/assignArguments.xhtml">assignArguments()</a>
+                — Assign CLI arguments to current runner instance</li>
+            <li id="parseArguments"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/parseArguments.xhtml">parseArguments()</a>
+                — Parses the cli arguments.</li>
+            <li id="printAnalyzerOptions"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printAnalyzerOptions.xhtml">printAnalyzerOptions()</a>
+                — Prints the analyzer options.</li>
+            <li id="printHelp"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printHelp.xhtml">printHelp()</a>
+                — Outputs the main help of PDepend.</li>
+            <li id="printLogOptions"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printLogOptions.xhtml">printLogOptions()</a>
+                — Prints all available log options and returns the length of the longest option.</li>
+            <li id="printUsage"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printUsage.xhtml">printUsage()</a>
+                — Outputs the base usage of PDepend.</li>
+            <li id="printVersion"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printVersion.xhtml">printVersion()</a>
+                — Outputs the current PDepend version.</li>
+            <li id="printWorkarounds"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/printWorkarounds.xhtml">printWorkarounds()</a>
+                — If the current PHP installation requires some workarounds or limitations, this method will output a message on STDOUT.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="main"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/main.xhtml">main()</a>
+                — Main method that starts the command line runner.</li>
+            <li id="run"><a title="PDepend\TextUI\Command" href="../classes/PDepend_TextUI_Command/run.xhtml">run()</a>
+                — Performs the main cli process and returns the exit code.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

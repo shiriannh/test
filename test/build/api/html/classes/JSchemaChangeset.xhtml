@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JSchemaChangeset</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JSchemaChangeset</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/schema/changeset.php.xhtml#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JSchemaChangeset</h1>
+        <h4>Contains a set of JSchemaChange objects for a particular instance of Joomla.</h4>
+        <p>Each of these objects contains a DDL query that should have been run against<br/>the database when this database was created or updated. This enables the<br/>Installation Manager to check that the current database schema is up to date.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JSchemaChangeset
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$changeItems</a> =
+                        ;
+                    </li><li>protected <span title="JDatabaseDriver">JDatabaseDriver</span> <a href="#members">$db</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$folder</a> =
+                        null;
+                    </li><li>protected static <span title="JSchemaChangeset">JSchemaChangeset</span> <a href="#members">$instance</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/__construct.xhtml">__construct</a>()
+                    </li><li>public static JSchemaChangeset <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getInstance.xhtml">getInstance</a>()
+                    </li><li>public array <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/check.xhtml">check</a>()
+                    </li><li>public void <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/fix.xhtml">fix</a>()
+                    </li><li>public array <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getStatus.xhtml">getStatus</a>()
+                    </li><li>public string <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getSchema.xhtml">getSchema</a>()
+                    </li><li>private array <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getUpdateFiles.xhtml">getUpdateFiles</a>()
+                    </li><li>private array <a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getUpdateQueries.xhtml">getUpdateQueries</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="changeItems"><strong>$changeItems</strong>
+                —
+                array<br/><span class="indent">Array of JSchemaChangeitem objects</span></li>
+            <li id="db"><strong>$db</strong>
+                —
+                <a title="JDatabaseDriver" href="../classes/JDatabaseDriver.xhtml">JDatabaseDriver</a><br/><span class="indent">JDatabaseDriver object</span></li>
+            <li id="folder"><strong>$folder</strong>
+                —
+                string<br/><span class="indent">Folder where SQL update files will be found</span></li>
+            <li id="instance"><strong>$instance</strong>
+                —
+                <a title="JSchemaChangeset" href="../classes/JSchemaChangeset.xhtml">JSchemaChangeset</a><br/><span class="indent">The singleton instance of this object</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getUpdateFiles"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getUpdateFiles.xhtml">getUpdateFiles()</a>
+                — Get list of SQL update files for this database</li>
+            <li id="getUpdateQueries"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getUpdateQueries.xhtml">getUpdateQueries()</a>
+                — Get array of SQL queries</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/__construct.xhtml">__construct()</a>
+                — Constructor: builds array of $changeItems by processing the .sql files in a folder.</li>
+            <li id="check"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/check.xhtml">check()</a>
+                — Checks the database and returns an array of any errors found.</li>
+            <li id="fix"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/fix.xhtml">fix()</a>
+                — Runs the update query to apply the change to the database</li>
+            <li id="getInstance"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getInstance.xhtml">getInstance()</a>
+                — Returns a reference to the JSchemaChangeset object, only creating it if it doesn't already exist.</li>
+            <li id="getSchema"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getSchema.xhtml">getSchema()</a>
+                — Gets the current database schema, based on the highest version number.</li>
+            <li id="getStatus"><a title="JSchemaChangeset" href="../classes/JSchemaChangeset/getStatus.xhtml">getStatus()</a>
+                — Returns an array of results for this set</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

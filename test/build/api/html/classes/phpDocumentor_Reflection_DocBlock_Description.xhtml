@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - phpDocumentor\Reflection\DocBlock\Description</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#phpDocumentor_Reflection_DocBlock">phpDocumentor\Reflection\DocBlock</a>
+          </li>
+          <li class="separator">Description</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpdocumentor/reflection-docblock/src/DocBlock/Description.php.xhtml#line51">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>phpDocumentor\Reflection\DocBlock\</small>Description</h1>
+        <h4>Object representing to description for a DocBlock.</h4>
+        <p>A Description object can consist of plain text but can also include tags. A Description Formatter can then combine<br/>a body template with sprintf-style placeholders together with formatted tags in order to reconstitute a complete<br/>description text using the format that you would prefer.<br/>Because parsing a Description text can be a verbose process this is handled by the . It is<br/>thus recommended to use that to create a Description object, like this:<br/>$description = $descriptionFactory-&gt;create('This is a ', $context);<br/>The description factory will interpret the given body and create a body template and list of tags from them, and pass<br/>that onto the constructor if this class.<br/>&gt; The $context variable is a class of type and contains the namespace<br/>&gt; and the namespace aliases that apply to this DocBlock. These are used by the Factory to resolve and expand partial<br/>&gt; type names and FQSENs.<br/>If you do not want to use the DescriptionFactory you can pass a body template and tag listing like this:<br/>$description = new Description(<br/>'This is a %1$s',<br/>[ new See(new Fqsen('\phpDocumentor\Reflection\DocBlock\Description')) ]<br/>);<br/>It is generally recommended to use the Factory as that will also apply escaping rules, while the Description object<br/>is mainly responsible for rendering.<br/></p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Description
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$bodyTemplate</a>;
+                    </li><li>private  <a href="#members">$tags</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="phpDocumentor\Reflection\DocBlock\Description" href="../classes/phpDocumentor_Reflection_DocBlock_Description/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="phpDocumentor\Reflection\DocBlock\Description" href="../classes/phpDocumentor_Reflection_DocBlock_Description/render.xhtml">render</a>()
+                    </li><li>public string <a title="phpDocumentor\Reflection\DocBlock\Description" href="../classes/phpDocumentor_Reflection_DocBlock_Description/__toString.xhtml">__toString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="bodyTemplate">
+              <strong>$bodyTemplate</strong>
+              <br/>
+              <span class="indent">@var string</span>
+            </li>
+            <li id="tags">
+              <strong>$tags</strong>
+              <br/>
+              <span class="indent">@var Tag[]</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="phpDocumentor\Reflection\DocBlock\Description" href="../classes/phpDocumentor_Reflection_DocBlock_Description/__construct.xhtml">__construct()</a>
+                — Initializes a Description with its body (template) and a listing of the tags used in the body template.</li>
+            <li id="__toString"><a title="phpDocumentor\Reflection\DocBlock\Description" href="../classes/phpDocumentor_Reflection_DocBlock_Description/__toString.xhtml">__toString()</a>
+                — Returns a plain string representation of this description.</li>
+            <li id="render"><a title="phpDocumentor\Reflection\DocBlock\Description" href="../classes/phpDocumentor_Reflection_DocBlock_Description/render.xhtml">render()</a>
+                — Renders this description as a string where the provided formatter will format the tags in the expected string format.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

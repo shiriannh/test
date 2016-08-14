@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JFilterInput</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JFilterInput</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/filter/input.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JFilterInput</h1>
+        <h4>JFilterInput is a class for filtering input from any data source</h4>
+        <p>Forked from the php input filter library by: Daniel Morris &lt;dan@rootcube.com&gt;<br/>Original Contributors: Gianpaolo Racca, Ghislain Picard, Marco Wandschneider, Chris Tobin and Andrew Eddie.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JFilterInput
+                extends <a title="Joomla\Filter\InputFilter" href="../classes/Joomla_Filter_InputFilter.xhtml">InputFilter</a>
+            {<br/><ul class="none"><li>// members</li><li>public integer <a href="#members">$stripUSC</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JFilterInput" href="../classes/JFilterInput/__construct.xhtml">__construct</a>()
+                    </li><li>public static JFilterInput <a title="JFilterInput" href="../classes/JFilterInput/getInstance.xhtml">getInstance</a>()
+                    </li><li>public mixed <a title="JFilterInput" href="../classes/JFilterInput/clean.xhtml">clean</a>()
+                    </li><li>public string <a title="JFilterInput" href="../classes/JFilterInput/emailToPunycode.xhtml">emailToPunycode</a>()
+                    </li><li>public static boolean <a title="JFilterInput" href="../classes/JFilterInput/isSafeFile.xhtml">isSafeFile</a>()
+                    </li><li>protected static array <a title="JFilterInput" href="../classes/JFilterInput/decodeFileData.xhtml">decodeFileData</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/_remove.xhtml">_remove</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/remove.xhtml">remove</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/_cleanTags.xhtml">_cleanTags</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/cleanTags.xhtml">cleanTags</a>()
+                    </li><li>protected array <a title="JFilterInput" href="../classes/JFilterInput/_cleanAttributes.xhtml">_cleanAttributes</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/escapeAttributeValues.xhtml">escapeAttributeValues</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/_decode.xhtml">_decode</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/decode.xhtml">decode</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/_escapeAttributeValues.xhtml">_escapeAttributeValues</a>()
+                    </li><li>protected string <a title="JFilterInput" href="../classes/JFilterInput/_stripCSSExpressions.xhtml">_stripCSSExpressions</a>()
+                    </li><li>protected mixed <a title="JFilterInput" href="../classes/JFilterInput/stripUSC.xhtml">stripUSC</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Joomla\Filter\InputFilter" href="../classes/Joomla_Filter_InputFilter.xhtml">Joomla\Filter\InputFilter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="stripUSC"><strong>$stripUSC</strong>
+                —
+                integer<br/><span class="indent">A flag for Unicode Supplementary Characters (4-byte Unicode character) stripping.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_cleanAttributes"><a title="JFilterInput" href="../classes/JFilterInput/_cleanAttributes.xhtml">_cleanAttributes()</a>
+                — Internal method to strip a tag of certain attributes</li>
+            <li id="_cleanTags"><a title="JFilterInput" href="../classes/JFilterInput/_cleanTags.xhtml">_cleanTags()</a>
+                — Internal method to strip a string of certain tags</li>
+            <li id="_decode"><a title="JFilterInput" href="../classes/JFilterInput/_decode.xhtml">_decode()</a>
+                — Try to convert to plaintext</li>
+            <li id="_escapeAttributeValues"><a title="JFilterInput" href="../classes/JFilterInput/_escapeAttributeValues.xhtml">_escapeAttributeValues()</a>
+                — Escape &lt; &gt; and " inside attribute values</li>
+            <li id="_remove"><a title="JFilterInput" href="../classes/JFilterInput/_remove.xhtml">_remove()</a>
+                — Internal method to iteratively remove all unwanted tags and attributes</li>
+            <li id="_stripCSSExpressions"><a title="JFilterInput" href="../classes/JFilterInput/_stripCSSExpressions.xhtml">_stripCSSExpressions()</a>
+                — Remove CSS Expressions in the form of `&lt;property&gt;:expression(...)`</li>
+            <li id="cleanTags"><a title="JFilterInput" href="../classes/JFilterInput/cleanTags.xhtml">cleanTags()</a>
+                — Internal method to strip a string of certain tags</li>
+            <li id="decode"><a title="JFilterInput" href="../classes/JFilterInput/decode.xhtml">decode()</a>
+                — Try to convert to plaintext</li>
+            <li id="decodeFileData"><a title="JFilterInput" href="../classes/JFilterInput/decodeFileData.xhtml">decodeFileData()</a>
+                — Method to decode a file data array.</li>
+            <li id="escapeAttributeValues"><a title="JFilterInput" href="../classes/JFilterInput/escapeAttributeValues.xhtml">escapeAttributeValues()</a>
+                — Escape &lt; &gt; and " inside attribute values</li>
+            <li id="remove"><a title="JFilterInput" href="../classes/JFilterInput/remove.xhtml">remove()</a>
+                — Internal method to iteratively remove all unwanted tags and attributes</li>
+            <li id="stripUSC"><a title="JFilterInput" href="../classes/JFilterInput/stripUSC.xhtml">stripUSC()</a>
+                — Recursively strip Unicode Supplementary Characters from the source. Not: objects cannot be filtered.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JFilterInput" href="../classes/JFilterInput/__construct.xhtml">__construct()</a>
+                — Constructor for inputFilter class. Only first parameter is required.</li>
+            <li id="clean"><a title="JFilterInput" href="../classes/JFilterInput/clean.xhtml">clean()</a>
+                — Method to be called by another php script. Processes for XSS and specified bad code.</li>
+            <li id="emailToPunycode"><a title="JFilterInput" href="../classes/JFilterInput/emailToPunycode.xhtml">emailToPunycode()</a>
+                — Function to punyencode utf8 mail when saving content</li>
+            <li id="getInstance"><a title="JFilterInput" href="../classes/JFilterInput/getInstance.xhtml">getInstance()</a>
+                — Returns an input filter object, only creating it if it doesn't already exist.</li>
+            <li id="isSafeFile"><a title="JFilterInput" href="../classes/JFilterInput/isSafeFile.xhtml">isSafeFile()</a>
+                — Checks an uploaded for suspicious naming and potential PHP contents which could indicate a hacking attempt.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

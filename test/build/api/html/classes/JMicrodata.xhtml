@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JMicrodata</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JMicrodata</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/microdata/microdata.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JMicrodata</h1>
+        <h4>Joomla Platform class for interacting with Microdata semantics.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JMicrodata
+            {<br/><ul class="none"><li>// members</li><li>protected static array <a href="#members">$types</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$type</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$property</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$content</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$machineContent</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$fallbackType</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$fallbackProperty</a> =
+                        null;
+                    </li><li>protected boolean <a href="#members">$enabled</a> =
+                        true;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JMicrodata" href="../classes/JMicrodata/__construct.xhtml">__construct</a>()
+                    </li><li>protected static void <a title="JMicrodata" href="../classes/JMicrodata/loadTypes.xhtml">loadTypes</a>()
+                    </li><li>protected void <a title="JMicrodata" href="../classes/JMicrodata/resetParams.xhtml">resetParams</a>()
+                    </li><li>public JMicrodata <a title="JMicrodata" href="../classes/JMicrodata/enable.xhtml">enable</a>()
+                    </li><li>public boolean <a title="JMicrodata" href="../classes/JMicrodata/isEnabled.xhtml">isEnabled</a>()
+                    </li><li>public JMicrodata <a title="JMicrodata" href="../classes/JMicrodata/setType.xhtml">setType</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/getType.xhtml">getType</a>()
+                    </li><li>public JMicrodata <a title="JMicrodata" href="../classes/JMicrodata/property.xhtml">property</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/getProperty.xhtml">getProperty</a>()
+                    </li><li>public JMicrodata <a title="JMicrodata" href="../classes/JMicrodata/content.xhtml">content</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/getContent.xhtml">getContent</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/getMachineContent.xhtml">getMachineContent</a>()
+                    </li><li>public JMicrodata <a title="JMicrodata" href="../classes/JMicrodata/fallback.xhtml">fallback</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/getFallbackType.xhtml">getFallbackType</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/getFallbackProperty.xhtml">getFallbackProperty</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/display.xhtml">display</a>()
+                    </li><li>public string <a title="JMicrodata" href="../classes/JMicrodata/displayScope.xhtml">displayScope</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/sanitizeType.xhtml">sanitizeType</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/sanitizeProperty.xhtml">sanitizeProperty</a>()
+                    </li><li>public static array <a title="JMicrodata" href="../classes/JMicrodata/getTypes.xhtml">getTypes</a>()
+                    </li><li>public static array <a title="JMicrodata" href="../classes/JMicrodata/getAvailableTypes.xhtml">getAvailableTypes</a>()
+                    </li><li>public static array <a title="JMicrodata" href="../classes/JMicrodata/getExpectedTypes.xhtml">getExpectedTypes</a>()
+                    </li><li>protected static string <a title="JMicrodata" href="../classes/JMicrodata/getExpectedDisplayType.xhtml">getExpectedDisplayType</a>()
+                    </li><li>public static boolean <a title="JMicrodata" href="../classes/JMicrodata/isPropertyInType.xhtml">isPropertyInType</a>()
+                    </li><li>public static boolean <a title="JMicrodata" href="../classes/JMicrodata/isTypeAvailable.xhtml">isTypeAvailable</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/htmlMeta.xhtml">htmlMeta</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/htmlSpan.xhtml">htmlSpan</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/htmlDiv.xhtml">htmlDiv</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/htmlTag.xhtml">htmlTag</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/htmlScope.xhtml">htmlScope</a>()
+                    </li><li>public static string <a title="JMicrodata" href="../classes/JMicrodata/htmlProperty.xhtml">htmlProperty</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="content"><strong>$content</strong>
+                —
+                string<br/><span class="indent">The Human content</span></li>
+            <li id="enabled"><strong>$enabled</strong>
+                —
+                boolean<br/><span class="indent">Used for checking if the library output is enabled or disabled</span></li>
+            <li id="fallbackProperty"><strong>$fallbackProperty</strong>
+                —
+                string<br/><span class="indent">The Fallback Property</span></li>
+            <li id="fallbackType"><strong>$fallbackType</strong>
+                —
+                string<br/><span class="indent">The Fallback Type</span></li>
+            <li id="machineContent"><strong>$machineContent</strong>
+                —
+                string<br/><span class="indent">The Machine content</span></li>
+            <li id="property"><strong>$property</strong>
+                —
+                string<br/><span class="indent">The Property</span></li>
+            <li id="type"><strong>$type</strong>
+                —
+                string<br/><span class="indent">The Type</span></li>
+            <li id="types"><strong>$types</strong>
+                —
+                array<br/><span class="indent">Array with all available Types and Properties from the http://schema.org vocabulary</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="getExpectedDisplayType"><a title="JMicrodata" href="../classes/JMicrodata/getExpectedDisplayType.xhtml">getExpectedDisplayType()</a>
+                — Return the expected display type: [normal|nested|meta] In which way to display the Property: normal -&gt; itemprop="name" nested -&gt; itemprop="director" itemscope itemtype="https://schema.org/Person" meta   -&gt; `&lt;meta itemprop="datePublished" content="1991-05-01"&gt;`</li>
+            <li id="loadTypes"><a title="JMicrodata" href="../classes/JMicrodata/loadTypes.xhtml">loadTypes()</a>
+                — Load all available Types and Properties from the http://schema.org vocabulary contained in the types.json file</li>
+            <li id="resetParams"><a title="JMicrodata" href="../classes/JMicrodata/resetParams.xhtml">resetParams()</a>
+                — Reset all params</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JMicrodata" href="../classes/JMicrodata/__construct.xhtml">__construct()</a>
+                — Initialize the class and setup the default $Type</li>
+            <li id="content"><a title="JMicrodata" href="../classes/JMicrodata/content.xhtml">content()</a>
+                — Setup a Human content or content for the Machines</li>
+            <li id="display"><a title="JMicrodata" href="../classes/JMicrodata/display.xhtml">display()</a>
+                — This function handles the display logic.</li>
+            <li id="displayScope"><a title="JMicrodata" href="../classes/JMicrodata/displayScope.xhtml">displayScope()</a>
+                — Return the HTML of the current Scope</li>
+            <li id="enable"><a title="JMicrodata" href="../classes/JMicrodata/enable.xhtml">enable()</a>
+                — Enable or Disable the library output</li>
+            <li id="fallback"><a title="JMicrodata" href="../classes/JMicrodata/fallback.xhtml">fallback()</a>
+                — Setup a Fallback Type and Property</li>
+            <li id="getAvailableTypes"><a title="JMicrodata" href="../classes/JMicrodata/getAvailableTypes.xhtml">getAvailableTypes()</a>
+                — Return an array with all available Types from the http://schema.org vocabulary</li>
+            <li id="getContent"><a title="JMicrodata" href="../classes/JMicrodata/getContent.xhtml">getContent()</a>
+                — Return the current $content</li>
+            <li id="getExpectedTypes"><a title="JMicrodata" href="../classes/JMicrodata/getExpectedTypes.xhtml">getExpectedTypes()</a>
+                — Return the expected Types of the given Property</li>
+            <li id="getFallbackProperty"><a title="JMicrodata" href="../classes/JMicrodata/getFallbackProperty.xhtml">getFallbackProperty()</a>
+                — Return the current $fallbackProperty</li>
+            <li id="getFallbackType"><a title="JMicrodata" href="../classes/JMicrodata/getFallbackType.xhtml">getFallbackType()</a>
+                — Return the current $fallbackType</li>
+            <li id="getMachineContent"><a title="JMicrodata" href="../classes/JMicrodata/getMachineContent.xhtml">getMachineContent()</a>
+                — Return the current $machineContent</li>
+            <li id="getProperty"><a title="JMicrodata" href="../classes/JMicrodata/getProperty.xhtml">getProperty()</a>
+                — Return the current $Property name</li>
+            <li id="getType"><a title="JMicrodata" href="../classes/JMicrodata/getType.xhtml">getType()</a>
+                — Return the current $Type name</li>
+            <li id="getTypes"><a title="JMicrodata" href="../classes/JMicrodata/getTypes.xhtml">getTypes()</a>
+                — Return an array with all available Types and Properties from the http://schema.org vocabulary</li>
+            <li id="htmlDiv"><a title="JMicrodata" href="../classes/JMicrodata/htmlDiv.xhtml">htmlDiv()</a>
+                — Return Microdata semantics in a `&lt;div&gt;` tag.</li>
+            <li id="htmlMeta"><a title="JMicrodata" href="../classes/JMicrodata/htmlMeta.xhtml">htmlMeta()</a>
+                — Return Microdata semantics in a `&lt;meta&gt;` tag with content for machines.</li>
+            <li id="htmlProperty"><a title="JMicrodata" href="../classes/JMicrodata/htmlProperty.xhtml">htmlProperty()</a>
+                — Return the HTML Property</li>
+            <li id="htmlScope"><a title="JMicrodata" href="../classes/JMicrodata/htmlScope.xhtml">htmlScope()</a>
+                — Return the HTML Scope</li>
+            <li id="htmlSpan"><a title="JMicrodata" href="../classes/JMicrodata/htmlSpan.xhtml">htmlSpan()</a>
+                — Return Microdata semantics in a `&lt;span&gt;` tag.</li>
+            <li id="htmlTag"><a title="JMicrodata" href="../classes/JMicrodata/htmlTag.xhtml">htmlTag()</a>
+                — Return Microdata semantics in a specified tag.</li>
+            <li id="isEnabled"><a title="JMicrodata" href="../classes/JMicrodata/isEnabled.xhtml">isEnabled()</a>
+                — Return 'true' if the library output is enabled</li>
+            <li id="isPropertyInType"><a title="JMicrodata" href="../classes/JMicrodata/isPropertyInType.xhtml">isPropertyInType()</a>
+                — Recursive function, control if the given Type has the given Property</li>
+            <li id="isTypeAvailable"><a title="JMicrodata" href="../classes/JMicrodata/isTypeAvailable.xhtml">isTypeAvailable()</a>
+                — Control if the given Type class is available</li>
+            <li id="property"><a title="JMicrodata" href="../classes/JMicrodata/property.xhtml">property()</a>
+                — Setup a $Property</li>
+            <li id="sanitizeProperty"><a title="JMicrodata" href="../classes/JMicrodata/sanitizeProperty.xhtml">sanitizeProperty()</a>
+                — Return the sanitized $Property</li>
+            <li id="sanitizeType"><a title="JMicrodata" href="../classes/JMicrodata/sanitizeType.xhtml">sanitizeType()</a>
+                — Return the sanitized $Type</li>
+            <li id="setType"><a title="JMicrodata" href="../classes/JMicrodata/setType.xhtml">setType()</a>
+                — Set a new http://schema.org Type</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JTableObserverContenthistory</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JTableObserverContenthistory</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/table/observer/contenthistory.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JTableObserverContenthistory</h1>
+        <h4>Table class supporting modified pre-order tree traversal behavior.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JTableObserverContenthistory
+                extends <a title="JTableObserver" href="../classes/JTableObserver.xhtml">JTableObserver</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="JHelperContenthistory">JHelperContenthistory</span> <a href="#members">$contenthistoryHelper</a>;
+                    </li><li>protected string <a href="#members">$typeAliasPattern</a> =
+                        null;
+                    </li><li>public static <span title="JTableObserverContenthistory">JTableObserverContenthistory</span> <a href="#members">$_myTableForPregreplaceOnly</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static JTableObserverContenthistory <a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/createObserver.xhtml">createObserver</a>()
+                    </li><li>public void <a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/onAfterStore.xhtml">onAfterStore</a>()
+                    </li><li>public void <a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/onBeforeDelete.xhtml">onBeforeDelete</a>()
+                    </li><li>protected void <a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/parseTypeAlias.xhtml">parseTypeAlias</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JTableObserver" href="../classes/JTableObserver.xhtml">JTableObserver</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="contenthistoryHelper"><strong>$contenthistoryHelper</strong>
+                —
+                <a title="JHelperContenthistory" href="../classes/JHelperContenthistory.xhtml">JHelperContenthistory</a><br/><span class="indent">Helper object for storing and deleting version history information associated with this table observer</span></li>
+            <li id="typeAliasPattern"><strong>$typeAliasPattern</strong>
+                —
+                string<br/><span class="indent">The pattern for this table's TypeAlias</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="_myTableForPregreplaceOnly"><strong>$_myTableForPregreplaceOnly</strong>
+                —
+                <a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory.xhtml">JTableObserverContenthistory</a><br/><span class="indent">Not public, so marking private and deprecated, but needed internally in parseTypeAlias for PHP &lt; 5.4.0 as it's not passing context $this to closure function.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="parseTypeAlias"><a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/parseTypeAlias.xhtml">parseTypeAlias()</a>
+                — Internal method Parses a TypeAlias of the form "{variableName}.type", replacing {variableName} with table-instance variables variableName Storing result into $this-&gt;contenthistoryHelper-&gt;typeAlias</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="createObserver"><a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/createObserver.xhtml">createObserver()</a>
+                — Creates the associated observer instance and attaches it to the $observableObject Creates the associated content history helper class instance $typeAlias can be of the form "{variableName}.type", automatically replacing {variableName} with table-instance variables variableName</li>
+            <li id="onAfterStore"><a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/onAfterStore.xhtml">onAfterStore()</a>
+                — Post-processor for $table-&gt;store($updateNulls)</li>
+            <li id="onBeforeDelete"><a title="JTableObserverContenthistory" href="../classes/JTableObserverContenthistory/onBeforeDelete.xhtml">onBeforeDelete()</a>
+                — Pre-processor for $table-&gt;delete($pk)</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

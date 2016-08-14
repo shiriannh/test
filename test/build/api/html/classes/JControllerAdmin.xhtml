@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JControllerAdmin</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JControllerAdmin</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/legacy/controller/admin.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JControllerAdmin</h1>
+        <h4>Base class for a Joomla Administrator Controller</h4>
+        <p>Controller (controllers are where you put all the actual code) Provides basic<br/>functionality, such as rendering views (aka displaying templates).</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JControllerAdmin
+                extends <a title="JControllerLegacy" href="../classes/JControllerLegacy.xhtml">JControllerLegacy</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$option</a>;
+                    </li><li>protected  <a href="#members">$text_prefix</a>;
+                    </li><li>protected  <a href="#members">$view_list</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JControllerAdmin" href="../classes/JControllerAdmin/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="JControllerAdmin" href="../classes/JControllerAdmin/delete.xhtml">delete</a>()
+                    </li><li>protected void <a title="JControllerAdmin" href="../classes/JControllerAdmin/postDeleteHook.xhtml">postDeleteHook</a>()
+                    </li><li>public JControllerLegacy <a title="JControllerAdmin" href="../classes/JControllerAdmin/display.xhtml">display</a>()
+                    </li><li>public void <a title="JControllerAdmin" href="../classes/JControllerAdmin/publish.xhtml">publish</a>()
+                    </li><li>public boolean <a title="JControllerAdmin" href="../classes/JControllerAdmin/reorder.xhtml">reorder</a>()
+                    </li><li>public boolean <a title="JControllerAdmin" href="../classes/JControllerAdmin/saveorder.xhtml">saveorder</a>()
+                    </li><li>public boolean <a title="JControllerAdmin" href="../classes/JControllerAdmin/checkin.xhtml">checkin</a>()
+                    </li><li>public void <a title="JControllerAdmin" href="../classes/JControllerAdmin/saveOrderAjax.xhtml">saveOrderAjax</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JControllerLegacy" href="../classes/JControllerLegacy.xhtml">JControllerLegacy</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="option"><strong>$option</strong>
+                —
+                string<br/><span class="indent">The URL option for the component.</span></li>
+            <li id="text_prefix"><strong>$text_prefix</strong>
+                —
+                string<br/><span class="indent">The prefix to use with controller messages.</span></li>
+            <li id="view_list"><strong>$view_list</strong>
+                —
+                string<br/><span class="indent">The URL view list variable.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="postDeleteHook"><a title="JControllerAdmin" href="../classes/JControllerAdmin/postDeleteHook.xhtml">postDeleteHook()</a>
+                — Function that allows child controller access to model data after the item has been deleted.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JControllerAdmin" href="../classes/JControllerAdmin/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="checkin"><a title="JControllerAdmin" href="../classes/JControllerAdmin/checkin.xhtml">checkin()</a>
+                — Check in of one or more records.</li>
+            <li id="delete"><a title="JControllerAdmin" href="../classes/JControllerAdmin/delete.xhtml">delete()</a>
+                — Removes an item.</li>
+            <li id="display"><a title="JControllerAdmin" href="../classes/JControllerAdmin/display.xhtml">display()</a>
+                — Display is not supported by this controller.</li>
+            <li id="publish"><a title="JControllerAdmin" href="../classes/JControllerAdmin/publish.xhtml">publish()</a>
+                — Method to publish a list of items</li>
+            <li id="reorder"><a title="JControllerAdmin" href="../classes/JControllerAdmin/reorder.xhtml">reorder()</a>
+                — Changes the order of one or more records.</li>
+            <li id="saveOrderAjax"><a title="JControllerAdmin" href="../classes/JControllerAdmin/saveOrderAjax.xhtml">saveOrderAjax()</a>
+                — Method to save the submitted ordering values for records via AJAX.</li>
+            <li id="saveorder"><a title="JControllerAdmin" href="../classes/JControllerAdmin/saveorder.xhtml">saveorder()</a>
+                — Method to save the submitted ordering values for records.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

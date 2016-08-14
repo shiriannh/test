@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFPlatform</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFPlatform</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/platform/platform.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFPlatform</h1>
+        <h4>Part of the FOF Platform Abstraction Layer. It implements everything that depends on the platform FOF is running under, e.g. the Joomla! CMS front-end, the Joomla! CMS back-end, a CLI Joomla! Platform app, a bespoke Joomla! Platform / Framework web application and so on.</h4>
+        <p>This is the abstract class implementing some basic housekeeping functionality<br/>and provides the static interface to get the appropriate Platform object for<br/>use in the rest of the framework.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFPlatform
+                implements
+                <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface.xhtml">FOFPlatformInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>public integer <a href="#members">$ordering</a> =
+                        100;
+                    </li><li>public string <a href="#members">$name</a> =
+                        '';
+                    </li><li>public string <a href="#members">$humanReadableName</a> =
+                        'Unknown Platform';
+                    </li><li>public string <a href="#members">$version</a> =
+                        '';
+                    </li><li>protected boolean <a href="#members">$isEnabled</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$objectCache</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$paths</a> =
+                        ;
+                    </li><li>protected static <span title="FOFPlatformInterface">FOFPlatformInterface</span> <a href="#members">$instance</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static void <a title="FOFPlatform" href="../classes/FOFPlatform/registerPlatformPath.xhtml">registerPlatformPath</a>()
+                    </li><li>public static void <a title="FOFPlatform" href="../classes/FOFPlatform/unregisterPlatformPath.xhtml">unregisterPlatformPath</a>()
+                    </li><li>public static void <a title="FOFPlatform" href="../classes/FOFPlatform/forceInstance.xhtml">forceInstance</a>()
+                    </li><li>public static FOFPlatformInterface <a title="FOFPlatform" href="../classes/FOFPlatform/getInstance.xhtml">getInstance</a>()
+                    </li><li>public integer <a title="FOFPlatform" href="../classes/FOFPlatform/getOrdering.xhtml">getOrdering</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/isEnabled.xhtml">isEnabled</a>()
+                    </li><li>public  <a title="FOFPlatform" href="../classes/FOFPlatform/getIntegrationObject.xhtml">getIntegrationObject</a>()
+                    </li><li>public  <a title="FOFPlatform" href="../classes/FOFPlatform/setIntegrationObject.xhtml">setIntegrationObject</a>()
+                    </li><li>public void <a title="FOFPlatform" href="../classes/FOFPlatform/setErrorHandling.xhtml">setErrorHandling</a>()
+                    </li><li>public array <a title="FOFPlatform" href="../classes/FOFPlatform/getComponentBaseDirs.xhtml">getComponentBaseDirs</a>()
+                    </li><li>public array <a title="FOFPlatform" href="../classes/FOFPlatform/getViewTemplatePaths.xhtml">getViewTemplatePaths</a>()
+                    </li><li>public array <a title="FOFPlatform" href="../classes/FOFPlatform/getTemplateSuffixes.xhtml">getTemplateSuffixes</a>()
+                    </li><li>public string <a title="FOFPlatform" href="../classes/FOFPlatform/getTemplateOverridePath.xhtml">getTemplateOverridePath</a>()
+                    </li><li>public void <a title="FOFPlatform" href="../classes/FOFPlatform/loadTranslations.xhtml">loadTranslations</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/authorizeAdmin.xhtml">authorizeAdmin</a>()
+                    </li><li>public JDocument <a title="FOFPlatform" href="../classes/FOFPlatform/getUser.xhtml">getUser</a>()
+                    </li><li>public JDocument <a title="FOFPlatform" href="../classes/FOFPlatform/getDocument.xhtml">getDocument</a>()
+                    </li><li>public mixed <a title="FOFPlatform" href="../classes/FOFPlatform/getUserStateFromRequest.xhtml">getUserStateFromRequest</a>()
+                    </li><li>public void <a title="FOFPlatform" href="../classes/FOFPlatform/importPlugin.xhtml">importPlugin</a>()
+                    </li><li>public array <a title="FOFPlatform" href="../classes/FOFPlatform/runPlugins.xhtml">runPlugins</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/authorise.xhtml">authorise</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/isBackend.xhtml">isBackend</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/isFrontend.xhtml">isFrontend</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/isCli.xhtml">isCli</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/supportsAjaxOrdering.xhtml">supportsAjaxOrdering</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/checkVersion.xhtml">checkVersion</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/setCache.xhtml">setCache</a>()
+                    </li><li>public string <a title="FOFPlatform" href="../classes/FOFPlatform/getCache.xhtml">getCache</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/isGlobalFOFCacheEnabled.xhtml">isGlobalFOFCacheEnabled</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/clearCache.xhtml">clearCache</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/loginUser.xhtml">loginUser</a>()
+                    </li><li>public boolean <a title="FOFPlatform" href="../classes/FOFPlatform/logoutUser.xhtml">logoutUser</a>()
+                    </li><li>public void <a title="FOFPlatform" href="../classes/FOFPlatform/logDeprecated.xhtml">logDeprecated</a>()
+                    </li><li>public string <a title="FOFPlatform" href="../classes/FOFPlatform/getPlatformName.xhtml">getPlatformName</a>()
+                    </li><li>public string <a title="FOFPlatform" href="../classes/FOFPlatform/getPlatformVersion.xhtml">getPlatformVersion</a>()
+                    </li><li>public string <a title="FOFPlatform" href="../classes/FOFPlatform/getPlatformHumanName.xhtml">getPlatformHumanName</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface.xhtml">FOFPlatformInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="instance"><strong>$instance</strong>
+                —
+                <a title="FOFPlatformInterface" href="../classes/FOFPlatformInterface.xhtml">FOFPlatformInterface</a><br/><span class="indent">The platform class instance which will be returned by getInstance</span></li>
+            <li id="isEnabled"><strong>$isEnabled</strong>
+                —
+                boolean<br/><span class="indent">Caches the enabled status of this platform class.</span></li>
+            <li id="objectCache"><strong>$objectCache</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Filesystem integration objects cache</span></li>
+            <li id="paths"><strong>$paths</strong>
+                —
+                array<br/><span class="indent">The list of paths where platform class files will be looked for</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="humanReadableName"><strong>$humanReadableName</strong>
+                —
+                string<br/><span class="indent">The human readable platform name</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The internal name of this platform implementation. It must match the last part of the platform class name and be in all lowercase letters, e.g. "foobar" for FOFPlatformFoobar</span></li>
+            <li id="ordering"><strong>$ordering</strong>
+                —
+                integer<br/><span class="indent">The ordering for this platform class. The lower this number is, the more important this class becomes. Most important enabled class ends up being used.</span></li>
+            <li id="version"><strong>$version</strong>
+                —
+                string<br/><span class="indent">The platform version string</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="authorise"><a title="FOFPlatform" href="../classes/FOFPlatform/authorise.xhtml">authorise()</a>
+                — Perform an ACL check.</li>
+            <li id="authorizeAdmin"><a title="FOFPlatform" href="../classes/FOFPlatform/authorizeAdmin.xhtml">authorizeAdmin()</a>
+                — Authorise access to the component in the back-end.</li>
+            <li id="checkVersion"><a title="FOFPlatform" href="../classes/FOFPlatform/checkVersion.xhtml">checkVersion()</a>
+                — Performs a check between two versions. Use this function instead of PHP version_compare so we can mock it while testing</li>
+            <li id="clearCache"><a title="FOFPlatform" href="../classes/FOFPlatform/clearCache.xhtml">clearCache()</a>
+                — Clears the cache of system-wide FOF data. You are supposed to call this in your components' installation script post-installation and post-upgrade methods or whenever you are modifying the structure of database tables accessed by FOF. Please note that FOF's cache never expires and is not purged by Joomla!. You MUST use this method to manually purge the cache.</li>
+            <li id="forceInstance"><a title="FOFPlatform" href="../classes/FOFPlatform/forceInstance.xhtml">forceInstance()</a>
+                — Force a specific platform object to be used. If null, nukes the cache</li>
+            <li id="getCache"><a title="FOFPlatform" href="../classes/FOFPlatform/getCache.xhtml">getCache()</a>
+                — Retrieves data from the cache. This is supposed to be used for system-side FOF data, not application data.</li>
+            <li id="getComponentBaseDirs"><a title="FOFPlatform" href="../classes/FOFPlatform/getComponentBaseDirs.xhtml">getComponentBaseDirs()</a>
+                — Returns the base (root) directories for a given component.</li>
+            <li id="getDocument"><a title="FOFPlatform" href="../classes/FOFPlatform/getDocument.xhtml">getDocument()</a>
+                — Returns the JDocument object which handles this component's response.</li>
+            <li id="getInstance"><a title="FOFPlatform" href="../classes/FOFPlatform/getInstance.xhtml">getInstance()</a>
+                — Find and return the most relevant platform object</li>
+            <li id="getIntegrationObject"><a title="FOFPlatform" href="../classes/FOFPlatform/getIntegrationObject.xhtml">getIntegrationObject()</a>
+                — Returns a platform integration object</li>
+            <li id="getOrdering"><a title="FOFPlatform" href="../classes/FOFPlatform/getOrdering.xhtml">getOrdering()</a>
+                — Returns the ordering of the platform class.</li>
+            <li id="getPlatformHumanName"><a title="FOFPlatform" href="../classes/FOFPlatform/getPlatformHumanName.xhtml">getPlatformHumanName()</a>
+                — Returns the human readable platform name, e.g. "Joomla!", "Joomla! Framework", "Something Something Something Framework" etc.</li>
+            <li id="getPlatformName"><a title="FOFPlatform" href="../classes/FOFPlatform/getPlatformName.xhtml">getPlatformName()</a>
+                — Returns the (internal) name of the platform implementation, e.g.</li>
+            <li id="getPlatformVersion"><a title="FOFPlatform" href="../classes/FOFPlatform/getPlatformVersion.xhtml">getPlatformVersion()</a>
+                — Returns the version number string of the platform, e.g. "4.5.6". If implementation integrates with a CMS or a versioned foundation (e.g.</li>
+            <li id="getTemplateOverridePath"><a title="FOFPlatform" href="../classes/FOFPlatform/getTemplateOverridePath.xhtml">getTemplateOverridePath()</a>
+                — Return the absolute path to the application's template overrides directory for a specific component. We will use it to look for template files instead of the regular component directorues. If the application does not have such a thing as template overrides return an empty string.</li>
+            <li id="getTemplateSuffixes"><a title="FOFPlatform" href="../classes/FOFPlatform/getTemplateSuffixes.xhtml">getTemplateSuffixes()</a>
+                — Get application-specific suffixes to use with template paths. This allows you to look for view template overrides based on the application version.</li>
+            <li id="getUser"><a title="FOFPlatform" href="../classes/FOFPlatform/getUser.xhtml">getUser()</a>
+                — Returns the JUser object for the current user</li>
+            <li id="getUserStateFromRequest"><a title="FOFPlatform" href="../classes/FOFPlatform/getUserStateFromRequest.xhtml">getUserStateFromRequest()</a>
+                — This method will try retrieving a variable from the request (input) data.</li>
+            <li id="getViewTemplatePaths"><a title="FOFPlatform" href="../classes/FOFPlatform/getViewTemplatePaths.xhtml">getViewTemplatePaths()</a>
+                — Return a list of the view template directories for this component.</li>
+            <li id="importPlugin"><a title="FOFPlatform" href="../classes/FOFPlatform/importPlugin.xhtml">importPlugin()</a>
+                — Load plugins of a specific type. Obviously this seems to only be required in the Joomla! CMS.</li>
+            <li id="isBackend"><a title="FOFPlatform" href="../classes/FOFPlatform/isBackend.xhtml">isBackend()</a>
+                — Is this the administrative section of the component?</li>
+            <li id="isCli"><a title="FOFPlatform" href="../classes/FOFPlatform/isCli.xhtml">isCli()</a>
+                — Is this a component running in a CLI application?</li>
+            <li id="isEnabled"><a title="FOFPlatform" href="../classes/FOFPlatform/isEnabled.xhtml">isEnabled()</a>
+                — Is this platform enabled?</li>
+            <li id="isFrontend"><a title="FOFPlatform" href="../classes/FOFPlatform/isFrontend.xhtml">isFrontend()</a>
+                — Is this the public section of the component?</li>
+            <li id="isGlobalFOFCacheEnabled"><a title="FOFPlatform" href="../classes/FOFPlatform/isGlobalFOFCacheEnabled.xhtml">isGlobalFOFCacheEnabled()</a>
+                — Is the global FOF cache enabled?</li>
+            <li id="loadTranslations"><a title="FOFPlatform" href="../classes/FOFPlatform/loadTranslations.xhtml">loadTranslations()</a>
+                — Load the translation files for a given component.</li>
+            <li id="logDeprecated"><a title="FOFPlatform" href="../classes/FOFPlatform/logDeprecated.xhtml">logDeprecated()</a>
+                — Logs a deprecated practice. In Joomla! this results in the $message being output in the deprecated log file, found in your site's log directory.</li>
+            <li id="loginUser"><a title="FOFPlatform" href="../classes/FOFPlatform/loginUser.xhtml">loginUser()</a>
+                — logs in a user</li>
+            <li id="logoutUser"><a title="FOFPlatform" href="../classes/FOFPlatform/logoutUser.xhtml">logoutUser()</a>
+                — logs out a user</li>
+            <li id="registerPlatformPath"><a title="FOFPlatform" href="../classes/FOFPlatform/registerPlatformPath.xhtml">registerPlatformPath()</a>
+                — Register a path where platform files will be looked for. These take precedence over the built-in platform files.</li>
+            <li id="runPlugins"><a title="FOFPlatform" href="../classes/FOFPlatform/runPlugins.xhtml">runPlugins()</a>
+                — Execute plugins (system-level triggers) and fetch back an array with their return values.</li>
+            <li id="setCache"><a title="FOFPlatform" href="../classes/FOFPlatform/setCache.xhtml">setCache()</a>
+                — Saves something to the cache. This is supposed to be used for system-wide FOF data, not application data.</li>
+            <li id="setErrorHandling"><a title="FOFPlatform" href="../classes/FOFPlatform/setErrorHandling.xhtml">setErrorHandling()</a>
+                — Set the error Handling, if possible</li>
+            <li id="setIntegrationObject"><a title="FOFPlatform" href="../classes/FOFPlatform/setIntegrationObject.xhtml">setIntegrationObject()</a>
+                — Forces a platform integration object instance</li>
+            <li id="supportsAjaxOrdering"><a title="FOFPlatform" href="../classes/FOFPlatform/supportsAjaxOrdering.xhtml">supportsAjaxOrdering()</a>
+                — Is AJAX re-ordering supported? This is 100% Joomla!-CMS specific. All other platforms should return false and never ask why.</li>
+            <li id="unregisterPlatformPath"><a title="FOFPlatform" href="../classes/FOFPlatform/unregisterPlatformPath.xhtml">unregisterPlatformPath()</a>
+                — Unregister a path where platform files will be looked for.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

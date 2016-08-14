@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JClientFtp</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JClientFtp</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/client/ftp.php.xhtml#line54">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JClientFtp</h1>
+        <h4>FTP client class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JClientFtp
+            {<br/><ul class="none"><li>// members</li><li>protected resource <a href="#members">$_conn</a> =
+                        null;
+                    </li><li>protected resource <a href="#members">$_dataconn</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$_pasv</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$_response</a> =
+                        null;
+                    </li><li>protected integer <a href="#members">$_timeout</a> =
+                        15;
+                    </li><li>protected integer <a href="#members">$_type</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$_autoAscii</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$_lineEndings</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$instances</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JClientFtp" href="../classes/JClientFtp/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="JClientFtp" href="../classes/JClientFtp/__destruct.xhtml">__destruct</a>()
+                    </li><li>public static JClientFtp <a title="JClientFtp" href="../classes/JClientFtp/getInstance.xhtml">getInstance</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/setOptions.xhtml">setOptions</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/connect.xhtml">connect</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/isConnected.xhtml">isConnected</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/login.xhtml">login</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/quit.xhtml">quit</a>()
+                    </li><li>public string <a title="JClientFtp" href="../classes/JClientFtp/pwd.xhtml">pwd</a>()
+                    </li><li>public string <a title="JClientFtp" href="../classes/JClientFtp/syst.xhtml">syst</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/chdir.xhtml">chdir</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/reinit.xhtml">reinit</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/rename.xhtml">rename</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/chmod.xhtml">chmod</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/delete.xhtml">delete</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/mkdir.xhtml">mkdir</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/restart.xhtml">restart</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/create.xhtml">create</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/read.xhtml">read</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/get.xhtml">get</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/store.xhtml">store</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/write.xhtml">write</a>()
+                    </li><li>public boolean <a title="JClientFtp" href="../classes/JClientFtp/append.xhtml">append</a>()
+                    </li><li>public mixed <a title="JClientFtp" href="../classes/JClientFtp/size.xhtml">size</a>()
+                    </li><li>public string <a title="JClientFtp" href="../classes/JClientFtp/listNames.xhtml">listNames</a>()
+                    </li><li>public mixed <a title="JClientFtp" href="../classes/JClientFtp/listDetails.xhtml">listDetails</a>()
+                    </li><li>protected boolean <a title="JClientFtp" href="../classes/JClientFtp/_putCmd.xhtml">_putCmd</a>()
+                    </li><li>protected boolean <a title="JClientFtp" href="../classes/JClientFtp/_verifyResponse.xhtml">_verifyResponse</a>()
+                    </li><li>protected boolean <a title="JClientFtp" href="../classes/JClientFtp/_passive.xhtml">_passive</a>()
+                    </li><li>protected integer <a title="JClientFtp" href="../classes/JClientFtp/_findMode.xhtml">_findMode</a>()
+                    </li><li>protected boolean <a title="JClientFtp" href="../classes/JClientFtp/_mode.xhtml">_mode</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">1485</td>
+            <td>Deal with recurse -- nightmare</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_autoAscii"><strong>$_autoAscii</strong>
+                —
+                array</li>
+            <li id="_conn"><strong>$_conn</strong>
+                —
+                resource</li>
+            <li id="_dataconn"><strong>$_dataconn</strong>
+                —
+                resource</li>
+            <li id="_lineEndings"><strong>$_lineEndings</strong>
+                —
+                array<br/><span class="indent">Array to hold native line ending characters</span></li>
+            <li id="_pasv"><strong>$_pasv</strong>
+                —
+                array</li>
+            <li id="_response"><strong>$_response</strong>
+                —
+                string</li>
+            <li id="_timeout"><strong>$_timeout</strong>
+                —
+                integer</li>
+            <li id="_type"><strong>$_type</strong>
+                —
+                integer</li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_findMode"><a title="JClientFtp" href="../classes/JClientFtp/_findMode.xhtml">_findMode()</a>
+                — Method to find out the correct transfer mode for a specific file</li>
+            <li id="_mode"><a title="JClientFtp" href="../classes/JClientFtp/_mode.xhtml">_mode()</a>
+                — Set transfer mode</li>
+            <li id="_passive"><a title="JClientFtp" href="../classes/JClientFtp/_passive.xhtml">_passive()</a>
+                — Set server to passive mode and open a data port connection</li>
+            <li id="_putCmd"><a title="JClientFtp" href="../classes/JClientFtp/_putCmd.xhtml">_putCmd()</a>
+                — Send command to the FTP server and validate an expected response code</li>
+            <li id="_verifyResponse"><a title="JClientFtp" href="../classes/JClientFtp/_verifyResponse.xhtml">_verifyResponse()</a>
+                — Verify the response code from the server and log response if flag is set</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JClientFtp" href="../classes/JClientFtp/__construct.xhtml">__construct()</a>
+                — JClientFtp object constructor</li>
+            <li id="__destruct"><a title="JClientFtp" href="../classes/JClientFtp/__destruct.xhtml">__destruct()</a>
+                — JClientFtp object destructor</li>
+            <li id="append"><a title="JClientFtp" href="../classes/JClientFtp/append.xhtml">append()</a>
+                — Method to append a string to the FTP server</li>
+            <li id="chdir"><a title="JClientFtp" href="../classes/JClientFtp/chdir.xhtml">chdir()</a>
+                — Method to change the current working directory on the FTP server</li>
+            <li id="chmod"><a title="JClientFtp" href="../classes/JClientFtp/chmod.xhtml">chmod()</a>
+                — Method to change mode for a path on the FTP server</li>
+            <li id="connect"><a title="JClientFtp" href="../classes/JClientFtp/connect.xhtml">connect()</a>
+                — Method to connect to a FTP server</li>
+            <li id="create"><a title="JClientFtp" href="../classes/JClientFtp/create.xhtml">create()</a>
+                — Method to create an empty file on the FTP server</li>
+            <li id="delete"><a title="JClientFtp" href="../classes/JClientFtp/delete.xhtml">delete()</a>
+                — Method to delete a path [file/folder] on the FTP server</li>
+            <li id="get"><a title="JClientFtp" href="../classes/JClientFtp/get.xhtml">get()</a>
+                — Method to get a file from the FTP server and save it to a local file</li>
+            <li id="getInstance"><a title="JClientFtp" href="../classes/JClientFtp/getInstance.xhtml">getInstance()</a>
+                — Returns the global FTP connector object, only creating it if it doesn't already exist.</li>
+            <li id="isConnected"><a title="JClientFtp" href="../classes/JClientFtp/isConnected.xhtml">isConnected()</a>
+                — Method to determine if the object is connected to an FTP server</li>
+            <li id="listDetails"><a title="JClientFtp" href="../classes/JClientFtp/listDetails.xhtml">listDetails()</a>
+                — Method to list the contents of a directory on the FTP server</li>
+            <li id="listNames"><a title="JClientFtp" href="../classes/JClientFtp/listNames.xhtml">listNames()</a>
+                — Method to list the filenames of the contents of a directory on the FTP server</li>
+            <li id="login"><a title="JClientFtp" href="../classes/JClientFtp/login.xhtml">login()</a>
+                — Method to login to a server once connected</li>
+            <li id="mkdir"><a title="JClientFtp" href="../classes/JClientFtp/mkdir.xhtml">mkdir()</a>
+                — Method to create a directory on the FTP server</li>
+            <li id="pwd"><a title="JClientFtp" href="../classes/JClientFtp/pwd.xhtml">pwd()</a>
+                — Method to retrieve the current working directory on the FTP server</li>
+            <li id="quit"><a title="JClientFtp" href="../classes/JClientFtp/quit.xhtml">quit()</a>
+                — Method to quit and close the connection</li>
+            <li id="read"><a title="JClientFtp" href="../classes/JClientFtp/read.xhtml">read()</a>
+                — Method to read a file from the FTP server's contents into a buffer</li>
+            <li id="reinit"><a title="JClientFtp" href="../classes/JClientFtp/reinit.xhtml">reinit()</a>
+                — Method to reinitialise the server, ie. need to login again</li>
+            <li id="rename"><a title="JClientFtp" href="../classes/JClientFtp/rename.xhtml">rename()</a>
+                — Method to rename a file/folder on the FTP server</li>
+            <li id="restart"><a title="JClientFtp" href="../classes/JClientFtp/restart.xhtml">restart()</a>
+                — Method to restart data transfer at a given byte</li>
+            <li id="setOptions"><a title="JClientFtp" href="../classes/JClientFtp/setOptions.xhtml">setOptions()</a>
+                — Set client options</li>
+            <li id="size"><a title="JClientFtp" href="../classes/JClientFtp/size.xhtml">size()</a>
+                — Get the size of the remote file.</li>
+            <li id="store"><a title="JClientFtp" href="../classes/JClientFtp/store.xhtml">store()</a>
+                — Method to store a file to the FTP server</li>
+            <li id="syst"><a title="JClientFtp" href="../classes/JClientFtp/syst.xhtml">syst()</a>
+                — Method to system string from the FTP server</li>
+            <li id="write"><a title="JClientFtp" href="../classes/JClientFtp/write.xhtml">write()</a>
+                — Method to write a string to the FTP server</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

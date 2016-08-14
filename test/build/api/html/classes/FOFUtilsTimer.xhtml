@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFUtilsTimer</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFUtilsTimer</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/utils/timer/timer.php.xhtml#line14">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFUtilsTimer</h1>
+        <h4>An execution timer monitor class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFUtilsTimer
+            {<br/><ul class="none"><li>// members</li><li>private <a href="#members">$max_exec_time</a> =
+                        null;
+                    </li><li>private <a href="#members">$start_time</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/__wakeup.xhtml">__wakeup</a>()
+                    </li><li>public float <a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/getTimeLeft.xhtml">getTimeLeft</a>()
+                    </li><li>public float <a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/getRunningTime.xhtml">getRunningTime</a>()
+                    </li><li>private float <a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/microtime_float.xhtml">microtime_float</a>()
+                    </li><li>public void <a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/resetTime.xhtml">resetTime</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="max_exec_time">
+              <strong>$max_exec_time</strong>
+              <br/>
+              <span class="indent">@var float Maximum execution time allowance</span>
+            </li>
+            <li id="start_time">
+              <strong>$start_time</strong>
+              <br/>
+              <span class="indent">@var float Timestamp of execution start</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="microtime_float"><a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/microtime_float.xhtml">microtime_float()</a>
+                — Returns the current timestamp in decimal seconds</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/__construct.xhtml">__construct()</a>
+                — Public constructor, creates the timer object and calculates the execution time limits.</li>
+            <li id="__wakeup"><a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/__wakeup.xhtml">__wakeup()</a>
+                — Wake-up function to reset internal timer when we get unserialized</li>
+            <li id="getRunningTime"><a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/getRunningTime.xhtml">getRunningTime()</a>
+                — Gets the time elapsed since object creation/unserialization, effectively how long we are running</li>
+            <li id="getTimeLeft"><a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/getTimeLeft.xhtml">getTimeLeft()</a>
+                — Gets the number of seconds left, before we hit the "must break" threshold. Negative values mean that we have already crossed that threshold.</li>
+            <li id="resetTime"><a title="FOFUtilsTimer" href="../classes/FOFUtilsTimer/resetTime.xhtml">resetTime()</a>
+                — Reset the timer</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

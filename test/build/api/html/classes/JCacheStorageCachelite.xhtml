@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JCacheStorageCachelite</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JCacheStorageCachelite</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/cache/storage/cachelite.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JCacheStorageCachelite</h1>
+        <h4>Cache lite storage handler</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JCacheStorageCachelite
+                extends <a title="JCacheStorage" href="../classes/JCacheStorage.xhtml">JCacheStorage</a>
+            {<br/><ul class="none"><li>// members</li><li>protected static <span title="Cache_Lite">Cache_Lite</span> <a href="#members">$CacheLiteInstance</a> =
+                        null;
+                    </li><li>protected  <a href="#members">$_root</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/__construct.xhtml">__construct</a>()
+                    </li><li>protected Cache_Lite <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/initCache.xhtml">initCache</a>()
+                    </li><li>public mixed <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/get.xhtml">get</a>()
+                    </li><li>public mixed <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/getAll.xhtml">getAll</a>()
+                    </li><li>public boolean <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/store.xhtml">store</a>()
+                    </li><li>public boolean <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/remove.xhtml">remove</a>()
+                    </li><li>public boolean <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/clean.xhtml">clean</a>()
+                    </li><li>public boolean <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/gc.xhtml">gc</a>()
+                    </li><li>public static boolean <a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/isSupported.xhtml">isSupported</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JCacheStorage" href="../classes/JCacheStorage.xhtml">JCacheStorage</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="CacheLiteInstance"><strong>$CacheLiteInstance</strong>
+                —
+                <a title="Cache_Lite" href="../classes/Cache_Lite.xhtml">Cache_Lite</a><br/><span class="indent">Singleton Cache_Lite instance</span></li>
+            <li id="_root"><strong>$_root</strong>
+                —
+                string<br/><span class="indent">Root path</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="initCache"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/initCache.xhtml">initCache()</a>
+                — Instantiates the Cache_Lite object. Only initializes the engine if it does not already exist.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="clean"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/clean.xhtml">clean()</a>
+                — Clean cache for a group given a mode.</li>
+            <li id="gc"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/gc.xhtml">gc()</a>
+                — Garbage collect expired cache data</li>
+            <li id="get"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/get.xhtml">get()</a>
+                — Get cached data by ID and group</li>
+            <li id="getAll"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/getAll.xhtml">getAll()</a>
+                — Get all cached data</li>
+            <li id="isSupported"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/isSupported.xhtml">isSupported()</a>
+                — Test to see if the storage handler is available.</li>
+            <li id="remove"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/remove.xhtml">remove()</a>
+                — Remove a cached data entry by ID and group</li>
+            <li id="store"><a title="JCacheStorageCachelite" href="../classes/JCacheStorageCachelite/store.xhtml">store()</a>
+                — Store the data to cache by ID and group</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

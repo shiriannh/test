@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPUnit_TextUI_Command</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PHPUnit_TextUI_Command</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/phpunit/src/TextUI/Command.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PHPUnit_TextUI_Command</h1>
+        <h4>A TestRunner for the Command Line Interface (CLI) PHP SAPI Module.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPUnit_TextUI_Command
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$arguments</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$options</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$longOptions</a> =
+                        ;
+                    </li><li>private <span title="bool">bool</span> <a href="#members">$versionStringPrinted</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/main.xhtml">main</a>()
+                    </li><li>public int <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/run.xhtml">run</a>()
+                    </li><li>protected PHPUnit_TextUI_TestRunner <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/createRunner.xhtml">createRunner</a>()
+                    </li><li>protected void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleArguments.xhtml">handleArguments</a>()
+                    </li><li>protected PHPUnit_Runner_TestSuiteLoader <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleLoader.xhtml">handleLoader</a>()
+                    </li><li>protected PHPUnit_Util_Printer <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handlePrinter.xhtml">handlePrinter</a>()
+                    </li><li>protected void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleBootstrap.xhtml">handleBootstrap</a>()
+                    </li><li>protected void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleSelfUpdate.xhtml">handleSelfUpdate</a>()
+                    </li><li>protected void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleVersionCheck.xhtml">handleVersionCheck</a>()
+                    </li><li>protected void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/showHelp.xhtml">showHelp</a>()
+                    </li><li>protected void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleCustomTestSuite.xhtml">handleCustomTestSuite</a>()
+                    </li><li>private void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/printVersionString.xhtml">printVersionString</a>()
+                    </li><li>private void <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/showError.xhtml">showError</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="versionStringPrinted"><strong>$versionStringPrinted</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="arguments"><strong>$arguments</strong>
+                —
+                array</li>
+            <li id="longOptions"><strong>$longOptions</strong>
+                —
+                array</li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="printVersionString">
+              <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/printVersionString.xhtml">printVersionString()</a>
+            </li>
+            <li id="showError">
+              <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/showError.xhtml">showError()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="createRunner"><a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/createRunner.xhtml">createRunner()</a>
+                — Create a TestRunner, override in subclasses.</li>
+            <li id="handleArguments"><a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleArguments.xhtml">handleArguments()</a>
+                — Handles the command-line arguments.</li>
+            <li id="handleBootstrap"><a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleBootstrap.xhtml">handleBootstrap()</a>
+                — Loads a bootstrap file.</li>
+            <li id="handleCustomTestSuite"><a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleCustomTestSuite.xhtml">handleCustomTestSuite()</a>
+                — Custom callback for test suite discovery.</li>
+            <li id="handleLoader"><a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleLoader.xhtml">handleLoader()</a>
+                — Handles the loading of the PHPUnit_Runner_TestSuiteLoader implementation.</li>
+            <li id="handlePrinter"><a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handlePrinter.xhtml">handlePrinter()</a>
+                — Handles the loading of the PHPUnit_Util_Printer implementation.</li>
+            <li id="handleSelfUpdate">
+              <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleSelfUpdate.xhtml">handleSelfUpdate()</a>
+            </li>
+            <li id="handleVersionCheck">
+              <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/handleVersionCheck.xhtml">handleVersionCheck()</a>
+            </li>
+            <li id="showHelp"><a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/showHelp.xhtml">showHelp()</a>
+                — Show the help message.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="main">
+              <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/main.xhtml">main()</a>
+            </li>
+            <li id="run">
+              <a title="PHPUnit_TextUI_Command" href="../classes/PHPUnit_TextUI_Command/run.xhtml">run()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

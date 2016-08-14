@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - SebastianBergmann\PHPCPD\CodeCloneMap</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#SebastianBergmann_PHPCPD">SebastianBergmann\PHPCPD</a>
+          </li>
+          <li class="separator">CodeCloneMap</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/sebastian/phpcpd/src/CodeCloneMap.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>SebastianBergmann\PHPCPD\</small>CodeCloneMap</h1>
+        <h4>A map of exact clones.</h4>
+        <p/>
+        <ul>
+          <li>Author: Sebastian Bergmann &lt;sebastian@phpunit.de&gt;</li>
+          <li>Copyright: Sebastian Bergmann &lt;sebastian@phpunit.de&gt;</li>
+          <li>License: http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class CodeCloneMap
+                implements
+                <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>,<a title="Iterator" href="../interfaces/Iterator.xhtml">Iterator</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$clones</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$clonesById</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$position</a> =
+                        0;
+                    </li><li>protected integer <a href="#members">$numDuplicateLines</a> =
+                        0;
+                    </li><li>protected integer <a href="#members">$numLines</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/addClone.xhtml">addClone</a>()
+                    </li><li>public array <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/getClones.xhtml">getClones</a>()
+                    </li><li>public string <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/getPercentage.xhtml">getPercentage</a>()
+                    </li><li>public integer <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/getNumLines.xhtml">getNumLines</a>()
+                    </li><li>public void <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/setNumLines.xhtml">setNumLines</a>()
+                    </li><li>public void <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/count.xhtml">count</a>()
+                    </li><li>public void <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/rewind.xhtml">rewind</a>()
+                    </li><li>public boolean <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/valid.xhtml">valid</a>()
+                    </li><li>public integer <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/key.xhtml">key</a>()
+                    </li><li>public CodeClone <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/current.xhtml">current</a>()
+                    </li><li>public void <a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/next.xhtml">next</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            </li>
+            <li>
+              <a title="Iterator" href="../interfaces/Iterator.xhtml">Iterator</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="clones"><strong>$clones</strong>
+                —
+                array</li>
+            <li id="clonesById"><strong>$clonesById</strong>
+                —
+                array</li>
+            <li id="numDuplicateLines"><strong>$numDuplicateLines</strong>
+                —
+                integer</li>
+            <li id="numLines"><strong>$numLines</strong>
+                —
+                integer</li>
+            <li id="position"><strong>$position</strong>
+                —
+                integer</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addClone"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/addClone.xhtml">addClone()</a>
+                — Adds a clone to the map.</li>
+            <li id="count"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/count.xhtml">count()</a>
+                — Returns the number of clones stored in this map.</li>
+            <li id="current"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/current.xhtml">current()</a>
+                — Returns the current element.</li>
+            <li id="getClones"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/getClones.xhtml">getClones()</a>
+                — Returns the clones stored in this map.</li>
+            <li id="getNumLines"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/getNumLines.xhtml">getNumLines()</a>
+                — Returns the number of lines analyzed.</li>
+            <li id="getPercentage"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/getPercentage.xhtml">getPercentage()</a>
+                — Returns the percentage of duplicated code lines in the project.</li>
+            <li id="key"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/key.xhtml">key()</a>
+                — Returns the key of the current element.</li>
+            <li id="next"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/next.xhtml">next()</a>
+                — Moves forward to next element.</li>
+            <li id="rewind"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/rewind.xhtml">rewind()</a>
+                — Rewinds the Iterator to the first element.</li>
+            <li id="setNumLines"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/setNumLines.xhtml">setNumLines()</a>
+                — Sets the number of physical source code lines in the project.</li>
+            <li id="valid"><a title="SebastianBergmann\PHPCPD\CodeCloneMap" href="../classes/SebastianBergmann_PHPCPD_CodeCloneMap/valid.xhtml">valid()</a>
+                — Checks if there is a current element after calls to rewind() or next().</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

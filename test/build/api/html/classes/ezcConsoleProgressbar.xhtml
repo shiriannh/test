@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcConsoleProgressbar</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcConsoleProgressbar</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/console-tools/src/progressbar.php.xhtml#line66">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcConsoleProgressbar</h1>
+        <h4>Creating and maintaining progress-bars to be printed to the console.</h4>
+        <p>&lt;code&gt;<br/>$out = new ezcConsoleOutput();<br/><br/>// Create progress bar itself<br/>$progress = new ezcConsoleProgressbar( $out, 100, array( 'step' =&gt; 5 ) );<br/><br/>$progress-&gt;options-&gt;emptyChar = '-';<br/>$progress-&gt;options-&gt;progressChar = '#';<br/>$progress-&gt;options-&gt;formatString = "Uploading file &lt;/tmp/foobar.tar.bz2&gt;: %act%/%max% kb [%bar%]";<br/><br/>// Perform actions<br/>$i = 0;<br/>while ( $i++ &lt; 20 )<br/>{<br/>// Do whatever you want to indicate progress for<br/>usleep( mt_rand( 20000, 2000000 ) );<br/>// Advance the progressbar by one step ( uploading 5k per run )<br/>$progress-&gt;advance();<br/>}<br/><br/>// Finish progress bar and jump to next line.<br/>$progress-&gt;finish();<br/><br/>$out-&gt;outputText( "Successfully uploaded &lt;/tmp/foobar.tar.bz2&gt;.\n", 'success' );<br/>&lt;/code&gt;</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcConsoleProgressbar
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="array(string=&gt;mixed)">array(string=&gt;mixed)</span> <a href="#members">$properties</a>;
+                    </li><li>protected <span title="array(string=&gt;string)">array(string=&gt;string)</span> <a href="#members">$valueMap</a> =
+                        ;
+                    </li><li>protected <span title="array(string=&gt;int)">array(string=&gt;int)</span> <a href="#members">$measures</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$currentStep</a> =
+                        0;
+                    </li><li>protected integer <a href="#members">$numSteps</a> =
+                        0;
+                    </li><li>protected <span title="ezcConsoleOutput">ezcConsoleOutput</span> <a href="#members">$output</a>;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$started</a> =
+                        false;
+                    </li><li>private <span title="ezcConsoleStringTool">ezcConsoleStringTool</span> <a href="#members">$stringTool</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/setOptions.xhtml">setOptions</a>()
+                    </li><li>public ezcConsoleProgressbarOptions <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/getOptions.xhtml">getOptions</a>()
+                    </li><li>public mixed <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__get.xhtml">__get</a>()
+                    </li><li>public void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__set.xhtml">__set</a>()
+                    </li><li>public bool <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__isset.xhtml">__isset</a>()
+                    </li><li>public void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/start.xhtml">start</a>()
+                    </li><li>public void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/output.xhtml">output</a>()
+                    </li><li>public void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/advance.xhtml">advance</a>()
+                    </li><li>public void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/finish.xhtml">finish</a>()
+                    </li><li>protected void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/generateValues.xhtml">generateValues</a>()
+                    </li><li>protected void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/insertValues.xhtml">insertValues</a>()
+                    </li><li>protected void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/calculateMeasures.xhtml">calculateMeasures</a>()
+                    </li><li>protected void <a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/stripEscapeSequences.xhtml">stripEscapeSequences</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="stringTool"><strong>$stringTool</strong>
+                —
+                <a title="ezcConsoleStringTool" href="../classes/ezcConsoleStringTool.xhtml">ezcConsoleStringTool</a><br/><span class="indent">Tool object to perform multi-byte encoding safe string operations.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="currentStep"><strong>$currentStep</strong>
+                —
+                int<br/><span class="indent">The current step the progress bar should show.</span></li>
+            <li id="measures"><strong>$measures</strong>
+                —
+                <a title="array(string=&gt;int)" href="../classes/array(string=&gt;int).xhtml">array(string=&gt;int)</a><br/><span class="indent">Stores the bar utilization.</span></li>
+            <li id="numSteps"><strong>$numSteps</strong>
+                —
+                int<br/><span class="indent">The maximum number of steps to go.</span></li>
+            <li id="output"><strong>$output</strong>
+                —
+                <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput.xhtml">ezcConsoleOutput</a><br/><span class="indent">The ezcConsoleOutput object to use.</span></li>
+            <li id="properties"><strong>$properties</strong>
+                —
+                <a title="array(string=&gt;mixed)" href="../classes/array(string=&gt;mixed).xhtml">array(string=&gt;mixed)</a><br/><span class="indent">Container to hold the properties</span></li>
+            <li id="started"><strong>$started</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Indicates if the starting point for the bar has been stored.</span></li>
+            <li id="valueMap"><strong>$valueMap</strong>
+                —
+                <a title="array(string=&gt;string)" href="../classes/array(string=&gt;string).xhtml">array(string=&gt;string)</a><br/><span class="indent">Storage for actual values to be replaced in the format string.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="calculateMeasures"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/calculateMeasures.xhtml">calculateMeasures()</a>
+                — Calculate several measures necessary to generate a bar.</li>
+            <li id="generateValues"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/generateValues.xhtml">generateValues()</a>
+                — Generate all values to be replaced in the format string.</li>
+            <li id="insertValues"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/insertValues.xhtml">insertValues()</a>
+                — Insert values into bar format string.</li>
+            <li id="stripEscapeSequences"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/stripEscapeSequences.xhtml">stripEscapeSequences()</a>
+                — Strip all escape sequences from a string to measure it's size correctly.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__construct.xhtml">__construct()</a>
+                — Creates a new progress bar.</li>
+            <li id="__get"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__get.xhtml">__get()</a>
+                — Property read access.</li>
+            <li id="__isset"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__isset.xhtml">__isset()</a>
+                — Property isset access.</li>
+            <li id="__set"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/__set.xhtml">__set()</a>
+                — Property write access.</li>
+            <li id="advance"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/advance.xhtml">advance()</a>
+                — Advance the progress bar.</li>
+            <li id="finish"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/finish.xhtml">finish()</a>
+                — Finish the progress bar.</li>
+            <li id="getOptions"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/getOptions.xhtml">getOptions()</a>
+                — Returns the current options.</li>
+            <li id="output"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/output.xhtml">output()</a>
+                — Draw the progress bar.</li>
+            <li id="setOptions"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/setOptions.xhtml">setOptions()</a>
+                — Set new options.</li>
+            <li id="start"><a title="ezcConsoleProgressbar" href="../classes/ezcConsoleProgressbar/start.xhtml">start()</a>
+                — Start the progress bar Starts the progress bar and sticks it to the current line.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

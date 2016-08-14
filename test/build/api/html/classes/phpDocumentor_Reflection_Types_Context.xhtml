@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - phpDocumentor\Reflection\Types\Context</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#phpDocumentor_Reflection_Types">phpDocumentor\Reflection\Types</a>
+          </li>
+          <li class="separator">Context</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpdocumentor/type-resolver/src/Types/Context.php.xhtml#line29">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>phpDocumentor\Reflection\Types\</small>Context</h1>
+        <h4>Provides information about the Context in which the DocBlock occurs that receives this context.</h4>
+        <p>A DocBlock does not know of its own accord in which namespace it occurs and which namespace aliases are applicable<br/>for the block of code in which it is in. This information is however necessary to resolve Class names in tags since<br/>you can provide a short form or make use of namespace aliases.<br/><br/>The phpDocumentor Reflection component knows how to create this class but if you use the DocBlock parser from your<br/>own application it is possible to generate a Context class using the ContextFactory; this will analyze the file in<br/>which an associated class resides for its namespace and imports.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Context
+            {<br/><ul class="none"><li>// members</li><li>private string <a href="#members">$namespace</a> =
+                        '';
+                    </li><li>private array <a href="#members">$namespaceAliases</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="phpDocumentor\Reflection\Types\Context" href="../classes/phpDocumentor_Reflection_Types_Context/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="phpDocumentor\Reflection\Types\Context" href="../classes/phpDocumentor_Reflection_Types_Context/getNamespace.xhtml">getNamespace</a>()
+                    </li><li>public array <a title="phpDocumentor\Reflection\Types\Context" href="../classes/phpDocumentor_Reflection_Types_Context/getNamespaceAliases.xhtml">getNamespaceAliases</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="namespace">
+              <strong>$namespace</strong>
+              <br/>
+              <span class="indent">@var string The current namespace.</span>
+            </li>
+            <li id="namespaceAliases">
+              <strong>$namespaceAliases</strong>
+              <br/>
+              <span class="indent">@var array List of namespace aliases =&gt; Fully Qualified Namespace.</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="phpDocumentor\Reflection\Types\Context" href="../classes/phpDocumentor_Reflection_Types_Context/__construct.xhtml">__construct()</a>
+                — Initializes the new context and normalizes all passed namespaces to be in Qualified Namespace Name (QNN) format (without a preceding `\`).</li>
+            <li id="getNamespace"><a title="phpDocumentor\Reflection\Types\Context" href="../classes/phpDocumentor_Reflection_Types_Context/getNamespace.xhtml">getNamespace()</a>
+                — Returns the Qualified Namespace Name (thus without `\` in front) where the associated element is in.</li>
+            <li id="getNamespaceAliases"><a title="phpDocumentor\Reflection\Types\Context" href="../classes/phpDocumentor_Reflection_Types_Context/getNamespaceAliases.xhtml">getNamespaceAliases()</a>
+                — Returns a list of Qualified Namespace Names (thus without `\` in front) that are imported, the keys represent the alias for the imported Namespace.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFIntegrationJoomlaPlatform</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFIntegrationJoomlaPlatform</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/integration/joomla/platform.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFIntegrationJoomlaPlatform</h1>
+        <h4>Part of the FOF Platform Abstraction Layer.</h4>
+        <p>This implements the platform class for Joomla! 2.5 or later</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFIntegrationJoomlaPlatform
+                extends <a title="FOFPlatform" href="../classes/FOFPlatform.xhtml">FOFPlatform</a>
+                implements
+                <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface.xhtml">FOFPlatformInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>private <span title="JRegistry|null">JRegistry|null</span> <a href="#members">$_cache</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/__construct.xhtml">__construct</a>()
+                    </li><li>public bool <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/checkExecution.xhtml">checkExecution</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/raiseError.xhtml">raiseError</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isEnabled.xhtml">isEnabled</a>()
+                    </li><li>protected array <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isCliAdmin.xhtml">isCliAdmin</a>()
+                    </li><li>public array <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getPlatformBaseDirs.xhtml">getPlatformBaseDirs</a>()
+                    </li><li>public array <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getComponentBaseDirs.xhtml">getComponentBaseDirs</a>()
+                    </li><li>public array <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getViewTemplatePaths.xhtml">getViewTemplatePaths</a>()
+                    </li><li>public array <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getTemplateSuffixes.xhtml">getTemplateSuffixes</a>()
+                    </li><li>public string <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getTemplateOverridePath.xhtml">getTemplateOverridePath</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/loadTranslations.xhtml">loadTranslations</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/authorizeAdmin.xhtml">authorizeAdmin</a>()
+                    </li><li>public JUser <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getUser.xhtml">getUser</a>()
+                    </li><li>public JDocument <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getDocument.xhtml">getDocument</a>()
+                    </li><li>public JDate <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getDate.xhtml">getDate</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getLanguage.xhtml">getLanguage</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getDbo.xhtml">getDbo</a>()
+                    </li><li>public mixed <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getUserStateFromRequest.xhtml">getUserStateFromRequest</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/importPlugin.xhtml">importPlugin</a>()
+                    </li><li>public array <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/runPlugins.xhtml">runPlugins</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/authorise.xhtml">authorise</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isBackend.xhtml">isBackend</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isFrontend.xhtml">isFrontend</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isCli.xhtml">isCli</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/supportsAjaxOrdering.xhtml">supportsAjaxOrdering</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isGlobalFOFCacheEnabled.xhtml">isGlobalFOFCacheEnabled</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/setCache.xhtml">setCache</a>()
+                    </li><li>public string <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getCache.xhtml">getCache</a>()
+                    </li><li>private JRegistry <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getCacheObject.xhtml">getCacheObject</a>()
+                    </li><li>private boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/saveCache.xhtml">saveCache</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/clearCache.xhtml">clearCache</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getConfig.xhtml">getConfig</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/loginUser.xhtml">loginUser</a>()
+                    </li><li>public boolean <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logoutUser.xhtml">logoutUser</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logAddLogger.xhtml">logAddLogger</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logDeprecated.xhtml">logDeprecated</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logDebug.xhtml">logDebug</a>()
+                    </li><li>public string <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/URIroot.xhtml">URIroot</a>()
+                    </li><li>public string <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/URIbase.xhtml">URIbase</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/setHeader.xhtml">setHeader</a>()
+                    </li><li>public void <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/sendHeaders.xhtml">sendHeaders</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="FOFPlatform" href="../classes/FOFPlatform.xhtml">FOFPlatform</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="FOFPlatformInterface" href="../interfaces/FOFPlatformInterface.xhtml">FOFPlatformInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_cache"><strong>$_cache</strong>
+                —
+                <a title="JRegistry|null" href="../classes/JRegistry|null.xhtml">JRegistry|null</a><br/><span class="indent">The table and table field cache object, used to speed up database access</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getCacheObject"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getCacheObject.xhtml">getCacheObject()</a>
+                — Gets a reference to the cache object, loading it from the disk if needed.</li>
+            <li id="saveCache"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/saveCache.xhtml">saveCache()</a>
+                — Save the cache object back to disk</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="isCliAdmin"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isCliAdmin.xhtml">isCliAdmin()</a>
+                — Main function to detect if we're running in a CLI environment and we're admin</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/__construct.xhtml">__construct()</a>
+                — Public constructor</li>
+            <li id="URIbase"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/URIbase.xhtml">URIbase()</a>
+                — Returns the base URI for the request.</li>
+            <li id="URIroot"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/URIroot.xhtml">URIroot()</a>
+                — Returns the root URI for the request.</li>
+            <li id="authorise"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/authorise.xhtml">authorise()</a>
+                — Perform an ACL check.</li>
+            <li id="authorizeAdmin"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/authorizeAdmin.xhtml">authorizeAdmin()</a>
+                — Authorise access to the component in the back-end.</li>
+            <li id="checkExecution"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/checkExecution.xhtml">checkExecution()</a>
+                — Checks if the current script is run inside a valid CMS execution</li>
+            <li id="clearCache"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/clearCache.xhtml">clearCache()</a>
+                — Clears the cache of system-wide FOF data. You are supposed to call this in your components' installation script post-installation and post-upgrade methods or whenever you are modifying the structure of database tables accessed by FOF. Please note that FOF's cache never expires and is not purged by Joomla!. You MUST use this method to manually purge the cache.</li>
+            <li id="getCache"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getCache.xhtml">getCache()</a>
+                — Retrieves data from the cache. This is supposed to be used for system-side FOF data, not application data.</li>
+            <li id="getComponentBaseDirs"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getComponentBaseDirs.xhtml">getComponentBaseDirs()</a>
+                — Returns the base (root) directories for a given component.</li>
+            <li id="getConfig">
+              <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getConfig.xhtml">getConfig()</a>
+            </li>
+            <li id="getDate"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getDate.xhtml">getDate()</a>
+                — Returns an object to handle dates</li>
+            <li id="getDbo">
+              <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getDbo.xhtml">getDbo()</a>
+            </li>
+            <li id="getDocument"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getDocument.xhtml">getDocument()</a>
+                — Returns the JDocument object which handles this component's response.</li>
+            <li id="getLanguage">
+              <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getLanguage.xhtml">getLanguage()</a>
+            </li>
+            <li id="getPlatformBaseDirs"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getPlatformBaseDirs.xhtml">getPlatformBaseDirs()</a>
+                — Returns absolute path to directories used by the CMS.</li>
+            <li id="getTemplateOverridePath"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getTemplateOverridePath.xhtml">getTemplateOverridePath()</a>
+                — Return the absolute path to the application's template overrides directory for a specific component. We will use it to look for template files instead of the regular component directorues. If the application does not have such a thing as template overrides return an empty string.</li>
+            <li id="getTemplateSuffixes"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getTemplateSuffixes.xhtml">getTemplateSuffixes()</a>
+                — Get application-specific suffixes to use with template paths. This allows you to look for view template overrides based on the application version.</li>
+            <li id="getUser"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getUser.xhtml">getUser()</a>
+                — Return a user object.</li>
+            <li id="getUserStateFromRequest"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getUserStateFromRequest.xhtml">getUserStateFromRequest()</a>
+                — This method will try retrieving a variable from the request (input) data.</li>
+            <li id="getViewTemplatePaths"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/getViewTemplatePaths.xhtml">getViewTemplatePaths()</a>
+                — Return a list of the view template paths for this component.</li>
+            <li id="importPlugin"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/importPlugin.xhtml">importPlugin()</a>
+                — Load plugins of a specific type. Obviously this seems to only be required in the Joomla! CMS.</li>
+            <li id="isBackend"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isBackend.xhtml">isBackend()</a>
+                — Is this the administrative section of the component?</li>
+            <li id="isCli"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isCli.xhtml">isCli()</a>
+                — Is this a component running in a CLI application?</li>
+            <li id="isEnabled"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isEnabled.xhtml">isEnabled()</a>
+                — Is this platform enabled?</li>
+            <li id="isFrontend"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isFrontend.xhtml">isFrontend()</a>
+                — Is this the public section of the component?</li>
+            <li id="isGlobalFOFCacheEnabled"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/isGlobalFOFCacheEnabled.xhtml">isGlobalFOFCacheEnabled()</a>
+                — Is the global FOF cache enabled?</li>
+            <li id="loadTranslations"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/loadTranslations.xhtml">loadTranslations()</a>
+                — Load the translation files for a given component.</li>
+            <li id="logAddLogger">
+              <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logAddLogger.xhtml">logAddLogger()</a>
+            </li>
+            <li id="logDebug">
+              <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logDebug.xhtml">logDebug()</a>
+            </li>
+            <li id="logDeprecated"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logDeprecated.xhtml">logDeprecated()</a>
+                — Logs a deprecated practice. In Joomla! this results in the $message being output in the deprecated log file, found in your site's log directory.</li>
+            <li id="loginUser"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/loginUser.xhtml">loginUser()</a>
+                — logs in a user</li>
+            <li id="logoutUser"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/logoutUser.xhtml">logoutUser()</a>
+                — logs out a user</li>
+            <li id="raiseError">
+              <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/raiseError.xhtml">raiseError()</a>
+            </li>
+            <li id="runPlugins"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/runPlugins.xhtml">runPlugins()</a>
+                — Execute plugins (system-level triggers) and fetch back an array with their return values.</li>
+            <li id="sendHeaders">
+              <a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/sendHeaders.xhtml">sendHeaders()</a>
+            </li>
+            <li id="setCache"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/setCache.xhtml">setCache()</a>
+                — Saves something to the cache. This is supposed to be used for system-wide FOF data, not application data.</li>
+            <li id="setHeader"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/setHeader.xhtml">setHeader()</a>
+                — Method to set a response header.  If the replace flag is set then all headers with the given name will be replaced by the new one (only if the current platform supports header caching)</li>
+            <li id="supportsAjaxOrdering"><a title="FOFIntegrationJoomlaPlatform" href="../classes/FOFIntegrationJoomlaPlatform/supportsAjaxOrdering.xhtml">supportsAjaxOrdering()</a>
+                — Is AJAX re-ordering supported? This is 100% Joomla!-CMS specific. All other platforms should return false and never ask why.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

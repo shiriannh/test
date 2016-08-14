@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - InstallationModelLanguages</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">InstallationModelLanguages</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/installation/model/languages.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>InstallationModelLanguages</h1>
+        <h4>Language Installer model for the Joomla Core Installer.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class InstallationModelLanguages
+                extends <a title="JModelBase" href="../classes/JModelBase.xhtml">JModelBase</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title=""/> <a href="#members">$client</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$data</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$path</a> =
+                        null;
+                    </li><li>protected integer <a href="#members">$langlist</a> =
+                        null;
+                    </li><li>protected <span title="Admin">Admin</span> <a href="#members">$adminId</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getItems.xhtml">getItems</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/install.xhtml">install</a>()
+                    </li><li>protected string <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getLanguageManifest.xhtml">getLanguageManifest</a>()
+                    </li><li>protected string|bool <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getPackageUrl.xhtml">getPackageUrl</a>()
+                    </li><li>protected array|bool <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/downloadPackage.xhtml">downloadPackage</a>()
+                    </li><li>public array <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getInstalledlangsAdministrator.xhtml">getInstalledlangsAdministrator</a>()
+                    </li><li>public array <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getInstalledlangsFrontend.xhtml">getInstalledlangsFrontend</a>()
+                    </li><li>protected array <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getInstalledlangs.xhtml">getInstalledlangs</a>()
+                    </li><li>protected  <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getLanguageList.xhtml">getLanguageList</a>()
+                    </li><li>protected integer <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/compareLanguages.xhtml">compareLanguages</a>()
+                    </li><li>protected string <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getPath.xhtml">getPath</a>()
+                    </li><li>protected  <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getClient.xhtml">getClient</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/setDefault.xhtml">setDefault</a>()
+                    </li><li>public array <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getOptions.xhtml">getOptions</a>()
+                    </li><li>public mixed <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getForm.xhtml">getForm</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/enablePlugin.xhtml">enablePlugin</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addModuleLanguageSwitcher.xhtml">addModuleLanguageSwitcher</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addModuleInModuleMenu.xhtml">addModuleInModuleMenu</a>()
+                    </li><li>public string <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getSefString.xhtml">getSefString</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addLanguage.xhtml">addLanguage</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addMenuGroup.xhtml">addMenuGroup</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addMenuItem.xhtml">addMenuItem</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addModuleMenu.xhtml">addModuleMenu</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/disableModuleMainMenu.xhtml">disableModuleMainMenu</a>()
+                    </li><li>public boolean <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/enableModule.xhtml">enableModule</a>()
+                    </li><li>public JTable <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addCategory.xhtml">addCategory</a>()
+                    </li><li>public JTable <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addArticle.xhtml">addArticle</a>()
+                    </li><li>private int|bool <a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getAdminId.xhtml">getAdminId</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JModelBase" href="../classes/JModelBase.xhtml">JModelBase</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="adminId"><strong>$adminId</strong>
+                —
+                <a title="Admin" href="../classes/Admin.xhtml">Admin</a></li>
+            <li id="client"><strong>$client</strong>
+                —
+                <a title="" href="../classes/.xhtml"/></li>
+            <li id="data"><strong>$data</strong>
+                —
+                array</li>
+            <li id="langlist"><strong>$langlist</strong>
+                —
+                integer</li>
+            <li id="path"><strong>$path</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getAdminId"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getAdminId.xhtml">getAdminId()</a>
+                — Retrieve the admin user id.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="compareLanguages"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/compareLanguages.xhtml">compareLanguages()</a>
+                — Compare two languages in order to sort them.</li>
+            <li id="downloadPackage"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/downloadPackage.xhtml">downloadPackage()</a>
+                — Download a language package from a URL and unpack it in the tmp folder.</li>
+            <li id="getClient"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getClient.xhtml">getClient()</a>
+                — Get the client object of Administrator or Frontend.</li>
+            <li id="getInstalledlangs"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getInstalledlangs.xhtml">getInstalledlangs()</a>
+                — Get Languages item data.</li>
+            <li id="getLanguageList"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getLanguageList.xhtml">getLanguageList()</a>
+                — Get installed languages data.</li>
+            <li id="getLanguageManifest"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getLanguageManifest.xhtml">getLanguageManifest()</a>
+                — Gets the manifest file of a selected language from a the language list in an update server.</li>
+            <li id="getPackageUrl"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getPackageUrl.xhtml">getPackageUrl()</a>
+                — Finds the url of the package to download.</li>
+            <li id="getPath"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getPath.xhtml">getPath()</a>
+                — Get the languages folder path.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/__construct.xhtml">__construct()</a>
+                — Constructor: Deletes the default installation config file and recreates it with the good config file.</li>
+            <li id="addArticle"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addArticle.xhtml">addArticle()</a>
+                — Create an article in a specific language.</li>
+            <li id="addCategory"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addCategory.xhtml">addCategory()</a>
+                — Method create a category for a specific language.</li>
+            <li id="addLanguage"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addLanguage.xhtml">addLanguage()</a>
+                — Add a Content Language.</li>
+            <li id="addMenuGroup"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addMenuGroup.xhtml">addMenuGroup()</a>
+                — Add Menu Group.</li>
+            <li id="addMenuItem"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addMenuItem.xhtml">addMenuItem()</a>
+                — Add Menu Item.</li>
+            <li id="addModuleInModuleMenu"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addModuleInModuleMenu.xhtml">addModuleInModuleMenu()</a>
+                — Add a Module in Module menus.</li>
+            <li id="addModuleLanguageSwitcher"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addModuleLanguageSwitcher.xhtml">addModuleLanguageSwitcher()</a>
+                — Enable the Language Switcher Module.</li>
+            <li id="addModuleMenu"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/addModuleMenu.xhtml">addModuleMenu()</a>
+                — Add Module Menu.</li>
+            <li id="disableModuleMainMenu"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/disableModuleMainMenu.xhtml">disableModuleMainMenu()</a>
+                — Disable Default Main Menu Module.</li>
+            <li id="enableModule"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/enableModule.xhtml">enableModule()</a>
+                — Enable a module.</li>
+            <li id="enablePlugin"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/enablePlugin.xhtml">enablePlugin()</a>
+                — Enable a Joomla plugin.</li>
+            <li id="getForm"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getForm.xhtml">getForm()</a>
+                — Get the model form.</li>
+            <li id="getInstalledlangsAdministrator"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getInstalledlangsAdministrator.xhtml">getInstalledlangsAdministrator()</a>
+                — Get Languages item data for the Administrator.</li>
+            <li id="getInstalledlangsFrontend"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getInstalledlangsFrontend.xhtml">getInstalledlangsFrontend()</a>
+                — Get Languages item data for the Frontend.</li>
+            <li id="getItems"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getItems.xhtml">getItems()</a>
+                — Generate a list of language choices to install in the Joomla CMS.</li>
+            <li id="getOptions"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getOptions.xhtml">getOptions()</a>
+                — Get the current setup options from the session.</li>
+            <li id="getSefString"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/getSefString.xhtml">getSefString()</a>
+                — Gets a unique language SEF string.</li>
+            <li id="install"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/install.xhtml">install()</a>
+                — Method that installs in Joomla! the selected languages in the Languages View of the installer.</li>
+            <li id="setDefault"><a title="InstallationModelLanguages" href="../classes/InstallationModelLanguages/setDefault.xhtml">setDefault()</a>
+                — Set the default language.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

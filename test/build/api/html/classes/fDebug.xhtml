@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - fDebug</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">fDebug</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/theseer/phpdox/tests/data/collector/test0.php.xhtml#line26">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>fDebug</h1>
+        <h4>fDebug class</h4>
+        <p/>
+        <ul>
+          <li>Author: Arne Blankerts &lt;theseer@fcms.de&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class fDebug
+                implements
+                <a title="fSingleton" href="../interfaces/fSingleton.xhtml">fSingleton</a>
+            {<br/><ul class="none"><li>// constants</li><li>const version = '$Revision: 111 $ ($Date: 2009-11-01 16:37:42 +0100 (Sun, 01 Nov 2009) $)';</li><li>const MESSAGE = 'MESSAGE';</li><li>const WARNING = 'WARNING';</li><li>const ERROR = 'ERROR';</li><li>const FATAL = 'FATAL';</li></ul><ul class="none"><li>// members</li><li>protected static <span title="fDebug">fDebug</span> <a href="#members">$instance</a> =
+                        null;
+                    </li><li>protected <span title="socket">socket</span> <a href="#members">$socket</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$logFile</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$source</a> =
+                        '';
+                    </li><li>protected <span title="Array">Array</span> <a href="#members">$variables</a> =
+                        ;
+                    </li><li>protected string <a href="#members">$context</a> =
+                        'fCore';
+                    </li><li>protected array <a href="#members">$previousContext</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$autoContext</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$sourceSent</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$varsSent</a> =
+                        false;
+                    </li><li>protected string <a href="#members">$sessionHost</a> =
+                        '{undefined hostname}';
+                    </li><li>protected string <a href="#members">$sessionUri</a> =
+                        '{undefined uri}';
+                    </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="fDebug" href="../classes/fDebug/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/__destruct.xhtml">__destruct</a>()
+                    </li><li>public static fDebug <a title="fDebug" href="../classes/fDebug/getInstance.xhtml">getInstance</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/setSession.xhtml">setSession</a>()
+                    </li><li>public boolean <a title="fDebug" href="../classes/fDebug/openSocket.xhtml">openSocket</a>()
+                    </li><li>public boolean <a title="fDebug" href="../classes/fDebug/openProxy.xhtml">openProxy</a>()
+                    </li><li>public boolean <a title="fDebug" href="../classes/fDebug/connectRemote.xhtml">connectRemote</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendHelo.xhtml">sendHelo</a>()
+                    </li><li>public boolean <a title="fDebug" href="../classes/fDebug/openFile.xhtml">openFile</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/closeSocket.xhtml">closeSocket</a>()
+                    </li><li>public boolean <a title="fDebug" href="../classes/fDebug/isConnected.xhtml">isConnected</a>()
+                    </li><li>public boolean <a title="fDebug" href="../classes/fDebug/hasSession.xhtml">hasSession</a>()
+                    </li><li>protected void <a title="fDebug" href="../classes/fDebug/writeSocket.xhtml">writeSocket</a>()
+                    </li><li>protected void <a title="fDebug" href="../classes/fDebug/writeFile.xhtml">writeFile</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/setSource.xhtml">setSource</a>()
+                    </li><li>public boolean <a title="fDebug" href="../classes/fDebug/hasSource.xhtml">hasSource</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/registerVariable.xhtml">registerVariable</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendVariables.xhtml">sendVariables</a>()
+                    </li><li>protected void <a title="fDebug" href="../classes/fDebug/flattenArray.xhtml">flattenArray</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/setContext.xhtml">setContext</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/resetContext.xhtml">resetContext</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/enableAutoContext.xhtml">enableAutoContext</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/disableAutoContext.xhtml">disableAutoContext</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendDebug.xhtml">sendDebug</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendMessage.xhtml">sendMessage</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendWarning.xhtml">sendWarning</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendError.xhtml">sendError</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendFatal.xhtml">sendFatal</a>()
+                    </li><li>protected void <a title="fDebug" href="../classes/fDebug/handleMessage.xhtml">handleMessage</a>()
+                    </li><li>public void <a title="fDebug" href="../classes/fDebug/sendSource.xhtml">sendSource</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="fSingleton" href="../interfaces/fSingleton.xhtml">fSingleton</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="version">version</td>
+              <td>'$Revision: 111 $ ($Date: 2009-11-01 16:37:42 +0100 (Sun, 01 Nov 2009) $)'</td>
+            </tr>
+            <tr>
+              <td id="MESSAGE">MESSAGE</td>
+              <td>'MESSAGE'</td>
+            </tr>
+            <tr>
+              <td id="WARNING">WARNING</td>
+              <td>'WARNING'</td>
+            </tr>
+            <tr>
+              <td id="ERROR">ERROR</td>
+              <td>'ERROR'</td>
+            </tr>
+            <tr>
+              <td id="FATAL">FATAL</td>
+              <td>'FATAL'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="autoContext"><strong>$autoContext</strong>
+                —
+                boolean<br/><span class="indent">Flag to automagically set context to calling class</span></li>
+            <li id="context"><strong>$context</strong>
+                —
+                string<br/><span class="indent">current context</span></li>
+            <li id="instance"><strong>$instance</strong>
+                —
+                <a title="fDebug" href="../classes/fDebug.xhtml">fDebug</a><br/><span class="indent">Instance of class</span></li>
+            <li id="logFile"><strong>$logFile</strong>
+                —
+                string<br/><span class="indent">Logfile to use in file mode</span></li>
+            <li id="previousContext"><strong>$previousContext</strong>
+                —
+                array<br/><span class="indent">Backlog of contexts</span></li>
+            <li id="sessionHost"><strong>$sessionHost</strong>
+                —
+                string<br/><span class="indent">Hostname of debug session</span></li>
+            <li id="sessionUri"><strong>$sessionUri</strong>
+                —
+                string<br/><span class="indent">Url of debug session</span></li>
+            <li id="socket"><strong>$socket</strong>
+                —
+                <a title="socket" href="../classes/socket.xhtml">socket</a><br/><span class="indent">Socket handle</span></li>
+            <li id="source"><strong>$source</strong>
+                —
+                string<br/><span class="indent">Sourcecode to dump</span></li>
+            <li id="sourceSent"><strong>$sourceSent</strong>
+                —
+                boolean<br/><span class="indent">Remember if source has been sent</span></li>
+            <li id="variables"><strong>$variables</strong>
+                —
+                <a title="Array" href="../classes/Array.xhtml">Array</a><br/><span class="indent">Variable reference storage</span></li>
+            <li id="varsSent"><strong>$varsSent</strong>
+                —
+                boolean<br/><span class="indent">Remember if variable dump has been sent</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="__construct"><a title="fDebug" href="../classes/fDebug/__construct.xhtml">__construct()</a>
+                — Disallow construct from outside</li>
+            <li id="flattenArray"><a title="fDebug" href="../classes/fDebug/flattenArray.xhtml">flattenArray()</a>
+                — Flatten a given Array to xml structure using xmlWriter</li>
+            <li id="handleMessage"><a title="fDebug" href="../classes/fDebug/handleMessage.xhtml">handleMessage()</a>
+                — produce Message object and sent it over socket / write to file</li>
+            <li id="writeFile"><a title="fDebug" href="../classes/fDebug/writeFile.xhtml">writeFile()</a>
+                — Write to logfile</li>
+            <li id="writeSocket"><a title="fDebug" href="../classes/fDebug/writeSocket.xhtml">writeSocket()</a>
+                — Write data to an active socket connection</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__destruct"><a title="fDebug" href="../classes/fDebug/__destruct.xhtml">__destruct()</a>
+                — Destructor</li>
+            <li id="closeSocket"><a title="fDebug" href="../classes/fDebug/closeSocket.xhtml">closeSocket()</a>
+                — Close an open socket connection</li>
+            <li id="connectRemote"><a title="fDebug" href="../classes/fDebug/connectRemote.xhtml">connectRemote()</a>
+                — create socket connection</li>
+            <li id="disableAutoContext"><a title="fDebug" href="../classes/fDebug/disableAutoContext.xhtml">disableAutoContext()</a>
+                — disable AutoContext switching</li>
+            <li id="enableAutoContext"><a title="fDebug" href="../classes/fDebug/enableAutoContext.xhtml">enableAutoContext()</a>
+                — enable AutoContext switching</li>
+            <li id="getInstance"><a title="fDebug" href="../classes/fDebug/getInstance.xhtml">getInstance()</a>
+                — get or create instance of fDebug</li>
+            <li id="hasSession"><a title="fDebug" href="../classes/fDebug/hasSession.xhtml">hasSession()</a>
+                — Verify if there is an active session</li>
+            <li id="hasSource"><a title="fDebug" href="../classes/fDebug/hasSource.xhtml">hasSource()</a>
+                — Verify if source has been set</li>
+            <li id="isConnected"><a title="fDebug" href="../classes/fDebug/isConnected.xhtml">isConnected()</a>
+                — Verify if there is an active connection</li>
+            <li id="openFile"><a title="fDebug" href="../classes/fDebug/openFile.xhtml">openFile()</a>
+                — open debug logfile</li>
+            <li id="openProxy"><a title="fDebug" href="../classes/fDebug/openProxy.xhtml">openProxy()</a>
+                — open a new socket connection to an fdebug proxy</li>
+            <li id="openSocket"><a title="fDebug" href="../classes/fDebug/openSocket.xhtml">openSocket()</a>
+                — open a new socket connection</li>
+            <li id="registerVariable"><a title="fDebug" href="../classes/fDebug/registerVariable.xhtml">registerVariable()</a>
+                — Register a custom variable for dumping</li>
+            <li id="resetContext"><a title="fDebug" href="../classes/fDebug/resetContext.xhtml">resetContext()</a>
+                — Reset context back to previous context</li>
+            <li id="sendDebug"><a title="fDebug" href="../classes/fDebug/sendDebug.xhtml">sendDebug()</a>
+                — Send a Debug message (autosets context to fDebug)</li>
+            <li id="sendError"><a title="fDebug" href="../classes/fDebug/sendError.xhtml">sendError()</a>
+                — Send an Error with an optional given context</li>
+            <li id="sendFatal"><a title="fDebug" href="../classes/fDebug/sendFatal.xhtml">sendFatal()</a>
+                — Send a Fatal error with an optional given context</li>
+            <li id="sendHelo"><a title="fDebug" href="../classes/fDebug/sendHelo.xhtml">sendHelo()</a>
+                — Initiate fDebug session</li>
+            <li id="sendMessage"><a title="fDebug" href="../classes/fDebug/sendMessage.xhtml">sendMessage()</a>
+                — Send a standard message with an optional given context</li>
+            <li id="sendSource"><a title="fDebug" href="../classes/fDebug/sendSource.xhtml">sendSource()</a>
+                — Send source to client</li>
+            <li id="sendVariables"><a title="fDebug" href="../classes/fDebug/sendVariables.xhtml">sendVariables()</a>
+                — Send Variable dump to remote</li>
+            <li id="sendWarning"><a title="fDebug" href="../classes/fDebug/sendWarning.xhtml">sendWarning()</a>
+                — Send a Warning with an optional given context</li>
+            <li id="setContext"><a title="fDebug" href="../classes/fDebug/setContext.xhtml">setContext()</a>
+                — Set a context</li>
+            <li id="setSession"><a title="fDebug" href="../classes/fDebug/setSession.xhtml">setSession()</a>
+                — setup session details</li>
+            <li id="setSource"><a title="fDebug" href="../classes/fDebug/setSource.xhtml">setSource()</a>
+                — Set the Source for dumping later</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

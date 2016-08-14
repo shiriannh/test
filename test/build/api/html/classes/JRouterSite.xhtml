@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JRouterSite</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JRouterSite</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/router/site.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JRouterSite</h1>
+        <h4>Class to create and parse routes for the site application</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JRouterSite
+                extends <a title="JRouter" href="../classes/JRouter.xhtml">JRouter</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$componentRouters</a> =
+                        ;
+                    </li><li>protected <span title="JApplicationCms">JApplicationCms</span> <a href="#members">$app</a>;
+                    </li><li>protected <span title="JMenu">JMenu</span> <a href="#members">$menu</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JRouterSite" href="../classes/JRouterSite/__construct.xhtml">__construct</a>()
+                    </li><li>public array <a title="JRouterSite" href="../classes/JRouterSite/parse.xhtml">parse</a>()
+                    </li><li>public string <a title="JRouterSite" href="../classes/JRouterSite/build.xhtml">build</a>()
+                    </li><li>protected array <a title="JRouterSite" href="../classes/JRouterSite/parseRawRoute.xhtml">parseRawRoute</a>()
+                    </li><li>protected string <a title="JRouterSite" href="../classes/JRouterSite/parseSefRoute.xhtml">parseSefRoute</a>()
+                    </li><li>protected string <a title="JRouterSite" href="../classes/JRouterSite/buildRawRoute.xhtml">buildRawRoute</a>()
+                    </li><li>protected void <a title="JRouterSite" href="../classes/JRouterSite/_buildSefRoute.xhtml">_buildSefRoute</a>()
+                    </li><li>protected void <a title="JRouterSite" href="../classes/JRouterSite/buildSefRoute.xhtml">buildSefRoute</a>()
+                    </li><li>protected array <a title="JRouterSite" href="../classes/JRouterSite/processParseRules.xhtml">processParseRules</a>()
+                    </li><li>protected void <a title="JRouterSite" href="../classes/JRouterSite/processBuildRules.xhtml">processBuildRules</a>()
+                    </li><li>protected JUri <a title="JRouterSite" href="../classes/JRouterSite/createUri.xhtml">createUri</a>()
+                    </li><li>public JComponentRouterInterface <a title="JRouterSite" href="../classes/JRouterSite/getComponentRouter.xhtml">getComponentRouter</a>()
+                    </li><li>public boolean <a title="JRouterSite" href="../classes/JRouterSite/setComponentRouter.xhtml">setComponentRouter</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JRouter" href="../classes/JRouter.xhtml">JRouter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="app"><strong>$app</strong>
+                —
+                <a title="JApplicationCms" href="../classes/JApplicationCms.xhtml">JApplicationCms</a><br/><span class="indent">Current JApplication-Object</span></li>
+            <li id="componentRouters"><strong>$componentRouters</strong>
+                —
+                array<br/><span class="indent">Component-router objects</span></li>
+            <li id="menu"><strong>$menu</strong>
+                —
+                <a title="JMenu" href="../classes/JMenu.xhtml">JMenu</a><br/><span class="indent">Current JMenu-Object</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_buildSefRoute"><a title="JRouterSite" href="../classes/JRouterSite/_buildSefRoute.xhtml">_buildSefRoute()</a>
+                — Function to build a sef route</li>
+            <li id="buildRawRoute"><a title="JRouterSite" href="../classes/JRouterSite/buildRawRoute.xhtml">buildRawRoute()</a>
+                — Function to build a raw route</li>
+            <li id="buildSefRoute"><a title="JRouterSite" href="../classes/JRouterSite/buildSefRoute.xhtml">buildSefRoute()</a>
+                — Function to build a sef route</li>
+            <li id="createUri"><a title="JRouterSite" href="../classes/JRouterSite/createUri.xhtml">createUri()</a>
+                — Create a uri based on a full or partial url string</li>
+            <li id="parseRawRoute"><a title="JRouterSite" href="../classes/JRouterSite/parseRawRoute.xhtml">parseRawRoute()</a>
+                — Function to convert a raw route to an internal URI</li>
+            <li id="parseSefRoute"><a title="JRouterSite" href="../classes/JRouterSite/parseSefRoute.xhtml">parseSefRoute()</a>
+                — Function to convert a sef route to an internal URI</li>
+            <li id="processBuildRules"><a title="JRouterSite" href="../classes/JRouterSite/processBuildRules.xhtml">processBuildRules()</a>
+                — Process the build uri query data based on custom defined rules</li>
+            <li id="processParseRules"><a title="JRouterSite" href="../classes/JRouterSite/processParseRules.xhtml">processParseRules()</a>
+                — Process the parsed router variables based on custom defined rules</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JRouterSite" href="../classes/JRouterSite/__construct.xhtml">__construct()</a>
+                — Class constructor</li>
+            <li id="build"><a title="JRouterSite" href="../classes/JRouterSite/build.xhtml">build()</a>
+                — Function to convert an internal URI to a route</li>
+            <li id="getComponentRouter"><a title="JRouterSite" href="../classes/JRouterSite/getComponentRouter.xhtml">getComponentRouter()</a>
+                — Get component router</li>
+            <li id="parse"><a title="JRouterSite" href="../classes/JRouterSite/parse.xhtml">parse()</a>
+                — Function to convert a route to an internal URI</li>
+            <li id="setComponentRouter"><a title="JRouterSite" href="../classes/JRouterSite/setComponentRouter.xhtml">setComponentRouter()</a>
+                — Set a router for a component</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

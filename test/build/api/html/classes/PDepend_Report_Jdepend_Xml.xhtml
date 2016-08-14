@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Report\Jdepend\Xml</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Report_Jdepend">PDepend\Report\Jdepend</a>
+          </li>
+          <li class="separator">Xml</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Report/Jdepend/Xml.php.xhtml#line64">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Report\Jdepend\</small>Xml</h1>
+        <h4>Generates an xml document with the aggregated metrics. The format is borrowed from &lt;a href="http://clarkware.com/software/JDepend.html"&gt;JDepend&lt;/a&gt;.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Xml
+                extends <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor.xhtml">AbstractASTVisitor</a>
+                implements
+                <a title="PDepend\Report\CodeAwareGenerator" href="../interfaces/PDepend_Report_CodeAwareGenerator.xhtml">CodeAwareGenerator</a>,<a title="PDepend\Report\FileAwareGenerator" href="../interfaces/PDepend_Report_FileAwareGenerator.xhtml">FileAwareGenerator</a>
+            {<br/><ul class="none"><li>// members</li><li>private string <a href="#members">$logFile</a> =
+                        null;
+                    </li><li>protected <span title="\PDepend\Source\AST\ASTArtifactList">ASTArtifactList</span> <a href="#members">$code</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$fileSet</a> =
+                        ;
+                    </li><li>protected <span title="PDepend\Report\Jdepend\array(string=&gt;mixed)">array(string=&gt;mixed)</span> <a href="#members">$projectMetrics</a> =
+                        ;
+                    </li><li>protected <span title="PDepend\Report\Jdepend\array(string=&gt;array)">array(string=&gt;array)</span> <a href="#members">$nodeMetrics</a> =
+                        ;
+                    </li><li>protected <span title="PDepend\Metrics\Analyzer\DependencyAnalyzer">DependencyAnalyzer</span> <a href="#members">$analyzer</a> =
+                        null;
+                    </li><li>protected <span title="\DOMElement">DOMElement</span> <a href="#members">$packages</a> =
+                        null;
+                    </li><li>protected <span title="\DOMElement">DOMElement</span> <a href="#members">$cycles</a> =
+                        null;
+                    </li><li>protected <span title="\DOMElement">DOMElement</span> <a href="#members">$concreteClasses</a> =
+                        null;
+                    </li><li>protected <span title="\DOMElement">DOMElement</span> <a href="#members">$abstractClasses</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/setLogFile.xhtml">setLogFile</a>()
+                    </li><li>public array(string) <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/getAcceptedAnalyzers.xhtml">getAcceptedAnalyzers</a>()
+                    </li><li>public void <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/setArtifacts.xhtml">setArtifacts</a>()
+                    </li><li>public boolean <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/log.xhtml">log</a>()
+                    </li><li>public void <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/close.xhtml">close</a>()
+                    </li><li>public void <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/visitClass.xhtml">visitClass</a>()
+                    </li><li>public void <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/visitInterface.xhtml">visitInterface</a>()
+                    </li><li>public void <a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/visitNamespace.xhtml">visitNamespace</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\ASTVisitor\AbstractASTVisitor" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitor.xhtml">PDepend\Source\ASTVisitor\AbstractASTVisitor</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Report\CodeAwareGenerator" href="../interfaces/PDepend_Report_CodeAwareGenerator.xhtml">PDepend\Report\CodeAwareGenerator</a>
+            </li>
+            <li>
+              <a title="PDepend\Report\FileAwareGenerator" href="../interfaces/PDepend_Report_FileAwareGenerator.xhtml">PDepend\Report\FileAwareGenerator</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="logFile"><strong>$logFile</strong>
+                —
+                string<br/><span class="indent">The output log file.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="abstractClasses"><strong>$abstractClasses</strong>
+                —
+                <a title="\DOMElement" href="../classes/_DOMElement.xhtml">\DOMElement</a><br/><span class="indent">The abstract classes element for the current package.</span></li>
+            <li id="analyzer"><strong>$analyzer</strong>
+                —
+                <a title="PDepend\Metrics\Analyzer\DependencyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_DependencyAnalyzer.xhtml">PDepend\Metrics\Analyzer\DependencyAnalyzer</a><br/><span class="indent">The dependency result set.</span></li>
+            <li id="code"><strong>$code</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTArtifactList" href="../classes/_PDepend_Source_AST_ASTArtifactList.xhtml">\PDepend\Source\AST\ASTArtifactList</a><br/><span class="indent">The raw {@link \PDepend\Source\AST\ASTNamespace} instances.</span></li>
+            <li id="concreteClasses"><strong>$concreteClasses</strong>
+                —
+                <a title="\DOMElement" href="../classes/_DOMElement.xhtml">\DOMElement</a><br/><span class="indent">The concrete classes element for the current package.</span></li>
+            <li id="cycles"><strong>$cycles</strong>
+                —
+                <a title="\DOMElement" href="../classes/_DOMElement.xhtml">\DOMElement</a><br/><span class="indent">The Cycles dom element.</span></li>
+            <li id="fileSet"><strong>$fileSet</strong>
+                —
+                array<br/><span class="indent">Set of all analyzed files.</span></li>
+            <li id="nodeMetrics"><strong>$nodeMetrics</strong>
+                —
+                <a title="PDepend\Report\Jdepend\array(string=&gt;array)" href="../classes/PDepend_Report_Jdepend_array(string=&gt;array).xhtml">PDepend\Report\Jdepend\array(string=&gt;array)</a><br/><span class="indent">List of all collected node metrics.</span></li>
+            <li id="packages"><strong>$packages</strong>
+                —
+                <a title="\DOMElement" href="../classes/_DOMElement.xhtml">\DOMElement</a><br/><span class="indent">The Packages dom element.</span></li>
+            <li id="projectMetrics"><strong>$projectMetrics</strong>
+                —
+                <a title="PDepend\Report\Jdepend\array(string=&gt;mixed)" href="../classes/PDepend_Report_Jdepend_array(string=&gt;mixed).xhtml">PDepend\Report\Jdepend\array(string=&gt;mixed)</a><br/><span class="indent">List of all generated project metrics.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="close"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/close.xhtml">close()</a>
+                — Closes the logger process and writes the output file.</li>
+            <li id="getAcceptedAnalyzers"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/getAcceptedAnalyzers.xhtml">getAcceptedAnalyzers()</a>
+                — Returns an &lt;b&gt;array&lt;/b&gt; with accepted analyzer types. These types can be concrete analyzer classes or one of the descriptive analyzer interfaces.</li>
+            <li id="log"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/log.xhtml">log()</a>
+                — Adds an analyzer to log. If this logger accepts the given analyzer it with return &lt;b&gt;true&lt;/b&gt;, otherwise the return value is &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="setArtifacts"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/setArtifacts.xhtml">setArtifacts()</a>
+                — Sets the context code nodes.</li>
+            <li id="setLogFile"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/setLogFile.xhtml">setLogFile()</a>
+                — Sets the output log file.</li>
+            <li id="visitClass"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/visitClass.xhtml">visitClass()</a>
+                — Visits a class node.</li>
+            <li id="visitInterface"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/visitInterface.xhtml">visitInterface()</a>
+                — Visits a code interface object.</li>
+            <li id="visitNamespace"><a title="PDepend\Report\Jdepend\Xml" href="../classes/PDepend_Report_Jdepend_Xml/visitNamespace.xhtml">visitNamespace()</a>
+                — Visits a package node.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

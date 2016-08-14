@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JLayoutBase</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JLayoutBase</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/layout/base.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JLayoutBase</h1>
+        <h4>Base class for rendering a display layout</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JLayoutBase
+                implements
+                <a title="JLayout" href="../interfaces/JLayout.xhtml">JLayout</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="Joomla\Registry\Registry">Registry</span> <a href="#members">$options</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$data</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$debugMessages</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public JLayoutBase <a title="JLayoutBase" href="../classes/JLayoutBase/setOptions.xhtml">setOptions</a>()
+                    </li><li>public Registry <a title="JLayoutBase" href="../classes/JLayoutBase/getOptions.xhtml">getOptions</a>()
+                    </li><li>public JLayoutBase <a title="JLayoutBase" href="../classes/JLayoutBase/resetOptions.xhtml">resetOptions</a>()
+                    </li><li>public string <a title="JLayoutBase" href="../classes/JLayoutBase/escape.xhtml">escape</a>()
+                    </li><li>public array <a title="JLayoutBase" href="../classes/JLayoutBase/getDebugMessages.xhtml">getDebugMessages</a>()
+                    </li><li>public string <a title="JLayoutBase" href="../classes/JLayoutBase/render.xhtml">render</a>()
+                    </li><li>public string <a title="JLayoutBase" href="../classes/JLayoutBase/renderDebugMessages.xhtml">renderDebugMessages</a>()
+                    </li><li>public JLayoutBase <a title="JLayoutBase" href="../classes/JLayoutBase/addDebugMessage.xhtml">addDebugMessage</a>()
+                    </li><li>public JLayoutBase <a title="JLayoutBase" href="../classes/JLayoutBase/clearDebugMessages.xhtml">clearDebugMessages</a>()
+                    </li><li>public string <a title="JLayoutBase" href="../classes/JLayoutBase/debug.xhtml">debug</a>()
+                    </li><li>public mixed <a title="JLayoutBase" href="../classes/JLayoutBase/get.xhtml">get</a>()
+                    </li><li>public array <a title="JLayoutBase" href="../classes/JLayoutBase/getData.xhtml">getData</a>()
+                    </li><li>public boolean <a title="JLayoutBase" href="../classes/JLayoutBase/isDebugEnabled.xhtml">isDebugEnabled</a>()
+                    </li><li>public JLayoutBase <a title="JLayoutBase" href="../classes/JLayoutBase/set.xhtml">set</a>()
+                    </li><li>public JLayoutBase <a title="JLayoutBase" href="../classes/JLayoutBase/setData.xhtml">setData</a>()
+                    </li><li>public JLayoutBase <a title="JLayoutBase" href="../classes/JLayoutBase/setDebug.xhtml">setDebug</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JLayout" href="../interfaces/JLayout.xhtml">JLayout</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="data"><strong>$data</strong>
+                —
+                array<br/><span class="indent">Data for the layout</span></li>
+            <li id="debugMessages"><strong>$debugMessages</strong>
+                —
+                array<br/><span class="indent">Debug information messages</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry.xhtml">Joomla\Registry\Registry</a><br/><span class="indent">Options object</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addDebugMessage"><a title="JLayoutBase" href="../classes/JLayoutBase/addDebugMessage.xhtml">addDebugMessage()</a>
+                — Add a debug message to the debug messages array</li>
+            <li id="clearDebugMessages"><a title="JLayoutBase" href="../classes/JLayoutBase/clearDebugMessages.xhtml">clearDebugMessages()</a>
+                — Clear the debug messages array</li>
+            <li id="debug"><a title="JLayoutBase" href="../classes/JLayoutBase/debug.xhtml">debug()</a>
+                — Render a layout with debug info</li>
+            <li id="escape"><a title="JLayoutBase" href="../classes/JLayoutBase/escape.xhtml">escape()</a>
+                — Method to escape output.</li>
+            <li id="get"><a title="JLayoutBase" href="../classes/JLayoutBase/get.xhtml">get()</a>
+                — Method to get the value from the data array</li>
+            <li id="getData"><a title="JLayoutBase" href="../classes/JLayoutBase/getData.xhtml">getData()</a>
+                — Get the data being rendered</li>
+            <li id="getDebugMessages"><a title="JLayoutBase" href="../classes/JLayoutBase/getDebugMessages.xhtml">getDebugMessages()</a>
+                — Get the debug messages array</li>
+            <li id="getOptions"><a title="JLayoutBase" href="../classes/JLayoutBase/getOptions.xhtml">getOptions()</a>
+                — Get the options</li>
+            <li id="isDebugEnabled"><a title="JLayoutBase" href="../classes/JLayoutBase/isDebugEnabled.xhtml">isDebugEnabled()</a>
+                — Check if debug mode is enabled</li>
+            <li id="render"><a title="JLayoutBase" href="../classes/JLayoutBase/render.xhtml">render()</a>
+                — Method to render the layout.</li>
+            <li id="renderDebugMessages"><a title="JLayoutBase" href="../classes/JLayoutBase/renderDebugMessages.xhtml">renderDebugMessages()</a>
+                — Render the list of debug messages</li>
+            <li id="resetOptions"><a title="JLayoutBase" href="../classes/JLayoutBase/resetOptions.xhtml">resetOptions()</a>
+                — Function to empty all the options</li>
+            <li id="set"><a title="JLayoutBase" href="../classes/JLayoutBase/set.xhtml">set()</a>
+                — Method to set a value in the data array. Example: $layout-&gt;set('items', $items);</li>
+            <li id="setData"><a title="JLayoutBase" href="../classes/JLayoutBase/setData.xhtml">setData()</a>
+                — Set the the data passed the layout</li>
+            <li id="setDebug"><a title="JLayoutBase" href="../classes/JLayoutBase/setDebug.xhtml">setDebug()</a>
+                — Change the debug mode</li>
+            <li id="setOptions"><a title="JLayoutBase" href="../classes/JLayoutBase/setOptions.xhtml">setOptions()</a>
+                — Set the options</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Metrics\Analyzer\HierarchyAnalyzer</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Metrics_Analyzer">PDepend\Metrics\Analyzer</a>
+          </li>
+          <li class="separator">HierarchyAnalyzer</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Metrics/Analyzer/HierarchyAnalyzer.php.xhtml#line73">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Metrics\Analyzer\</small>HierarchyAnalyzer</h1>
+        <h4>This analyzer calculates class/namespace hierarchy metrics.</h4>
+        <p>This analyzer expects that a node list filter is set, before it starts the<br/>analyze process. This filter will suppress PHP internal and external library<br/>stuff.<br/><br/>This analyzer is based on the following metric set:<br/>- http://www.aivosto.com/project/help/pm-oo-misc.html<br/><br/>This analyzer is based on the following metric set:<br/>- http://www.aivosto.com/project/help/pm-oo-misc.html</p>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class HierarchyAnalyzer
+                extends <a title="PDepend\Metrics\AbstractAnalyzer" href="../classes/PDepend_Metrics_AbstractAnalyzer.xhtml">AbstractAnalyzer</a>
+                implements
+                <a title="PDepend\Metrics\AnalyzerFilterAware" href="../interfaces/PDepend_Metrics_AnalyzerFilterAware.xhtml">AnalyzerFilterAware</a>,<a title="PDepend\Metrics\AnalyzerNodeAware" href="../interfaces/PDepend_Metrics_AnalyzerNodeAware.xhtml">AnalyzerNodeAware</a>,<a title="PDepend\Metrics\AnalyzerProjectAware" href="../interfaces/PDepend_Metrics_AnalyzerProjectAware.xhtml">AnalyzerProjectAware</a>
+            {<br/><ul class="none"><li>// constants</li><li>const M_NUMBER_OF_ABSTRACT_CLASSES = 'clsa';</li></ul><ul class="none"><li>// members</li><li>private integer <a href="#members">$fcs</a> =
+                        0;
+                    </li><li>private integer <a href="#members">$mts</a> =
+                        0;
+                    </li><li>private integer <a href="#members">$cls</a> =
+                        0;
+                    </li><li>private integer <a href="#members">$clsa</a> =
+                        0;
+                    </li><li>private integer <a href="#members">$interfs</a> =
+                        0;
+                    </li><li>private <span title="PDepend\Metrics\Analyzer\array(string=&gt;boolean)">array(string=&gt;boolean)</span> <a href="#members">$roots</a> =
+                        ;
+                    </li><li>private <span title="PDepend\Metrics\Analyzer\array(string=&gt;boolean)">array(string=&gt;boolean)</span> <a href="#members">$noneLeafs</a> =
+                        ;
+                    </li><li>private <span title="PDepend\Metrics\Analyzer\array(string=&gt;array)">array(string=&gt;array)</span> <a href="#members">$nodeMetrics</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/analyze.xhtml">analyze</a>()
+                    </li><li>public array(string=&gt;mixed) <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/getProjectMetrics.xhtml">getProjectMetrics</a>()
+                    </li><li>public array(string=&gt;mixed) <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/getNodeMetrics.xhtml">getNodeMetrics</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitClass.xhtml">visitClass</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitFunction.xhtml">visitFunction</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitInterface.xhtml">visitInterface</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitMethod.xhtml">visitMethod</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitNamespace.xhtml">visitNamespace</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Metrics\AbstractAnalyzer" href="../classes/PDepend_Metrics_AbstractAnalyzer.xhtml">PDepend\Metrics\AbstractAnalyzer</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Metrics\AnalyzerFilterAware" href="../interfaces/PDepend_Metrics_AnalyzerFilterAware.xhtml">PDepend\Metrics\AnalyzerFilterAware</a>
+            </li>
+            <li>
+              <a title="PDepend\Metrics\AnalyzerNodeAware" href="../interfaces/PDepend_Metrics_AnalyzerNodeAware.xhtml">PDepend\Metrics\AnalyzerNodeAware</a>
+            </li>
+            <li>
+              <a title="PDepend\Metrics\AnalyzerProjectAware" href="../interfaces/PDepend_Metrics_AnalyzerProjectAware.xhtml">PDepend\Metrics\AnalyzerProjectAware</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="M_NUMBER_OF_ABSTRACT_CLASSES">M_NUMBER_OF_ABSTRACT_CLASSES</td>
+              <td>'clsa'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="cls"><strong>$cls</strong>
+                —
+                integer<br/><span class="indent">Number of all analyzed classes.</span></li>
+            <li id="clsa"><strong>$clsa</strong>
+                —
+                integer<br/><span class="indent">Number of all analyzed abstract classes.</span></li>
+            <li id="fcs"><strong>$fcs</strong>
+                —
+                integer<br/><span class="indent">Number of all analyzed functions.</span></li>
+            <li id="interfs"><strong>$interfs</strong>
+                —
+                integer<br/><span class="indent">Number of all analyzed interfaces.</span></li>
+            <li id="mts"><strong>$mts</strong>
+                —
+                integer<br/><span class="indent">Number of all analyzer methods.</span></li>
+            <li id="nodeMetrics"><strong>$nodeMetrics</strong>
+                —
+                <a title="PDepend\Metrics\Analyzer\array(string=&gt;array)" href="../classes/PDepend_Metrics_Analyzer_array(string=&gt;array).xhtml">PDepend\Metrics\Analyzer\array(string=&gt;array)</a><br/><span class="indent">Hash with all calculated node metrics.</span></li>
+            <li id="noneLeafs"><strong>$noneLeafs</strong>
+                —
+                <a title="PDepend\Metrics\Analyzer\array(string=&gt;boolean)" href="../classes/PDepend_Metrics_Analyzer_array(string=&gt;boolean).xhtml">PDepend\Metrics\Analyzer\array(string=&gt;boolean)</a><br/><span class="indent">Number of all none leaf classes within the analyzed source code</span></li>
+            <li id="roots"><strong>$roots</strong>
+                —
+                <a title="PDepend\Metrics\Analyzer\array(string=&gt;boolean)" href="../classes/PDepend_Metrics_Analyzer_array(string=&gt;boolean).xhtml">PDepend\Metrics\Analyzer\array(string=&gt;boolean)</a><br/><span class="indent">Number of all root classes within the analyzed source code.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="analyze"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/analyze.xhtml">analyze()</a>
+                — Processes all {@link \PDepend\Source\AST\ASTNamespace} code nodes.</li>
+            <li id="getNodeMetrics"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/getNodeMetrics.xhtml">getNodeMetrics()</a>
+                — This method will return an &lt;b&gt;array&lt;/b&gt; with all generated metric values for the given &lt;b&gt;$node&lt;/b&gt; instance. If there are no metrics for the requested node, this method will return an empty &lt;b&gt;array&lt;/b&gt;.</li>
+            <li id="getProjectMetrics"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/getProjectMetrics.xhtml">getProjectMetrics()</a>
+                — Provides the project summary metrics as an &lt;b&gt;array&lt;/b&gt;.</li>
+            <li id="visitClass"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitClass.xhtml">visitClass()</a>
+                — Calculates metrics for the given &lt;b&gt;$class&lt;/b&gt; instance.</li>
+            <li id="visitFunction"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitFunction.xhtml">visitFunction()</a>
+                — Calculates metrics for the given &lt;b&gt;$function&lt;/b&gt; instance.</li>
+            <li id="visitInterface"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitInterface.xhtml">visitInterface()</a>
+                — Calculates metrics for the given &lt;b&gt;$interface&lt;/b&gt; instance.</li>
+            <li id="visitMethod"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitMethod.xhtml">visitMethod()</a>
+                — Visits a method node.</li>
+            <li id="visitNamespace"><a title="PDepend\Metrics\Analyzer\HierarchyAnalyzer" href="../classes/PDepend_Metrics_Analyzer_HierarchyAnalyzer/visitNamespace.xhtml">visitNamespace()</a>
+                — Calculates metrics for the given &lt;b&gt;$namespace&lt;/b&gt; instance.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\Config\Definition\ArrayNode</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_Config_Definition">Symfony\Component\Config\Definition</a>
+          </li>
+          <li class="separator">ArrayNode</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/config/Definition/ArrayNode.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\Config\Definition\</small>ArrayNode</h1>
+        <h4>Represents an Array node in the config tree.</h4>
+        <p/>
+        <ul>
+          <li>Author: Johannes M. Schmitt &lt;schmittjoh@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ArrayNode
+                extends <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode.xhtml">BaseNode</a>
+                implements
+                <a title="Symfony\Component\Config\Definition\PrototypeNodeInterface" href="../interfaces/Symfony_Component_Config_Definition_PrototypeNodeInterface.xhtml">PrototypeNodeInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$xmlRemappings</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$children</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$allowFalse</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$allowNewKeys</a> =
+                        true;
+                    </li><li>protected boolean <a href="#members">$addIfNotSet</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$performDeepMerging</a> =
+                        true;
+                    </li><li>protected boolean <a href="#members">$ignoreExtraKeys</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$removeExtraKeys</a> =
+                        true;
+                    </li><li>protected boolean <a href="#members">$normalizeKeys</a> =
+                        true;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setNormalizeKeys.xhtml">setNormalizeKeys</a>()
+                    </li><li>protected array <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/preNormalize.xhtml">preNormalize</a>()
+                    </li><li>public array <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/getChildren.xhtml">getChildren</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setXmlRemappings.xhtml">setXmlRemappings</a>()
+                    </li><li>public array <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/getXmlRemappings.xhtml">getXmlRemappings</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setAddIfNotSet.xhtml">setAddIfNotSet</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setAllowFalse.xhtml">setAllowFalse</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setAllowNewKeys.xhtml">setAllowNewKeys</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setPerformDeepMerging.xhtml">setPerformDeepMerging</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setIgnoreExtraKeys.xhtml">setIgnoreExtraKeys</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setName.xhtml">setName</a>()
+                    </li><li>public bool <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/hasDefaultValue.xhtml">hasDefaultValue</a>()
+                    </li><li>public array <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/getDefaultValue.xhtml">getDefaultValue</a>()
+                    </li><li>public void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/addChild.xhtml">addChild</a>()
+                    </li><li>protected mixed <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/finalizeValue.xhtml">finalizeValue</a>()
+                    </li><li>protected void <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/validateType.xhtml">validateType</a>()
+                    </li><li>protected mixed <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/normalizeValue.xhtml">normalizeValue</a>()
+                    </li><li>protected array <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/remapXml.xhtml">remapXml</a>()
+                    </li><li>protected mixed <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/mergeValues.xhtml">mergeValues</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Symfony\Component\Config\Definition\BaseNode" href="../classes/Symfony_Component_Config_Definition_BaseNode.xhtml">Symfony\Component\Config\Definition\BaseNode</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Symfony\Component\Config\Definition\PrototypeNodeInterface" href="../interfaces/Symfony_Component_Config_Definition_PrototypeNodeInterface.xhtml">Symfony\Component\Config\Definition\PrototypeNodeInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="addIfNotSet">
+              <strong>$addIfNotSet</strong>
+            </li>
+            <li id="allowFalse">
+              <strong>$allowFalse</strong>
+            </li>
+            <li id="allowNewKeys">
+              <strong>$allowNewKeys</strong>
+            </li>
+            <li id="children">
+              <strong>$children</strong>
+            </li>
+            <li id="ignoreExtraKeys">
+              <strong>$ignoreExtraKeys</strong>
+            </li>
+            <li id="normalizeKeys">
+              <strong>$normalizeKeys</strong>
+            </li>
+            <li id="performDeepMerging">
+              <strong>$performDeepMerging</strong>
+            </li>
+            <li id="removeExtraKeys">
+              <strong>$removeExtraKeys</strong>
+            </li>
+            <li id="xmlRemappings">
+              <strong>$xmlRemappings</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="finalizeValue"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/finalizeValue.xhtml">finalizeValue()</a>
+                — Finalizes the value of this node.</li>
+            <li id="mergeValues"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/mergeValues.xhtml">mergeValues()</a>
+                — Merges values together.</li>
+            <li id="normalizeValue"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/normalizeValue.xhtml">normalizeValue()</a>
+                — Normalizes the value.</li>
+            <li id="preNormalize"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/preNormalize.xhtml">preNormalize()</a>
+                — Normalizes keys between the different configuration formats.</li>
+            <li id="remapXml"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/remapXml.xhtml">remapXml()</a>
+                — Remaps multiple singular values to a single plural value.</li>
+            <li id="validateType"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/validateType.xhtml">validateType()</a>
+                — Validates the type of the value.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="addChild"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/addChild.xhtml">addChild()</a>
+                — Adds a child node.</li>
+            <li id="getChildren"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/getChildren.xhtml">getChildren()</a>
+                — Retrieves the children of this node.</li>
+            <li id="getDefaultValue"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/getDefaultValue.xhtml">getDefaultValue()</a>
+                — Retrieves the default value.</li>
+            <li id="getXmlRemappings"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/getXmlRemappings.xhtml">getXmlRemappings()</a>
+                — Gets the xml remappings that should be performed.</li>
+            <li id="hasDefaultValue"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/hasDefaultValue.xhtml">hasDefaultValue()</a>
+                — Checks if the node has a default value.</li>
+            <li id="setAddIfNotSet"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setAddIfNotSet.xhtml">setAddIfNotSet()</a>
+                — Sets whether to add default values for this array if it has not been defined in any of the configuration files.</li>
+            <li id="setAllowFalse"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setAllowFalse.xhtml">setAllowFalse()</a>
+                — Sets whether false is allowed as value indicating that the array should be unset.</li>
+            <li id="setAllowNewKeys"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setAllowNewKeys.xhtml">setAllowNewKeys()</a>
+                — Sets whether new keys can be defined in subsequent configurations.</li>
+            <li id="setIgnoreExtraKeys"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setIgnoreExtraKeys.xhtml">setIgnoreExtraKeys()</a>
+                — Whether extra keys should just be ignore without an exception.</li>
+            <li id="setName"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setName.xhtml">setName()</a>
+                — Sets the node Name.</li>
+            <li id="setNormalizeKeys">
+              <a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setNormalizeKeys.xhtml">setNormalizeKeys()</a>
+            </li>
+            <li id="setPerformDeepMerging"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setPerformDeepMerging.xhtml">setPerformDeepMerging()</a>
+                — Sets if deep merging should occur.</li>
+            <li id="setXmlRemappings"><a title="Symfony\Component\Config\Definition\ArrayNode" href="../classes/Symfony_Component_Config_Definition_ArrayNode/setXmlRemappings.xhtml">setXmlRemappings()</a>
+                — Sets the xml remappings that should be performed.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

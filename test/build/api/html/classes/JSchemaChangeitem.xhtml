@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JSchemaChangeitem</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JSchemaChangeitem</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/schema/changeitem.php.xhtml#line28">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JSchemaChangeitem</h1>
+        <h4>Each object represents one query, which is one line from a DDL SQL query.</h4>
+        <p>This class is used to check the site's database to see if the DDL query has been run.<br/>If not, it provides the ability to fix the database by re-running the DDL query.<br/>The queries are parsed from the update files in the folder<br/>`administrator/components/com_admin/sql/updates/&lt;database&gt;`.<br/>These updates are run automatically if the site was updated using com_installer.<br/>However, it is possible that the program files could be updated without udpating<br/>the database (for example, if a user just copies the new files over the top of an<br/>existing installation).<br/><br/>This is an abstract class. We need to extend it for each database and add a<br/>buildCheckQuery() method that creates the query to check that a DDL query has been run.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JSchemaChangeitem
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$file</a> =
+                        null;
+                    </li><li>public string <a href="#members">$updateQuery</a> =
+                        null;
+                    </li><li>public string <a href="#members">$checkQuery</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$checkQueryExpected</a> =
+                        1;
+                    </li><li>public <span title="JDatabaseDriver">JDatabaseDriver</span> <a href="#members">$db</a> =
+                        null;
+                    </li><li>public string <a href="#members">$queryType</a> =
+                        null;
+                    </li><li>public array <a href="#members">$msgElements</a> =
+                        ;
+                    </li><li>public integer <a href="#members">$checkStatus</a> =
+                        0;
+                    </li><li>public integer <a href="#members">$rerunStatus</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/__construct.xhtml">__construct</a>()
+                    </li><li>public static JSchemaChangeitem <a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/getInstance.xhtml">getInstance</a>()
+                    </li><li>protected abstract void <a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/buildCheckQuery.xhtml">buildCheckQuery</a>()
+                    </li><li>public boolean <a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/check.xhtml">check</a>()
+                    </li><li>public void <a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/fix.xhtml">fix</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="checkQuery"><strong>$checkQuery</strong>
+                —
+                string<br/><span class="indent">Check query: query used to check the db schema</span></li>
+            <li id="checkQueryExpected"><strong>$checkQueryExpected</strong>
+                —
+                string<br/><span class="indent">Check query result: expected result of check query if database is up to date</span></li>
+            <li id="checkStatus"><strong>$checkStatus</strong>
+                —
+                integer<br/><span class="indent">Checked status</span></li>
+            <li id="db"><strong>$db</strong>
+                —
+                <a title="JDatabaseDriver" href="../classes/JDatabaseDriver.xhtml">JDatabaseDriver</a><br/><span class="indent">JDatabaseDriver object</span></li>
+            <li id="file"><strong>$file</strong>
+                —
+                string<br/><span class="indent">Update file: full path file name where query was found</span></li>
+            <li id="msgElements"><strong>$msgElements</strong>
+                —
+                array<br/><span class="indent">Array with values for use in a JText::sprintf statment indicating what was checked</span></li>
+            <li id="queryType"><strong>$queryType</strong>
+                —
+                string<br/><span class="indent">Query type: To be used in building a language key for a message to tell user what was checked / changed Possible values: ADD_TABLE, ADD_COLUMN, CHANGE_COLUMN_TYPE, ADD_INDEX</span></li>
+            <li id="rerunStatus"><strong>$rerunStatus</strong>
+                —
+                int<br/><span class="indent">Rerun status</span></li>
+            <li id="updateQuery"><strong>$updateQuery</strong>
+                —
+                string<br/><span class="indent">Update query: query used to change the db schema (one line from the file)</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="buildCheckQuery"><a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/buildCheckQuery.xhtml">buildCheckQuery()</a>
+                — Checks a DDL query to see if it is a known type If yes, build a check query to see if the DDL has been run on the database.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/__construct.xhtml">__construct()</a>
+                — Constructor: builds check query and message from $updateQuery</li>
+            <li id="check"><a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/check.xhtml">check()</a>
+                — Runs the check query and checks that 1 row is returned If yes, return true, otherwise return false</li>
+            <li id="fix"><a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/fix.xhtml">fix()</a>
+                — Runs the update query to apply the change to the database</li>
+            <li id="getInstance"><a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem/getInstance.xhtml">getInstance()</a>
+                — Returns a reference to the JSchemaChangeitem object.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

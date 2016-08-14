@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFToolbar</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFToolbar</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/toolbar/toolbar.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFToolbar</h1>
+        <h4>The Toolbar class renders the back-end component title area and the back- and front-end toolbars.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFToolbar
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$config</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$input</a> =
+                        ;
+                    </li><li>public array <a href="#members">$perms</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$linkbar</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$renderFrontendSubmenu</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$renderFrontendButtons</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static FOFToolbar <a title="FOFToolbar" href="../classes/FOFToolbar/getAnInstance.xhtml">getAnInstance</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/renderToolbar.xhtml">renderToolbar</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/onCpanelsBrowse.xhtml">onCpanelsBrowse</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/onBrowse.xhtml">onBrowse</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/onRead.xhtml">onRead</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/onAdd.xhtml">onAdd</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/onEdit.xhtml">onEdit</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/clearLinks.xhtml">clearLinks</a>()
+                    </li><li>public array <a title="FOFToolbar" href="../classes/FOFToolbar/getLinks.xhtml">getLinks</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/appendLink.xhtml">appendLink</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/prefixLink.xhtml">prefixLink</a>()
+                    </li><li>public void <a title="FOFToolbar" href="../classes/FOFToolbar/renderSubmenu.xhtml">renderSubmenu</a>()
+                    </li><li>protected array <a title="FOFToolbar" href="../classes/FOFToolbar/getMyViews.xhtml">getMyViews</a>()
+                    </li><li>public boolean <a title="FOFToolbar" href="../classes/FOFToolbar/getRenderFrontendButtons.xhtml">getRenderFrontendButtons</a>()
+                    </li><li>public boolean <a title="FOFToolbar" href="../classes/FOFToolbar/getRenderFrontendSubmenu.xhtml">getRenderFrontendSubmenu</a>()
+                    </li><li>private void <a title="FOFToolbar" href="../classes/FOFToolbar/renderFromConfig.xhtml">renderFromConfig</a>()
+                    </li><li>private void <a title="FOFToolbar" href="../classes/FOFToolbar/renderToolbarElement.xhtml">renderToolbarElement</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="config">
+              <strong>$config</strong>
+              <br/>
+              <span class="indent">@var array Configuration parameters</span>
+            </li>
+            <li id="input">
+              <strong>$input</strong>
+              <br/>
+              <span class="indent">@var array Input (e.g. request) variables</span>
+            </li>
+            <li id="linkbar">
+              <strong>$linkbar</strong>
+              <br/>
+              <span class="indent">@var array The links to be rendered in the toolbar</span>
+            </li>
+            <li id="renderFrontendButtons">
+              <strong>$renderFrontendButtons</strong>
+              <br/>
+              <span class="indent">@var bool Should I render buttons in the front-end?</span>
+            </li>
+            <li id="renderFrontendSubmenu">
+              <strong>$renderFrontendSubmenu</strong>
+              <br/>
+              <span class="indent">@var bool Should I render the submenu in the front-end?</span>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="perms">
+              <strong>$perms</strong>
+              <br/>
+              <span class="indent">@var array Permissions map, see the __construct method for more information</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="renderFromConfig"><a title="FOFToolbar" href="../classes/FOFToolbar/renderFromConfig.xhtml">renderFromConfig()</a>
+                — Render the toolbar from the configuration.</li>
+            <li id="renderToolbarElement"><a title="FOFToolbar" href="../classes/FOFToolbar/renderToolbarElement.xhtml">renderToolbarElement()</a>
+                — Render a toolbar element.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="getMyViews"><a title="FOFToolbar" href="../classes/FOFToolbar/getMyViews.xhtml">getMyViews()</a>
+                — Automatically detects all views of the component</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFToolbar" href="../classes/FOFToolbar/__construct.xhtml">__construct()</a>
+                — Public constructor</li>
+            <li id="appendLink"><a title="FOFToolbar" href="../classes/FOFToolbar/appendLink.xhtml">appendLink()</a>
+                — Append a link to the link bar</li>
+            <li id="clearLinks"><a title="FOFToolbar" href="../classes/FOFToolbar/clearLinks.xhtml">clearLinks()</a>
+                — Removes all links from the link bar</li>
+            <li id="getAnInstance"><a title="FOFToolbar" href="../classes/FOFToolbar/getAnInstance.xhtml">getAnInstance()</a>
+                — Gets an instance of a component's toolbar</li>
+            <li id="getLinks"><a title="FOFToolbar" href="../classes/FOFToolbar/getLinks.xhtml">getLinks()</a>
+                — Get the link bar's link definitions</li>
+            <li id="getRenderFrontendButtons"><a title="FOFToolbar" href="../classes/FOFToolbar/getRenderFrontendButtons.xhtml">getRenderFrontendButtons()</a>
+                — Return the front-end toolbar rendering flag</li>
+            <li id="getRenderFrontendSubmenu"><a title="FOFToolbar" href="../classes/FOFToolbar/getRenderFrontendSubmenu.xhtml">getRenderFrontendSubmenu()</a>
+                — Return the front-end submenu rendering flag</li>
+            <li id="onAdd"><a title="FOFToolbar" href="../classes/FOFToolbar/onAdd.xhtml">onAdd()</a>
+                — Renders the toolbar for the component's Add pages</li>
+            <li id="onBrowse"><a title="FOFToolbar" href="../classes/FOFToolbar/onBrowse.xhtml">onBrowse()</a>
+                — Renders the toolbar for the component's Browse pages (the plural views)</li>
+            <li id="onCpanelsBrowse"><a title="FOFToolbar" href="../classes/FOFToolbar/onCpanelsBrowse.xhtml">onCpanelsBrowse()</a>
+                — Renders the toolbar for the component's Control Panel page</li>
+            <li id="onEdit"><a title="FOFToolbar" href="../classes/FOFToolbar/onEdit.xhtml">onEdit()</a>
+                — Renders the toolbar for the component's Edit pages</li>
+            <li id="onRead"><a title="FOFToolbar" href="../classes/FOFToolbar/onRead.xhtml">onRead()</a>
+                — Renders the toolbar for the component's Read pages</li>
+            <li id="prefixLink"><a title="FOFToolbar" href="../classes/FOFToolbar/prefixLink.xhtml">prefixLink()</a>
+                — Prefixes (some people erroneously call this "prepend" – there is no such word) a link to the link bar</li>
+            <li id="renderSubmenu"><a title="FOFToolbar" href="../classes/FOFToolbar/renderSubmenu.xhtml">renderSubmenu()</a>
+                — Renders the submenu (toolbar links) for all detected views of this component</li>
+            <li id="renderToolbar"><a title="FOFToolbar" href="../classes/FOFToolbar/renderToolbar.xhtml">renderToolbar()</a>
+                — Renders the toolbar for the current view and task</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

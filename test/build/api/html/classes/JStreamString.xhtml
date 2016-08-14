@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JStreamString</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JStreamString</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/filesystem/streams/string.php.xhtml#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JStreamString</h1>
+        <h4>String Stream Wrapper</h4>
+        <p>This class allows you to use a PHP string in the same way that<br/>you would normally use a regular stream wrapper</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JStreamString
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$currentString</a>;
+                    </li><li>protected  <a href="#members">$path</a>;
+                    </li><li>protected  <a href="#members">$mode</a>;
+                    </li><li>protected  <a href="#members">$options</a>;
+                    </li><li>protected  <a href="#members">$openedPath</a>;
+                    </li><li>protected  <a href="#members">$pos</a>;
+                    </li><li>protected  <a href="#members">$len</a>;
+                    </li><li>protected  <a href="#members">$stat</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public boolean <a title="JStreamString" href="../classes/JStreamString/stream_open.xhtml">stream_open</a>()
+                    </li><li>public array <a title="JStreamString" href="../classes/JStreamString/stream_stat.xhtml">stream_stat</a>()
+                    </li><li>public array <a title="JStreamString" href="../classes/JStreamString/url_stat.xhtml">url_stat</a>()
+                    </li><li>public void <a title="JStreamString" href="../classes/JStreamString/stream_read.xhtml">stream_read</a>()
+                    </li><li>public boolean <a title="JStreamString" href="../classes/JStreamString/stream_write.xhtml">stream_write</a>()
+                    </li><li>public integer <a title="JStreamString" href="../classes/JStreamString/stream_tell.xhtml">stream_tell</a>()
+                    </li><li>public boolean <a title="JStreamString" href="../classes/JStreamString/stream_eof.xhtml">stream_eof</a>()
+                    </li><li>public boolean <a title="JStreamString" href="../classes/JStreamString/stream_seek.xhtml">stream_seek</a>()
+                    </li><li>public boolean <a title="JStreamString" href="../classes/JStreamString/stream_flush.xhtml">stream_flush</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="currentString"><strong>$currentString</strong>
+                —
+                string<br/><span class="indent">The current string</span></li>
+            <li id="len"><strong>$len</strong>
+                —
+                string<br/><span class="indent">Length of the string</span></li>
+            <li id="mode"><strong>$mode</strong>
+                —
+                string<br/><span class="indent">The mode</span></li>
+            <li id="openedPath"><strong>$openedPath</strong>
+                —
+                string<br/><span class="indent">Enter description here ...</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                string<br/><span class="indent">Enter description here ...</span></li>
+            <li id="path"><strong>$path</strong>
+                —
+                string<br/><span class="indent">The path</span></li>
+            <li id="pos"><strong>$pos</strong>
+                —
+                integer<br/><span class="indent">Current position</span></li>
+            <li id="stat"><strong>$stat</strong>
+                —
+                array<br/><span class="indent">Statistics for a file</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="stream_eof"><a title="JStreamString" href="../classes/JStreamString/stream_eof.xhtml">stream_eof()</a>
+                — End of field check</li>
+            <li id="stream_flush"><a title="JStreamString" href="../classes/JStreamString/stream_flush.xhtml">stream_flush()</a>
+                — Stream flush, always returns true.</li>
+            <li id="stream_open"><a title="JStreamString" href="../classes/JStreamString/stream_open.xhtml">stream_open()</a>
+                — Method to open a file or URL.</li>
+            <li id="stream_read"><a title="JStreamString" href="../classes/JStreamString/stream_read.xhtml">stream_read()</a>
+                — Method to read a given number of bytes starting at the current position and moving to the end of the string defined by the current position plus the given number.</li>
+            <li id="stream_seek"><a title="JStreamString" href="../classes/JStreamString/stream_seek.xhtml">stream_seek()</a>
+                — Stream offset</li>
+            <li id="stream_stat"><a title="JStreamString" href="../classes/JStreamString/stream_stat.xhtml">stream_stat()</a>
+                — Method to retrieve information from a file resource</li>
+            <li id="stream_tell"><a title="JStreamString" href="../classes/JStreamString/stream_tell.xhtml">stream_tell()</a>
+                — Method to get the current position</li>
+            <li id="stream_write"><a title="JStreamString" href="../classes/JStreamString/stream_write.xhtml">stream_write()</a>
+                — Stream write, always returning false.</li>
+            <li id="url_stat"><a title="JStreamString" href="../classes/JStreamString/url_stat.xhtml">url_stat()</a>
+                — Method to retrieve information about a file.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

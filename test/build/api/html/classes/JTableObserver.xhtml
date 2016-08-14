@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JTableObserver</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JTableObserver</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/table/observer.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JTableObserver</h1>
+        <h4>Table class supporting modified pre-order tree traversal behavior.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JTableObserver
+                implements
+                <a title="JObserverInterface" href="../interfaces/JObserverInterface.xhtml">JObserverInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="JTable">JTable</span> <a href="#members">$table</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JTableObserver" href="../classes/JTableObserver/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="JTableObserver" href="../classes/JTableObserver/onBeforeLoad.xhtml">onBeforeLoad</a>()
+                    </li><li>public void <a title="JTableObserver" href="../classes/JTableObserver/onAfterLoad.xhtml">onAfterLoad</a>()
+                    </li><li>public void <a title="JTableObserver" href="../classes/JTableObserver/onBeforeStore.xhtml">onBeforeStore</a>()
+                    </li><li>public void <a title="JTableObserver" href="../classes/JTableObserver/onAfterStore.xhtml">onAfterStore</a>()
+                    </li><li>public void <a title="JTableObserver" href="../classes/JTableObserver/onBeforeDelete.xhtml">onBeforeDelete</a>()
+                    </li><li>public void <a title="JTableObserver" href="../classes/JTableObserver/onAfterDelete.xhtml">onAfterDelete</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JObserverInterface" href="../interfaces/JObserverInterface.xhtml">JObserverInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="table"><strong>$table</strong>
+                —
+                <a title="JTable" href="../classes/JTable.xhtml">JTable</a><br/><span class="indent">The observed table</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JTableObserver" href="../classes/JTableObserver/__construct.xhtml">__construct()</a>
+                — Constructor: Associates to $table $this observer</li>
+            <li id="onAfterDelete"><a title="JTableObserver" href="../classes/JTableObserver/onAfterDelete.xhtml">onAfterDelete()</a>
+                — Post-processor for $table-&gt;delete($pk)</li>
+            <li id="onAfterLoad"><a title="JTableObserver" href="../classes/JTableObserver/onAfterLoad.xhtml">onAfterLoad()</a>
+                — Post-processor for $table-&gt;load($keys, $reset)</li>
+            <li id="onAfterStore"><a title="JTableObserver" href="../classes/JTableObserver/onAfterStore.xhtml">onAfterStore()</a>
+                — Post-processor for $table-&gt;store($updateNulls)</li>
+            <li id="onBeforeDelete"><a title="JTableObserver" href="../classes/JTableObserver/onBeforeDelete.xhtml">onBeforeDelete()</a>
+                — Pre-processor for $table-&gt;delete($pk)</li>
+            <li id="onBeforeLoad"><a title="JTableObserver" href="../classes/JTableObserver/onBeforeLoad.xhtml">onBeforeLoad()</a>
+                — Pre-processor for $table-&gt;load($keys, $reset)</li>
+            <li id="onBeforeStore"><a title="JTableObserver" href="../classes/JTableObserver/onBeforeStore.xhtml">onBeforeStore()</a>
+                — Pre-processor for $table-&gt;store($updateNulls)</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

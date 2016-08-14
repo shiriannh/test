@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Joomla\Input\Input</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Joomla_Input">Joomla\Input</a>
+          </li>
+          <li class="separator">Input</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/vendor/joomla/input/src/Input.php.xhtml#line40">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Joomla\Input\</small>Input</h1>
+        <h4>Joomla! Input Base Class</h4>
+        <p>This is an abstracted input class used to manage retrieving data from the application environment.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Input
+                implements
+                <a title="Serializable" href="../interfaces/Serializable.xhtml">Serializable</a>,<a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$options</a> =
+                        ;
+                    </li><li>protected <span title="Joomla\Input\Filter\InputFilter">InputFilter</span> <a href="#members">$filter</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$data</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$inputs</a> =
+                        ;
+                    </li><li>protected static boolean <a href="#members">$loaded</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/__construct.xhtml">__construct</a>()
+                    </li><li>public Input <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/__get.xhtml">__get</a>()
+                    </li><li>public integer <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/count.xhtml">count</a>()
+                    </li><li>public mixed <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/get.xhtml">get</a>()
+                    </li><li>public mixed <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/getArray.xhtml">getArray</a>()
+                    </li><li>public void <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/set.xhtml">set</a>()
+                    </li><li>public void <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/def.xhtml">def</a>()
+                    </li><li>public boolean <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/exists.xhtml">exists</a>()
+                    </li><li>public mixed <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/__call.xhtml">__call</a>()
+                    </li><li>public string <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/getMethod.xhtml">getMethod</a>()
+                    </li><li>public string <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/serialize.xhtml">serialize</a>()
+                    </li><li>public Input <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/unserialize.xhtml">unserialize</a>()
+                    </li><li>protected void <a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/loadAllInputs.xhtml">loadAllInputs</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Serializable" href="../interfaces/Serializable.xhtml">Serializable</a>
+            </li>
+            <li>
+              <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="data"><strong>$data</strong>
+                —
+                array<br/><span class="indent">Input data.</span></li>
+            <li id="filter"><strong>$filter</strong>
+                —
+                <a title="Joomla\Input\Filter\InputFilter" href="../classes/Joomla_Input_Filter_InputFilter.xhtml">Joomla\Input\Filter\InputFilter</a><br/><span class="indent">Filter object to use.</span></li>
+            <li id="inputs"><strong>$inputs</strong>
+                —
+                array<br/><span class="indent">Input objects</span></li>
+            <li id="loaded"><strong>$loaded</strong>
+                —
+                boolean<br/><span class="indent">Is all GLOBAL added</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                array<br/><span class="indent">Options array for the Input instance.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="loadAllInputs"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/loadAllInputs.xhtml">loadAllInputs()</a>
+                — Method to load all of the global inputs.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="__call"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/__call.xhtml">__call()</a>
+                — Magic method to get filtered input data.</li>
+            <li id="__get"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/__get.xhtml">__get()</a>
+                — Magic method to get an input object</li>
+            <li id="count"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/count.xhtml">count()</a>
+                — Get the number of variables.</li>
+            <li id="def"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/def.xhtml">def()</a>
+                — Define a value. The value will only be set if there's no value for the name or if it is null.</li>
+            <li id="exists"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/exists.xhtml">exists()</a>
+                — Check if a value name exists.</li>
+            <li id="get"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/get.xhtml">get()</a>
+                — Gets a value from the input data.</li>
+            <li id="getArray"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/getArray.xhtml">getArray()</a>
+                — Gets an array of values from the request.</li>
+            <li id="getMethod"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/getMethod.xhtml">getMethod()</a>
+                — Gets the request method.</li>
+            <li id="serialize"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/serialize.xhtml">serialize()</a>
+                — Method to serialize the input.</li>
+            <li id="set"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/set.xhtml">set()</a>
+                — Sets a value</li>
+            <li id="unserialize"><a title="Joomla\Input\Input" href="../classes/Joomla_Input_Input/unserialize.xhtml">unserialize()</a>
+                — Method to unserialize the input.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JClientLdap" href="../../classes/JClientLdap.xhtml">JClientLdap</a>
+          </li>
+          <li class="separator">LDAPNetAddr</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/client/ldap.php.xhtml#line574">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JClientLdap::</small>LDAPNetAddr</h1>
+        <h4>Extract readable network address from the LDAP encoded networkAddress attribute.</h4>
+        <p>Please keep this document block and author attribution in place.
+
+Novell Docs, see: https://developer.novell.com/ndk/doc/ndslib/schm_enu/data/sdk5624.html#sdk5624
+for Address types: https://developer.novell.com/ndk/doc/ndslib/index.html?page=/ndk/doc/ndslib/schm_enu/data/sdk4170.html
+LDAP Format, String:
+taggedData = uint32String "#" octetstring
+byte 0 = uint32String = Address Type: 0= IPX Address; 1 = IP Address
+byte 1 = char = "#" - separator
+byte 2+ = octetstring - the ordinal value of the address
+Note: with eDirectory 8.6.2, the IP address (type 1) returns
+correctly, however, an IPX address does not seem to.  eDir 8.7 may correct this.
+Enhancement made by Merijn van de Schoot:
+If addresstype is 8 (UDP) or 9 (TCP) do some additional parsing like still returning the IP address</p>
+        <ul>
+          <li>Author: Jay Burrell, Systems &amp; Networks, Mississippi State University</li>
+        </ul>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function LDAPNetAddr(string
+        $networkaddress )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$networkaddress</code>
+                —
+                string</dt>
+          <dd>The network address</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>array</dt>
+          <dd/>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

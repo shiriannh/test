@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JLanguageStemmerPorteren</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JLanguageStemmerPorteren</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/language/stemmer/porteren.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JLanguageStemmerPorteren</h1>
+        <h4>Porter English stemmer class.</h4>
+        <p>This class was adapted from one written by Richard Heyes.<br/>See copyright and link information above.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JLanguageStemmerPorteren
+                extends <a title="JLanguageStemmer" href="../classes/JLanguageStemmer.xhtml">JLanguageStemmer</a>
+            {<br/><ul class="none"><li>// members</li><li>private static string <a href="#members">$_regex_consonant</a> =
+                        '(?:[bcdfghjklmnpqrstvwxz]|(?&lt;=[aeiou])y|^y)';
+                    </li><li>private static string <a href="#members">$_regex_vowel</a> =
+                        '(?:[aeiou]|(?&lt;![aeiou])y)';
+                    </li></ul><ul class="none"><li>// methods</li><li>public string <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/stem.xhtml">stem</a>()
+                    </li><li>private static string <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step1ab.xhtml">_step1ab</a>()
+                    </li><li>private static string <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step1c.xhtml">_step1c</a>()
+                    </li><li>private static string <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step2.xhtml">_step2</a>()
+                    </li><li>private static string <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step3.xhtml">_step3</a>()
+                    </li><li>private static string <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step4.xhtml">_step4</a>()
+                    </li><li>private static string <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step5.xhtml">_step5</a>()
+                    </li><li>private static boolean <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_replace.xhtml">_replace</a>()
+                    </li><li>private static integer <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_m.xhtml">_m</a>()
+                    </li><li>private static boolean <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_doubleConsonant.xhtml">_doubleConsonant</a>()
+                    </li><li>private static boolean <a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_cvc.xhtml">_cvc</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JLanguageStemmer" href="../classes/JLanguageStemmer.xhtml">JLanguageStemmer</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_regex_consonant"><strong>$_regex_consonant</strong>
+                —
+                string<br/><span class="indent">Regex for matching a consonant.</span></li>
+            <li id="_regex_vowel"><strong>$_regex_vowel</strong>
+                —
+                string<br/><span class="indent">Regex for matching a vowel</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="_cvc"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_cvc.xhtml">_cvc()</a>
+                — Checks for ending CVC sequence where second C is not W, X or Y</li>
+            <li id="_doubleConsonant"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_doubleConsonant.xhtml">_doubleConsonant()</a>
+                — Returns true/false as to whether the given string contains two of the same consonant next to each other at the end of the string.</li>
+            <li id="_m"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_m.xhtml">_m()</a>
+                — m() measures the number of consonant sequences in $str. if c is a consonant sequence and v a vowel sequence, and &lt;..&gt; indicates arbitrary presence,</li>
+            <li id="_replace"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_replace.xhtml">_replace()</a>
+                — Replaces the first string with the second, at the end of the string. If third arg is given, then the preceding string must match that m count at least.</li>
+            <li id="_step1ab"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step1ab.xhtml">_step1ab()</a>
+                — Step 1</li>
+            <li id="_step1c"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step1c.xhtml">_step1c()</a>
+                — Step 1c</li>
+            <li id="_step2"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step2.xhtml">_step2()</a>
+                — Step 2</li>
+            <li id="_step3"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step3.xhtml">_step3()</a>
+                — Step 3</li>
+            <li id="_step4"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step4.xhtml">_step4()</a>
+                — Step 4</li>
+            <li id="_step5"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/_step5.xhtml">_step5()</a>
+                — Step 5</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="stem"><a title="JLanguageStemmerPorteren" href="../classes/JLanguageStemmerPorteren/stem.xhtml">stem()</a>
+                — Method to stem a token and return the root.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

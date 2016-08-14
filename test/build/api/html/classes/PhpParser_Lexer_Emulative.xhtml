@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PhpParser\Lexer\Emulative</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PhpParser_Lexer">PhpParser\Lexer</a>
+          </li>
+          <li class="separator">Emulative</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php.xhtml#line10">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PhpParser\Lexer\</small>Emulative</h1>
+        <h4>ATTENTION: This code is WRITE-ONLY. Do not try to read it.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Emulative
+                extends <a title="PhpParser\Lexer" href="../classes/PhpParser_Lexer.xhtml">Lexer</a>
+            {<br/><ul class="none"><li>// constants</li><li>const T_ELLIPSIS = 1001;</li><li>const T_POW = 1002;</li><li>const T_POW_EQUAL = 1003;</li><li>const T_COALESCE = 1004;</li><li>const T_SPACESHIP = 1005;</li><li>const T_YIELD_FROM = 1006;</li><li>const PHP_7_0 = '7.0.0dev';</li><li>const PHP_5_6 = '5.6.0rc1';</li><li>const PHP_5_5 = '5.5.0beta1';</li></ul><ul class="none"><li>// members</li><li>protected  <a href="#members">$newKeywords</a>;
+                    </li><li>protected  <a href="#members">$inObjectAccess</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/startLexing.xhtml">startLexing</a>()
+                    </li><li>protected void <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/preprocessCode.xhtml">preprocessCode</a>()
+                    </li><li>protected void <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/postprocessTokens.xhtml">postprocessTokens</a>()
+                    </li><li>public void <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/restoreContentCallback.xhtml">restoreContentCallback</a>()
+                    </li><li>public void <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/getNextToken.xhtml">getNextToken</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PhpParser\Lexer" href="../classes/PhpParser_Lexer.xhtml">PhpParser\Lexer</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="T_ELLIPSIS">T_ELLIPSIS</td>
+              <td>1001</td>
+            </tr>
+            <tr>
+              <td id="T_POW">T_POW</td>
+              <td>1002</td>
+            </tr>
+            <tr>
+              <td id="T_POW_EQUAL">T_POW_EQUAL</td>
+              <td>1003</td>
+            </tr>
+            <tr>
+              <td id="T_COALESCE">T_COALESCE</td>
+              <td>1004</td>
+            </tr>
+            <tr>
+              <td id="T_SPACESHIP">T_SPACESHIP</td>
+              <td>1005</td>
+            </tr>
+            <tr>
+              <td id="T_YIELD_FROM">T_YIELD_FROM</td>
+              <td>1006</td>
+            </tr>
+            <tr>
+              <td id="PHP_7_0">PHP_7_0</td>
+              <td>'7.0.0dev'</td>
+            </tr>
+            <tr>
+              <td id="PHP_5_6">PHP_5_6</td>
+              <td>'5.6.0rc1'</td>
+            </tr>
+            <tr>
+              <td id="PHP_5_5">PHP_5_5</td>
+              <td>'5.5.0beta1'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="inObjectAccess">
+              <strong>$inObjectAccess</strong>
+            </li>
+            <li id="newKeywords">
+              <strong>$newKeywords</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="postprocessTokens">
+              <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/postprocessTokens.xhtml">postprocessTokens()</a>
+            </li>
+            <li id="preprocessCode">
+              <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/preprocessCode.xhtml">preprocessCode()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="getNextToken">
+              <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/getNextToken.xhtml">getNextToken()</a>
+            </li>
+            <li id="restoreContentCallback">
+              <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/restoreContentCallback.xhtml">restoreContentCallback()</a>
+            </li>
+            <li id="startLexing">
+              <a title="PhpParser\Lexer\Emulative" href="../classes/PhpParser_Lexer_Emulative/startLexing.xhtml">startLexing()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

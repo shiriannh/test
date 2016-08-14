@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\Parser\SymbolTable</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_Parser">PDepend\Source\Parser</a>
+          </li>
+          <li class="separator">SymbolTable</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Parser/SymbolTable.php.xhtml#line51">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\Parser\</small>SymbolTable</h1>
+        <h4>This class provides a simple hashmap for name mappings done by the parser.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class SymbolTable
+            {<br/><ul class="none"><li>// members</li><li>private <span title="PDepend\Source\Parser\array(array)">array(array)</span> <a href="#members">$scopeStack</a> =
+                        ;
+                    </li><li>private <span title="PDepend\Source\Parser\array(string=&gt;string)">array(string=&gt;string)</span> <a href="#members">$scope</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/createScope.xhtml">createScope</a>()
+                    </li><li>public void <a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/destroyScope.xhtml">destroyScope</a>()
+                    </li><li>public void <a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/add.xhtml">add</a>()
+                    </li><li>public void <a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/resetScope.xhtml">resetScope</a>()
+                    </li><li>public mixed <a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/lookup.xhtml">lookup</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="scope"><strong>$scope</strong>
+                —
+                <a title="PDepend\Source\Parser\array(string=&gt;string)" href="../classes/PDepend_Source_Parser_array(string=&gt;string).xhtml">PDepend\Source\Parser\array(string=&gt;string)</a><br/><span class="indent">The currently active scope.</span></li>
+            <li id="scopeStack"><strong>$scopeStack</strong>
+                —
+                <a title="PDepend\Source\Parser\array(array)" href="../classes/PDepend_Source_Parser_array(array).xhtml">PDepend\Source\Parser\array(array)</a><br/><span class="indent">Stack with all active scopes.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="add"><a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/add.xhtml">add()</a>
+                — Adds a new value to the top most scope.</li>
+            <li id="createScope"><a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/createScope.xhtml">createScope()</a>
+                — This method creates a new scope.</li>
+            <li id="destroyScope"><a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/destroyScope.xhtml">destroyScope()</a>
+                — This method destorys the top most scope.</li>
+            <li id="lookup"><a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/lookup.xhtml">lookup()</a>
+                — This method will return the registered value for the given key, when it exists in the current scope. The returned value will &lt;b&gt;null&lt;/b&gt; if no value exists for the given key.</li>
+            <li id="resetScope"><a title="PDepend\Source\Parser\SymbolTable" href="../classes/PDepend_Source_Parser_SymbolTable/resetScope.xhtml">resetScope()</a>
+                — Resets the current scope</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

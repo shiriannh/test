@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFModel</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFModel</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/model/model.php.xhtml#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFModel</h1>
+        <h4>FrameworkOnFramework Model class. The Model is the workhorse. It performs all of the business logic based on its state and then returns the raw (processed) data to the caller, or modifies its own state. It's important to note that the model doesn't get data directly from the request (this is the Controller's business) and that it doesn't output anything (that the View's business).</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFModel
+                extends <a title="FOFUtilsObject" href="../classes/FOFUtilsObject.xhtml">FOFUtilsObject</a>
+            {<br/><ul class="none"><li>// members</li><li>protected boolean <a href="#members">$__state_set</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$_db</a>;
+                    </li><li>protected string <a href="#members">$event_after_delete</a> =
+                        'onContentAfterDelete';
+                    </li><li>protected string <a href="#members">$event_after_save</a> =
+                        'onContentAfterSave';
+                    </li><li>protected string <a href="#members">$event_before_delete</a> =
+                        'onContentBeforeDelete';
+                    </li><li>protected string <a href="#members">$event_before_save</a> =
+                        'onContentBeforeSave';
+                    </li><li>protected string <a href="#members">$event_change_state</a> =
+                        'onContentChangeState';
+                    </li><li>protected string <a href="#members">$event_clean_cache</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$id_list</a> =
+                        ;
+                    </li><li>protected int <a href="#members">$id</a> =
+                        null;
+                    </li><li>protected <span title="FOFInput">FOFInput</span> <a href="#members">$input</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$list</a> =
+                        null;
+                    </li><li>protected  <a href="#members">$name</a>;
+                    </li><li>protected string <a href="#members">$option</a> =
+                        null;
+                    </li><li>protected <span title="FOFTable">FOFTable</span> <a href="#members">$otable</a> =
+                        null;
+                    </li><li>protected <span title="JPagination">JPagination</span> <a href="#members">$pagination</a> =
+                        null;
+                    </li><li>protected <span title="FOFTable">FOFTable</span> <a href="#members">$record</a> =
+                        null;
+                    </li><li>protected  <a href="#members">$state</a>;
+                    </li><li>protected string <a href="#members">$table</a> =
+                        null;
+                    </li><li>protected int <a href="#members">$total</a> =
+                        null;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$_savestate</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$_forms</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$_formData</a> =
+                        ;
+                    </li><li>protected <span title="FOFConfigProvider">FOFConfigProvider</span> <a href="#members">$configProvider</a> =
+                        null;
+                    </li><li>protected <span title="FOFModelDispatcherBehavior">FOFModelDispatcherBehavior</span> <a href="#members">$modelDispatcher</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$default_behaviors</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$_behaviorParams</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static FOFModel <a title="FOFModel" href="../classes/FOFModel/getAnInstance.xhtml">getAnInstance</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/addBehavior.xhtml">addBehavior</a>()
+                    </li><li>public static FOFModel <a title="FOFModel" href="../classes/FOFModel/getTmpInstance.xhtml">getTmpInstance</a>()
+                    </li><li>public static array <a title="FOFModel" href="../classes/FOFModel/addIncludePath.xhtml">addIncludePath</a>()
+                    </li><li>public static void <a title="FOFModel" href="../classes/FOFModel/addTablePath.xhtml">addTablePath</a>()
+                    </li><li>protected static string <a title="FOFModel" href="../classes/FOFModel/_createFileName.xhtml">_createFileName</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/__construct.xhtml">__construct</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/setIDsFromRequest.xhtml">setIDsFromRequest</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/setId.xhtml">setId</a>()
+                    </li><li>public integer <a title="FOFModel" href="../classes/FOFModel/getId.xhtml">getId</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/setIds.xhtml">setIds</a>()
+                    </li><li>public array <a title="FOFModel" href="../classes/FOFModel/getIds.xhtml">getIds</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/reset.xhtml">reset</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/clearState.xhtml">clearState</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/clearInput.xhtml">clearInput</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/setInput.xhtml">setInput</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/resetSavedState.xhtml">resetSavedState</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/loadhistory.xhtml">loadhistory</a>()
+                    </li><li>public FOFTable <a title="FOFModel" href="../classes/FOFModel/getItem.xhtml">getItem</a>()
+                    </li><li>public array <a title="FOFModel" href="../classes/FOFModel/getList.xhtml">getList</a>()
+                    </li><li>public array <a title="FOFModel" href="../classes/FOFModel/getItemList.xhtml">getItemList</a>()
+                    </li><li>public FOFDatabaseIterator <a title="FOFModel" href="../classes/FOFModel/getIterator.xhtml">getIterator</a>()
+                    </li><li>public FOFTable <a title="FOFModel" href="../classes/FOFModel/getFirstItem.xhtml">getFirstItem</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/save.xhtml">save</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/copy.xhtml">copy</a>()
+                    </li><li>public FOFTable <a title="FOFModel" href="../classes/FOFModel/getSavedTable.xhtml">getSavedTable</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/delete.xhtml">delete</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/publish.xhtml">publish</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/checkout.xhtml">checkout</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/checkin.xhtml">checkin</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/isCheckedOut.xhtml">isCheckedOut</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/hit.xhtml">hit</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/move.xhtml">move</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/reorder.xhtml">reorder</a>()
+                    </li><li>public JPagination <a title="FOFModel" href="../classes/FOFModel/getPagination.xhtml">getPagination</a>()
+                    </li><li>public integer <a title="FOFModel" href="../classes/FOFModel/getTotal.xhtml">getTotal</a>()
+                    </li><li>protected integer <a title="FOFModel" href="../classes/FOFModel/_getListCount.xhtml">_getListCount</a>()
+                    </li><li>public mixed <a title="FOFModel" href="../classes/FOFModel/getState.xhtml">getState</a>()
+                    </li><li>protected  <a title="FOFModel" href="../classes/FOFModel/_real_getState.xhtml">_real_getState</a>()
+                    </li><li>public string <a title="FOFModel" href="../classes/FOFModel/getHash.xhtml">getHash</a>()
+                    </li><li>protected string <a title="FOFModel" href="../classes/FOFModel/getUserStateFromRequest.xhtml">getUserStateFromRequest</a>()
+                    </li><li>protected array <a title="FOFModel" href="../classes/FOFModel/_getList.xhtml">_getList</a>()
+                    </li><li>public FOFTable <a title="FOFModel" href="../classes/FOFModel/getTable.xhtml">getTable</a>()
+                    </li><li>protected FOFTable <a title="FOFModel" href="../classes/FOFModel/_createTable.xhtml">_createTable</a>()
+                    </li><li>public string <a title="FOFModel" href="../classes/FOFModel/getReorderWhere.xhtml">getReorderWhere</a>()
+                    </li><li>public JDatabaseQuery <a title="FOFModel" href="../classes/FOFModel/buildQuery.xhtml">buildQuery</a>()
+                    </li><li>public array <a title="FOFModel" href="../classes/FOFModel/getTableFields.xhtml">getTableFields</a>()
+                    </li><li>public string <a title="FOFModel" href="../classes/FOFModel/getTableAlias.xhtml">getTableAlias</a>()
+                    </li><li>public boolean <a title="FOFModel" href="../classes/FOFModel/buildCountQuery.xhtml">buildCountQuery</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/getClone.xhtml">getClone</a>()
+                    </li><li>public mixed <a title="FOFModel" href="../classes/FOFModel/__get.xhtml">__get</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/__set.xhtml">__set</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/__call.xhtml">__call</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/savestate.xhtml">savestate</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/populateSavestate.xhtml">populateSavestate</a>()
+                    </li><li>protected void <a title="FOFModel" href="../classes/FOFModel/populateState.xhtml">populateState</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/applyAccessFiltering.xhtml">applyAccessFiltering</a>()
+                    </li><li>public mixed <a title="FOFModel" href="../classes/FOFModel/getForm.xhtml">getForm</a>()
+                    </li><li>protected mixed <a title="FOFModel" href="../classes/FOFModel/loadForm.xhtml">loadForm</a>()
+                    </li><li>public mixed <a title="FOFModel" href="../classes/FOFModel/findFormFilename.xhtml">findFormFilename</a>()
+                    </li><li>protected array <a title="FOFModel" href="../classes/FOFModel/loadFormData.xhtml">loadFormData</a>()
+                    </li><li>protected void <a title="FOFModel" href="../classes/FOFModel/preprocessForm.xhtml">preprocessForm</a>()
+                    </li><li>public mixed <a title="FOFModel" href="../classes/FOFModel/validateForm.xhtml">validateForm</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/onBeforeLoadForm.xhtml">onBeforeLoadForm</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/onAfterLoadForm.xhtml">onAfterLoadForm</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/onBeforePreprocessForm.xhtml">onBeforePreprocessForm</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/onAfterPreprocessForm.xhtml">onAfterPreprocessForm</a>()
+                    </li><li>protected void <a title="FOFModel" href="../classes/FOFModel/onProcessList.xhtml">onProcessList</a>()
+                    </li><li>protected void <a title="FOFModel" href="../classes/FOFModel/onAfterGetItem.xhtml">onAfterGetItem</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onBeforeSave.xhtml">onBeforeSave</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onAfterSave.xhtml">onAfterSave</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onBeforeDelete.xhtml">onBeforeDelete</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onAfterDelete.xhtml">onAfterDelete</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onBeforeCopy.xhtml">onBeforeCopy</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onAfterCopy.xhtml">onAfterCopy</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onBeforePublish.xhtml">onBeforePublish</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onAfterPublish.xhtml">onAfterPublish</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onBeforeHit.xhtml">onBeforeHit</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onAfterHit.xhtml">onAfterHit</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onBeforeMove.xhtml">onBeforeMove</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onAfterMove.xhtml">onAfterMove</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onBeforeReorder.xhtml">onBeforeReorder</a>()
+                    </li><li>protected boolean <a title="FOFModel" href="../classes/FOFModel/onAfterReorder.xhtml">onAfterReorder</a>()
+                    </li><li>public JDatabaseDriver <a title="FOFModel" href="../classes/FOFModel/getDbo.xhtml">getDbo</a>()
+                    </li><li>public string <a title="FOFModel" href="../classes/FOFModel/getName.xhtml">getName</a>()
+                    </li><li>public void <a title="FOFModel" href="../classes/FOFModel/setDbo.xhtml">setDbo</a>()
+                    </li><li>public mixed <a title="FOFModel" href="../classes/FOFModel/setState.xhtml">setState</a>()
+                    </li><li>protected void <a title="FOFModel" href="../classes/FOFModel/cleanCache.xhtml">cleanCache</a>()
+                    </li><li>public FOFModel <a title="FOFModel" href="../classes/FOFModel/setBehaviorParam.xhtml">setBehaviorParam</a>()
+                    </li><li>public mixed <a title="FOFModel" href="../classes/FOFModel/getBehaviorParam.xhtml">getBehaviorParam</a>()
+                    </li><li>public void|array <a title="FOFModel" href="../classes/FOFModel/blacklistFilters.xhtml">blacklistFilters</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="FOFUtilsObject" href="../classes/FOFUtilsObject.xhtml">FOFUtilsObject</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">2452</td>
+            <td>Should we read from internal variables instead of the input? With a temp instance we have no input</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="__state_set"><strong>$__state_set</strong>
+                —
+                boolean<br/><span class="indent">Indicates if the internal state has been set</span></li>
+            <li id="_behaviorParams"><strong>$_behaviorParams</strong>
+                —
+                array<br/><span class="indent">Behavior parameters</span></li>
+            <li id="_db"><strong>$_db</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Database Connector</span></li>
+            <li id="_formData"><strong>$_formData</strong>
+                —
+                array<br/><span class="indent">The data to load into a form</span></li>
+            <li id="_forms"><strong>$_forms</strong>
+                —
+                array<br/><span class="indent">Array of form objects.</span></li>
+            <li id="_savestate"><strong>$_savestate</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a><br/><span class="indent">Should I save the model's state in the session?</span></li>
+            <li id="configProvider"><strong>$configProvider</strong>
+                —
+                <a title="FOFConfigProvider" href="../classes/FOFConfigProvider.xhtml">FOFConfigProvider</a><br/><span class="indent">An instance of FOFConfigProvider to provision configuration overrides</span></li>
+            <li id="default_behaviors"><strong>$default_behaviors</strong>
+                —
+                array<br/><span class="indent">Default behaviors to apply to the model</span></li>
+            <li id="event_after_delete"><strong>$event_after_delete</strong>
+                —
+                string<br/><span class="indent">The event to trigger after deleting the data.</span></li>
+            <li id="event_after_save"><strong>$event_after_save</strong>
+                —
+                string<br/><span class="indent">The event to trigger after saving the data.</span></li>
+            <li id="event_before_delete"><strong>$event_before_delete</strong>
+                —
+                string<br/><span class="indent">The event to trigger before deleting the data.</span></li>
+            <li id="event_before_save"><strong>$event_before_save</strong>
+                —
+                string<br/><span class="indent">The event to trigger before saving the data.</span></li>
+            <li id="event_change_state"><strong>$event_change_state</strong>
+                —
+                string<br/><span class="indent">The event to trigger after changing the published state of the data.</span></li>
+            <li id="event_clean_cache"><strong>$event_clean_cache</strong>
+                —
+                string<br/><span class="indent">The event to trigger when cleaning cache.</span></li>
+            <li id="id"><strong>$id</strong>
+                —
+                int<br/><span class="indent">The first row ID passed to the model's state</span></li>
+            <li id="id_list"><strong>$id_list</strong>
+                —
+                array<br/><span class="indent">Stores a list of IDs passed to the model's state</span></li>
+            <li id="input"><strong>$input</strong>
+                —
+                <a title="FOFInput" href="../classes/FOFInput.xhtml">FOFInput</a><br/><span class="indent">Input variables, passed on from the controller, in an associative array</span></li>
+            <li id="list"><strong>$list</strong>
+                —
+                array<br/><span class="indent">The list of records made available through getList</span></li>
+            <li id="modelDispatcher"><strong>$modelDispatcher</strong>
+                —
+                <a title="FOFModelDispatcherBehavior" href="../classes/FOFModelDispatcherBehavior.xhtml">FOFModelDispatcherBehavior</a><br/><span class="indent">FOFModelDispatcherBehavior for dealing with extra behaviors</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The model (base) name</span></li>
+            <li id="option"><strong>$option</strong>
+                —
+                string<br/><span class="indent">The URL option for the component.</span></li>
+            <li id="otable"><strong>$otable</strong>
+                —
+                <a title="FOFTable" href="../classes/FOFTable.xhtml">FOFTable</a><br/><span class="indent">The table object, populated when saving data</span></li>
+            <li id="pagination"><strong>$pagination</strong>
+                —
+                <a title="JPagination" href="../classes/JPagination.xhtml">JPagination</a><br/><span class="indent">Pagination object</span></li>
+            <li id="record"><strong>$record</strong>
+                —
+                <a title="FOFTable" href="../classes/FOFTable.xhtml">FOFTable</a><br/><span class="indent">The table object, populated when retrieving data</span></li>
+            <li id="state"><strong>$state</strong>
+                —
+                string<br/><span class="indent">A state object</span></li>
+            <li id="table"><strong>$table</strong>
+                —
+                string<br/><span class="indent">The name of the table to use</span></li>
+            <li id="total"><strong>$total</strong>
+                —
+                int<br/><span class="indent">Total rows based on the filters set in the model's state</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_createFileName"><a title="FOFModel" href="../classes/FOFModel/_createFileName.xhtml">_createFileName()</a>
+                — Create the filename for a resource</li>
+            <li id="_createTable"><a title="FOFModel" href="../classes/FOFModel/_createTable.xhtml">_createTable()</a>
+                — Method to load and return a model object.</li>
+            <li id="_getList"><a title="FOFModel" href="../classes/FOFModel/_getList.xhtml">_getList()</a>
+                — Returns an object list</li>
+            <li id="_getListCount"><a title="FOFModel" href="../classes/FOFModel/_getListCount.xhtml">_getListCount()</a>
+                — Returns a record count for the query</li>
+            <li id="_real_getState"><a title="FOFModel" href="../classes/FOFModel/_real_getState.xhtml">_real_getState()</a>
+                — Method to get model state variables</li>
+            <li id="cleanCache"><a title="FOFModel" href="../classes/FOFModel/cleanCache.xhtml">cleanCache()</a>
+                — Clean the cache</li>
+            <li id="getUserStateFromRequest"><a title="FOFModel" href="../classes/FOFModel/getUserStateFromRequest.xhtml">getUserStateFromRequest()</a>
+                — Gets the value of a user state variable.</li>
+            <li id="loadForm"><a title="FOFModel" href="../classes/FOFModel/loadForm.xhtml">loadForm()</a>
+                — Method to get a form object.</li>
+            <li id="loadFormData"><a title="FOFModel" href="../classes/FOFModel/loadFormData.xhtml">loadFormData()</a>
+                — Method to get the data that should be injected in the form.</li>
+            <li id="onAfterCopy"><a title="FOFModel" href="../classes/FOFModel/onAfterCopy.xhtml">onAfterCopy()</a>
+                — This method runs after a record has been copied</li>
+            <li id="onAfterDelete"><a title="FOFModel" href="../classes/FOFModel/onAfterDelete.xhtml">onAfterDelete()</a>
+                — This method runs after a record with key value $id is deleted</li>
+            <li id="onAfterGetItem"><a title="FOFModel" href="../classes/FOFModel/onAfterGetItem.xhtml">onAfterGetItem()</a>
+                — This method runs after an item has been gotten from the database in a read operation. You can modify it before it's returned to the MVC triad for further processing.</li>
+            <li id="onAfterHit"><a title="FOFModel" href="../classes/FOFModel/onAfterHit.xhtml">onAfterHit()</a>
+                — This method runs after a record has been hit</li>
+            <li id="onAfterMove"><a title="FOFModel" href="../classes/FOFModel/onAfterMove.xhtml">onAfterMove()</a>
+                — This method runs after a record has been moved</li>
+            <li id="onAfterPublish"><a title="FOFModel" href="../classes/FOFModel/onAfterPublish.xhtml">onAfterPublish()</a>
+                — This method runs after a record has been published</li>
+            <li id="onAfterReorder"><a title="FOFModel" href="../classes/FOFModel/onAfterReorder.xhtml">onAfterReorder()</a>
+                — This method runs after a table is reordered</li>
+            <li id="onAfterSave"><a title="FOFModel" href="../classes/FOFModel/onAfterSave.xhtml">onAfterSave()</a>
+                — This method runs after the data is saved to the $table.</li>
+            <li id="onBeforeCopy"><a title="FOFModel" href="../classes/FOFModel/onBeforeCopy.xhtml">onBeforeCopy()</a>
+                — This method runs before a record is copied</li>
+            <li id="onBeforeDelete"><a title="FOFModel" href="../classes/FOFModel/onBeforeDelete.xhtml">onBeforeDelete()</a>
+                — This method runs before the record with key value of $id is deleted from $table</li>
+            <li id="onBeforeHit"><a title="FOFModel" href="../classes/FOFModel/onBeforeHit.xhtml">onBeforeHit()</a>
+                — This method runs before a record is hit</li>
+            <li id="onBeforeMove"><a title="FOFModel" href="../classes/FOFModel/onBeforeMove.xhtml">onBeforeMove()</a>
+                — This method runs before a record is moved</li>
+            <li id="onBeforePublish"><a title="FOFModel" href="../classes/FOFModel/onBeforePublish.xhtml">onBeforePublish()</a>
+                — This method runs before a record is published</li>
+            <li id="onBeforeReorder"><a title="FOFModel" href="../classes/FOFModel/onBeforeReorder.xhtml">onBeforeReorder()</a>
+                — This method runs before a table is reordered</li>
+            <li id="onBeforeSave"><a title="FOFModel" href="../classes/FOFModel/onBeforeSave.xhtml">onBeforeSave()</a>
+                — This method runs before the $data is saved to the $table. Return false to stop saving.</li>
+            <li id="onProcessList"><a title="FOFModel" href="../classes/FOFModel/onProcessList.xhtml">onProcessList()</a>
+                — This method can be overriden to automatically do something with the list results array. You are supposed to modify the list which was passed in the parameters; DO NOT return a new array!</li>
+            <li id="populateState"><a title="FOFModel" href="../classes/FOFModel/populateState.xhtml">populateState()</a>
+                — Method to auto-populate the model state.</li>
+            <li id="preprocessForm"><a title="FOFModel" href="../classes/FOFModel/preprocessForm.xhtml">preprocessForm()</a>
+                — Method to allow derived classes to preprocess the form.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFModel" href="../classes/FOFModel/__construct.xhtml">__construct()</a>
+                — Public class constructor</li>
+            <li id="__call"><a title="FOFModel" href="../classes/FOFModel/__call.xhtml">__call()</a>
+                — Magic caller; allows to use the name of model state keys as methods to set their values.</li>
+            <li id="__get"><a title="FOFModel" href="../classes/FOFModel/__get.xhtml">__get()</a>
+                — Magic getter; allows to use the name of model state keys as properties</li>
+            <li id="__set"><a title="FOFModel" href="../classes/FOFModel/__set.xhtml">__set()</a>
+                — Magic setter; allows to use the name of model state keys as properties</li>
+            <li id="addBehavior"><a title="FOFModel" href="../classes/FOFModel/addBehavior.xhtml">addBehavior()</a>
+                — Adds a behavior to the model</li>
+            <li id="addIncludePath"><a title="FOFModel" href="../classes/FOFModel/addIncludePath.xhtml">addIncludePath()</a>
+                — Add a directory where FOFModel should search for models. You may either pass a string or an array of directories.</li>
+            <li id="addTablePath"><a title="FOFModel" href="../classes/FOFModel/addTablePath.xhtml">addTablePath()</a>
+                — Adds to the stack of model table paths in LIFO order.</li>
+            <li id="applyAccessFiltering"><a title="FOFModel" href="../classes/FOFModel/applyAccessFiltering.xhtml">applyAccessFiltering()</a>
+                — Applies view access level filtering for the specified user. Useful to filter a front-end items listing.</li>
+            <li id="blacklistFilters"><a title="FOFModel" href="../classes/FOFModel/blacklistFilters.xhtml">blacklistFilters()</a>
+                — Set or get the backlisted filters</li>
+            <li id="buildCountQuery"><a title="FOFModel" href="../classes/FOFModel/buildCountQuery.xhtml">buildCountQuery()</a>
+                — Builds the count query used in getTotal()</li>
+            <li id="buildQuery"><a title="FOFModel" href="../classes/FOFModel/buildQuery.xhtml">buildQuery()</a>
+                — Builds the SELECT query</li>
+            <li id="checkin"><a title="FOFModel" href="../classes/FOFModel/checkin.xhtml">checkin()</a>
+                — Checks in the current item</li>
+            <li id="checkout"><a title="FOFModel" href="../classes/FOFModel/checkout.xhtml">checkout()</a>
+                — Checks out the current item</li>
+            <li id="clearInput"><a title="FOFModel" href="../classes/FOFModel/clearInput.xhtml">clearInput()</a>
+                — Clears the input array.</li>
+            <li id="clearState"><a title="FOFModel" href="../classes/FOFModel/clearState.xhtml">clearState()</a>
+                — Clears the model state, but doesn't touch the internal lists of records, record tables or record id variables. To clear these values, please use reset().</li>
+            <li id="copy"><a title="FOFModel" href="../classes/FOFModel/copy.xhtml">copy()</a>
+                — Copy one or more records</li>
+            <li id="delete"><a title="FOFModel" href="../classes/FOFModel/delete.xhtml">delete()</a>
+                — Deletes one or several items</li>
+            <li id="findFormFilename"><a title="FOFModel" href="../classes/FOFModel/findFormFilename.xhtml">findFormFilename()</a>
+                — Guesses the best candidate for the path to use for a particular form.</li>
+            <li id="getAnInstance"><a title="FOFModel" href="../classes/FOFModel/getAnInstance.xhtml">getAnInstance()</a>
+                — Returns a new model object. Unless overriden by the $config array, it will try to automatically populate its state from the request variables.</li>
+            <li id="getBehaviorParam"><a title="FOFModel" href="../classes/FOFModel/getBehaviorParam.xhtml">getBehaviorParam()</a>
+                — Get a behavior param</li>
+            <li id="getClone"><a title="FOFModel" href="../classes/FOFModel/getClone.xhtml">getClone()</a>
+                — Clones the model object and returns the clone</li>
+            <li id="getDbo"><a title="FOFModel" href="../classes/FOFModel/getDbo.xhtml">getDbo()</a>
+                — Method to get the database driver object</li>
+            <li id="getFirstItem"><a title="FOFModel" href="../classes/FOFModel/getFirstItem.xhtml">getFirstItem()</a>
+                — A cross-breed between getItem and getItemList. It runs the complete query, like getItemList does. However, instead of returning an array of ad-hoc objects, it binds the data from the first item fetched on the list to an instance of the table object and returns that table object instead.</li>
+            <li id="getForm"><a title="FOFModel" href="../classes/FOFModel/getForm.xhtml">getForm()</a>
+                — A method for getting the form from the model.</li>
+            <li id="getHash"><a title="FOFModel" href="../classes/FOFModel/getHash.xhtml">getHash()</a>
+                — Returns a hash for this component and view, e.g. "foobar.items.", used for determining the keys of the variables which will be placed in the session storage.</li>
+            <li id="getId"><a title="FOFModel" href="../classes/FOFModel/getId.xhtml">getId()</a>
+                — Returns the currently set ID</li>
+            <li id="getIds"><a title="FOFModel" href="../classes/FOFModel/getIds.xhtml">getIds()</a>
+                — Returns the list of IDs for batch operations</li>
+            <li id="getItem"><a title="FOFModel" href="../classes/FOFModel/getItem.xhtml">getItem()</a>
+                — Returns a single item. It uses the id set with setId, or the first ID in the list of IDs for batch operations</li>
+            <li id="getItemList"><a title="FOFModel" href="../classes/FOFModel/getItemList.xhtml">getItemList()</a>
+                — Returns a list of items</li>
+            <li id="getIterator"><a title="FOFModel" href="../classes/FOFModel/getIterator.xhtml">getIterator()</a>
+                — Returns a FOFDatabaseIterator over a list of items.</li>
+            <li id="getList"><a title="FOFModel" href="../classes/FOFModel/getList.xhtml">getList()</a>
+                — Alias for getItemList</li>
+            <li id="getName"><a title="FOFModel" href="../classes/FOFModel/getName.xhtml">getName()</a>
+                — Method to get the model name</li>
+            <li id="getPagination"><a title="FOFModel" href="../classes/FOFModel/getPagination.xhtml">getPagination()</a>
+                — Get a pagination object</li>
+            <li id="getReorderWhere"><a title="FOFModel" href="../classes/FOFModel/getReorderWhere.xhtml">getReorderWhere()</a>
+                — Creates the WHERE part of the reorder query</li>
+            <li id="getSavedTable"><a title="FOFModel" href="../classes/FOFModel/getSavedTable.xhtml">getSavedTable()</a>
+                — Returns the table object after the last save() operation</li>
+            <li id="getState"><a title="FOFModel" href="../classes/FOFModel/getState.xhtml">getState()</a>
+                — Get a filtered state variable</li>
+            <li id="getTable"><a title="FOFModel" href="../classes/FOFModel/getTable.xhtml">getTable()</a>
+                — Method to get a table object, load it if necessary.</li>
+            <li id="getTableAlias"><a title="FOFModel" href="../classes/FOFModel/getTableAlias.xhtml">getTableAlias()</a>
+                — Get the alias set for this model's table</li>
+            <li id="getTableFields"><a title="FOFModel" href="../classes/FOFModel/getTableFields.xhtml">getTableFields()</a>
+                — Returns a list of the fields of the table associated with this model</li>
+            <li id="getTmpInstance"><a title="FOFModel" href="../classes/FOFModel/getTmpInstance.xhtml">getTmpInstance()</a>
+                — Returns a new instance of a model, with the state reset to defaults</li>
+            <li id="getTotal"><a title="FOFModel" href="../classes/FOFModel/getTotal.xhtml">getTotal()</a>
+                — Get the number of all items</li>
+            <li id="hit"><a title="FOFModel" href="../classes/FOFModel/hit.xhtml">hit()</a>
+                — Increments the hit counter</li>
+            <li id="isCheckedOut"><a title="FOFModel" href="../classes/FOFModel/isCheckedOut.xhtml">isCheckedOut()</a>
+                — Tells you if the current item is checked out or not</li>
+            <li id="loadhistory"><a title="FOFModel" href="../classes/FOFModel/loadhistory.xhtml">loadhistory()</a>
+                — Method to load a row for editing from the version history table.</li>
+            <li id="move"><a title="FOFModel" href="../classes/FOFModel/move.xhtml">move()</a>
+                — Moves the current item up or down in the ordering list</li>
+            <li id="onAfterLoadForm"><a title="FOFModel" href="../classes/FOFModel/onAfterLoadForm.xhtml">onAfterLoadForm()</a>
+                — Allows the manipulation after the form is loaded</li>
+            <li id="onAfterPreprocessForm"><a title="FOFModel" href="../classes/FOFModel/onAfterPreprocessForm.xhtml">onAfterPreprocessForm()</a>
+                — Allows data and form manipulation after preprocessing the form</li>
+            <li id="onBeforeLoadForm"><a title="FOFModel" href="../classes/FOFModel/onBeforeLoadForm.xhtml">onBeforeLoadForm()</a>
+                — Allows the manipulation before the form is loaded</li>
+            <li id="onBeforePreprocessForm"><a title="FOFModel" href="../classes/FOFModel/onBeforePreprocessForm.xhtml">onBeforePreprocessForm()</a>
+                — Allows data and form manipulation before preprocessing the form</li>
+            <li id="populateSavestate"><a title="FOFModel" href="../classes/FOFModel/populateSavestate.xhtml">populateSavestate()</a>
+                — Initialises the _savestate variable</li>
+            <li id="publish"><a title="FOFModel" href="../classes/FOFModel/publish.xhtml">publish()</a>
+                — Toggles the published state of one or several items</li>
+            <li id="reorder"><a title="FOFModel" href="../classes/FOFModel/reorder.xhtml">reorder()</a>
+                — Reorders all items in the table</li>
+            <li id="reset"><a title="FOFModel" href="../classes/FOFModel/reset.xhtml">reset()</a>
+                — Resets the model, like it was freshly loaded</li>
+            <li id="resetSavedState"><a title="FOFModel" href="../classes/FOFModel/resetSavedState.xhtml">resetSavedState()</a>
+                — Resets the saved state for this view</li>
+            <li id="save"><a title="FOFModel" href="../classes/FOFModel/save.xhtml">save()</a>
+                — Binds the data to the model and tries to save it</li>
+            <li id="savestate"><a title="FOFModel" href="../classes/FOFModel/savestate.xhtml">savestate()</a>
+                — Sets the model state auto-save status. By default the model is set up to save its state to the session.</li>
+            <li id="setBehaviorParam"><a title="FOFModel" href="../classes/FOFModel/setBehaviorParam.xhtml">setBehaviorParam()</a>
+                — Set a behavior param</li>
+            <li id="setDbo"><a title="FOFModel" href="../classes/FOFModel/setDbo.xhtml">setDbo()</a>
+                — Method to set the database driver object</li>
+            <li id="setIDsFromRequest"><a title="FOFModel" href="../classes/FOFModel/setIDsFromRequest.xhtml">setIDsFromRequest()</a>
+                — Sets the list of IDs from the request data</li>
+            <li id="setId"><a title="FOFModel" href="../classes/FOFModel/setId.xhtml">setId()</a>
+                — Sets the ID and resets internal data</li>
+            <li id="setIds"><a title="FOFModel" href="../classes/FOFModel/setIds.xhtml">setIds()</a>
+                — Sets a list of IDs for batch operations from an array and resets the model</li>
+            <li id="setInput"><a title="FOFModel" href="../classes/FOFModel/setInput.xhtml">setInput()</a>
+                — Set the internal input field</li>
+            <li id="setState"><a title="FOFModel" href="../classes/FOFModel/setState.xhtml">setState()</a>
+                — Method to set model state variables</li>
+            <li id="validateForm"><a title="FOFModel" href="../classes/FOFModel/validateForm.xhtml">validateForm()</a>
+                — Method to validate the form data.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

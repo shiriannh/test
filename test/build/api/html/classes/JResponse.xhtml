@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JResponse</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JResponse</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/legacy/response/response.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JResponse</h1>
+        <h4>JResponse Class.</h4>
+        <p>This class serves to provide the Joomla Platform with a common interface to access<br/>response variables.  This includes header and body.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JResponse
+            {<br/><ul class="none"><li>// members</li><li>protected static array <a href="#members">$body</a> =
+                        ;
+                    </li><li>protected static boolean <a href="#members">$cachable</a> =
+                        false;
+                    </li><li>protected static array <a href="#members">$headers</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static boolean <a title="JResponse" href="../classes/JResponse/allowCache.xhtml">allowCache</a>()
+                    </li><li>public static void <a title="JResponse" href="../classes/JResponse/setHeader.xhtml">setHeader</a>()
+                    </li><li>public static array <a title="JResponse" href="../classes/JResponse/getHeaders.xhtml">getHeaders</a>()
+                    </li><li>public static void <a title="JResponse" href="../classes/JResponse/clearHeaders.xhtml">clearHeaders</a>()
+                    </li><li>public static void <a title="JResponse" href="../classes/JResponse/sendHeaders.xhtml">sendHeaders</a>()
+                    </li><li>public static void <a title="JResponse" href="../classes/JResponse/setBody.xhtml">setBody</a>()
+                    </li><li>public static void <a title="JResponse" href="../classes/JResponse/prependBody.xhtml">prependBody</a>()
+                    </li><li>public static void <a title="JResponse" href="../classes/JResponse/appendBody.xhtml">appendBody</a>()
+                    </li><li>public static string <a title="JResponse" href="../classes/JResponse/getBody.xhtml">getBody</a>()
+                    </li><li>public static string <a title="JResponse" href="../classes/JResponse/toString.xhtml">toString</a>()
+                    </li><li>protected static string <a title="JResponse" href="../classes/JResponse/compress.xhtml">compress</a>()
+                    </li><li>protected static boolean <a title="JResponse" href="../classes/JResponse/clientEncoding.xhtml">clientEncoding</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="body"><strong>$body</strong>
+                —
+                array</li>
+            <li id="cachable"><strong>$cachable</strong>
+                —
+                boolean</li>
+            <li id="headers"><strong>$headers</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="clientEncoding"><a title="JResponse" href="../classes/JResponse/clientEncoding.xhtml">clientEncoding()</a>
+                — Check, whether client supports compressed data</li>
+            <li id="compress"><a title="JResponse" href="../classes/JResponse/compress.xhtml">compress()</a>
+                — Compress the data</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="allowCache"><a title="JResponse" href="../classes/JResponse/allowCache.xhtml">allowCache()</a>
+                — Set/get cachable state for the response.</li>
+            <li id="appendBody"><a title="JResponse" href="../classes/JResponse/appendBody.xhtml">appendBody()</a>
+                — Append content to the body content</li>
+            <li id="clearHeaders"><a title="JResponse" href="../classes/JResponse/clearHeaders.xhtml">clearHeaders()</a>
+                — Clear headers.</li>
+            <li id="getBody"><a title="JResponse" href="../classes/JResponse/getBody.xhtml">getBody()</a>
+                — Return the body content</li>
+            <li id="getHeaders"><a title="JResponse" href="../classes/JResponse/getHeaders.xhtml">getHeaders()</a>
+                — Return array of headers.</li>
+            <li id="prependBody"><a title="JResponse" href="../classes/JResponse/prependBody.xhtml">prependBody()</a>
+                — Prepend content to the body content</li>
+            <li id="sendHeaders"><a title="JResponse" href="../classes/JResponse/sendHeaders.xhtml">sendHeaders()</a>
+                — Send all headers.</li>
+            <li id="setBody"><a title="JResponse" href="../classes/JResponse/setBody.xhtml">setBody()</a>
+                — Set body content.</li>
+            <li id="setHeader"><a title="JResponse" href="../classes/JResponse/setHeader.xhtml">setHeader()</a>
+                — Set a header.</li>
+            <li id="toString"><a title="JResponse" href="../classes/JResponse/toString.xhtml">toString()</a>
+                — Sends all headers prior to returning the string</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JUri</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JUri</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/uri/uri.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JUri</h1>
+        <h4>JUri Class</h4>
+        <p>This class serves two purposes. First it parses a URI and provides a common interface<br/>for the Joomla Platform to access and manipulate a URI. Second it obtains the URI of<br/>the current executing script from the server regardless of server.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JUri
+                extends <a title="Joomla\Uri\Uri" href="../classes/Joomla_Uri_Uri.xhtml">Uri</a>
+            {<br/><ul class="none"><li>// members</li><li>protected static array <a href="#members">$instances</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$base</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$root</a> =
+                        ;
+                    </li><li>protected static  <a href="#members">$current</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static JUri <a title="JUri" href="../classes/JUri/getInstance.xhtml">getInstance</a>()
+                    </li><li>public static string <a title="JUri" href="../classes/JUri/base.xhtml">base</a>()
+                    </li><li>public static string <a title="JUri" href="../classes/JUri/root.xhtml">root</a>()
+                    </li><li>public static string <a title="JUri" href="../classes/JUri/current.xhtml">current</a>()
+                    </li><li>public static void <a title="JUri" href="../classes/JUri/reset.xhtml">reset</a>()
+                    </li><li>public void <a title="JUri" href="../classes/JUri/setPath.xhtml">setPath</a>()
+                    </li><li>public static boolean <a title="JUri" href="../classes/JUri/isInternal.xhtml">isInternal</a>()
+                    </li><li>public static string <a title="JUri" href="../classes/JUri/buildQuery.xhtml">buildQuery</a>()
+                    </li><li>public boolean <a title="JUri" href="../classes/JUri/parse.xhtml">parse</a>()
+                    </li><li>protected string <a title="JUri" href="../classes/JUri/_cleanPath.xhtml">_cleanPath</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Joomla\Uri\Uri" href="../classes/Joomla_Uri_Uri.xhtml">Joomla\Uri\Uri</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="base"><strong>$base</strong>
+                —
+                array</li>
+            <li id="current"><strong>$current</strong>
+                —
+                string</li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array</li>
+            <li id="root"><strong>$root</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_cleanPath"><a title="JUri" href="../classes/JUri/_cleanPath.xhtml">_cleanPath()</a>
+                — Resolves //, ../ and ./ from a path and returns the result. Eg:</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="base"><a title="JUri" href="../classes/JUri/base.xhtml">base()</a>
+                — Returns the base URI for the request.</li>
+            <li id="buildQuery"><a title="JUri" href="../classes/JUri/buildQuery.xhtml">buildQuery()</a>
+                — Build a query from an array (reverse of the PHP parse_str()).</li>
+            <li id="current"><a title="JUri" href="../classes/JUri/current.xhtml">current()</a>
+                — Returns the URL for the request, minus the query.</li>
+            <li id="getInstance"><a title="JUri" href="../classes/JUri/getInstance.xhtml">getInstance()</a>
+                — Returns the global JUri object, only creating it if it doesn't already exist.</li>
+            <li id="isInternal"><a title="JUri" href="../classes/JUri/isInternal.xhtml">isInternal()</a>
+                — Checks if the supplied URL is internal</li>
+            <li id="parse"><a title="JUri" href="../classes/JUri/parse.xhtml">parse()</a>
+                — Parse a given URI and populate the class fields.</li>
+            <li id="reset"><a title="JUri" href="../classes/JUri/reset.xhtml">reset()</a>
+                — Method to reset class static members for testing and other various issues.</li>
+            <li id="root"><a title="JUri" href="../classes/JUri/root.xhtml">root()</a>
+                — Returns the root URI for the request.</li>
+            <li id="setPath"><a title="JUri" href="../classes/JUri/setPath.xhtml">setPath()</a>
+                — Set the URI path string. Note we keep this method here so it uses the old _cleanPath function</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFUtilsFilescheck</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFUtilsFilescheck</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/utils/filescheck/filescheck.php.xhtml#line33">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFUtilsFilescheck</h1>
+        <h4>A utility class to check that your extension's files are not missing and have not been tampered with.</h4>
+        <p>You need a file called fileslist.php in your component's administrator root directory with the following contents:<br/><br/>$phpFileChecker = array(<br/>'version' =&gt; 'revCEE2DAB',<br/>'date' =&gt; '2014-10-16',<br/>'directories' =&gt; array(<br/>'administrator/components/com_foobar',<br/>....<br/>),<br/>'files' =&gt; array(<br/>'administrator/components/com_foobar/access.xml' =&gt; array('705', '09aa0351a316bf011ecc8c1145134761', 'b95f00c7b49a07a60570dc674f2497c45c4e7152'),<br/>....<br/>)<br/>);<br/><br/>All directory and file paths are relative to the site's root<br/><br/>The directories array is a list of</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFUtilsFilescheck
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$option</a> =
+                        '';
+                    </li><li>protected <a href="#members">$version</a> =
+                        null;
+                    </li><li>protected <a href="#members">$date</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$fileList</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$dirList</a> =
+                        ;
+                    </li><li>protected boolean <a href="#members">$wrongComponentVersion</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$wrongFilesVersion</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/isWrongComponentVersion.xhtml">isWrongComponentVersion</a>()
+                    </li><li>public boolean <a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/isWrongFilesVersion.xhtml">isWrongFilesVersion</a>()
+                    </li><li>public bool <a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/fastCheck.xhtml">fastCheck</a>()
+                    </li><li>public array <a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/slowCheck.xhtml">slowCheck</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="date">
+              <strong>$date</strong>
+              <br/>
+              <span class="indent">@var string Current component release date</span>
+            </li>
+            <li id="dirList">
+              <strong>$dirList</strong>
+              <br/>
+              <span class="indent">@var array List of directories to check that exist</span>
+            </li>
+            <li id="fileList">
+              <strong>$fileList</strong>
+              <br/>
+              <span class="indent">@var array List of files to check as filepath =&gt; (filesize, md5, sha1)</span>
+            </li>
+            <li id="option">
+              <strong>$option</strong>
+              <br/>
+              <span class="indent">@var string The name of the component</span>
+            </li>
+            <li id="version">
+              <strong>$version</strong>
+              <br/>
+              <span class="indent">@var string Current component version</span>
+            </li>
+            <li id="wrongComponentVersion">
+              <strong>$wrongComponentVersion</strong>
+              <br/>
+              <span class="indent">@var bool Is the reported component version different than the version of the #__extensions table?</span>
+            </li>
+            <li id="wrongFilesVersion">
+              <strong>$wrongFilesVersion</strong>
+              <br/>
+              <span class="indent">@var bool Is the fileslist.php reporting a version different than the reported component version?</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/__construct.xhtml">__construct()</a>
+                — Create and initialise the object</li>
+            <li id="fastCheck"><a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/fastCheck.xhtml">fastCheck()</a>
+                — Performs a fast check of file and folders. If even one of the files/folders doesn't exist, or even one file has the wrong file size it will return false.</li>
+            <li id="isWrongComponentVersion"><a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/isWrongComponentVersion.xhtml">isWrongComponentVersion()</a>
+                — Is the reported component version different than the version of the #__extensions table?</li>
+            <li id="isWrongFilesVersion"><a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/isWrongFilesVersion.xhtml">isWrongFilesVersion()</a>
+                — Is the fileslist.php reporting a version different than the reported component version?</li>
+            <li id="slowCheck"><a title="FOFUtilsFilescheck" href="../classes/FOFUtilsFilescheck/slowCheck.xhtml">slowCheck()</a>
+                — Performs a slow, thorough check of all files and folders (including MD5/SHA1 sum checks)</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

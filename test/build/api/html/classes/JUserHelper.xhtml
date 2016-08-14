@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JUserHelper</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JUserHelper</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/user/helper.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JUserHelper</h1>
+        <h4>Authorisation helper class, provides static methods to perform various tasks relevant to the Joomla user and authorisation classes</h4>
+        <p>This class has influences and some method logic from the Horde Auth package</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JUserHelper
+            {<br/><ul class="none"><li>// methods</li><li>public static boolean <a title="JUserHelper" href="../classes/JUserHelper/addUserToGroup.xhtml">addUserToGroup</a>()
+                    </li><li>public static array <a title="JUserHelper" href="../classes/JUserHelper/getUserGroups.xhtml">getUserGroups</a>()
+                    </li><li>public static boolean <a title="JUserHelper" href="../classes/JUserHelper/removeUserFromGroup.xhtml">removeUserFromGroup</a>()
+                    </li><li>public static boolean <a title="JUserHelper" href="../classes/JUserHelper/setUserGroups.xhtml">setUserGroups</a>()
+                    </li><li>public static  <a title="JUserHelper" href="../classes/JUserHelper/getProfile.xhtml">getProfile</a>()
+                    </li><li>public static boolean <a title="JUserHelper" href="../classes/JUserHelper/activateUser.xhtml">activateUser</a>()
+                    </li><li>public static integer <a title="JUserHelper" href="../classes/JUserHelper/getUserId.xhtml">getUserId</a>()
+                    </li><li>public static string <a title="JUserHelper" href="../classes/JUserHelper/hashPassword.xhtml">hashPassword</a>()
+                    </li><li>public static boolean <a title="JUserHelper" href="../classes/JUserHelper/verifyPassword.xhtml">verifyPassword</a>()
+                    </li><li>public static string <a title="JUserHelper" href="../classes/JUserHelper/getCryptedPassword.xhtml">getCryptedPassword</a>()
+                    </li><li>public static string <a title="JUserHelper" href="../classes/JUserHelper/getSalt.xhtml">getSalt</a>()
+                    </li><li>public static string <a title="JUserHelper" href="../classes/JUserHelper/genRandomPassword.xhtml">genRandomPassword</a>()
+                    </li><li>protected static string <a title="JUserHelper" href="../classes/JUserHelper/_toAPRMD5.xhtml">_toAPRMD5</a>()
+                    </li><li>private static string <a title="JUserHelper" href="../classes/JUserHelper/_bin.xhtml">_bin</a>()
+                    </li><li>public static boolean <a title="JUserHelper" href="../classes/JUserHelper/invalidateCookie.xhtml">invalidateCookie</a>()
+                    </li><li>public static mixed <a title="JUserHelper" href="../classes/JUserHelper/clearExpiredTokens.xhtml">clearExpiredTokens</a>()
+                    </li><li>public static mixed <a title="JUserHelper" href="../classes/JUserHelper/getRememberCookieData.xhtml">getRememberCookieData</a>()
+                    </li><li>public static string <a title="JUserHelper" href="../classes/JUserHelper/getShortHashedUserAgent.xhtml">getShortHashedUserAgent</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="_bin"><a title="JUserHelper" href="../classes/JUserHelper/_bin.xhtml">_bin()</a>
+                — Converts hexadecimal string to binary data.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="_toAPRMD5"><a title="JUserHelper" href="../classes/JUserHelper/_toAPRMD5.xhtml">_toAPRMD5()</a>
+                — Converts to allowed 64 characters for APRMD5 passwords.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="activateUser"><a title="JUserHelper" href="../classes/JUserHelper/activateUser.xhtml">activateUser()</a>
+                — Method to activate a user</li>
+            <li id="addUserToGroup"><a title="JUserHelper" href="../classes/JUserHelper/addUserToGroup.xhtml">addUserToGroup()</a>
+                — Method to add a user to a group.</li>
+            <li id="clearExpiredTokens"><a title="JUserHelper" href="../classes/JUserHelper/clearExpiredTokens.xhtml">clearExpiredTokens()</a>
+                — Clear all expired tokens for all users.</li>
+            <li id="genRandomPassword"><a title="JUserHelper" href="../classes/JUserHelper/genRandomPassword.xhtml">genRandomPassword()</a>
+                — Generate a random password</li>
+            <li id="getCryptedPassword"><a title="JUserHelper" href="../classes/JUserHelper/getCryptedPassword.xhtml">getCryptedPassword()</a>
+                — Formats a password using the current encryption.</li>
+            <li id="getProfile"><a title="JUserHelper" href="../classes/JUserHelper/getProfile.xhtml">getProfile()</a>
+                — Gets the user profile information</li>
+            <li id="getRememberCookieData"><a title="JUserHelper" href="../classes/JUserHelper/getRememberCookieData.xhtml">getRememberCookieData()</a>
+                — Method to get the remember me cookie data</li>
+            <li id="getSalt"><a title="JUserHelper" href="../classes/JUserHelper/getSalt.xhtml">getSalt()</a>
+                — Returns a salt for the appropriate kind of password encryption.</li>
+            <li id="getShortHashedUserAgent"><a title="JUserHelper" href="../classes/JUserHelper/getShortHashedUserAgent.xhtml">getShortHashedUserAgent()</a>
+                — Method to get a hashed user agent string that does not include browser version.</li>
+            <li id="getUserGroups"><a title="JUserHelper" href="../classes/JUserHelper/getUserGroups.xhtml">getUserGroups()</a>
+                — Method to get a list of groups a user is in.</li>
+            <li id="getUserId"><a title="JUserHelper" href="../classes/JUserHelper/getUserId.xhtml">getUserId()</a>
+                — Returns userid if a user exists</li>
+            <li id="hashPassword"><a title="JUserHelper" href="../classes/JUserHelper/hashPassword.xhtml">hashPassword()</a>
+                — Hashes a password using the current encryption.</li>
+            <li id="invalidateCookie"><a title="JUserHelper" href="../classes/JUserHelper/invalidateCookie.xhtml">invalidateCookie()</a>
+                — Method to remove a cookie record from the database and the browser</li>
+            <li id="removeUserFromGroup"><a title="JUserHelper" href="../classes/JUserHelper/removeUserFromGroup.xhtml">removeUserFromGroup()</a>
+                — Method to remove a user from a group.</li>
+            <li id="setUserGroups"><a title="JUserHelper" href="../classes/JUserHelper/setUserGroups.xhtml">setUserGroups()</a>
+                — Method to set the groups for a user.</li>
+            <li id="verifyPassword"><a title="JUserHelper" href="../classes/JUserHelper/verifyPassword.xhtml">verifyPassword()</a>
+                — Formats a password using the current encryption. If the user ID is given and the hash does not fit the current hashing algorithm, it automatically updates the hash.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

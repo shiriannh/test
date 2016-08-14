@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JInstallerScript</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JInstallerScript</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/installer/script.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JInstallerScript</h1>
+        <h4>Base install script for use by extensions providing helper methods for common behaviours.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JInstallerScript
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$release</a>;
+                    </li><li>protected  <a href="#members">$paramTable</a>;
+                    </li><li>protected  <a href="#members">$extension</a>;
+                    </li><li>protected array <a href="#members">$deleteFiles</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$deleteFolders</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$cliScriptFiles</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$minimumPhp</a>;
+                    </li><li>protected  <a href="#members">$minimumJoomla</a>;
+                    </li><li>protected boolean <a href="#members">$allowDowngrades</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public boolean <a title="JInstallerScript" href="../classes/JInstallerScript/preflight.xhtml">preflight</a>()
+                    </li><li>public array <a title="JInstallerScript" href="../classes/JInstallerScript/getInstances.xhtml">getInstances</a>()
+                    </li><li>public string <a title="JInstallerScript" href="../classes/JInstallerScript/getParam.xhtml">getParam</a>()
+                    </li><li>public boolean <a title="JInstallerScript" href="../classes/JInstallerScript/setParams.xhtml">setParams</a>()
+                    </li><li>public array <a title="JInstallerScript" href="../classes/JInstallerScript/getItemArray.xhtml">getItemArray</a>()
+                    </li><li>public void <a title="JInstallerScript" href="../classes/JInstallerScript/removeFiles.xhtml">removeFiles</a>()
+                    </li><li>public void <a title="JInstallerScript" href="../classes/JInstallerScript/moveCliFiles.xhtml">moveCliFiles</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="allowDowngrades"><strong>$allowDowngrades</strong>
+                —
+                boolean<br/><span class="indent">Allow downgrades of your extension</span></li>
+            <li id="cliScriptFiles"><strong>$cliScriptFiles</strong>
+                —
+                array<br/><span class="indent">A list of CLI script files to be copied to the cli directory</span></li>
+            <li id="deleteFiles"><strong>$deleteFiles</strong>
+                —
+                array<br/><span class="indent">A list of files to be deleted</span></li>
+            <li id="deleteFolders"><strong>$deleteFolders</strong>
+                —
+                array<br/><span class="indent">A list of folders to be deleted</span></li>
+            <li id="extension"><strong>$extension</strong>
+                —
+                string<br/><span class="indent">The extension name. This should be set in the installer script.</span></li>
+            <li id="minimumJoomla"><strong>$minimumJoomla</strong>
+                —
+                string<br/><span class="indent">Minimum Joomla! version required to install the extension</span></li>
+            <li id="minimumPhp"><strong>$minimumPhp</strong>
+                —
+                string<br/><span class="indent">Minimum PHP version required to install the extension</span></li>
+            <li id="paramTable"><strong>$paramTable</strong>
+                —
+                string<br/><span class="indent">The table the parameters are stored in.</span></li>
+            <li id="release"><strong>$release</strong>
+                —
+                string<br/><span class="indent">The version number of the extension.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="getInstances"><a title="JInstallerScript" href="../classes/JInstallerScript/getInstances.xhtml">getInstances()</a>
+                — Gets each instance of a module in the #__modules table</li>
+            <li id="getItemArray"><a title="JInstallerScript" href="../classes/JInstallerScript/getItemArray.xhtml">getItemArray()</a>
+                — Builds a standard select query to produce better DRY code in this script.</li>
+            <li id="getParam"><a title="JInstallerScript" href="../classes/JInstallerScript/getParam.xhtml">getParam()</a>
+                — Gets parameter value in the extensions row of the extension table</li>
+            <li id="moveCliFiles"><a title="JInstallerScript" href="../classes/JInstallerScript/moveCliFiles.xhtml">moveCliFiles()</a>
+                — Moves the CLI scripts into the CLI folder in the CMS</li>
+            <li id="preflight"><a title="JInstallerScript" href="../classes/JInstallerScript/preflight.xhtml">preflight()</a>
+                — Function called before extension installation/update/removal procedure commences</li>
+            <li id="removeFiles"><a title="JInstallerScript" href="../classes/JInstallerScript/removeFiles.xhtml">removeFiles()</a>
+                — Remove the files and folders in the given array from</li>
+            <li id="setParams"><a title="JInstallerScript" href="../classes/JInstallerScript/setParams.xhtml">setParams()</a>
+                — Sets parameter values in the extensions row of the extension table. Note that the this must be called separately for deleting and editing. Note if edit is called as a type then if the param doesn't exist it will be created</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

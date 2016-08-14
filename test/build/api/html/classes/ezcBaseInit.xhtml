@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcBaseInit</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcBaseInit</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/base/src/init.php.xhtml#line82">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcBaseInit</h1>
+        <h4>Provides a method to implement delayed initialization of objects.</h4>
+        <p>With the methods in this class you can implement callbacks to configure<br/>singleton classes. In order to do so you will have to change the<br/>getInstance() method of your singleton class to include a call to<br/>ezcBaseInit::fetchConfig() as in the following example:<br/><br/>&lt;code&gt;<br/>&lt;?php<br/>public static function getInstance()<br/>{<br/>if ( is_null( self::$instance ) )<br/>{<br/>self::$instance = new ezcConfigurationmanager();<br/>ezcBaseInit::fetchConfig( 'ezcInitConfigurationManager', self::$instance );<br/>}<br/>return self::$instance;<br/>}<br/>?&gt;<br/>&lt;/code&gt;<br/><br/>You will also need to configure which callback class to call. This you do<br/>with the ezcBaseInit::setCallback() method. The following examples sets the<br/>callback classname for the configuration identifier<br/>'ezcInitConfigurationManager' to 'cfgConfigurationManager':<br/><br/>&lt;code&gt;<br/>&lt;?php<br/>ezcBaseInit::setCallback( 'ezcInitConfigurationManager', 'cfgConfigurationManager' );<br/>?&gt;<br/>&lt;/code&gt;<br/><br/>The class 'cfgConfigurationManager' is required to implement the<br/>ezcBaseConfigurationInitializer interface, which defines only one method:<br/>configureObject(). An example on how to implement such a class could be:<br/><br/>&lt;code&gt;<br/>&lt;?php<br/>class cfgConfigurationManager implements ezcBaseConfigurationInitializer<br/>{<br/>static public function configureObject( ezcConfigurationManager $cfgManagerObject )<br/>{<br/>$cfgManagerObject-&gt;init( 'ezcConfigurationIniReader', 'settings', array( 'useComments' =&gt; true ) );<br/>}<br/>}<br/>?&gt;<br/>&lt;/code&gt;<br/><br/>Of course the implementation of this callback class is up to the application<br/>developer that uses the component (in this example the Configuration<br/>component's class ezcConfigurationManager).</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcBaseInit
+            {<br/><ul class="none"><li>// members</li><li>private static <span title="array(string=&gt;string)">array(string=&gt;string)</span> <a href="#members">$callbackMap</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static void <a title="ezcBaseInit" href="../classes/ezcBaseInit/setCallback.xhtml">setCallback</a>()
+                    </li><li>public static mixed <a title="ezcBaseInit" href="../classes/ezcBaseInit/fetchConfig.xhtml">fetchConfig</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="callbackMap"><strong>$callbackMap</strong>
+                —
+                <a title="array(string=&gt;string)" href="../classes/array(string=&gt;string).xhtml">array(string=&gt;string)</a><br/><span class="indent">Contains the callback where the identifier is the key of the array, and the classname to callback to the value.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="fetchConfig"><a title="ezcBaseInit" href="../classes/ezcBaseInit/fetchConfig.xhtml">fetchConfig()</a>
+                — Uses the configured callback belonging to $identifier to configure the $object.</li>
+            <li id="setCallback"><a title="ezcBaseInit" href="../classes/ezcBaseInit/setCallback.xhtml">setCallback()</a>
+                — Adds the classname $callbackClassname as callback for the identifier $identifier.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

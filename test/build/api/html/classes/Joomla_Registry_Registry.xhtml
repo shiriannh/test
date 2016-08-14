@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Joomla\Registry\Registry</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Joomla_Registry">Joomla\Registry</a>
+          </li>
+          <li class="separator">Registry</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/vendor/joomla/registry/src/Registry.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Joomla\Registry\</small>Registry</h1>
+        <h4>Registry class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Registry
+                implements
+                <a title="JsonSerializable" href="../interfaces/JsonSerializable.xhtml">JsonSerializable</a>,<a title="ArrayAccess" href="../interfaces/ArrayAccess.xhtml">ArrayAccess</a>,<a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>,<a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title=""/> <a href="#members">$data</a>;
+                    </li><li>protected static array <a href="#members">$instances</a> =
+                        ;
+                    </li><li>public string <a href="#members">$separator</a> =
+                        '.';
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/__construct.xhtml">__construct</a>()
+                    </li><li>public Registry <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/__clone.xhtml">__clone</a>()
+                    </li><li>public string <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/__toString.xhtml">__toString</a>()
+                    </li><li>public integer <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/count.xhtml">count</a>()
+                    </li><li>public  <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/jsonSerialize.xhtml">jsonSerialize</a>()
+                    </li><li>public mixed <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/def.xhtml">def</a>()
+                    </li><li>public boolean <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/exists.xhtml">exists</a>()
+                    </li><li>public mixed <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/get.xhtml">get</a>()
+                    </li><li>public static Registry <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/getInstance.xhtml">getInstance</a>()
+                    </li><li>public ArrayIterator <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/getIterator.xhtml">getIterator</a>()
+                    </li><li>public Registry <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadArray.xhtml">loadArray</a>()
+                    </li><li>public Registry <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadObject.xhtml">loadObject</a>()
+                    </li><li>public Registry <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadFile.xhtml">loadFile</a>()
+                    </li><li>public Registry <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadString.xhtml">loadString</a>()
+                    </li><li>public Registry <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/merge.xhtml">merge</a>()
+                    </li><li>public Registry|null <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/extract.xhtml">extract</a>()
+                    </li><li>public boolean <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetExists.xhtml">offsetExists</a>()
+                    </li><li>public mixed <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetGet.xhtml">offsetGet</a>()
+                    </li><li>public void <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetSet.xhtml">offsetSet</a>()
+                    </li><li>public void <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetUnset.xhtml">offsetUnset</a>()
+                    </li><li>public mixed <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/set.xhtml">set</a>()
+                    </li><li>public mixed <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/append.xhtml">append</a>()
+                    </li><li>public array <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toArray.xhtml">toArray</a>()
+                    </li><li>public  <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toObject.xhtml">toObject</a>()
+                    </li><li>public string <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toString.xhtml">toString</a>()
+                    </li><li>protected void <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/bindData.xhtml">bindData</a>()
+                    </li><li>protected array <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/asArray.xhtml">asArray</a>()
+                    </li><li>public array <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/flatten.xhtml">flatten</a>()
+                    </li><li>protected void <a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toFlatten.xhtml">toFlatten</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JsonSerializable" href="../interfaces/JsonSerializable.xhtml">JsonSerializable</a>
+            </li>
+            <li>
+              <a title="ArrayAccess" href="../interfaces/ArrayAccess.xhtml">ArrayAccess</a>
+            </li>
+            <li>
+              <a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
+            </li>
+            <li>
+              <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="data"><strong>$data</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Registry Object</span></li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array<br/><span class="indent">Registry instances container.</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="separator"><strong>$separator</strong>
+                —
+                string<br/><span class="indent">Path separator</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="asArray"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/asArray.xhtml">asArray()</a>
+                — Method to recursively convert an object of data to an array.</li>
+            <li id="bindData"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/bindData.xhtml">bindData()</a>
+                — Method to recursively bind data to a parent object.</li>
+            <li id="toFlatten"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toFlatten.xhtml">toFlatten()</a>
+                — Method to recursively convert data to one dimension array.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="__clone"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/__clone.xhtml">__clone()</a>
+                — Magic function to clone the registry object.</li>
+            <li id="__toString"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/__toString.xhtml">__toString()</a>
+                — Magic function to render this object as a string using default args of toString method.</li>
+            <li id="append"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/append.xhtml">append()</a>
+                — Append value to a path in registry</li>
+            <li id="count"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/count.xhtml">count()</a>
+                — Count elements of the data object</li>
+            <li id="def"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/def.xhtml">def()</a>
+                — Sets a default value if not already assigned.</li>
+            <li id="exists"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/exists.xhtml">exists()</a>
+                — Check if a registry path exists.</li>
+            <li id="extract"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/extract.xhtml">extract()</a>
+                — Method to extract a sub-registry from path</li>
+            <li id="flatten"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/flatten.xhtml">flatten()</a>
+                — Dump to one dimension array.</li>
+            <li id="get"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/get.xhtml">get()</a>
+                — Get a registry value.</li>
+            <li id="getInstance"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/getInstance.xhtml">getInstance()</a>
+                — Returns a reference to a global Registry object, only creating it if it doesn't already exist.</li>
+            <li id="getIterator"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/getIterator.xhtml">getIterator()</a>
+                — Gets this object represented as an ArrayIterator.</li>
+            <li id="jsonSerialize"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/jsonSerialize.xhtml">jsonSerialize()</a>
+                — Implementation for the JsonSerializable interface.</li>
+            <li id="loadArray"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadArray.xhtml">loadArray()</a>
+                — Load an associative array of values into the default namespace</li>
+            <li id="loadFile"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadFile.xhtml">loadFile()</a>
+                — Load the contents of a file into the registry</li>
+            <li id="loadObject"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadObject.xhtml">loadObject()</a>
+                — Load the public variables of the object into the default namespace.</li>
+            <li id="loadString"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/loadString.xhtml">loadString()</a>
+                — Load a string into the registry</li>
+            <li id="merge"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/merge.xhtml">merge()</a>
+                — Merge a Registry object into this one</li>
+            <li id="offsetExists"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetExists.xhtml">offsetExists()</a>
+                — Checks whether an offset exists in the iterator.</li>
+            <li id="offsetGet"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetGet.xhtml">offsetGet()</a>
+                — Gets an offset in the iterator.</li>
+            <li id="offsetSet"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetSet.xhtml">offsetSet()</a>
+                — Sets an offset in the iterator.</li>
+            <li id="offsetUnset"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/offsetUnset.xhtml">offsetUnset()</a>
+                — Unsets an offset in the iterator.</li>
+            <li id="set"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/set.xhtml">set()</a>
+                — Set a registry value.</li>
+            <li id="toArray"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toArray.xhtml">toArray()</a>
+                — Transforms a namespace to an array</li>
+            <li id="toObject"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toObject.xhtml">toObject()</a>
+                — Transforms a namespace to an object</li>
+            <li id="toString"><a title="Joomla\Registry\Registry" href="../classes/Joomla_Registry_Registry/toString.xhtml">toString()</a>
+                — Get a namespace in a given string format</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFRenderAbstract</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFRenderAbstract</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/render/abstract.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFRenderAbstract</h1>
+        <h4>Abstract view renderer class. The renderer is what turns XML view templates into actual HTML code, renders the submenu links and potentially wraps the HTML output in a div with a component-specific ID.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFRenderAbstract
+            {<br/><ul class="none"><li>// members</li><li>protected integer <a href="#members">$priority</a> =
+                        50;
+                    </li><li>protected boolean <a href="#members">$enabled</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public  <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/getInformation.xhtml">getInformation</a>()
+                    </li><li>public abstract void <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/preRender.xhtml">preRender</a>()
+                    </li><li>public abstract void <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/postRender.xhtml">postRender</a>()
+                    </li><li>public string <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderForm.xhtml">renderForm</a>()
+                    </li><li>public void <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderCategoryLinkbar.xhtml">renderCategoryLinkbar</a>()
+                    </li><li>protected abstract string <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormBrowse.xhtml">renderFormBrowse</a>()
+                    </li><li>protected abstract string <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormRead.xhtml">renderFormRead</a>()
+                    </li><li>protected abstract string <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormEdit.xhtml">renderFormEdit</a>()
+                    </li><li>protected abstract string <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormRaw.xhtml">renderFormRaw</a>()
+                    </li><li>protected string <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFieldset.xhtml">renderFieldset</a>()
+                    </li><li>protected string <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFieldsetLabel.xhtml">renderFieldsetLabel</a>()
+                    </li><li>protected boolean <a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/isTabFieldset.xhtml">isTabFieldset</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">235+</td>
+            <td>: Convert to an abstract method or interface at FOF3</td>
+          </tr>
+          <tr>
+            <td class="nummeric">251+</td>
+            <td>: Convert to an abstract method or interface at FOF3</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="enabled">
+              <strong>$enabled</strong>
+              <br/>
+              <span class="indent">@var int Is this renderer enabled?</span>
+            </li>
+            <li id="priority">
+              <strong>$priority</strong>
+              <br/>
+              <span class="indent">@var int Priority of this renderer. Higher means more important</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="isTabFieldset"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/isTabFieldset.xhtml">isTabFieldset()</a>
+                — Checks if the fieldset defines a tab pane</li>
+            <li id="renderFieldset"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFieldset.xhtml">renderFieldset()</a>
+                — Renders a raw fieldset of a FOFForm and returns the corresponding HTML</li>
+            <li id="renderFieldsetLabel"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFieldsetLabel.xhtml">renderFieldsetLabel()</a>
+                — Renders a label for a fieldset.</li>
+            <li id="renderFormBrowse"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormBrowse.xhtml">renderFormBrowse()</a>
+                — Renders a FOFForm for a Browse view and returns the corresponding HTML</li>
+            <li id="renderFormEdit"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormEdit.xhtml">renderFormEdit()</a>
+                — Renders a FOFForm for an Edit view and returns the corresponding HTML</li>
+            <li id="renderFormRaw"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormRaw.xhtml">renderFormRaw()</a>
+                — Renders a raw FOFForm and returns the corresponding HTML</li>
+            <li id="renderFormRead"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderFormRead.xhtml">renderFormRead()</a>
+                — Renders a FOFForm for a Read view and returns the corresponding HTML</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getInformation"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/getInformation.xhtml">getInformation()</a>
+                — Returns the information about this renderer</li>
+            <li id="postRender"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/postRender.xhtml">postRender()</a>
+                — Echoes any HTML to show after the view template</li>
+            <li id="preRender"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/preRender.xhtml">preRender()</a>
+                — Echoes any HTML to show before the view template</li>
+            <li id="renderCategoryLinkbar"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderCategoryLinkbar.xhtml">renderCategoryLinkbar()</a>
+                — Renders the submenu (link bar) for a category view when it is used in a extension</li>
+            <li id="renderForm"><a title="FOFRenderAbstract" href="../classes/FOFRenderAbstract/renderForm.xhtml">renderForm()</a>
+                — Renders a FOFForm and returns the corresponding HTML</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

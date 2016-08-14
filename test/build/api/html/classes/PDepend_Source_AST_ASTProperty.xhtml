@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\AST\ASTProperty</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_AST">PDepend\Source\AST</a>
+          </li>
+          <li class="separator">ASTProperty</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/ASTProperty.php.xhtml#line53">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\AST\</small>ASTProperty</h1>
+        <h4>This code class represents a class property.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ASTProperty
+                extends <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact.xhtml">AbstractASTArtifact</a>
+            {<br/><ul class="none"><li>// members</li><li>private <span title="PDepend\Source\AST\ASTClass">ASTClass</span> <a href="#members">$declaringClass</a> =
+                        null;
+                    </li><li>private <span title="\PDepend\Source\AST\ASTFieldDeclaration">ASTFieldDeclaration</span> <a href="#members">$fieldDeclaration</a> =
+                        null;
+                    </li><li>private <span title="\PDepend\Source\AST\ASTVariableDeclarator">ASTVariableDeclarator</span> <a href="#members">$variableDeclarator</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getName.xhtml">getName</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getModifiers.xhtml">getModifiers</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isPublic.xhtml">isPublic</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isProtected.xhtml">isProtected</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isPrivate.xhtml">isPrivate</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isStatic.xhtml">isStatic</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isArray.xhtml">isArray</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isScalar.xhtml">isScalar</a>()
+                    </li><li>public AbstractASTClassOrInterface <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getClass.xhtml">getClass</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getComment.xhtml">getComment</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getStartLine.xhtml">getStartLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getStartColumn.xhtml">getStartColumn</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getEndLine.xhtml">getEndLine</a>()
+                    </li><li>public integer <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getEndColumn.xhtml">getEndColumn</a>()
+                    </li><li>public AbstractASTClassOrInterface <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getDeclaringClass.xhtml">getDeclaringClass</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/setDeclaringClass.xhtml">setDeclaringClass</a>()
+                    </li><li>public boolean <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isDefaultValueAvailable.xhtml">isDefaultValueAvailable</a>()
+                    </li><li>public mixed <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getDefaultValue.xhtml">getDefaultValue</a>()
+                    </li><li>public void <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/accept.xhtml">accept</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/__toString.xhtml">__toString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\AST\AbstractASTArtifact" href="../classes/PDepend_Source_AST_AbstractASTArtifact.xhtml">PDepend\Source\AST\AbstractASTArtifact</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="declaringClass"><strong>$declaringClass</strong>
+                —
+                <a title="PDepend\Source\AST\ASTClass" href="../classes/PDepend_Source_AST_ASTClass.xhtml">PDepend\Source\AST\ASTClass</a><br/><span class="indent">The parent type object.</span></li>
+            <li id="fieldDeclaration"><strong>$fieldDeclaration</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTFieldDeclaration" href="../classes/_PDepend_Source_AST_ASTFieldDeclaration.xhtml">\PDepend\Source\AST\ASTFieldDeclaration</a><br/><span class="indent">The wrapped field declaration instance.</span></li>
+            <li id="variableDeclarator"><strong>$variableDeclarator</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTVariableDeclarator" href="../classes/_PDepend_Source_AST_ASTVariableDeclarator.xhtml">\PDepend\Source\AST\ASTVariableDeclarator</a><br/><span class="indent">The wrapped variable declarator instance.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/__construct.xhtml">__construct()</a>
+                — Constructs a new item for the given field declaration and variable declarator.</li>
+            <li id="__toString"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/__toString.xhtml">__toString()</a>
+                — This method returns a string representation of this parameter.</li>
+            <li id="accept"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/accept.xhtml">accept()</a>
+                — ASTVisitor method for node tree traversal.</li>
+            <li id="getClass"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getClass.xhtml">getClass()</a>
+                — Returns the type of this property. This method will return &lt;b&gt;null&lt;/b&gt; for all scalar type, only class properties will have a type.</li>
+            <li id="getComment"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getComment.xhtml">getComment()</a>
+                — Returns the doc comment for this item or &lt;b&gt;null&lt;/b&gt;.</li>
+            <li id="getDeclaringClass"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getDeclaringClass.xhtml">getDeclaringClass()</a>
+                — This method will return the class where this property was declared.</li>
+            <li id="getDefaultValue"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getDefaultValue.xhtml">getDefaultValue()</a>
+                — This method will return the default value for this property instance or &lt;b&gt;null&lt;/b&gt; when this property was only declared and not initialized.</li>
+            <li id="getEndColumn"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getEndColumn.xhtml">getEndColumn()</a>
+                — Returns the column number where the property declaration ends.</li>
+            <li id="getEndLine"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getEndLine.xhtml">getEndLine()</a>
+                — Returns the line number where the property declaration ends.</li>
+            <li id="getModifiers"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getModifiers.xhtml">getModifiers()</a>
+                — This method returns a OR combined integer of the declared modifiers for this property.</li>
+            <li id="getName"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getName.xhtml">getName()</a>
+                — Returns the item name.</li>
+            <li id="getStartColumn"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getStartColumn.xhtml">getStartColumn()</a>
+                — Returns the column number where the property declaration starts.</li>
+            <li id="getStartLine"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/getStartLine.xhtml">getStartLine()</a>
+                — Returns the line number where the property declaration can be found.</li>
+            <li id="isArray"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isArray.xhtml">isArray()</a>
+                — This method will return &lt;b&gt;true&lt;/b&gt; when this property doc comment contains an array type hint, otherwise the it will return &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="isDefaultValueAvailable"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isDefaultValueAvailable.xhtml">isDefaultValueAvailable()</a>
+                — This method will return &lt;b&gt;true&lt;/b&gt; when the parameter declaration contains a default value.</li>
+            <li id="isPrivate"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isPrivate.xhtml">isPrivate()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; if this node is marked as private, otherwise the returned value will be &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="isProtected"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isProtected.xhtml">isProtected()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; if this node is marked as protected, otherwise the returned value will be &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="isPublic"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isPublic.xhtml">isPublic()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; if this node is marked as public, otherwise the returned value will be &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="isScalar"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isScalar.xhtml">isScalar()</a>
+                — This method will return &lt;b&gt;true&lt;/b&gt; when this property doc comment contains a primitive type hint, otherwise the it will return &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="isStatic"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/isStatic.xhtml">isStatic()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; when this node is declared as static, otherwise the returned value will be &lt;b&gt;false&lt;/b&gt;.</li>
+            <li id="setDeclaringClass"><a title="PDepend\Source\AST\ASTProperty" href="../classes/PDepend_Source_AST_ASTProperty/setDeclaringClass.xhtml">setDeclaringClass()</a>
+                — Sets the declaring class object.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JTableCorecontent</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JTableCorecontent</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/table/corecontent.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JTableCorecontent</h1>
+        <h4>Core content table</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JTableCorecontent
+                extends <a title="JTable" href="../classes/JTable.xhtml">JTable</a>
+            {<br/><ul class="none"><li>// methods</li><li>public void <a title="JTableCorecontent" href="../classes/JTableCorecontent/__construct.xhtml">__construct</a>()
+                    </li><li>public mixed <a title="JTableCorecontent" href="../classes/JTableCorecontent/bind.xhtml">bind</a>()
+                    </li><li>public boolean <a title="JTableCorecontent" href="../classes/JTableCorecontent/check.xhtml">check</a>()
+                    </li><li>public boolean <a title="JTableCorecontent" href="../classes/JTableCorecontent/delete.xhtml">delete</a>()
+                    </li><li>public boolean <a title="JTableCorecontent" href="../classes/JTableCorecontent/deleteByContentId.xhtml">deleteByContentId</a>()
+                    </li><li>public boolean <a title="JTableCorecontent" href="../classes/JTableCorecontent/store.xhtml">store</a>()
+                    </li><li>protected boolean <a title="JTableCorecontent" href="../classes/JTableCorecontent/storeUcmBase.xhtml">storeUcmBase</a>()
+                    </li><li>public boolean <a title="JTableCorecontent" href="../classes/JTableCorecontent/publish.xhtml">publish</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JTable" href="../classes/JTable.xhtml">JTable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="storeUcmBase"><a title="JTableCorecontent" href="../classes/JTableCorecontent/storeUcmBase.xhtml">storeUcmBase()</a>
+                — Insert or update row in ucm_base table</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JTableCorecontent" href="../classes/JTableCorecontent/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="bind"><a title="JTableCorecontent" href="../classes/JTableCorecontent/bind.xhtml">bind()</a>
+                — Overloaded bind function</li>
+            <li id="check"><a title="JTableCorecontent" href="../classes/JTableCorecontent/check.xhtml">check()</a>
+                — Overloaded check function</li>
+            <li id="delete"><a title="JTableCorecontent" href="../classes/JTableCorecontent/delete.xhtml">delete()</a>
+                — Override JTable delete method to include deleting corresponding row from #__ucm_base.</li>
+            <li id="deleteByContentId"><a title="JTableCorecontent" href="../classes/JTableCorecontent/deleteByContentId.xhtml">deleteByContentId()</a>
+                — Method to delete a row from the #__ucm_content table by content_item_id.</li>
+            <li id="publish"><a title="JTableCorecontent" href="../classes/JTableCorecontent/publish.xhtml">publish()</a>
+                — Method to set the publishing state for a row or list of rows in the database table. The method respects checked out rows by other users and will attempt to checkin rows that it can after adjustments are made.</li>
+            <li id="store"><a title="JTableCorecontent" href="../classes/JTableCorecontent/store.xhtml">store()</a>
+                — Overrides JTable::store to set modified data and user id.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

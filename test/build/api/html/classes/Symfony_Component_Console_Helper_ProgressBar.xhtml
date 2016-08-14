@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\Console\Helper\ProgressBar</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_Console_Helper">Symfony\Component\Console\Helper</a>
+          </li>
+          <li class="separator">ProgressBar</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/console/Helper/ProgressBar.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\Console\Helper\</small>ProgressBar</h1>
+        <h4>The ProgressBar provides helpers to display progress output.</h4>
+        <p/>
+        <ul>
+          <li>Author: Fabien Potencier &lt;fabien@symfony.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ProgressBar
+            {<br/><ul class="none"><li>// members</li><li>private integer <a href="#members">$barWidth</a> =
+                        28;
+                    </li><li>private  <a href="#members">$barChar</a>;
+                    </li><li>private string <a href="#members">$emptyBarChar</a> =
+                        '-';
+                    </li><li>private string <a href="#members">$progressChar</a> =
+                        '&gt;';
+                    </li><li>private  <a href="#members">$format</a>;
+                    </li><li>private  <a href="#members">$internalFormat</a>;
+                    </li><li>private integer <a href="#members">$redrawFreq</a> =
+                        1;
+                    </li><li>private <span title="Symfony\Component\Console\Output\OutputInterface">OutputInterface</span> <a href="#members">$output</a>;
+                    </li><li>private integer <a href="#members">$step</a> =
+                        0;
+                    </li><li>private  <a href="#members">$max</a>;
+                    </li><li>private  <a href="#members">$startTime</a>;
+                    </li><li>private  <a href="#members">$stepWidth</a>;
+                    </li><li>private float <a href="#members">$percent</a> =
+                        0.0;
+                    </li><li>private  <a href="#members">$formatLineCount</a>;
+                    </li><li>private array <a href="#members">$messages</a> =
+                        ;
+                    </li><li>private boolean <a href="#members">$overwrite</a> =
+                        true;
+                    </li><li>private boolean <a href="#members">$firstRun</a> =
+                        true;
+                    </li><li>private static  <a href="#members">$formatters</a>;
+                    </li><li>private static  <a href="#members">$formats</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/__construct.xhtml">__construct</a>()
+                    </li><li>public static void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setPlaceholderFormatterDefinition.xhtml">setPlaceholderFormatterDefinition</a>()
+                    </li><li>public static callable|null <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getPlaceholderFormatterDefinition.xhtml">getPlaceholderFormatterDefinition</a>()
+                    </li><li>public static void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setFormatDefinition.xhtml">setFormatDefinition</a>()
+                    </li><li>public static string|null <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getFormatDefinition.xhtml">getFormatDefinition</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setMessage.xhtml">setMessage</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getMessage.xhtml">getMessage</a>()
+                    </li><li>public int <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getStartTime.xhtml">getStartTime</a>()
+                    </li><li>public int <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getMaxSteps.xhtml">getMaxSteps</a>()
+                    </li><li>public int <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getProgress.xhtml">getProgress</a>()
+                    </li><li>private int <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getStepWidth.xhtml">getStepWidth</a>()
+                    </li><li>public float <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getProgressPercent.xhtml">getProgressPercent</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setBarWidth.xhtml">setBarWidth</a>()
+                    </li><li>public int <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getBarWidth.xhtml">getBarWidth</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setBarCharacter.xhtml">setBarCharacter</a>()
+                    </li><li>public string <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getBarCharacter.xhtml">getBarCharacter</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setEmptyBarCharacter.xhtml">setEmptyBarCharacter</a>()
+                    </li><li>public string <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getEmptyBarCharacter.xhtml">getEmptyBarCharacter</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setProgressCharacter.xhtml">setProgressCharacter</a>()
+                    </li><li>public string <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getProgressCharacter.xhtml">getProgressCharacter</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setFormat.xhtml">setFormat</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setRedrawFrequency.xhtml">setRedrawFrequency</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/start.xhtml">start</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/advance.xhtml">advance</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setOverwrite.xhtml">setOverwrite</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setProgress.xhtml">setProgress</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/finish.xhtml">finish</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/display.xhtml">display</a>()
+                    </li><li>public void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/clear.xhtml">clear</a>()
+                    </li><li>private void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setRealFormat.xhtml">setRealFormat</a>()
+                    </li><li>private void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setMaxSteps.xhtml">setMaxSteps</a>()
+                    </li><li>private void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/overwrite.xhtml">overwrite</a>()
+                    </li><li>private void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/determineBestFormat.xhtml">determineBestFormat</a>()
+                    </li><li>private static void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/initPlaceholderFormatters.xhtml">initPlaceholderFormatters</a>()
+                    </li><li>private static void <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/initFormats.xhtml">initFormats</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="barChar">
+              <strong>$barChar</strong>
+            </li>
+            <li id="barWidth">
+              <strong>$barWidth</strong>
+            </li>
+            <li id="emptyBarChar">
+              <strong>$emptyBarChar</strong>
+            </li>
+            <li id="firstRun">
+              <strong>$firstRun</strong>
+            </li>
+            <li id="format">
+              <strong>$format</strong>
+            </li>
+            <li id="formatLineCount">
+              <strong>$formatLineCount</strong>
+            </li>
+            <li id="formats">
+              <strong>$formats</strong>
+            </li>
+            <li id="formatters">
+              <strong>$formatters</strong>
+            </li>
+            <li id="internalFormat">
+              <strong>$internalFormat</strong>
+            </li>
+            <li id="max">
+              <strong>$max</strong>
+            </li>
+            <li id="messages">
+              <strong>$messages</strong>
+            </li>
+            <li id="output"><strong>$output</strong>
+                —
+                <a title="Symfony\Component\Console\Output\OutputInterface" href="../classes/Symfony_Component_Console_Output_OutputInterface.xhtml">Symfony\Component\Console\Output\OutputInterface</a></li>
+            <li id="overwrite">
+              <strong>$overwrite</strong>
+            </li>
+            <li id="percent">
+              <strong>$percent</strong>
+            </li>
+            <li id="progressChar">
+              <strong>$progressChar</strong>
+            </li>
+            <li id="redrawFreq">
+              <strong>$redrawFreq</strong>
+            </li>
+            <li id="startTime">
+              <strong>$startTime</strong>
+            </li>
+            <li id="step">
+              <strong>$step</strong>
+            </li>
+            <li id="stepWidth">
+              <strong>$stepWidth</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="determineBestFormat">
+              <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/determineBestFormat.xhtml">determineBestFormat()</a>
+            </li>
+            <li id="getStepWidth"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getStepWidth.xhtml">getStepWidth()</a>
+                — Gets the progress bar step width.</li>
+            <li id="initFormats">
+              <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/initFormats.xhtml">initFormats()</a>
+            </li>
+            <li id="initPlaceholderFormatters">
+              <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/initPlaceholderFormatters.xhtml">initPlaceholderFormatters()</a>
+            </li>
+            <li id="overwrite"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/overwrite.xhtml">overwrite()</a>
+                — Overwrites a previous message to the output.</li>
+            <li id="setMaxSteps"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setMaxSteps.xhtml">setMaxSteps()</a>
+                — Sets the progress bar maximal steps.</li>
+            <li id="setRealFormat"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setRealFormat.xhtml">setRealFormat()</a>
+                — Sets the progress bar format.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="advance"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/advance.xhtml">advance()</a>
+                — Advances the progress output X steps.</li>
+            <li id="clear"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/clear.xhtml">clear()</a>
+                — Removes the progress bar from the current line.</li>
+            <li id="display"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/display.xhtml">display()</a>
+                — Outputs the current progress string.</li>
+            <li id="finish"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/finish.xhtml">finish()</a>
+                — Finishes the progress output.</li>
+            <li id="getBarCharacter"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getBarCharacter.xhtml">getBarCharacter()</a>
+                — Gets the bar character.</li>
+            <li id="getBarWidth"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getBarWidth.xhtml">getBarWidth()</a>
+                — Gets the progress bar width.</li>
+            <li id="getEmptyBarCharacter"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getEmptyBarCharacter.xhtml">getEmptyBarCharacter()</a>
+                — Gets the empty bar character.</li>
+            <li id="getFormatDefinition"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getFormatDefinition.xhtml">getFormatDefinition()</a>
+                — Gets the format for a given name.</li>
+            <li id="getMaxSteps"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getMaxSteps.xhtml">getMaxSteps()</a>
+                — Gets the progress bar maximal steps.</li>
+            <li id="getMessage">
+              <a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getMessage.xhtml">getMessage()</a>
+            </li>
+            <li id="getPlaceholderFormatterDefinition"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getPlaceholderFormatterDefinition.xhtml">getPlaceholderFormatterDefinition()</a>
+                — Gets the placeholder formatter for a given name.</li>
+            <li id="getProgress"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getProgress.xhtml">getProgress()</a>
+                — Gets the current step position.</li>
+            <li id="getProgressCharacter"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getProgressCharacter.xhtml">getProgressCharacter()</a>
+                — Gets the progress bar character.</li>
+            <li id="getProgressPercent"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getProgressPercent.xhtml">getProgressPercent()</a>
+                — Gets the current progress bar percent.</li>
+            <li id="getStartTime"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/getStartTime.xhtml">getStartTime()</a>
+                — Gets the progress bar start time.</li>
+            <li id="setBarCharacter"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setBarCharacter.xhtml">setBarCharacter()</a>
+                — Sets the bar character.</li>
+            <li id="setBarWidth"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setBarWidth.xhtml">setBarWidth()</a>
+                — Sets the progress bar width.</li>
+            <li id="setEmptyBarCharacter"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setEmptyBarCharacter.xhtml">setEmptyBarCharacter()</a>
+                — Sets the empty bar character.</li>
+            <li id="setFormat"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setFormat.xhtml">setFormat()</a>
+                — Sets the progress bar format.</li>
+            <li id="setFormatDefinition"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setFormatDefinition.xhtml">setFormatDefinition()</a>
+                — Sets a format for a given name.</li>
+            <li id="setMessage"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setMessage.xhtml">setMessage()</a>
+                — Associates a text with a named placeholder.</li>
+            <li id="setOverwrite"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setOverwrite.xhtml">setOverwrite()</a>
+                — Sets whether to overwrite the progressbar, false for new line.</li>
+            <li id="setPlaceholderFormatterDefinition"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setPlaceholderFormatterDefinition.xhtml">setPlaceholderFormatterDefinition()</a>
+                — Sets a placeholder formatter for a given name.</li>
+            <li id="setProgress"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setProgress.xhtml">setProgress()</a>
+                — Sets the current progress.</li>
+            <li id="setProgressCharacter"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setProgressCharacter.xhtml">setProgressCharacter()</a>
+                — Sets the progress bar character.</li>
+            <li id="setRedrawFrequency"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/setRedrawFrequency.xhtml">setRedrawFrequency()</a>
+                — Sets the redraw frequency.</li>
+            <li id="start"><a title="Symfony\Component\Console\Helper\ProgressBar" href="../classes/Symfony_Component_Console_Helper_ProgressBar/start.xhtml">start()</a>
+                — Starts the progress output.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

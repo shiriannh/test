@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPUnit_Extensions_PhptTestCase</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PHPUnit_Extensions_PhptTestCase</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/phpunit/src/Extensions/PhptTestCase.php.xhtml#line16">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PHPUnit_Extensions_PhptTestCase</h1>
+        <h4>Runner for PHPT test cases.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPUnit_Extensions_PhptTestCase
+                implements
+                <a title="PHPUnit_Framework_Test" href="../interfaces/PHPUnit_Framework_Test.xhtml">PHPUnit_Framework_Test</a>,<a title="PHPUnit_Framework_SelfDescribing" href="../interfaces/PHPUnit_Framework_SelfDescribing.xhtml">PHPUnit_Framework_SelfDescribing</a>
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$filename</a>;
+                    </li><li>private <span title="PHPUnit_Util_PHP">PHPUnit_Util_PHP</span> <a href="#members">$phpUtil</a>;
+                    </li><li>private array <a href="#members">$settings</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/__construct.xhtml">__construct</a>()
+                    </li><li>public int <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/count.xhtml">count</a>()
+                    </li><li>private void <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/assertPhptExpectation.xhtml">assertPhptExpectation</a>()
+                    </li><li>public PHPUnit_Framework_TestResult <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/run.xhtml">run</a>()
+                    </li><li>public string <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/getName.xhtml">getName</a>()
+                    </li><li>public string <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/toString.xhtml">toString</a>()
+                    </li><li>private array <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/parse.xhtml">parse</a>()
+                    </li><li>private string <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/render.xhtml">render</a>()
+                    </li><li>private array <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/cleanupForCoverage.xhtml">cleanupForCoverage</a>()
+                    </li><li>protected array <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/parseIniSection.xhtml">parseIniSection</a>()
+                    </li><li>protected void <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/parseEnvSection.xhtml">parseEnvSection</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PHPUnit_Framework_Test" href="../interfaces/PHPUnit_Framework_Test.xhtml">PHPUnit_Framework_Test</a>
+            </li>
+            <li>
+              <a title="PHPUnit_Framework_SelfDescribing" href="../interfaces/PHPUnit_Framework_SelfDescribing.xhtml">PHPUnit_Framework_SelfDescribing</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="filename"><strong>$filename</strong>
+                —
+                string</li>
+            <li id="phpUtil"><strong>$phpUtil</strong>
+                —
+                <a title="PHPUnit_Util_PHP" href="../classes/PHPUnit_Util_PHP.xhtml">PHPUnit_Util_PHP</a></li>
+            <li id="settings"><strong>$settings</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="assertPhptExpectation">
+              <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/assertPhptExpectation.xhtml">assertPhptExpectation()</a>
+            </li>
+            <li id="cleanupForCoverage">
+              <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/cleanupForCoverage.xhtml">cleanupForCoverage()</a>
+            </li>
+            <li id="parse">
+              <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/parse.xhtml">parse()</a>
+            </li>
+            <li id="render">
+              <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/render.xhtml">render()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="parseEnvSection">
+              <a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/parseEnvSection.xhtml">parseEnvSection()</a>
+            </li>
+            <li id="parseIniSection"><a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/parseIniSection.xhtml">parseIniSection()</a>
+                — Parse --INI-- section key value pairs and return as array.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/__construct.xhtml">__construct()</a>
+                — Constructs a test case with the given filename.</li>
+            <li id="count"><a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/count.xhtml">count()</a>
+                — Counts the number of test cases executed by run(TestResult result).</li>
+            <li id="getName"><a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/getName.xhtml">getName()</a>
+                — Returns the name of the test case.</li>
+            <li id="run"><a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/run.xhtml">run()</a>
+                — Runs a test and collects its result in a TestResult instance.</li>
+            <li id="toString"><a title="PHPUnit_Extensions_PhptTestCase" href="../classes/PHPUnit_Extensions_PhptTestCase/toString.xhtml">toString()</a>
+                — Returns a string representation of the test case.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

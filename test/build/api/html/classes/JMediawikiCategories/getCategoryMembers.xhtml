@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JMediawikiCategories" href="../../classes/JMediawikiCategories.xhtml">JMediawikiCategories</a>
+          </li>
+          <li class="separator">getCategoryMembers</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="#throws">Throws</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/mediawiki/categories.php.xhtml#line157">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JMediawikiCategories::</small>getCategoryMembers</h1>
+        <h4>Method to get information about the pages within a category</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function getCategoryMembers([string
+        $cmtitle = null,
+            [string
+        $cmpageid = null,
+            [string
+        $cmlimit = null,
+            [array
+        $cmprop = null,
+            [array
+        $cmnamespace = null,
+            [array
+        $cmtype = null,
+            [string
+        $cmstart = null,
+            [string
+        $cmend = null,
+            [string
+        $cmstartsortkey = null,
+            [string
+        $cmendsortkey = null,
+            [string
+        $cmstartsortkeyprefix = null,
+            [string
+        $cmendsortkeyprefix = null,
+            [string
+        $cmsort = null,
+            [string
+        $cmdir = null,
+            [string
+        $cmcontinue = null]]]]]]]]]]]]]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$cmtitle</code>
+                —
+                string</dt>
+          <dd>The category title, must contain 'Category:' prefix, cannot be used together with $cmpageid</dd>
+          <dt><code>$cmpageid</code>
+                —
+                string</dt>
+          <dd>The category's page ID, cannot be used together with $cmtitle</dd>
+          <dt><code>$cmlimit</code>
+                —
+                string</dt>
+          <dd>Maximum number of pages to retrieve</dd>
+          <dt><code>$cmprop</code>
+                —
+                array</dt>
+          <dd>Array of properties to retrieve</dd>
+          <dt><code>$cmnamespace</code>
+                —
+                array</dt>
+          <dd>Namespaces to retrieve pages from</dd>
+          <dt><code>$cmtype</code>
+                —
+                array</dt>
+          <dd>Array of category members to include, ignored if $cmsort is set to 'timestamp'</dd>
+          <dt><code>$cmstart</code>
+                —
+                string</dt>
+          <dd>Timestamp to start listing from, only used if $cmsort is set to 'timestamp'</dd>
+          <dt><code>$cmend</code>
+                —
+                string</dt>
+          <dd>Timestamp to end listing at, only used if $cmsort is set to 'timestamp'</dd>
+          <dt><code>$cmstartsortkey</code>
+                —
+                string</dt>
+          <dd>Hexadecimal key to start listing from, only used if $cmsort is set to 'sortkey'</dd>
+          <dt><code>$cmendsortkey</code>
+                —
+                string</dt>
+          <dd>Hexadecimal key to end listing at, only used if $cmsort is set to 'sortkey'</dd>
+          <dt><code>$cmstartsortkeyprefix</code>
+                —
+                string</dt>
+          <dd>Hexadecimal key prefix to start listing from, only used if $cmsort is set to 'sortkey',<br/>overrides $cmstartsortkey</dd>
+          <dt><code>$cmendsortkeyprefix</code>
+                —
+                string</dt>
+          <dd>Hexadecimal key prefix to end listing before, only used if $cmsort is set to 'sortkey',<br/>overrides $cmendsortkey</dd>
+          <dt><code>$cmsort</code>
+                —
+                string</dt>
+          <dd>Property to sort by</dd>
+          <dt><code>$cmdir</code>
+                —
+                string</dt>
+          <dd>Direction to sort in</dd>
+          <dt><code>$cmcontinue</code>
+                —
+                string</dt>
+          <dd>Used to continue a previous request</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt/>
+          <dd/>
+        </dl>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="RuntimeException" href="../../classes/RuntimeException.xhtml">RuntimeException</a>
+            </code>
+          </dt>
+          <dd/>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

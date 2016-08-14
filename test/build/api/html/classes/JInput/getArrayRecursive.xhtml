@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JInput" href="../../classes/JInput.xhtml">JInput</a>
+          </li>
+          <li class="separator">getArrayRecursive</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/input/input.php.xhtml#line214">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JInput::</small>getArrayRecursive</h1>
+        <h4>Gets an array of values from the request.</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>protected function getArrayRecursive([array
+        $vars = ,
+            [mixed
+        $datasource = null,
+            [string
+        $defaultFilter = 'unknown',
+            [boolean
+        $recursion = false]]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$vars</code>
+                —
+                array</dt>
+          <dd>Associative array of keys and filter types to apply.<br/>If empty and datasource is null, all the input data will be returned<br/>but filtered using the filter given by the parameter defaultFilter in<br/>                                 JFilterInput::clean.</dd>
+          <dt><code>$datasource</code>
+                —
+                mixed</dt>
+          <dd>Array to retrieve data from, or null.</dd>
+          <dt><code>$defaultFilter</code>
+                —
+                string</dt>
+          <dd>Default filter used in JFilterInput::clean if vars is empty and<br/>datasource is null. If 'unknown', the default case is used in<br/>                                 JFilterInput::clean.</dd>
+          <dt><code>$recursion</code>
+                —
+                boolean</dt>
+          <dd>Flag to indicate a recursive function call.<br/><br/><br/>      </dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>mixed</dt>
+          <dd>The filtered input data.</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

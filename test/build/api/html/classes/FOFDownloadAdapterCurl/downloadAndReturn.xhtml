@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="FOFDownloadAdapterCurl" href="../../classes/FOFDownloadAdapterCurl.xhtml">FOFDownloadAdapterCurl</a>
+          </li>
+          <li class="separator">downloadAndReturn</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="#throws">Throws</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/fof/download/adapter/curl.php.xhtml#line46">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>FOFDownloadAdapterCurl::</small>downloadAndReturn</h1>
+        <h4>Download a part (or the whole) of a remote URL and return the downloaded data. You are supposed to check the size of the returned data. If it's smaller than what you expected you've reached end of file. If it's empty you have tried reading past EOF. If it's larger than what you expected the server doesn't support chunk downloads.</h4>
+        <p>If this class' supportsChunkDownload returns false you should assume
+that the $from and $to parameters will be ignored.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function downloadAndReturn(string
+        $url,
+            [integer
+        $from = null,
+            [integer
+        $to = null,
+            [array
+        $params = ]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$url</code>
+                —
+                string</dt>
+          <dd>The remote file's URL</dd>
+          <dt><code>$from</code>
+                —
+                integer</dt>
+          <dd>Byte range to start downloading from. Use null for start of file.</dd>
+          <dt><code>$to</code>
+                —
+                integer</dt>
+          <dd>Byte range to stop downloading. Use null to download the entire file ($from is ignored)</dd>
+          <dt><code>$params</code>
+                —
+                array</dt>
+          <dd>Additional params that will be added before performing the download</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>string</dt>
+          <dd>The raw file data retrieved from the remote URL.</dd>
+        </dl>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="Exception" href="../../classes/Exception.xhtml">Exception</a>
+            </code>
+          </dt>
+          <dd>A generic exception is thrown on error</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

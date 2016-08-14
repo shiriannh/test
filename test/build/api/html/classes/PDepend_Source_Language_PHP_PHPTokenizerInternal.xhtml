@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\Language\PHP\PHPTokenizerInternal</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_Language_PHP">PDepend\Source\Language\PHP</a>
+          </li>
+          <li class="separator">PHPTokenizerInternal</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Language/PHP/PHPTokenizerInternal.php.xhtml#line162">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\Language\PHP\</small>PHPTokenizerInternal</h1>
+        <h4>This tokenizer uses the internal {@link token_get_all()} function as token stream generator.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPTokenizerInternal
+                implements
+                <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer.xhtml">Tokenizer</a>
+            {<br/><ul class="none"><li>// constants</li><li>const T_ELLIPSIS = 23006;</li></ul><ul class="none"><li>// members</li><li>protected static <span title="PDepend\Source\Language\PHP\array(integer=&gt;integer)">array(integer=&gt;integer)</span> <a href="#members">$tokenMap</a> =
+                        ;
+                    </li><li>protected static <span title="PDepend\Source\Language\PHP\array(string=&gt;integer)">array(string=&gt;integer)</span> <a href="#members">$literalMap</a> =
+                        ;
+                    </li><li>protected static <span title="PDepend\Source\Language\PHP\array(mixed=&gt;array)">array(mixed=&gt;array)</span> <a href="#members">$substituteTokens</a> =
+                        ;
+                    </li><li>protected static <span title="PDepend\Source\Language\PHP\array(integer=&gt;array)">array(integer=&gt;array)</span> <a href="#members">$alternativeMap</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$reductionMap</a> =
+                        ;
+                    </li><li>protected <span title="\PDepend\Source\AST\ASTCompilationUnit">ASTCompilationUnit</span> <a href="#members">$sourceFile</a> =
+                        '';
+                    </li><li>protected integer <a href="#members">$count</a> =
+                        0;
+                    </li><li>protected integer <a href="#members">$index</a> =
+                        0;
+                    </li><li>protected array <a href="#members">$tokens</a> =
+                        null;
+                    </li><li>private integer <a href="#members">$unknownTokenID</a> =
+                        1000;
+                    </li></ul><ul class="none"><li>// methods</li><li>public ASTCompilationUnit <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/getSourceFile.xhtml">getSourceFile</a>()
+                    </li><li>public void <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/setSourceFile.xhtml">setSourceFile</a>()
+                    </li><li>public Token|integer <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/next.xhtml">next</a>()
+                    </li><li>public integer <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/peek.xhtml">peek</a>()
+                    </li><li>public integer <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/peekNext.xhtml">peekNext</a>()
+                    </li><li>public integer <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/prev.xhtml">prev</a>()
+                    </li><li>private array(array) <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/substituteTokens.xhtml">substituteTokens</a>()
+                    </li><li>private void <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/tokenize.xhtml">tokenize</a>()
+                    </li><li>private string <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/consumeNonePhpTokens.xhtml">consumeNonePhpTokens</a>()
+                    </li><li>private array(integer <a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/generateUnknownToken.xhtml">generateUnknownToken</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer.xhtml">PDepend\Source\Tokenizer\Tokenizer</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="T_ELLIPSIS">T_ELLIPSIS</td>
+              <td>23006</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="unknownTokenID"><strong>$unknownTokenID</strong>
+                —
+                integer<br/><span class="indent">The next free identifier for unknown string tokens.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="alternativeMap"><strong>$alternativeMap</strong>
+                —
+                <a title="PDepend\Source\Language\PHP\array(integer=&gt;array)" href="../classes/PDepend_Source_Language_PHP_array(integer=&gt;array).xhtml">PDepend\Source\Language\PHP\array(integer=&gt;array)</a><br/><span class="indent">BuilderContext sensitive alternative mappings.</span></li>
+            <li id="count"><strong>$count</strong>
+                —
+                integer<br/><span class="indent">Count of all tokens.</span></li>
+            <li id="index"><strong>$index</strong>
+                —
+                integer<br/><span class="indent">Internal stream pointer index.</span></li>
+            <li id="literalMap"><strong>$literalMap</strong>
+                —
+                <a title="PDepend\Source\Language\PHP\array(string=&gt;integer)" href="../classes/PDepend_Source_Language_PHP_array(string=&gt;integer).xhtml">PDepend\Source\Language\PHP\array(string=&gt;integer)</a><br/><span class="indent">Mapping between php internal text tokens an php depend numeric tokens.</span></li>
+            <li id="reductionMap">
+              <strong>$reductionMap</strong>
+            </li>
+            <li id="sourceFile"><strong>$sourceFile</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTCompilationUnit" href="../classes/_PDepend_Source_AST_ASTCompilationUnit.xhtml">\PDepend\Source\AST\ASTCompilationUnit</a><br/><span class="indent">The source file instance.</span></li>
+            <li id="substituteTokens"><strong>$substituteTokens</strong>
+                —
+                <a title="PDepend\Source\Language\PHP\array(mixed=&gt;array)" href="../classes/PDepend_Source_Language_PHP_array(mixed=&gt;array).xhtml">PDepend\Source\Language\PHP\array(mixed=&gt;array)</a></li>
+            <li id="tokenMap"><strong>$tokenMap</strong>
+                —
+                <a title="PDepend\Source\Language\PHP\array(integer=&gt;integer)" href="../classes/PDepend_Source_Language_PHP_array(integer=&gt;integer).xhtml">PDepend\Source\Language\PHP\array(integer=&gt;integer)</a><br/><span class="indent">Mapping between php internal tokens and php depend tokens.</span></li>
+            <li id="tokens"><strong>$tokens</strong>
+                —
+                array<br/><span class="indent">Prepared token list.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="consumeNonePhpTokens"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/consumeNonePhpTokens.xhtml">consumeNonePhpTokens()</a>
+                — This method fetches all tokens until an opening php tag was found and it returns the collected content. The returned value will be null if there was no none php token.</li>
+            <li id="generateUnknownToken"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/generateUnknownToken.xhtml">generateUnknownToken()</a>
+                — Generates a dummy/temp token for unknown string literals.</li>
+            <li id="substituteTokens"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/substituteTokens.xhtml">substituteTokens()</a>
+                — This method takes an array of tokens returned by &lt;b&gt;token_get_all()&lt;/b&gt; and substitutes some of the tokens with those required by PDepend's parser implementation.</li>
+            <li id="tokenize"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/tokenize.xhtml">tokenize()</a>
+                — Tokenizes the content of the source file with {@link token_get_all()} and filters this token stream.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getSourceFile"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/getSourceFile.xhtml">getSourceFile()</a>
+                — Returns the name of the source file.</li>
+            <li id="next"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/next.xhtml">next()</a>
+                — Returns the next token or {@link \PDepend\Source\Tokenizer\Tokenizer::T_EOF} if there is no next token.</li>
+            <li id="peek"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/peek.xhtml">peek()</a>
+                — Returns the next token type or {@link \PDepend\Source\Tokenizer\Tokenizer::T_EOF} if there is no next token.</li>
+            <li id="peekNext"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/peekNext.xhtml">peekNext()</a>
+                — Returns the type of next token, after the current token. This method ignores all comments between the current and the next token.</li>
+            <li id="prev"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/prev.xhtml">prev()</a>
+                — Returns the previous token type or {@link \PDepend\Source\Tokenizer\Tokenizer::T_BOF} if there is no previous token.</li>
+            <li id="setSourceFile"><a title="PDepend\Source\Language\PHP\PHPTokenizerInternal" href="../classes/PDepend_Source_Language_PHP_PHPTokenizerInternal/setSourceFile.xhtml">setSourceFile()</a>
+                — Sets a new php source file.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

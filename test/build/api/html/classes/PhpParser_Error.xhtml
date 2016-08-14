@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PhpParser\Error</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PhpParser">PhpParser</a>
+          </li>
+          <li class="separator">Error</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/nikic/php-parser/lib/PhpParser/Error.php.xhtml#line5">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PhpParser\</small>Error</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Error
+                extends <a title="RuntimeException" href="../classes/RuntimeException.xhtml">RuntimeException</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$rawMessage</a>;
+                    </li><li>protected  <a href="#members">$attributes</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PhpParser\Error" href="../classes/PhpParser_Error/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="PhpParser\Error" href="../classes/PhpParser_Error/getRawMessage.xhtml">getRawMessage</a>()
+                    </li><li>public int <a title="PhpParser\Error" href="../classes/PhpParser_Error/getStartLine.xhtml">getStartLine</a>()
+                    </li><li>public int <a title="PhpParser\Error" href="../classes/PhpParser_Error/getEndLine.xhtml">getEndLine</a>()
+                    </li><li>public array <a title="PhpParser\Error" href="../classes/PhpParser_Error/getAttributes.xhtml">getAttributes</a>()
+                    </li><li>public void <a title="PhpParser\Error" href="../classes/PhpParser_Error/setRawMessage.xhtml">setRawMessage</a>()
+                    </li><li>public void <a title="PhpParser\Error" href="../classes/PhpParser_Error/setStartLine.xhtml">setStartLine</a>()
+                    </li><li>public bool <a title="PhpParser\Error" href="../classes/PhpParser_Error/hasColumnInfo.xhtml">hasColumnInfo</a>()
+                    </li><li>public int <a title="PhpParser\Error" href="../classes/PhpParser_Error/getStartColumn.xhtml">getStartColumn</a>()
+                    </li><li>public int <a title="PhpParser\Error" href="../classes/PhpParser_Error/getEndColumn.xhtml">getEndColumn</a>()
+                    </li><li>private void <a title="PhpParser\Error" href="../classes/PhpParser_Error/toColumn.xhtml">toColumn</a>()
+                    </li><li>protected void <a title="PhpParser\Error" href="../classes/PhpParser_Error/updateMessage.xhtml">updateMessage</a>()
+                    </li><li>public void <a title="PhpParser\Error" href="../classes/PhpParser_Error/getRawLine.xhtml">getRawLine</a>()
+                    </li><li>public void <a title="PhpParser\Error" href="../classes/PhpParser_Error/setRawLine.xhtml">setRawLine</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="RuntimeException" href="../classes/RuntimeException.xhtml">RuntimeException</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="attributes">
+              <strong>$attributes</strong>
+            </li>
+            <li id="rawMessage">
+              <strong>$rawMessage</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="toColumn">
+              <a title="PhpParser\Error" href="../classes/PhpParser_Error/toColumn.xhtml">toColumn()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="updateMessage"><a title="PhpParser\Error" href="../classes/PhpParser_Error/updateMessage.xhtml">updateMessage()</a>
+                — Updates the exception message after a change to rawMessage or rawLine.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PhpParser\Error" href="../classes/PhpParser_Error/__construct.xhtml">__construct()</a>
+                — Creates an Exception signifying a parse error.</li>
+            <li id="getAttributes"><a title="PhpParser\Error" href="../classes/PhpParser_Error/getAttributes.xhtml">getAttributes()</a>
+                — Gets the attributes of the node/token the error occurred at.</li>
+            <li id="getEndColumn"><a title="PhpParser\Error" href="../classes/PhpParser_Error/getEndColumn.xhtml">getEndColumn()</a>
+                — Gets the end column (1-based) into the line where the error ended.</li>
+            <li id="getEndLine"><a title="PhpParser\Error" href="../classes/PhpParser_Error/getEndLine.xhtml">getEndLine()</a>
+                — Gets the line the error ends in.</li>
+            <li id="getRawLine"><a title="PhpParser\Error" href="../classes/PhpParser_Error/getRawLine.xhtml">getRawLine()</a>
+                — @deprecated Use getStartLine() instead</li>
+            <li id="getRawMessage"><a title="PhpParser\Error" href="../classes/PhpParser_Error/getRawMessage.xhtml">getRawMessage()</a>
+                — Gets the error message</li>
+            <li id="getStartColumn"><a title="PhpParser\Error" href="../classes/PhpParser_Error/getStartColumn.xhtml">getStartColumn()</a>
+                — Gets the start column (1-based) into the line where the error started.</li>
+            <li id="getStartLine"><a title="PhpParser\Error" href="../classes/PhpParser_Error/getStartLine.xhtml">getStartLine()</a>
+                — Gets the line the error starts in.</li>
+            <li id="hasColumnInfo"><a title="PhpParser\Error" href="../classes/PhpParser_Error/hasColumnInfo.xhtml">hasColumnInfo()</a>
+                — Returns whether the error has start and end column information.</li>
+            <li id="setRawLine"><a title="PhpParser\Error" href="../classes/PhpParser_Error/setRawLine.xhtml">setRawLine()</a>
+                — @deprecated Use setStartLine() instead</li>
+            <li id="setRawMessage"><a title="PhpParser\Error" href="../classes/PhpParser_Error/setRawMessage.xhtml">setRawMessage()</a>
+                — Sets the line of the PHP file the error occurred in.</li>
+            <li id="setStartLine"><a title="PhpParser\Error" href="../classes/PhpParser_Error/setStartLine.xhtml">setStartLine()</a>
+                — Sets the line the error starts in.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

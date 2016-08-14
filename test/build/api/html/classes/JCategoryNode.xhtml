@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JCategoryNode</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JCategoryNode</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/legacy/categories/categories.php.xhtml#line395">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JCategoryNode</h1>
+        <h4>Helper class to load Categorytree</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JCategoryNode
+                extends <a title="JObject" href="../classes/JObject.xhtml">JObject</a>
+            {<br/><ul class="none"><li>// members</li><li>public integer <a href="#members">$id</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$asset_id</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$parent_id</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$lft</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$rgt</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$level</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$extension</a> =
+                        null;
+                    </li><li>public string <a href="#members">$title</a> =
+                        null;
+                    </li><li>public string <a href="#members">$alias</a> =
+                        null;
+                    </li><li>public string <a href="#members">$description</a> =
+                        null;
+                    </li><li>public boolean <a href="#members">$published</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$checked_out</a> =
+                        0;
+                    </li><li>public integer <a href="#members">$checked_out_time</a> =
+                        0;
+                    </li><li>public integer <a href="#members">$access</a> =
+                        null;
+                    </li><li>public string <a href="#members">$params</a> =
+                        null;
+                    </li><li>public string <a href="#members">$metadesc</a> =
+                        null;
+                    </li><li>public string <a href="#members">$metakey</a> =
+                        null;
+                    </li><li>public string <a href="#members">$metadata</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$created_user_id</a> =
+                        null;
+                    </li><li>public string <a href="#members">$created_time</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$modified_user_id</a> =
+                        null;
+                    </li><li>public string <a href="#members">$modified_time</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$hits</a> =
+                        null;
+                    </li><li>public string <a href="#members">$language</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$numitems</a> =
+                        null;
+                    </li><li>public integer <a href="#members">$childrennumitems</a> =
+                        null;
+                    </li><li>public string <a href="#members">$slug</a> =
+                        null;
+                    </li><li>public array <a href="#members">$assets</a> =
+                        null;
+                    </li><li>protected <span title=""/> <a href="#members">$_parent</a> =
+                        null;
+                    </li><li>protected <span title="Array">Array</span> <a href="#members">$_children</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$_path</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$_leftSibling</a> =
+                        null;
+                    </li><li>protected <a href="#members">$_rightSibling</a> =
+                        null;
+                    </li><li>protected boolean <a href="#members">$_allChildrenloaded</a> =
+                        false;
+                    </li><li>protected <a href="#members">$_constructor</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JCategoryNode" href="../classes/JCategoryNode/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="JCategoryNode" href="../classes/JCategoryNode/setParent.xhtml">setParent</a>()
+                    </li><li>public void <a title="JCategoryNode" href="../classes/JCategoryNode/addChild.xhtml">addChild</a>()
+                    </li><li>public void <a title="JCategoryNode" href="../classes/JCategoryNode/removeChild.xhtml">removeChild</a>()
+                    </li><li>public array <a title="JCategoryNode" href="../classes/JCategoryNode/getChildren.xhtml">getChildren</a>()
+                    </li><li>public mixed <a title="JCategoryNode" href="../classes/JCategoryNode/getParent.xhtml">getParent</a>()
+                    </li><li>public boolean <a title="JCategoryNode" href="../classes/JCategoryNode/hasChildren.xhtml">hasChildren</a>()
+                    </li><li>public boolean <a title="JCategoryNode" href="../classes/JCategoryNode/hasParent.xhtml">hasParent</a>()
+                    </li><li>public void <a title="JCategoryNode" href="../classes/JCategoryNode/setSibling.xhtml">setSibling</a>()
+                    </li><li>public mixed <a title="JCategoryNode" href="../classes/JCategoryNode/getSibling.xhtml">getSibling</a>()
+                    </li><li>public Registry <a title="JCategoryNode" href="../classes/JCategoryNode/getParams.xhtml">getParams</a>()
+                    </li><li>public Registry <a title="JCategoryNode" href="../classes/JCategoryNode/getMetadata.xhtml">getMetadata</a>()
+                    </li><li>public array <a title="JCategoryNode" href="../classes/JCategoryNode/getPath.xhtml">getPath</a>()
+                    </li><li>public JUser <a title="JCategoryNode" href="../classes/JCategoryNode/getAuthor.xhtml">getAuthor</a>()
+                    </li><li>public void <a title="JCategoryNode" href="../classes/JCategoryNode/setAllLoaded.xhtml">setAllLoaded</a>()
+                    </li><li>public integer <a title="JCategoryNode" href="../classes/JCategoryNode/getNumItems.xhtml">getNumItems</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JObject" href="../classes/JObject.xhtml">JObject</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_allChildrenloaded"><strong>$_allChildrenloaded</strong>
+                —
+                boolean<br/><span class="indent">true if all children have been loaded</span></li>
+            <li id="_children"><strong>$_children</strong>
+                —
+                <a title="Array" href="../classes/Array.xhtml">Array</a></li>
+            <li id="_constructor"><strong>$_constructor</strong>
+                —
+                <br/><span class="indent">Constructor of this tree</span></li>
+            <li id="_leftSibling"><strong>$_leftSibling</strong>
+                —
+                integer<br/><span class="indent">Category left of this one</span></li>
+            <li id="_parent"><strong>$_parent</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Parent Category object</span></li>
+            <li id="_path"><strong>$_path</strong>
+                —
+                array<br/><span class="indent">Path from root to this category</span></li>
+            <li id="_rightSibling"><strong>$_rightSibling</strong>
+                —
+                <br/><span class="indent">Category right of this one</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="access"><strong>$access</strong>
+                —
+                integer<br/><span class="indent">Access level for the category</span></li>
+            <li id="alias"><strong>$alias</strong>
+                —
+                string<br/><span class="indent">The the alias for the category</span></li>
+            <li id="asset_id"><strong>$asset_id</strong>
+                —
+                integer<br/><span class="indent">The id of the category in the asset table</span></li>
+            <li id="assets"><strong>$assets</strong>
+                —
+                array<br/><span class="indent">Array of  assets</span></li>
+            <li id="checked_out"><strong>$checked_out</strong>
+                —
+                boolean<br/><span class="indent">Whether the category is or is not checked out</span></li>
+            <li id="checked_out_time"><strong>$checked_out_time</strong>
+                —
+                string<br/><span class="indent">The time at which the category was checked out</span></li>
+            <li id="childrennumitems"><strong>$childrennumitems</strong>
+                —
+                integer<br/><span class="indent">Number of children items</span></li>
+            <li id="created_time"><strong>$created_time</strong>
+                —
+                string<br/><span class="indent">The time at which the category was created</span></li>
+            <li id="created_user_id"><strong>$created_user_id</strong>
+                —
+                integer<br/><span class="indent">The ID of the user who created the category</span></li>
+            <li id="description"><strong>$description</strong>
+                —
+                string<br/><span class="indent">Description of the category.</span></li>
+            <li id="extension"><strong>$extension</strong>
+                —
+                integer<br/><span class="indent">The extension this category is associated with</span></li>
+            <li id="hits"><strong>$hits</strong>
+                —
+                integer<br/><span class="indent">Nmber of times the category has been viewed</span></li>
+            <li id="id"><strong>$id</strong>
+                —
+                integer<br/><span class="indent">Primary key</span></li>
+            <li id="language"><strong>$language</strong>
+                —
+                string<br/><span class="indent">The language for the category in xx-XX format</span></li>
+            <li id="level"><strong>$level</strong>
+                —
+                integer<br/><span class="indent">The depth of this category's position in the category tree</span></li>
+            <li id="lft"><strong>$lft</strong>
+                —
+                integer<br/><span class="indent">The lft value for this category in the category tree</span></li>
+            <li id="metadata"><strong>$metadata</strong>
+                —
+                string<br/><span class="indent">JSON string of other meta data</span></li>
+            <li id="metadesc"><strong>$metadesc</strong>
+                —
+                string<br/><span class="indent">Metadata description</span></li>
+            <li id="metakey"><strong>$metakey</strong>
+                —
+                string<br/><span class="indent">Key words for meta data</span></li>
+            <li id="modified_time"><strong>$modified_time</strong>
+                —
+                string<br/><span class="indent">The time at which the category was modified</span></li>
+            <li id="modified_user_id"><strong>$modified_user_id</strong>
+                —
+                integer<br/><span class="indent">The ID of the user who last modified the category</span></li>
+            <li id="numitems"><strong>$numitems</strong>
+                —
+                integer<br/><span class="indent">Number of items in this category or descendants of this category</span></li>
+            <li id="params"><strong>$params</strong>
+                —
+                string<br/><span class="indent">JSON string of parameters</span></li>
+            <li id="parent_id"><strong>$parent_id</strong>
+                —
+                integer<br/><span class="indent">The id of the parent of category in the asset table, 0 for category root</span></li>
+            <li id="published"><strong>$published</strong>
+                —
+                boolean<br/><span class="indent">The publication status of the category</span></li>
+            <li id="rgt"><strong>$rgt</strong>
+                —
+                integer<br/><span class="indent">The rgt value for this category in the category tree</span></li>
+            <li id="slug"><strong>$slug</strong>
+                —
+                string<br/><span class="indent">Slug fo the category (used in URL)</span></li>
+            <li id="title"><strong>$title</strong>
+                —
+                string<br/><span class="indent">The menu title for the category (a short name)</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JCategoryNode" href="../classes/JCategoryNode/__construct.xhtml">__construct()</a>
+                — Class constructor</li>
+            <li id="addChild"><a title="JCategoryNode" href="../classes/JCategoryNode/addChild.xhtml">addChild()</a>
+                — Add child to this node</li>
+            <li id="getAuthor"><a title="JCategoryNode" href="../classes/JCategoryNode/getAuthor.xhtml">getAuthor()</a>
+                — Returns the user that created the category</li>
+            <li id="getChildren"><a title="JCategoryNode" href="../classes/JCategoryNode/getChildren.xhtml">getChildren()</a>
+                — Get the children of this node</li>
+            <li id="getMetadata"><a title="JCategoryNode" href="../classes/JCategoryNode/getMetadata.xhtml">getMetadata()</a>
+                — Returns the category metadata</li>
+            <li id="getNumItems"><a title="JCategoryNode" href="../classes/JCategoryNode/getNumItems.xhtml">getNumItems()</a>
+                — Returns the number of items.</li>
+            <li id="getParams"><a title="JCategoryNode" href="../classes/JCategoryNode/getParams.xhtml">getParams()</a>
+                — Returns the category parameters</li>
+            <li id="getParent"><a title="JCategoryNode" href="../classes/JCategoryNode/getParent.xhtml">getParent()</a>
+                — Get the parent of this node</li>
+            <li id="getPath"><a title="JCategoryNode" href="../classes/JCategoryNode/getPath.xhtml">getPath()</a>
+                — Returns the category path to the root category</li>
+            <li id="getSibling"><a title="JCategoryNode" href="../classes/JCategoryNode/getSibling.xhtml">getSibling()</a>
+                — Returns the right or left sibling of a category</li>
+            <li id="hasChildren"><a title="JCategoryNode" href="../classes/JCategoryNode/hasChildren.xhtml">hasChildren()</a>
+                — Test if this node has children</li>
+            <li id="hasParent"><a title="JCategoryNode" href="../classes/JCategoryNode/hasParent.xhtml">hasParent()</a>
+                — Test if this node has a parent</li>
+            <li id="removeChild"><a title="JCategoryNode" href="../classes/JCategoryNode/removeChild.xhtml">removeChild()</a>
+                — Remove a specific child</li>
+            <li id="setAllLoaded"><a title="JCategoryNode" href="../classes/JCategoryNode/setAllLoaded.xhtml">setAllLoaded()</a>
+                — Set to load all children</li>
+            <li id="setParent"><a title="JCategoryNode" href="../classes/JCategoryNode/setParent.xhtml">setParent()</a>
+                — Set the parent of this category</li>
+            <li id="setSibling"><a title="JCategoryNode" href="../classes/JCategoryNode/setSibling.xhtml">setSibling()</a>
+                — Function to set the left or right sibling of a category</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

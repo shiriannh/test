@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JArchiveZip</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JArchiveZip</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/archive/zip.php.xhtml#line37">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JArchiveZip</h1>
+        <h4>ZIP format adapter for the JArchive class</h4>
+        <p>The ZIP compression code is partially based on code from:<br/>Eric Mueller &lt;eric@themepark.com&gt;<br/>http://www.zend.com/codex.php?id=535&amp;single=1<br/><br/>Deins125 &lt;webmaster@atlant.ru&gt;<br/>http://www.zend.com/codex.php?id=470&amp;single=1<br/><br/>The ZIP compression date code is partially based on code from<br/>Peter Listiak &lt;mlady@users.sourceforge.net&gt;<br/><br/>This class is inspired from and draws heavily in code and concept from the Compress package of<br/>The Horde Project &lt;https://www.horde.org&gt;</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JArchiveZip
+                implements
+                <a title="JArchiveExtractable" href="../interfaces/JArchiveExtractable.xhtml">JArchiveExtractable</a>
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$_methods</a> =
+                        ;
+                    </li><li>private string <a href="#members">$_ctrlDirHeader</a> =
+                        "\x50\x4b\x01\x02";
+                    </li><li>private string <a href="#members">$_ctrlDirEnd</a> =
+                        "\x50\x4b\x05\x06\x00\x00\x00\x00";
+                    </li><li>private string <a href="#members">$_fileHeader</a> =
+                        "\x50\x4b\x03\x04";
+                    </li><li>private string <a href="#members">$_data</a> =
+                        null;
+                    </li><li>private array <a href="#members">$_metadata</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public boolean <a title="JArchiveZip" href="../classes/JArchiveZip/create.xhtml">create</a>()
+                    </li><li>public boolean <a title="JArchiveZip" href="../classes/JArchiveZip/extract.xhtml">extract</a>()
+                    </li><li>private mixed <a title="JArchiveZip" href="../classes/JArchiveZip/raiseWarning.xhtml">raiseWarning</a>()
+                    </li><li>public static boolean <a title="JArchiveZip" href="../classes/JArchiveZip/isSupported.xhtml">isSupported</a>()
+                    </li><li>public static boolean <a title="JArchiveZip" href="../classes/JArchiveZip/hasNativeSupport.xhtml">hasNativeSupport</a>()
+                    </li><li>public boolean <a title="JArchiveZip" href="../classes/JArchiveZip/checkZipData.xhtml">checkZipData</a>()
+                    </li><li>protected mixed <a title="JArchiveZip" href="../classes/JArchiveZip/extractCustom.xhtml">extractCustom</a>()
+                    </li><li>protected boolean <a title="JArchiveZip" href="../classes/JArchiveZip/extractNative.xhtml">extractNative</a>()
+                    </li><li>private boolean <a title="JArchiveZip" href="../classes/JArchiveZip/_readZipInfo.xhtml">_readZipInfo</a>()
+                    </li><li>private string <a title="JArchiveZip" href="../classes/JArchiveZip/_getFileData.xhtml">_getFileData</a>()
+                    </li><li>protected int <a title="JArchiveZip" href="../classes/JArchiveZip/_unix2DOSTime.xhtml">_unix2DOSTime</a>()
+                    </li><li>private void <a title="JArchiveZip" href="../classes/JArchiveZip/_addToZIPFile.xhtml">_addToZIPFile</a>()
+                    </li><li>private boolean <a title="JArchiveZip" href="../classes/JArchiveZip/_createZIPFile.xhtml">_createZIPFile</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JArchiveExtractable" href="../interfaces/JArchiveExtractable.xhtml">JArchiveExtractable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">100+</td>
+            <td>Finish Implementation</td>
+          </tr>
+          <tr>
+            <td class="nummeric">509+</td>
+            <td>Review and finish implementation</td>
+          </tr>
+          <tr>
+            <td class="nummeric">620+</td>
+            <td>Review and finish implementation</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_ctrlDirEnd"><strong>$_ctrlDirEnd</strong>
+                —
+                string<br/><span class="indent">End of central directory record.</span></li>
+            <li id="_ctrlDirHeader"><strong>$_ctrlDirHeader</strong>
+                —
+                string<br/><span class="indent">Beginning of central directory record.</span></li>
+            <li id="_data"><strong>$_data</strong>
+                —
+                string<br/><span class="indent">ZIP file data buffer</span></li>
+            <li id="_fileHeader"><strong>$_fileHeader</strong>
+                —
+                string<br/><span class="indent">Beginning of file contents.</span></li>
+            <li id="_metadata"><strong>$_metadata</strong>
+                —
+                array<br/><span class="indent">ZIP file metadata array</span></li>
+            <li id="_methods"><strong>$_methods</strong>
+                —
+                array<br/><span class="indent">ZIP compression methods.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="_addToZIPFile"><a title="JArchiveZip" href="../classes/JArchiveZip/_addToZIPFile.xhtml">_addToZIPFile()</a>
+                — Adds a "file" to the ZIP archive.</li>
+            <li id="_createZIPFile"><a title="JArchiveZip" href="../classes/JArchiveZip/_createZIPFile.xhtml">_createZIPFile()</a>
+                — Creates the ZIP file.</li>
+            <li id="_getFileData"><a title="JArchiveZip" href="../classes/JArchiveZip/_getFileData.xhtml">_getFileData()</a>
+                — Returns the file data for a file by offsest in the ZIP archive</li>
+            <li id="_readZipInfo"><a title="JArchiveZip" href="../classes/JArchiveZip/_readZipInfo.xhtml">_readZipInfo()</a>
+                — Get the list of files/data from a ZIP archive buffer.</li>
+            <li id="raiseWarning"><a title="JArchiveZip" href="../classes/JArchiveZip/raiseWarning.xhtml">raiseWarning()</a>
+                — Temporary private method to isolate JError from the extract method This code should be removed when JError is removed.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="_unix2DOSTime"><a title="JArchiveZip" href="../classes/JArchiveZip/_unix2DOSTime.xhtml">_unix2DOSTime()</a>
+                — Converts a UNIX timestamp to a 4-byte DOS date and time format (date in high 2-bytes, time in low 2-bytes allowing magnitude comparison).</li>
+            <li id="extractCustom"><a title="JArchiveZip" href="../classes/JArchiveZip/extractCustom.xhtml">extractCustom()</a>
+                — Extract a ZIP compressed file to a given path using a php based algorithm that only requires zlib support</li>
+            <li id="extractNative"><a title="JArchiveZip" href="../classes/JArchiveZip/extractNative.xhtml">extractNative()</a>
+                — Extract a ZIP compressed file to a given path using native php api calls for speed</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="checkZipData"><a title="JArchiveZip" href="../classes/JArchiveZip/checkZipData.xhtml">checkZipData()</a>
+                — Checks to see if the data is a valid ZIP file.</li>
+            <li id="create"><a title="JArchiveZip" href="../classes/JArchiveZip/create.xhtml">create()</a>
+                — Create a ZIP compressed file from an array of file data.</li>
+            <li id="extract"><a title="JArchiveZip" href="../classes/JArchiveZip/extract.xhtml">extract()</a>
+                — Extract a ZIP compressed file to a given path</li>
+            <li id="hasNativeSupport"><a title="JArchiveZip" href="../classes/JArchiveZip/hasNativeSupport.xhtml">hasNativeSupport()</a>
+                — Method to determine if the server has native zip support for faster handling</li>
+            <li id="isSupported"><a title="JArchiveZip" href="../classes/JArchiveZip/isSupported.xhtml">isSupported()</a>
+                — Tests whether this adapter can unpack files on this computer.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

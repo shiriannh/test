@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\DependencyInjection\Extension\Extension</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_DependencyInjection_Extension">Symfony\Component\DependencyInjection\Extension</a>
+          </li>
+          <li class="separator">Extension</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/dependency-injection/Extension/Extension.php.xhtml#line27">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\DependencyInjection\Extension\</small>Extension</h1>
+        <h4>Provides useful features shared by many extensions.</h4>
+        <p/>
+        <ul>
+          <li>Author: Fabien Potencier &lt;fabien@symfony.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Extension
+                implements
+                <a title="Symfony\Component\DependencyInjection\Extension\ExtensionInterface" href="../interfaces/Symfony_Component_DependencyInjection_Extension_ExtensionInterface.xhtml">ExtensionInterface</a>,<a title="Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface" href="../interfaces/Symfony_Component_DependencyInjection_Extension_ConfigurationExtensionInterface.xhtml">ConfigurationExtensionInterface</a>
+            {<br/><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getXsdValidationBasePath.xhtml">getXsdValidationBasePath</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getNamespace.xhtml">getNamespace</a>()
+                    </li><li>public string <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getAlias.xhtml">getAlias</a>()
+                    </li><li>public void <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getConfiguration.xhtml">getConfiguration</a>()
+                    </li><li>protected final void <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/processConfiguration.xhtml">processConfiguration</a>()
+                    </li><li>protected bool <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/isConfigEnabled.xhtml">isConfigEnabled</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Symfony\Component\DependencyInjection\Extension\ExtensionInterface" href="../interfaces/Symfony_Component_DependencyInjection_Extension_ExtensionInterface.xhtml">Symfony\Component\DependencyInjection\Extension\ExtensionInterface</a>
+            </li>
+            <li>
+              <a title="Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface" href="../interfaces/Symfony_Component_DependencyInjection_Extension_ConfigurationExtensionInterface.xhtml">Symfony\Component\DependencyInjection\Extension\ConfigurationExtensionInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="isConfigEnabled">
+              <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/isConfigEnabled.xhtml">isConfigEnabled()</a>
+            </li>
+            <li id="processConfiguration">
+              <a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/processConfiguration.xhtml">processConfiguration()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getAlias"><a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getAlias.xhtml">getAlias()</a>
+                — Returns the recommended alias to use in XML.</li>
+            <li id="getConfiguration"><a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getConfiguration.xhtml">getConfiguration()</a>
+                — {@inheritdoc}</li>
+            <li id="getNamespace"><a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getNamespace.xhtml">getNamespace()</a>
+                — {@inheritdoc}</li>
+            <li id="getXsdValidationBasePath"><a title="Symfony\Component\DependencyInjection\Extension\Extension" href="../classes/Symfony_Component_DependencyInjection_Extension_Extension/getXsdValidationBasePath.xhtml">getXsdValidationBasePath()</a>
+                — {@inheritdoc}</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcConsoleOption</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcConsoleOption</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/console-tools/src/input/option.php.xhtml#line74">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcConsoleOption</h1>
+        <h4>Objects of this class store data about a single option for ezcConsoleInput.</h4>
+        <p>This class represents a single command line option, which can be handled by<br/>the ezcConsoleInput class. This classes only purpose is the storage of<br/>the parameter data, the handling of options and arguments is done by the<br/>class .<br/></p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcConsoleOption
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="array(string=&gt;mixed)">array(string=&gt;mixed)</span> <a href="#members">$properties</a>;
+                    </li><li>protected <span title="array(string=&gt;ezcConsoleParamemterRule)">array(string=&gt;ezcConsoleParamemterRule)</span> <a href="#members">$dependencies</a> =
+                        ;
+                    </li><li>protected <span title="array(string=&gt;ezcConsoleParamemterRule)">array(string=&gt;ezcConsoleParamemterRule)</span> <a href="#members">$exclusions</a> =
+                        ;
+                    </li><li>public boolean <a href="#members">$value</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/addDependency.xhtml">addDependency</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeDependency.xhtml">removeDependency</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeAllDependencies.xhtml">removeAllDependencies</a>()
+                    </li><li>public bool <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/hasDependency.xhtml">hasDependency</a>()
+                    </li><li>public array(ezcConsoleOptionRule) <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/getDependencies.xhtml">getDependencies</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/resetDependencies.xhtml">resetDependencies</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/addExclusion.xhtml">addExclusion</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeExclusion.xhtml">removeExclusion</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeAllExclusions.xhtml">removeAllExclusions</a>()
+                    </li><li>public bool <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/hasExclusion.xhtml">hasExclusion</a>()
+                    </li><li>public array(ezcConsoleOptionRule) <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/getExclusions.xhtml">getExclusions</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/resetExclusions.xhtml">resetExclusions</a>()
+                    </li><li>public mixed <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__get.xhtml">__get</a>()
+                    </li><li>public void <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__set.xhtml">__set</a>()
+                    </li><li>public bool <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__isset.xhtml">__isset</a>()
+                    </li><li>public static bool <a title="ezcConsoleOption" href="../classes/ezcConsoleOption/validateOptionName.xhtml">validateOptionName</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="dependencies"><strong>$dependencies</strong>
+                —
+                <a title="array(string=&gt;ezcConsoleParamemterRule)" href="../classes/array(string=&gt;ezcConsoleParamemterRule).xhtml">array(string=&gt;ezcConsoleParamemterRule)</a><br/><span class="indent">Dependency rules of this parameter.</span></li>
+            <li id="exclusions"><strong>$exclusions</strong>
+                —
+                <a title="array(string=&gt;ezcConsoleParamemterRule)" href="../classes/array(string=&gt;ezcConsoleParamemterRule).xhtml">array(string=&gt;ezcConsoleParamemterRule)</a><br/><span class="indent">Exclusion rules of this parameter.</span></li>
+            <li id="properties"><strong>$properties</strong>
+                —
+                <a title="array(string=&gt;mixed)" href="../classes/array(string=&gt;mixed).xhtml">array(string=&gt;mixed)</a><br/><span class="indent">Container to hold the properties</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="value"><strong>$value</strong>
+                —
+                mixed<br/><span class="indent">The value the parameter was assigned to when being submitted.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__construct.xhtml">__construct()</a>
+                — Create a new parameter struct.</li>
+            <li id="__get"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__get.xhtml">__get()</a>
+                — Property read access.</li>
+            <li id="__isset"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__isset.xhtml">__isset()</a>
+                — Property isset access.</li>
+            <li id="__set"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/__set.xhtml">__set()</a>
+                — Property write access.</li>
+            <li id="addDependency"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/addDependency.xhtml">addDependency()</a>
+                — Add a new dependency for a parameter.</li>
+            <li id="addExclusion"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/addExclusion.xhtml">addExclusion()</a>
+                — Add a new exclusion for an option.</li>
+            <li id="getDependencies"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/getDependencies.xhtml">getDependencies()</a>
+                — Returns the dependency rules registered with this parameter.</li>
+            <li id="getExclusions"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/getExclusions.xhtml">getExclusions()</a>
+                — Returns the exclusion rules registered with this parameter.</li>
+            <li id="hasDependency"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/hasDependency.xhtml">hasDependency()</a>
+                — Returns if a dependency to the given option exists.</li>
+            <li id="hasExclusion"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/hasExclusion.xhtml">hasExclusion()</a>
+                — Returns if a given exclusion rule is registered with the option.</li>
+            <li id="removeAllDependencies"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeAllDependencies.xhtml">removeAllDependencies()</a>
+                — Remove all dependency rule referring to a parameter.</li>
+            <li id="removeAllExclusions"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeAllExclusions.xhtml">removeAllExclusions()</a>
+                — Remove all exclusion rule referring to a option.</li>
+            <li id="removeDependency"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeDependency.xhtml">removeDependency()</a>
+                — Remove a dependency rule from a parameter.</li>
+            <li id="removeExclusion"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/removeExclusion.xhtml">removeExclusion()</a>
+                — Remove a exclusion rule from a option.</li>
+            <li id="resetDependencies"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/resetDependencies.xhtml">resetDependencies()</a>
+                — Reset existing dependency rules.</li>
+            <li id="resetExclusions"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/resetExclusions.xhtml">resetExclusions()</a>
+                — Reset existing exclusion rules.</li>
+            <li id="validateOptionName"><a title="ezcConsoleOption" href="../classes/ezcConsoleOption/validateOptionName.xhtml">validateOptionName()</a>
+                — Returns if a given name if valid for use as a parameter name a parameter.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

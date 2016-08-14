@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JEditor</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JEditor</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/editor/editor.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JEditor</h1>
+        <h4>JEditor class to handle WYSIWYG editors</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JEditor
+                extends <a title="JObject" href="../classes/JObject.xhtml">JObject</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$_observers</a> =
+                        ;
+                    </li><li>protected mixed <a href="#members">$_state</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$_methods</a> =
+                        ;
+                    </li><li>protected <span title=""/> <a href="#members">$_editor</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$_name</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$asset</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$author</a> =
+                        null;
+                    </li><li>protected static array <a href="#members">$instances</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JEditor" href="../classes/JEditor/__construct.xhtml">__construct</a>()
+                    </li><li>public static JEditor <a title="JEditor" href="../classes/JEditor/getInstance.xhtml">getInstance</a>()
+                    </li><li>public mixed <a title="JEditor" href="../classes/JEditor/getState.xhtml">getState</a>()
+                    </li><li>public void <a title="JEditor" href="../classes/JEditor/attach.xhtml">attach</a>()
+                    </li><li>public boolean <a title="JEditor" href="../classes/JEditor/detach.xhtml">detach</a>()
+                    </li><li>public void <a title="JEditor" href="../classes/JEditor/initialise.xhtml">initialise</a>()
+                    </li><li>public string <a title="JEditor" href="../classes/JEditor/display.xhtml">display</a>()
+                    </li><li>public string <a title="JEditor" href="../classes/JEditor/save.xhtml">save</a>()
+                    </li><li>public string <a title="JEditor" href="../classes/JEditor/getContent.xhtml">getContent</a>()
+                    </li><li>public string <a title="JEditor" href="../classes/JEditor/setContent.xhtml">setContent</a>()
+                    </li><li>public array <a title="JEditor" href="../classes/JEditor/getButtons.xhtml">getButtons</a>()
+                    </li><li>protected mixed <a title="JEditor" href="../classes/JEditor/_loadEditor.xhtml">_loadEditor</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JObject" href="../classes/JObject.xhtml">JObject</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_editor"><strong>$_editor</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Editor Plugin object</span></li>
+            <li id="_methods"><strong>$_methods</strong>
+                —
+                array<br/><span class="indent">A multi dimensional array of [function][] = key for observers</span></li>
+            <li id="_name"><strong>$_name</strong>
+                —
+                string<br/><span class="indent">Editor Plugin name</span></li>
+            <li id="_observers"><strong>$_observers</strong>
+                —
+                array<br/><span class="indent">An array of Observer objects to notify</span></li>
+            <li id="_state"><strong>$_state</strong>
+                —
+                mixed<br/><span class="indent">The state of the observable object</span></li>
+            <li id="asset"><strong>$asset</strong>
+                —
+                string<br/><span class="indent">Object asset</span></li>
+            <li id="author"><strong>$author</strong>
+                —
+                string<br/><span class="indent">Object author</span></li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array<br/><span class="indent">JEditor instances container.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_loadEditor"><a title="JEditor" href="../classes/JEditor/_loadEditor.xhtml">_loadEditor()</a>
+                — Load the editor</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JEditor" href="../classes/JEditor/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="attach"><a title="JEditor" href="../classes/JEditor/attach.xhtml">attach()</a>
+                — Attach an observer object</li>
+            <li id="detach"><a title="JEditor" href="../classes/JEditor/detach.xhtml">detach()</a>
+                — Detach an observer object</li>
+            <li id="display"><a title="JEditor" href="../classes/JEditor/display.xhtml">display()</a>
+                — Display the editor area.</li>
+            <li id="getButtons"><a title="JEditor" href="../classes/JEditor/getButtons.xhtml">getButtons()</a>
+                — Get the editor extended buttons (usually from plugins)</li>
+            <li id="getContent"><a title="JEditor" href="../classes/JEditor/getContent.xhtml">getContent()</a>
+                — Get the editor contents</li>
+            <li id="getInstance"><a title="JEditor" href="../classes/JEditor/getInstance.xhtml">getInstance()</a>
+                — Returns the global Editor object, only creating it if it doesn't already exist.</li>
+            <li id="getState"><a title="JEditor" href="../classes/JEditor/getState.xhtml">getState()</a>
+                — Get the state of the JEditor object</li>
+            <li id="initialise"><a title="JEditor" href="../classes/JEditor/initialise.xhtml">initialise()</a>
+                — Initialise the editor</li>
+            <li id="save"><a title="JEditor" href="../classes/JEditor/save.xhtml">save()</a>
+                — Save the editor content</li>
+            <li id="setContent"><a title="JEditor" href="../classes/JEditor/setContent.xhtml">setContent()</a>
+                — Set the editor contents</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - AKAbstractObject</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">AKAbstractObject</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_joomlaupdate/restore.php.xhtml#line970">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>AKAbstractObject</h1>
+        <h4>The base class of Akeeba Engine objects. Allows for error and warnings logging and propagation. Largely based on the Joomla! 1.5 JObject class.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AKAbstractObject
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$_errors</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$_errors_queue_size</a> =
+                        0;
+                    </li><li>private array <a href="#members">$_warnings</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$_warnings_queue_size</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="AKAbstractObject" href="../classes/AKAbstractObject/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="AKAbstractObject" href="../classes/AKAbstractObject/getError.xhtml">getError</a>()
+                    </li><li>public array <a title="AKAbstractObject" href="../classes/AKAbstractObject/getErrors.xhtml">getErrors</a>()
+                    </li><li>public void <a title="AKAbstractObject" href="../classes/AKAbstractObject/setError.xhtml">setError</a>()
+                    </li><li>public void <a title="AKAbstractObject" href="../classes/AKAbstractObject/resetErrors.xhtml">resetErrors</a>()
+                    </li><li>public string <a title="AKAbstractObject" href="../classes/AKAbstractObject/getWarning.xhtml">getWarning</a>()
+                    </li><li>public array <a title="AKAbstractObject" href="../classes/AKAbstractObject/getWarnings.xhtml">getWarnings</a>()
+                    </li><li>public void <a title="AKAbstractObject" href="../classes/AKAbstractObject/setWarning.xhtml">setWarning</a>()
+                    </li><li>public void <a title="AKAbstractObject" href="../classes/AKAbstractObject/resetWarnings.xhtml">resetWarnings</a>()
+                    </li><li>public void <a title="AKAbstractObject" href="../classes/AKAbstractObject/propagateToObject.xhtml">propagateToObject</a>()
+                    </li><li>public void <a title="AKAbstractObject" href="../classes/AKAbstractObject/propagateFromObject.xhtml">propagateFromObject</a>()
+                    </li><li>protected void <a title="AKAbstractObject" href="../classes/AKAbstractObject/setErrorsQueueSize.xhtml">setErrorsQueueSize</a>()
+                    </li><li>protected void <a title="AKAbstractObject" href="../classes/AKAbstractObject/setWarningsQueueSize.xhtml">setWarningsQueueSize</a>()
+                    </li><li>private mixed <a title="AKAbstractObject" href="../classes/AKAbstractObject/getItemFromArray.xhtml">getItemFromArray</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_errors">
+              <strong>$_errors</strong>
+              <br/>
+              <span class="indent">@var	array	An array of errors</span>
+            </li>
+            <li id="_warnings">
+              <strong>$_warnings</strong>
+              <br/>
+              <span class="indent">@var	array	An array of warnings</span>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_errors_queue_size">
+              <strong>$_errors_queue_size</strong>
+              <br/>
+              <span class="indent">@var	array	The queue size of the $_errors array. Set to 0 for infinite size.</span>
+            </li>
+            <li id="_warnings_queue_size">
+              <strong>$_warnings_queue_size</strong>
+              <br/>
+              <span class="indent">@var	array	The queue size of the $_warnings array. Set to 0 for infinite size.</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getItemFromArray"><a title="AKAbstractObject" href="../classes/AKAbstractObject/getItemFromArray.xhtml">getItemFromArray()</a>
+                — Returns the last item of a LIFO string message queue, or a specific item if so specified.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="setErrorsQueueSize"><a title="AKAbstractObject" href="../classes/AKAbstractObject/setErrorsQueueSize.xhtml">setErrorsQueueSize()</a>
+                — Sets the size of the error queue (acts like a LIFO buffer)</li>
+            <li id="setWarningsQueueSize"><a title="AKAbstractObject" href="../classes/AKAbstractObject/setWarningsQueueSize.xhtml">setWarningsQueueSize()</a>
+                — Sets the size of the warnings queue (acts like a LIFO buffer)</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="AKAbstractObject" href="../classes/AKAbstractObject/__construct.xhtml">__construct()</a>
+                — Public constructor, makes sure we are instantiated only by the factory class</li>
+            <li id="getError"><a title="AKAbstractObject" href="../classes/AKAbstractObject/getError.xhtml">getError()</a>
+                — Get the most recent error message</li>
+            <li id="getErrors"><a title="AKAbstractObject" href="../classes/AKAbstractObject/getErrors.xhtml">getErrors()</a>
+                — Return all errors, if any</li>
+            <li id="getWarning"><a title="AKAbstractObject" href="../classes/AKAbstractObject/getWarning.xhtml">getWarning()</a>
+                — Get the most recent warning message</li>
+            <li id="getWarnings"><a title="AKAbstractObject" href="../classes/AKAbstractObject/getWarnings.xhtml">getWarnings()</a>
+                — Return all warnings, if any</li>
+            <li id="propagateFromObject"><a title="AKAbstractObject" href="../classes/AKAbstractObject/propagateFromObject.xhtml">propagateFromObject()</a>
+                — Propagates errors and warnings from a foreign object. Each propagated list is then cleared on the foreign object, as long as it implements resetErrors() and/or resetWarnings() methods.</li>
+            <li id="propagateToObject"><a title="AKAbstractObject" href="../classes/AKAbstractObject/propagateToObject.xhtml">propagateToObject()</a>
+                — Propagates errors and warnings to a foreign object. The foreign object SHOULD implement the setError() and/or setWarning() methods but DOESN'T HAVE TO be of AKAbstractObject type. For example, this can even be used to propagate to a JObject instance in Joomla!. Propagated items will be removed from ourselves.</li>
+            <li id="resetErrors"><a title="AKAbstractObject" href="../classes/AKAbstractObject/resetErrors.xhtml">resetErrors()</a>
+                — Resets all error messages</li>
+            <li id="resetWarnings"><a title="AKAbstractObject" href="../classes/AKAbstractObject/resetWarnings.xhtml">resetWarnings()</a>
+                — Resets all warning messages</li>
+            <li id="setError"><a title="AKAbstractObject" href="../classes/AKAbstractObject/setError.xhtml">setError()</a>
+                — Add an error message</li>
+            <li id="setWarning"><a title="AKAbstractObject" href="../classes/AKAbstractObject/setWarning.xhtml">setWarning()</a>
+                — Add an error message</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

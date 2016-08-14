@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Metrics\Analyzer\NodeLocAnalyzer</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Metrics_Analyzer">PDepend\Metrics\Analyzer</a>
+          </li>
+          <li class="separator">NodeLocAnalyzer</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Metrics/Analyzer/NodeLocAnalyzer.php.xhtml#line80">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Metrics\Analyzer\</small>NodeLocAnalyzer</h1>
+        <h4>This analyzer collects different lines of code metrics.</h4>
+        <p>It collects the total Lines Of Code(&lt;b&gt;loc&lt;/b&gt;), the None Comment Lines Of<br/>Code(&lt;b&gt;ncloc&lt;/b&gt;), the Comment Lines Of Code(&lt;b&gt;cloc&lt;/b&gt;) and a approximated<br/>Executable Lines Of Code(&lt;b&gt;eloc&lt;/b&gt;) for files, classes, interfaces,<br/>methods, properties and function.<br/><br/>The current implementation has a limitation, that affects inline comments.<br/>The following code will suppress one line of code.<br/><br/>&lt;code&gt;<br/>function foo() {<br/>foobar(); // Bad behaviour...<br/>}<br/>&lt;/code&gt;<br/><br/>The same rule applies to class methods. mapi, &lt;b&gt;PLEASE, FIX THIS ISSUE.&lt;/b&gt;</p>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class NodeLocAnalyzer
+                extends <a title="PDepend\Metrics\AbstractCachingAnalyzer" href="../classes/PDepend_Metrics_AbstractCachingAnalyzer.xhtml">AbstractCachingAnalyzer</a>
+                implements
+                <a title="PDepend\Metrics\AnalyzerNodeAware" href="../interfaces/PDepend_Metrics_AnalyzerNodeAware.xhtml">AnalyzerNodeAware</a>,<a title="PDepend\Metrics\AnalyzerFilterAware" href="../interfaces/PDepend_Metrics_AnalyzerFilterAware.xhtml">AnalyzerFilterAware</a>,<a title="PDepend\Metrics\AnalyzerProjectAware" href="../interfaces/PDepend_Metrics_AnalyzerProjectAware.xhtml">AnalyzerProjectAware</a>
+            {<br/><ul class="none"><li>// constants</li><li>const M_LINES_OF_CODE = 'loc';</li></ul><ul class="none"><li>// members</li><li>private <span title="PDepend\Metrics\Analyzer\array(string=&gt;integer)">array(string=&gt;integer)</span> <a href="#members">$projectMetrics</a> =
+                        ;
+                    </li><li>private integer <a href="#members">$classExecutableLines</a> =
+                        0;
+                    </li><li>private integer <a href="#members">$classLogicalLines</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public array <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/getNodeMetrics.xhtml">getNodeMetrics</a>()
+                    </li><li>public array <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/getProjectMetrics.xhtml">getProjectMetrics</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/analyze.xhtml">analyze</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitClass.xhtml">visitClass</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitCompilationUnit.xhtml">visitCompilationUnit</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitFunction.xhtml">visitFunction</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitInterface.xhtml">visitInterface</a>()
+                    </li><li>public void <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitMethod.xhtml">visitMethod</a>()
+                    </li><li>private void <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/updateProjectMetrics.xhtml">updateProjectMetrics</a>()
+                    </li><li>private array <a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/linesOfCode.xhtml">linesOfCode</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Metrics\AbstractCachingAnalyzer" href="../classes/PDepend_Metrics_AbstractCachingAnalyzer.xhtml">PDepend\Metrics\AbstractCachingAnalyzer</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Metrics\AnalyzerNodeAware" href="../interfaces/PDepend_Metrics_AnalyzerNodeAware.xhtml">PDepend\Metrics\AnalyzerNodeAware</a>
+            </li>
+            <li>
+              <a title="PDepend\Metrics\AnalyzerFilterAware" href="../interfaces/PDepend_Metrics_AnalyzerFilterAware.xhtml">PDepend\Metrics\AnalyzerFilterAware</a>
+            </li>
+            <li>
+              <a title="PDepend\Metrics\AnalyzerProjectAware" href="../interfaces/PDepend_Metrics_AnalyzerProjectAware.xhtml">PDepend\Metrics\AnalyzerProjectAware</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="M_LINES_OF_CODE">M_LINES_OF_CODE</td>
+              <td>'loc'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="classExecutableLines"><strong>$classExecutableLines</strong>
+                —
+                integer<br/><span class="indent">Executable lines of code in a class. The method calculation increases this property with each method's ELOC value.</span></li>
+            <li id="classLogicalLines"><strong>$classLogicalLines</strong>
+                —
+                integer<br/><span class="indent">Logical lines of code in a class. The method calculation increases this property with each method's LLOC value.</span></li>
+            <li id="projectMetrics"><strong>$projectMetrics</strong>
+                —
+                <a title="PDepend\Metrics\Analyzer\array(string=&gt;integer)" href="../classes/PDepend_Metrics_Analyzer_array(string=&gt;integer).xhtml">PDepend\Metrics\Analyzer\array(string=&gt;integer)</a><br/><span class="indent">Collected project metrics.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="linesOfCode"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/linesOfCode.xhtml">linesOfCode()</a>
+                — Counts the Comment Lines Of Code (CLOC) and a pseudo Executable Lines Of Code (ELOC) values.</li>
+            <li id="updateProjectMetrics"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/updateProjectMetrics.xhtml">updateProjectMetrics()</a>
+                — Updates the project metrics based on the node metrics identifier by the given &lt;b&gt;$id&lt;/b&gt;.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="analyze"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/analyze.xhtml">analyze()</a>
+                — Processes all {@link \PDepend\Source\AST\ASTNamespace} code nodes.</li>
+            <li id="getNodeMetrics"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/getNodeMetrics.xhtml">getNodeMetrics()</a>
+                — This method will return an &lt;b&gt;array&lt;/b&gt; with all generated metric values for the given &lt;b&gt;$node&lt;/b&gt; instance. If there are no metrics for the requested node, this method will return an empty &lt;b&gt;array&lt;/b&gt;.</li>
+            <li id="getProjectMetrics"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/getProjectMetrics.xhtml">getProjectMetrics()</a>
+                — Provides the project summary as an &lt;b&gt;array&lt;/b&gt;.</li>
+            <li id="visitClass"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitClass.xhtml">visitClass()</a>
+                — Visits a class node.</li>
+            <li id="visitCompilationUnit"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitCompilationUnit.xhtml">visitCompilationUnit()</a>
+                — Visits a file node.</li>
+            <li id="visitFunction"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitFunction.xhtml">visitFunction()</a>
+                — Visits a function node.</li>
+            <li id="visitInterface"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitInterface.xhtml">visitInterface()</a>
+                — Visits a code interface object.</li>
+            <li id="visitMethod"><a title="PDepend\Metrics\Analyzer\NodeLocAnalyzer" href="../classes/PDepend_Metrics_Analyzer_NodeLocAnalyzer/visitMethod.xhtml">visitMethod()</a>
+                — Visits a method node.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

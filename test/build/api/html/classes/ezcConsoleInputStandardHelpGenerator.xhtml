@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcConsoleInputStandardHelpGenerator</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcConsoleInputStandardHelpGenerator</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/console-tools/src/input/help_generators/standard.php.xhtml#line39">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcConsoleInputStandardHelpGenerator</h1>
+        <h4>Standard help generator for {@link ezcConsoleInput}.</h4>
+        <p>Standard help generation as did from the start.<br/></p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcConsoleInputStandardHelpGenerator
+                implements
+                <a title="ezcConsoleInputHelpGenerator" href="../interfaces/ezcConsoleInputHelpGenerator.xhtml">ezcConsoleInputHelpGenerator</a>
+            {<br/><ul class="none"><li>// members</li><li>private <span title="ezcConsoleInput">ezcConsoleInput</span> <a href="#members">$input</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/__construct.xhtml">__construct</a>()
+                    </li><li>public array(array(string)) <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateUngroupedOptionHelp.xhtml">generateUngroupedOptionHelp</a>()
+                    </li><li>public array(string=&gt;array(array(string))) <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateGroupedOptionHelp.xhtml">generateGroupedOptionHelp</a>()
+                    </li><li>public array(array(string)) <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateArgumentHelp.xhtml">generateArgumentHelp</a>()
+                    </li><li>private string <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/getOptionHelpRow.xhtml">getOptionHelpRow</a>()
+                    </li><li>public string <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateSynopsis.xhtml">generateSynopsis</a>()
+                    </li><li>private string <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/createOptionSynopsis.xhtml">createOptionSynopsis</a>()
+                    </li><li>private string <a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/createArgumentsSynopsis.xhtml">createArgumentsSynopsis</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="ezcConsoleInputHelpGenerator" href="../interfaces/ezcConsoleInputHelpGenerator.xhtml">ezcConsoleInputHelpGenerator</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">39+</td>
+            <td>Verify interface and make it public to replace the validation in</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="input"><strong>$input</strong>
+                —
+                <a title="ezcConsoleInput" href="../classes/ezcConsoleInput.xhtml">ezcConsoleInput</a><br/><span class="indent">Input object.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="createArgumentsSynopsis"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/createArgumentsSynopsis.xhtml">createArgumentsSynopsis()</a>
+                — Generate synopsis for arguments.</li>
+            <li id="createOptionSynopsis"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/createOptionSynopsis.xhtml">createOptionSynopsis()</a>
+                — Returns the synopsis string for a single option and its dependencies.</li>
+            <li id="getOptionHelpRow"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/getOptionHelpRow.xhtml">getOptionHelpRow()</a>
+                — Creates 1 text row for displaying options help.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/__construct.xhtml">__construct()</a>
+                — Creates a new help generator.</li>
+            <li id="generateArgumentHelp"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateArgumentHelp.xhtml">generateArgumentHelp()</a>
+                — Generates help information as a multi-dimensonal array for the given $argumentDefinition.</li>
+            <li id="generateGroupedOptionHelp"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateGroupedOptionHelp.xhtml">generateGroupedOptionHelp()</a>
+                — Generates help information as a multidimensional array, grouped in categories.</li>
+            <li id="generateSynopsis"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateSynopsis.xhtml">generateSynopsis()</a>
+                — Generates a command line synopsis for the options and arguments.</li>
+            <li id="generateUngroupedOptionHelp"><a title="ezcConsoleInputStandardHelpGenerator" href="../classes/ezcConsoleInputStandardHelpGenerator/generateUngroupedOptionHelp.xhtml">generateUngroupedOptionHelp()</a>
+                — Generates help information as a multidimensional array.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

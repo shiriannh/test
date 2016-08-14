@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFUtilsInstallscript</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFUtilsInstallscript</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/utils/installscript/installscript.php.xhtml#line19">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFUtilsInstallscript</h1>
+        <h4>A helper class which you can use to create component installation scripts</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFUtilsInstallscript
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$componentName</a> =
+                        'com_foobar';
+                    </li><li>protected string <a href="#members">$componentTitle</a> =
+                        'Foobar Component';
+                    </li><li>protected array <a href="#members">$installation_queue</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$uninstallation_queue</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$removeFilesFree</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$removeFilesAllVersions</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$cliScriptFiles</a> =
+                        ;
+                    </li><li>protected string <a href="#members">$cliSourcePath</a> =
+                        'cli';
+                    </li><li>protected string <a href="#members">$fofSourcePath</a> =
+                        'fof';
+                    </li><li>protected string <a href="#members">$strapperSourcePath</a> =
+                        'strapper';
+                    </li><li>protected string <a href="#members">$modulesSourcePath</a> =
+                        'modules';
+                    </li><li>protected string <a href="#members">$pluginsSourcePath</a> =
+                        'plugins';
+                    </li><li>protected boolean <a href="#members">$schemaXmlPathRelative</a> =
+                        true;
+                    </li><li>protected string <a href="#members">$schemaXmlPath</a> =
+                        'sql/xml';
+                    </li><li>protected string <a href="#members">$minimumPHPVersion</a> =
+                        '5.3.3';
+                    </li><li>protected string <a href="#members">$minimumJoomlaVersion</a> =
+                        '2.5.6';
+                    </li><li>protected string <a href="#members">$maximumJoomlaVersion</a> =
+                        '3.9.99';
+                    </li><li>protected boolean <a href="#members">$isPaid</a> =
+                        false;
+                    </li><li>protected array <a href="#members">$postInstallationMessages</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public boolean <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/preflight.xhtml">preflight</a>()
+                    </li><li>public void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/postflight.xhtml">postflight</a>()
+                    </li><li>public void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstall.xhtml">uninstall</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/copyCliFiles.xhtml">copyCliFiles</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/renderPostInstallation.xhtml">renderPostInstallation</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/renderPostUninstallation.xhtml">renderPostUninstallation</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/bugfixDBFunctionReturnedNoError.xhtml">bugfixDBFunctionReturnedNoError</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/bugfixCantBuildAdminMenus.xhtml">bugfixCantBuildAdminMenus</a>()
+                    </li><li>protected JObject <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/installSubextensions.xhtml">installSubextensions</a>()
+                    </li><li>protected stdClass <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstallSubextensions.xhtml">uninstallSubextensions</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/removeFilesAndFolders.xhtml">removeFilesAndFolders</a>()
+                    </li><li>protected array <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/installFOF.xhtml">installFOF</a>()
+                    </li><li>protected array <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/installStrapper.xhtml">installStrapper</a>()
+                    </li><li>protected stdClass <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstallObsoleteSubextensions.xhtml">uninstallObsoleteSubextensions</a>()
+                    </li><li>private bool <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_createAdminMenus.xhtml">_createAdminMenus</a>()
+                    </li><li>private bool <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_reallyPublishAdminMenuItems.xhtml">_reallyPublishAdminMenuItems</a>()
+                    </li><li>private void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_rebuildMenu.xhtml">_rebuildMenu</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/addPostInstallationMessage.xhtml">addPostInstallationMessage</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_applyPostInstallationMessages.xhtml">_applyPostInstallationMessages</a>()
+                    </li><li>protected void <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstallPostInstallationMessages.xhtml">uninstallPostInstallationMessages</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="cliScriptFiles"><strong>$cliScriptFiles</strong>
+                —
+                array<br/><span class="indent">A list of scripts to be copied to the "cli" directory of the site</span></li>
+            <li id="cliSourcePath"><strong>$cliSourcePath</strong>
+                —
+                string<br/><span class="indent">The path inside your package where cli scripts are stored</span></li>
+            <li id="componentName"><strong>$componentName</strong>
+                —
+                string<br/><span class="indent">The component's name</span></li>
+            <li id="componentTitle"><strong>$componentTitle</strong>
+                —
+                string<br/><span class="indent">The title of the component (printed on installation and uninstallation messages)</span></li>
+            <li id="fofSourcePath"><strong>$fofSourcePath</strong>
+                —
+                string<br/><span class="indent">The path inside your package where FOF is stored</span></li>
+            <li id="installation_queue"><strong>$installation_queue</strong>
+                —
+                array<br/><span class="indent">The list of extra modules and plugins to install on component installation / update and remove on component uninstallation.</span></li>
+            <li id="isPaid"><strong>$isPaid</strong>
+                —
+                boolean<br/><span class="indent">Is this the paid version of the extension? This only determines which files / extensions will be removed.</span></li>
+            <li id="maximumJoomlaVersion"><strong>$maximumJoomlaVersion</strong>
+                —
+                string<br/><span class="indent">The maximum Joomla! version this extension can be installed on</span></li>
+            <li id="minimumJoomlaVersion"><strong>$minimumJoomlaVersion</strong>
+                —
+                string<br/><span class="indent">The minimum Joomla! version required to install this extension</span></li>
+            <li id="minimumPHPVersion"><strong>$minimumPHPVersion</strong>
+                —
+                string<br/><span class="indent">The minimum PHP version required to install this extension</span></li>
+            <li id="modulesSourcePath"><strong>$modulesSourcePath</strong>
+                —
+                string<br/><span class="indent">The path inside your package where extra modules are stored</span></li>
+            <li id="pluginsSourcePath"><strong>$pluginsSourcePath</strong>
+                —
+                string<br/><span class="indent">The path inside your package where extra plugins are stored</span></li>
+            <li id="postInstallationMessages"><strong>$postInstallationMessages</strong>
+                —
+                array<br/><span class="indent">Post-installation message definitions for Joomla! 3.2 or later.</span></li>
+            <li id="removeFilesAllVersions"><strong>$removeFilesAllVersions</strong>
+                —
+                array<br/><span class="indent">Obsolete files and folders to remove from both paid and free releases. This is used when you refactor code and some files inevitably become obsolete and need to be removed.</span></li>
+            <li id="removeFilesFree"><strong>$removeFilesFree</strong>
+                —
+                array<br/><span class="indent">Obsolete files and folders to remove from the free version only. This is used when you move a feature from the free version of your extension to its paid version. If you don't have such a distinction you can ignore this.</span></li>
+            <li id="schemaXmlPath"><strong>$schemaXmlPath</strong>
+                —
+                string<br/><span class="indent">The path where the schema XML files are stored. Its contents depend on the schemaXmlPathRelative variable above true        =&gt; schemaXmlPath contains a path relative to the component's back-end directory false    =&gt; schemaXmlPath contains an absolute filesystem path</span></li>
+            <li id="schemaXmlPathRelative"><strong>$schemaXmlPathRelative</strong>
+                —
+                boolean<br/><span class="indent">Is the schemaXmlPath class variable a relative path? If set to true the schemaXmlPath variable contains a path relative to the component's back-end directory. If set to false the schemaXmlPath variable contains an absolute filesystem path.</span></li>
+            <li id="strapperSourcePath"><strong>$strapperSourcePath</strong>
+                —
+                string<br/><span class="indent">The path inside your package where Akeeba Strapper is stored</span></li>
+            <li id="uninstallation_queue"><strong>$uninstallation_queue</strong>
+                —
+                array<br/><span class="indent">The list of obsolete extra modules and plugins to uninstall on component upgrade / installation.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="_createAdminMenus">
+              <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_createAdminMenus.xhtml">_createAdminMenus()</a>
+            </li>
+            <li id="_reallyPublishAdminMenuItems"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_reallyPublishAdminMenuItems.xhtml">_reallyPublishAdminMenuItems()</a>
+                — Make sure the Component menu items are really published!</li>
+            <li id="_rebuildMenu"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_rebuildMenu.xhtml">_rebuildMenu()</a>
+                — Tells Joomla! to rebuild its menu structure to make triple-sure that the Components menu items really do exist in the correct place and can really be rendered.</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="_applyPostInstallationMessages"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/_applyPostInstallationMessages.xhtml">_applyPostInstallationMessages()</a>
+                — Applies the post-installation messages for Joomla! 3.2 or later</li>
+            <li id="addPostInstallationMessage"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/addPostInstallationMessage.xhtml">addPostInstallationMessage()</a>
+                — Adds or updates a post-installation message (PIM) definition for Joomla! 3.2 or later. You can use this in your post-installation script using this code:</li>
+            <li id="bugfixCantBuildAdminMenus"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/bugfixCantBuildAdminMenus.xhtml">bugfixCantBuildAdminMenus()</a>
+                — Joomla! 1.6+ bugfix for "Can not build admin menus"</li>
+            <li id="bugfixDBFunctionReturnedNoError"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/bugfixDBFunctionReturnedNoError.xhtml">bugfixDBFunctionReturnedNoError()</a>
+                — Bugfix for "DB function returned no error"</li>
+            <li id="copyCliFiles"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/copyCliFiles.xhtml">copyCliFiles()</a>
+                — Copies the CLI scripts into Joomla!'s cli directory</li>
+            <li id="installFOF"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/installFOF.xhtml">installFOF()</a>
+                — Installs FOF if necessary</li>
+            <li id="installStrapper"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/installStrapper.xhtml">installStrapper()</a>
+                — Installs Akeeba Strapper if necessary</li>
+            <li id="installSubextensions"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/installSubextensions.xhtml">installSubextensions()</a>
+                — Installs subextensions (modules, plugins) bundled with the main extension</li>
+            <li id="removeFilesAndFolders"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/removeFilesAndFolders.xhtml">removeFilesAndFolders()</a>
+                — Removes obsolete files and folders</li>
+            <li id="renderPostInstallation"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/renderPostInstallation.xhtml">renderPostInstallation()</a>
+                — Renders the message after installing or upgrading the component</li>
+            <li id="renderPostUninstallation"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/renderPostUninstallation.xhtml">renderPostUninstallation()</a>
+                — Renders the message after uninstalling the component</li>
+            <li id="uninstallObsoleteSubextensions"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstallObsoleteSubextensions.xhtml">uninstallObsoleteSubextensions()</a>
+                — Uninstalls obsolete subextensions (modules, plugins) bundled with the main extension</li>
+            <li id="uninstallPostInstallationMessages">
+              <a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstallPostInstallationMessages.xhtml">uninstallPostInstallationMessages()</a>
+            </li>
+            <li id="uninstallSubextensions"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstallSubextensions.xhtml">uninstallSubextensions()</a>
+                — Uninstalls subextensions (modules, plugins) bundled with the main extension</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="postflight"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/postflight.xhtml">postflight()</a>
+                — Runs after install, update or discover_update. In other words, it executes after Joomla! has finished installing or updating your component. This is the last chance you've got to perform any additional installations, clean-up, database updates and similar housekeeping functions.</li>
+            <li id="preflight"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/preflight.xhtml">preflight()</a>
+                — Joomla! pre-flight event. This runs before Joomla! installs or updates the component. This is our last chance to tell Joomla! if it should abort the installation.</li>
+            <li id="uninstall"><a title="FOFUtilsInstallscript" href="../classes/FOFUtilsInstallscript/uninstall.xhtml">uninstall()</a>
+                — Runs on uninstallation</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\Yaml\Inline</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_Yaml">Symfony\Component\Yaml</a>
+          </li>
+          <li class="separator">Inline</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/vendor/symfony/yaml/Inline.php.xhtml#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\Yaml\</small>Inline</h1>
+        <h4>Inline implements a YAML parser/dumper for the YAML inline syntax.</h4>
+        <p/>
+        <ul>
+          <li>Author: Fabien Potencier &lt;fabien@symfony.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Inline
+            {<br/><ul class="none"><li>// constants</li><li>const REGEX_QUOTED_STRING = '(?:"([^"\\\\]*(?:\\\\.[^"\\\\]*)*)"|\'([^\']*(?:\'\'[^\']*)*)\')';</li></ul><ul class="none"><li>// members</li><li>private static boolean <a href="#members">$exceptionOnInvalidType</a> =
+                        false;
+                    </li><li>private static boolean <a href="#members">$objectSupport</a> =
+                        false;
+                    </li><li>private static boolean <a href="#members">$objectForMap</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static array <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parse.xhtml">parse</a>()
+                    </li><li>public static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/dump.xhtml">dump</a>()
+                    </li><li>private static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/dumpArray.xhtml">dumpArray</a>()
+                    </li><li>public static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseScalar.xhtml">parseScalar</a>()
+                    </li><li>private static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseQuotedScalar.xhtml">parseQuotedScalar</a>()
+                    </li><li>private static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseSequence.xhtml">parseSequence</a>()
+                    </li><li>private static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseMapping.xhtml">parseMapping</a>()
+                    </li><li>private static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/evaluateScalar.xhtml">evaluateScalar</a>()
+                    </li><li>private static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/getTimestampRegex.xhtml">getTimestampRegex</a>()
+                    </li><li>private static string <a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/getHexRegex.xhtml">getHexRegex</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="REGEX_QUOTED_STRING">REGEX_QUOTED_STRING</td>
+              <td>'(?:"([^"\\\\]*(?:\\\\.[^"\\\\]*)*)"|\'([^\']*(?:\'\'[^\']*)*)\')'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="exceptionOnInvalidType">
+              <strong>$exceptionOnInvalidType</strong>
+            </li>
+            <li id="objectForMap">
+              <strong>$objectForMap</strong>
+            </li>
+            <li id="objectSupport">
+              <strong>$objectSupport</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="dumpArray"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/dumpArray.xhtml">dumpArray()</a>
+                — Dumps a PHP array to a YAML string.</li>
+            <li id="evaluateScalar"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/evaluateScalar.xhtml">evaluateScalar()</a>
+                — Evaluates scalars and replaces magic values.</li>
+            <li id="getHexRegex"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/getHexRegex.xhtml">getHexRegex()</a>
+                — Gets a regex that matches a YAML number in hexadecimal notation.</li>
+            <li id="getTimestampRegex"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/getTimestampRegex.xhtml">getTimestampRegex()</a>
+                — Gets a regex that matches a YAML date.</li>
+            <li id="parseMapping"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseMapping.xhtml">parseMapping()</a>
+                — Parses a mapping to a YAML string.</li>
+            <li id="parseQuotedScalar"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseQuotedScalar.xhtml">parseQuotedScalar()</a>
+                — Parses a quoted scalar to YAML.</li>
+            <li id="parseSequence"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseSequence.xhtml">parseSequence()</a>
+                — Parses a sequence to a YAML string.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="dump"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/dump.xhtml">dump()</a>
+                — Dumps a given PHP variable to a YAML string.</li>
+            <li id="parse"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parse.xhtml">parse()</a>
+                — Converts a YAML string to a PHP array.</li>
+            <li id="parseScalar"><a title="Symfony\Component\Yaml\Inline" href="../classes/Symfony_Component_Yaml_Inline/parseScalar.xhtml">parseScalar()</a>
+                — Parses a scalar to a YAML string.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

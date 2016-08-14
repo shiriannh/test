@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FinderIndexerHelper</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FinderIndexerHelper</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_finder/helpers/indexer/helper.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FinderIndexerHelper</h1>
+        <h4>Helper class for the Finder indexer package.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FinderIndexerHelper
+            {<br/><ul class="none"><li>// members</li><li>public static <span title="FinderIndexerStemmer">FinderIndexerStemmer</span> <a href="#members">$stemmer</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static string <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/parse.xhtml">parse</a>()
+                    </li><li>public static array <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/tokenize.xhtml">tokenize</a>()
+                    </li><li>public static string <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/stem.xhtml">stem</a>()
+                    </li><li>public static integer <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/addContentType.xhtml">addContentType</a>()
+                    </li><li>public static boolean <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/isCommon.xhtml">isCommon</a>()
+                    </li><li>public static array <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getCommonWords.xhtml">getCommonWords</a>()
+                    </li><li>public static string <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getDefaultLanguage.xhtml">getDefaultLanguage</a>()
+                    </li><li>public static string <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getPrimaryLanguage.xhtml">getPrimaryLanguage</a>()
+                    </li><li>public static string <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getContentPath.xhtml">getContentPath</a>()
+                    </li><li>public static boolean <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getContentExtras.xhtml">getContentExtras</a>()
+                    </li><li>public static string <a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/prepareContent.xhtml">prepareContent</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="stemmer"><strong>$stemmer</strong>
+                —
+                <a title="FinderIndexerStemmer" href="../classes/FinderIndexerStemmer.xhtml">FinderIndexerStemmer</a><br/><span class="indent">The token stemmer object. The stemmer is set by whatever class wishes to use it but it must be an instance of FinderIndexerStemmer.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addContentType"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/addContentType.xhtml">addContentType()</a>
+                — Method to add a content type to the database.</li>
+            <li id="getCommonWords"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getCommonWords.xhtml">getCommonWords()</a>
+                — Method to get an array of common terms for a language.</li>
+            <li id="getContentExtras"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getContentExtras.xhtml">getContentExtras()</a>
+                — Method to get extra data for a content before being indexed. This is how we add Comments, Tags, Labels, etc. that should be available to Finder.</li>
+            <li id="getContentPath"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getContentPath.xhtml">getContentPath()</a>
+                — Method to get the path (SEF route) for a content item.</li>
+            <li id="getDefaultLanguage"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getDefaultLanguage.xhtml">getDefaultLanguage()</a>
+                — Method to get the default language for the site.</li>
+            <li id="getPrimaryLanguage"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/getPrimaryLanguage.xhtml">getPrimaryLanguage()</a>
+                — Method to parse a language/locale key and return a simple language string.</li>
+            <li id="isCommon"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/isCommon.xhtml">isCommon()</a>
+                — Method to check if a token is common in a language.</li>
+            <li id="parse"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/parse.xhtml">parse()</a>
+                — Method to parse input into plain text.</li>
+            <li id="prepareContent"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/prepareContent.xhtml">prepareContent()</a>
+                — Method to process content text using the onContentPrepare event trigger.</li>
+            <li id="stem"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/stem.xhtml">stem()</a>
+                — Method to get the base word of a token. This method uses the public {@link FinderIndexerHelper::$stemmer} object if it is set. If no stemmer is set, the original token is returned.</li>
+            <li id="tokenize"><a title="FinderIndexerHelper" href="../classes/FinderIndexerHelper/tokenize.xhtml">tokenize()</a>
+                — Method to tokenize a text string.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JTableObserverTags</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JTableObserverTags</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/table/observer/tags.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JTableObserverTags</h1>
+        <h4>Abstract class defining methods that can be implemented by an Observer class of a JTable class (which is an Observable).</h4>
+        <p>Attaches $this Observer to the $table in the constructor.<br/>The classes extending this class should not be instanciated directly, as they<br/>are automatically instanciated by the JObserverMapper</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JTableObserverTags
+                extends <a title="JTableObserver" href="../classes/JTableObserver.xhtml">JTableObserver</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="JHelperTags">JHelperTags</span> <a href="#members">$tagsHelper</a>;
+                    </li><li>protected string <a href="#members">$typeAliasPattern</a> =
+                        null;
+                    </li><li>protected boolean <a href="#members">$newTags</a> =
+                        false;
+                    </li><li>protected boolean <a href="#members">$replaceTags</a> =
+                        true;
+                    </li><li>public static <span title="JTableObserverTags">JTableObserverTags</span> <a href="#members">$_myTableForPregreplaceOnly</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static JTableObserverTags <a title="JTableObserverTags" href="../classes/JTableObserverTags/createObserver.xhtml">createObserver</a>()
+                    </li><li>public void <a title="JTableObserverTags" href="../classes/JTableObserverTags/onBeforeStore.xhtml">onBeforeStore</a>()
+                    </li><li>public void <a title="JTableObserverTags" href="../classes/JTableObserverTags/onAfterStore.xhtml">onAfterStore</a>()
+                    </li><li>public void <a title="JTableObserverTags" href="../classes/JTableObserverTags/onBeforeDelete.xhtml">onBeforeDelete</a>()
+                    </li><li>public boolean <a title="JTableObserverTags" href="../classes/JTableObserverTags/setNewTags.xhtml">setNewTags</a>()
+                    </li><li>protected void <a title="JTableObserverTags" href="../classes/JTableObserverTags/parseTypeAlias.xhtml">parseTypeAlias</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JTableObserver" href="../classes/JTableObserver.xhtml">JTableObserver</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="newTags"><strong>$newTags</strong>
+                —
+                array<br/><span class="indent">Override for postStoreProcess param newTags, Set by setNewTags, used by onAfterStore and onBeforeStore</span></li>
+            <li id="replaceTags"><strong>$replaceTags</strong>
+                —
+                boolean<br/><span class="indent">Override for postStoreProcess param replaceTags. Set by setNewTags, used by onAfterStore</span></li>
+            <li id="tagsHelper"><strong>$tagsHelper</strong>
+                —
+                <a title="JHelperTags" href="../classes/JHelperTags.xhtml">JHelperTags</a><br/><span class="indent">Helper object for managing tags</span></li>
+            <li id="typeAliasPattern"><strong>$typeAliasPattern</strong>
+                —
+                string<br/><span class="indent">The pattern for this table's TypeAlias</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="_myTableForPregreplaceOnly"><strong>$_myTableForPregreplaceOnly</strong>
+                —
+                <a title="JTableObserverTags" href="../classes/JTableObserverTags.xhtml">JTableObserverTags</a><br/><span class="indent">Not public, so marking private and deprecated, but needed internally in parseTypeAlias for PHP &lt; 5.4.0 as it's not passing context $this to closure function.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="parseTypeAlias"><a title="JTableObserverTags" href="../classes/JTableObserverTags/parseTypeAlias.xhtml">parseTypeAlias()</a>
+                — Internal method Parses a TypeAlias of the form "{variableName}.type", replacing {variableName} with table-instance variables variableName Storing result into $this-&gt;tagsHelper-&gt;typeAlias</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="createObserver"><a title="JTableObserverTags" href="../classes/JTableObserverTags/createObserver.xhtml">createObserver()</a>
+                — Creates the associated observer instance and attaches it to the $observableObject Creates the associated tags helper class instance $typeAlias can be of the form "{variableName}.type", automatically replacing {variableName} with table-instance variables variableName</li>
+            <li id="onAfterStore"><a title="JTableObserverTags" href="../classes/JTableObserverTags/onAfterStore.xhtml">onAfterStore()</a>
+                — Post-processor for $table-&gt;store($updateNulls) You can change optional params newTags and replaceTags of tagsHelper with method setNewTagsToAdd</li>
+            <li id="onBeforeDelete"><a title="JTableObserverTags" href="../classes/JTableObserverTags/onBeforeDelete.xhtml">onBeforeDelete()</a>
+                — Pre-processor for $table-&gt;delete($pk)</li>
+            <li id="onBeforeStore"><a title="JTableObserverTags" href="../classes/JTableObserverTags/onBeforeStore.xhtml">onBeforeStore()</a>
+                — Pre-processor for $table-&gt;store($updateNulls)</li>
+            <li id="setNewTags"><a title="JTableObserverTags" href="../classes/JTableObserverTags/setNewTags.xhtml">setNewTags()</a>
+                — Sets the new tags to be added or to replace existing tags</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

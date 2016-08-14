@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JText" href="../../classes/JText.xhtml">JText</a>
+          </li>
+          <li class="separator">plural</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/joomla/language/text.php.xhtml#line195">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JText::</small>plural</h1>
+        <h4>Like JText::sprintf but tries to pluralise the string.</h4>
+        <p>Note that this method can take a mixed number of arguments as for the sprintf function.
+
+The last argument can take an array of options:
+
+array('jsSafe'=&gt;boolean, 'interpretBackSlashes'=&gt;boolean, 'script'=&gt;boolean)
+
+where:
+
+jsSafe is a boolean to generate a javascript safe strings.
+interpretBackSlashes is a boolean to interpret backslashes \\-&gt;\, \n-&gt;new line, \t-&gt;tabulation.
+script is a boolean to indicate that the string will be push in the javascript language store.
+
+Examples:
+`&lt;script&gt;alert(Joomla.JText._('&lt;?php echo JText::plural("COM_PLUGINS_N_ITEMS_UNPUBLISHED", 1, array("script"=&gt;true)); ?&gt;'));&lt;/script&gt;`
+will generate an alert message containing '1 plugin successfully disabled'
+`&lt;?php echo JText::plural('COM_PLUGINS_N_ITEMS_UNPUBLISHED', 1); ?&gt;` will generate a '1 plugin successfully disabled' string</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function plural(string
+        $string,
+            integer
+        $n )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$string</code>
+                —
+                string</dt>
+          <dd>The format string.</dd>
+          <dt><code>$n</code>
+                —
+                integer</dt>
+          <dd>The number of items</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>string</dt>
+          <dd>The translated strings or the key if 'script' is true in the array of options</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

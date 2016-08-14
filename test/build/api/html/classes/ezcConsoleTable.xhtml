@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - ezcConsoleTable</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">ezcConsoleTable</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/zetacomponents/console-tools/src/table.php.xhtml#line93">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>ezcConsoleTable</h1>
+        <h4>Creating tables to be printed to the console.</h4>
+        <p>Every ezcConsoleTable object can be accessed as if it was a multidimensional,<br/>numerically indexed array. The first dimension represents the rows of the<br/>table, so $table[0] gives you access to the first row of the table, which is<br/>represented by a // Set another border format for our headline row<br/>$table[0]-&gt;borderFormat = 'headline';<br/>// Set the content format for all cells of the 3rd row to "sum"<br/>$table[2]-&gt;format = 'sum';<br/>$table-&gt;outputTable();<br/>&lt;/code&gt;<br/></p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ezcConsoleTable
+                implements
+                <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>,<a title="Iterator" href="../interfaces/Iterator.xhtml">Iterator</a>,<a title="ArrayAccess" href="../interfaces/ArrayAccess.xhtml">ArrayAccess</a>
+            {<br/><ul class="none"><li>// constants</li><li>const WRAP_AUTO = 1;</li><li>const WRAP_NONE = 2;</li><li>const WRAP_CUT = 3;</li><li>const ALIGN_DEFAULT = 1;</li><li>const ALIGN_LEFT = STR_PAD_RIGHT;</li><li>const ALIGN_RIGHT = STR_PAD_LEFT;</li><li>const ALIGN_CENTER = STR_PAD_BOTH;</li><li>const WIDTH_FIXED = 1;</li><li>const WIDTH_MAX = 2;</li></ul><ul class="none"><li>// members</li><li>protected <span title="array(string=&gt;mixed)">array(string=&gt;mixed)</span> <a href="#members">$properties</a>;
+                    </li><li>protected <span title="ezcConsoleOutput">ezcConsoleOutput</span> <a href="#members">$outputHandler</a>;
+                    </li><li>protected <span title="array(ezcConsoleTableRow)">array(ezcConsoleTableRow)</span> <a href="#members">$rows</a>;
+                    </li><li>private <span title="ezcConsoleStringTool">ezcConsoleStringTool</span> <a href="#members">$stringTool</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/setOptions.xhtml">setOptions</a>()
+                    </li><li>public ezcConsoleTableOptions <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/getOptions.xhtml">getOptions</a>()
+                    </li><li>public array <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/getTable.xhtml">getTable</a>()
+                    </li><li>public void <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/outputTable.xhtml">outputTable</a>()
+                    </li><li>public string <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__toString.xhtml">__toString</a>()
+                    </li><li>public bool <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetExists.xhtml">offsetExists</a>()
+                    </li><li>public ezcConsoleTableCell <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetGet.xhtml">offsetGet</a>()
+                    </li><li>public void <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetSet.xhtml">offsetSet</a>()
+                    </li><li>public void <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetUnset.xhtml">offsetUnset</a>()
+                    </li><li>public int <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/count.xhtml">count</a>()
+                    </li><li>public ezcConsoleTableCell <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/current.xhtml">current</a>()
+                    </li><li>public int <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/key.xhtml">key</a>()
+                    </li><li>public mixed <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/next.xhtml">next</a>()
+                    </li><li>public ezcConsoleTableCell <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/rewind.xhtml">rewind</a>()
+                    </li><li>public ezcConsoleTableCell <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/valid.xhtml">valid</a>()
+                    </li><li>public mixed <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__get.xhtml">__get</a>()
+                    </li><li>public void <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__set.xhtml">__set</a>()
+                    </li><li>public bool <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__isset.xhtml">__isset</a>()
+                    </li><li>private array(string) <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/generateTable.xhtml">generateTable</a>()
+                    </li><li>private string <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/generateBorder.xhtml">generateBorder</a>()
+                    </li><li>private string <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/generateRow.xhtml">generateRow</a>()
+                    </li><li>private int <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/determineAlign.xhtml">determineAlign</a>()
+                    </li><li>private string <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/determineFormat.xhtml">determineFormat</a>()
+                    </li><li>private string <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/determineBorderFormat.xhtml">determineBorderFormat</a>()
+                    </li><li>private array(string) <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/breakRows.xhtml">breakRows</a>()
+                    </li><li>private void <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/getColWidths.xhtml">getColWidths</a>()
+                    </li><li>private string <a title="ezcConsoleTable" href="../classes/ezcConsoleTable/formatText.xhtml">formatText</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            </li>
+            <li>
+              <a title="Iterator" href="../interfaces/Iterator.xhtml">Iterator</a>
+            </li>
+            <li>
+              <a title="ArrayAccess" href="../interfaces/ArrayAccess.xhtml">ArrayAccess</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="WRAP_AUTO">WRAP_AUTO</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="WRAP_NONE">WRAP_NONE</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="WRAP_CUT">WRAP_CUT</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td id="ALIGN_DEFAULT">ALIGN_DEFAULT</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="ALIGN_LEFT">ALIGN_LEFT</td>
+              <td>STR_PAD_RIGHT</td>
+            </tr>
+            <tr>
+              <td id="ALIGN_RIGHT">ALIGN_RIGHT</td>
+              <td>STR_PAD_LEFT</td>
+            </tr>
+            <tr>
+              <td id="ALIGN_CENTER">ALIGN_CENTER</td>
+              <td>STR_PAD_BOTH</td>
+            </tr>
+            <tr>
+              <td id="WIDTH_FIXED">WIDTH_FIXED</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="WIDTH_MAX">WIDTH_MAX</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="stringTool"><strong>$stringTool</strong>
+                —
+                <a title="ezcConsoleStringTool" href="../classes/ezcConsoleStringTool.xhtml">ezcConsoleStringTool</a><br/><span class="indent">Tool object for multi-byte encoding safe string operations.</span></li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="outputHandler"><strong>$outputHandler</strong>
+                —
+                <a title="ezcConsoleOutput" href="../classes/ezcConsoleOutput.xhtml">ezcConsoleOutput</a><br/><span class="indent">The ezcConsoleOutput object to use.</span></li>
+            <li id="properties"><strong>$properties</strong>
+                —
+                <a title="array(string=&gt;mixed)" href="../classes/array(string=&gt;mixed).xhtml">array(string=&gt;mixed)</a><br/><span class="indent">Container to hold the properties</span></li>
+            <li id="rows"><strong>$rows</strong>
+                —
+                <a title="array(ezcConsoleTableRow)" href="../classes/array(ezcConsoleTableRow).xhtml">array(ezcConsoleTableRow)</a><br/><span class="indent">Collection of the rows that are contained in the table.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="breakRows"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/breakRows.xhtml">breakRows()</a>
+                — Returns auto broken rows from an array of cells.</li>
+            <li id="determineAlign"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/determineAlign.xhtml">determineAlign()</a>
+                — Determine the alignment of a cell.</li>
+            <li id="determineBorderFormat"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/determineBorderFormat.xhtml">determineBorderFormat()</a>
+                — Determine the format of a rows border.</li>
+            <li id="determineFormat"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/determineFormat.xhtml">determineFormat()</a>
+                — Determine the format of a cells content.</li>
+            <li id="formatText"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/formatText.xhtml">formatText()</a>
+                — Returns the given $text formatted with $format.</li>
+            <li id="generateBorder"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/generateBorder.xhtml">generateBorder()</a>
+                — Generate top/bottom borders of rows.</li>
+            <li id="generateRow"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/generateRow.xhtml">generateRow()</a>
+                — Generate a single physical row.</li>
+            <li id="generateTable"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/generateTable.xhtml">generateTable()</a>
+                — Generate the complete table as an array.</li>
+            <li id="getColWidths"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/getColWidths.xhtml">getColWidths()</a>
+                — Determine width of each single column.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__construct.xhtml">__construct()</a>
+                — Creates a new table.</li>
+            <li id="__get"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__get.xhtml">__get()</a>
+                — Property read access.</li>
+            <li id="__isset"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__isset.xhtml">__isset()</a>
+                — Property isset access.</li>
+            <li id="__set"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__set.xhtml">__set()</a>
+                — Property write access.</li>
+            <li id="__toString"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/__toString.xhtml">__toString()</a>
+                — Returns the table in a string.</li>
+            <li id="count"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/count.xhtml">count()</a>
+                — Returns the number of cells in the row.</li>
+            <li id="current"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/current.xhtml">current()</a>
+                — Returns the currently selected cell.</li>
+            <li id="getOptions"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/getOptions.xhtml">getOptions()</a>
+                — Returns the current options.</li>
+            <li id="getTable"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/getTable.xhtml">getTable()</a>
+                — Returns the table in an array.</li>
+            <li id="key"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/key.xhtml">key()</a>
+                — Returns the key of the currently selected cell.</li>
+            <li id="next"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/next.xhtml">next()</a>
+                — Returns the next cell and selects it or false on the last cell.</li>
+            <li id="offsetExists"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetExists.xhtml">offsetExists()</a>
+                — Returns if the given offset exists.</li>
+            <li id="offsetGet"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetGet.xhtml">offsetGet()</a>
+                — Returns the element with the given offset.</li>
+            <li id="offsetSet"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetSet.xhtml">offsetSet()</a>
+                — Set the element with the given offset.</li>
+            <li id="offsetUnset"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/offsetUnset.xhtml">offsetUnset()</a>
+                — Unset the element with the given offset.</li>
+            <li id="outputTable"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/outputTable.xhtml">outputTable()</a>
+                — Output the table.</li>
+            <li id="rewind"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/rewind.xhtml">rewind()</a>
+                — Selects the very first cell and returns it.</li>
+            <li id="setOptions"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/setOptions.xhtml">setOptions()</a>
+                — Set new options.</li>
+            <li id="valid"><a title="ezcConsoleTable" href="../classes/ezcConsoleTable/valid.xhtml">valid()</a>
+                — Returns if the current cell is valid.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

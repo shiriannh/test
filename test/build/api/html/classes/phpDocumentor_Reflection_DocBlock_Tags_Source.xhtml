@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - phpDocumentor\Reflection\DocBlock\Tags\Source</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#phpDocumentor_Reflection_DocBlock_Tags">phpDocumentor\Reflection\DocBlock\Tags</a>
+          </li>
+          <li class="separator">Source</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Source.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>phpDocumentor\Reflection\DocBlock\Tags\</small>Source</h1>
+        <h4>Reflection class for a {@}source tag in a Docblock.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Source
+                extends <a title="phpDocumentor\Reflection\DocBlock\Tags\BaseTag" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_BaseTag.xhtml">BaseTag</a>
+                implements
+                <a title="phpDocumentor\Reflection\DocBlock\Tags\Factory\StaticMethod" href="../interfaces/phpDocumentor_Reflection_DocBlock_Tags_Factory_StaticMethod.xhtml">StaticMethod</a>
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$name</a> =
+                        'source';
+                    </li><li>private integer <a href="#members">$startingLine</a> =
+                        1;
+                    </li><li>private <a href="#members">$lineCount</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/__construct.xhtml">__construct</a>()
+                    </li><li>public static void <a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/create.xhtml">create</a>()
+                    </li><li>public int <a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/getStartingLine.xhtml">getStartingLine</a>()
+                    </li><li>public int|null <a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/getLineCount.xhtml">getLineCount</a>()
+                    </li><li>public void <a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/__toString.xhtml">__toString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="phpDocumentor\Reflection\DocBlock\Tags\BaseTag" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_BaseTag.xhtml">phpDocumentor\Reflection\DocBlock\Tags\BaseTag</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="phpDocumentor\Reflection\DocBlock\Tags\Factory\StaticMethod" href="../interfaces/phpDocumentor_Reflection_DocBlock_Tags_Factory_StaticMethod.xhtml">phpDocumentor\Reflection\DocBlock\Tags\Factory\StaticMethod</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="lineCount">
+              <strong>$lineCount</strong>
+              <br/>
+              <span class="indent">@var int|null The number of lines, relative to the starting line. NULL means "to the end".</span>
+            </li>
+            <li id="startingLine">
+              <strong>$startingLine</strong>
+              <br/>
+              <span class="indent">@var int The starting line, relative to the structural element's location.</span>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="name">
+              <strong>$name</strong>
+              <br/>
+              <span class="indent">@var string</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="__toString">
+              <a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/__toString.xhtml">__toString()</a>
+            </li>
+            <li id="create"><a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/create.xhtml">create()</a>
+                — {@inheritdoc}</li>
+            <li id="getLineCount"><a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/getLineCount.xhtml">getLineCount()</a>
+                — Returns the number of lines.</li>
+            <li id="getStartingLine"><a title="phpDocumentor\Reflection\DocBlock\Tags\Source" href="../classes/phpDocumentor_Reflection_DocBlock_Tags_Source/getStartingLine.xhtml">getStartingLine()</a>
+                — Gets the starting line.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

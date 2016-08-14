@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - phpDocumentor\Reflection\DocBlock\StandardTagFactory</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#phpDocumentor_Reflection_DocBlock">phpDocumentor\Reflection\DocBlock</a>
+          </li>
+          <li class="separator">StandardTagFactory</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpdocumentor/reflection-docblock/src/DocBlock/StandardTagFactory.php.xhtml#line38">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>phpDocumentor\Reflection\DocBlock\</small>StandardTagFactory</h1>
+        <h4>Creates a Tag object given the contents of a tag.</h4>
+        <p>This Factory is capable of determining the appropriate class for a tag and instantiate it using its `create`<br/>factory method. The `create` factory method of a Tag can have a variable number of arguments; this way you can<br/>pass the dependencies that you need to construct a tag object.<br/>&gt; Important: each parameter in addition to the body variable for the `create` method must default to null, otherwise<br/>&gt; it violates the constraint with the interface; it is recommended to use the method to<br/>&gt; verify that a dependency is actually passed.<br/>This Factory also features a Service Locator component that is used to pass the right dependencies to the<br/>`create` method of a tag; each dependency should be registered as a service or as a parameter.<br/>When you want to use a Tag of your own with custom handling you need to call the `registerTagHandler` method, pass<br/>the name of the tag and a Fully Qualified Class Name pointing to a class that implements the Tag interface.<br/></p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class StandardTagFactory
+                implements
+                <a title="phpDocumentor\Reflection\DocBlock\TagFactory" href="../interfaces/phpDocumentor_Reflection_DocBlock_TagFactory.xhtml">TagFactory</a>
+            {<br/><ul class="none"><li>// constants</li><li>const REGEX_TAGNAME = '[\w\-\_\\\\]+';</li></ul><ul class="none"><li>// members</li><li>private array <a href="#members">$tagHandlerMappings</a> =
+                        ;
+                    </li><li>private array <a href="#members">$tagHandlerParameterCache</a> =
+                        ;
+                    </li><li>private <span title="phpDocumentor\Reflection\FqsenResolver">FqsenResolver</span> <a href="#members">$fqsenResolver</a>;
+                    </li><li>private array <a href="#members">$serviceLocator</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/create.xhtml">create</a>()
+                    </li><li>public void <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/addParameter.xhtml">addParameter</a>()
+                    </li><li>public void <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/addService.xhtml">addService</a>()
+                    </li><li>public void <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/registerTagHandler.xhtml">registerTagHandler</a>()
+                    </li><li>private array <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/extractTagParts.xhtml">extractTagParts</a>()
+                    </li><li>private Tag|null <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/createTag.xhtml">createTag</a>()
+                    </li><li>private string <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/findHandlerClassName.xhtml">findHandlerClassName</a>()
+                    </li><li>private array <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/getArgumentsForParametersFromWiring.xhtml">getArgumentsForParametersFromWiring</a>()
+                    </li><li>private array <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/fetchParametersForHandlerFactoryMethod.xhtml">fetchParametersForHandlerFactoryMethod</a>()
+                    </li><li>private array <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/getServiceLocatorWithDynamicParameters.xhtml">getServiceLocatorWithDynamicParameters</a>()
+                    </li><li>private bool <a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/isAnnotation.xhtml">isAnnotation</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="phpDocumentor\Reflection\DocBlock\TagFactory" href="../interfaces/phpDocumentor_Reflection_DocBlock_TagFactory.xhtml">phpDocumentor\Reflection\DocBlock\TagFactory</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">305+</td>
+            <td>this method should be populated once we implement Annotation notation support.</td>
+          </tr>
+        </table>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="REGEX_TAGNAME">REGEX_TAGNAME</td>
+              <td>'[\w\-\_\\\\]+'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="fqsenResolver"><strong>$fqsenResolver</strong>
+                —
+                <a title="phpDocumentor\Reflection\FqsenResolver" href="../classes/phpDocumentor_Reflection_FqsenResolver.xhtml">phpDocumentor\Reflection\FqsenResolver</a></li>
+            <li id="serviceLocator"><strong>$serviceLocator</strong>
+                —
+                array</li>
+            <li id="tagHandlerMappings"><strong>$tagHandlerMappings</strong>
+                —
+                array</li>
+            <li id="tagHandlerParameterCache"><strong>$tagHandlerParameterCache</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="createTag"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/createTag.xhtml">createTag()</a>
+                — Creates a new tag object with the given name and body or returns null if the tag name was recognized but the body was invalid.</li>
+            <li id="extractTagParts"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/extractTagParts.xhtml">extractTagParts()</a>
+                — Extracts all components for a tag.</li>
+            <li id="fetchParametersForHandlerFactoryMethod"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/fetchParametersForHandlerFactoryMethod.xhtml">fetchParametersForHandlerFactoryMethod()</a>
+                — Retrieves a series of ReflectionParameter objects for the static 'create' method of the given tag handler class name.</li>
+            <li id="findHandlerClassName"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/findHandlerClassName.xhtml">findHandlerClassName()</a>
+                — Determines the Fully Qualified Class Name of the Factory or Tag (containing a Factory Method `create`).</li>
+            <li id="getArgumentsForParametersFromWiring"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/getArgumentsForParametersFromWiring.xhtml">getArgumentsForParametersFromWiring()</a>
+                — Retrieves the arguments that need to be passed to the Factory Method with the given Parameters.</li>
+            <li id="getServiceLocatorWithDynamicParameters"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/getServiceLocatorWithDynamicParameters.xhtml">getServiceLocatorWithDynamicParameters()</a>
+                — Returns a copy of this class' Service Locator with added dynamic parameters, such as the tag's name, body and Context.</li>
+            <li id="isAnnotation"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/isAnnotation.xhtml">isAnnotation()</a>
+                — Returns whether the given tag belongs to an annotation.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/__construct.xhtml">__construct()</a>
+                — Initialize this tag factory with the means to resolve an FQSEN and optionally a list of tag handlers.</li>
+            <li id="addParameter"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/addParameter.xhtml">addParameter()</a>
+                — {@inheritDoc}</li>
+            <li id="addService"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/addService.xhtml">addService()</a>
+                — {@inheritDoc}</li>
+            <li id="create"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/create.xhtml">create()</a>
+                — {@inheritDoc}</li>
+            <li id="registerTagHandler"><a title="phpDocumentor\Reflection\DocBlock\StandardTagFactory" href="../classes/phpDocumentor_Reflection_DocBlock_StandardTagFactory/registerTagHandler.xhtml">registerTagHandler()</a>
+                — {@inheritDoc}</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

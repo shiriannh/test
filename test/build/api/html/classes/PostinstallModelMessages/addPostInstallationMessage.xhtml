@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="PostinstallModelMessages" href="../../classes/PostinstallModelMessages.xhtml">PostinstallModelMessages</a>
+          </li>
+          <li class="separator">addPostInstallationMessage</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="#throws">Throws</a>
+          </li>
+          <li>
+            <a href="../../source/administrator/components/com_postinstall/models/messages.php.xhtml#line279">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>PostinstallModelMessages::</small>addPostInstallationMessage</h1>
+        <h4>Adds or updates a post-installation message (PIM) definition. You can use this in your post-installation script using this code:</h4>
+        <p>require_once JPATH_LIBRARIES . '/fof/include.php';
+FOFModel::getTmpInstance('Messages', 'PostinstallModel')-&gt;addPostInstallationMessage($options);
+
+The $options array contains the following mandatory keys:
+
+extension_id        The numeric ID of the extension this message is for (see the #__extensions table)
+
+type                One of message, link or action. Their meaning is:
+                        message  Informative message. The user can dismiss it.
+                        link     The action button links to a URL. The URL is defined in the action parameter.
+                        action   A PHP action takes place when the action button is clicked. You need to specify the action_file
+                                 (RAD path to the PHP file) and action (PHP function name) keys. See below for more information.
+
+title_key           The JText language key for the title of this PIM.
+                    Example: COM_FOOBAR_POSTINSTALL_MESSAGEONE_TITLE
+
+description_key     The JText language key for the main body (description) of this PIM
+                    Example: COM_FOOBAR_POSTINSTALL_MESSAGEONE_DESCRIPTION
+
+action_key		   The JText language key for the action button. Ignored and not required when type=message
+					   Example: COM_FOOBAR_POSTINSTALL_MESSAGEONE_ACTION
+
+language_extension  The extension name which holds the language keys used above.
+                    For example, com_foobar, mod_something, plg_system_whatever, tpl_mytemplate
+
+language_client_id  Should we load the front-end (0) or back-end (1) language keys?
+
+version_introduced  Which was the version of your extension where this message appeared for the first time?
+                    Example: 3.2.1
+
+enabled             Must be 1 for this message to be enabled. If you omit it, it defaults to 1.
+
+condition_file      The RAD path to a PHP file containing a PHP function which determines whether this message should be shown to
+                    the user. @see FOFTemplateUtils::parsePath() for RAD path format. Joomla! will include this file before calling
+                    the condition_method.
+                    Example:   admin://components/com_foobar/helpers/postinstall.php
+
+condition_method    The name of a PHP function which will be used to determine whether to show this message to the user. This must be
+                    a simple PHP user function (not a class method, static method etc) which returns true to show the message and false
+                    to hide it. This function is defined in the condition_file.
+                    Example: com_foobar_postinstall_messageone_condition
+
+When type=message no additional keys are required.
+
+When type=link the following additional keys are required:
+
+action  The URL which will open when the user clicks on the PIM's action button
+        Example:    index.php?option=com_foobar&amp;view=tools&amp;task=installSampleData
+
+When type=action the following additional keys are required:
+
+action_file  The RAD path to a PHP file containing a PHP function which performs the action of this PIM. @see FOFTemplateUtils::parsePath()
+             for RAD path format. Joomla! will include this file before calling the function defined in the action key below.
+             Example:   admin://components/com_foobar/helpers/postinstall.php
+
+action       The name of a PHP function which will be used to run the action of this PIM. This must be a simple PHP user function
+             (not a class method, static method etc) which returns no result.
+             Example: com_foobar_postinstall_messageone_action</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function addPostInstallationMessage(array
+        $options )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$options</code>
+                —
+                array</dt>
+          <dd>See description</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>$this</dt>
+          <dd><br/>
+        </dd>
+        </dl>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="Exception" href="../../classes/Exception.xhtml">Exception</a>
+            </code>
+          </dt>
+          <dd/>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

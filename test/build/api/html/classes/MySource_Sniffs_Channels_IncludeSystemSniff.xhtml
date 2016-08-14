@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - MySource_Sniffs_Channels_IncludeSystemSniff</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">MySource_Sniffs_Channels_IncludeSystemSniff</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/MySource/Sniffs/Channels/IncludeSystemSniff.php.xhtml#line31">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>MySource_Sniffs_Channels_IncludeSystemSniff</h1>
+        <h4>Ensures that systems, asset types and libs are included before they are used.</h4>
+        <p/>
+        <ul>
+          <li>Author: Greg Sherwood &lt;gsherwood@squiz.net&gt;</li>
+          <li>Copyright: 2006-2014 Squiz Pty Ltd (ABN 77 084 670 600)</li>
+          <li>License: https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class MySource_Sniffs_Channels_IncludeSystemSniff
+                extends <a title="PHP_CodeSniffer_Standards_AbstractScopeSniff" href="../classes/PHP_CodeSniffer_Standards_AbstractScopeSniff.xhtml">PHP_CodeSniffer_Standards_AbstractScopeSniff</a>
+            {<br/><ul class="none"><li>// members</li><li>private <span title="array(string)">array(string)</span> <a href="#members">$_ignore</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="MySource_Sniffs_Channels_IncludeSystemSniff" href="../classes/MySource_Sniffs_Channels_IncludeSystemSniff/__construct.xhtml">__construct</a>()
+                    </li><li>protected void <a title="MySource_Sniffs_Channels_IncludeSystemSniff" href="../classes/MySource_Sniffs_Channels_IncludeSystemSniff/processTokenWithinScope.xhtml">processTokenWithinScope</a>()
+                    </li><li>protected void <a title="MySource_Sniffs_Channels_IncludeSystemSniff" href="../classes/MySource_Sniffs_Channels_IncludeSystemSniff/processTokenOutsideScope.xhtml">processTokenOutsideScope</a>()
+                    </li><li>protected string <a title="MySource_Sniffs_Channels_IncludeSystemSniff" href="../classes/MySource_Sniffs_Channels_IncludeSystemSniff/getIncludedClassFromToken.xhtml">getIncludedClassFromToken</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PHP_CodeSniffer_Standards_AbstractScopeSniff" href="../classes/PHP_CodeSniffer_Standards_AbstractScopeSniff.xhtml">PHP_CodeSniffer_Standards_AbstractScopeSniff</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_ignore"><strong>$_ignore</strong>
+                —
+                <a title="array(string)" href="../classes/array(string).xhtml">array(string)</a><br/><span class="indent">A list of classes that don't need to be included.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="getIncludedClassFromToken"><a title="MySource_Sniffs_Channels_IncludeSystemSniff" href="../classes/MySource_Sniffs_Channels_IncludeSystemSniff/getIncludedClassFromToken.xhtml">getIncludedClassFromToken()</a>
+                — Determines the included class name from given token.</li>
+            <li id="processTokenOutsideScope"><a title="MySource_Sniffs_Channels_IncludeSystemSniff" href="../classes/MySource_Sniffs_Channels_IncludeSystemSniff/processTokenOutsideScope.xhtml">processTokenOutsideScope()</a>
+                — Processes a token within the scope that this test is listening to.</li>
+            <li id="processTokenWithinScope"><a title="MySource_Sniffs_Channels_IncludeSystemSniff" href="../classes/MySource_Sniffs_Channels_IncludeSystemSniff/processTokenWithinScope.xhtml">processTokenWithinScope()</a>
+                — Processes the function tokens within the class.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

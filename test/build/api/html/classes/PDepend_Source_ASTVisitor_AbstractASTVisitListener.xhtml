@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\ASTVisitor\AbstractASTVisitListener</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_ASTVisitor">PDepend\Source\ASTVisitor</a>
+          </li>
+          <li class="separator">AbstractASTVisitListener</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/ASTVisitor/AbstractASTVisitListener.php.xhtml#line63">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\ASTVisitor\</small>AbstractASTVisitListener</h1>
+        <h4>This abstract class provides a default implementation of the node visitor listener.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractASTVisitListener
+                implements
+                <a title="PDepend\Source\ASTVisitor\ASTVisitListener" href="../interfaces/PDepend_Source_ASTVisitor_ASTVisitListener.xhtml">ASTVisitListener</a>
+            {<br/><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitClass.xhtml">startVisitClass</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitClass.xhtml">endVisitClass</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitTrait.xhtml">startVisitTrait</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitTrait.xhtml">endVisitTrait</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitFile.xhtml">startVisitFile</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitFile.xhtml">endVisitFile</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitFunction.xhtml">startVisitFunction</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitFunction.xhtml">endVisitFunction</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitInterface.xhtml">startVisitInterface</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitInterface.xhtml">endVisitInterface</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitMethod.xhtml">startVisitMethod</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitMethod.xhtml">endVisitMethod</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitNamespace.xhtml">startVisitNamespace</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitNamespace.xhtml">endVisitNamespace</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitParameter.xhtml">startVisitParameter</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitParameter.xhtml">endVisitParameter</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitProperty.xhtml">startVisitProperty</a>()
+                    </li><li>public void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitProperty.xhtml">endVisitProperty</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitNode.xhtml">startVisitNode</a>()
+                    </li><li>protected void <a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitNode.xhtml">endVisitNode</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\ASTVisitor\ASTVisitListener" href="../interfaces/PDepend_Source_ASTVisitor_ASTVisitListener.xhtml">PDepend\Source\ASTVisitor\ASTVisitListener</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="endVisitNode"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitNode.xhtml">endVisitNode()</a>
+                — Generic notification method that is called when the node processing ends.</li>
+            <li id="startVisitNode"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitNode.xhtml">startVisitNode()</a>
+                — Generic notification method that is called for every node start.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="endVisitClass"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitClass.xhtml">endVisitClass()</a>
+                — Is called when the visitor ends with a class instance.</li>
+            <li id="endVisitFile"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitFile.xhtml">endVisitFile()</a>
+                — Is called when the visitor ends with a file instance.</li>
+            <li id="endVisitFunction"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitFunction.xhtml">endVisitFunction()</a>
+                — Is called when the visitor ends with a function instance.</li>
+            <li id="endVisitInterface"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitInterface.xhtml">endVisitInterface()</a>
+                — Is called when the visitor ends with an interface instance.</li>
+            <li id="endVisitMethod"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitMethod.xhtml">endVisitMethod()</a>
+                — Is called when the visitor ends with a method instance.</li>
+            <li id="endVisitNamespace"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitNamespace.xhtml">endVisitNamespace()</a>
+                — Is called when the visitor ends with a namespace instance.</li>
+            <li id="endVisitParameter"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitParameter.xhtml">endVisitParameter()</a>
+                — Is called when the visitor ends with a parameter instance.</li>
+            <li id="endVisitProperty"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitProperty.xhtml">endVisitProperty()</a>
+                — Is called when the visitor ends with a property instance.</li>
+            <li id="endVisitTrait"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/endVisitTrait.xhtml">endVisitTrait()</a>
+                — Is called when the visitor ends with a trait instance.</li>
+            <li id="startVisitClass"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitClass.xhtml">startVisitClass()</a>
+                — Is called when the visitor starts a new class instance.</li>
+            <li id="startVisitFile"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitFile.xhtml">startVisitFile()</a>
+                — Is called when the visitor starts a new file instance.</li>
+            <li id="startVisitFunction"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitFunction.xhtml">startVisitFunction()</a>
+                — Is called when the visitor starts a new function instance.</li>
+            <li id="startVisitInterface"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitInterface.xhtml">startVisitInterface()</a>
+                — Is called when the visitor starts a new interface instance.</li>
+            <li id="startVisitMethod"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitMethod.xhtml">startVisitMethod()</a>
+                — Is called when the visitor starts a new method instance.</li>
+            <li id="startVisitNamespace"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitNamespace.xhtml">startVisitNamespace()</a>
+                — Is called when the visitor starts a new namespace instance.</li>
+            <li id="startVisitParameter"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitParameter.xhtml">startVisitParameter()</a>
+                — Is called when the visitor starts a new parameter instance.</li>
+            <li id="startVisitProperty"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitProperty.xhtml">startVisitProperty()</a>
+                — Is called when the visitor starts a new property instance.</li>
+            <li id="startVisitTrait"><a title="PDepend\Source\ASTVisitor\AbstractASTVisitListener" href="../classes/PDepend_Source_ASTVisitor_AbstractASTVisitListener/startVisitTrait.xhtml">startVisitTrait()</a>
+                — Is called when the visitor starts a new trait instance.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

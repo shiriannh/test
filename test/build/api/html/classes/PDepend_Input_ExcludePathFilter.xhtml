@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Input\ExcludePathFilter</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Input">PDepend\Input</a>
+          </li>
+          <li class="separator">ExcludePathFilter</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Input/ExcludePathFilter.php.xhtml#line51">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Input\</small>ExcludePathFilter</h1>
+        <h4>Filters a given file path against a blacklist with disallow path fragments.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ExcludePathFilter
+                implements
+                <a title="PDepend\Input\Filter" href="../interfaces/PDepend_Input_Filter.xhtml">Filter</a>
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$relative</a> =
+                        '';
+                    </li><li>protected string <a href="#members">$absolute</a> =
+                        '';
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/accept.xhtml">accept</a>()
+                    </li><li>protected boolean <a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/notAbsolute.xhtml">notAbsolute</a>()
+                    </li><li>protected boolean <a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/notRelative.xhtml">notRelative</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Input\Filter" href="../interfaces/PDepend_Input_Filter.xhtml">PDepend\Input\Filter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="absolute"><strong>$absolute</strong>
+                —
+                string<br/><span class="indent">Regular expression that should not match against the absolute file paths.</span></li>
+            <li id="relative"><strong>$relative</strong>
+                —
+                string<br/><span class="indent">Regular expression that should not match against the relative file paths.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="notAbsolute"><a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/notAbsolute.xhtml">notAbsolute()</a>
+                — This method checks if the given &lt;b&gt;$path&lt;/b&gt; does not match against the exclude patterns as an absolute path.</li>
+            <li id="notRelative"><a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/notRelative.xhtml">notRelative()</a>
+                — This method checks if the given &lt;b&gt;$path&lt;/b&gt; does not match against the exclude patterns as an relative path.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/__construct.xhtml">__construct()</a>
+                — Constructs a new exclude path filter instance and accepts an array of exclude pattern as argument.</li>
+            <li id="accept"><a title="PDepend\Input\ExcludePathFilter" href="../classes/PDepend_Input_ExcludePathFilter/accept.xhtml">accept()</a>
+                — Returns &lt;b&gt;true&lt;/b&gt; if this filter accepts the given path.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

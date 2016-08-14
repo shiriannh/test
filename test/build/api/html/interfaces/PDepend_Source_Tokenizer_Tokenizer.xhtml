@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\Tokenizer\Tokenizer</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml">Interfaces</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml#PDepend_Source_Tokenizer">PDepend\Source\Tokenizer</a>
+          </li>
+          <li class="separator">Tokenizer</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Tokenizer/Tokenizer.php.xhtml#line51">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\Tokenizer\</small>Tokenizer</h1>
+        <h4>Base interface for all php code tokenizers.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">interface Tokenizer
+            {<br/><ul class="none"><li>// constants</li><li>const T_EOF = 1;</li><li>const T_BOF = 2;</li></ul><ul class="none"><li>// methods</li><li>public string <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/getSourceFile.xhtml">getSourceFile</a>()
+                    </li><li>public void <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/setSourceFile.xhtml">setSourceFile</a>()
+                    </li><li>public Token <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/next.xhtml">next</a>()
+                    </li><li>public integer <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/peek.xhtml">peek</a>()
+                    </li><li>public integer <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/peekNext.xhtml">peekNext</a>()
+                    </li><li>public integer <a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/prev.xhtml">prev</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="T_EOF">T_EOF</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="T_BOF">T_BOF</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="getSourceFile"><a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/getSourceFile.xhtml">getSourceFile()</a>
+                — Returns the name of the source file.</li>
+            <li id="next"><a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/next.xhtml">next()</a>
+                — Returns the next token or {@link \PDepend\Source\Tokenizer\Tokenizer::T_EOF} if there is no next token.</li>
+            <li id="peek"><a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/peek.xhtml">peek()</a>
+                — Returns the next token type or {@link \PDepend\Source\Tokenizer\Tokenizer::T_EOF} if there is no next token.</li>
+            <li id="peekNext"><a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/peekNext.xhtml">peekNext()</a>
+                — Returns the type of next token, after the current token. This method ignores all comments between the current and the next token.</li>
+            <li id="prev"><a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/prev.xhtml">prev()</a>
+                — Returns the previous token type or {@link \PDepend\Source\Tokenizer\Tokenizer::T_BOF} if there is no previous token.</li>
+            <li id="setSourceFile"><a title="PDepend\Source\Tokenizer\Tokenizer" href="../interfaces/PDepend_Source_Tokenizer_Tokenizer/setSourceFile.xhtml">setSourceFile()</a>
+                — Sets a new php source file.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

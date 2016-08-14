@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PlgSystemLanguageFilter</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PlgSystemLanguageFilter</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/plugins/system/languagefilter/languagefilter.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PlgSystemLanguageFilter</h1>
+        <h4>Joomla! Language Filter Plugin.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PlgSystemLanguageFilter
+                extends <a title="JPlugin" href="../classes/JPlugin.xhtml">JPlugin</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$mode_sef</a>;
+                    </li><li>protected  <a href="#members">$sefs</a>;
+                    </li><li>protected  <a href="#members">$lang_codes</a>;
+                    </li><li>protected  <a href="#members">$current_lang</a>;
+                    </li><li>protected  <a href="#members">$default_lang</a>;
+                    </li><li>private  <a href="#members">$user_lang_code</a>;
+                    </li><li>protected <span title="JApplicationCms">JApplicationCms</span> <a href="#members">$app</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onAfterInitialise.xhtml">onAfterInitialise</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onAfterRoute.xhtml">onAfterRoute</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/preprocessBuildRule.xhtml">preprocessBuildRule</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/buildRule.xhtml">buildRule</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/postprocessSEFBuildRule.xhtml">postprocessSEFBuildRule</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/postprocessNonSEFBuildRule.xhtml">postprocessNonSEFBuildRule</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/parseRule.xhtml">parseRule</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onUserBeforeSave.xhtml">onUserBeforeSave</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onUserAfterSave.xhtml">onUserAfterSave</a>()
+                    </li><li>public boolean <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onUserLogin.xhtml">onUserLogin</a>()
+                    </li><li>public void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onAfterDispatch.xhtml">onAfterDispatch</a>()
+                    </li><li>private void <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/setLanguageCookie.xhtml">setLanguageCookie</a>()
+                    </li><li>private string <a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/getLanguageCookie.xhtml">getLanguageCookie</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JPlugin" href="../classes/JPlugin.xhtml">JPlugin</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="user_lang_code">
+              <strong>$user_lang_code</strong>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="app"><strong>$app</strong>
+                —
+                <a title="JApplicationCms" href="../classes/JApplicationCms.xhtml">JApplicationCms</a><br/><span class="indent">Application object.</span></li>
+            <li id="current_lang">
+              <strong>$current_lang</strong>
+            </li>
+            <li id="default_lang">
+              <strong>$default_lang</strong>
+            </li>
+            <li id="lang_codes">
+              <strong>$lang_codes</strong>
+            </li>
+            <li id="mode_sef">
+              <strong>$mode_sef</strong>
+            </li>
+            <li id="sefs">
+              <strong>$sefs</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getLanguageCookie"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/getLanguageCookie.xhtml">getLanguageCookie()</a>
+                — Get the language cookie</li>
+            <li id="setLanguageCookie"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/setLanguageCookie.xhtml">setLanguageCookie()</a>
+                — Set the language cookie</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="buildRule"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/buildRule.xhtml">buildRule()</a>
+                — Add build rule to router.</li>
+            <li id="onAfterDispatch"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onAfterDispatch.xhtml">onAfterDispatch()</a>
+                — Method to add alternative meta tags for associated menu items.</li>
+            <li id="onAfterInitialise"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onAfterInitialise.xhtml">onAfterInitialise()</a>
+                — After initialise.</li>
+            <li id="onAfterRoute"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onAfterRoute.xhtml">onAfterRoute()</a>
+                — After route.</li>
+            <li id="onUserAfterSave"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onUserAfterSave.xhtml">onUserAfterSave()</a>
+                — After store user method.</li>
+            <li id="onUserBeforeSave"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onUserBeforeSave.xhtml">onUserBeforeSave()</a>
+                — Before store user method.</li>
+            <li id="onUserLogin"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/onUserLogin.xhtml">onUserLogin()</a>
+                — Method to handle any login logic and report back to the subject.</li>
+            <li id="parseRule"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/parseRule.xhtml">parseRule()</a>
+                — Add parse rule to router.</li>
+            <li id="postprocessNonSEFBuildRule"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/postprocessNonSEFBuildRule.xhtml">postprocessNonSEFBuildRule()</a>
+                — postprocess build rule for non-SEF URLs</li>
+            <li id="postprocessSEFBuildRule"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/postprocessSEFBuildRule.xhtml">postprocessSEFBuildRule()</a>
+                — postprocess build rule for SEF URLs</li>
+            <li id="preprocessBuildRule"><a title="PlgSystemLanguageFilter" href="../classes/PlgSystemLanguageFilter/preprocessBuildRule.xhtml">preprocessBuildRule()</a>
+                — Add build preprocess rule to router.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

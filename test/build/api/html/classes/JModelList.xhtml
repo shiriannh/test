@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JModelList</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JModelList</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/legacy/model/list.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JModelList</h1>
+        <h4>Model class for handling lists of items.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JModelList
+                extends <a title="JModelLegacy" href="../classes/JModelLegacy.xhtml">JModelLegacy</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$cache</a> =
+                        ;
+                    </li><li>protected string <a href="#members">$context</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$filter_fields</a> =
+                        ;
+                    </li><li>protected <span title="JDatabaseQuery">JDatabaseQuery</span> <a href="#members">$query</a> =
+                        ;
+                    </li><li>protected string <a href="#members">$filterFormName</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$htmlFormName</a> =
+                        'adminForm';
+                    </li><li>protected array <a href="#members">$filterBlacklist</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$listBlacklist</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JModelList" href="../classes/JModelList/__construct.xhtml">__construct</a>()
+                    </li><li>protected JDatabaseQuery <a title="JModelList" href="../classes/JModelList/_getListQuery.xhtml">_getListQuery</a>()
+                    </li><li>public array <a title="JModelList" href="../classes/JModelList/getActiveFilters.xhtml">getActiveFilters</a>()
+                    </li><li>public mixed <a title="JModelList" href="../classes/JModelList/getItems.xhtml">getItems</a>()
+                    </li><li>protected JDatabaseQuery <a title="JModelList" href="../classes/JModelList/getListQuery.xhtml">getListQuery</a>()
+                    </li><li>public JPagination <a title="JModelList" href="../classes/JModelList/getPagination.xhtml">getPagination</a>()
+                    </li><li>protected string <a title="JModelList" href="../classes/JModelList/getStoreId.xhtml">getStoreId</a>()
+                    </li><li>public integer <a title="JModelList" href="../classes/JModelList/getTotal.xhtml">getTotal</a>()
+                    </li><li>public integer <a title="JModelList" href="../classes/JModelList/getStart.xhtml">getStart</a>()
+                    </li><li>public JForm/false <a title="JModelList" href="../classes/JModelList/getFilterForm.xhtml">getFilterForm</a>()
+                    </li><li>protected mixed <a title="JModelList" href="../classes/JModelList/loadForm.xhtml">loadForm</a>()
+                    </li><li>protected mixed <a title="JModelList" href="../classes/JModelList/loadFormData.xhtml">loadFormData</a>()
+                    </li><li>protected void <a title="JModelList" href="../classes/JModelList/populateState.xhtml">populateState</a>()
+                    </li><li>protected void <a title="JModelList" href="../classes/JModelList/preprocessForm.xhtml">preprocessForm</a>()
+                    </li><li>public The <a title="JModelList" href="../classes/JModelList/getUserStateFromRequest.xhtml">getUserStateFromRequest</a>()
+                    </li><li>protected string <a title="JModelList" href="../classes/JModelList/refineSearchStringToRegex.xhtml">refineSearchStringToRegex</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JModelLegacy" href="../classes/JModelLegacy.xhtml">JModelLegacy</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="cache"><strong>$cache</strong>
+                —
+                array<br/><span class="indent">Internal memory based cache array of data.</span></li>
+            <li id="context"><strong>$context</strong>
+                —
+                string<br/><span class="indent">Context string for the model type.  This is used to handle uniqueness when dealing with the getStoreId() method and caching data structures.</span></li>
+            <li id="filterBlacklist"><strong>$filterBlacklist</strong>
+                —
+                array<br/><span class="indent">A blacklist of filter variables to not merge into the model's state</span></li>
+            <li id="filterFormName"><strong>$filterFormName</strong>
+                —
+                string<br/><span class="indent">Name of the filter form to load</span></li>
+            <li id="filter_fields"><strong>$filter_fields</strong>
+                —
+                array<br/><span class="indent">Valid filter fields or ordering.</span></li>
+            <li id="htmlFormName"><strong>$htmlFormName</strong>
+                —
+                string<br/><span class="indent">Associated HTML form</span></li>
+            <li id="listBlacklist"><strong>$listBlacklist</strong>
+                —
+                array<br/><span class="indent">A blacklist of list variables to not merge into the model's state</span></li>
+            <li id="query"><strong>$query</strong>
+                —
+                <a title="JDatabaseQuery" href="../classes/JDatabaseQuery.xhtml">JDatabaseQuery</a><br/><span class="indent">An internal cache for the last query used.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_getListQuery"><a title="JModelList" href="../classes/JModelList/_getListQuery.xhtml">_getListQuery()</a>
+                — Method to cache the last query constructed.</li>
+            <li id="getListQuery"><a title="JModelList" href="../classes/JModelList/getListQuery.xhtml">getListQuery()</a>
+                — Method to get a JDatabaseQuery object for retrieving the data set from a database.</li>
+            <li id="getStoreId"><a title="JModelList" href="../classes/JModelList/getStoreId.xhtml">getStoreId()</a>
+                — Method to get a store id based on the model configuration state.</li>
+            <li id="loadForm"><a title="JModelList" href="../classes/JModelList/loadForm.xhtml">loadForm()</a>
+                — Method to get a form object.</li>
+            <li id="loadFormData"><a title="JModelList" href="../classes/JModelList/loadFormData.xhtml">loadFormData()</a>
+                — Method to get the data that should be injected in the form.</li>
+            <li id="populateState"><a title="JModelList" href="../classes/JModelList/populateState.xhtml">populateState()</a>
+                — Method to auto-populate the model state.</li>
+            <li id="preprocessForm"><a title="JModelList" href="../classes/JModelList/preprocessForm.xhtml">preprocessForm()</a>
+                — Method to allow derived classes to preprocess the form.</li>
+            <li id="refineSearchStringToRegex"><a title="JModelList" href="../classes/JModelList/refineSearchStringToRegex.xhtml">refineSearchStringToRegex()</a>
+                — Parse and transform the search string into a string fit for regex-ing arbitrary strings against</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JModelList" href="../classes/JModelList/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="getActiveFilters"><a title="JModelList" href="../classes/JModelList/getActiveFilters.xhtml">getActiveFilters()</a>
+                — Function to get the active filters</li>
+            <li id="getFilterForm"><a title="JModelList" href="../classes/JModelList/getFilterForm.xhtml">getFilterForm()</a>
+                — Get the filter form</li>
+            <li id="getItems"><a title="JModelList" href="../classes/JModelList/getItems.xhtml">getItems()</a>
+                — Method to get an array of data items.</li>
+            <li id="getPagination"><a title="JModelList" href="../classes/JModelList/getPagination.xhtml">getPagination()</a>
+                — Method to get a JPagination object for the data set.</li>
+            <li id="getStart"><a title="JModelList" href="../classes/JModelList/getStart.xhtml">getStart()</a>
+                — Method to get the starting number of items for the data set.</li>
+            <li id="getTotal"><a title="JModelList" href="../classes/JModelList/getTotal.xhtml">getTotal()</a>
+                — Method to get the total number of items for the data set.</li>
+            <li id="getUserStateFromRequest"><a title="JModelList" href="../classes/JModelList/getUserStateFromRequest.xhtml">getUserStateFromRequest()</a>
+                — Gets the value of a user state variable and sets it in the session</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

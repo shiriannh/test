@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="ezcBaseFile" href="../../classes/ezcBaseFile.xhtml">ezcBaseFile</a>
+          </li>
+          <li class="separator">findRecursive</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="#throws">Throws</a>
+          </li>
+          <li>
+            <a href="../../source/vendor/zetacomponents/base/src/file.php.xhtml#line239">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>ezcBaseFile::</small>findRecursive</h1>
+        <h4>Finds files recursively on a file system</h4>
+        <p>With this method you can scan the file system for files. You can use
+$includeFilters to include only specific files, and $excludeFilters to
+exclude certain files from being returned. The function will always go
+into subdirectories even if the entry would not have passed the filters.
+It uses the  method to do the actually recursion.
+Filters are regular expressions and are therefore required to have
+starting and ending delimiters. The Perl Compatible syntax is used as
+regular expression language.
+If you pass an empty array to the $statistics argument, the function
+will in details about the number of files found into the 'count' array
+element, and the total filesize in the 'size' array element. Because this
+argument is passed by reference, you *have* to pass a variable and you
+can not pass a constant value such as "array()".
+</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function findRecursive(string
+        $sourceDir,
+            [array
+        $includeFilters = ,
+            [array
+        $excludeFilters = ,
+            [<a title="array()" href="../../classes/array().xhtml">array()</a>&amp;
+        $statistics = null]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$sourceDir</code>
+                —
+                string</dt>
+          <dd/>
+          <dt><code>$includeFilters</code>
+                —
+                array</dt>
+          <dd><br/><br/><br/>      </dd>
+          <dt><code>$excludeFilters</code>
+                —
+                array</dt>
+          <dd><br/><br/><br/>      </dd>
+          <dt><code>$statistics</code>
+                —
+                object</dt>
+          <dd><br/><br/><br/>      </dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>array</dt>
+          <dd/>
+        </dl>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="ezcBaseFileNotFoundException" href="../../classes/ezcBaseFileNotFoundException.xhtml">ezcBaseFileNotFoundException</a>
+            </code>
+          </dt>
+          <dd>if the $sourceDir directory is not</dd>
+          <dt>
+            <code>
+              <a title="ezcBaseFilePermissionException" href="../../classes/ezcBaseFilePermissionException.xhtml">ezcBaseFilePermissionException</a>
+            </code>
+          </dt>
+          <dd>if the $sourceDir directory could</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

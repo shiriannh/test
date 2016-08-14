@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="FOFPlatformInterface" href="../../interfaces/FOFPlatformInterface.xhtml">FOFPlatformInterface</a>
+          </li>
+          <li class="separator">getComponentBaseDirs</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/fof/platform/interface.php.xhtml#line170">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>FOFPlatformInterface::</small>getComponentBaseDirs</h1>
+        <h4>Returns the base (root) directories for a given component. The "component" is used in the sense of what we call "component" in Joomla!, "plugin" in WordPress and "module" in Drupal, i.e. an application which is running inside our main application (CMS).</h4>
+        <p>The return is a table with the following keys:
+* main	The normal location of component files. For a back-end Joomla!
+         component this is the administrator/components/com_example
+         directory.
+* alt	The alternate location of component files. For a back-end
+         Joomla! component this is the front-end directory, e.g.
+         components/com_example
+* site	The location of the component files serving the public part of
+         the application.
+* admin	The location of the component files serving the administrative
+         part of the application.
+
+All paths MUST be absolute. All four paths MAY be the same if the
+platform doesn't make a distinction between public and private parts,
+or when the component does not provide both a public and private part.
+All of the directories MUST be defined and non-empty.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function getComponentBaseDirs(string
+        $component )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$component</code>
+                —
+                string</dt>
+          <dd>The name of the component. For Joomla! this<br/>is something like "com_example"</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>array</dt>
+          <dd>A hash array with keys main, alt, site and admin.</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

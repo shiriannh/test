@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\Rule</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml">Interfaces</a>
+          </li>
+          <li class="separator">
+            <a href="../interfaces.xhtml#PHPMD">PHPMD</a>
+          </li>
+          <li class="separator">Rule</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/Rule.php.xhtml#line52">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\</small>Rule</h1>
+        <h4>Base interface for a PHPMD rule.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">interface Rule
+            {<br/><ul class="none"><li>// constants</li><li>const LOWEST_PRIORITY = 5;</li></ul><ul class="none"><li>// methods</li><li>public string <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getName.xhtml">getName</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setName.xhtml">setName</a>()
+                    </li><li>public string <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getSince.xhtml">getSince</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setSince.xhtml">setSince</a>()
+                    </li><li>public string <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getMessage.xhtml">getMessage</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setMessage.xhtml">setMessage</a>()
+                    </li><li>public string <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getExternalInfoUrl.xhtml">getExternalInfoUrl</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setExternalInfoUrl.xhtml">setExternalInfoUrl</a>()
+                    </li><li>public string <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getDescription.xhtml">getDescription</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setDescription.xhtml">setDescription</a>()
+                    </li><li>public array <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getExamples.xhtml">getExamples</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/addExample.xhtml">addExample</a>()
+                    </li><li>public integer <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getPriority.xhtml">getPriority</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setPriority.xhtml">setPriority</a>()
+                    </li><li>public string <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getRuleSetName.xhtml">getRuleSetName</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setRuleSetName.xhtml">setRuleSetName</a>()
+                    </li><li>public Report <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getReport.xhtml">getReport</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setReport.xhtml">setReport</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/addProperty.xhtml">addProperty</a>()
+                    </li><li>public boolean <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getBooleanProperty.xhtml">getBooleanProperty</a>()
+                    </li><li>public integer <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getIntProperty.xhtml">getIntProperty</a>()
+                    </li><li>public void <a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/apply.xhtml">apply</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="LOWEST_PRIORITY">LOWEST_PRIORITY</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addExample"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/addExample.xhtml">addExample()</a>
+                — Adds a code example for this rule.</li>
+            <li id="addProperty"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/addProperty.xhtml">addProperty()</a>
+                — Adds a configuration property to this rule instance.</li>
+            <li id="apply"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/apply.xhtml">apply()</a>
+                — This method should implement the violation analysis algorithm of concrete rule implementations. All extending classes must implement this method.</li>
+            <li id="getBooleanProperty"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getBooleanProperty.xhtml">getBooleanProperty()</a>
+                — Returns the value of a configured property as a boolean or throws an exception when no property with &lt;b&gt;$name&lt;/b&gt; exists.</li>
+            <li id="getDescription"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getDescription.xhtml">getDescription()</a>
+                — Returns the description text for this rule instance.</li>
+            <li id="getExamples"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getExamples.xhtml">getExamples()</a>
+                — Returns a list of examples for this rule.</li>
+            <li id="getExternalInfoUrl"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getExternalInfoUrl.xhtml">getExternalInfoUrl()</a>
+                — Returns an url will external information for this rule.</li>
+            <li id="getIntProperty"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getIntProperty.xhtml">getIntProperty()</a>
+                — Returns the value of a configured property as an integer or throws an exception when no property with &lt;b&gt;$name&lt;/b&gt; exists.</li>
+            <li id="getMessage"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getMessage.xhtml">getMessage()</a>
+                — Returns the violation message text for this rule.</li>
+            <li id="getName"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getName.xhtml">getName()</a>
+                — Returns the name for this rule instance.</li>
+            <li id="getPriority"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getPriority.xhtml">getPriority()</a>
+                — Returns the priority of this rule.</li>
+            <li id="getReport"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getReport.xhtml">getReport()</a>
+                — Returns the violation report for this rule.</li>
+            <li id="getRuleSetName"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getRuleSetName.xhtml">getRuleSetName()</a>
+                — Returns the name of the parent rule-set instance.</li>
+            <li id="getSince"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/getSince.xhtml">getSince()</a>
+                — Returns the version since when this rule is available or &lt;b&gt;null&lt;/b&gt;.</li>
+            <li id="setDescription"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setDescription.xhtml">setDescription()</a>
+                — Sets the description text for this rule instance.</li>
+            <li id="setExternalInfoUrl"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setExternalInfoUrl.xhtml">setExternalInfoUrl()</a>
+                — Sets an url will external information for this rule.</li>
+            <li id="setMessage"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setMessage.xhtml">setMessage()</a>
+                — Sets the violation message text for this rule.</li>
+            <li id="setName"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setName.xhtml">setName()</a>
+                — Sets the name for this rule instance.</li>
+            <li id="setPriority"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setPriority.xhtml">setPriority()</a>
+                — Set the priority of this rule.</li>
+            <li id="setReport"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setReport.xhtml">setReport()</a>
+                — Sets the violation report for this rule.</li>
+            <li id="setRuleSetName"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setRuleSetName.xhtml">setRuleSetName()</a>
+                — Sets the name of the parent rule set instance.</li>
+            <li id="setSince"><a title="PHPMD\Rule" href="../interfaces/PHPMD_Rule/setSince.xhtml">setSince()</a>
+                — Sets the version since when this rule is available.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JSchemaChangeitemMysql</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JSchemaChangeitemMysql</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/schema/changeitem/mysql.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JSchemaChangeitemMysql</h1>
+        <h4>Checks the database schema against one MySQL DDL query to see if it has been run.</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JSchemaChangeitemMysql
+                extends <a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem.xhtml">JSchemaChangeitem</a>
+            {<br/><ul class="none"><li>// methods</li><li>protected void <a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/buildCheckQuery.xhtml">buildCheckQuery</a>()
+                    </li><li>private string <a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/fixInteger.xhtml">fixInteger</a>()
+                    </li><li>private string <a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/fixQuote.xhtml">fixQuote</a>()
+                    </li><li>private string <a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/fixUtf8mb4TypeChecks.xhtml">fixUtf8mb4TypeChecks</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JSchemaChangeitem" href="../classes/JSchemaChangeitem.xhtml">JSchemaChangeitem</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="fixInteger"><a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/fixInteger.xhtml">fixInteger()</a>
+                — Fix up integer. Fixes problem with MySQL integer descriptions.</li>
+            <li id="fixQuote"><a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/fixQuote.xhtml">fixQuote()</a>
+                — Fixes up a string for inclusion in a query.</li>
+            <li id="fixUtf8mb4TypeChecks"><a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/fixUtf8mb4TypeChecks.xhtml">fixUtf8mb4TypeChecks()</a>
+                — Make check query for column changes/modifications tolerant for automatic type changes of text columns, e.g. from TEXT to MEDIUMTEXT, after comnversion from utf8 to utf8mb4</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="buildCheckQuery"><a title="JSchemaChangeitemMysql" href="../classes/JSchemaChangeitemMysql/buildCheckQuery.xhtml">buildCheckQuery()</a>
+                — Checks a DDL query to see if it is a known type If yes, build a check query to see if the DDL has been run on the database.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

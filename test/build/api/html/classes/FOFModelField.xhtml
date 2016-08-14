@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FOFModelField</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FOFModelField</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/fof/model/field.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FOFModelField</h1>
+        <h4>FrameworkOnFramework model behavior class</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FOFModelField
+            {<br/><ul class="none"><li>// members</li><li>protected <a href="#members">$_db</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$name</a> =
+                        '';
+                    </li><li>protected string <a href="#members">$type</a> =
+                        '';
+                    </li><li>protected boolean <a href="#members">$table_alias</a> =
+                        false;
+                    </li><li>public mixed <a href="#members">$null_value</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FOFModelField" href="../classes/FOFModelField/__construct.xhtml">__construct</a>()
+                    </li><li>public boolean <a title="FOFModelField" href="../classes/FOFModelField/isEmpty.xhtml">isEmpty</a>()
+                    </li><li>public string <a title="FOFModelField" href="../classes/FOFModelField/getDefaultSearchMethod.xhtml">getDefaultSearchMethod</a>()
+                    </li><li>public array <a title="FOFModelField" href="../classes/FOFModelField/getSearchMethods.xhtml">getSearchMethods</a>()
+                    </li><li>public string <a title="FOFModelField" href="../classes/FOFModelField/exact.xhtml">exact</a>()
+                    </li><li>public abstract string <a title="FOFModelField" href="../classes/FOFModelField/partial.xhtml">partial</a>()
+                    </li><li>public abstract string <a title="FOFModelField" href="../classes/FOFModelField/between.xhtml">between</a>()
+                    </li><li>public abstract string <a title="FOFModelField" href="../classes/FOFModelField/outside.xhtml">outside</a>()
+                    </li><li>public abstract string <a title="FOFModelField" href="../classes/FOFModelField/interval.xhtml">interval</a>()
+                    </li><li>public abstract string <a title="FOFModelField" href="../classes/FOFModelField/range.xhtml">range</a>()
+                    </li><li>public abstract string <a title="FOFModelField" href="../classes/FOFModelField/modulo.xhtml">modulo</a>()
+                    </li><li>public string <a title="FOFModelField" href="../classes/FOFModelField/search.xhtml">search</a>()
+                    </li><li>public string <a title="FOFModelField" href="../classes/FOFModelField/getFieldName.xhtml">getFieldName</a>()
+                    </li><li>public static FOFModelField <a title="FOFModelField" href="../classes/FOFModelField/getField.xhtml">getField</a>()
+                    </li><li>public static string <a title="FOFModelField" href="../classes/FOFModelField/getFieldType.xhtml">getFieldType</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_db">
+              <strong>$_db</strong>
+            </li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The column name of the table field</span></li>
+            <li id="table_alias"><strong>$table_alias</strong>
+                —
+                string<br/><span class="indent">The alias of the table used for filtering</span></li>
+            <li id="type"><strong>$type</strong>
+                —
+                string<br/><span class="indent">The column type of the table field</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="null_value"><strong>$null_value</strong>
+                —
+                mixed<br/><span class="indent">The null value for this type</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FOFModelField" href="../classes/FOFModelField/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="between"><a title="FOFModelField" href="../classes/FOFModelField/between.xhtml">between()</a>
+                — Perform a between limits match (usually: search for a value between two numbers or a date between two preset dates). When $include is true the condition tested is: $from &lt;= VALUE &lt;= $to When $include is false the condition tested is: $from &lt; VALUE &lt; $to</li>
+            <li id="exact"><a title="FOFModelField" href="../classes/FOFModelField/exact.xhtml">exact()</a>
+                — Perform an exact match (equality matching)</li>
+            <li id="getDefaultSearchMethod"><a title="FOFModelField" href="../classes/FOFModelField/getDefaultSearchMethod.xhtml">getDefaultSearchMethod()</a>
+                — Returns the default search method for a field. This always returns 'exact' and you are supposed to override it in specialised classes. The possible values are exact, partial, between and outside, unless something different is returned by getSearchMethods().</li>
+            <li id="getField"><a title="FOFModelField" href="../classes/FOFModelField/getField.xhtml">getField()</a>
+                — Creates a field Object based on the field column type</li>
+            <li id="getFieldName"><a title="FOFModelField" href="../classes/FOFModelField/getFieldName.xhtml">getFieldName()</a>
+                — Get the field name with the given table alias</li>
+            <li id="getFieldType"><a title="FOFModelField" href="../classes/FOFModelField/getFieldType.xhtml">getFieldType()</a>
+                — Get the classname based on the field Type</li>
+            <li id="getSearchMethods"><a title="FOFModelField" href="../classes/FOFModelField/getSearchMethods.xhtml">getSearchMethods()</a>
+                — Return the search methods available for this field class,</li>
+            <li id="interval"><a title="FOFModelField" href="../classes/FOFModelField/interval.xhtml">interval()</a>
+                — Perform an interval search (usually: a date interval check)</li>
+            <li id="isEmpty"><a title="FOFModelField" href="../classes/FOFModelField/isEmpty.xhtml">isEmpty()</a>
+                — Is it a null or otherwise empty value?</li>
+            <li id="modulo"><a title="FOFModelField" href="../classes/FOFModelField/modulo.xhtml">modulo()</a>
+                — Perform an modulo search</li>
+            <li id="outside"><a title="FOFModelField" href="../classes/FOFModelField/outside.xhtml">outside()</a>
+                — Perform an outside limits match (usually: search for a value outside an area or a date outside a preset period). When $include is true the condition tested is: (VALUE &lt;= $from) || (VALUE &gt;= $to) When $include is false the condition tested is: (VALUE &lt; $from) || (VALUE &gt; $to)</li>
+            <li id="partial"><a title="FOFModelField" href="../classes/FOFModelField/partial.xhtml">partial()</a>
+                — Perform a partial match (usually: search in string)</li>
+            <li id="range"><a title="FOFModelField" href="../classes/FOFModelField/range.xhtml">range()</a>
+                — Perform a between limits match (usually: search for a value between two numbers or a date between two preset dates). When $include is true the condition tested is: $from &lt;= VALUE &lt;= $to When $include is false the condition tested is: $from &lt; VALUE &lt; $to</li>
+            <li id="search"><a title="FOFModelField" href="../classes/FOFModelField/search.xhtml">search()</a>
+                — Return the SQL where clause for a search</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FinderIndexerResult</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">FinderIndexerResult</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/administrator/components/com_finder/helpers/indexer/result.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>FinderIndexerResult</h1>
+        <h4>Result class for the Finder indexer package.</h4>
+        <p>This class uses magic __get() and __set() methods to prevent properties<br/>being added that might confuse the system. All properties not explicitly<br/>declared will be pushed into the elements array and can be accessed<br/>explicitly using the getElement() method.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FinderIndexerResult
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$elements</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$instructions</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$taxonomy</a> =
+                        ;
+                    </li><li>public  <a href="#members">$url</a>;
+                    </li><li>public  <a href="#members">$route</a>;
+                    </li><li>public  <a href="#members">$title</a>;
+                    </li><li>public  <a href="#members">$description</a>;
+                    </li><li>public  <a href="#members">$published</a>;
+                    </li><li>public  <a href="#members">$state</a>;
+                    </li><li>public  <a href="#members">$access</a>;
+                    </li><li>public string <a href="#members">$language</a> =
+                        '*';
+                    </li><li>public  <a href="#members">$publish_start_date</a>;
+                    </li><li>public  <a href="#members">$publish_end_date</a>;
+                    </li><li>public  <a href="#members">$start_date</a>;
+                    </li><li>public  <a href="#members">$end_date</a>;
+                    </li><li>public  <a href="#members">$list_price</a>;
+                    </li><li>public  <a href="#members">$sale_price</a>;
+                    </li><li>public  <a href="#members">$type_id</a>;
+                    </li><li>public  <a href="#members">$defaultLanguage</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__set.xhtml">__set</a>()
+                    </li><li>public mixed <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__get.xhtml">__get</a>()
+                    </li><li>public boolean <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__isset.xhtml">__isset</a>()
+                    </li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__unset.xhtml">__unset</a>()
+                    </li><li>public mixed <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/getElement.xhtml">getElement</a>()
+                    </li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/setElement.xhtml">setElement</a>()
+                    </li><li>public array <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/getInstructions.xhtml">getInstructions</a>()
+                    </li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/addInstruction.xhtml">addInstruction</a>()
+                    </li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/removeInstruction.xhtml">removeInstruction</a>()
+                    </li><li>public array <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/getTaxonomy.xhtml">getTaxonomy</a>()
+                    </li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/addTaxonomy.xhtml">addTaxonomy</a>()
+                    </li><li>public void <a title="FinderIndexerResult" href="../classes/FinderIndexerResult/setLanguage.xhtml">setLanguage</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="elements"><strong>$elements</strong>
+                —
+                array<br/><span class="indent">An array of extra result properties.</span></li>
+            <li id="instructions"><strong>$instructions</strong>
+                —
+                array<br/><span class="indent">This array tells the indexer which properties should be indexed and what weights to use for those properties.</span></li>
+            <li id="taxonomy"><strong>$taxonomy</strong>
+                —
+                array<br/><span class="indent">The indexer will use this data to create taxonomy mapping entries for the item so that it can be filtered by type, label, category, or whatever.</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="access"><strong>$access</strong>
+                —
+                integer<br/><span class="indent">The content access level.</span></li>
+            <li id="defaultLanguage"><strong>$defaultLanguage</strong>
+                —
+                string<br/><span class="indent">The default language for content.</span></li>
+            <li id="description"><strong>$description</strong>
+                —
+                string<br/><span class="indent">The content description.</span></li>
+            <li id="end_date"><strong>$end_date</strong>
+                —
+                string<br/><span class="indent">The generic end date.</span></li>
+            <li id="language"><strong>$language</strong>
+                —
+                string<br/><span class="indent">The content language.</span></li>
+            <li id="list_price"><strong>$list_price</strong>
+                —
+                mixed<br/><span class="indent">The item list price.</span></li>
+            <li id="publish_end_date"><strong>$publish_end_date</strong>
+                —
+                string<br/><span class="indent">The publishing end date.</span></li>
+            <li id="publish_start_date"><strong>$publish_start_date</strong>
+                —
+                string<br/><span class="indent">The publishing start date.</span></li>
+            <li id="published"><strong>$published</strong>
+                —
+                integer<br/><span class="indent">The published state of the result.</span></li>
+            <li id="route"><strong>$route</strong>
+                —
+                string<br/><span class="indent">The content route.</span></li>
+            <li id="sale_price"><strong>$sale_price</strong>
+                —
+                mixed<br/><span class="indent">The item sale price.</span></li>
+            <li id="start_date"><strong>$start_date</strong>
+                —
+                string<br/><span class="indent">The generic start date.</span></li>
+            <li id="state"><strong>$state</strong>
+                —
+                integer<br/><span class="indent">The content published state.</span></li>
+            <li id="title"><strong>$title</strong>
+                —
+                string<br/><span class="indent">The content title.</span></li>
+            <li id="type_id"><strong>$type_id</strong>
+                —
+                integer<br/><span class="indent">The content type id. This is set by the adapter.</span></li>
+            <li id="url"><strong>$url</strong>
+                —
+                string<br/><span class="indent">The content URL.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="__get"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__get.xhtml">__get()</a>
+                — The magic get method is used to retrieve additional element values from the elements array.</li>
+            <li id="__isset"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__isset.xhtml">__isset()</a>
+                — The magic isset method is used to check the state of additional element values in the elements array.</li>
+            <li id="__set"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__set.xhtml">__set()</a>
+                — The magic set method is used to push additional values into the elements array in order to preserve the cleanliness of the object.</li>
+            <li id="__unset"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/__unset.xhtml">__unset()</a>
+                — The magic unset method is used to unset additional element values in the elements array.</li>
+            <li id="addInstruction"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/addInstruction.xhtml">addInstruction()</a>
+                — Method to add a processing instruction for an item property.</li>
+            <li id="addTaxonomy"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/addTaxonomy.xhtml">addTaxonomy()</a>
+                — Method to add a taxonomy map for an item.</li>
+            <li id="getElement"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/getElement.xhtml">getElement()</a>
+                — Method to retrieve additional element values from the elements array.</li>
+            <li id="getInstructions"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/getInstructions.xhtml">getInstructions()</a>
+                — Method to get all processing instructions.</li>
+            <li id="getTaxonomy"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/getTaxonomy.xhtml">getTaxonomy()</a>
+                — Method to get the taxonomy maps for an item.</li>
+            <li id="removeInstruction"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/removeInstruction.xhtml">removeInstruction()</a>
+                — Method to remove a processing instruction for an item property.</li>
+            <li id="setElement"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/setElement.xhtml">setElement()</a>
+                — Method to set additional element values in the elements array.</li>
+            <li id="setLanguage"><a title="FinderIndexerResult" href="../classes/FinderIndexerResult/setLanguage.xhtml">setLanguage()</a>
+                — Method to set the item language</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

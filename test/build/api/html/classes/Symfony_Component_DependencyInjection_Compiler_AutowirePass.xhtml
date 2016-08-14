@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\DependencyInjection\Compiler\AutowirePass</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_DependencyInjection_Compiler">Symfony\Component\DependencyInjection\Compiler</a>
+          </li>
+          <li class="separator">AutowirePass</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/dependency-injection/Compiler/AutowirePass.php.xhtml#line25">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\DependencyInjection\Compiler\</small>AutowirePass</h1>
+        <h4>Guesses constructor arguments of services definitions and try to instantiate services if necessary.</h4>
+        <p/>
+        <ul>
+          <li>Author: Kévin Dunglas &lt;dunglas@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AutowirePass
+                implements
+                <a title="Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface" href="../interfaces/Symfony_Component_DependencyInjection_Compiler_CompilerPassInterface.xhtml">CompilerPassInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$container</a>;
+                    </li><li>private array <a href="#members">$reflectionClasses</a> =
+                        ;
+                    </li><li>private array <a href="#members">$definedTypes</a> =
+                        ;
+                    </li><li>private  <a href="#members">$types</a>;
+                    </li><li>private array <a href="#members">$ambiguousServiceTypes</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/process.xhtml">process</a>()
+                    </li><li>public static AutowireServiceResource <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/createResourceForClass.xhtml">createResourceForClass</a>()
+                    </li><li>private void <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/completeDefinition.xhtml">completeDefinition</a>()
+                    </li><li>private void <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/populateAvailableTypes.xhtml">populateAvailableTypes</a>()
+                    </li><li>private void <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/populateAvailableType.xhtml">populateAvailableType</a>()
+                    </li><li>private void <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/set.xhtml">set</a>()
+                    </li><li>private Reference <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/createAutowiredDefinition.xhtml">createAutowiredDefinition</a>()
+                    </li><li>private ReflectionClass|false <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/getReflectionClass.xhtml">getReflectionClass</a>()
+                    </li><li>private void <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/addServiceToAmbiguousType.xhtml">addServiceToAmbiguousType</a>()
+                    </li><li>private static void <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/getResourceMetadataForMethod.xhtml">getResourceMetadataForMethod</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface" href="../interfaces/Symfony_Component_DependencyInjection_Compiler_CompilerPassInterface.xhtml">Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">81</td>
+            <td>- when #17608 is merged, could refactor to private function to remove duplication</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="ambiguousServiceTypes">
+              <strong>$ambiguousServiceTypes</strong>
+            </li>
+            <li id="container">
+              <strong>$container</strong>
+            </li>
+            <li id="definedTypes">
+              <strong>$definedTypes</strong>
+            </li>
+            <li id="reflectionClasses">
+              <strong>$reflectionClasses</strong>
+            </li>
+            <li id="types">
+              <strong>$types</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="addServiceToAmbiguousType">
+              <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/addServiceToAmbiguousType.xhtml">addServiceToAmbiguousType()</a>
+            </li>
+            <li id="completeDefinition"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/completeDefinition.xhtml">completeDefinition()</a>
+                — Wires the given definition.</li>
+            <li id="createAutowiredDefinition"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/createAutowiredDefinition.xhtml">createAutowiredDefinition()</a>
+                — Registers a definition for the type if possible or throws an exception.</li>
+            <li id="getReflectionClass"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/getReflectionClass.xhtml">getReflectionClass()</a>
+                — Retrieves the reflection class associated with the given service.</li>
+            <li id="getResourceMetadataForMethod">
+              <a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/getResourceMetadataForMethod.xhtml">getResourceMetadataForMethod()</a>
+            </li>
+            <li id="populateAvailableType"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/populateAvailableType.xhtml">populateAvailableType()</a>
+                — Populates the list of available types for a given definition.</li>
+            <li id="populateAvailableTypes"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/populateAvailableTypes.xhtml">populateAvailableTypes()</a>
+                — Populates the list of available types.</li>
+            <li id="set"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/set.xhtml">set()</a>
+                — Associates a type and a service id if applicable.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="createResourceForClass"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/createResourceForClass.xhtml">createResourceForClass()</a>
+                — Creates a resource to help know if this service has changed.</li>
+            <li id="process"><a title="Symfony\Component\DependencyInjection\Compiler\AutowirePass" href="../classes/Symfony_Component_DependencyInjection_Compiler_AutowirePass/process.xhtml">process()</a>
+                — {@inheritdoc}</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

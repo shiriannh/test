@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Source\AST\ASTParentReference</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Source_AST">PDepend\Source\AST</a>
+          </li>
+          <li class="separator">ASTParentReference</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Source/AST/ASTParentReference.php.xhtml#line56">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Source\AST\</small>ASTParentReference</h1>
+        <h4>This is a special reference container that is used whenever the keyword &lt;b&gt;parent&lt;/b&gt; is used to reference a class or interface.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ASTParentReference
+                extends <a title="PDepend\Source\AST\ASTClassOrInterfaceReference" href="../classes/PDepend_Source_AST_ASTClassOrInterfaceReference.xhtml">ASTClassOrInterfaceReference</a>
+            {<br/><ul class="none"><li>// constants</li><li>const IMAGE = 'parent';</li></ul><ul class="none"><li>// members</li><li>protected <span title="\PDepend\Source\AST\ASTClassOrInterfaceReference">ASTClassOrInterfaceReference</span> <a href="#members">$reference</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/getImage.xhtml">getImage</a>()
+                    </li><li>public AbstractASTClassOrInterface <a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/getType.xhtml">getType</a>()
+                    </li><li>public mixed <a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/accept.xhtml">accept</a>()
+                    </li><li>public array(string) <a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/__sleep.xhtml">__sleep</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PDepend\Source\AST\ASTClassOrInterfaceReference" href="../classes/PDepend_Source_AST_ASTClassOrInterfaceReference.xhtml">PDepend\Source\AST\ASTClassOrInterfaceReference</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">78+</td>
+            <td>Call parent constructor, otherwise this could cause bad side effects.</td>
+          </tr>
+        </table>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="IMAGE">IMAGE</td>
+              <td>'parent'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="reference"><strong>$reference</strong>
+                —
+                <a title="\PDepend\Source\AST\ASTClassOrInterfaceReference" href="../classes/_PDepend_Source_AST_ASTClassOrInterfaceReference.xhtml">\PDepend\Source\AST\ASTClassOrInterfaceReference</a><br/><span class="indent">The wrapped reference node.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/__construct.xhtml">__construct()</a>
+                — Constructs a new type holder instance.</li>
+            <li id="__sleep"><a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/__sleep.xhtml">__sleep()</a>
+                — The magic sleep method will be called by PHP's runtime environment right before an instance of this class gets serialized. It should return an array with those property names that should be serialized for this class.</li>
+            <li id="accept"><a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/accept.xhtml">accept()</a>
+                — Accept method of the visitor design pattern. This method will be called by a visitor during tree traversal.</li>
+            <li id="getImage"><a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/getImage.xhtml">getImage()</a>
+                — Returns the visual representation for this node type.</li>
+            <li id="getType"><a title="PDepend\Source\AST\ASTParentReference" href="../classes/PDepend_Source_AST_ASTParentReference/getType.xhtml">getType()</a>
+                — Returns the concrete type instance associated with with this placeholder.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

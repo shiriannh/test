@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PDepend\Util\Cache\CacheFactory</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PDepend_Util_Cache">PDepend\Util\Cache</a>
+          </li>
+          <li class="separator">CacheFactory</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/pdepend/pdepend/src/main/php/PDepend/Util/Cache/CacheFactory.php.xhtml#line57">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PDepend\Util\Cache\</small>CacheFactory</h1>
+        <h4>Factory that encapsulates the creation of a concrete cache instance.</h4>
+        <p/>
+        <ul>
+          <li>Copyright: 2008-2015 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class CacheFactory
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="\PDepend\Util\Configuration">Configuration</span> <a href="#members">$configuration</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$caches</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/__construct.xhtml">__construct</a>()
+                    </li><li>public CacheDriver <a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/create.xhtml">create</a>()
+                    </li><li>protected CacheDriver <a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/createCache.xhtml">createCache</a>()
+                    </li><li>protected FileCacheDriver <a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/createFileCache.xhtml">createFileCache</a>()
+                    </li><li>protected MemoryCacheDriver <a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/createMemoryCache.xhtml">createMemoryCache</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="caches"><strong>$caches</strong>
+                —
+                array<br/><span class="indent">Singleton property that holds existing cache instances.</span></li>
+            <li id="configuration"><strong>$configuration</strong>
+                —
+                <a title="\PDepend\Util\Configuration" href="../classes/_PDepend_Util_Configuration.xhtml">\PDepend\Util\Configuration</a><br/><span class="indent">The system configuration.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="createCache"><a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/createCache.xhtml">createCache()</a>
+                — Creates a cache instance based on the supplied configuration.</li>
+            <li id="createFileCache"><a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/createFileCache.xhtml">createFileCache()</a>
+                — Creates a new file system based cache instance.</li>
+            <li id="createMemoryCache"><a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/createMemoryCache.xhtml">createMemoryCache()</a>
+                — Creates an in memory cache instance.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/__construct.xhtml">__construct()</a>
+                — Constructs a new cache factory instance for the given configuration.</li>
+            <li id="create"><a title="PDepend\Util\Cache\CacheFactory" href="../classes/PDepend_Util_Cache_CacheFactory/create.xhtml">create()</a>
+                — Creates a new instance or returns an existing cache for the given cache identifier.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

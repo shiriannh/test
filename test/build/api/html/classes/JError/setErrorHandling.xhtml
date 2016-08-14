@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#"/>
+          </li>
+          <li class="separator">
+            <a title="JError" href="../../classes/JError.xhtml">JError</a>
+          </li>
+          <li class="separator">setErrorHandling</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/libraries/legacy/error/error.php.xhtml#line369">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>JError::</small>setErrorHandling</h1>
+        <h4>Method to set the way the JError will handle different error levels. Use this if you want to override the default settings.</h4>
+        <p>Error handling modes:
+- ignore
+- echo
+- verbose
+- die
+- message
+- log
+- callback
+
+You may also set the error handling for several modes at once using PHP's bit operations.
+Examples:
+- E_ALL = Set the handling for all levels
+- E_ERROR | E_WARNING = Set the handling for errors and warnings
+- E_ALL ^ E_ERROR = Set the handling for all levels except errors</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function setErrorHandling(integer
+        $level,
+            string
+        $mode,
+            [mixed
+        $options = null] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$level</code>
+                —
+                integer</dt>
+          <dd>The error level for which to set the error handling</dd>
+          <dt><code>$mode</code>
+                —
+                string</dt>
+          <dd>The mode to use for the error handling.</dd>
+          <dt><code>$options</code>
+                —
+                mixed</dt>
+          <dd>Optional: Any options needed for the given mode.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>boolean|JException</dt>
+          <dd>True on success or a JException object if failed.<br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

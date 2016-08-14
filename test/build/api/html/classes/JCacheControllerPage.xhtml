@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JCacheControllerPage</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JCacheControllerPage</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/joomla/cache/controller/page.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JCacheControllerPage</h1>
+        <h4>Joomla! Cache page type object</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JCacheControllerPage
+                extends <a title="JCacheController" href="../classes/JCacheController.xhtml">JCacheController</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$_id</a>;
+                    </li><li>protected  <a href="#members">$_group</a>;
+                    </li><li>protected <span title="stdClass">stdClass</span> <a href="#members">$_locktest</a> =
+                        null;
+                    </li></ul><ul class="none"><li>// methods</li><li>public mixed <a title="JCacheControllerPage" href="../classes/JCacheControllerPage/get.xhtml">get</a>()
+                    </li><li>public boolean <a title="JCacheControllerPage" href="../classes/JCacheControllerPage/store.xhtml">store</a>()
+                    </li><li>protected string <a title="JCacheControllerPage" href="../classes/JCacheControllerPage/_makeId.xhtml">_makeId</a>()
+                    </li><li>protected void <a title="JCacheControllerPage" href="../classes/JCacheControllerPage/_noChange.xhtml">_noChange</a>()
+                    </li><li>protected void <a title="JCacheControllerPage" href="../classes/JCacheControllerPage/_setEtag.xhtml">_setEtag</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="JCacheController" href="../classes/JCacheController.xhtml">JCacheController</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">190+</td>
+            <td>Discuss whether this should be coupled to a data hash or a request hash ... perhaps hashed with a serialized request</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_group"><strong>$_group</strong>
+                —
+                string<br/><span class="indent">Cache group</span></li>
+            <li id="_id"><strong>$_id</strong>
+                —
+                integer<br/><span class="indent">ID property for the cache page object.</span></li>
+            <li id="_locktest"><strong>$_locktest</strong>
+                —
+                <a title="stdClass" href="../classes/stdClass.xhtml">stdClass</a><br/><span class="indent">Cache lock test</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_makeId"><a title="JCacheControllerPage" href="../classes/JCacheControllerPage/_makeId.xhtml">_makeId()</a>
+                — Generate a page cache id</li>
+            <li id="_noChange"><a title="JCacheControllerPage" href="../classes/JCacheControllerPage/_noChange.xhtml">_noChange()</a>
+                — There is no change in page data so send an unmodified header and die gracefully</li>
+            <li id="_setEtag"><a title="JCacheControllerPage" href="../classes/JCacheControllerPage/_setEtag.xhtml">_setEtag()</a>
+                — Set the ETag header in the response</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="get"><a title="JCacheControllerPage" href="../classes/JCacheControllerPage/get.xhtml">get()</a>
+                — Get the cached page data</li>
+            <li id="store"><a title="JCacheControllerPage" href="../classes/JCacheControllerPage/store.xhtml">store()</a>
+                — Stop the cache buffer and store the cached data</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

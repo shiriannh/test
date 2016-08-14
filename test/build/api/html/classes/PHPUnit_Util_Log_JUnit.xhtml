@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPUnit_Util_Log_JUnit</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">PHPUnit_Util_Log_JUnit</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpunit/phpunit/src/Util/Log/JUnit.php.xhtml#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>PHPUnit_Util_Log_JUnit</h1>
+        <h4>A TestListener that generates a logfile of the test execution in XML markup.</h4>
+        <p>The XML markup used is the same as the one that is used by the JUnit Ant task.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class PHPUnit_Util_Log_JUnit
+                extends <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer.xhtml">PHPUnit_Util_Printer</a>
+                implements
+                <a title="PHPUnit_Framework_TestListener" href="../interfaces/PHPUnit_Framework_TestListener.xhtml">PHPUnit_Framework_TestListener</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="DOMDocument">DOMDocument</span> <a href="#members">$document</a>;
+                    </li><li>protected <span title="DOMElement">DOMElement</span> <a href="#members">$root</a>;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$logIncompleteSkipped</a> =
+                        false;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$writeDocument</a> =
+                        true;
+                    </li><li>protected array <a href="#members">$testSuites</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$testSuiteTests</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$testSuiteAssertions</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$testSuiteErrors</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$testSuiteFailures</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$testSuiteTimes</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$testSuiteLevel</a> =
+                        0;
+                    </li><li>protected <span title="DOMElement">DOMElement</span> <a href="#members">$currentTestCase</a> =
+                        null;
+                    </li><li>protected <span title="bool">bool</span> <a href="#members">$attachCurrentTestCase</a> =
+                        true;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/flush.xhtml">flush</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addError.xhtml">addError</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addWarning.xhtml">addWarning</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addFailure.xhtml">addFailure</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addIncompleteTest.xhtml">addIncompleteTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addRiskyTest.xhtml">addRiskyTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addSkippedTest.xhtml">addSkippedTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/startTestSuite.xhtml">startTestSuite</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/endTestSuite.xhtml">endTestSuite</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/startTest.xhtml">startTest</a>()
+                    </li><li>public void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/endTest.xhtml">endTest</a>()
+                    </li><li>public string <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/getXML.xhtml">getXML</a>()
+                    </li><li>public string <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/setWriteDocument.xhtml">setWriteDocument</a>()
+                    </li><li>private void <a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/doAddFault.xhtml">doAddFault</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="PHPUnit_Util_Printer" href="../classes/PHPUnit_Util_Printer.xhtml">PHPUnit_Util_Printer</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="PHPUnit_Framework_TestListener" href="../interfaces/PHPUnit_Framework_TestListener.xhtml">PHPUnit_Framework_TestListener</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="attachCurrentTestCase"><strong>$attachCurrentTestCase</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+            <li id="currentTestCase"><strong>$currentTestCase</strong>
+                —
+                <a title="DOMElement" href="../classes/DOMElement.xhtml">DOMElement</a></li>
+            <li id="document"><strong>$document</strong>
+                —
+                <a title="DOMDocument" href="../classes/DOMDocument.xhtml">DOMDocument</a></li>
+            <li id="logIncompleteSkipped"><strong>$logIncompleteSkipped</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+            <li id="root"><strong>$root</strong>
+                —
+                <a title="DOMElement" href="../classes/DOMElement.xhtml">DOMElement</a></li>
+            <li id="testSuiteAssertions"><strong>$testSuiteAssertions</strong>
+                —
+                array</li>
+            <li id="testSuiteErrors"><strong>$testSuiteErrors</strong>
+                —
+                array</li>
+            <li id="testSuiteFailures"><strong>$testSuiteFailures</strong>
+                —
+                array</li>
+            <li id="testSuiteLevel"><strong>$testSuiteLevel</strong>
+                —
+                int</li>
+            <li id="testSuiteTests"><strong>$testSuiteTests</strong>
+                —
+                array</li>
+            <li id="testSuiteTimes"><strong>$testSuiteTimes</strong>
+                —
+                array</li>
+            <li id="testSuites"><strong>$testSuites</strong>
+                —
+                array</li>
+            <li id="writeDocument"><strong>$writeDocument</strong>
+                —
+                <a title="bool" href="../classes/bool.xhtml">bool</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="doAddFault"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/doAddFault.xhtml">doAddFault()</a>
+                — Method which generalizes addError() and addFailure()</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/__construct.xhtml">__construct()</a>
+                — Constructor.</li>
+            <li id="addError"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addError.xhtml">addError()</a>
+                — An error occurred.</li>
+            <li id="addFailure"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addFailure.xhtml">addFailure()</a>
+                — A failure occurred.</li>
+            <li id="addIncompleteTest"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addIncompleteTest.xhtml">addIncompleteTest()</a>
+                — Incomplete test.</li>
+            <li id="addRiskyTest"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addRiskyTest.xhtml">addRiskyTest()</a>
+                — Risky test.</li>
+            <li id="addSkippedTest"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addSkippedTest.xhtml">addSkippedTest()</a>
+                — Skipped test.</li>
+            <li id="addWarning"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/addWarning.xhtml">addWarning()</a>
+                — A warning occurred.</li>
+            <li id="endTest"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/endTest.xhtml">endTest()</a>
+                — A test ended.</li>
+            <li id="endTestSuite"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/endTestSuite.xhtml">endTestSuite()</a>
+                — A testsuite ended.</li>
+            <li id="flush"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/flush.xhtml">flush()</a>
+                — Flush buffer and close output.</li>
+            <li id="getXML"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/getXML.xhtml">getXML()</a>
+                — Returns the XML as a string.</li>
+            <li id="setWriteDocument"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/setWriteDocument.xhtml">setWriteDocument()</a>
+                — Enables or disables the writing of the document in flush().</li>
+            <li id="startTest"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/startTest.xhtml">startTest()</a>
+                — A test started.</li>
+            <li id="startTestSuite"><a title="PHPUnit_Util_Log_JUnit" href="../classes/PHPUnit_Util_Log_JUnit/startTestSuite.xhtml">startTestSuite()</a>
+                — A testsuite started.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

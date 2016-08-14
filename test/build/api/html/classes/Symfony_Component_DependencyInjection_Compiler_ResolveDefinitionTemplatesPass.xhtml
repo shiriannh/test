@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Symfony_Component_DependencyInjection_Compiler">Symfony\Component\DependencyInjection\Compiler</a>
+          </li>
+          <li class="separator">ResolveDefinitionTemplatesPass</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/symfony/dependency-injection/Compiler/ResolveDefinitionTemplatesPass.php.xhtml#line26">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Symfony\Component\DependencyInjection\Compiler\</small>ResolveDefinitionTemplatesPass</h1>
+        <h4>This replaces all DefinitionDecorator instances with their equivalent fully merged Definition instance.</h4>
+        <p/>
+        <ul>
+          <li>Author: Johannes M. Schmitt &lt;schmittjoh@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ResolveDefinitionTemplatesPass
+                implements
+                <a title="Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface" href="../interfaces/Symfony_Component_DependencyInjection_Compiler_CompilerPassInterface.xhtml">CompilerPassInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$compiler</a>;
+                    </li><li>private  <a href="#members">$formatter</a>;
+                    </li><li>private  <a href="#members">$currentId</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass" href="../classes/Symfony_Component_DependencyInjection_Compiler_ResolveDefinitionTemplatesPass/process.xhtml">process</a>()
+                    </li><li>private array <a title="Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass" href="../classes/Symfony_Component_DependencyInjection_Compiler_ResolveDefinitionTemplatesPass/resolveArguments.xhtml">resolveArguments</a>()
+                    </li><li>private Definition <a title="Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass" href="../classes/Symfony_Component_DependencyInjection_Compiler_ResolveDefinitionTemplatesPass/resolveDefinition.xhtml">resolveDefinition</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface" href="../interfaces/Symfony_Component_DependencyInjection_Compiler_CompilerPassInterface.xhtml">Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="compiler">
+              <strong>$compiler</strong>
+            </li>
+            <li id="currentId">
+              <strong>$currentId</strong>
+            </li>
+            <li id="formatter">
+              <strong>$formatter</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="resolveArguments"><a title="Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass" href="../classes/Symfony_Component_DependencyInjection_Compiler_ResolveDefinitionTemplatesPass/resolveArguments.xhtml">resolveArguments()</a>
+                — Resolves definition decorator arguments.</li>
+            <li id="resolveDefinition"><a title="Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass" href="../classes/Symfony_Component_DependencyInjection_Compiler_ResolveDefinitionTemplatesPass/resolveDefinition.xhtml">resolveDefinition()</a>
+                — Resolves the definition.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="process"><a title="Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass" href="../classes/Symfony_Component_DependencyInjection_Compiler_ResolveDefinitionTemplatesPass/process.xhtml">process()</a>
+                — Process the ContainerBuilder to replace DefinitionDecorator instances with their real Definition instances.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

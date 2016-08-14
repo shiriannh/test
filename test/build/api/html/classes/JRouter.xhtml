@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - JRouter</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">JRouter</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/libraries/cms/router/router.php.xhtml#line31">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>\</small>JRouter</h1>
+        <h4>Class to create and parse routes</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class JRouter
+            {<br/><ul class="none"><li>// constants</li><li>const PROCESS_BEFORE = 'preprocess';</li><li>const PROCESS_DURING = '';</li><li>const PROCESS_AFTER = 'postprocess';</li></ul><ul class="none"><li>// members</li><li>protected integer <a href="#members">$mode</a> =
+                        null;
+                    </li><li>protected integer <a href="#members">$_mode</a> =
+                        null;
+                    </li><li>protected array <a href="#members">$vars</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$_vars</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$rules</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$_rules</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$cache</a> =
+                        ;
+                    </li><li>protected static array <a href="#members">$instances</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="JRouter" href="../classes/JRouter/__construct.xhtml">__construct</a>()
+                    </li><li>public static JRouter <a title="JRouter" href="../classes/JRouter/getInstance.xhtml">getInstance</a>()
+                    </li><li>public array <a title="JRouter" href="../classes/JRouter/parse.xhtml">parse</a>()
+                    </li><li>public string <a title="JRouter" href="../classes/JRouter/build.xhtml">build</a>()
+                    </li><li>public integer <a title="JRouter" href="../classes/JRouter/getMode.xhtml">getMode</a>()
+                    </li><li>public void <a title="JRouter" href="../classes/JRouter/setMode.xhtml">setMode</a>()
+                    </li><li>public void <a title="JRouter" href="../classes/JRouter/setVar.xhtml">setVar</a>()
+                    </li><li>public void <a title="JRouter" href="../classes/JRouter/setVars.xhtml">setVars</a>()
+                    </li><li>public mixed <a title="JRouter" href="../classes/JRouter/getVar.xhtml">getVar</a>()
+                    </li><li>public array <a title="JRouter" href="../classes/JRouter/getVars.xhtml">getVars</a>()
+                    </li><li>public void <a title="JRouter" href="../classes/JRouter/attachBuildRule.xhtml">attachBuildRule</a>()
+                    </li><li>public void <a title="JRouter" href="../classes/JRouter/attachParseRule.xhtml">attachParseRule</a>()
+                    </li><li>protected boolean <a title="JRouter" href="../classes/JRouter/_parseRawRoute.xhtml">_parseRawRoute</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/parseRawRoute.xhtml">parseRawRoute</a>()
+                    </li><li>protected string <a title="JRouter" href="../classes/JRouter/_parseSefRoute.xhtml">_parseSefRoute</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/parseSefRoute.xhtml">parseSefRoute</a>()
+                    </li><li>protected string <a title="JRouter" href="../classes/JRouter/_buildRawRoute.xhtml">_buildRawRoute</a>()
+                    </li><li>protected string <a title="JRouter" href="../classes/JRouter/buildRawRoute.xhtml">buildRawRoute</a>()
+                    </li><li>protected string <a title="JRouter" href="../classes/JRouter/_buildSefRoute.xhtml">_buildSefRoute</a>()
+                    </li><li>protected string <a title="JRouter" href="../classes/JRouter/buildSefRoute.xhtml">buildSefRoute</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/_processParseRules.xhtml">_processParseRules</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/processParseRules.xhtml">processParseRules</a>()
+                    </li><li>protected void <a title="JRouter" href="../classes/JRouter/_processBuildRules.xhtml">_processBuildRules</a>()
+                    </li><li>protected void <a title="JRouter" href="../classes/JRouter/processBuildRules.xhtml">processBuildRules</a>()
+                    </li><li>protected JUri <a title="JRouter" href="../classes/JRouter/_createUri.xhtml">_createUri</a>()
+                    </li><li>protected JUri <a title="JRouter" href="../classes/JRouter/createUri.xhtml">createUri</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/_encodeSegments.xhtml">_encodeSegments</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/encodeSegments.xhtml">encodeSegments</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/_decodeSegments.xhtml">_decodeSegments</a>()
+                    </li><li>protected array <a title="JRouter" href="../classes/JRouter/decodeSegments.xhtml">decodeSegments</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="PROCESS_BEFORE">PROCESS_BEFORE</td>
+              <td>'preprocess'</td>
+            </tr>
+            <tr>
+              <td id="PROCESS_DURING">PROCESS_DURING</td>
+              <td>''</td>
+            </tr>
+            <tr>
+              <td id="PROCESS_AFTER">PROCESS_AFTER</td>
+              <td>'postprocess'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="_mode"><strong>$_mode</strong>
+                —
+                integer<br/><span class="indent">The rewrite mode</span></li>
+            <li id="_rules"><strong>$_rules</strong>
+                —
+                array<br/><span class="indent">An array of rules</span></li>
+            <li id="_vars"><strong>$_vars</strong>
+                —
+                array<br/><span class="indent">An array of variables</span></li>
+            <li id="cache"><strong>$cache</strong>
+                —
+                array<br/><span class="indent">Caching of processed URIs</span></li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array<br/><span class="indent">JRouter instances container.</span></li>
+            <li id="mode"><strong>$mode</strong>
+                —
+                integer<br/><span class="indent">The rewrite mode</span></li>
+            <li id="rules"><strong>$rules</strong>
+                —
+                array<br/><span class="indent">An array of rules</span></li>
+            <li id="vars"><strong>$vars</strong>
+                —
+                array<br/><span class="indent">An array of variables</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="_buildRawRoute"><a title="JRouter" href="../classes/JRouter/_buildRawRoute.xhtml">_buildRawRoute()</a>
+                — Function to build a raw route</li>
+            <li id="_buildSefRoute"><a title="JRouter" href="../classes/JRouter/_buildSefRoute.xhtml">_buildSefRoute()</a>
+                — Function to build a sef route</li>
+            <li id="_createUri"><a title="JRouter" href="../classes/JRouter/_createUri.xhtml">_createUri()</a>
+                — Create a uri based on a full or partial url string</li>
+            <li id="_decodeSegments"><a title="JRouter" href="../classes/JRouter/_decodeSegments.xhtml">_decodeSegments()</a>
+                — Decode route segments</li>
+            <li id="_encodeSegments"><a title="JRouter" href="../classes/JRouter/_encodeSegments.xhtml">_encodeSegments()</a>
+                — Encode route segments</li>
+            <li id="_parseRawRoute"><a title="JRouter" href="../classes/JRouter/_parseRawRoute.xhtml">_parseRawRoute()</a>
+                — Function to convert a raw route to an internal URI</li>
+            <li id="_parseSefRoute"><a title="JRouter" href="../classes/JRouter/_parseSefRoute.xhtml">_parseSefRoute()</a>
+                — Function to convert a sef route to an internal URI</li>
+            <li id="_processBuildRules"><a title="JRouter" href="../classes/JRouter/_processBuildRules.xhtml">_processBuildRules()</a>
+                — Process the build uri query data based on custom defined rules</li>
+            <li id="_processParseRules"><a title="JRouter" href="../classes/JRouter/_processParseRules.xhtml">_processParseRules()</a>
+                — Process the parsed router variables based on custom defined rules</li>
+            <li id="buildRawRoute"><a title="JRouter" href="../classes/JRouter/buildRawRoute.xhtml">buildRawRoute()</a>
+                — Function to build a raw route</li>
+            <li id="buildSefRoute"><a title="JRouter" href="../classes/JRouter/buildSefRoute.xhtml">buildSefRoute()</a>
+                — Function to build a sef route</li>
+            <li id="createUri"><a title="JRouter" href="../classes/JRouter/createUri.xhtml">createUri()</a>
+                — Create a uri based on a full or partial url string</li>
+            <li id="decodeSegments"><a title="JRouter" href="../classes/JRouter/decodeSegments.xhtml">decodeSegments()</a>
+                — Decode route segments</li>
+            <li id="encodeSegments"><a title="JRouter" href="../classes/JRouter/encodeSegments.xhtml">encodeSegments()</a>
+                — Encode route segments</li>
+            <li id="parseRawRoute"><a title="JRouter" href="../classes/JRouter/parseRawRoute.xhtml">parseRawRoute()</a>
+                — Function to convert a raw route to an internal URI</li>
+            <li id="parseSefRoute"><a title="JRouter" href="../classes/JRouter/parseSefRoute.xhtml">parseSefRoute()</a>
+                — Function to convert a sef route to an internal URI</li>
+            <li id="processBuildRules"><a title="JRouter" href="../classes/JRouter/processBuildRules.xhtml">processBuildRules()</a>
+                — Process the build uri query data based on custom defined rules</li>
+            <li id="processParseRules"><a title="JRouter" href="../classes/JRouter/processParseRules.xhtml">processParseRules()</a>
+                — Process the parsed router variables based on custom defined rules</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="JRouter" href="../classes/JRouter/__construct.xhtml">__construct()</a>
+                — Class constructor</li>
+            <li id="attachBuildRule"><a title="JRouter" href="../classes/JRouter/attachBuildRule.xhtml">attachBuildRule()</a>
+                — Attach a build rule</li>
+            <li id="attachParseRule"><a title="JRouter" href="../classes/JRouter/attachParseRule.xhtml">attachParseRule()</a>
+                — Attach a parse rule</li>
+            <li id="build"><a title="JRouter" href="../classes/JRouter/build.xhtml">build()</a>
+                — Function to convert an internal URI to a route</li>
+            <li id="getInstance"><a title="JRouter" href="../classes/JRouter/getInstance.xhtml">getInstance()</a>
+                — Returns the global JRouter object, only creating it if it doesn't already exist.</li>
+            <li id="getMode"><a title="JRouter" href="../classes/JRouter/getMode.xhtml">getMode()</a>
+                — Get the router mode</li>
+            <li id="getVar"><a title="JRouter" href="../classes/JRouter/getVar.xhtml">getVar()</a>
+                — Get a router variable</li>
+            <li id="getVars"><a title="JRouter" href="../classes/JRouter/getVars.xhtml">getVars()</a>
+                — Get the router variable array</li>
+            <li id="parse"><a title="JRouter" href="../classes/JRouter/parse.xhtml">parse()</a>
+                — Function to convert a route to an internal URI</li>
+            <li id="setMode"><a title="JRouter" href="../classes/JRouter/setMode.xhtml">setMode()</a>
+                — Set the router mode</li>
+            <li id="setVar"><a title="JRouter" href="../classes/JRouter/setVar.xhtml">setVar()</a>
+                — Set a router variable, creating it if it doesn't exist</li>
+            <li id="setVars"><a title="JRouter" href="../classes/JRouter/setVars.xhtml">setVars()</a>
+                — Set the router variable array</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

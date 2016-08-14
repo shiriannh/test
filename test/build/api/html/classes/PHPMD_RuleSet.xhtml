@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - PHPMD\RuleSet</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#PHPMD">PHPMD</a>
+          </li>
+          <li class="separator">RuleSet</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/vendor/phpmd/phpmd/src/main/php/PHPMD/RuleSet.php.xhtml#line51">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>PHPMD\</small>RuleSet</h1>
+        <h4>This class is a collection of concrete source analysis rules.</h4>
+        <p/>
+        <ul>
+          <li>Author: Manuel Pichler &lt;mapi@phpmd.org&gt;</li>
+          <li>Copyright: 2008-2014 Manuel Pichler. All rights reserved.</li>
+          <li>License: http://www.opensource.org/licenses/bsd-license.php BSD License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class RuleSet
+                implements
+                <a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
+            {<br/><ul class="none"><li>// members</li><li>private boolean <a href="#members">$strict</a> =
+                        false;
+                    </li><li>private string <a href="#members">$fileName</a> =
+                        '';
+                    </li><li>private string <a href="#members">$name</a> =
+                        '';
+                    </li><li>private string <a href="#members">$description</a> =
+                        '';
+                    </li><li>private <span title="\PHPMD\Report">Report</span> <a href="#members">$report</a>;
+                    </li><li>private <span title="PHPMD\array(string=&gt;string)">array(string=&gt;string)</span> <a href="#members">$applyTo</a> =
+                        ;
+                    </li><li>private <span title="PHPMD\array(string=&gt;array)">array(string=&gt;array)</span> <a href="#members">$rules</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public string <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getFileName.xhtml">getFileName</a>()
+                    </li><li>public void <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setFileName.xhtml">setFileName</a>()
+                    </li><li>public string <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getName.xhtml">getName</a>()
+                    </li><li>public void <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setName.xhtml">setName</a>()
+                    </li><li>public string <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getDescription.xhtml">getDescription</a>()
+                    </li><li>public void <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setDescription.xhtml">setDescription</a>()
+                    </li><li>public void <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setStrict.xhtml">setStrict</a>()
+                    </li><li>public Report <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getReport.xhtml">getReport</a>()
+                    </li><li>public void <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setReport.xhtml">setReport</a>()
+                    </li><li>public Rule <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getRuleByName.xhtml">getRuleByName</a>()
+                    </li><li>public Iterator <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getRules.xhtml">getRules</a>()
+                    </li><li>public void <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/addRule.xhtml">addRule</a>()
+                    </li><li>public void <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/apply.xhtml">apply</a>()
+                    </li><li>public Iterator <a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getIterator.xhtml">getIterator</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="applyTo"><strong>$applyTo</strong>
+                —
+                <a title="PHPMD\array(string=&gt;string)" href="../classes/PHPMD_array(string=&gt;string).xhtml">PHPMD\array(string=&gt;string)</a><br/><span class="indent">Mapping between marker interfaces and concrete context code node classes.</span></li>
+            <li id="description"><strong>$description</strong>
+                —
+                string<br/><span class="indent">An optional description for this rule-set.</span></li>
+            <li id="fileName"><strong>$fileName</strong>
+                —
+                string<br/><span class="indent">The name of the file where this set is specified.</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">The name of this rule-set.</span></li>
+            <li id="report"><strong>$report</strong>
+                —
+                <a title="\PHPMD\Report" href="../classes/_PHPMD_Report.xhtml">\PHPMD\Report</a><br/><span class="indent">The violation report used by the rule-set.</span></li>
+            <li id="rules"><strong>$rules</strong>
+                —
+                <a title="PHPMD\array(string=&gt;array)" href="../classes/PHPMD_array(string=&gt;array).xhtml">PHPMD\array(string=&gt;array)</a><br/><span class="indent">Mapping of rules that apply to a concrete code node type.</span></li>
+            <li id="strict"><strong>$strict</strong>
+                —
+                boolean<br/><span class="indent">Should this rule set force the strict mode.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addRule"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/addRule.xhtml">addRule()</a>
+                — Adds a new rule to this rule-set.</li>
+            <li id="apply"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/apply.xhtml">apply()</a>
+                — Applies all registered rules that match against the concrete node type.</li>
+            <li id="getDescription"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getDescription.xhtml">getDescription()</a>
+                — Returns the description text for this rule-set instance.</li>
+            <li id="getFileName"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getFileName.xhtml">getFileName()</a>
+                — Returns the file name where the definition of this rule-set comes from.</li>
+            <li id="getIterator"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getIterator.xhtml">getIterator()</a>
+                — Returns an iterator with all rules that are part of this rule-set.</li>
+            <li id="getName"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getName.xhtml">getName()</a>
+                — Returns the name of this rule-set.</li>
+            <li id="getReport"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getReport.xhtml">getReport()</a>
+                — Returns the violation report used by the rule-set.</li>
+            <li id="getRuleByName"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getRuleByName.xhtml">getRuleByName()</a>
+                — This method returns a rule by its name or &lt;b&gt;null&lt;/b&gt; if it doesn't exist.</li>
+            <li id="getRules"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/getRules.xhtml">getRules()</a>
+                — This method returns an iterator will all rules that belong to this rule-set.</li>
+            <li id="setDescription"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setDescription.xhtml">setDescription()</a>
+                — Sets the description text for this rule-set instance.</li>
+            <li id="setFileName"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setFileName.xhtml">setFileName()</a>
+                — Sets the file name where the definition of this rule-set comes from.</li>
+            <li id="setName"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setName.xhtml">setName()</a>
+                — Sets the name of this rule-set.</li>
+            <li id="setReport"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setReport.xhtml">setReport()</a>
+                — Sets the violation report used by the rule-set.</li>
+            <li id="setStrict"><a title="PHPMD\RuleSet" href="../classes/PHPMD_RuleSet/setStrict.xhtml">setStrict()</a>
+                — Activates the strict mode for this rule set instance.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
