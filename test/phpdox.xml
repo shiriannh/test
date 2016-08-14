@@ -1,12 +1,9 @@
-<phpdox xmlns="http://phpdox.de/config">
-    <project name="name-of-project" source="/test" workdir="build/phpdox">
-        <collector publiconly="false">
-            <include mask="*.php" />
-            <exclude mask="*Autoload.php" />
-        </collector>
-
-        <generator output="build">
-            <build engine="html" enabled="true" output="api"/>
-        </generator>
-    </project>
+<?xml version="1.0" encoding="UTF-8"?>
+<phpdox xmlns="http://xml.phpdox.net/config">
+  <project name="Example" source="${basedir}/test" workdir="${basedir}/build/phpdox">
+    <collector backend="parser" />
+    <generator output="${basedir}/build/api">
+      <build engine="html" output="html"/>
+    </generator>
+  </project>
 </phpdox>
