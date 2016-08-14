@@ -1,4 +1,5 @@
-<phpdox xmlns="http://phpdox.de/config">
+<?xml version="1.0" encoding="UTF-8"?>
+<phpdox xmlns="http://phpdox.net/config">
     <project name="name-of-project" source="/test" workdir="build/phpdox">
         <collector publiconly="false">
             <include mask="*.php" />
