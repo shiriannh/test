@@ -9,7 +9,7 @@
     <bootstrap />
 
     <!-- A phpDox project to process, you can have multiple projects in one config file -->
-    <project name="phpdox" source="${basedir}" workdir="${basedir}/build/phpdox/xml">
+    <project name="phpdox" source="${basedir}/build/logs" workdir="${basedir}/build/phpdox/xml">
         <!--  @name    - The name of the project -->
         <!--  @source  - The source directory of the application to process -->
         <!--  @workdir - The directory to store the xml data files in -->
@@ -61,7 +61,7 @@
 
             <!-- A generation process consists of one or more build tasks and of (optional) enrich sources -->
 
-            <enrich base="${basedir}/build">
+            <enrich base="${basedir}/build/logs">
                 <!-- @base - (Base-)Directory of datafiles used for enrich process -->
 
                 <!--<source type="...">-->
@@ -73,9 +73,9 @@
                 <!--</source> -->
 
                 <!-- add phploc output -->
-                <!--
+                
                 <source type="phploc" />
-                -->
+                
 
                 <!-- git vcs information -->
                 <!--
@@ -86,26 +86,26 @@
                 -->
 
                 <!-- PHP Code Sniffer findings -->
-                <!--
+                
                 <source type="phpcs">
-                    <file name="logs/phpcs.xml" />
+                    <file name="${basedir}/build/logs/phpcs.xml" />
                 </source>
-                -->
+                
 
                 <!-- PHPMessDetector -->
-                <!--
+                
                 <source type="pmd">
-                    <file name="pmd.xml" />
+                    <file name="${basedir}/build/logs/pmd.xml" />
                 </source>
-                -->
+               
 
                 <!-- PHPUnit Coverage XML -->
-                <!-- <source type="phpunit">  -->
-                    <!-- <coverage path="" /> -->
+                 <source type="phpunit">  
+                     <coverage path="${basedir}/build/logs/phpunit.xml" /> 
                     <!--           @path - the directory where the xml code coverage report can be found -->
                     <!--<filter directory="${phpDox.project.source}" />-->
                     <!-- @directory - path of the phpunit config whitelist filter directory -->
-                <!--</source>-->
+                </source>
                 <!--
                 <source type="phpunit">
                     <filter directory="${phpDox.project.source}" />
