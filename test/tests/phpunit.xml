@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="test/vendor/autoload.php">
+<phpunit bootstrap="../../autoload.php">
   <testsuites>
     <testsuite name="money">
       <file>tests/CalculatorTest.php</file>
