@@ -10,6 +10,8 @@
       <directory suffix="Test.php">tests/Extensions</directory>
       <directory suffix="Test.php">tests/Runner</directory>
       <directory suffix="Test.php">tests/Util</directory>
+      <directory suffix="Test.php">tests</directory>
+      <directory>../test/tests</directory>
     </testsuite>
 
     <testsuite name="large">
