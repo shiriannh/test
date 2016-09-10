@@ -36,7 +36,7 @@
          description="Performs static analysis (executing the tools in parallel), runs the tests, and generates project documentation"/>
 
  <target name="quick-build"
-         depends="prepare,lint,phpunit-no-coverage,phpdox"
+         depends="phpunit-no-coverage"
          description="Performs a lint check and runs the tests (without generating code coverage reports)"/>
 
  <target name="static-analysis"
@@ -231,7 +231,7 @@
          description="Run unit tests with PHPUnit">
   <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
    <arg value="--configuration"/>
-   <arg path="${basedir}/build/phpunit.xml"/>
+   <arg path="${basedir}/vendor/phpunit/phpunit/phpunit.xml"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
@@ -250,20 +250,13 @@
   <property name="phpunit.done" value="true"/>
  </target>
 
-<!--  <target name="phpdox" -->
-<!--          unless="phpdox.done" -->
-<!--          depends="phploc-ci,phpcs-ci,phpmd-ci" -->
-<!--          description="Generate project documentation using phpDox"> -->
-<!--   <exec executable="${phpdox}" dir="${basedir}/build" taskname="phpdox"/> -->
+ <target name="phpdox"
+         unless="phpdox.done"
+         depends="phploc-ci,phpcs-ci,phpmd-ci"
+         description="Generate project documentation using phpDox">
+  <exec executable="${phpdox}" dir="${basedir}/build" taskname="phpdox"/>
 
-<!--   <property name="phpdox.done" value="true"/> -->
-<!--  </target> -->
-
-<target name="phpdox" depends="phploc-ci,phpcs-ci,phpmd-ci" description="Generate project documentation using phpDox">
-  <exec executable="${toolsdir}phpdox">
-   <arg value="--file" />
-   <arg value="${basedir}/build/phpdox.xml" />
-  </exec>
+  <property name="phpdox.done" value="true"/>
  </target>
 
  <target name="-check-failure">
