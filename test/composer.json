@@ -5,7 +5,7 @@
 		"pdepend/pdepend" : "@stable", 
 		"squizlabs/php_codesniffer": "2.*",
 		"sebastian/phpcpd": "*",
-		"phpunit/phpunit": "@stable",
+		"phpunit/phpunit": "5.5.*",
 		"theseer/phpdox": "@stable"
     }
 }

@@ -1,6 +1,6 @@
 <?php
     /**
-     * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+     * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
      * All rights reserved.
      *
      * Redistribution and use in source and binary forms, with or without modification,
@@ -38,6 +38,7 @@ namespace TheSeer\phpDox\Collector {
 
     use TheSeer\fDOM\fDOMDocument;
     use TheSeer\fDOM\fDOMElement;
+    use TheSeer\phpDox\FileInfo;
 
     /**
      *
@@ -47,10 +48,13 @@ namespace TheSeer\phpDox\Collector {
         private $dom;
 
         /**
-         * @var string
+         * @var FileInfo
          */
-        protected $collectionName;
+        private $srcDir;
 
+        public function __construct(FileInfo $srcDir) {
+            $this->srcDir = $srcDir;
+        }
 
         private function getRootElement() {
             if (!$this->dom instanceof fDOMDocument) {
@@ -61,8 +65,9 @@ namespace TheSeer\phpDox\Collector {
 
         private function initDomDocument() {
             $this->dom = new fDOMDocument('1.0', 'UTF-8');
-            $this->dom->registerNamespace('phpdox', 'http://xml.phpdox.net/src#');
-            $this->dom->appendElementNS('http://xml.phpdox.net/src#', 'index');
+            $this->dom->registerNamespace('phpdox', 'http://xml.phpdox.net/src');
+            $index = $this->dom->appendElementNS('http://xml.phpdox.net/src', 'index');
+            $index->setAttribute('basedir', $this->srcDir->getRealPath());
         }
 
         /**
@@ -71,7 +76,7 @@ namespace TheSeer\phpDox\Collector {
          */
         public function import(fDOMDocument $dom) {
             $this->dom = $dom;
-            $this->dom->registerNamespace('phpdox', 'http://xml.phpdox.net/src#');
+            $this->dom->registerNamespace('phpdox', 'http://xml.phpdox.net/src');
         }
 
         /**
@@ -115,7 +120,8 @@ namespace TheSeer\phpDox\Collector {
          * @return \DOMNodeList
          */
         public function findUnitNodesBySrcFile($path) {
-            return $this->getRootElement()->query(sprintf('//*[@src="%s"]', $path));
+            $src = mb_substr($path, mb_strlen($this->srcDir) + 1);
+            return $this->getRootElement()->query(sprintf('//*[@src="%s"]', $src));
         }
 
         /**
@@ -123,7 +129,6 @@ namespace TheSeer\phpDox\Collector {
          * @param $name
          *
          * @return fDOMElement
-         * @throws IndexCollectionException
          */
         public function findUnitNodeByName($namespace, $name) {
             return $this->getRootElement()->queryOne(
@@ -137,12 +142,12 @@ namespace TheSeer\phpDox\Collector {
             $root = $this->getRootElement();
 
             if (!$this->findUnitNodeByName($unit->getNamespace(), $unit->getLocalName())) {
-                $unitNode = $root->appendElementNS('http://xml.phpdox.net/src#', $type);
+                $unitNode = $root->appendElementNS('http://xml.phpdox.net/src', $type);
                 $unitNode->setAttribute('name', $unit->getLocalName());
 
                 $src = $unit->getSourceFilename();
                 if ($src != '') {
-                    $unitNode->setAttribute('src', $src);
+                    $unitNode->setAttribute('src', $src->getRelative($this->srcDir, FALSE));
                 }
 
                 $desc = $unit->getCompactDescription();
@@ -153,16 +158,12 @@ namespace TheSeer\phpDox\Collector {
                 $xpath = 'phpdox:namespace[@name="' . $unit->getNamespace() . '"]';
                 $ctx = $root->queryOne($xpath);
                 if (!$ctx) {
-                    $ctx = $root->appendElementNS('http://xml.phpdox.net/src#', 'namespace');
+                    $ctx = $root->appendElementNS('http://xml.phpdox.net/src', 'namespace');
                     $ctx->setAttribute('name', $unit->getNamespace());
                 }
                 $ctx->appendChild($unitNode);
             }
         }
-
-    }
-
-    class IndexCollectionException extends \Exception {
 
     }
 

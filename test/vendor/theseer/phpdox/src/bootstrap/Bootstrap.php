@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -48,24 +48,26 @@ namespace TheSeer\phpDox {
         /**
          * Load bootstrap files to register components and builder
          *
-         * @param Array $require Array of files to require
+         * @param FileInfoCollection $require list of files to require
          *
-         * @return Array Map of BuilderConfig objects ([name => Config])
+         * @throws BootstrapException
          */
-        public function load(Array $require) {
-            $this->loadBootstrap( __DIR__ . '/backends.php');
-            $this->loadBootstrap( __DIR__ . '/enrichers.php');
-            $this->loadBootstrap( __DIR__ . '/engines.php');
-
+        public function load(FileInfoCollection $require, $silent = TRUE) {
             foreach($require as $file) {
-                if (!file_exists($file) || !is_file($file)) {
-                    throw new BootstrapException("Require file '$file' not found or not a file", BootstrapException::RequireFailed);
+                /** @var FileInfo $file */
+                if (!$file->exists()) {
+                    throw new BootstrapException(
+                        sprintf("Require file '%s' not found or not a file", $file->getRealPath()),
+                        BootstrapException::RequireFailed
+                    );
                 }
-                $this->logger->log("Loading bootstrap file '$file'");
+                if (!$silent) {
+                    $this->logger->log(
+                        sprintf("Loading bootstrap file '%s'", $file->getRealPath())
+                    );
+                }
                 $this->loadBootstrap($file);
             }
-
-            return $this->api->getEngines();
         }
 
         public function getBackends() {
@@ -81,13 +83,11 @@ namespace TheSeer\phpDox {
         }
 
         private function loadBootstrap($filename) {
+            /** @noinspection PhpUnusedLocalVariableInspection */
             $phpDox = $this->api;
+            /** @noinspection PhpIncludeInspection */
             require $filename;
         }
-    }
-
-    class BootstrapException extends \Exception {
-        const RequireFailed = 1;
     }
 
 }

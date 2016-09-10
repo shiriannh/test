@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -39,7 +39,19 @@ namespace TheSeer\phpDox {
 
     class ErrorHandler {
 
-        protected $debugMode = false;
+        /**
+         * @var Version
+         */
+        private $version;
+
+        /**
+         * ErrorHandler constructor.
+         *
+         * @param Version $version
+         */
+        public function __construct(Version $version) {
+            $this->version = $version;
+        }
 
         /**
          * Init method
@@ -49,15 +61,12 @@ namespace TheSeer\phpDox {
          * @return void
          */
         public function register() {
-            error_reporting(-1);
+            error_reporting(0);
             ini_set('display_errors', FALSE);
             register_shutdown_function(array($this, "handleShutdown"));
             set_exception_handler(array($this, 'handleException'));
             set_error_handler(array($this, 'handleError'), E_STRICT|E_NOTICE|E_WARNING|E_RECOVERABLE_ERROR|E_USER_ERROR);
-        }
-
-        public function setDebug($mode) {
-            $this->debugMode = ($mode === true);
+            class_exists('\TheSeer\phpDox\ErrorException', true);
         }
 
         /**
@@ -83,12 +92,8 @@ namespace TheSeer\phpDox {
          * @throws \ErrorException
          */
         public function handleError($errno, $errstr, $errfile, $errline) {
-            if (ini_get('error_reporting')==0 && !$this->debugMode) {
-                return true;
-            }
-            throw new \ErrorException($errstr, -1, $errno, $errfile, $errline);
+            throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
         }
-
 
         /**
          * System shutdown handler
@@ -99,8 +104,8 @@ namespace TheSeer\phpDox {
          */
         public function handleShutdown() {
             $error = error_get_last();
-            if ($error && in_array($error['type'], array(E_ERROR, E_PARSE, E_RECOVERABLE_ERROR))) {
-                $exception = new \ErrorException($error['message'], -1, $error['type'], $error['file'], $error['line']);
+            if ($error) {
+                $exception = new ErrorException($error['message'], $error['type'], 0, $error['file'], $error['line']);
                 $this->handleException($exception);
             }
         }
@@ -116,14 +121,18 @@ namespace TheSeer\phpDox {
             fwrite(STDERR, "\n\nOups... phpDox encountered a problem and has terminated!\n");
             fwrite(STDERR, "\nIt most likely means you've found a bug, so please file a report for this\n");
             fwrite(STDERR, "and paste the following details and the stacktrace (if given) along:\n\n");
-            fwrite(STDERR, "Version: " . Version::getVersion() . "\n");
+            fwrite(STDERR, "PHP Version: " . PHP_VERSION . " (" . PHP_OS . ")\n");
+            fwrite(STDERR, "PHPDox Version: " . $this->version->getVersion() . "\n");
             $this->renderException($exception);
             fwrite(STDERR, "\n\n\n");
-            exit(1);
         }
 
-        protected function renderException(\Exception $exception) {
-            fwrite(STDERR, sprintf("Exception: %s\n", get_class($exception)));
+        private function renderException(\Exception $exception) {
+            if ($exception instanceof ErrorException) {
+                fwrite(STDERR, sprintf("ErrorException: %s \n", $exception->getErrorName()));
+            } else {
+                fwrite(STDERR, sprintf("Exception: %s (Code: %d)\n", get_class($exception), $exception->getCode()));
+            }
             fwrite(STDERR, sprintf("Location: %s (Line %d)\n\n", $exception->getFile(), $exception->getLine()));
             fwrite(STDERR, $exception->getMessage() . "\n\n");
 
@@ -133,6 +142,9 @@ namespace TheSeer\phpDox {
 
             $trace = $exception->getTrace();
             array_shift($trace);
+            if (count($trace) == 0) {
+                fwrite(STDERR, 'No stacktrace available');
+            }
             foreach($trace as $pos => $entry) {
                 fwrite(STDERR,
                     sprintf('#%1$d %2$s(%3$d): %4$s%5$s%6$s()'."\n",

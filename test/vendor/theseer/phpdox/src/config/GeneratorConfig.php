@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -42,11 +42,25 @@ namespace TheSeer\phpDox {
 
     class GeneratorConfig {
 
-        protected $builds;
-        protected $enrichers;
+        /**
+         * @var array
+         */
+        private $builds;
 
-        protected $ctx;
-        protected $project;
+        /**
+         * @var array
+         */
+        private $enrichers;
+
+        /**
+         * @var fDOMElement
+         */
+        private $ctx;
+
+        /**
+         * @var ProjectConfig
+         */
+        private $project;
 
         public function __construct(ProjectConfig $project, fDOMElement $ctx) {
             $this->project = $project;
@@ -89,13 +103,14 @@ namespace TheSeer\phpDox {
                 foreach($this->ctx->query('cfg:enrich/cfg:source[@type and (not(@enabled) or @enabled="true")]') as $ctx) {
                     $this->enrichers[$ctx->getAttribute('type')] = new EnrichConfig($this, $ctx);
                 }
+                if (!isset($this->enrichers['build'])) {
+                    $ctx = $this->ctx->ownerDocument->createElementNS('http://xml.phpdox.net/config', 'source');
+                    $ctx->setAttribute('type', 'build');
+                    $this->enrichers['build'] = new EnrichConfig($this, $ctx);
+                }
             }
             return $this->enrichers;
         }
-    }
-
-    class GeneratorConfigException extends ConfigException {
-        const BuilderNotFound = 1;
     }
 
 }

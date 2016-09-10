@@ -1,6 +1,6 @@
 <?php
     /**
-     * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+     * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
      * All rights reserved.
      *
      * Redistribution and use in source and binary forms, with or without modification,
@@ -41,26 +41,34 @@ namespace TheSeer\phpDox\Collector {
     use TheSeer\fDOM\fDOMDocument;
     use TheSeer\fDOM\fDOMElement;
 
-    class SourceCollection implements DOMCollectionInterface {
+    class SourceCollection {
 
         /**
          * @var FileInfo
          */
         private $srcDir;
 
+        /**
+         * @var fDOMElement[]
+         */
         private $original = array();
+
+        /**
+         * @var fDOMElement[]
+         */
         private $collection = array();
 
         private $workDom;
 
-        public function __construct($srcDir) {
+        public function __construct(FileInfo $srcDir) {
             $this->srcDir = $srcDir;
             $this->workDom = new fDOMDocument();
-            $this->workDom->registerNamespace('phpdox', 'http://xml.phpdox.net/src#');
+            $this->workDom->registerNamespace('phpdox', 'http://xml.phpdox.net/src');
+            $this->workDom->appendElementNS('http://xml.phpdox.net/src', 'source');
         }
 
         public function import(fDOMDocument $dom) {
-            $dom->registerNamespace('phpdox', 'http://xml.phpdox.net/src#');
+            $dom->registerNamespace('phpdox', 'http://xml.phpdox.net/src');
             $dir = $dom->queryOne('/phpdox:source/phpdox:dir');
             if (!$dir)  {
                 return;
@@ -68,32 +76,41 @@ namespace TheSeer\phpDox\Collector {
             $this->importDirNode($dir, '');
         }
 
-        public function addFile(FileInfo $file) {
-            $node = $this->workDom->createElementNS('http://xml.phpdox.net/src#', 'file');
+        public function addFile(SourceFile $file) {
+            $path = $file->getRealPath();
+            $node = $this->workDom->createElementNS('http://xml.phpdox.net/src', 'file');
             $node->setAttribute('name', basename($file->getBasename()));
             $node->setAttribute('size', $file->getSize());
             $node->setAttribute('time', date('c', $file->getMTime()));
             $node->setAttribute('unixtime', $file->getMTime());
             $node->setAttribute('sha1', sha1_file($file->getPathname()));
+            $this->collection[$path] = $node;
+            $changed = $this->isChanged($path);
+            if (!$changed) {
+                $node->setAttribute('xml', $this->original[$path]->getAttribute('xml'));
+            }
+            return $changed;
+        }
 
-            $relPath = (string)$file->getRelative($this->srcDir);
-            $this->collection[$relPath] = $node;
-            return $this->isChanged($relPath);
+        public function setTokenFileReference(SourceFile $file, $tokenPath) {
+            $path = $file->getRealPath();
+            if (!isset($this->collection[$path])) {
+                throw new SourceCollectionException(
+                    sprintf("File %s not found in collection", $path),
+                    SourceCollectionException::SourceNotFound
+                );
+            }
+            $this->collection[$path]->setAttribute('xml', $tokenPath);
         }
 
         public function removeFile(FileInfo $file) {
-            $relPath = (string)$file->getRelative($this->srcDir);
-            unset($this->collection[$relPath]);
-        }
-
-        public function getChangedFiles() {
-            $list = array();
-            foreach(array_keys($this->collection) as $path) {
-                if ($this->isChanged($path)) {
-                    $list[] = $path;
-                }
+            if (!isset($this->collection[$file->getRealPath()])) {
+                throw new SourceCollectionException(
+                    sprintf("File %s not found in collection", $file->getRealPath()),
+                    SourceCollectionException::SourceNotFound
+                );
             }
-            return $list;
+            unset($this->collection[$file->getRealPath()]);
         }
 
         public function getVanishedFiles() {
@@ -106,46 +123,47 @@ namespace TheSeer\phpDox\Collector {
             return $list;
         }
 
-        public function export() {
-            $dom = $this->workDom;
-            if (sizeof($this->collection) === 0) {
-                if (!$dom->documentElement instanceof fDOMElement) {
-                    $root = $dom->createElementNS('http://xml.phpdox.net/src#', 'source');
-                    $dom->appendChild($root);
-                }
+        public function export($collapse = false) {
+            if (count($this->collection) == 0) {
                 return $this->workDom;
             }
-            if ($dom->documentElement instanceOf fDOMElement) {
-                $dom->removeChild($dom->documentElement);
+
+            $root = $this->workDom->documentElement;
+            while($root->hasChildNodes()) {
+                $root->nodeValue = null;
             }
-            $root = $dom->createElementNS('http://xml.phpdox.net/src#', 'source');
-            $this->workDom->appendChild($root);
-            foreach($this->collection as $path => $file) {
-                $dirs = explode('/', dirname($path));
+
+            foreach ($this->collection as $path => $file) {
+                $pathInfo = new FileInfo($path);
+                $dirs = explode('/', dirname($pathInfo->getRelative($this->srcDir)));
+                $dirs[0] = $this->srcDir->getRealPath();
                 $ctx = $root;
-                foreach($dirs as $dir) {
-                    $node = $ctx->queryOne('phpdox:dir[@name="'. $dir . '"]');
+                foreach ($dirs as $dir) {
+                    $node = $ctx->queryOne('phpdox:dir[@name="' . $dir . '"]');
                     if (!$node) {
-                        $node = $ctx->appendElementNS('http://xml.phpdox.net/src#', 'dir');
+                        $node = $ctx->appendElementNS('http://xml.phpdox.net/src', 'dir');
                         $node->setAttribute('name', $dir);
                     }
                     $ctx = $node;
                 }
-                $ctx->appendChild($this->workDom->importNode($file, true));
+                $ctx->appendChild($this->workDom->importNode($file, TRUE));
             }
 
             $this->collection = array();
-            return $dom;
-        }
 
+            if ($collapse) {
+                $this->collapseDirectory();
+            }
+            return $this->workDom;
+        }
 
         private function importDirNode(fDOMElement $dir, $path) {
             $path .=  $dir->getAttribute('name');
             foreach($dir->query('phpdox:file') as $file) {
                 $this->original[ $path . '/' . $file->getAttribute('name')] = $file;
             }
-            foreach($dir->query('phpdox:dir') as $dir) {
-                $this->importDirNode($dir, $path . '/');
+            foreach($dir->query('phpdox:dir') as $child) {
+                $this->importDirNode($child, $path . '/');
             }
         }
 
@@ -156,6 +174,20 @@ namespace TheSeer\phpDox\Collector {
             $org = $this->original[$path];
             $new = $this->collection[$path];
             return $org->getAttribute('sha1') != $new->getAttribute('sha1');
+        }
+
+        private function collapseDirectory() {
+            $first = $this->workDom->queryOne('/phpdox:source/phpdox:dir');
+            if ($first->query('phpdox:file')->length == 0 &&
+                $first->query('phpdox:dir')->length == 1) {
+                $dir = $first->queryOne('phpdox:dir');
+                foreach($dir->query('*') as $child) {
+                    $first->appendChild($child);
+                }
+                $first->setAttribute('name', $first->getAttribute('name') . '/' . $dir->getAttribute('name'));
+                $first->removeChild($dir);
+                $this->collapseDirectory();
+            }
         }
 
     }

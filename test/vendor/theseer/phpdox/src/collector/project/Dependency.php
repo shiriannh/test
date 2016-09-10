@@ -12,8 +12,8 @@ namespace TheSeer\phpDox\Collector {
 
         public function __construct(fDOMDocument $dom, Project $project) {
             $this->index = $dom;
-            $this->baseDir = dirname($dom->documentURI);
-            $this->index->registerNamespace('phpdox', 'http://xml.phpdox.net/src#');
+            $this->baseDir = dirname(urldecode($dom->documentURI));
+            $this->index->registerNamespace('phpdox', 'http://xml.phpdox.net/src');
             $this->project = $project;
         }
 
@@ -25,7 +25,10 @@ namespace TheSeer\phpDox\Collector {
                     sprintf('//phpdox:namespace[@name="%s"]/*[@name="%s"]', $namespace, $local));
 
             if (!$indexNode) {
-                return;
+                throw new DependencyException(
+                    sprintf("Unit '%s' not found", $name),
+                    DependencyException::UnitNotFound
+                );
             }
 
             $dom = new fDOMDocument();
@@ -49,6 +52,12 @@ namespace TheSeer\phpDox\Collector {
                     $unit->import($dom);
                     $this->project->addClass($unit);
                     break;
+                }
+                default: {
+                    throw new DependencyException(
+                        sprintf("Invalid unit type '%s'", $indexNode->localName),
+                        DependencyException::InvalidUnitType
+                    );
                 }
             }
 

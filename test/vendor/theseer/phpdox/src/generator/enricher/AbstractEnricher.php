@@ -5,8 +5,14 @@ namespace TheSeer\phpDox\Generator\Enricher {
 
     class AbstractEnricher {
 
-        const XMLNS = 'http://xml.phpdox.net/src#';
+        const XMLNS = 'http://xml.phpdox.net/src';
 
+        /**
+         * @param fDOMElement $node
+         * @param             $type
+         *
+         * @return fDOMElement
+         */
         protected function getEnrichtmentContainer(fDOMElement $node, $type) {
             $dom = $node->ownerDocument;
             $container = $node->queryOne('phpdox:enrichments');

@@ -14,6 +14,14 @@ namespace TheSeer\phpDox {
             return $this->toUnix($path);
         }
 
+        /**
+         * @return bool
+         */
+        public function exists() {
+            clearstatcache(true, $this->getPathname());
+            return file_exists($this->getPathname());
+        }
+
         public function asFileUri() {
             $result = $this->getRealPath();
             if ($result[0] != '/') {
@@ -26,9 +34,13 @@ namespace TheSeer\phpDox {
             return $this->toUnix(parent::getPath());
         }
 
-        public function getRelative(\SplFileInfo $relation) {
+        public function getRelative(\SplFileInfo $relation, $inclusive = TRUE) {
             $relPath = $this->getRealPath();
-            $relPath = substr($relPath, strlen(dirname($relation->getRealPath()))+1);
+            $relationPath = $relation->getRealPath();
+            if ($inclusive) {
+                $relationPath = dirname($relationPath);
+            }
+            $relPath = mb_substr($relPath, mb_strlen($relationPath)+1);
             return new FileInfo($relPath);
         }
 
@@ -58,8 +70,4 @@ namespace TheSeer\phpDox {
 
     }
 
-    class FileInfoException extends \Exception {
-        const InvalidPath = 1;
-        const NotImplemented = 2;
-    }
 }

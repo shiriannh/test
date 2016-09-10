@@ -1,6 +1,6 @@
 <?php
     /**
-     * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+     * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
      * All rights reserved.
      *
      * Redistribution and use in source and binary forms, with or without modification,
@@ -36,10 +36,17 @@
      */
 namespace TheSeer\phpDox\Collector {
 
-    use \TheSeer\fDOM\fDOMDocument;
-
     class TraitObject extends AbstractUnitObject {
         protected $rootName = 'trait';
+
+        public function addUser(AbstractUnitObject $unit) {
+            if ($this->getRootNode()->queryOne(sprintf('phpdox:users/phpdox:%s[@full = "%s"]', $unit->getType(), $unit->getName())) !== NULL) {
+                return;
+            }
+            $user = $this->addToContainer('users', $unit->getType());
+            $this->setName($unit->getName(), $user);
+        }
+
     }
 
 }

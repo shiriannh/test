@@ -1,6 +1,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:pdx="http://xml.phpdox.net/src#"
+                xmlns:pdx="http://xml.phpdox.net/src"
                 xmlns:pdxf="http://xml.phpdox.net/functions"
                 exclude-result-prefixes="pdx pdxf">
 
@@ -18,7 +18,11 @@
         <div class="synopsis">
             <xsl:value-of select="local-name($unit)" />&#160;<xsl:value-of select="$unit/@name" />
             <xsl:if test="$unit/pdx:extends">
-                extends <xsl:copy-of select="pdxf:link($unit/pdx:extends, '', $unit/pdx:extends/@name)" />
+                extends <xsl:for-each select="$unit/pdx:extends">
+                    <xsl:copy-of select="pdxf:link(., '', @name)" />
+                    <xsl:if test="position() != last()">, </xsl:if>
+                </xsl:for-each>
+
             </xsl:if>
             <xsl:if test="$unit/pdx:implements">
                 implements
@@ -32,7 +36,10 @@
                 <ul class="none">
                     <li>// constants</li>
                     <xsl:for-each select="$unit/pdx:constant">
-                        <li>const <xsl:value-of select="@name" /> = <xsl:value-of select="@value" />;</li>
+                        <li>const <xsl:value-of select="@name" /> = <xsl:choose>
+                            <xsl:when test="@value = ''"><xsl:value-of select="@constant" /></xsl:when>
+                            <xsl:otherwise><xsl:value-of select="@value" /></xsl:otherwise>
+                        </xsl:choose>;</li>
                     </xsl:for-each>
                 </ul>
             </xsl:if>
@@ -41,21 +48,24 @@
             <ul class="none">
                 <li>// Inherited constants from <xsl:copy-of select="pdxf:link(., '', @name)" /></li>
                 <xsl:for-each select="pdx:constant">
-                    <li>const <a href="#{@name}"><xsl:value-of select="@name" /></a> = <xsl:value-of select="@value" />;</li>
+                    <li>const <a href="#{@name}"><xsl:value-of select="@name" /></a> = <xsl:choose>
+                        <xsl:when test="@value = ''"><xsl:value-of select="@constant" /></xsl:when>
+                        <xsl:otherwise><xsl:value-of select="@value" /></xsl:otherwise>
+                    </xsl:choose>;</li>
                 </xsl:for-each>
             </ul>
             </xsl:for-each>
-
 
             <xsl:if test="$unit/pdx:member">
             <ul class="none">
                 <li>// members</li>
                 <xsl:for-each select="$unit/pdx:member">
                     <li>
-                        <xsl:value-of select="@visibility" />
-                        <xsl:if test="@static = 'true'">&#160;static</xsl:if>
-                        <xsl:if test="pdx:docblock/pdx:var/@type = 'object'">&#160;<span title="{pdx:docblock/pdx:var/pdx:type/@full}"><xsl:value-of select="pdx:docblock/pdx:var/pdx:type/@name" /></span></xsl:if>
-                        &#160;<a href="#members">$<xsl:value-of select="@name" /></a>;
+                        <xsl:value-of select="@visibility" /><xsl:if test="@static = 'true'">&#160;static</xsl:if><xsl:call-template name="vartype" />&#160;<a href="#members">$<xsl:value-of select="@name" /></a><xsl:if test="@default or @constant"> =
+                        <xsl:choose>
+                            <xsl:when test="@default = ''"> <xsl:value-of select="@constant" /></xsl:when>
+                            <xsl:otherwise><xsl:value-of select="@default" /></xsl:otherwise>
+                    </xsl:choose></xsl:if>;
                     </li>
                 </xsl:for-each>
             </ul>
@@ -66,10 +76,7 @@
                     <li>// Inherited members from <span title="{@full}"><xsl:value-of select="@name" /></span></li>
                     <xsl:for-each select="pdx:member">
                         <li>
-                            <xsl:value-of select="@visibility" />
-                            <xsl:if test="@static = 'true'">&#160;static</xsl:if>
-                            <xsl:if test="pdx:docblock/pdx:var/@type = 'object'">&#160;<xsl:value-of select="pdx:docblock/pdx:var/pdx:type/@name" /></xsl:if>
-                            &#160;<a href="#members">$<xsl:value-of select="@name" /></a>;
+                            <xsl:value-of select="@visibility" /><xsl:if test="@static = 'true'">&#160;static</xsl:if><xsl:call-template name="vartype" />&#160;<a href="#members">$<xsl:value-of select="@name" /></a>;
                         </li>
                     </xsl:for-each>
                 </ul>
@@ -90,14 +97,20 @@
             </ul>
             </xsl:if>
 
-            <xsl:for-each select="$unit/pdx:parent[pdx:method[@visibility != 'private']|pdx:constructor[@visibility != 'private']|pdx:destructor[@visibility != 'private']]">
+            <xsl:for-each select="$unit/pdx:parent[pdx:method[@visibility != 'private']|pdx:constructor[@visibility != 'private']|pdx:destructor[@visibility != 'private']]|$unit/pdx:trait[pdx:method]">
                 <xsl:variable name="parent" select="." />
                 <ul class="none">
                     <li>// Inherited methods from <span title="{@full}"><xsl:value-of select="@name" /></span></li>
                     <xsl:for-each select="pdx:constructor[@visibility != 'private']|pdx:destructor[@visibility != 'private']|pdx:method[@visibility != 'private']">
+                        <xsl:variable name="title">
+                            <xsl:choose>
+                                <xsl:when test="@original"><xsl:value-of select="@original" /></xsl:when>
+                                <xsl:otherwise><xsl:value-of select="@name" /></xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:variable>
                         <li>
                             <xsl:value-of select="@visibility" /><xsl:if test="@final = 'true'">&#160;final</xsl:if><xsl:if test="@abstract = 'true'">&#160;abstract</xsl:if><xsl:if test="@static = 'true'">&#160;static</xsl:if>&#160;<xsl:call-template
-                                name="type"><xsl:with-param name="ctx" select="." /></xsl:call-template>&#160;<xsl:copy-of select="pdxf:link($parent, @name, @name)" />()
+                                name="type"><xsl:with-param name="ctx" select="." /></xsl:call-template>&#160;<xsl:copy-of select="pdxf:link($parent, $title, @name)" />()
                         </li>
                     </xsl:for-each>
                 </ul>
@@ -108,5 +121,16 @@
     </xsl:template>
 
     <!-- ######################################################################################################### -->
+
+    <xsl:template name="vartype">
+        <xsl:choose>
+            <xsl:when test="pdx:docblock/pdx:var/@type = 'object'">&#160;<span title="{pdx:docblock/pdx:var/pdx:type/@full}"><xsl:value-of select="pdx:docblock/pdx:var/pdx:type/@name" /></span></xsl:when>
+            <xsl:when test="@type = '{unknown}'">
+                <xsl:if test="pdx:docblock/pdx:var/@type">&#160;<xsl:value-of select="pdx:docblock/pdx:var/@type" /></xsl:if>
+            </xsl:when>
+            <xsl:otherwise>&#160;<xsl:value-of select="@type" /></xsl:otherwise>
+        </xsl:choose>
+
+    </xsl:template>
 
 </xsl:stylesheet>

@@ -7,11 +7,12 @@ namespace TheSeer\phpDox\Generator\Enricher {
     use TheSeer\phpDox\Generator\ClassStartEvent;
     use TheSeer\phpDox\Generator\InterfaceStartEvent;
     use TheSeer\phpDox\Generator\PHPDoxStartEvent;
+    use TheSeer\phpDox\Generator\TokenFileStartEvent;
     use TheSeer\phpDox\Generator\TraitStartEvent;
     use TheSeer\phpDox\Version;
 
-    class Build extends AbstractEnricher implements IndexEnricherInterface,
-        ClassEnricherInterface, TraitEnricherInterface, InterfaceEnricherInterface {
+    class Build extends AbstractEnricher implements StartEnricherInterface,
+        ClassEnricherInterface, TraitEnricherInterface, InterfaceEnricherInterface, TokenFileEnricherInterface {
 
         /**
          * @var array
@@ -23,8 +24,14 @@ namespace TheSeer\phpDox\Generator\Enricher {
          */
         private $buildInfo;
 
+        /**
+         * @var Version
+         */
+        private $version;
+
         public function __construct(EnrichConfig $config) {
             $this->enrichers = array_keys($config->getGeneratorConfig()->getActiveEnrichSources());
+            $this->version = $config->getVersion();
         }
 
         /**
@@ -34,7 +41,7 @@ namespace TheSeer\phpDox\Generator\Enricher {
             return 'Build Information';
         }
 
-        public function enrichIndex(PHPDoxStartEvent $event) {
+        public function enrichStart(PHPDoxStartEvent $event) {
             $this->genericProcess($event->getIndex()->asDom());
         }
 
@@ -48,6 +55,10 @@ namespace TheSeer\phpDox\Generator\Enricher {
 
         public function enrichTrait(TraitStartEvent $event) {
             $this->genericProcess($event->getTrait()->asDom());
+        }
+
+        public function enrichTokenFile(TokenFileStartEvent $event) {
+            $this->genericProcess($event->getTokenFile()->asDom());
         }
 
         private function genericProcess(fDOMDocument $dom) {
@@ -78,9 +89,9 @@ namespace TheSeer\phpDox\Generator\Enricher {
             $phpdoxNode = $dom->createElementNS(self::XMLNS, 'phpdox');
             $this->buildInfo->appendChild($phpdoxNode);
 
-            $phpdoxNode->setAttribute('version', Version::getVersion());
-            $phpdoxNode->setAttribute('info', Version::getInfoString());
-            $phpdoxNode->setAttribute('generated', Version::getGeneratedByString());
+            $phpdoxNode->setAttribute('version', $this->version->getVersion());
+            $phpdoxNode->setAttribute('info', $this->version->getInfoString());
+            $phpdoxNode->setAttribute('generated', $this->version->getGeneratedByString());
             $phpdoxNode->setAttribute('phar', defined('PHPDOX_PHAR') ? 'yes' : 'no');
 
             foreach($this->enrichers as $enricher) {

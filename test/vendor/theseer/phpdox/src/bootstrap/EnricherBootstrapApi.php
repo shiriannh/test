@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -41,8 +41,8 @@ namespace TheSeer\phpDox {
 
     class EnricherBootstrapApi {
 
-        protected $name;
-        protected $factory;
+        private $name;
+        private $factory;
 
         public function __construct($name, EnricherFactory $factory) {
             $this->name = $name;

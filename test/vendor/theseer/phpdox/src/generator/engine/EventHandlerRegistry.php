@@ -4,7 +4,6 @@ namespace TheSeer\phpDox\Generator\Engine {
     class EventHandlerRegistry {
 
         private $events = array(
-            'phpdox.raw' => array(),
             'phpdox.start' => array(),
             'phpdox.end' => array(),
 
@@ -42,7 +41,13 @@ namespace TheSeer\phpDox\Generator\Engine {
             'interface.start' => array(),
             'interface.constant' => array(),
             'interface.method' => array(),
-            'interface.end' => array()
+            'interface.end' => array(),
+
+            'token.file.start' => array(),
+            'token.line.start' => array(),
+            'token.token' => array(),
+            'token.line.end' => array(),
+            'token.file.end' => array()
         );
 
         public function addHandler($eventType, $instance, $method) {

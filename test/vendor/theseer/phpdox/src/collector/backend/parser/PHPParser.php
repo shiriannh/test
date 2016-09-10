@@ -1,6 +1,6 @@
 <?php
     /**
-     * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+     * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
      * All rights reserved.
      *
      * Redistribution and use in source and binary forms, with or without modification,
@@ -37,7 +37,7 @@
 namespace TheSeer\phpDox\Collector\Backend {
 
     use TheSeer\phpDox\Collector\SourceFile;
-    use \TheSeer\phpDox\DocBlock\Parser as DocblockParser;
+    use TheSeer\phpDox\DocBlock\Parser as DocblockParser;
 
     /**
      *
@@ -45,18 +45,18 @@ namespace TheSeer\phpDox\Collector\Backend {
     class PHPParser implements BackendInterface {
 
         /**
-         * @var \PHPParser_Parser
+         * @var \PhpParser\Parser
          */
         private $parser = NULL;
 
         /**
-         * @var \TheSeer\phpDox\DocBlock\Parser
+         * @var DocblockParser
          */
         private $docblockParser = NULL;
 
-        private $traverser = NULL;
-
-
+        /**
+         * @param DocblockParser $parser
+         */
         public function __construct(DocblockParser $parser) {
             $this->docblockParser = $parser;
         }
@@ -70,7 +70,7 @@ namespace TheSeer\phpDox\Collector\Backend {
          */
         public function parse(SourceFile $sourceFile) {
             try {
-                $result = new ParseResult($sourceFile->getFileInfo());
+                $result = new ParseResult($sourceFile);
                 $parser = $this->getParserInstance();
                 $nodes = $parser->parse($sourceFile->getSource());
                 $this->getTraverserInstance($result)->traverse($nodes);
@@ -81,21 +81,23 @@ namespace TheSeer\phpDox\Collector\Backend {
         }
 
         /**
-         * @return \PHPParser_Parser
+         * @return \PhpParser\Parser
          */
         private function getParserInstance() {
             if ($this->parser === NULL) {
-                $this->parser = new \PHPParser_Parser(new OriginalValueLexer());
+                $this->parser = new \PhpParser\Parser(new CustomLexer());
             }
             return $this->parser;
         }
 
         /**
-         * @return \PHPParser_NodeTraverser
+         * @param ParseResult $result
+         *
+         * @return \PhpParser\NodeTraverser
          */
         private function getTraverserInstance(ParseResult $result) {
-            $traverser = new \PHPParser_NodeTraverser();
-            $traverser->addVisitor(new \PHPParser_NodeVisitor_NameResolver());
+            $traverser = new \PhpParser\NodeTraverser();
+            $traverser->addVisitor(new \PhpParser\NodeVisitor\NameResolver());
             $traverser->addVisitor(new UnitCollectingVisitor($this->docblockParser, $result));
             return $traverser;
         }

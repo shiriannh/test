@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -36,39 +36,34 @@
  */
 namespace TheSeer\phpDox\Generator {
 
-    use \TheSeer\fXSL\fXSLTProcessor;
-    use \TheSeer\fDom\fDomElement;
-    use \TheSeer\fDOM\fDOMDocument;
-
-    use \TheSeer\phpDox\Generator\Engine\EngineInterface;
+    use TheSeer\phpDox\Generator\Engine\EngineInterface;
     use TheSeer\phpDox\Generator\Engine\EventHandlerRegistry;
     use TheSeer\phpDox\Generator\Enricher\ClassEnricherInterface;
-    use \TheSeer\phpDox\Generator\Enricher\EnricherInterface;
-    use TheSeer\phpDox\Generator\Enricher\IndexEnricherInterface;
+    use TheSeer\phpDox\Generator\Enricher\EndEnricherInterface;
+    use TheSeer\phpDox\Generator\Enricher\EnricherInterface;
+    use TheSeer\phpDox\Generator\Enricher\StartEnricherInterface;
     use TheSeer\phpDox\Generator\Enricher\InterfaceEnricherInterface;
+    use TheSeer\phpDox\Generator\Enricher\TokenFileEnricherInterface;
     use TheSeer\phpDox\Generator\Enricher\TraitEnricherInterface;
-    use \TheSeer\phpDox\ProgressLogger;
+    use TheSeer\phpDox\ProgressLogger;
 
     class Generator {
 
         /**
-         * @var \TheSeer\phpDox\ProgressLogger
+         * @var ProgressLogger
          */
         private $logger;
 
         /**
          * @var array
          */
-        private $engines = array();
-
-        /**
-         * @var array
-         */
         private $enrichers = array(
-            'phpdox.start'    => array(),
-            'class.start'     => array(),
-            'trait.start'     => array(),
-            'interface.start' => array()
+            'phpdox.start'       => array(),
+            'class.start'        => array(),
+            'trait.start'        => array(),
+            'interface.start'    => array(),
+            'token.file.start'   => array(),
+            'phpdox.end'         => array()
         );
 
         /**
@@ -94,8 +89,8 @@ namespace TheSeer\phpDox\Generator {
         private $handlerRegistry;
 
         /**
-         * @param EventFactory   $factory
-         * @param ProgressLogger $logger
+         * @param ProgressLogger       $logger
+         * @param EventHandlerRegistry $registry
          */
         public function __construct(ProgressLogger $logger, EventHandlerRegistry $registry) {
             $this->logger = $logger;
@@ -113,7 +108,7 @@ namespace TheSeer\phpDox\Generator {
         }
 
         public function addEnricher(EnricherInterface $enricher) {
-            if ($enricher instanceof IndexEnricherInterface) {
+            if ($enricher instanceof StartEnricherInterface) {
                 $this->enrichers['phpdox.start'][] = $enricher;
             }
             if ($enricher instanceof ClassEnricherInterface) {
@@ -124,6 +119,12 @@ namespace TheSeer\phpDox\Generator {
             }
             if ($enricher instanceof TraitEnricherInterface) {
                 $this->enrichers['trait.start'][] = $enricher;
+            }
+            if ($enricher instanceof TokenFileEnricherInterface) {
+                $this->enrichers['token.file.start'][] = $enricher;
+            }
+            if ($enricher instanceof EndEnricherInterface) {
+                $this->enrichers['phpdox.end'][] = $enricher;
             }
         }
 
@@ -142,24 +143,37 @@ namespace TheSeer\phpDox\Generator {
             } else {
                 $this->processGlobalOnly();
             }
+            $this->processTokenFiles($project->getSourceTree());
             $this->handleEvent(new PHPDoxEndEvent($project->getIndex(), $project->getSourceTree()));
             $this->logger->completed();
 
-            $this->logger->log("Triggering raw engines\n");
-            $this->handleEvent(new PHPDoxRawEvent(), FALSE);
+        }
+
+        private function processTokenFiles(SourceTree $sourceTree) {
+            foreach($sourceTree as $tokenFile) {
+                $this->handleEvent(new TokenFileStartEvent($tokenFile));
+                foreach($tokenFile as $sourceLine) {
+                    $this->handleEvent(new TokenLineStartEvent($tokenFile, $sourceLine));
+                    foreach($sourceLine as $token) {
+                        $this->handleEvent(new TokenEvent($sourceLine, $token));
+                    }
+                    $this->handleEvent(new TokenLineEndEvent($tokenFile, $sourceLine));
+                }
+                $this->handleEvent(new TokenFileEndEvent($tokenFile));
+            }
         }
 
         /**
          * @param AbstractEvent $event
          * @param bool          $progress
          */
-        protected function handleEvent(AbstractEvent $event, $progress = TRUE) {
+        private function handleEvent(AbstractEvent $event, $progress = TRUE) {
             $eventType = $event->getType();
             if (isset($this->enrichers[$eventType])) {
                 foreach($this->enrichers[$eventType] as $enricher) {
                     switch($eventType) {
                         case 'phpdox.start': {
-                            $enricher->enrichIndex($event);
+                            $enricher->enrichStart($event);
                             break;
                         }
                         case 'class.start': {
@@ -172,6 +186,14 @@ namespace TheSeer\phpDox\Generator {
                         }
                         case 'trait.start': {
                             $enricher->enrichTrait($event);
+                            break;
+                        }
+                        case 'token.file.start': {
+                            $enricher->enrichTokenFile($event);
+                            break;
+                        }
+                        case 'phpdox.end': {
+                            $enricher->enrichEnd($event);
                             break;
                         }
                     }
@@ -188,7 +210,7 @@ namespace TheSeer\phpDox\Generator {
         /**
          *
          */
-        protected function processGlobalOnly() {
+        private function processGlobalOnly() {
             $classes = $this->project->getClasses();
             $this->handleEvent(new PHPDoxClassesStartEvent($classes));
             foreach($classes as $class) {
@@ -214,7 +236,7 @@ namespace TheSeer\phpDox\Generator {
         /**
          *
          */
-        protected function processWithNamespace() {
+        private function processWithNamespace() {
             $namespaces = $this->project->getNamespaces();
             $this->handleEvent(new PHPDoxNamespacesStartEvent($namespaces));
 
@@ -250,7 +272,7 @@ namespace TheSeer\phpDox\Generator {
         /**
          * @param $class ClassEntry
          */
-        protected function processClass(ClassEntry $entry) {
+        private function processClass(ClassEntry $entry) {
             $class = $entry->getClassObject($this->xmlDir);
             $this->handleEvent(new ClassStartEvent($class));
 
@@ -278,7 +300,7 @@ namespace TheSeer\phpDox\Generator {
         /**
          * @param TraitEntry $traitEntry
          */
-        protected function processTrait(TraitEntry $traitEntry) {
+        private function processTrait(TraitEntry $traitEntry) {
             $trait = $traitEntry->getTraitObject($this->xmlDir);
 
             $this->handleEvent(new TraitStartEvent($trait));
@@ -306,7 +328,7 @@ namespace TheSeer\phpDox\Generator {
         /**
          * @param InterfaceEntry $interface
          */
-        protected function processInterface(InterfaceEntry $interfaceEntry) {
+        private function processInterface(InterfaceEntry $interfaceEntry) {
             $interface = $interfaceEntry->getInterfaceObject($this->xmlDir);
 
             $this->handleEvent(new InterfaceStartEvent($interface));

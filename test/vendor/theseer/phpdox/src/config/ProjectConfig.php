@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -38,37 +38,75 @@
 
 namespace TheSeer\phpDox {
 
-    use TheSeer\fDOM\fDOMDocument;
     use TheSeer\fDOM\fDOMElement;
 
     class ProjectConfig {
 
         /**
+         * @var Version
+         */
+        private $version;
+
+        /**
          * @var fDOMElement;
          */
-        protected $ctx;
+        private $ctx;
+
+        /**
+         * @var FileInfo
+         */
+        private $homeDir;
 
         /**
          * Constructor for global config
          *
          * @param fDOMElement $ctx   Reference to <project> node
          */
-        public function __construct(fDOMElement $ctx) {
+        public function __construct(Version $version, FileInfo $homeDir, fDOMElement $ctx) {
+            $this->version = $version;
+            $this->homeDir = $homeDir;
             $this->ctx = $ctx;
         }
 
+        /**
+         * @return Version
+         */
+        public function getVersion() {
+            return $this->version;
+        }
+
+        /**
+         * @return Fileinfo
+         */
+        public function getHomeDirectory() {
+            return $this->homeDir;
+        }
+
+        /**
+         * @return FileInfo
+         */
         public function getWorkDirectory() {
             return new FileInfo($this->ctx->getAttribute('workdir', 'xml'));
         }
 
+        /**
+         * @return FileInfo
+         */
         public function getSourceDirectory() {
             return new FileInfo($this->ctx->getAttribute('source', 'src'));
         }
 
+        /**
+         * @return bool
+         */
         public function isPublicOnlyMode() {
             return $this->ctx->getAttribute('publiconly', 'false') === 'true';
         }
 
+        /**
+         * @return CollectorConfig
+         * @throws ConfigException
+         */
         public function getCollectorConfig() {
             $colNode = $this->ctx->queryOne('cfg:collector');
             if (!$colNode) {
@@ -77,6 +115,10 @@ namespace TheSeer\phpDox {
             return new CollectorConfig($this, $colNode);
         }
 
+        /**
+         * @return GeneratorConfig
+         * @throws ConfigException
+         */
         public function getGeneratorConfig() {
             $genNode = $this->ctx->queryOne('cfg:generator');
             if (!$genNode) {

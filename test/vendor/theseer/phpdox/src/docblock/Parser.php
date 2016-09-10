@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -42,7 +42,7 @@ namespace TheSeer\phpDox\DocBlock {
         protected $current = null;
         protected $aliasMap = array();
 
-        public function __construct(\TheSeer\phpDox\FactoryInterface $factory) {
+        public function __construct(Factory $factory) {
             $this->factory = $factory;
         }
 
@@ -50,7 +50,7 @@ namespace TheSeer\phpDox\DocBlock {
             $this->aliasMap = $aliasMap;
             $this->current = null;
 
-            $docBlock = $this->factory->getInstanceFor('DocBlock');
+            $docBlock = $this->factory->getDocBlock();
             $lines = $this->prepare($block);
             if (count($lines)>1) {
                 $this->startParser('description');
@@ -92,10 +92,11 @@ namespace TheSeer\phpDox\DocBlock {
         }
 
         protected function prepare($block) {
-            $block = str_replace(array("\r\n", "\r"), "\n", substr($block, 2, -2));
+            $block = str_replace(array("\r\n", "\r"), "\n", mb_substr($block, 3, -2));
             $raw = array();
             foreach(explode("\n", $block) as $line) {
-                $raw[] = substr(trim($line, " \n\t"), 2) ?: '';
+                $line = preg_replace('/^\s*\* ?/', '', $line);
+                $raw[] = rtrim($line, " \n\t*");
             }
             return $raw;
         }

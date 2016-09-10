@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -39,6 +39,7 @@ namespace TheSeer\phpDox\Collector {
     use TheSeer\fDOM\fDOMDocument;
     use TheSeer\fDOM\fDOMElement;
     use TheSeer\phpDox\DocBlock\DocBlock;
+    use TheSeer\phpDox\FileInfo;
 
     /**
      *
@@ -48,7 +49,7 @@ namespace TheSeer\phpDox\Collector {
         /**
          * PHPDOX Namespace
          */
-        const XMLNS = 'http://xml.phpdox.net/src#';
+        const XMLNS = 'http://xml.phpdox.net/src';
 
         /**
          * @var fDOMDocument
@@ -69,7 +70,7 @@ namespace TheSeer\phpDox\Collector {
          * @param string       $name
          * @param \SplFileInfo $file
          */
-        public function __construct($name = NULL, \SplFileInfo $file = NULL) {
+        public function __construct($name = NULL, SourceFile $file = NULL) {
             if ($this->rootName === NULL) {
                 throw new UnitObjectException('No or invalid rootname set', UnitObjectException::InvalidRootname);
             }
@@ -81,24 +82,10 @@ namespace TheSeer\phpDox\Collector {
                 $this->setName($name, $this->rootNode);
             }
             if ($file !== NULL) {
-                $this->setFileHeader($file);
+                $this->rootNode->appendChild($file->asNode($this->rootNode));
             }
             $this->setAbstract(FALSE);
             $this->setFinal(FALSE);
-        }
-
-        /**
-         * @param \SplFileInfo $file
-         */
-        private function setFileHeader(\SplFileInfo $file) {
-            $fileNode = $this->rootNode->appendElementNS(self::XMLNS, 'file');
-            $fileNode->setAttribute('path', $file->getPath());
-            $fileNode->setAttribute('file', $file->getBasename());
-            $fileNode->setAttribute('realpath', $file->getRealPath());
-            $fileNode->setAttribute('size', $file->getSize());
-            $fileNode->setAttribute('time', date('c', $file->getMTime()));
-            $fileNode->setAttribute('unixtime', $file->getMTime());
-            $fileNode->setAttribute('sha1', sha1_file($file->getRealPath()));
         }
 
         /**
@@ -134,6 +121,10 @@ namespace TheSeer\phpDox\Collector {
             $this->dom->registerNamespace('phpdox', self::XMLNS);
         }
 
+        public function getType() {
+            return $this->rootNode->localName;
+        }
+
         /**
          * @return string
          */
@@ -156,14 +147,14 @@ namespace TheSeer\phpDox\Collector {
         }
 
         /**
-         * @return string
+         * @return FileInfo
          */
         public function getSourceFilename() {
             $file = $this->rootNode->queryOne('phpdox:file');
             if (!$file) {
                 return '';
             }
-            return $file->getAttribute('path') . '/' . $file->getAttribute('file');
+            return new FileInfo($file->getAttribute('path') . '/' . $file->getAttribute('file'));
         }
 
         /**
@@ -216,11 +207,8 @@ namespace TheSeer\phpDox\Collector {
         /**
          * @param $name
          */
-        public function setExtends($name) {
-            $extends = $this->rootNode->queryOne('phpdox:extends');
-            if (!$extends) {
-                $extends = $this->rootNode->appendElementNS(self::XMLNS, 'extends');
-            }
+        public function addExtends($name) {
+            $extends = $this->rootNode->appendElementNS(self::XMLNS, 'extends');
             $this->setName($name, $extends);
         }
 
@@ -239,18 +227,21 @@ namespace TheSeer\phpDox\Collector {
             if(!$this->hasExtends()) {
                 throw new UnitObjectException('This unit does not extend any unit', UnitObjectException::NoExtends);
             }
-            return $this->rootNode->queryOne('phpdox:extends')->getAttribute('full');
-
+            $result = array();
+            foreach($this->rootNode->query('phpdox:extends') as $ext) {
+                $result[] = $ext->getAttribute('full');
+            }
+            return $result;
         }
 
         /**
          * @param AbstractUnitObject $unit
          */
         public function addExtender(AbstractUnitObject $unit) {
-            if ($this->rootNode->queryOne(sprintf('phpdox:extender[@full = "%s"]', $unit->getName())) !== NULL) {
+            if ($this->rootNode->queryOne(sprintf('phpdox:extenders/phpdox:*[@full = "%s"]', $unit->getName())) !== NULL) {
                 return;
             }
-            $extender = $this->rootNode->appendElementNS(self::XMLNS, 'extender');
+            $extender = $this->addToContainer('extenders', 'extender');
             $this->setName($unit->getName(), $extender);
         }
 
@@ -285,6 +276,83 @@ namespace TheSeer\phpDox\Collector {
         }
 
         /**
+         * @return bool
+         */
+        public function usesTraits() {
+            return $this->rootNode->query('phpdox:uses')->length > 0;
+        }
+
+        /**
+         * @param $name
+         *
+         * @return bool
+         */
+        public function usesTtrait($name) {
+            return $this->rootNode->query(sprintf('phpdox:uses[@full="%s"]', $name))->length > 0;
+        }
+
+        /**
+         * @param string $name
+         *
+         * @return TraitUseObject
+         */
+        public function addTrait($name) {
+            $traituse = new TraitUseObject($this->rootNode->appendElementNS(self::XMLNS, 'uses'));
+            $traituse->setName($name);
+            return $traituse;
+        }
+
+        /**
+         * @return array
+         * @throws UnitObjectException
+         */
+        public function getUsedTraits() {
+            if (!$this->usesTraits()) {
+                throw new UnitObjectException('This unit does not use any traits', UnitObjectException::NoTraitsUsed);
+            }
+            $result = array();
+            foreach($this->rootNode->query('phpdox:uses') as $trait) {
+                $result[] = $trait->getAttribute('full');
+            }
+            return $result;
+        }
+
+        /**
+         * @param $name
+         *
+         * @return TraitUseObject
+         * @throws UnitObjectException
+         */
+        public function getTraitUse($name) {
+            $node = $this->rootNode->queryOne(
+                sprintf('phpdox:uses[@full="%s"]', $name)
+            );
+            if (!$node) {
+                throw new UnitObjectException(
+                    sprintf('Trait "%s" not used', $name),
+                    UnitObjectException::NoSuchTrait
+                );
+            }
+            return new TraitUseObject($node);
+        }
+
+        /**
+         * @param string $dependency
+         */
+        public function markDependencyAsUnresolved($dependency) {
+            $depNode = $this->rootNode->queryOne(
+                sprintf('//phpdox:implements[@full="%1$s"]|//phpdox:extends[@full="%1$s"]|//phpdox:uses[@full="%1$s"]', $dependency)
+            );
+            if (!$depNode) {
+                throw new UnitObjectException(
+                    sprintf('No dependency "%s" found in unit %s', $dependency, $this->getName()),
+                    UnitObjectException::NoSuchDependency
+                );
+            }
+            $depNode->setAttribute('unresolved', 'true');
+        }
+
+        /**
          *
          */
         public function addMethod($name) {
@@ -302,19 +370,19 @@ namespace TheSeer\phpDox\Collector {
                 default:
                     $nodeName = 'method';
             }
-            $method = new MethodObject($this->rootNode->appendElementNS(self::XMLNS, $nodeName));
+            $method = new MethodObject($this, $this->rootNode->appendElementNS(self::XMLNS, $nodeName));
             $method->setName($name);
             return $method;
         }
 
         /**
-         * @return array MethodObject
+         * @return MethodObject[]
          */
         public function getExportedMethods() {
             $result = array();
             $xpath = '(phpdox:constructor|phpdox:destructor|phpdox:method)[@visibility="public" or @visibility="protected"]';
             foreach($this->rootNode->query($xpath) as $node) {
-                $result[] = new MethodObject($node);
+                $result[] = new MethodObject($this, $node);
             }
             return $result;
         }
@@ -366,13 +434,6 @@ namespace TheSeer\phpDox\Collector {
         }
 
         /**
-         *
-         */
-        public function markInterfaceMethods() {
-
-        }
-
-        /**
          * @param AbstractUnitObject $unit
          */
         public function importExports(AbstractUnitObject $unit, $container = 'parent') {
@@ -384,12 +445,28 @@ namespace TheSeer\phpDox\Collector {
 
             $parent = $this->rootNode->appendElementNS( self::XMLNS, $container);
             $parent->setAttribute('full', $unit->getName());
-            $parent->setAttribute('namepsace', $unit->getNamespace());
+            $parent->setAttribute('namespace', $unit->getNamespace());
             $parent->setAttribute('name', $unit->getLocalName());
 
             if ($unit->hasExtends()) {
-                $extends = $parent->appendElementNS( self::XMLNS, 'extends');
-                $this->setName($unit->getExtends(), $extends);
+                foreach($unit->getExtends() as $name) {
+                    $extends = $parent->appendElementNS( self::XMLNS, 'extends');
+                    $this->setName($name, $extends);
+                }
+            }
+
+            if ($unit->hasImplements()) {
+                foreach($unit->getImplements() as $name) {
+                    $implements = $parent->appendElementNS( self::XMLNS, 'implements');
+                    $this->setName($name, $implements);
+                }
+            }
+
+            if ($unit->usesTraits()) {
+                foreach($unit->getUsedTraits() as $name) {
+                    $uses = $parent->appendElementNS( self::XMLNS, 'uses');
+                    $this->setName($name, $uses);
+                }
             }
 
             foreach($unit->getConstants() as $constant) {
@@ -397,36 +474,126 @@ namespace TheSeer\phpDox\Collector {
             }
 
             foreach($unit->getExportedMembers() as $member) {
-                $parent->appendChild( $this->dom->importNode($member->export(), TRUE) );
+                $memberNode = $this->dom->importNode($member->export(), TRUE);
+                $this->adjustStaticResolution($memberNode);
+                $parent->appendChild($memberNode);
             }
 
             foreach($unit->getExportedMethods() as $method) {
-                $parent->appendChild( $this->dom->importNode($method->export(), TRUE) );
+                $methodNode = $this->dom->importNode($method->export(), TRUE);
+                $this->adjustStaticResolution($methodNode);
+                $parent->appendChild( $methodNode );
+                if ($this->hasMethod($method->getName())) {
+                    $unitMethod = $this->getMethod($method->getName());
+                    if ($unitMethod->hasInheritDoc()) {
+                        $unitMethod->inhertDocBlock($method);
+                    }
+                }
+            }
+        }
+
+        public function importTraitExports(AbstractUnitObject $trait, TraitUseObject $use) {
+
+            $container = $this->rootNode->queryOne(
+                sprintf(
+                    'phpdox:trait[@full="%s"]',
+                    $trait->getName()
+                )
+            );
+            if ($container instanceof fDOMElement) {
+                $container->parentNode->removeChild($container);
+            }
+
+            $container = $this->rootNode->appendElementNS( self::XMLNS, 'trait');
+            $this->setName($trait->getName(), $container);
+
+            if ($trait->hasExtends()) {
+                foreach($trait->getExtends() as $name) {
+                    $extends = $container->appendElementNS( self::XMLNS, 'extends');
+                    $this->setName($name, $extends);
+                }
+            }
+
+            foreach($trait->getConstants() as $constant) {
+                $container->appendChild( $this->dom->importNode($constant->export(), TRUE) );
+            }
+
+            foreach($trait->getExportedMembers() as $member) {
+                $memberNode = $this->dom->importNode($member->export(), TRUE);
+                $this->adjustStaticResolution($memberNode);
+                $container->appendChild($memberNode);
+            }
+
+            foreach($trait->getExportedMethods() as $method) {
+                $methodName = $method->getName();
+                $methodNode = $this->dom->importNode($method->export(), TRUE);
+
+                if (!$use->isExcluded($methodName)) {
+                    $container->appendChild($methodNode);
+                }
+
+                $this->adjustStaticResolution($methodNode);
+
+                $aliasNode = NULL;
+                if ($use->isAliased($methodName)) {
+                    $aliasNode = $methodNode->cloneNode(true);
+                    $aliasNode->setAttribute('original', $aliasNode->getAttribute('name'));
+                    $aliasNode->setAttribute('name', $use->getAliasedName($methodName));
+                    if ($use->hasAliasedModifier($methodName)) {
+                        $aliasNode->setAttribute('visibility', $use->getAliasedModifier($methodName));
+                    }
+                    $container->appendChild($aliasNode);
+                }
             }
 
         }
 
-    }
+        private function hasMethod($name) {
+            return $this->dom->query(
+                sprintf('phpdox:method[@name="%s"]', $name)
+            )->length > 0;
+        }
 
-    /**
-     *
-     */
-    class UnitObjectException extends \Exception {
+        private function getMethod($name) {
+            $ctx = $this->dom->queryOne(
+                sprintf('phpdox:method[@name="%s"]', $name)
+            );
+            if (!$ctx) {
+                throw new UnitObjectException(
+                    sprintf('Method "%s" not found', $name),
+                    UnitObjectException::NoSuchMethod
+                );
+            }
+            return new MethodObject($this, $ctx);
+        }
+
+        private function adjustStaticResolution(fDOMElement $ctx) {
+            $container = $ctx->queryOne('.//phpdox:docblock/phpdox:return|.//phpdox:docblock/phpdox:var');
+            if (!$container || $container->getAttribute('resolution') !== 'static') {
+                return;
+            }
+            $type = $container->queryOne('phpdox:type');
+            if (!$type) {
+                return;
+            }
+            foreach(array('full','namespace','name') as $attribute) {
+                $type->setAttribute($attribute, $this->rootNode->getAttribute($attribute));
+            }
+        }
 
         /**
+         * @param $containerName
+         * @param $elementName
          *
+         * @return fDOMElement
          */
-        const InvalidRootname = 1;
-
-        /**
-         *
-         */
-        const NoExtends = 2;
-
-        /**
-         *
-         */
-        const NoImplements = 3;
+        protected function addToContainer($containerName, $elementName) {
+            $container = $this->rootNode->queryOne('phpdox:' . $containerName);
+            if (!$container) {
+                $container = $this->rootNode->appendElementNS(self::XMLNS, $containerName);
+            }
+            return $container->appendElementNS(self::XMLNS, $elementName);
+        }
 
     }
 

@@ -1,6 +1,6 @@
 <?php
     /**
-     * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+     * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
      * All rights reserved.
      *
      * Redistribution and use in source and binary forms, with or without modification,
@@ -36,6 +36,7 @@
      */
 namespace TheSeer\phpDox\Collector\Backend {
 
+    use TheSeer\fDOM\fDOMDocument;
     use TheSeer\phpDox\Collector\TraitObject;
     use TheSeer\phpDox\Collector\InterfaceObject;
     use TheSeer\phpDox\Collector\ClassObject;
@@ -51,17 +52,17 @@ namespace TheSeer\phpDox\Collector\Backend {
         private $file;
 
         /**
-         * @var array
+         * @var ClassObject[]
          */
         private $classes = array();
 
         /**
-         * @var array
+         * @var InterfaceObject[]
          */
         private $interfaces  = array();
 
         /**
-         * @var array
+         * @var TraitObject[]
          */
         private $traits  = array();
 
@@ -128,21 +129,21 @@ namespace TheSeer\phpDox\Collector\Backend {
         }
 
         /**
-         * @return array
+         * @return ClassObject[]
          */
         public function getClasses() {
             return $this->classes;
         }
 
         /**
-         * @return array
+         * @return InterfaceObject[]
          */
         public function getInterfaces() {
             return $this->interfaces;
         }
 
         /**
-         * @return array
+         * @return TraitObject[]
          */
         public function getTraits() {
             return $this->traits;

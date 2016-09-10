@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -34,7 +34,6 @@ namespace TheSeer\phpDox {
 
     use TheSeer\DirectoryScanner\DirectoryScanner;
     use TheSeer\phpDox\Collector\InheritanceResolver;
-    use \Theseer\DirectoryScanner\IncludeExcludeFilterIterator as Scanner;
     use TheSeer\phpDox\Generator\Enricher\EnricherException;
 
     /**
@@ -43,42 +42,28 @@ namespace TheSeer\phpDox {
      * @author     Arne Blankerts <arne@blankerts.de>
      * @copyright  Arne Blankerts <arne@blankerts.de>, All rights reserved.
      * @license    BSD License
-     * @link       http://phpDox.de
+     * @link       http://phpDox.net
      */
     class Application {
 
         /**
          * Logger for progress and error reporting
          *
-         * @var Logger
+         * @var ProgressLogger
          */
-        protected $logger;
-
-        /**
-         * Helper class wrapping container DOMDocuments
-         *
-         * @var Container
-         */
-        protected $container = NULL;
+        private $logger;
 
         /**
          * Factory instance
          * @var Factory
          */
-        protected $factory;
-
-        /**
-         * Map for builder names to generators and configs
-         *
-         * @var array
-         */
-        protected $builderMap = array();
+        private $factory;
 
         /**
          * Constructor of PHPDox Application
          *
          * @param Factory   $factory   Factory instance
-         * @param ProgressLogger $logger Instance of the ProgressLogger class
+         * @param ProgressLogger $logger Instance of the SilentProgressLogger class
          */
         public function __construct(Factory $factory, ProgressLogger $logger) {
             $this->factory = $factory;
@@ -88,22 +73,33 @@ namespace TheSeer\phpDox {
         /**
          * Run Bootstrap code for given list of bootstrap files
          *
-         * @param array $requires
+         * @param FileInfoCollection $requires
          *
          * @return Bootstrap
          */
-        public function runBootstrap(array $requires) {
-            $bootstrap = $this->factory->getInstanceFor('Bootstrap');
-            $bootstrap->load($requires);
+        public function runBootstrap(FileInfoCollection $requires) {
+            $bootstrap = $this->factory->getBootstrap();
+            $bootstrap->load($requires, true);
             return $bootstrap;
+        }
+
+
+        public function runConfigChangeDetection(FileInfo $workDirectory, FileInfo $configFile) {
+            $index = new FileInfo( (string)$workDirectory . '/index.xml');
+            if (!$index->exists() || ($index->getMTime() >= $configFile->getMTime())) {
+                return;
+            }
+            $this->logger->log("Configuration change detected - cleaning cache");
+            $cleaner = $this->factory->getDirectoryCleaner();
+            $cleaner->process($workDirectory);
         }
 
         /**
          * Run collection process on given directory tree
          *
-         * @param CollectorConfig  $config     Configuration options
-         * @param Scanner          $scanner    A Directory scanner iterator for files/dirs to process
+         * @param CollectorConfig $config Configuration options
          *
+         * @throws ApplicationException
          * @return void
          */
         public function runCollector(CollectorConfig $config) {
@@ -116,24 +112,14 @@ namespace TheSeer\phpDox {
                     ApplicationException::InvalidSrcDirectory
                 );
             }
-            $xmlDir = $config->getWorkDirectory();
 
-            /** @var $scanner DirectoryScanner */
-            $scanner = $this->factory->getInstanceFor(
-                    'Scanner',
-                    $config->getIncludeMasks(),
-                    $config->getExcludeMasks()
+            $collector = $this->factory->getCollector($config);
+
+            $scanner = $this->factory->getScanner(
+                $config->getIncludeMasks(),
+                $config->getExcludeMasks()
             );
-            $scanner->setFlag(\FilesystemIterator::UNIX_PATHS);
-
-            $collector = $this->factory->getInstanceFor('Collector',
-                $srcDir,
-                $xmlDir,
-                $config->isPublicOnlyMode()
-            );
-
-            $backend =  $this->factory->getInstanceFor('BackendFactory')->getInstanceFor($config->getBackend());
-            $project = $collector->run($scanner, $backend);
+            $project = $collector->run($scanner);
 
             if ($collector->hasParseErrors()) {
                 $this->logger->log('The following file(s) had errors during processing and were excluded:');
@@ -142,7 +128,9 @@ namespace TheSeer\phpDox {
                 }
             }
 
-            $this->logger->log("Saving results to directory '{$xmlDir}'");
+            $this->logger->log(
+                sprintf("Saving results to directory '%s'", $config->getWorkDirectory())
+            );
             $vanished = $project->cleanVanishedFiles();
             if (count($vanished) > 0) {
                 $this->logger->log(sprintf("Removed %d vanished file(s) from project:", count($vanished)));
@@ -153,7 +141,7 @@ namespace TheSeer\phpDox {
             $changed = $project->save();
             if ($config->doResolveInheritance()) {
                 /** @var $resolver InheritanceResolver */
-                $resolver = $this->factory->getInstanceFor('InheritanceResolver');
+                $resolver = $this->factory->getInheritanceResolver();
                 $resolver->resolve($changed, $project, $config->getInheritanceConfig());
 
                 if ($resolver->hasUnresolved()) {
@@ -172,14 +160,17 @@ namespace TheSeer\phpDox {
         /**
          * Run Documentation generation process
          *
+         * @param GeneratorConfig $config
+         *
+         * @throws ApplicationException
          * @return void
          */
         public function runGenerator(GeneratorConfig $config) {
             $this->logger->reset();
             $this->logger->log("Starting generator");
 
-            $engineFactory = $this->factory->getInstanceFor('EngineFactory');
-            $enricherFactory = $this->factory->getInstanceFor('EnricherFactory');
+            $engineFactory = $this->factory->getEngineFactory();
+            $enricherFactory = $this->factory->getEnricherFactory();
 
             $failed = array_diff($config->getRequiredEngines(), $engineFactory->getEngineList());
             if (count($failed)) {
@@ -193,7 +184,7 @@ namespace TheSeer\phpDox {
                 throw new ApplicationException("The enricher(s) '$list' is/are not registered", ApplicationException::UnknownEnricher);
             }
 
-            $generator = $this->factory->getInstanceFor('Generator');
+            $generator = $this->factory->getGenerator();
 
             foreach($config->getActiveBuilds() as $buildCfg) {
                 $generator->addEngine( $engineFactory->getInstanceFor($buildCfg) );
@@ -253,11 +244,4 @@ namespace TheSeer\phpDox {
 
     }
 
-    class ApplicationException extends \Exception {
-        const InvalidSrcDirectory = 1;
-        const UnknownEngine = 2;
-        const UnknownEnricher = 3;
-        const IndexMissing = 4;
-        const SourceMissing = 5;
-    }
 }

@@ -1,6 +1,6 @@
 <?php
     /**
-     * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+     * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
      * All rights reserved.
      *
      * Redistribution and use in source and binary forms, with or without modification,
@@ -45,7 +45,7 @@ namespace TheSeer\phpDox\Collector {
      */
     abstract class AbstractVariableObject {
 
-        const XMLNS = 'http://xml.phpdox.net/src#';
+        const XMLNS = 'http://xml.phpdox.net/src';
 
         /**
          * @var \TheSeer\fDOM\fDOMElement
@@ -106,11 +106,15 @@ namespace TheSeer\phpDox\Collector {
             $this->ctx->setAttribute('default', $value);
         }
 
+        public function setConstant($const) {
+            $this->ctx->setAttribute('constant', $const);
+        }
+
         /**
          * @param $type
          */
         public function setType($type) {
-            if (!in_array(strtolower($type), $this->types)) {
+            if (!in_array(mb_strtolower($type), $this->types)) {
                 $parts = explode('\\', $type);
                 $local = array_pop($parts);
                 $namespace = join('\\', $parts);

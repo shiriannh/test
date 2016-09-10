@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -45,7 +45,7 @@ namespace TheSeer\phpDox\DocBlock {
                 do {
                     $line = array_shift($buffer);
                     $compact .= ' ' . $line;
-                } while ($line != '' && substr($line, -1) != '.');
+                } while ($line != '' && mb_substr($line, -1) != '.');
             }
             $obj = $this->buildObject('generic', $buffer);
             $obj->setCompact(trim($compact, " *\t"));

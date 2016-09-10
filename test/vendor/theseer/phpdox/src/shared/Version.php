@@ -1,6 +1,6 @@
 <?php
-    /**
-     * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+/**
+     * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
      * All rights reserved.
      *
      * Redistribution and use in source and binary forms, with or without modification,
@@ -39,32 +39,56 @@ namespace TheSeer\phpDox {
 
     class Version {
 
-        private static $version = NULL;
+        /**
+         * @var string
+         */
+        private $release;
 
-        public static function getVersion() {
-            if (self::$version === NULL) {
-                self::$version = PHPDOX_VERSION;
-                if (PHPDOX_VERSION == '%development%') {
-                    $cwd = getcwd();
-                    chdir(__DIR__);
-                    $git = exec('command -p git describe --always --dirty 2>/dev/null', $foo, $rc);
-                    chdir($cwd);
-                    if ($rc === 0) {
-                        self::$version = $git;
-                    }
-                }
+        /**
+         * @var string
+         */
+        private $version = NULL;
+
+        public function __construct($release) {
+            $this->release = $release;
+        }
+
+        public function __toString() {
+            return $this->getInfoString();
+        }
+
+        /**
+         * @return string
+         */
+        public function getVersion() {
+            if ($this->version == NULL) {
+                $this->version = $this->initialize();
             }
-            return self::$version;
+            return $this->version;
         }
 
-        public static function getInfoString() {
-            return 'phpDox ' . self::getVersion() . " - Copyright (C) 2010 - " . date('Y') . " by Arne Blankerts";
+        public function getInfoString() {
+            return 'phpDox ' . $this->getVersion() . " - Copyright (C) 2010 - " . date('Y') . " by Arne Blankerts";
         }
 
-        public static function getGeneratedByString() {
-            return 'Generated using ' . self::getInfoString();
+        public function getGeneratedByString() {
+            return 'Generated using ' . $this->getInfoString();
         }
 
+        private function initialize() {
+            if (!is_dir(__DIR__ . '/../../.git')) {
+                return $this->release;
+            }
+            $dir = getcwd();
+            chdir(__DIR__);
+
+            $devNull = strtolower(substr(PHP_OS, 0, 3)) == 'win' ? 'NUL' : '/dev/null';
+            $git = exec('command -p git describe --always --dirty 2>'.$devNull, $foo, $rc);
+            chdir($dir);
+            if ($rc === 0) {
+                return $git;
+            }
+            return $this->release;
+        }
     }
-
 }

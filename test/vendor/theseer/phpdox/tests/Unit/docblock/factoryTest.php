@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2011 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -48,13 +48,19 @@ namespace TheSeer\phpDox\Tests\Unit\DocBlock {
      */
     class FactoryTest extends \PHPUnit_Framework_TestCase {
 
+        private $factory;
+
+        protected function setUp() {
+            $this->factory = new Factory();
+        }
+
         /**
          * @covers TheSeer\phpDox\DocBlock\Factory::addParserFactory
          */
         public function testAddParserFactory() {
-            $factory = new Factory();
-            $factory->addParserFactory('Tux', $factory);
-            $this->assertAttributeContains($factory, 'parserMap', $factory);
+            $mock = $this->getMock('TheSeer\\phpdox\\FactoryInterface');
+            $this->factory->addParserFactory('Tux', $mock);
+            $this->assertAttributeContains($mock, 'parserMap', $this->factory);
         }
 
         /**
@@ -62,17 +68,16 @@ namespace TheSeer\phpDox\Tests\Unit\DocBlock {
          * @covers TheSeer\phpDox\DocBlock\Factory::addParserFactory
          */
         public function testAddParserFactoryExpectingFactoryException() {
-            $factory = new Factory();
-            $factory->addParserFactory(array(), $factory);
+            $mock = $this->getMock('TheSeer\\phpdox\\FactoryInterface');
+            $this->factory->addParserFactory(array(), $mock);
         }
 
         /**
          * @covers TheSeer\phpDox\DocBlock\Factory::addParserClass
          */
         public function testAddParserClass() {
-            $factory = new Factory();
-            $factory->addParserClass('Tux', 'Gnu');
-            $this->assertAttributeContains('Gnu', 'parserMap', $factory);
+            $this->factory->addParserClass('Tux', 'Gnu');
+            $this->assertAttributeContains('Gnu', 'parserMap', $this->factory);
         }
 
         /**
@@ -81,52 +86,47 @@ namespace TheSeer\phpDox\Tests\Unit\DocBlock {
          * @covers TheSeer\phpDox\DocBlock\Factory::addParserClass
          */
         public function testAddParserClassExpectingFactoryException($annotation, $classname) {
-            $factory = new Factory();
-            $factory->addParserClass($annotation, $classname);
+            $this->factory->addParserClass($annotation, $classname);
         }
 
         /**
-         * @covers TheSeer\phpDox\DocBlock\Factory::getInstanceFor
+         * @covers TheSeer\phpDox\DocBlock\Factory::getDocBlock
          * @uses TheSeer\phpDox\DocBlock\DocBlock
          */
         public function testGetInstanceForDocBlock() {
             $factory = new Factory();
             $this->assertInstanceOf(
                 'TheSeer\\phpDox\\DocBlock\\DocBlock',
-                $factory->getInstanceFor('DocBlock')
+                $factory->getDocBlock()
             );
         }
 
         /**
-         * @covers TheSeer\phpDox\DocBlock\Factory::getInstanceFor
+         * @covers TheSeer\phpDox\DocBlock\Factory::getInlineProcessor
          * @uses TheSeer\phpDox\DocBlock\InlineProcessor
          */
         public function testGetInstanceForInlineProcessor() {
             $factory = new Factory();
             $this->assertInstanceOf(
                 'TheSeer\\phpDox\\DocBlock\\InlineProcessor',
-                $factory->getInstanceFor('InlineProcessor', new fDOMDocument()));
+                $factory->getInlineProcessor(new fDOMDocument()));
         }
 
         /**
-         * @expectedException \TheSeer\phpDox\DocBlock\FactoryException
-         * @covers TheSeer\phpDox\DocBlock\Factory::getInstanceFor
+         * @covers TheSeer\phpDox\DocBlock\Factory::getParserInstanceFor
+         * @uses TheSeer\phpDox\DocBlock\GenericParser
          */
-        public function testGetInstanceForExpectingFactoryException() {
+        public function testGetParserInstanceForUnknownNameReturnsGenericParser() {
             $factory = new Factory();
-            $factory->getInstanceFor('invalid Parser');
+            $this->assertInstanceOf(
+                'TheSeer\\phpDox\\DocBlock\\GenericParser',
+                $factory->getParserInstanceFor('Unknown Name Parser')
+            );
         }
 
         /*********************************************************************/
         /* Dataprovider                                                      */
         /*********************************************************************/
-
-        public static function verifyTypeClassDataprovider() {
-            return array(
-                'Invalid type' => array(42, 'string'),
-                'unknown type' => array(42, 'integer'),
-            );
-        }
 
         public static function addParserClassDataprovider() {
             return array(

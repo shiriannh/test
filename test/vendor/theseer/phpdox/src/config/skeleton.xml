@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--  This is a skeleton phpDox config file - Check http://phpDox.de for latest version and more info -->
-<phpdox xmlns="http://phpdox.net/config" silent="false">
+<phpdox xmlns="http://xml.phpdox.net/config" silent="false">
     <!--  @silent: true | false to enable or disable visual output of progress -->
 
-    <!-- Additional bootstrap files to load for additional parsers and/or engines -->
+    <!-- Additional bootstrap files to load for additional parsers, enrichers and/or engines -->
     <!-- Place as many require nodes as you feel like in this container -->
     <!-- syntax: <require file="/path/to/file.php" /> -->
     <bootstrap />
@@ -34,10 +34,11 @@
 
          -->
 
-        <!--  Additional configuration for the collecting process (parse of php code, generation of xml data) -->
-        <collector publiconly="false" backend="parser">
+        <!--  Additional configuration for the collecting process (parsing of php code, generation of xml data) -->
+        <collector publiconly="false" backend="parser" encoding="auto">
             <!--  @publiconly - Flag to disable/enable processing of non public methods and members -->
             <!--  @backend    - The collector backend to use, currently only shipping with 'parser' -->
+            <!--  @encoding   - Charset encoding of source files (overwrite default 'auto' if detection fails) -->
 
             <!--  <include / exclude filter for filelist generator, mask must follow fnmatch() requirements  -->
             <include mask="*.php" />
@@ -63,28 +64,51 @@
             <enrich base="${basedir}/build">
                 <!-- @base - (Base-)Directory of datafiles used for enrich process -->
 
-                <!-- add build information - this should always be enabled -->
-                <source type="build" />
+                <!--<source type="...">-->
+                <!-- @type - the handler for the enrichment -->
+                <!--         known types by default are: build, checkstyle, git, phpcs, phploc, phpunit, pmd -->
+
+                <!-- every enrichment source can have additional configuration nodes, most probably need a logfile -->
+                <!-- <file name="path/to/log.xml" /> -->
+                <!--</source> -->
 
                 <!-- add phploc output -->
-                <!-- <source type="phploc" /> -->
+                <!--
+                <source type="phploc" />
+                -->
 
-                <!-- add git vcs information -->
-                <!--<source type="git" /> -->
+                <!-- git vcs information -->
+                <!--
+                <source type="git">
+                    <git binary="/usr/bin/git" />
+                    <history enabled="true" limit="15" cache="${phpDox.project.workdir}/gitlog.xml" />
+                </source>
+                -->
 
-                <!-- enrichment source -->
-                <!--<source type="checkstyle">-->
-                    <!-- @type - the handler for the enrichment -->
-                    <!--         known types by default are: checkstyle, pmd, clover, phpunit -->
-
-                    <!-- every enrichment source can have additional configuration nodes, most probably need a logfile -->
-                    <!-- <file name="logs/checkstyle.xml" /> -->
-                <!--</source> -->
+                <!-- PHP Code Sniffer findings -->
+                <!--
+                <source type="phpcs">
+                    <file name="logs/phpcs.xml" />
+                </source>
+                -->
 
                 <!-- PHPMessDetector -->
                 <!--
                 <source type="pmd">
                     <file name="pmd.xml" />
+                </source>
+                -->
+
+                <!-- PHPUnit Coverage XML -->
+                <!-- <source type="phpunit">  -->
+                    <!-- <coverage path="" /> -->
+                    <!--           @path - the directory where the xml code coverage report can be found -->
+                    <!--<filter directory="${phpDox.project.source}" />-->
+                    <!-- @directory - path of the phpunit config whitelist filter directory -->
+                <!--</source>-->
+                <!--
+                <source type="phpunit">
+                    <filter directory="${phpDox.project.source}" />
                 </source>
                 -->
 

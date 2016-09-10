@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -34,22 +34,30 @@
  * @copyright  Arne Blankerts <arne@blankerts.de>, All rights reserved.
  * @license    BSD License
  */
-
 namespace TheSeer\phpDox\Generator\Engine {
 
     class HtmlConfig extends \TheSeer\phpDox\BuildConfig {
 
         public function getTemplateDirectory() {
-            if (PHPDOX_VERSION == '%development%' || defined('PHPDOX_PHAR')) {
-                $default = __DIR__ . '/../../../../templates/html';
-            } else {
-                $default = __DIR__ . '/../../../templates/html';
-            }
+            $default = $this->getGeneratorConfig()->getProjectConfig()->getHomeDirectory()->getPathname();
+            $default .= '/templates/html';
             $node = $this->ctx->queryOne('cfg:template');
             if (!$node) {
                 return $default;
             }
+            if ($node->hasAttribute('path')) {
+                return $node->getAttribute('path', $default);
+            }
             return $node->getAttribute('dir', $default);
+        }
+
+        public function getResourceDirectory() {
+            $default = $this->getTemplateDirectory() . '/static';
+            $node = $this->ctx->queryOne('cfg:resource');
+            if (!$node) {
+                return $default;
+            }
+            return $node->getAttribute('path', $default);
         }
 
         public function getFileExtension() {

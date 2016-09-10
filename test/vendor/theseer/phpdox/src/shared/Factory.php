@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -37,168 +37,127 @@
  */
 namespace TheSeer\phpDox {
 
+    use TheSeer\DirectoryScanner\DirectoryScanner;
+    use TheSeer\phpDox\Collector\Collector;
     use TheSeer\phpDox\Collector\InheritanceResolver;
+    use TheSeer\phpDox\Collector\Project;
     use TheSeer\phpDox\Generator\Engine\EventHandlerRegistry;
     use TheSeer\phpDox\Generator\Generator;
-    use TheSeer\phpDox\Collector\Collector;
-    use TheSeer\phpDox\Collector\ClassBuilder;
 
     /**
      *
      */
-    class Factory implements FactoryInterface {
+    class Factory {
+
+        /**
+         * @var FileInfo
+         */
+        private $homeDir;
+
+        /**
+         * @var Version
+         */
+        private $version;
 
         /**
          * @var array
          */
-        protected $map = array(
-            'DirectoryScanner' => '\\TheSeer\\DirectoryScanner\\DirectoryScanner',
-            'ErrorHandler' => '\\TheSeer\\phpDox\\ErrorHandler',
-            'ConfigLoader' => '\\TheSeer\\phpDox\\ConfigLoader'
-        );
+        private $instances = array();
 
         /**
-         * @var array
+         * @var bool
          */
-        protected $loggerMap = array(
-            'silent' => '\\TheSeer\\phpDox\\ProgressLogger',
-            'shell' => '\\TheSeer\\phpDox\\ShellProgressLogger'
-        );
-
-        /**
-         * @var array
-         */
-        protected $instances = array();
-
-        /**
-         * @var
-         */
-        protected $config;
-
-        /**
-         * @var string
-         */
-        protected $loggerType = 'shell';
-
-        /**
-         * @var
-         */
-        protected $logger;
+        private $isSilentMode = false;
 
         /**
          * @param array $map
          */
-        public function __construct(array $map = NULL) {
-            if ($map !== NULL) {
-                $this->map = $map;
-            }
+        public function __construct(FileInfo $home, Version $version) {
+            $this->homeDir = $home;
+            $this->version = $version;
+        }
+
+        public function activateSilentMode() {
+            $this->isSilentMode = true;
         }
 
         /**
-         * @param string $name
-         * @throws FactoryException
+         * @return ErrorHandler
          */
-        public function setLoggerType($name) {
-            if (!isset($this->loggerMap[$name])) {
-                throw new FactoryException("No logger class for type '$name'", FactoryException::NoClassDefined);
-            }
-            $this->loggerType = $name;
-        }
-
-        /**
-         * @param string           $name
-         * @param FactoryInterface $factory
-         */
-        public function addFactory($name, FactoryInterface $factory) {
-            $this->map[$name] = $factory;
-        }
-
-        /**
-         * @param string $name
-         * @param string $class
-         */
-        public function addClass($name, $class) {
-            $this->map[$name] = $class;
-        }
-
-        /**
-         * @param string $name
-         * @return mixed|object
-         */
-        public function getInstanceFor($name) {
-            $params = func_get_args();
-            if (isset($this->map[$name])) {
-                if ($this->map[$name] instanceof FactoryInterface) {
-                    return call_user_func_array( array($this->map[$name], 'getInstanceFor'), $params);
-                }
-                if (is_string($this->map[$name])) {
-                    array_shift($params);
-                    return $this->getGenericInstance($this->map[$name], $params);
-                }
-            }
-            $method = 'get'.$name;
-            array_shift($params);
-            if (method_exists($this, $method)) {
-                return call_user_func_array(array($this, $method), $params);
-            }
-            return $this->getGenericInstance($name, $params);
-        }
-
-        /**
-         * @param string $class
-         * @param array $params
-         * @return object
-         * @throws FactoryException
-         */
-        protected function getGenericInstance($class, array $params) {
-            $rfc = new \ReflectionClass($class);
-            if (!$rfc->isInstantiable()) {
-                throw new FactoryException("class '$class' is not instantiable", FactoryException::NotInstantiable);
-            }
-            if (count($params)==0) {
-                return new $class();
-            }
-            if (!$rfc->getConstructor()) {
-               throw new FactoryException("class '$class' does not have a constructor but constructor parameters given", FactoryException::NoConstructor);
-            }
-            return $rfc->newInstanceArgs($params);
+        public function getErrorHandler() {
+            return new ErrorHandler($this->version);
         }
 
         /**
          * @return CLI
          */
-        protected function getCLI() {
-            return new CLI($this);
+        public function getCLI() {
+            return new CLI(new Environment(), $this->version, $this);
+        }
+
+        /**
+         * @return ConfigLoader
+         */
+        public function getConfigLoader() {
+            return new ConfigLoader($this->version, $this->homeDir);
+        }
+
+        public function getConfigSkeleton() {
+            return new ConfigSkeleton(
+                new FileInfo(__DIR__ . '/../config/skeleton.xml')
+            );
+        }
+
+        /**
+         * @return DirectoryScanner
+         */
+        private function getDirectoryScanner() {
+            return new DirectoryScanner();
+        }
+
+        /**
+         * @return DirectoryCleaner
+         */
+        public function getDirectoryCleaner() {
+            return new DirectoryCleaner();
         }
 
         /**
          * @return BootstrapApi
          */
-        protected function getBootstrapApi() {
+        private function getBootstrapApi() {
             return new BootstrapApi($this->getBackendFactory(), $this->getDocblockFactory(), $this->getEnricherFactory(), $this->getEngineFactory(), $this->getLogger());
         }
 
         /**
-         * @return mixed
+         * @return ProgressLogger
          */
-        protected function getLogger() {
-            if (!$this->logger) {
-                $this->logger = new $this->loggerMap[$this->loggerType]();
+        public function getLogger() {
+            if (!isset($this->instances['logger'])) {
+                $this->instances['logger'] = $this->isSilentMode ? $this->getSilentProgressLogger() : $this->getShellProgressLogger();
             }
-            return $this->logger;
+            return $this->instances['logger'];
+        }
+
+        private function getSilentProgressLogger() {
+            return new SilentProgressLogger();
+        }
+
+        private function getShellProgressLogger() {
+            return new ShellProgressLogger();
         }
 
         /**
          * @return Bootstrap
          */
-        protected function getBootstrap() {
+        public function getBootstrap() {
             return new Bootstrap($this->getLogger(), $this->getBootstrapApi());
         }
 
         /**
          * @return Application
          */
-        protected function getApplication() {
+        public function getApplication() {
             return new Application($this, $this->getLogger());
         }
 
@@ -207,8 +166,8 @@ namespace TheSeer\phpDox {
          * @param string|array $exclude
          * @return mixed|object
          */
-        protected function getScanner($include, $exclude = NULL) {
-            $scanner = $this->getInstanceFor('DirectoryScanner');
+        public function getScanner($include, $exclude = NULL) {
+            $scanner = $this->getDirectoryScanner();
 
             if (is_array($include)) {
                 $scanner->setIncludes($include);
@@ -223,38 +182,48 @@ namespace TheSeer\phpDox {
                     $scanner->addExclude($exclude);
                 }
             }
+            $scanner->setFlag(\FilesystemIterator::UNIX_PATHS);
+
             return $scanner;
         }
 
         /**
-         * @param FileInfo $srcDir
-         * @param FileInfo $xmlDir
-         * @return Collector\Collector
+         * @param CollectorConfig $config
+         *
+         * @return Collector
          */
-        protected function getCollector($srcDir, $xmlDir) {
-            return new Collector($this->getLogger(), new \TheSeer\phpDox\Collector\Project($srcDir, $xmlDir));
+        public function getCollector(CollectorConfig $config) {
+            return new Collector(
+                $this->getLogger(),
+                new Project(
+                    $config->getSourceDirectory(),
+                    $config->getWorkDirectory()
+                ),
+                $this->getBackendFactory()->getInstanceFor($config->getBackend()),
+                $config->getFileEncoding()
+            );
         }
 
         /**
          * @return InheritanceResolver
          */
-        protected function getInheritanceResolver() {
+        public function getInheritanceResolver() {
             return new \TheSeer\phpDox\Collector\InheritanceResolver($this->getLogger());
         }
 
         /**
          * @return Generator
          */
-        protected function getGenerator() {
+        public function getGenerator() {
             return new Generator($this->getLogger(), new EventHandlerRegistry());
         }
 
         /**
-         * @return mixed
+         * @return \TheSeer\phpDox\DocBlock\Factory
          */
-        protected function getDocblockFactory() {
+        public function getDocblockFactory() {
             if (!isset($this->instances['DocblockFactory'])) {
-                $this->instances['DocblockFactory'] = new \TheSeer\phpDox\DocBlock\Factory();
+                $this->instances['DocblockFactory'] = new \TheSeer\phpDox\DocBlock\Factory($this);
             }
             return $this->instances['DocblockFactory'];
         }
@@ -262,7 +231,7 @@ namespace TheSeer\phpDox {
         /**
          * @return mixed
          */
-        protected function getBackendFactory() {
+        public function getBackendFactory() {
             if (!isset($this->instances['BackendFactory'])) {
                 $this->instances['BackendFactory'] = new \TheSeer\phpDox\Collector\Backend\Factory($this);
             }
@@ -272,7 +241,7 @@ namespace TheSeer\phpDox {
         /**
          * @return mixed
          */
-        protected function getEngineFactory() {
+        public function getEngineFactory() {
             if (!isset($this->instances['EngineFactory'])) {
                 $this->instances['EngineFactory'] = new \TheSeer\phpDox\Generator\Engine\Factory();
             }
@@ -282,7 +251,7 @@ namespace TheSeer\phpDox {
         /**
          * @return Generator\Enricher\Factory
          */
-        protected function getEnricherFactory() {
+        public function getEnricherFactory() {
             if (!isset($this->instances['EnricherFactory'])) {
                 $this->instances['EnricherFactory'] = new \TheSeer\phpDox\Generator\Enricher\Factory();
             }
@@ -293,32 +262,13 @@ namespace TheSeer\phpDox {
         /**
          * @return mixed
          */
-        protected function getDocblockParser() {
+        public function getDocblockParser() {
             if (!isset($this->instances['DocblockParser'])) {
                 $this->instances['DocblockParser'] = new \TheSeer\phpDox\DocBlock\Parser($this->getDocblockFactory());
             }
             return $this->instances['DocblockParser'];
         }
 
-    }
-
-    /**
-     *
-     */
-    class FactoryException extends \Exception {
-
-        /**
-         *
-         */
-        const NoClassDefined = 1;
-        /**
-         *
-         */
-        const NotInstantiable = 2;
-        /**
-         *
-         */
-        const NoConstructor = 3;
     }
 
 }

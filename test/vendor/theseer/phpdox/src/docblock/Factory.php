@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -36,11 +36,12 @@
  */
 namespace TheSeer\phpDox\DocBlock {
 
-    use \TheSeer\phpDox\FactoryInterface;
+    use TheSeer\fDOM\fDOMDocument;
+    use TheSeer\phpDox\FactoryInterface;
 
-    class Factory implements FactoryInterface {
+    class Factory {
 
-        protected $parserMap = array(
+        private $parserMap = array(
             'invalid' => 'TheSeer\\phpDox\\DocBlock\\InvalidParser',
             'generic' => 'TheSeer\\phpDox\\DocBlock\\GenericParser',
 
@@ -51,10 +52,12 @@ namespace TheSeer\phpDox\DocBlock {
             'throws' => 'TheSeer\\phpDox\\DocBlock\\VarParser',
             'license' => 'TheSeer\\phpDox\\DocBlock\\LicenseParser',
 
-            'internal' => 'TheSeer\\phpDox\\DocBlock\\InternalParser'
+            'internal' => 'TheSeer\\phpDox\\DocBlock\\InternalParser',
+            'inheritdoc' => 'TheSeer\\phpDox\\DocBlock\\InheritdocParser'
         );
 
-        protected $elementMap = array(
+        private $elementMap = array(
+            'inheritdoc' => 'TheSeer\\phpDox\\DocBlock\\InheritdocAttribute',
             'invalid' => 'TheSeer\\phpDox\\DocBlock\\InvalidElement',
             'generic' => 'TheSeer\\phpDox\\DocBlock\\GenericElement',
             'var' => 'TheSeer\\phpDox\\DocBlock\\VarElement'
@@ -64,11 +67,12 @@ namespace TheSeer\phpDox\DocBlock {
          * Register a parser factory.
          *
          * @param string $annotation Identifier of the parser within the registry.
-         * @param \TheSeer\phpDox\FactoryInterface $factory Instance of the factory to be registered.
+         * @param \TheSeer\phpDox\FactoryInterface|string $factory Instance of FactoryInterface to be registered or FQCN
+         *        of the object to be created.
          *
-         * @throws FactoryException in case either one or both arguments are not of type string.
+         * @throws FactoryException in case $annotation is not a string.
          */
-        public function addParserFactory($annotation, FactoryInterface $factory) {
+        public function addParserFactory($annotation, $factory) {
             $this->verifyType($annotation);
             $this->parserMap[$annotation] = $factory;
         }
@@ -85,19 +89,12 @@ namespace TheSeer\phpDox\DocBlock {
             $this->parserMap[$annotation] = $classname;
         }
 
-        public function getInstanceFor($name) {
-            switch ($name) {
-                case 'DocBlock': {
-                    return new DocBlock();
-                }
-                case 'InlineProcessor': {
-                    $args = func_get_args();
-                    return new InlineProcessor($this, $args[1]);
-                }
-                default: {
-                    throw new FactoryException("No class defined for name '$name'", FactoryException::UnkownClass);
-                }
-            }
+        public function getDocBlock() {
+            return new DocBlock();
+        }
+
+        public function getInlineProcessor(fDOMDocument $dom) {
+            return new InlineProcessor($this, $dom);
         }
 
         public function getElementInstanceFor($name, $annotation = null) {
@@ -134,7 +131,7 @@ namespace TheSeer\phpDox\DocBlock {
          */
         protected function verifyType($item, $type = 'string') {
             $match = true;
-            switch (strtolower($type)) {
+            switch (mb_strtolower($type)) {
                 case 'string': {
                     if (!is_string($item)) {
                         $match = false;
@@ -152,12 +149,6 @@ namespace TheSeer\phpDox\DocBlock {
             }
         }
 
-    }
-
-    class FactoryException extends \Exception {
-        const UnkownClass = 1;
-        const InvalidType = 2;
-        const UnknownType = 3;
     }
 
 }

@@ -43,29 +43,33 @@ namespace TheSeer\phpDox\Tests\Integration\DocBlock {
     /**
      * Class ParserTest
      *
-     * @uses TheSeer\phpDox\DocBlock\Factory
-     * @covers TheSeer\phpDox\DocBlock\Parser
+     * @ uses TheSeer\phpDox\DocBlock\Factory
+     * @ covers TheSeer\phpDox\DocBlock\Parser
      */
-    class ParserTest extends \TheSeer\phpDox\Tests\phpDox_TestCase {
+    class ParserTest extends \PHPUnit_Framework_TestCase {
 
         /**
-         * @covers TheSeer\phpDox\DocBlock\Parser::__construct
-         * @covers TheSeer\phpDox\DocBlock\Parser::parse
+         * @ covers TheSeer\phpDox\DocBlock\Parser::__construct
+         * @ covers TheSeer\phpDox\DocBlock\Parser::parse
          *
          * @dataProvider docblockSources
          */
         public function testParse($src) {
-            $dom = new fDOMDocument();
+            $expected = new fDOMDocument();
             $dir = __DIR__.'/../../data/docbock/';
             $block = file_get_contents($dir . $src);
-            $expected = file_get_contents($dir . $src . '.xml');
+            $expected->load($dir . $src . '.xml');
 
             $factory = new Factory();
             $parser = new Parser($factory);
             $result = $parser->parse($block, array());
 
             $this->assertInstanceOf('TheSeer\\phpDox\\DocBlock\\DocBlock', $result);
-            $this->assertEquals($expected, $dom->saveXML($result->asDom($dom)));
+
+            $dom = new fDOMDocument();
+            $dom->appendChild($result->asDom($dom));
+
+            $this->assertEquals($expected->documentElement, $dom->documentElement);
         }
 
         public function docblockSources() {

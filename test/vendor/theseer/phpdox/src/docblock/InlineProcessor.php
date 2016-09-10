@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -85,8 +85,8 @@ namespace TheSeer\phpDox\DocBlock {
                 return $this->dom->createTextNode('{');
             }
             $parts = preg_split("/[\s,]+/", $match, 2, PREG_SPLIT_NO_EMPTY);
-            $annotation = substr($parts[0], 1);
-            if (preg_match('=a-Z0-9=', $annotation)) {
+            $annotation = mb_substr($parts[0], 1);
+            if (preg_match('=^[a-zA-Z0-9]*$=', $annotation)) {
                 $parser = $this->factory->getParserInstanceFor($annotation);
             } else {
                 $parser = $this->factory->getParserInstanceFor('invalid', $annotation);

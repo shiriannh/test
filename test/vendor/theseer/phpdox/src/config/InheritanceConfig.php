@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -54,15 +54,8 @@ namespace TheSeer\phpDox {
          * @return array
          */
         public function getDependencyDirectories() {
-
-            if (defined('PHPDOX_VERSION') && constant('PHPDOX_VERSION')=='%development%') {
-                $home = realpath(__DIR__.'/../../');
-            } else if (defined('PHPDOX_PHAR')) {
-                $home = 'phar://' . constant('PHPDOX_PHAR');
-            } else {
-                $home = realpath(__DIR__.'/../');
-            }
-            $default = new FileInfo($home . '/dependencies/php');
+            $home = $this->config->getProjectConfig()->getHomeDirectory();
+            $default = new FileInfo($home->getPathname() . '/dependencies/php');
             $list = array($default);
             if (!$this->ctx) {
                 return $list;

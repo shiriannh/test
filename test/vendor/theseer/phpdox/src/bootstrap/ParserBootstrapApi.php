@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -41,8 +41,8 @@ namespace TheSeer\phpDox {
 
     class ParserBootstrapApi {
 
-        protected $annotation;
-        protected $factory;
+        private $annotation;
+        private $factory;
 
         public function __construct($annotation, DocBlockFactory $factory) {
             $this->annotation = $annotation;

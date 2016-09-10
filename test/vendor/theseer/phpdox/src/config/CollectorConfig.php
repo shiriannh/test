@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -50,6 +50,10 @@ namespace TheSeer\phpDox {
             $this->ctx = $ctx;
         }
 
+        public function getProjectConfig() {
+            return $this->project;
+        }
+
         public function getBackend() {
             if ($this->ctx->hasAttribute('backend')) {
                 return $this->ctx->getAttribute('backend', 'parser');
@@ -69,6 +73,13 @@ namespace TheSeer\phpDox {
          */
         public function getSourceDirectory() {
             return $this->project->getSourceDirectory();
+        }
+
+        /**
+         * @return string
+         */
+        public function getFileEncoding() {
+            return $this->ctx->getAttribute('encoding', 'auto');
         }
 
         public function isPublicOnlyMode() {

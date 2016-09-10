@@ -1,13 +1,20 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:pdx="http://xml.phpdox.net/src#"
+                xmlns:pdx="http://xml.phpdox.net/src"
                 xmlns:pdxf="http://xml.phpdox.net/functions"
-                exclude-result-prefixes="pdx pdxf">
+                xmlns:git="http://xml.phpdox.net/gitlog"
+                exclude-result-prefixes="pdx pdxf git">
 
     <xsl:param name="base" select="''" />
     <xsl:param name="xml" select="''" />
     <xsl:param name="extension" select="'xhtml'" />
     <xsl:param name="project" select="'phpDox generated Project'" />
+
+    <xsl:param name="hasNamespaces" select="'N'" />
+    <xsl:param name="hasInterfaces" select="'N'" />
+    <xsl:param name="hasTraits" select="'N'" />
+    <xsl:param name="hasClasses" select="'N'" />
+    <xsl:param name="hasReports" select="'N'" />
 
     <!-- ######################################################################################################### -->
 
@@ -17,7 +24,7 @@
         <head>
             <title>phpDox - <xsl:value-of select="$title" /></title>
             <link rel="stylesheet" type="text/css" href="{$base}css/style.css" media="screen" />
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         </head>
 
     </xsl:template>
@@ -25,28 +32,29 @@
     <!-- ######################################################################################################### -->
 
     <xsl:template name="nav">
-        <xsl:variable name="index" select="document(concat($xml,'index.xml'), .)/pdx:index" />
         <nav class="topnav">
             <ul>
                 <li>
                     <div class="logo"><span>/**</span>phpDox</div>
                 </li>
                 <li class="separator"><a href="{$base}index.{$extension}">Overview</a></li>
-                <xsl:if test="count($index/pdx:namespace) &gt; 1">
+                <xsl:if test="$hasNamespaces = 'Y'">
                     <li class="separator"><a href="{$base}namespaces.{$extension}">Namespaces</a></li>
                 </xsl:if>
-                <xsl:if test="count($index//pdx:interface) &gt; 0">
+                <xsl:if test="$hasInterfaces = 'Y'">
                     <li><a href="{$base}interfaces.{$extension}">Interfaces</a></li>
                 </xsl:if>
-                <xsl:if test="count($index//pdx:class) &gt; 0">
+                <xsl:if test="$hasClasses = 'Y'">
                     <li><a href="{$base}classes.{$extension}">Classes</a></li>
                 </xsl:if>
-                <xsl:if test="count($index//pdx:trait) &gt; 0">
+                <xsl:if test="$hasTraits = 'Y'">
                     <li><a href="{$base}traits.{$extension}">Traits</a></li>
                 </xsl:if>
-                <li class="separator"><a href="{$base}reports.{$extension}">Reports</a></li>
+                <li class="separator"><a href="{$base}source/index.{$extension}">Source</a></li>
+                <!--<li class="separator"><a href="{$base}reports/index.{$extension}">Reports</a></li>-->
             </ul>
         </nav>
+
     </xsl:template>
 
     <!-- ######################################################################################################### -->
@@ -86,14 +94,16 @@
             <xsl:if test="$unit/pdx:extends">
                 <h4>Extends</h4>
                 <ul>
-                    <li><a href="{$base}{$dir}/{translate($unit/pdx:extends/@full, '\', '_')}.{$extension}"><xsl:value-of select="$unit/pdx:extends/@full" /></a></li>
+                    <xsl:for-each select="$unit/pdx:extends">
+                        <li><xsl:copy-of select="pdxf:link(., '', @full)" /></li>
+                    </xsl:for-each>
                 </ul>
             </xsl:if>
             <xsl:if test="$unit/pdx:extender">
                 <h4>Extended by</h4>
                 <ul>
-                    <xsl:for-each select="$unit/pdx:extender">
-                        <li><a href="{$base}{$dir}/{translate(@full, '\', '_')}.{$extension}"><xsl:value-of select="@full" /></a></li>
+                    <xsl:for-each select="$unit/pdx:extender/*">
+                        <li><xsl:copy-of select="pdxf:link(., '', @full)" /></li>
                     </xsl:for-each>
                 </ul>
             </xsl:if>
@@ -101,7 +111,7 @@
                 <h4>Uses</h4>
                 <ul>
                     <xsl:for-each select="$unit/pdx:uses">
-                        <li><a href="{$base}traits/{translate(@full, '\', '_')}.{$extension}"><xsl:value-of select="@full" /></a></li>
+                        <li><xsl:copy-of select="pdxf:link(., '', @full)" /></li>
                     </xsl:for-each>
                 </ul>
             </xsl:if>
@@ -109,7 +119,7 @@
                 <h4>Implements</h4>
                 <ul>
                     <xsl:for-each select="$unit/pdx:implements">
-                        <li><a href="{$base}interfaces/{translate(@full, '\', '_')}.{$extension}"><xsl:value-of select="@full" /></a></li>
+                        <li><xsl:copy-of select="pdxf:link(., '', @full)" /></li>
                     </xsl:for-each>
                 </ul>
             </xsl:if>
@@ -117,30 +127,19 @@
                 <h4>Implemented by</h4>
                 <ul>
                     <xsl:for-each select="$unit/pdx:implementor">
-                        <li><a href="{$base}classes/{translate(@full, '\', '_')}.{$extension}"><xsl:value-of select="@full" /></a></li>
+                        <li><xsl:copy-of select="pdxf:link(., '', @full)" /></li>
+                    </xsl:for-each>
+                </ul>
+            </xsl:if>
+            <xsl:if test="$unit/pdx:users">
+                <h4>Used by</h4>
+                <ul>
+                    <xsl:for-each select="$unit/pdx:users/*">
+                        <li><xsl:copy-of select="pdxf:link(., '', @full)" /></li>
                     </xsl:for-each>
                 </ul>
             </xsl:if>
         </div>
-    </xsl:template>
-
-    <!-- ######################################################################################################### -->
-
-    <xsl:template name="coverage">
-        <xsl:param name="ctx" select="$unit" />
-
-        <table class="styled">
-            <tr>
-                <td>Methods</td>
-                <td class="percent">90.91%</td>
-                <td class="nummeric">10 / 11</td>
-            </tr>
-            <tr>
-                <td>Lines</td>
-                <td class="percent">96.43%</td>
-                <td class="nummeric">54 / 56</td>
-            </tr>
-        </table>
     </xsl:template>
 
     <!-- ######################################################################################################### -->
@@ -164,7 +163,7 @@
                     <xsl:for-each select="$ctx/pdx:enrichment[@type='pmd']/pdx:violation">
                         <xsl:sort data-type="number" select="@beginline" order="ascending" />
                         <tr>
-                            <td>
+                            <td class="line">
                                 <xsl:choose>
                                     <xsl:when test="@beginline = @endline"><xsl:value-of select="@beginline" /></xsl:when>
                                     <xsl:otherwise><xsl:value-of select="@beginline" /> - <xsl:value-of select="@endline" /></xsl:otherwise>
@@ -190,7 +189,7 @@
                     <xsl:for-each select="$ctx/pdx:enrichment[@type='checkstyle']/pdx:*">
                         <xsl:sort data-type="number" select="@line" order="ascending" />
                         <tr>
-                            <td><xsl:value-of select="@line" /></td>
+                            <td class="line"><xsl:value-of select="@line" /></td>
                             <td><xsl:value-of select="@column" /></td>
                             <td><span title="{@source}"><xsl:value-of select="local-name(.)" /></span></td>
                             <td><xsl:value-of select="@message" /></td>
@@ -206,11 +205,10 @@
 
     <xsl:template name="tasks">
         <xsl:param name="ctx" select="$unit" />
-
         <table class="styled">
             <thead>
                 <tr>
-                    <th>Line</th>
+                    <th style="width:3em;">Line</th>
                     <th>Task</th>
                 </tr>
             </thead>
@@ -243,7 +241,10 @@
                 <xsl:for-each select="//pdx:constant">
                     <tr>
                         <td id="{@name}"><xsl:value-of select="@name" /></td>
-                        <td><xsl:value-of select="@value" /></td>
+                        <td><xsl:choose>
+                            <xsl:when test="@value = ''"><xsl:value-of select="@constant" /></xsl:when>
+                            <xsl:otherwise><xsl:value-of select="@value" /></xsl:otherwise>
+                        </xsl:choose></td>
                     </tr>
                 </xsl:for-each>
             </tbody>
@@ -293,7 +294,8 @@
                 —
                 <xsl:choose>
                     <xsl:when test="pdx:docblock/pdx:var/@type = 'object'">
-                        <a href="#"><xsl:value-of select="pdx:docblock/pdx:var/pdx:type/@full" /></a>
+                        <xsl:variable name="ctx" select="pdx:docblock/pdx:var/pdx:type" />
+                        <xsl:copy-of select="pdxf:link($ctx, '', $ctx/@full)" />
                     </xsl:when>
                     <xsl:otherwise><xsl:value-of select="pdx:docblock/pdx:var/@type" /></xsl:otherwise>
                 </xsl:choose>
@@ -365,7 +367,13 @@
 
     <xsl:template name="method-li">
         <li id="{@name}">
-            <xsl:copy-of select="pdxf:link(parent::*[1], @name, concat(@name, '()'))" />
+            <xsl:variable name="title">
+            <xsl:choose>
+                <xsl:when test="@original"><xsl:value-of select="@original" /></xsl:when>
+                <xsl:otherwise><xsl:value-of select="@name" /></xsl:otherwise>
+            </xsl:choose>
+            </xsl:variable>
+            <xsl:copy-of select="pdxf:link(parent::*[1], $title, concat(@name, '()'))" />
             <xsl:if test="pdx:docblock/pdx:description/@compact != ''">
                 — <xsl:value-of select="pdx:docblock/pdx:description/@compact" />
             </xsl:if>
@@ -377,8 +385,9 @@
     <xsl:template name="inheritedMethods">
         <xsl:param name="ctx" />
 
-        <xsl:if test="$ctx/pdx:extends">
-            <xsl:variable name="parent" select="$unit/pdx:parent[@full = $ctx/pdx:extends/@full]" />
+        <xsl:for-each select="//pdx:parent|$unit//pdx:trait">
+            <xsl:variable name="parent" select="." />
+
             <xsl:if test="count($parent/pdx:method) > 0">
                 <h3>Inherited from <xsl:copy-of select="pdxf:link($parent, '', $parent/@full)" /></h3>
             </xsl:if>
@@ -406,11 +415,7 @@
                     </xsl:for-each>
                 </ul>
             </xsl:if>
-
-            <xsl:call-template name="inheritedMethods">
-                <xsl:with-param name="ctx" select="$parent" />
-            </xsl:call-template>
-        </xsl:if>
+        </xsl:for-each>
     </xsl:template>
 
     <!-- ######################################################################################################### -->
@@ -428,21 +433,20 @@
 
     <xsl:template name="git-history">
         <ul class="styled history">
-        <xsl:for-each select="//pdx:enrichment[@type = 'git']/pdx:commit">
-            <xsl:sort data-type="number" select="pdx:commiter/@unixtime" order="descending" />
+        <xsl:for-each select="//pdx:enrichment[@type = 'git']/git:commit">
+            <xsl:sort data-type="number" select="git:commiter/@unixtime" order="descending" />
             <li>
-                <h3><xsl:value-of select="pdx:commiter/@time" /> (commit #<span title="{@sha1}"><xsl:value-of select="substring(@sha1,0,8)" /></span>)</h3>
+                <h3><xsl:value-of select="git:commiter/@time" /> (commit #<span title="{@sha1}"><xsl:value-of select="substring(@sha1,0,8)" /></span>)</h3>
                 <div>
                     <p>
-                        Author: <xsl:value-of select="pdx:author/@name" /> (<xsl:value-of select="pdx:author/@email" />) /
-                        Commiter: <xsl:value-of select="pdx:commiter/@name" /> (<xsl:value-of select="pdx:author/@email" />)
+                        Author: <xsl:value-of select="git:author/@name" /> (<xsl:value-of select="git:author/@email" />) /
+                        Commiter: <xsl:value-of select="git:commiter/@name" /> (<xsl:value-of select="git:author/@email" />)
                     </p>
-                    <pre><xsl:value-of select="pdx:message" /></pre>
+                    <pre class="wrapped"><xsl:value-of select="git:message" /></pre>
                 </div>
             </li>
         </xsl:for-each>
         </ul>
     </xsl:template>
-
 
 </xsl:stylesheet>

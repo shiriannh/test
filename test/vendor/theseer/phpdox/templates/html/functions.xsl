@@ -14,6 +14,11 @@
             <xsl:choose>
                 <xsl:when test="local-name($ctx) = 'implements'">interfaces</xsl:when>
                 <xsl:when test="local-name($ctx) = 'uses'">traits</xsl:when>
+                <xsl:when test="local-name($ctx) = 'interface'">interfaces</xsl:when>
+
+                <xsl:when test="local-name($ctx) = 'interface'">interfaces</xsl:when>
+                <xsl:when test="local-name($ctx) = 'trait'">traits</xsl:when>
+                <xsl:when test="local-name($ctx) = 'class'">classes</xsl:when>
 
                 <xsl:when test="local-name($unit) = 'interface'">interfaces</xsl:when>
                 <xsl:when test="local-name($unit) = 'class'">classes</xsl:when>
@@ -36,7 +41,12 @@
             </xsl:choose>
         </xsl:variable>
 
-        <func:result><a title="{$ctx/@full}" href="{$link}"><xsl:value-of select="$text" /></a></func:result>
+        <func:result>
+            <xsl:choose>
+                <xsl:when test="$ctx/@unresolved = 'true'"><xsl:value-of select="$text" /></xsl:when>
+                <xsl:otherwise><a title="{$ctx/@full}" href="{$link}"><xsl:value-of select="$text" /></a></xsl:otherwise>
+            </xsl:choose>
+        </func:result>
     </func:function>
 
     <func:function name="pdxf:nl2br">
@@ -54,6 +64,43 @@
             </xsl:choose>
             </xsl:variable>
             <func:result><xsl:copy-of select="$format" /></func:result>
+    </func:function>
+
+    <func:function name="pdxf:format-number">
+        <xsl:param name="value"/>
+        <xsl:param name="format">0.##</xsl:param>
+            <func:result>
+                <xsl:choose>
+                <xsl:when test="string(number($value))='NaN'">
+                    <xsl:value-of select="format-number(0, $format)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="format-number($value, $format)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </func:result>
+    </func:function>
+
+    <func:function name="pdxf:filesize">
+        <xsl:param name="bytes" />
+
+        <func:result>
+            <xsl:choose>
+                <xsl:when test="floor($bytes div 1024) = 0">
+                    <xsl:value-of select="$bytes"/> Bytes
+                </xsl:when>
+
+                <xsl:when test="floor($bytes div 1048576) = 0">
+                    <xsl:value-of select="format-number(($bytes div 1024), '0.0')"/> KB
+                </xsl:when>
+
+                <xsl:otherwise>
+                    <xsl:value-of select="format-number(($bytes div 1048576), '0.00')"/> MB
+                </xsl:otherwise>
+
+            </xsl:choose>
+        </func:result>
+
     </func:function>
 
 </xsl:stylesheet>

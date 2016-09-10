@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -39,6 +39,8 @@ namespace TheSeer\phpDox\Generator\Engine {
 
     use TheSeer\fDOM\fDOMDocument;
     use TheSeer\fXSL\fXSLTProcessor;
+    use TheSeer\phpDox\DirectoryCleaner;
+    use TheSeer\phpDox\FileInfo;
 
     abstract class AbstractEngine implements EngineInterface {
 
@@ -46,24 +48,21 @@ namespace TheSeer\phpDox\Generator\Engine {
             $tpl = new fDomDocument();
             $tpl->load($template);
             $xsl = new fXSLTProcessor($tpl);
-
-            /*
-            $service = new fXSLCallback('phpdox:service','ps');
-            $service->setObject($this->factory->getInstanceFor('Service', $this));
-            $xsl->registerCallback($service);
-            */
-
             return $xsl;
         }
 
-        protected function saveDomDocument(\DOMDocument $dom, $filename) {
+        protected function clearDirectory($path) {
+            $cleaner = new DirectoryCleaner();
+            $cleaner->process(new FileInfo($path));
+        }
+
+        protected function saveDomDocument(\DOMDocument $dom, $filename, $format = true) {
             $path = dirname($filename);
             clearstatcache();
             if (!file_exists($path)) {
-                mkdir($path, 0755, true);
+                mkdir($path, 0777, true);
             }
-            $dom->formatOutput = true;
-            $dom->preserveWhiteSpace = false;
+            $dom->formatOutput = $format;
             return $dom->save($filename);
         }
 
@@ -71,13 +70,13 @@ namespace TheSeer\phpDox\Generator\Engine {
             $path = dirname($filename);
             clearstatcache();
             if (!file_exists($path)) {
-                mkdir($path, 0755, true);
+                mkdir($path, 0777, true);
             }
             return file_put_contents($filename, $content);
         }
 
         protected function copyStatic($path, $dest, $recursive = true) {
-            $len  = strlen($path);
+            $len  = mb_strlen($path);
             if ($recursive) {
                 $worker = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
             } else {
@@ -87,21 +86,18 @@ namespace TheSeer\phpDox\Generator\Engine {
                 if($x->isDir() && ($x->getFilename() == "." || $x->getFilename() == "..")) {
                     continue;
                 }
-                $target = $dest . substr($x->getPathname(), $len);
+                $target = $dest . mb_substr($x->getPathname(), $len);
                 if (!file_exists(dirname($target))) {
-                    mkdir(dirname($target), 0755, true);
+                    mkdir(dirname($target), 0777, true);
                 }
                 copy($x->getPathname(), $target);
             }
         }
 
-        protected function loadDataFile($filename) {
-            $classDom = new fDOMDocument();
-            $classDom->load($this->xmlDir . '/' . $filename);
-            $classDom->registerNamespace('phpdox', 'http://xml.phpdox.net/src#');
-            return $classDom;
-        }
+    }
 
+    class EngineException extends \Exception {
+        const UnexpectedError = 1;
     }
 
 }

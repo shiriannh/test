@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -34,12 +34,9 @@
  * @copyright  Arne Blankerts <arne@blankerts.de>, All rights reserved.
  * @license    BSD License
  */
-
-namespace TheSeer\phpDox\Tests\Unit\DocBlock {
+namespace TheSeer\phpDox\DocBlock {
 
     use TheSeer\fDOM\fDOMDocument;
-    use TheSeer\phpDox\DocBlock\DocBlock;
-    use TheSeer\phpDox\DocBlock\GenericElement;
 
     /**
      * Class DocBlockTest
@@ -113,32 +110,32 @@ namespace TheSeer\phpDox\Tests\Unit\DocBlock {
 
         public function testDocBlockCanBeSerializedToDom() {
             $dom = new fDOMDocument();
-            $dom->registerNamespace('test', 'http://xml.phpdox.net/src#');
+            $dom->registerNamespace('test', 'http://xml.phpdox.net/src');
             $this->element->expects($this->once())
                 ->method('asDom')
-                ->will($this->returnValue($dom->createElementNS('http://xml.phpdox.net/src#', 'stub')));
+                ->will($this->returnValue($dom->createElementNS('http://xml.phpdox.net/src', 'stub')));
 
             $this->docBlock->appendElement($this->element);
             $node = $this->docBlock->asDom($dom);
 
             $this->assertEquals(
-                '<docblock xmlns="http://xml.phpdox.net/src#"><stub/></docblock>',
+                '<docblock xmlns="http://xml.phpdox.net/src"><stub/></docblock>',
                 $dom->saveXML($node)
             );
         }
 
         public function testDocBlockWithMultipleOccurencesOfAnnotationCanBeSerializedToDom() {
             $dom = new fDOMDocument();
-            $dom->registerNamespace('test', 'http://xml.phpdox.net/src#');
+            $dom->registerNamespace('test', 'http://xml.phpdox.net/src');
 
             $element2 = clone $this->element;
             $this->element->expects($this->once())
                 ->method('asDom')
-                ->will($this->returnValue($dom->createElementNS('http://xml.phpdox.net/src#', 'stub')));
+                ->will($this->returnValue($dom->createElementNS('http://xml.phpdox.net/src', 'stub')));
 
             $element2->expects($this->once())
                 ->method('asDom')
-                ->will($this->returnValue($dom->createElementNS('http://xml.phpdox.net/src#', 'stub')));
+                ->will($this->returnValue($dom->createElementNS('http://xml.phpdox.net/src', 'stub')));
 
             $this->docBlock->appendElement($this->element);
             $this->docBlock->appendElement($element2);
@@ -146,7 +143,7 @@ namespace TheSeer\phpDox\Tests\Unit\DocBlock {
             $node = $this->docBlock->asDom($dom);
 
             $this->assertEquals(
-                '<docblock xmlns="http://xml.phpdox.net/src#"><stub/><stub/></docblock>',
+                '<docblock xmlns="http://xml.phpdox.net/src"><stub/><stub/></docblock>',
                 $dom->saveXML($node)
             );
         }

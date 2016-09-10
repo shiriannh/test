@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -40,7 +40,6 @@
  * @license    BSD License
  *
  */
-
 namespace TheSeer\phpDox {
 
     use TheSeer\fDOM\fDOMDocument;
@@ -48,161 +47,183 @@ namespace TheSeer\phpDox {
 
     class CLI {
 
+        const ExitOK = 0;
+        const ExitExecError = 1;
+        const ExitEnvError = 2;
+        const ExitParamError = 3;
+        const ExitConfigError = 4;
+        const ExitException = 5;
+
+        /**
+         * @var Environment
+         */
+        private $environment;
+
+        /**
+         * @var Version
+         */
+        private $version;
+
         /**
          * Factory instance
          *
          * @var Factory
          */
-        protected $factory;
+        private $factory;
 
-        public function __construct(Factory $factory) {
+        /**
+         * @param Environment $env
+         * @param Factory     $factory
+         */
+        public function __construct(Environment $env, Version $version, Factory $factory) {
+            $this->environment = $env;
+            $this->version = $version;
             $this->factory = $factory;
         }
 
         /**
          * Main executor for CLI process.
          */
-        public function run() {
-            $errorHandler = $this->factory->getInstanceFor('ErrorHandler');
+        public function run(CLIOptions $options) {
+            $errorHandler = $this->factory->getErrorHandler();
             $errorHandler->register();
+
             try {
-                $this->preBootstrap();
-                $options = $this->processOptions();
 
-                if ($options->getValue('version') === TRUE) {
+                $this->environment->ensureFitness();
+
+                if ($options->showHelp() === TRUE) {
                     $this->showVersion();
-                    exit(0);
+                    echo $options->getHelpScreen();
+                    return self::ExitOK;
                 }
 
-                if ($options->getValue('skel') === TRUE) {
-                    $this->showSkeletonConfig($options->getValue('strip'));
-                    exit(0);
-                }
-
-                if ($options->getValue('help') === TRUE) {
+                if ($options->showVersion() === TRUE) {
                     $this->showVersion();
-                    $this->showUsage();
-                    exit(0);
+                    return self::ExitOK;
                 }
 
-                $cfgLoader = $this->factory->getInstanceFor('ConfigLoader');
-                $cfgFile = $options->getValue('file');
-                if ($cfgFile) {
-                    $config = $cfgLoader->load($cfgFile);
-                } else {
-                    $config = $cfgLoader->autodetect();
+                if ($options->generateSkel() === TRUE) {
+                    $this->showSkeletonConfig($options->generateStrippedSkel());
+                    return self::ExitOK;
                 }
+
+                $config = $this->loadConfig($options);
 
                 if ($config->isSilentMode()) {
-                    $this->factory->setLoggerType('silent');
+                    $this->factory->activateSilentMode();
                 } else {
                     $this->showVersion();
-                    $this->factory->setLoggerType('shell');
                 }
 
-                $logger = $this->factory->getInstanceFor('Logger');
-                $logger->log("Using config file '". $config->getFilename(). "'");
+                $logger = $this->factory->getLogger();
+                $logger->log("Using config file '". $config->getConfigFile()->getPathname() . "'");
 
-                $app = $this->factory->getInstanceFor('Application');
+                $app = $this->factory->getApplication();
 
-                /** @var $bootstrap Bootstrap */
-                $bootstrap = $app->runBootstrap($config->getBootstrapFiles());
+                $defBootstrapFiles = new FileInfoCollection();
+                $defBootstrapFiles->add(new FileInfo(__DIR__ . '/../bootstrap/backends.php'));
+                $defBootstrapFiles->add(new FileInfo(__DIR__ . '/../bootstrap/enrichers.php'));
+                $defBootstrapFiles->add(new FileInfo(__DIR__ . '/../bootstrap/engines.php'));
 
-                if ($options->getValue('engines')) {
+                $bootstrap = $app->runBootstrap($defBootstrapFiles);
+                $bootstrap->load($config->getCustomBootstrapFiles(), false);
+
+                if ($options->listEngines()) {
                     $this->showVersion();
                     $this->showList('engines', $bootstrap->getEngines());
-                    exit(0);
                 }
 
-                if ($options->getValue('enrichers')) {
+                if ($options->listEnrichers()) {
                     $this->showVersion();
                     $this->showList('enrichers', $bootstrap->getEnrichers());
-                    exit(0);
                 }
 
-                if ($options->getValue('backends')) {
+                if ($options->listBackends()) {
                     $this->showVersion();
                     $this->showList('backends', $bootstrap->getBackends());
-                    exit(0);
                 }
 
-                foreach($config->getAvailableProjects() as $project) {
-                    $logger->log("Starting to process project '$project'");
-                    $pcfg = $config->getProjectConfig($project);
+                if ($options->listBackends() || $options->listEngines() || $options->listEnrichers()) {
+                    return self::ExitOK;
+                }
 
-                    if (!$options->getValue('generator')) {
-                        $app->runCollector( $pcfg->getCollectorConfig() );
+                foreach($config->getProjects() as $projectName => $projectConfig) {
+
+                    $logger->log("Starting to process project '$projectName'");
+
+                    $app->runConfigChangeDetection(
+                        $projectConfig->getWorkDirectory(),
+                        $config->getConfigFile()
+                    );
+
+                    if (!$options->generatorOnly()) {
+                        $app->runCollector( $projectConfig->getCollectorConfig() );
                     }
 
-                    if (!$options->getValue('collector')) {
-                        $app->runGenerator( $pcfg->getGeneratorConfig() );
+                    if (!$options->collectorOnly()) {
+                        $app->runGenerator( $projectConfig->getGeneratorConfig() );
                     }
 
-                    $logger->log("Processing project '$project' completed.");
+                    $logger->log("Processing project '$projectName' completed.");
 
                 }
 
                 $logger->buildSummary();
+                return self::ExitOK;
 
-            } catch (CLIEnvironmentException $e) {
+            } catch (EnvironmentException $e) {
                 $this->showVersion();
                 fwrite(STDERR, 'Sorry, but your PHP environment is currently not able to run phpDox due to');
                 fwrite(STDERR, "\nthe following issue(s):\n\n" . $e->getMessage() . "\n\n");
                 fwrite(STDERR, "Please adjust your PHP configuration and try again.\n\n");
-                exit(3);
+                return self::ExitEnvError;
             } catch (CLIOptionsException $e) {
                 $this->showVersion();
-                fwrite(STDERR, "\n".$e->getMessage()."\n\n");
-                $this->showUsage();
-                exit(3);
+                fwrite(STDERR, $e->getMessage()."\n\n");
+                fwrite(STDERR, $options->getHelpScreen());
+                return self::ExitParamError;
             } catch (ConfigLoaderException $e) {
                 $this->showVersion();
-                fwrite(STDERR, "\nAn error occured while trying to load the configuration file:\n\t" . $e->getMessage()."\n\nUsing --skel might get you started.\n\n");
-                exit(3);
+                fwrite(STDERR, "\nAn error occured while trying to load the configuration file:\n\n" . $e->getMessage(). "\n\n");
+                if ($e->getCode() == ConfigLoaderException::NeitherCandidateExists) {
+                    fwrite(STDERR, "Using --skel might get you started.\n\n");
+                }
+                return self::ExitConfigError;
             } catch (ConfigException $e) {
                 fwrite(STDERR, "\nYour configuration seems to be corrupted:\n\n\t" . $e->getMessage()."\n\nPlease verify your configuration xml file.\n\n");
-                exit(3);
+                return self::ExitConfigError;
             } catch (ApplicationException $e) {
                 fwrite(STDERR, "\nAn application error occured while processing:\n\n\t" . $e->getMessage()."\n\nPlease verify your configuration.\n\n");
-                exit(1);
+                return self::ExitExecError;
             } catch (\Exception $e) {
                 if ($e instanceof fDOMException) {
                     $e->toggleFullMessage(TRUE);
                 }
                 $this->showVersion();
                 $errorHandler->handleException($e);
+                return self::ExitException;
             }
         }
 
         /**
          * Helper to output version information.
          */
-        protected function showVersion() {
+        private function showVersion() {
             static $shown = FALSE;
             if ($shown) {
                 return;
             }
             $shown = TRUE;
-            echo Version::getInfoString() . "\n\n";
+            echo $this->version->getInfoString() . "\n\n";
         }
 
-        protected function showSkeletonConfig($strip) {
-            $config = file_get_contents(__DIR__ . '/config/skeleton.xml');
-            if ($strip) {
-                $dom = new fDOMDocument();
-                $dom->loadXML($config);
-                foreach($dom->query('//comment()') as $c) {
-                    $c->parentNode->removeChild($c);
-                }
-                $dom->preserveWhiteSpace = FALSE;
-                $dom->formatOutput = TRUE;
-                $dom->loadXML($dom->saveXML());
-                $config = $dom->saveXML();
-            }
-            echo $config;
+        private function showSkeletonConfig($strip) {
+            $skel = $this->factory->getConfigSkeleton();
+            echo $strip ? $skel->renderStripped() : $skel->render();
         }
 
-        protected function showList($title, Array $list) {
+        private function showList($title, Array $list) {
             echo "\nThe following $title are registered:\n\n";
             foreach($list as $name => $desc) {
                 printf("   %s \t %s\n", $name, $desc);
@@ -211,139 +232,20 @@ namespace TheSeer\phpDox {
         }
 
         /**
-         * Helper to register and process supported CLI options into an ezcConsoleInput
+         * @param CLIOptions $options
          *
-         * @throws CLIOptionsException
-         * @return CLIOptions
+         * @return GlobalConfig
+         * @throws ConfigLoaderException
          */
-        protected function processOptions() {
-            $input = new \ezcConsoleInput();
-            $versionOption = $input->registerOption( new \ezcConsoleOption( 'v', 'version' ) );
-            $versionOption->shorthelp    = 'Prints the version and exits';
-            $versionOption->isHelpOption = TRUE;
-
-            $helpOption = $input->registerOption( new \ezcConsoleOption( 'h', 'help' ) );
-            $helpOption->isHelpOption = TRUE;
-            $helpOption->shorthelp    = 'Prints this usage information';
-
-            $input->registerOption( new \ezcConsoleOption(
-                'f', 'file', \ezcConsoleInput::TYPE_STRING, NULL, FALSE,
-                'Configuration file to load'
-            ));
-
-            $c = $input->registerOption( new \ezcConsoleOption(
-                    'c', 'collector', \ezcConsoleInput::TYPE_NONE, NULL, FALSE,
-                    'Run collector process only'
-            ));
-
-            $g = $input->registerOption( new \ezcConsoleOption(
-                    'g', 'generator', \ezcConsoleInput::TYPE_NONE, NULL, FALSE,
-                    'Run generator process only'
-            ));
-
-            $g->addExclusion(new \ezcConsoleOptionRule($c));
-            $c->addExclusion(new \ezcConsoleOptionRule($g));
-
-            $input->registerOption( new \ezcConsoleOption(
-                NULL, 'engines', \ezcConsoleInput::TYPE_NONE, NULL, FALSE,
-                'Show a list of available engines and exit'
-            ));
-
-            $input->registerOption( new \ezcConsoleOption(
-                NULL, 'enrichers', \ezcConsoleInput::TYPE_NONE, NULL, FALSE,
-                'Show a list of available enrichers and exit'
-            ));
-
-            $input->registerOption( new \ezcConsoleOption(
-                NULL, 'backends', \ezcConsoleInput::TYPE_NONE, NULL, FALSE,
-                'Show a list of available backends and exit'
-            ));
-
-            $skel = $input->registerOption( new \ezcConsoleOption(
-                    NULL, 'skel', \ezcConsoleInput::TYPE_NONE, NULL, FALSE,
-                    'Show a skeleton config xml file and exit'
-            ));
-
-            $strip = $input->registerOption( new \ezcConsoleOption(
-                    NULL, 'strip', \ezcConsoleInput::TYPE_NONE, NULL, FALSE,
-                    'Strip xml config when showing'
-            ));
-            $strip->addDependency(new \ezcConsoleOptionRule($skel));
-
-            try {
-                $input->process();
-                return new CLIOptions($input);
-            } catch (\ezcConsoleException $e) {
-                throw new CLIOptionsException($e->getMessage(), $e->getCode());
+        private function loadConfig(CLIOptions $options) {
+            $cfgLoader = $this->factory->getConfigLoader();
+            $cfgFile = $options->configFile();
+            if ($cfgFile != '') {
+                return $cfgLoader->load($cfgFile);
             }
+            return $cfgLoader->autodetect();
         }
 
-        /**
-         * Helper to output usage information.
-         */
-        protected function showUsage() {
-            print <<<EOF
-Usage: phpdox [switches]
-
-  -f, --file       Configuration file to use (defaults to ./phpdox.xml[.dist])
-
-  -h, --help       Prints this usage information
-  -v, --version    Prints the version and exits
-
-  -c, --collector  Run only collector process
-  -g, --generator  Run only generator process
-
-      --engines    Show a list of available output engines and exit
-      --enrichers  Show a list of available output enrichers and exit
-
-      --backends   Show a list of available backends and exit
-
-      --skel       Show an annotated skeleton config xml file and exit
-      --strip      Strip comments from skeleton config xml when showing
-
-
-EOF;
-        }
-
-        private function preBootstrap() {
-            $required = array('tokenizer', 'iconv', 'fileinfo', 'libxml', 'dom', 'xsl','mbstring');
-            $missing = array();
-            foreach($required as $test) {
-                if (!extension_loaded($test)) {
-                    $missing[] = sprintf('ext/%s not installed/enabled', $test);
-                }
-            }
-            if (count($missing)) {
-                throw new CLIEnvironmentException(
-                    join("\n", $missing),
-                    CLIEnvironmentException::ExtensionMissing
-                );
-            }
-
-            if (extension_loaded('xdebug')) {
-                ini_set('xdebug.scream', 0);
-                ini_set('xdebug.max_nesting_level', 8192);
-                ini_set('xdebug.show_exception_trace', 0);
-                xdebug_disable();
-            }
-
-            try {
-                date_default_timezone_set(date_default_timezone_get());
-            } catch (\ErrorException $e) {
-                date_default_timezone_set('UTC');
-                throw new CLIEnvironmentException(
-                    "No default date.timezone configured in php.ini.",
-                    CLIEnvironmentException::DateTimeZoneMissing,
-                    $e
-                );
-            }
-        }
-
-    }
-
-    class CLIEnvironmentException extends \Exception {
-        const ExtensionMissing = 1;
-        const DateTimeZoneMissing = 2;
     }
 
 }

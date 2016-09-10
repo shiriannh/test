@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -37,12 +37,10 @@
 namespace TheSeer\phpDox\Collector {
 
     use TheSeer\DirectoryScanner\DirectoryScanner;
-    use TheSeer\phpDox\Collector\Backend\SourceFileException;
     use TheSeer\phpDox\FileInfo;
     use TheSeer\phpDox\ProgressLogger;
     use TheSeer\phpDox\Collector\Backend\BackendInterface;
     use TheSeer\phpDox\Collector\Backend\ParseErrorException;
-    use TheSeer\phpDox\Collector\Project;
 
     /**
      * Collector processing class
@@ -50,7 +48,7 @@ namespace TheSeer\phpDox\Collector {
     class Collector {
 
         /**
-         * @var \TheSeer\phpDox\ProgressLogger
+         * @var ProgressLogger
          */
         private $logger;
 
@@ -65,32 +63,39 @@ namespace TheSeer\phpDox\Collector {
         private $parseErrors = array();
 
         /**
-         * @var
+         * @var BackendInterface
          */
         private $backend;
 
         /**
-         * @param \TheSeer\phpDox\ProgressLogger  $logger
-         * @param Project $project
+         * @var string
          */
-        public function __construct(ProgressLogger $logger, Project $project) {
+        private $encoding;
+
+        /**
+         * @param ProgressLogger   $logger
+         * @param Project          $project
+         * @param BackendInterface $backend
+         * @param                  $encoding
+         */
+        public function __construct(ProgressLogger $logger, Project $project, BackendInterface $backend, $encoding) {
             $this->logger = $logger;
             $this->project = $project;
+            $this->backend = $backend;
+            $this->encoding = $encoding;
         }
 
         /**
          * @param DirectoryScanner $scanner
-         * @param BackendInterface $backend
          *
          * @return Project
          */
-        public function run(DirectoryScanner $scanner, BackendInterface $backend) {
-            $this->backend = $backend;
+        public function run(DirectoryScanner $scanner) {
 
             $srcDir = $this->project->getSourceDir();
             $this->logger->log("Scanning directory '{$srcDir}' for files to process\n");
 
-            $iterator = new PathConverterIterator($scanner($srcDir));
+            $iterator = new SourceFileIterator($scanner($srcDir), $srcDir, $this->encoding);
             foreach($iterator as $file) {
                 $needsProcessing = $this->project->addFile($file);
                 if (!$needsProcessing) {
@@ -121,15 +126,20 @@ namespace TheSeer\phpDox\Collector {
 
         /**
          * @param FileInfo $file
+         *
+         * @throws CollectorException
+         * @throws \TheSeer\phpDox\ProgressLoggerException
+         *
+         * @return bool
          */
-        private function processFile(FileInfo $file) {
+        private function processFile(SourceFile $file) {
             try {
                 if ($file->getSize() === 0) {
                     $this->logger->progress('processed');
                     return true;
                 }
+                $result = $this->backend->parse($file);
 
-                $result = $this->backend->parse(new SourceFile($file));
                 if ($result->hasClasses()) {
                     foreach($result->getClasses() as $class) {
                         $this->project->addClass($class);

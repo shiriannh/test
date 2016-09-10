@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2010-2013 Arne Blankerts <arne@blankerts.de>
+ * Copyright (c) 2010-2015 Arne Blankerts <arne@blankerts.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -69,7 +69,7 @@ namespace TheSeer\phpDox\DocBlock {
          * @return \TheSeer\fDOM\fDOMElement
          */
         public function asDom(\TheSeer\fDOM\fDOMDocument $doc) {
-            $node = $doc->createElementNS('http://xml.phpdox.net/src#', 'docblock');
+            $node = $doc->createElementNS('http://xml.phpdox.net/src', 'docblock');
             // add lines and such?
             foreach($this->elements as $element) {
                 if (is_array($element)) {
@@ -83,10 +83,6 @@ namespace TheSeer\phpDox\DocBlock {
             return $node;
         }
 
-    }
-
-    class DocBlockException extends \Exception {
-        const NotFound = 404;
     }
 
 }

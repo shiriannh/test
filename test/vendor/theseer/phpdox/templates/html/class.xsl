@@ -1,8 +1,10 @@
+<?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:pdx="http://xml.phpdox.net/src#"
+                xmlns:pdx="http://xml.phpdox.net/src"
                 xmlns:pdxf="http://xml.phpdox.net/functions"
-                exclude-result-prefixes="pdx">
+                xmlns:pu="http://schema.phpunit.de/coverage/1.0"
+                exclude-result-prefixes="pdx pdxf pu">
 
     <xsl:import href="components.xsl" />
     <xsl:import href="functions.xsl" />
@@ -38,7 +40,7 @@
                             <xsl:with-param name="unit" select="$unit" />
                         </xsl:call-template>
 
-                        <xsl:if test="$unit/pdx:extends|$unit/pdx:extender|$unit/pdx:implements|$unit/pdx:uses">
+                        <xsl:if test="$unit/pdx:extends|$unit/pdx:extender|$unit/pdx:implements|$unit/pdx:uses|$unit/pdx:users">
                         <h2 id="hierarchy">Hierarchy</h2>
                         <xsl:call-template name="hierarchy" />
                         </xsl:if>
@@ -131,9 +133,34 @@
                 <xsl:if test="//pdx:enrichment[@type = 'git']">
                 <li><a href="#history">History</a></li>
                 </xsl:if>
+                <xsl:if test="$unit/@start"><!-- hack: test for start line == we know something about this class -->
+                <li><a href="{$base}source/{$unit/pdx:file/@relative}.{$extension}#line{$unit/@start}">Source</a></li>
+                </xsl:if>
             </ul>
         </nav>
     </xsl:template>
 
+
+    <!-- ######################################################################################################### -->
+
+    <xsl:template name="coverage">
+
+        <table class="styled">
+            <tr>
+                <xsl:variable name="methods"  select="count($unit/pdx:method|$unit/pdx:constructor|$unit/pdx:destructor)" />
+                <xsl:variable name="executed" select="count($unit//pdx:enrichments/pdx:enrichment[@type='phpunit']/pu:coverage[@coverage = '100'])" />
+                <td>Methods</td>
+                <td class="percent"><xsl:value-of select="pdxf:format-number($executed div $methods * 100, '0.##')" />%</td>
+                <td class="nummeric"><xsl:value-of select="$executed" /> / <xsl:value-of select="$methods" /></td>
+            </tr>
+            <tr>
+                <xsl:variable name="executed"    select="$unit/pdx:enrichments/pdx:enrichment[@type='phpunit']/pu:coverage/@executed" />
+                <xsl:variable name="executable"  select="$unit/pdx:enrichments/pdx:enrichment[@type='phpunit']/pu:coverage/@executable" />
+                <td>Lines</td>
+                <td class="percent"><xsl:value-of select="pdxf:format-number($executed div $executable * 100, '0.##')" />%</td>
+                <td class="nummeric"><xsl:value-of select="$executed" /> / <xsl:value-of select="$executable" /></td>
+            </tr>
+        </table>
+    </xsl:template>
 
 </xsl:stylesheet>
