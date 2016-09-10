@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - TheSeer\phpDox\CLI</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#TheSeer_phpDox">TheSeer\phpDox</a>
+          </li>
+          <li class="separator">CLI</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/CLI.php.xhtml#line48">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>TheSeer\phpDox\</small>CLI</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class CLI
+            {<br/><ul class="none"><li>// constants</li><li>const ExitOK = 0;</li><li>const ExitExecError = 1;</li><li>const ExitEnvError = 2;</li><li>const ExitParamError = 3;</li><li>const ExitConfigError = 4;</li><li>const ExitException = 5;</li></ul><ul class="none"><li>// members</li><li>private <span title="TheSeer\phpDox\Environment">Environment</span> <a href="#members">$environment</a>;
+                    </li><li>private <span title="TheSeer\phpDox\Version">Version</span> <a href="#members">$version</a>;
+                    </li><li>private <span title="TheSeer\phpDox\Factory">Factory</span> <a href="#members">$factory</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/run.xhtml">run</a>()
+                    </li><li>private void <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/showVersion.xhtml">showVersion</a>()
+                    </li><li>private void <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/showSkeletonConfig.xhtml">showSkeletonConfig</a>()
+                    </li><li>private void <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/showList.xhtml">showList</a>()
+                    </li><li>private GlobalConfig <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/loadConfig.xhtml">loadConfig</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="ExitOK">ExitOK</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td id="ExitExecError">ExitExecError</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="ExitEnvError">ExitEnvError</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="ExitParamError">ExitParamError</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td id="ExitConfigError">ExitConfigError</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td id="ExitException">ExitException</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="environment"><strong>$environment</strong>
+                —
+                <a title="TheSeer\phpDox\Environment" href="../classes/TheSeer_phpDox_Environment.xhtml">TheSeer\phpDox\Environment</a></li>
+            <li id="factory"><strong>$factory</strong>
+                —
+                <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory.xhtml">TheSeer\phpDox\Factory</a><br/><span class="indent">Factory instance</span></li>
+            <li id="version"><strong>$version</strong>
+                —
+                <a title="TheSeer\phpDox\Version" href="../classes/TheSeer_phpDox_Version.xhtml">TheSeer\phpDox\Version</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="loadConfig">
+              <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/loadConfig.xhtml">loadConfig()</a>
+            </li>
+            <li id="showList">
+              <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/showList.xhtml">showList()</a>
+            </li>
+            <li id="showSkeletonConfig">
+              <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/showSkeletonConfig.xhtml">showSkeletonConfig()</a>
+            </li>
+            <li id="showVersion"><a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/showVersion.xhtml">showVersion()</a>
+                — Helper to output version information.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="run"><a title="TheSeer\phpDox\CLI" href="../classes/TheSeer_phpDox_CLI/run.xhtml">run()</a>
+                — Main executor for CLI process.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

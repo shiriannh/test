@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - TheSeer\phpDox\Factory</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#TheSeer_phpDox">TheSeer\phpDox</a>
+          </li>
+          <li class="separator">Factory</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/shared/Factory.php.xhtml#line50">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>TheSeer\phpDox\</small>Factory</h1>
+        <h4/>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Factory
+            {<br/><ul class="none"><li>// members</li><li>private <span title="TheSeer\phpDox\FileInfo">FileInfo</span> <a href="#members">$homeDir</a>;
+                    </li><li>private <span title="TheSeer\phpDox\Version">Version</span> <a href="#members">$version</a>;
+                    </li><li>private array <a href="#members">$instances</a> =
+                        ;
+                    </li><li>private <span title="TheSeer\phpDox\bool">bool</span> <a href="#members">$isSilentMode</a> =
+                        false;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/activateSilentMode.xhtml">activateSilentMode</a>()
+                    </li><li>public ErrorHandler <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getErrorHandler.xhtml">getErrorHandler</a>()
+                    </li><li>public CLI <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getCLI.xhtml">getCLI</a>()
+                    </li><li>public ConfigLoader <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getConfigLoader.xhtml">getConfigLoader</a>()
+                    </li><li>public void <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getConfigSkeleton.xhtml">getConfigSkeleton</a>()
+                    </li><li>private DirectoryScanner <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDirectoryScanner.xhtml">getDirectoryScanner</a>()
+                    </li><li>public DirectoryCleaner <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDirectoryCleaner.xhtml">getDirectoryCleaner</a>()
+                    </li><li>private BootstrapApi <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getBootstrapApi.xhtml">getBootstrapApi</a>()
+                    </li><li>public ProgressLogger <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getLogger.xhtml">getLogger</a>()
+                    </li><li>private void <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getSilentProgressLogger.xhtml">getSilentProgressLogger</a>()
+                    </li><li>private void <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getShellProgressLogger.xhtml">getShellProgressLogger</a>()
+                    </li><li>public Bootstrap <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getBootstrap.xhtml">getBootstrap</a>()
+                    </li><li>public Application <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getApplication.xhtml">getApplication</a>()
+                    </li><li>public mixed|object <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getScanner.xhtml">getScanner</a>()
+                    </li><li>public Collector <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getCollector.xhtml">getCollector</a>()
+                    </li><li>public InheritanceResolver <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getInheritanceResolver.xhtml">getInheritanceResolver</a>()
+                    </li><li>public Generator <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getGenerator.xhtml">getGenerator</a>()
+                    </li><li>public Factory <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDocblockFactory.xhtml">getDocblockFactory</a>()
+                    </li><li>public mixed <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getBackendFactory.xhtml">getBackendFactory</a>()
+                    </li><li>public mixed <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getEngineFactory.xhtml">getEngineFactory</a>()
+                    </li><li>public Factory <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getEnricherFactory.xhtml">getEnricherFactory</a>()
+                    </li><li>public mixed <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDocblockParser.xhtml">getDocblockParser</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="homeDir"><strong>$homeDir</strong>
+                —
+                <a title="TheSeer\phpDox\FileInfo" href="../classes/TheSeer_phpDox_FileInfo.xhtml">TheSeer\phpDox\FileInfo</a></li>
+            <li id="instances"><strong>$instances</strong>
+                —
+                array</li>
+            <li id="isSilentMode"><strong>$isSilentMode</strong>
+                —
+                <a title="TheSeer\phpDox\bool" href="../classes/TheSeer_phpDox_bool.xhtml">TheSeer\phpDox\bool</a></li>
+            <li id="version"><strong>$version</strong>
+                —
+                <a title="TheSeer\phpDox\Version" href="../classes/TheSeer_phpDox_Version.xhtml">TheSeer\phpDox\Version</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getBootstrapApi">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getBootstrapApi.xhtml">getBootstrapApi()</a>
+            </li>
+            <li id="getDirectoryScanner">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDirectoryScanner.xhtml">getDirectoryScanner()</a>
+            </li>
+            <li id="getShellProgressLogger">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getShellProgressLogger.xhtml">getShellProgressLogger()</a>
+            </li>
+            <li id="getSilentProgressLogger">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getSilentProgressLogger.xhtml">getSilentProgressLogger()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="activateSilentMode">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/activateSilentMode.xhtml">activateSilentMode()</a>
+            </li>
+            <li id="getApplication">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getApplication.xhtml">getApplication()</a>
+            </li>
+            <li id="getBackendFactory">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getBackendFactory.xhtml">getBackendFactory()</a>
+            </li>
+            <li id="getBootstrap">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getBootstrap.xhtml">getBootstrap()</a>
+            </li>
+            <li id="getCLI">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getCLI.xhtml">getCLI()</a>
+            </li>
+            <li id="getCollector">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getCollector.xhtml">getCollector()</a>
+            </li>
+            <li id="getConfigLoader">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getConfigLoader.xhtml">getConfigLoader()</a>
+            </li>
+            <li id="getConfigSkeleton">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getConfigSkeleton.xhtml">getConfigSkeleton()</a>
+            </li>
+            <li id="getDirectoryCleaner">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDirectoryCleaner.xhtml">getDirectoryCleaner()</a>
+            </li>
+            <li id="getDocblockFactory">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDocblockFactory.xhtml">getDocblockFactory()</a>
+            </li>
+            <li id="getDocblockParser">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getDocblockParser.xhtml">getDocblockParser()</a>
+            </li>
+            <li id="getEngineFactory">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getEngineFactory.xhtml">getEngineFactory()</a>
+            </li>
+            <li id="getEnricherFactory">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getEnricherFactory.xhtml">getEnricherFactory()</a>
+            </li>
+            <li id="getErrorHandler">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getErrorHandler.xhtml">getErrorHandler()</a>
+            </li>
+            <li id="getGenerator">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getGenerator.xhtml">getGenerator()</a>
+            </li>
+            <li id="getInheritanceResolver">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getInheritanceResolver.xhtml">getInheritanceResolver()</a>
+            </li>
+            <li id="getLogger">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getLogger.xhtml">getLogger()</a>
+            </li>
+            <li id="getScanner">
+              <a title="TheSeer\phpDox\Factory" href="../classes/TheSeer_phpDox_Factory/getScanner.xhtml">getScanner()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
