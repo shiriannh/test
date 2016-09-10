@@ -2,7 +2,7 @@
 require 'Calculator.php';
 use PHPUnit\Framework\TestCase;
  
-class CalculatorTests extends TestCase
+class CalculatorTest extends TestCase
 {
  public function testPushAndPop()
     {
