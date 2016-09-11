@@ -79,9 +79,7 @@
   <mkdir dir="${basedir}/build/pdepend"/>
   <mkdir dir="${basedir}/build/phpdox"/>
   <property name="prepare.done" value="true"/>
-  <exec executable="sudo chmod" dir="${basedir}" failonerror="true">
-    <arg line="-R 0777 ." />
-  </exec>
+  <chmod file="${basedir}/**" perm="g+w" type="both"/>
   
  </target>
  
