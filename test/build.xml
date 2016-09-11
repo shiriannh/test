@@ -239,11 +239,12 @@
          unless="phpunit.done"
          depends="prepare"
          description="Run unit tests with PHPUnit (without generating code coverage reports)">
-   <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
-   <arg line="--coverage-clover ${basedir]/build/logs/phpunit.xml"/>
+  <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
    <arg value="--configuration"/>
    <arg path="${basedir}/tests/phpunit.xml"/>
    <arg value="--no-coverage"/>
+   <arg value="--reportfile" />
+   <arg path="${basedir}/build/logs/phpunit.xml" />
    
   </exec>
 
@@ -264,7 +265,6 @@
          <arg value="-f" />
          <arg value="${basedir}/build/phpdox.xml" dir="${basedir}" taskname="phpdox"/>
      </exec>
-     <property name="phpdox.done" value="true"/>
  </target>
 
  <target name="-check-failure">
