@@ -126,8 +126,6 @@
    <arg path="${basedir}/build/logs/phploc.csv" />
    <arg value="--log-xml" />
    <arg path="${basedir}/build/logs/phploc.xml" />
-   <arg path="${basedir}" />
-   <arg path="${basedir}/tests" />
   </exec>
 
   <property name="phploc.done" value="true"/>
@@ -141,7 +139,7 @@
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-    <arg value="--ignore=${basedir}/vendor"/>
+   <arg value="--ignore=${basedir}/vendor"/>
    <arg path="${basedir}" />
   </exec>
 
@@ -182,8 +180,6 @@
    <arg value="--standard=PSR2" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
-   <arg path="${basedir}" />
-   <arg path="${basedir}/tests" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
@@ -199,8 +195,6 @@
    <arg value="--standard=PSR2" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
-   <arg path="${basedir}" />
-   <arg path="${basedir}/tests" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
@@ -249,6 +243,9 @@
    <arg value="--configuration"/>
    <arg path="${basedir}/tests/phpunit.xml"/>
    <arg value="--no-coverage"/>
+   <arg value="--reportfile" />
+   <arg path="${basedir}/build/logs/phpunit.xml" />
+   
   </exec>
 
   <property name="phpunit.done" value="true"/>
@@ -263,11 +260,12 @@
 <!--   <property name="phpdox.done" value="true"/> -->
 <!--  </target> -->
  
- <target name="phpdox" description="Generate API documentation using phpDox">
+ <target name="phpdox" unless="phpdox.done" depends="phploc-ci,phpcs-ci,phpmd-ci" description="Generate API documentation using phpDox">
      <exec executable="phpdox">
          <arg value="-f" />
-         <arg value="${basedir}/build/phpdox.xml" />
+         <arg value="${basedir}/build/phpdox.xml" dir="${basedir}" taskname="phpdox"/>
      </exec>
+     <property name="phpdox.done" value="true"/>
  </target>
 
  <target name="-check-failure">
