@@ -16,7 +16,7 @@
 					<file name="${basedir}/build/logs/checkstyle.xml" /> 
 				</source>
 				<source type="pmd">
-					<file name="${basedsir}/build/logs/pmd.xml" />
+					<file name="${basedir}/build/logs/pmd.xml" />
 				</source>
 				<source type="phploc">
 					<file name="${basedir}/build/logs/phploc.xml" />
