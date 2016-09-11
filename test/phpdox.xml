@@ -24,6 +24,9 @@
 				<source type="phpunit">
 					<coverage path="coverage/xml" />
 				</source>
+				<source type="pdepend">
+					<coverage path="pdepend" />
+				</source>
 			</enrich>
 
 			<build engine="html" output="html" />
