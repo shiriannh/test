@@ -13,20 +13,19 @@
 			<enrich base="${basedir}/build">
 				<source type="build"/>
 				<source type="checkstyle">
-					<file name="logs/checkstyle.xml" /> 
+					<file name="${basedir}/build/logs/checkstyle.xml" /> 
 				</source>
 				<source type="pmd">
-					<file name="logs/pmd.xml" />
+					<file name="${basedir}/build/logs/pmd.xml" />
 				</source>
 				<source type="phploc">
-					<file name="logs/phploc.xml" />
+					<file name="${basedir}/build/logs/phploc.xml" />
 				</source>
-<!-- 				<source type="phpunit"> -->
-<!-- 					<coverage path="coverage/xml" /> -->
-<!-- 				</source> -->
-				<source type="pdepend">
-					<coverage path="pdepend" />
+				<source type="phpunit">
+					<coverage path="${basedir}/build/coverage/xml" />
 				</source>
+				
+			
 			</enrich>
 
 			<build engine="html" output="html" />
