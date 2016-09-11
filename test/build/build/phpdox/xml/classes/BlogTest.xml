@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="BlogTest" namespace="" name="BlogTest" abstract="false" final="false" start="2" end="10">
-  <file path="/home/codeur/git/test/test/build/test" file="index.php" realpath="/home/codeur/git/test/test/build/test/index.php" size="189" time="2016-08-13T22:08:02+00:00" unixtime="1471126082" sha1="982691065cbe3f8fddd79907e517b5459dbb9bc5" relative="test/index.php"/>
-  <extends full="PHPUnit_Framework_TestCase" namespace="" name="PHPUnit_Framework_TestCase" unresolved="true"/>
-  <method name="testSlugify" start="4" end="9" abstract="false" final="false" static="false" visibility="public"/>
-</class>

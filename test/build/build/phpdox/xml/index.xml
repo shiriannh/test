@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<index xmlns="http://xml.phpdox.net/src" basedir="/home/codeur/git/test/test/build">
-  <namespace name="">
-    <class name="BlogTest" src="test/index.php" xml="classes/BlogTest.xml"/>
-  </namespace>
-</index>
