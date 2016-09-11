@@ -78,6 +78,7 @@
   <mkdir dir="${basedir}/build/logs"/>
   <mkdir dir="${basedir}/build/pdepend"/>
   <mkdir dir="${basedir}/build/phpdox"/>
+  <chmod file="${basedir}" perm="777"/>
   <property name="prepare.done" value="true"/>
  </target>
 
