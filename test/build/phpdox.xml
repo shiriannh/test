@@ -5,21 +5,27 @@
 		<require file="../vendor/autoload.php" />
 	</bootstrap>
 
-	<project name="PHP Generics API Documentation" source="${basedir}"
+	<project name="PHP Generics API Documentation" source="${basedir}/logs"
 		workdir="${basedir}/api/xml">
 		<collector backend="parser" />
 
-		<generator output="${basedir}/build/api">
-			<enrich base="${basedir}">
+		<generator output="${basedir}/api">
+			<enrich base="${basedir}/logs">
 				<source type="build"/>
 				<source type="checkstyle">
-					<file name="logs/checkstyle.xml" /> 
+					<file name="checkstyle.xml" /> 
 				</source>
 				<source type="pmd">
-					<file name="logs/pmd.xml" />
+					<file name="pmd.xml" />
+				</source>
+				<source type="pmd-cpd">
+					<file name="pmd-cpd.xml" />
+				</source>
+				<source type="jdepend">
+					<file name="jdepend.xml" />
 				</source>
 				<source type="phploc">
-					<file name="logs/phploc.xml" />
+					<file name="phploc.xml" />
 				</source>
  				
 
