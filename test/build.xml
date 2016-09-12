@@ -40,7 +40,7 @@
          description="Performs a lint check and runs the tests (without generating code coverage reports)"/>
 
  <target name="static-analysis"
-         depends="lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci"
+         depends="lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpcs1"
          description="Performs static analysis" />
 
  <!-- Adjust the threadCount attribute's value to the number of CPUs -->
@@ -111,8 +111,7 @@
    <arg value="--count-tests" />
    <arg path="${basedir}" />
    <arg path="${basedir}/tests" />
-   <arg value="--ignore=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
-   <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+   <arg value="--exclude vendor,--exclude administrator,--exclude bin,--exclude build,--exclude cache,--exclude cli,--exclude installation,--exclude installation.old,--exclude language,--exclude layouts,--exclude media,--exclude tmp"/>
   </exec>
 
   <property name="phploc.done" value="true"/>
@@ -123,8 +122,7 @@
          depends="prepare"
          description="Measure project size using PHPLOC and log result in CSV and XML format. Intended for usage within a continuous integration environment.">
   <exec executable="${phploc}" taskname="phploc">
-  <arg value="--ignore=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
-    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+  <arg value="--exclude vendor,--exclude administrator,--exclude bin,--exclude build,--exclude cache,--exclude cli,--exclude installation,--exclude installation.old,--exclude language,--exclude layouts,--exclude media,--exclude tmp"/>
    <arg value="--count-tests" />
    <arg value="--log-csv" />
    <arg path="${basedir}/build/logs/phploc.csv" />
@@ -140,10 +138,16 @@
          depends="prepare"
          description="Calculate software metrics using PHP_Depend and log result in XML format. Intended for usage within a continuous integration environment.">
   <exec executable="${pdepend}" taskname="pdepend">
+  <arg line="--jdepend-xml=${basedir}/build/logs/jdepend1.xml
+	 --jdepend-chart=${basedir}/build/pdepend/dependencies1.svg
+	 --overview-pyramid=${basedir}/build/pdepend/overview-pyramid1.svg
+	 --ignore=library/,tests/,utils/,build/,js/,drupal/,bin/
+	 --suffix=php
+	 ${source}" />
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-   <arg value="--ignore=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+   <arg value="--ignore=vendor,administrator,bin,build,cache,cli,installation,installation.old,language,layouts,media,tmp"/>
    <arg path="${basedir}" />
   </exec>
 
@@ -174,7 +178,7 @@
    <arg path="${basedir}/build/phpmd.xml" />
    <arg value="--reportfile" />
    <arg path="${basedir}/build/logs/pmd.xml" />
-    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+   <arg value="--exclude=*vendor/*,*administrator/*,*bin/*,*build/*,*cache/*,*cli/*,*installation/*,*installation.old/*,*language/*,*layouts/*,*media/*,*tmp/*"/>
   </exec>
 
   <property name="phpmd.done" value="true"/>
@@ -188,7 +192,7 @@
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
   </exec>
-
+  <arg value="--exclude=*vendor/*,*administrator/*,*bin/*,*build/*,*cache/*,*cli/*,*installation/*,*installation.old/*,*language/*,*layouts/*,*media/*,*tmp/*"/>
   <property name="phpcs.done" value="true"/>
  </target>
 
@@ -202,17 +206,28 @@
    <arg value="--standard=PSR2" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
+   <arg value="--ignore=*vendor/*,*administrator/*,*bin/*,*build/*,*cache/*,*cli/*,*installation/*,*installation.old/*,*language/*,*layouts/*,*media/*,*tmp/*"/>
   </exec>
 
   <property name="phpcs.done" value="true"/>
  </target>
+ 
+	 <target name="phpcs1" description="Generate checkstyle.xml using PHP_CodeSniffer">
+	 <exec executable="phpcs" output="/dev/null">
+	 <arg line="--report=checkstyle
+	 --report-file=${basedir}/build/logs/checkstyle.xml
+	 --standard=PEAR
+	 --ignore=*library/*,*tests/*,*utils/*,*build/*,*js/*,*drupal/*,*bin/*
+	 ${source}" />
+	 </exec>
+	 </target>
 
  <target name="phpcpd"
          unless="phpcpd.done"
          description="Find duplicate code using PHPCPD and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="${phpcpd}" taskname="phpcpd">
    <arg path="${basedir}" />
-    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+    <arg value="--exclude vendor,--exclude administrator,--exclude bin,--exclude build,--exclude cache,--exclude cli,--exclude installation,--exclude installation.old,--exclude language,--exclude layouts,--exclude media,--exclude tmp"/>
   </exec>
 
   <property name="phpcpd.done" value="true"/>
