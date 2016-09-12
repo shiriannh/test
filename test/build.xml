@@ -139,9 +139,7 @@
          depends="prepare"
          description="Calculate software metrics using PHP_Depend and log result in XML format. Intended for usage within a continuous integration environment.">
   <exec executable="${pdepend}" taskname="pdepend">
-  <arg line="--jdepend-xml=${basedir}/build/logs/jdepend1.xml
-	 --jdepend-chart=${basedir}/build/pdepend/dependencies1.svg
-	 --overview-pyramid=${basedir}/build/pdepend/overview-pyramid1.svg"/>
+   <arg value="--coverage-report=${basedir}/build/logs/jdependclover.xml"/>
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
@@ -215,15 +213,14 @@
   <property name="phpcs.done" value="true"/>
  </target>
  
-	 <target name="phpcs1" description="Generate checkstyle.xml using PHP_CodeSniffer">
-	 <exec executable="phpcs" output="/dev/null">
-	 <arg line="--report=checkstyle
-	 --report-file=${basedir}/build/logs/checkstyle.xml
-	 --standard=PEAR
-	 --ignore=*library/*,*tests/*,*utils/*,*build/*,*js/*,*drupal/*,*bin/*
-	 ${source}" />
-	 </exec>
-	 </target>
+<target name="phpcs1" description="Generate checkstyle.xml using PHP_CodeSniffer">
+	<exec executable="phpcs1" output="/dev/null">
+	<arg line="--report=checkstyle"/>
+	 <arg line="--report-file=${basedir}/build/logs/checkstyle.xml"/>
+	 <arg line="--standard=PEAR"/>
+	 <arg line="--ignore=*library/*,*tests/*,*utils/*,*build/*,*js/*,*drupal/*,*bin/*" />
+	</exec>
+ </target>
 
  <target name="phpcpd"
          unless="phpcpd.done"
