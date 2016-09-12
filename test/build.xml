@@ -257,10 +257,10 @@
 <!--   <property name="phpdox.done" value="true"/> -->
 <!--  </target> -->
  
- <target name="phpdox" unless="phpdox.done" depends="phploc-ci,phpcs-ci,phpmd-ci" description="Generate API documentation using phpDox">
+ <target name="phpdox" description="Generate API documentation using phpDox">
      <exec executable="phpdox">
          <arg value="-f" />
-         <arg value="${basedir}/build/phpdox.xml" dir="${basedir}" taskname="phpdox"/>
+         <arg value="phpdox.xml" dir="${basedir}" taskname="phpdox"/>
      </exec>
  </target>
 
