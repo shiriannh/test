@@ -243,9 +243,6 @@
    <arg value="--configuration"/>
    <arg path="${basedir}/tests/phpunit.xml"/>
    <arg value="--no-coverage"/>
-   <arg value="--reportfile" />
-   <arg path="${basedir}/build/logs/phpunit.xml" />
-   
   </exec>
 
   <property name="phpunit.done" value="true"/>
