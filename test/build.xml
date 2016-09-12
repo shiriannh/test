@@ -36,7 +36,7 @@
          description="Performs static analysis (executing the tools in parallel), runs the tests, and generates project documentation"/>
 
  <target name="quick-build"
-         depends="phpunit-no-coverage"
+         depends="phpcs-ci,phpunit"
          description="Performs a lint check and runs the tests (without generating code coverage reports)"/>
 
  <target name="static-analysis"
@@ -202,10 +202,9 @@
          unless="phpcs.done"
          depends="prepare"
          description="Find coding standard violations using PHP_CodeSniffer and log result in XML format. Intended for usage within a continuous integration environment.">
-  <exec executable="${phpcs}" output="/dev/null" taskname="phpcs">
+  <exec executable="${phpcs}" output="${basedir}/build/logs" taskname="phpcs">
    <arg value="--report=checkstyle" />
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
-   <arg value="--standard=PSR2" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
    <arg value="--exclude"/>
