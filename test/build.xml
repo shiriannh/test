@@ -176,7 +176,7 @@
    <arg path="${basedir}/build/phpmd.xml" />
    <arg value="--reportfile" />
    <arg path="${basedir}/build/logs/pmd.xml" />
-    <arg value="--exclude"/>
+   <arg value="--exclude"/>
    <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
    <arg value="--log"/>
    <arg path="${basedir}/build/phpmd.xml" />
@@ -192,8 +192,9 @@
    <arg value="--standard=PSR2" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
+   <arg value="--exclude"/>
+   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
-  <arg value="--exclude=*vendor/*,*administrator/*,*bin/*,*build/*,*cache/*,*cli/*,*installation/*,*installation.old/*,*language/*,*layouts/*,*media/*,*tmp/*"/>
   <property name="phpcs.done" value="true"/>
  </target>
 
@@ -207,19 +208,11 @@
    <arg value="--standard=PSR2" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
-   <arg value="--ignore=*vendor/*,*administrator/*,*bin/*,*build/*,*cache/*,*cli/*,*installation/*,*installation.old/*,*language/*,*layouts/*,*media/*,*tmp/*"/>
+   <arg value="--exclude"/>
+   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
- </target>
- 
-<target name="phpcs1" description="Generate checkstyle.xml using PHP_CodeSniffer">
-	<exec executable="phpcs1" output="/dev/null">
-	<arg line="--report=checkstyle"/>
-	 <arg line="--report-file=${basedir}/build/logs/checkstyle.xml"/>
-	 <arg line="--standard=PEAR"/>
-	 <arg line="--ignore=*library/*,*tests/*,*utils/*,*build/*,*js/*,*drupal/*,*bin/*" />
-	</exec>
  </target>
 
  <target name="phpcpd"
@@ -227,7 +220,8 @@
          description="Find duplicate code using PHPCPD and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="${phpcpd}" taskname="phpcpd">
    <arg path="${basedir}" />
-    <arg value="--exclude vendor,--exclude administrator,--exclude bin,--exclude build,--exclude cache,--exclude cli,--exclude installation,--exclude installation.old,--exclude language,--exclude layouts,--exclude media,--exclude tmp"/>
+   <arg value="--exclude"/>
+   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
   <property name="phpcpd.done" value="true"/>
@@ -241,7 +235,8 @@
    <arg value="--log-pmd" />
    <arg path="${basedir}/build/logs/pmd-cpd.xml" />
    <arg path="${basedir}" />
-    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+   <arg value="--exclude"/>
+   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
   <property name="phpcpd.done" value="true"/>
@@ -270,7 +265,6 @@
    <arg path="${basedir}/tests/phpunitresult.xml" />
    <arg value="--configuration"/>
    <arg path="${basedir}/tests/phpunit.xml"/>
-   <arg value="--no-coverage"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
