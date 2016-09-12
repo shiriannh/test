@@ -209,6 +209,8 @@
    <arg value="--file-list=${basedir}/components" />
    <arg value="--file-list=${basedir}/modules" />
    <arg value="--file-list=${basedir}/plugins" />
+   <arg path="${basedir}/components" />
+   <arg path="${basedir}/modules" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
