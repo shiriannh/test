@@ -207,7 +207,7 @@
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
-   <arg value="--exclude"/>
+   <arg value="--ignore"/>
    <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
