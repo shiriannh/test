@@ -206,7 +206,6 @@
    <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
-   <arg value="${basedir}"/>
    <arg value="--file-list=${basedir}/components" />
    <arg value="--file-list=${basedir}/modules" />
    <arg value="--file-list=${basedir}/plugins" />
