@@ -121,6 +121,7 @@
          depends="prepare"
          description="Measure project size using PHPLOC and log result in CSV and XML format. Intended for usage within a continuous integration environment.">
   <exec executable="${phploc}" taskname="phploc">
+   <arg value="--test"/>
    <arg value="--exclude"/>
    <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
    <arg value="--count-tests" />
