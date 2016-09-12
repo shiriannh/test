@@ -143,7 +143,7 @@
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
    <arg value="--ignore"/>
-   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
   <property name="pdepend.done" value="true"/>
