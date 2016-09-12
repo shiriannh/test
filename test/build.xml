@@ -208,7 +208,7 @@
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
    <arg value="${basedir}"/>
-   <arg value="--exclude=${basedir}/vendor,*/admonistrator/*,*/bin/*,*/build/*,*/cache/*,*/cli/*,*/language/*,*/layouts*,*/media/*,*/tmp/*" />
+   <arg value="--fileList=${basedir}/vendor,*/administrator/*,*/bin/*,*/build/*,*/cache/*,*/cli/*,*/language/*,*/layouts*,*/media/*,*/tmp/*" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
