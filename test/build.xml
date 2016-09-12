@@ -208,7 +208,7 @@
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
    <arg value="${basedir}"/>
-   <arg value="--fileList=${basedir}/components" />
+   <arg value="--file-list=${basedir}/components" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
