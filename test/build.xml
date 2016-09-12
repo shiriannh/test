@@ -139,7 +139,7 @@
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-   <arg value="--ignore=${basedir}/vendor"/>
+   <arg value="--ignore=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
    <arg path="${basedir}" />
   </exec>
 
@@ -152,6 +152,7 @@
   <exec executable="${phpmd}" taskname="phpmd">
    <arg path="${basedir}" />
    <arg value="text" />
+   <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
    <arg path="${basedir}/build/phpmd.xml" />
   </exec>
 
@@ -169,6 +170,7 @@
    <arg path="${basedir}/build/phpmd.xml" />
    <arg value="--reportfile" />
    <arg path="${basedir}/build/logs/pmd.xml" />
+    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
   </exec>
 
   <property name="phpmd.done" value="true"/>
@@ -206,6 +208,7 @@
          description="Find duplicate code using PHPCPD and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="${phpcpd}" taskname="phpcpd">
    <arg path="${basedir}" />
+    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
   </exec>
 
   <property name="phpcpd.done" value="true"/>
@@ -219,6 +222,7 @@
    <arg value="--log-pmd" />
    <arg path="${basedir}/build/logs/pmd-cpd.xml" />
    <arg path="${basedir}" />
+    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
   </exec>
 
   <property name="phpcpd.done" value="true"/>
@@ -243,6 +247,8 @@
          depends="prepare"
          description="Run unit tests with PHPUnit (without generating code coverage reports)">
   <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
+    <arg value="--log-junit"/>
+   <arg path="${basedir}/tests/phpunitresult.xml" />
    <arg value="--configuration"/>
    <arg path="${basedir}/tests/phpunit.xml"/>
    <arg value="--no-coverage"/>
@@ -251,14 +257,6 @@
   <property name="phpunit.done" value="true"/>
  </target>
 
-<!--  <target name="phpdox" -->
-<!--          unless="phpdox.done" -->
-<!--          depends="phploc-ci,phpcs-ci,phpmd-ci" -->
-<!--          description="Generate project documentation using phpDox"> -->
-<!--   <exec executable="${phpdox}" dir="${basedir}" taskname="phpdox"/> -->
-
-<!--   <property name="phpdox.done" value="true"/> -->
-<!--  </target> -->
  
  <target name="phpdox" description="Generate API documentation using phpDox">
      <exec executable="phpdox">
