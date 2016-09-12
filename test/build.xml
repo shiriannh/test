@@ -209,7 +209,7 @@
    <arg value="--ignore=autoload.php" />
    <arg value="${basedir}"/>
    <arg value="--exclude"/>
-   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="*/vendor/*,*/admonistrator/*,*/bin/*,*/build/*,*/cache/*,*/cli/*,*/language/*,*/layouts*,*/media/*,*/tmp/*" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
