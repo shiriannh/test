@@ -140,15 +140,12 @@
   <exec executable="${pdepend}" taskname="pdepend">
   <arg line="--jdepend-xml=${basedir}/build/logs/jdepend1.xml
 	 --jdepend-chart=${basedir}/build/pdepend/dependencies1.svg
-	 --overview-pyramid=${basedir}/build/pdepend/overview-pyramid1.svg
-	 --ignore=library/,tests/,utils/,build/,js/,drupal/,bin/
-	 --suffix=php
-	 ${source}" />
+	 --overview-pyramid=${basedir}/build/pdepend/overview-pyramid1.svg"/>
    <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
    <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
    <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-   <arg value="--ignore=vendor,administrator,bin,build,cache,cli,installation,installation.old,language,layouts,media,tmp"/>
-   <arg path="${basedir}" />
+   <arg value="--ignore"/>
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
   <property name="pdepend.done" value="true"/>
