@@ -123,7 +123,7 @@
   <exec executable="${phploc}" taskname="phploc">
    <arg path="${basedir}"/>
    <arg value="--exclude"/>
-   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
    <arg value="--count-tests" />
    <arg value="--log-csv" />
    <arg path="${basedir}/build/logs/phploc.csv" />
