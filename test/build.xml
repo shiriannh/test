@@ -111,6 +111,8 @@
    <arg value="--count-tests" />
    <arg path="${basedir}" />
    <arg path="${basedir}/tests" />
+   <arg value="--ignore=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+   <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
   </exec>
 
   <property name="phploc.done" value="true"/>
@@ -121,6 +123,8 @@
          depends="prepare"
          description="Measure project size using PHPLOC and log result in CSV and XML format. Intended for usage within a continuous integration environment.">
   <exec executable="${phploc}" taskname="phploc">
+  <arg value="--ignore=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
+    <arg value="--exclude=${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp"/>
    <arg value="--count-tests" />
    <arg value="--log-csv" />
    <arg path="${basedir}/build/logs/phploc.csv" />
