@@ -5,7 +5,7 @@
 		<require file="../../vendor/autoload.php" />
 	</bootstrap>
 
-	<project name="PHP Generics API Documentation" source="${basedir}/build/tools"
+	<project name="PHP Generics API Documentation" source="${basedir}"
 		workdir="../api/xml">
 		<collector backend="parser" />
 
