@@ -26,9 +26,6 @@
     <testsuite name="money">
       <file>../tests/CalculatorTest.php</file>
     </testsuite>
-    <testsuite>
-        <directory suffix="Test.php">../phpunit/php-code-coverage/tests/tests</directory>
-    </testsuite>
  	</testsuites>
 
     <filter>
@@ -43,10 +40,6 @@
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php"></directory>
             <file></file>
-            <exclude>
-                <directory suffix=".php"></directory>
-                <file></file>
-            </exclude>
         </whitelist>
     </filter>
 </phpunit>
