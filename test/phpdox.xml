@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <phpdox xmlns="http://xml.phpdox.net/config">
- <project name="AIS" source="${basedir}/build" workdir="build/phpdox">
+ <project name="JENKINS" source="${basedir}" workdir="build/phpdox">
   <collector publiconly="false">
    <include mask="*.php" />
    <exclude mask="*autoload.php" />
@@ -10,8 +10,15 @@
   <generator output="build">
     <enrich base="${basedir}/build/logs">
                 <source type="checkstyle" />
-                <source type="pmd" />
-                <source type="phploc" />
+                <source type="pmd">
+                	<file name="logs/phpmd.xml" />
+                </source>
+                <source type="phploc">
+                	<file name="logs/phploc.xml" />
+                </source>
+                <source type="phpunit">
+                	<path name="coverage/xml" />
+                </source>
     </enrich>
    <build engine="html" enabled="true" output="api"/>
   </generator>

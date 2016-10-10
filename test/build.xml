@@ -160,7 +160,7 @@
    <arg path="${basedir}" />
    <arg value="text" />
    <arg value="--exclude"/>
-   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
    <arg value="--log"/>
    <arg path="${basedir}/build/phpmd.xml" />
   </exec>
@@ -180,7 +180,7 @@
    <arg value="--reportfile" />
    <arg path="${basedir}/build/logs/pmd.xml" />
    <arg value="--exclude"/>
-   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
    <arg value="--log"/>
    <arg path="${basedir}/build/phpmd.xml" />
   </exec>
@@ -196,7 +196,7 @@
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
    <arg value="--exclude"/>
-   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
   <property name="phpcs.done" value="true"/>
  </target>
@@ -226,7 +226,7 @@
   <exec executable="${phpcpd}" taskname="phpcpd">
    <arg path="${basedir}" />
    <arg value="--exclude"/>
-   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
   <property name="phpcpd.done" value="true"/>
@@ -241,7 +241,7 @@
    <arg path="${basedir}/build/logs/pmd-cpd.xml" />
    <arg path="${basedir}" />
    <arg value="--exclude"/>
-   <arg path="${basedir}/vendor,${basedir}/admonistrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
+   <arg path="${basedir}/vendor,${basedir}/administrator,${basedir}/bin,${basedir}/build,${basedir}/cache,${basedir}/cli,${basedir}/installation,${basedir}/installation.old,${basedir}/language,${basedir}/layouts,${basedir}/media,${basedir}/tmp" />
   </exec>
 
   <property name="phpcpd.done" value="true"/>
@@ -259,7 +259,7 @@
    <arg value="--whitelist"/>
    <arg path="../tests"/>
    <arg value="--coverage-xml"/>
-   <arg path="${basedir}/build/logs/coverage"/>
+   <arg path="${basedir}/build/coverage/xml"/>
    <arg value="--coverage-clover"/>
    <arg path="${basedir}/build/logs/clover.xml"/>
   </exec>
@@ -279,7 +279,7 @@
    <arg value="--whitelist"/>
    <arg path="../tests"/>
    <arg value="--coverage-xml"/>
-   <arg path="${basedir}/build/logs/coverage"/>
+   <arg path="${basedir}/build/coverage/xml"/>
    <arg value="--coverage-clover"/>
    <arg path="${basedir}/build/logs/clover.xml"/>
   </exec>
