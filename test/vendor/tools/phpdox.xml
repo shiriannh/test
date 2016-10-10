@@ -2,15 +2,15 @@
 <!DOCTYPE phpdox>
 <phpdox xmlns="http://xml.phpdox.net/config">
 	<bootstrap>
-		<require file="autoload.php" />
+		<require file="../autoload.php" />
 	</bootstrap>
 
 	<project name="PHP Generics API Documentation" source="${basedir}"
-		workdir="../api/xml">
+		workdir="../build/api/xml">
 		<collector backend="parser" />
 
-		<generator output="../api">
-			<enrich base="../logs">
+		<generator output="../build/api">
+			<enrich base="../build/logs">
 				<source type="build"/>
 				<source type="phploc">
 					<file name="phploc.xml" />
