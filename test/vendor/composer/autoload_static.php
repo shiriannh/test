@@ -27,11 +27,13 @@ class ComposerStaticInit6115767e815064b9532a02ec3cea388c
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\DependencyInjection\\' => 38,
+            'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'PDepend\\' => 8,
         ),
         'D' => 
@@ -72,6 +74,10 @@ class ComposerStaticInit6115767e815064b9532a02ec3cea388c
         array (
             0 => __DIR__ . '/..' . '/symfony/dependency-injection',
         ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
+        ),
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
@@ -79,6 +85,10 @@ class ComposerStaticInit6115767e815064b9532a02ec3cea388c
         'Symfony\\Component\\Config\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
         'PDepend\\' => 
         array (

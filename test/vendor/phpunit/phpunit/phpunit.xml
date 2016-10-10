@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="phpunit.xsd"
-         bootstrap="tests/CalculatorTest.php"
+         bootstrap="tests/bootstrap.php"
          backupGlobals="false"
          verbose="true">
   <testsuites>
@@ -10,7 +10,6 @@
       <directory suffix="Test.php">tests/Extensions</directory>
       <directory suffix="Test.php">tests/Runner</directory>
       <directory suffix="Test.php">tests/Util</directory>
-      <directory suffix="CalculatorTest.php">tests</directory>
     </testsuite>
 
     <testsuite name="large">
