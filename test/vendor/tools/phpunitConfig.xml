@@ -24,7 +24,7 @@
 
     <testsuites>
     <testsuite name="money">
-      <file>tests/CalculatorTest.php</file>
+      <file>../tests/CalculatorTest.php</file>
     </testsuite>
  	</testsuites>
 
