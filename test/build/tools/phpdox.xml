@@ -6,11 +6,11 @@
 	</bootstrap>
 
 	<project name="PHP Generics API Documentation" source="${basedir}/build/tools"
-		workdir="${basedir}/build/api/xml">
+		workdir="../api/xml">
 		<collector backend="parser" />
 
-		<generator output="${basedir}/build/api">
-			<enrich base="${basedir}/build/logs">
+		<generator output="../api">
+			<enrich base="../logs">
 				<source type="build"/>
 
 				<source type="phploc">
