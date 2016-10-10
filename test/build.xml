@@ -259,7 +259,7 @@
    <arg value="--whitelist"/>
    <arg path="../tests"/>
    <arg value="--coverage-xml"/>
-   <arg path="${basedir}/build/logs"/>
+   <arg path="${basedir}/build/logs/coverage"/>
    <arg value="--coverage-clover"/>
    <arg path="${basedir}/build/logs/clover.xml"/>
   </exec>
@@ -279,7 +279,7 @@
    <arg value="--whitelist"/>
    <arg path="../tests"/>
    <arg value="--coverage-xml"/>
-   <arg path="${basedir}/build/logs"/>
+   <arg path="${basedir}/build/logs/coverage"/>
    <arg value="--coverage-clover"/>
    <arg path="${basedir}/build/logs/clover.xml"/>
   </exec>
