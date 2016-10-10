@@ -255,8 +255,8 @@
    <arg path="${basedir}/build/logs/phpunitresult.phpunit" />
    <arg value="--whitelist"/>
    <arg path="../tests"/>
-   <arg value="--coverage-xml"/>
-   <arg path="${basedir}/build/logs"/>
+   <arg value="--coverage-clover"/>
+   <arg path="${basedir}/build/logs/clover.xml"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
