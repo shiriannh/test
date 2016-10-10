@@ -263,10 +263,13 @@
          depends="prepare"
          description="Run unit tests with PHPUnit (without generating code coverage reports)">
   <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
-    <arg value="--log-junit"/>
-   <arg path="${basedir}/tests/phpunitresult.xml" />
-   <arg value="--configuration"/>
-   <arg path="${basedir}/tests/phpunit.xml"/>
+   <arg value="--configuration=phpunitConfig.xml"/>
+   <arg value="--log-junit"/>
+   <arg path="${basedir}/build/logs/phpunitresult.xml" />
+   <arg value="--whitelist"/>
+   <arg path="../tests"/>
+   <arg value="--coverage-xml"/>
+   <arg path="${basedir}/build/logs/coverage.xml"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
