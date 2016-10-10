@@ -27,7 +27,7 @@
       <file>../tests/CalculatorTest.php</file>
     </testsuite>
     <testsuite>
-        <directory suffix="CodeCoverageTest.php">../phpunit/php-code-coverage/tests/tests</directory>
+        <directory suffix="Test.php">../phpunit/php-code-coverage/tests/tests</directory>
     </testsuite>
  	</testsuites>
 
