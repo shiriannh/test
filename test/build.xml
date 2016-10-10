@@ -256,7 +256,7 @@
    <arg value="--whitelist"/>
    <arg path="../tests"/>
    <arg value="--coverage-xml"/>
-   <arg path="${basedir}/build/logs/coverage.xml"/>
+   <arg path="${basedir}/build/logs"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
@@ -274,7 +274,7 @@
    <arg value="--whitelist"/>
    <arg path="../tests"/>
    <arg value="--coverage-xml"/>
-   <arg path="${basedir}/build/logs/coverage.xml"/>
+   <arg path="${basedir}/build/logs"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
