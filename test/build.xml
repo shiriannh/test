@@ -250,7 +250,7 @@
          description="Run unit tests with PHPUnit">
   <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
    <arg value="--configuration"/>
-   <arg path="phpunitConfig.xml"/>
+   <arg path="${basedir}/vendor/tools/phpunitConfig.xml"/>
    <arg value="--log-junit"/>
    <arg path="${basedir}/build/logs/phpunitresult.xml" />
    <arg value="--whitelist"/>
@@ -268,7 +268,7 @@
          description="Run unit tests with PHPUnit (without generating code coverage reports)">
   <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
    <arg value="--configuration"/>
-   <arg path="phpunitConfig.xml"/>
+   <arg path="${basedir}/vendor/tools/phpunitConfig.xml"/>
    <arg value="--log-junit"/>
    <arg path="${basedir}/build/logs/phpunitresult.xml" />
    <arg value="--whitelist"/>
