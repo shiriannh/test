@@ -12,7 +12,6 @@
 		<generator output="../api">
 			<enrich base="../logs">
 				<source type="build"/>
-
 				<source type="phploc">
 					<file name="phploc.xml" />
 				</source>
