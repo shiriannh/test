@@ -2,7 +2,7 @@
 <!DOCTYPE phpdox>
 <phpdox xmlns="http://xml.phpdox.net/config">
 	<bootstrap>
-		<require file="./vendor/autoload.php" />
+		<require file="../../vendor/autoload.php" />
 	</bootstrap>
 
 	<project name="PHP Generics API Documentation" source="${basedir}"
