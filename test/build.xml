@@ -244,17 +244,20 @@
   <property name="phpcpd.done" value="true"/>
  </target>
 
-  
  <target name="phpunit"
          unless="phpunit.done"
          depends="prepare"
          description="Run unit tests with PHPUnit">
-  <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
+  <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
    <arg value="--configuration"/>
    <arg path="${basedir}/vendor/tools/phpunitConfig.xml"/>
+   <arg value="--log-junit"/>
+   <arg path="${basedir}/build/logs/phpunitresult.phpunit" />
+   <arg value="--whitelist"/>
+   <arg path="../tests"/>
+   <arg value="--coverage-xml"/>
+   <arg path="${basedir}/build/logs"/>
   </exec>
-
-  
 
   <property name="phpunit.done" value="true"/>
  </target>
