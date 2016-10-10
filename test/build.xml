@@ -76,13 +76,12 @@
   <mkdir dir="${basedir}/build/api"/>
   <mkdir dir="${basedir}/build/api/html"/>
   <mkdir dir="${basedir}/build/api/xml"/>
-  <mkdir dir="${basedir}/build/api"/>
   <mkdir dir="${basedir}/build/coverage"/>
   <mkdir dir="${basedir}/build/logs"/>
   <mkdir dir="${basedir}/build/pdepend"/>
   <mkdir dir="${basedir}/build/phpdox"/>
   <property name="prepare.done" value="true"/>
-  <chmod file="${basedir}/**" perm="g+w" type="both"/>
+  <chmod file="${basedir}/build" perm="ugo+x" type="both"/>
   
  </target>
  
