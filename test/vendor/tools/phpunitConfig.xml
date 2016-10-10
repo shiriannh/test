@@ -26,6 +26,9 @@
     <testsuite name="money">
       <file>../tests/CalculatorTest.php</file>
     </testsuite>
+    <testsuite>
+        <directory suffix="CodeCoverageTest.php">../phpunit/php-code-coverage/tests/tests</directory>
+    </testsuite>
  	</testsuites>
 
     <filter>
