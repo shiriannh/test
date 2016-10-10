@@ -5,7 +5,7 @@
 		<require file="../autoload.php" />
 	</bootstrap>
 
-	<project name="PHP Generics API Documentation" source="${basedir}"
+	<project name="PHP Generics API Documentation" source="../../"
 		workdir="../../build/api/xml">
 		<collector backend="parser" />
 
@@ -22,10 +22,6 @@
 				
 				<source type="phpunit">
 					<file name="phpunitresult.phpunit" />
-				</source>
-				
-				<source type="phpcs">
-					<file name="phpcs.xml" />
 				</source>
 				
 				<source type="pmd">
