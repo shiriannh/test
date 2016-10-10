@@ -260,6 +260,8 @@
    <arg path="../tests"/>
    <arg value="--coverage-clover"/>
    <arg path="${basedir}/build/logs/clover.xml"/>
+   <arg value="--coverage-xml"/>
+   <arg path="${basedir}/build/logs"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
