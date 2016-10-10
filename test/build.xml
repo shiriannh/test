@@ -28,7 +28,7 @@
  <property name="phpunit" value="${basedir}/vendor/bin/phpunit"/>-->
 
  <target name="full-build"
-         depends="prepare,static-analysis,phpunit-no-coverage,phpdox "
+         depends="prepare,static-analysis,phpunit,phpdox "
          description="Performs static analysis, runs the tests, and generates project documentation"/>
 
  <target name="full-build-parallel"
@@ -273,7 +273,7 @@
    <arg value="--configuration"/>
    <arg path="${basedir}/vendor/tools/phpunitConfig.xml"/>
    <arg value="--log-junit"/>
-   <arg path="${basedir}/build/logs/phpunitresult.xml" />
+   <arg path="${basedir}/build/logs/phpunitresult.phpunit" />
    <arg value="--whitelist"/>
    <arg path="../tests"/>
    <arg value="--coverage-clover"/>
