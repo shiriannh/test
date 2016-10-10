@@ -248,11 +248,15 @@
          unless="phpunit.done"
          depends="prepare"
          description="Run unit tests with PHPUnit">
-  <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
+  <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
    <arg value="--configuration"/>
-   <arg path="${basedir}/tests/phpunit.xml"/>
+   <arg path="phpunitConfig.xml"/>
    <arg value="--log-junit"/>
-   <arg path="${basedir}/tests/phpunitresult.xml" />
+   <arg path="${basedir}/build/logs/phpunitresult.xml" />
+   <arg value="--whitelist"/>
+   <arg path="../tests"/>
+   <arg value="--coverage-xml"/>
+   <arg path="${basedir}/build/logs/coverage.xml"/>
   </exec>
 
   <property name="phpunit.done" value="true"/>
@@ -263,7 +267,8 @@
          depends="prepare"
          description="Run unit tests with PHPUnit (without generating code coverage reports)">
   <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
-   <arg value="--configuration=phpunitConfig.xml"/>
+   <arg value="--configuration"/>
+   <arg path="phpunitConfig.xml"/>
    <arg value="--log-junit"/>
    <arg path="${basedir}/build/logs/phpunitresult.xml" />
    <arg value="--whitelist"/>
